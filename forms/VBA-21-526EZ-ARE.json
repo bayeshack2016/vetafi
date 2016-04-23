@@ -1,0 +1,287 @@
+[
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran First Name",
+    "Type": "text",
+    "DatumId": "veteran_first_name"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Middle Initial",
+    "Type": "text",
+    "DatumId": "veteran_middle_initial"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Last Name",
+    "Type": "text",
+    "DatumId": "veteran_last_name"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Social Security Number",
+    "Type": "text",
+    "DatumId": "veteran_ssn"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Date of Birth",
+    "Type": "date",
+    "DatumId": "veteran_dob"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Sex",
+    "Type": "radio",
+    "Options": [
+      "Male", "Female"
+    ],
+    "DatumId": "veteran_sex"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Previous Claim",
+    "Type": "radio",
+    "Options": [
+      "Yes", "No"
+    ],
+    "DatumId": "veteran_previous_claim_y_n"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran VA File Number",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_previous_claim_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_previous_claim"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Homeless",
+    "Type": "radio",
+    "Options": [
+      "Yes", "No"
+    ],
+    "DatumId": "veteran_homeless_y_n"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Point of Contact",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_homeless_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_homeless_point_of_contact"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Point of Contact Phone Number",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_homeless_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_homeless_point_of_contact_phone_number"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Service Branch",
+    "Type": "checkbox",
+    "Options": [
+      "Army", "Navy", "Marine Corps", "Air Force", "Coast Guard" 
+    ],
+    "DatumId": "veteran_service_branches"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Service Component",
+    "Type": "checkbox",
+    "Options": [
+      "Active", "Reserves", "National Guard"
+    ],
+    "DatumId": "veteran_service_components"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Home Zip Code",
+    "Type": "text",
+    "DatumId": "veteran_home_zip_code"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Home Street",
+    "Type": "text",
+    "DatumId": "veteran_home_street"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Home City",
+    "Type": "text",
+    "DatumId": "veteran_home_city"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Home State",
+    "Type": "text",
+    "DatumId": "veteran_home_state"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Home Country",
+    "Type": "text",
+    "DatumId": "veteran_home_country"
+  },
+
+  
+  
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Forwarding Zip Code",
+    "Type": "text",
+    "DatumId": "veteran_forwarding_zip_code"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Forwarding Street",
+    "Type": "text",
+    "DatumId": "veteran_forwarding_street"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Forwarding City",
+    "Type": "text",
+    "DatumId": "veteran_forwarding_city"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Forwarding State",
+    "Type": "text",
+    "DatumId": "veteran_forwarding_state"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Forwarding Country",
+    "Type": "text",
+    "DatumId": "veteran_forwarding_country"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Forwarding Address Effective Date",
+    "Type": "date",
+    "DatumId": "veteran_forwarding_address_effective_date"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Preferred Phone Number",
+    "Type": "text",
+    "DatumId": "veteran_phone_number"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Preferred Email Address",
+    "Type": "text",
+    "DatumId": "veteran_email"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Alternate Email Address",
+    "Type": "text",
+    "DatumId": "veteran_alternate_email"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Disability",
+    "Type": "group",
+    "MaxSubElements": 20,
+    "SubQuestions": [
+      {
+        "Question": "Disability {N}",
+        "Type": "text",
+        "DatumId": "disability"
+      }
+    ],
+    "DatumId": "veteran_disability"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran VA Medical Centers Visited",
+    "Type": "group",
+    "MaxSubElements": 4,
+    "SubQuestions": [
+      {
+        "Question": "Name and Location {N}",
+        "Type": "text",
+        "DatumId": "prev_treatment_place"
+      },
+      {
+        "Question": "Treatment Start {N}",
+        "Type": "date",
+        "DatumId": "prev_treatment_start_date"
+      },
+      {
+        "Question": "Treatment End {N}",
+        "Type": "date",
+        "DatumId": "prev_treatment_end_date"
+      }
+    ],
+    "DatumId": "veteran_va_treatment"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Served Under Alternate Name Yes/No",
+    "Type": "radio",
+    "Options": ["Yes", "No"],
+    "DatumId": "veteran_served_under_alternate_name_yes_no"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Alternate Name Yes/No",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_served_under_alternate_name_yes_no",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_alternate_name"
+  }
+]
