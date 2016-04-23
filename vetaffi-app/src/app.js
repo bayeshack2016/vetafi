@@ -2,6 +2,7 @@
  * Main AngularJS Web Application
  */
 'use strict';
+
 var app = angular.module('vetaffiApp', [
   'ngRoute'
 ]);
