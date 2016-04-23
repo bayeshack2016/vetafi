@@ -1,5 +1,5 @@
-
 var app = angular.module('vetaffiApp');
+
 app.controller('introCtrl', function($scope) {
   $scope.links = [
     {
@@ -13,6 +13,7 @@ app.controller('introCtrl', function($scope) {
     {
         title:'View your Health Status',
         url:'/signin?action=status'
-    },
+    }
   ];
 });
+

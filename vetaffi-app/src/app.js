@@ -2,10 +2,16 @@
  * Main AngularJS Web Application
  */
 'use strict';
-
+angular.module('formData', []);
 var app = angular.module('vetaffiApp', [
-  'ngRoute'
+  'ngRoute',
+  'formData'
 ]);
+
+app.controller('formController', ['formData', function($scope, formData) {
+
+
+}]);
 
 /**
   * Configure the Routes
