@@ -283,5 +283,274 @@
       "Value": "Yes"
     },
     "DatumId": "veteran_alternate_name"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Most Recent Active Service Entry",
+    "Type": "date",
+    "DatumId": "veteran_most_recent_active_service_entry_date"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Service Number",
+    "NotApplicable": true,
+    "Type": "text",
+    "DatumId": "veteran_service_number"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Most Recent Active Service Exit (Can be a date in the future)",
+    "Type": "date",
+    "DatumId": "veteran_service_exit"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Served in Combat Zone Since 9/11/2001",
+    "Type": "radio",
+    "Options": ["Yes", "No"],
+    "DatumId": "veteran_served_combat_zone_since_9_11"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Place of Last or Anticipated Separation",
+    "Type": "text",
+    "DatumId": "veteran_place_of_last_or_anticipated_separation"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran Served National Guard",
+    "Type": "radio",
+    "Options": ["Yes", "No"],
+    "DatumId": "veteran_served_national_guard_yes_no"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran National Guard Component",
+    "Type": "radio",
+    "Options": ["National Guard", "Reserved"],
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_served_national_guard_component"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran National Guard Term of Service Start",
+    "Type": "date",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_served_national_guard_start_date"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran National Guard Term of Service End",
+    "Type": "date",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_served_national_guard_end_date"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran National Guard Name and Address of Unit",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_national_guard_unit_info"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran National Guard Phone Number of Unit",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_national_guard_unit_phone_number"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "Veteran National Guard Currently Receiving Inactive Duty Training Pay",
+    "Type": "radio",
+    "Options": ["Yes", "No"],
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_national_guard_inactive_duty_training_pay_y_n"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "ARE YOU CURRENTLY ACTIVATED ON FEDERAL ORDERS WITHIN THE NATIONAL GUARD OR RESERVES?",
+    "Type": "radio",
+    "Options": ["Yes", "No"],
+    "DatumId": "veteran_national_guard_currently_activated_y_n"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "DATE OF ACTIVATION",
+    "Type": "date",
+    "DependsOn": {
+      "DatumId": "veteran_national_guard_currently_activated_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_national_guard_currently_activated_date_of_activation"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "ANTICIPATED SEPARATION DATE",
+    "Type": "date",
+    "DependsOn": {
+      "DatumId": "veteran_national_guard_currently_activated_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_national_guard_currently_activated_date_of_separation"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "HAVE YOU EVER BEEN A PRISONER OF WAR?",
+    "Type": "radio",
+    "Options": ["Yes", "No"],
+    "DatumId": "veteran_prisoner_of_war_y_n"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "DATE OF CONFINEMENT START",
+    "Type": "date",
+    "DependsOn": {
+      "DatumId": "veteran_prisoner_of_war_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_prisoner_of_war_start_date"
+  },
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "DATE OF CONFINEMENT END",
+    "Type": "date",
+    "DependsOn": {
+      "DatumId": "veteran_prisoner_of_war_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_prisoner_of_war_end_date"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "DID/DO YOU RECEIVE ANY TYPE OF SEPARATION/SEVERANCE/RETIRED PAY",
+    "Type": "radio",
+    "Options": ["Yes", "No"],
+    "DatumId": "veteran_separation_pay_y_n"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "LIST AMOUNT",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_separation_pay_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_separation_pay_amount"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "LIST TYPE",
+    "Type": "text",
+    "DependsOn": {
+      "DatumId": "veteran_separation_pay_y_n",
+      "Value": "Yes"
+    },
+    "DatumId": "veteran_separation_pay_type"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "I want military retired pay instead of VA compensation",
+    "Type": "radio",
+    "Options": ["Retired Pay", "VA Compensation"],
+    "DatumId": "veteran_military_retired_pay_or_va_compensation"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "I elect to waive VA benefits for the days I accrued inactive duty training pay in order to retain my inactive duty training pay.",
+    "Type": "radio",
+    "Options": ["Waive", "Do Not Waive"],
+    "DatumId": "veteran_waive_va_benefits"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "I elect to waive VA benefits for the days I accrued inactive duty training pay in order to retain my inactive duty training pay.",
+    "Type": "radio",
+    "Options": ["Waive", "Do Not Waive"],
+    "DatumId": "veteran_waive_va_benefits"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "ACCOUNT TYPE",
+    "Type": "radio",
+    "Options": ["Checking", "Saving", "No Bank Account"],
+    "DatumId": "veteran_dd_account_type"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "ACCOUNT NUMBER",
+    "Type": "text",
+    "DatumId": "veteran_dd_account_number"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "ACCOUNT NUMBER",
+    "Type": "text",
+    "DatumId": "veteran_dd_account_number"
+  },
+
+  {
+    "Form": "VBA-21-526EZ-ARE",
+    "PDFFormLocator": null,
+    "Question": "ACCOUNT ROUTING NUMBER",
+    "Type": "text",
+    "DatumId": "veteran_dd_routing_number"
   }
+
+
 ]
