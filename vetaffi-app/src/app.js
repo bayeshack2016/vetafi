@@ -4,27 +4,40 @@
 'use strict';
 angular.module('formData', []);
 var app = angular.module('vetaffiApp', [
-  'ngRoute',
-  'formData'
+    'ngRoute',
+    'formData',
+    'schemaForm'
 ]);
 
-app.controller('formController', ['formData', function($scope, formData) {
+app.controller('FormController', ['formData', function ($scope, formData) {
+    $scope.schema = formData;
 
+    $scope.form = [
+        "*",
+        {
+            type: "submit",
+            title: "Save"
+        }
+    ];
 
+    $scope.model = {};
 }]);
 
 /**
-  * Configure the Routes
-*/
+ * Configure the Routes
+ */
 app.config(['$routeProvider', function ($routeProvider) {
-$routeProvider.when("/", {
-    templateUrl: "templates/intro.tpl.html"
-  });
-  $routeProvider.when("/signin", {
-    templateUrl: "templates/signin.tpl.html"
-  });
+    $routeProvider.when("/", {
+        templateUrl: "templates/intro.tpl.html"
+    });
+    $routeProvider.when("/signin", {
+        templateUrl: "templates/signin.tpl.html"
+    });
+    $routeProvider.when("/form", {
+        templateUrl: "templates/form.tpl.html"
+    });
 
-  $routeProvider.otherwise({
-    redirectTo: '/',
-  });
+    $routeProvider.otherwise({
+        redirectTo: '/'
+    });
 }]);
