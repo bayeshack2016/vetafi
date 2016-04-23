@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../fonts/Merriweather/Merriweather-Black.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  background-color: #e4e2e0;
+  font-family: 'Merriweather', serif;
+}
+
+body a {
+  color: #02bfe7;
+  text-decoration: none;
+}
+
+body a:hover {
+  text-decoration: underline;
+}
+
+.main-display-wrapper {
+  display: block;
+  width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  border: 2px solid #212121;
+  border-radius: 10px;
+  background-color: white;
+}
