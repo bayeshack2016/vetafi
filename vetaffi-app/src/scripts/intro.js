@@ -4,15 +4,15 @@ app.controller('introCtrl', function($scope) {
   $scope.links = [
     {
         title:'Health Care FAQ',
-        url:'/faq'
+        url:'#faq'
     },
     {
         title:'File a Health Claim',
-        url:'/signin?action=file'
+        url:'#signin?action=file'
     },
     {
         title:'View your Health Status',
-        url:'/signin?action=status'
+        url:'#signin?action=status'
     },
   ];
 });
