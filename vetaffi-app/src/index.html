@@ -1,15 +1,21 @@
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="main.css">
-		<script src="../libs/lodash-v4.11.1.js"></script>
-    	<script src="../libs/jquery-1.11.2.min.js"></script>
-		<script src="../libs/angular-1.2.26/angular.min.js"></script>
-		<script src="../libs/angular-1.2.26/angular-route.min.js"></script>
-		<script src="../libs/angular-1.2.26/angular-animate.js"></script>
-		<script src="route.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/header.css">
+		<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+		<script src="libs/lodash-v4.11.1.js"></script>
+    	<script src="libs/jquery-1.11.2.min.js"></script>
+		<script src="libs/angular-1.2.26/angular.min.js"></script>
+		<script src="libs/angular-1.2.26/angular-route.min.js"></script>
+		<script src="libs/angular-1.2.26/angular-animate.js"></script>
+		<script src="app.js"></script>
 	</head>
 	<body ng-app="vetaffiApp">
 		<title class="main-title">Vetaffi</title>
-		<!--<div ng-include="'header.tpl.html'"></div>-->
+		<div ng-include="'templates/header.tpl.html'"></div>
+
+		<!-- Main content goes here-->
+		<div class="main-display-wrapper" ng-view></div>
+
 	</body>
 </html>
