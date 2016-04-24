@@ -12,7 +12,7 @@ app.controller('introCtrl', function($scope) {
     },
     {
         title:'View your Health Status',
-        url:'#signin?action=status'
+        url:'#signin?action=profile'
     }
   ];
 });

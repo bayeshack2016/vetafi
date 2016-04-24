@@ -152,9 +152,18 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when("/", {
         templateUrl: "templates/intro.tpl.html"
     });
+    $routeProvider.when("/faq", {
+            templateUrl: "templates/faq.tpl.html"
+        });
     $routeProvider.when("/signin", {
         templateUrl: "templates/signin.tpl.html"
     });
+    $routeProvider.when("/physical-injury", {
+        templateUrl: "templates/physicalInjury.tpl.html"
+    });
+    $routeProvider.when("/profile", {
+            templateUrl: "templates/profile.tpl.html"
+        });
     $routeProvider.when("/form", {
         templateUrl: "templates/form.tpl.html"
     });
