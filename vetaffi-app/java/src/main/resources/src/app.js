@@ -262,32 +262,23 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when("/", {
         templateUrl: "templates/intro.tpl.html"
-    });
-    $routeProvider.when("/faq", {
+    }).when("/faq", {
         templateUrl: "templates/faq.tpl.html"
-    });
-    $routeProvider.when("/signin", {
+    }).when("/signin", {
         templateUrl: "templates/signin.tpl.html"
-    });
-    $routeProvider.when("/physical-injury", {
+    }).when("/physical-injury", {
         templateUrl: "templates/physicalInjury.tpl.html"
-    });
-    $routeProvider.when("/profile", {
+    }).when("/profile", {
         templateUrl: "templates/profile.tpl.html"
-    });
-    $routeProvider.when("/file-claim", {
+    }).when("/file-claim", {
         templateUrl: "templates/fileClaim.tpl.html"
-    });
-    $routeProvider.when("/questionnaire", {
+    }).when("/questionnaire", {
         templateUrl: "templates/questionnaire.tpl.html"
-    });
-    $routeProvider.when("/form", {
+    }).when("/form", {
         templateUrl: "templates/form.tpl.html"
-    });
-    $routeProvider.when("/claim-submitted", {
+    }).when("/claim-submitted", {
         templateUrl: "templates/claimSubmitted.tpl.html"
-    });
-    $routeProvider.otherwise({
+    }).otherwise({
         redirectTo: '/'
     });
 }]);

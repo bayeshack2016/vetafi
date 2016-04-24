@@ -21,13 +21,13 @@ app.controller('faqCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
             topic.show = false;
             $mixpanel.track("faq_subtopic", {
                 topic: topic.name,
-                selected: false,
+                selected: false
             });
         } else {
             topic.show = true;
             $mixpanel.track("faq_subtopic", {
                 topic: topic.name,
-                selected: true,
+                selected: true
             });
         }
     };
@@ -47,7 +47,7 @@ app.controller('faqCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
                     name: 'eligible_benefits',
                     show: false,
                     content: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et"
-                },
+                }
             ]
         },
         {
@@ -60,7 +60,7 @@ app.controller('faqCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
                     content: "beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
                 }
             ]
-        },
+        }
     ];
 
     $mixpanel.track("faq_page_landed", {});
