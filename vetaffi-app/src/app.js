@@ -10,7 +10,7 @@ var app = angular.module('vetaffiApp', [
     'ui.bootstrap'
 ]);
 
-app.controller('FormController', ['$scope', 'formData', function ($scope, formData) {
+app.controller('FormController', ['$scope', 'formData', 'formState', function ($scope, formData, formState) {
     $scope.schema = {
         "type": "object",
         "title": "Comment",
@@ -62,6 +62,14 @@ app.controller('FormController', ['$scope', 'formData', function ($scope, formDa
         ]
     };
 
+
+
+    formData.getFormData('VBA-21-526EZ-ARE', function(response) {
+        console.log(response.data)
+    }, function(response) {
+        console.error(response);
+    });
+
     $scope.form = [
         "name",
         "email",
@@ -76,13 +84,13 @@ app.controller('FormController', ['$scope', 'formData', function ($scope, formDa
     ];
 
     $scope.vaForms = ['formA', 'formB'];
+    $scope.model = {};
 
     $scope.getProgress = function (formName) {
         var total = 0;
         var filledOut = 0;
         for (var key in $scope.schema.properties) {
             if ($scope.schema.properties.hasOwnProperty(key)) {
-                console.log($scope.schema.properties[key]);
                 if ($scope.schema.properties[key].formName === formName) {
                     total += 1;
                 }
@@ -91,9 +99,6 @@ app.controller('FormController', ['$scope', 'formData', function ($scope, formDa
                 }
             }
         }
-        console.log(total);
-        console.log(filledOut);
-        console.log(formName);
         if (total == 0) {
             return "0";
         }
@@ -110,8 +115,6 @@ app.controller('FormController', ['$scope', 'formData', function ($scope, formDa
             return "info";
         }
     };
-
-    $scope.model = {};
 }]);
 
 /**
