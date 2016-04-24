@@ -20,6 +20,7 @@ public class PDFFillerApplication extends Application<PDFFillerConfiguration> {
         final PDFHealthCheck healthCheck =
                 new PDFHealthCheck(pdfFillerConfiguration.getFormDir());
         environment.healthChecks().register("pdfForms", healthCheck);
+        environment.jersey().setUrlPattern("/api/*");
         environment.jersey().register(resource);
     }
 
