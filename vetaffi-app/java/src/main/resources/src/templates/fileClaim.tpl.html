@@ -1,4 +1,5 @@
 <div class="file-claim-view" ng-controller="fileClaimCtrl">
+    <h3>Pick forms to include in your file claim</h3>
 
     <div >
         <h3>Pick forms to include in your file claim</h3>
@@ -20,8 +21,12 @@
             </div>
         </div>
 
-        <button class="begin-button" ng-click="onSubmit()">Begin Paperwork</button>
+        <div class="tooltip-thing" ng-if="suggestions[formName]">
+            <p>Veterans like you<br>often fill out this form.</p>
+        </div>
     </div>
+
+    <button class="begin-button" ng-click="onSubmit()">Begin Paperwork</button>
     <div>
         {{formSelections}}
     </div>

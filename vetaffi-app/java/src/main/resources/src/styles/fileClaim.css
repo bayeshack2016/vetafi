@@ -9,58 +9,6 @@
     margin-bottom: 30px;
 }
 
-.file-claim-view .loading-view {
-    height: auto;
-    overflow: hidden;
-    opacity: 1.0;
-    visibility: visible;
-    transition: 0.2s linear all;
-}
-
-.file-claim-view .loading-view.disappear {
-    height: 0px;
-    opacity: 0.0;
-    visibility: hidden;
-    transform: translateY(-50%), scale(0.8);
-}
-
-.file-claim-view .original-view {
-    opacity: 0.0;
-    visibility: hidden;
-    transform: translateY(-50%), scale(0.8);
-    transition: 0.2s linear all;
-}
-
-.file-claim-view .original-view.appear {
-    opacity: 1.0;
-    visibility: visible;
-    transform: translateY(0%), scale(1.0);
-}
-
-.file-claim-view .spinner {
-    display: inline-block;
-    width: 60px;
-    margin-left: 40px;
-}
-
-.file-claim-view .spinner.spin {
-    -webkit-animation: spin 4s infinite ease-in-out;
-}
-
-.file-claim-view .spinner.spin-faster {
-    -webkit-animation: spin-fast 0.8s infinite linear;
-}
-
-@-webkit-keyframes spin {
-    0%  {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(-360deg);}
-}
-
-@-webkit-keyframes spin-fast {
-    0%  {-webkit-transform: rotate(0deg);}
-    100% {-webkit-transform: rotate(360deg);}
-}
-
 .file-claim-view .selection-wrapper {
     position: relative;
     height: 90px;

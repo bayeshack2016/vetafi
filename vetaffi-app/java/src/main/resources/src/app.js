@@ -69,7 +69,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     formNames: $scope.vaForms,
                     timeSpent: (new Date() - formStartTime)
                 });
-            $('.submit-progress-bar').animate({width: '65%'}, 1000, function() {
+            $('.submit-progress-bar').animate({width: '60%'}, 1200, function() {
                 $('.submit-progress-bar').animate({width: '100%'}, 500, function() {
                     $('.submit-loading-modal img').addClass('show');
                     setTimeout(function() {
