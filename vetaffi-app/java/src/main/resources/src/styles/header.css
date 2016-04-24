@@ -16,3 +16,62 @@
   letter-spacing: 3px;
   cursor: pointer;
 }
+
+.header-menu-wrapper {
+    position: relative;
+    top: 10px;
+    float: right;
+    width: 42px;
+    height: 42px;
+    background: #205493;
+    cursor: pointer;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+.header-menu-wrapper:hover {
+    background-color: #4773aa;
+}
+
+.header-menu-wrapper img {
+    width: 24px;
+}
+
+.header-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 160px;
+    padding: 0px;
+    list-style: none;
+    opacity: 0.0;
+    visibility: hidden;
+    overflow: hidden;
+    border: 2px solid #aeb0b5;
+    border-radius: 10px;
+    transform: translate(20px, -20px) scale(0.8);
+    transition-duration: 0.15s;
+    transition: all linear 0.15s;
+}
+
+.header-menu.show {
+    opacity: 1.0;
+    visibility: visible;
+    transform: translate(0px, 0px) scale(1.0);
+}
+
+.header-menu a:hover {
+    text-decoration: none;
+}
+
+.header-menu li {
+    width: 100%;
+    line-height: 40px;
+    background-color: white;
+    text-align: center;
+}
+
+.header-menu li:hover {
+    background-color: #e4e2e0;
+}

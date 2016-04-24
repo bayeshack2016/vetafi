@@ -12,4 +12,13 @@ app.controller('headerCtrl', ['$scope', '$location', function($scope, $location)
             title: 'Resources',
         }
     ];
+
+    $scope.onClickMenu = function() {
+        var target = $('.header-menu');
+        if (target.hasClass('show')) {
+            target.removeClass('show');
+        } else {
+            target.addClass('show');
+        }
+    };
 }]);
