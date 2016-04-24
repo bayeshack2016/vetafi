@@ -1,7 +1,12 @@
 var app = angular.module('vetaffiApp');
 
-app.controller('profileCtrl', ['$scope', '$mixpanel', '$routeParams', 'formState',
+app.controller('profileCtrl', ['$scope', '$mixpanel', '$routeParams',
     function($scope, $mixpanel, $routeParams) {
+
+    $routeParams = {
+        claimsInProgress: 'ptsd',
+        pastClaims: 'ptsd'
+    };
 
     $scope.claimsInProgress = $routeParams.claimsInProgress;
     $scope.pastClaims = $routeParams.pastClaims;
@@ -16,9 +21,9 @@ app.controller('profileCtrl', ['$scope', '$mixpanel', '$routeParams', 'formState
     };
 
     $scope.formMapper = {
-        'ptsd' : 'VBA-21-526EZ-ARE',
-        'physical' : 'VBA-21-526EZ-ARE',
-        'general' : 'VBA-21-526EZ-ARE'
+        'ptsd' : { title: 'PTSD', name: 'VBA-21-526EZ-ARE' },
+        'physical' : { title: 'Physical Injuries', name: 'VBA-21-526EZ-ARE' },
+        'general' : { title: 'General', name: 'VBA-21-526EZ-ARE' }
     };
 
     $scope.user = {
