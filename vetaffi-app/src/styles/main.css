@@ -41,3 +41,15 @@ body a:hover {
   background-color: white;
   overflow-x: hidden;
 }
+
+.floating-progress {
+  position: fixed;
+  bottom: 0;
+  width: 760px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  z-index: 999;
+  background-color: #ffffff;
+
+}

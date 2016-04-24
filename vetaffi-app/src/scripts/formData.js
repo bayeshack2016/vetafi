@@ -20,6 +20,7 @@
 
     module.factory('formState', ['$mixpanel', function($mixpanel) {
         var forms = {};
+        var suggestions = {};
         function addForm(formName) {
             forms[formName] = false;
         }
@@ -27,6 +28,10 @@
         function removeForm(formName) {
             delete forms[formName];
 
+        }
+
+        function suggestForm(formName) {
+            suggestions[formName] = true;
         }
 
         function getForms() {
@@ -53,7 +58,8 @@
             removeForm: removeForm,
             getForms: getForms,
             completeForm: completeForm,
-            getValidForms: getValidForms
+            getValidForms: getValidForms,
+            suggestForm: suggestForm
         }
 
     }]);
