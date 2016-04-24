@@ -1,13 +1,17 @@
 {
   "va_file_number": {
-    "PDFFormLocator": null,
+    "PDFFormLocator": "VAFileNumber[0]",
     "type": "string",
     "title": "VA File Number",
-    "DatumId": "veteran_ssn",
     "formName": "VBA-21-0781-ARE"
   },
   "veteran_name": {
     "type": "object",
+    "PDFFormLocator": {
+      "veteran_first_name": "NameofVeteran[0]",
+      "veteran_middle_initial": "NameofVeteran[0]",
+      "veteran_last_name": "NameofVeteran[0]"
+    },
     "properties": {
       "veteran_first_name": {
         "type": "string",

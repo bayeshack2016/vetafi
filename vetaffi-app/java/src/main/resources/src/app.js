@@ -74,6 +74,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             for (var i = 0; i < forms.length; i++) {
                 var formName = forms[i];
                 formData.getFormData(formName, function (response) {
+                    console.log(formName);
                     combineFormResponse(formName, response.data);
                     $scope.downloadedForms += 1;
                 }, function (response) {
@@ -110,6 +111,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     var tmp = $scope.schema.properties[key].PDFFormLocator;
                     $scope.schema.properties[key] = data[key];
                     $scope.schema.properties[key].PDFFormLocator = tmp;
+
                     if ($scope.schema.properties[key]["x-schema-form"]) {
                         $scope.schema.properties[key]["x-schema-form"]['onChange'] = "onChange(form.key,modelValue)";
                     } else {
@@ -177,6 +179,15 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
         };
 
+        function findExistingOutputElement(output, fieldName) {
+            for (var i = 0; i<output.length; i++) {
+                if (output[i].fieldName === fieldName) {
+                    return output;
+                }
+            }
+            return false;
+        }
+
         function prepareData(formName, formState) {
             console.log($scope.schema.properties);
             var output = [];
@@ -189,7 +200,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                         console.log(translation);
                         console.log(formState[key]);
                         for (var key2 in translation) {
-                            if (translation.hasOwnProperty(key2)) {
+                            if (translation.hasOwnProperty(key2) && formState[key][key2]) {
                                 output.push({
                                     "fieldName": translation[key2],
                                     "fieldValue": formState[key][key2]
@@ -197,10 +208,12 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                             }
                         }
                     } else if ($scope.schema.properties[key].type === 'string') {
-                        output.push({
-                            "fieldName": $scope.schema.properties[key].PDFFormLocator[formName],
-                            "fieldValue": formState[key]
-                        });
+                        if (formState[key]) {
+                            output.push({
+                                "fieldName": $scope.schema.properties[key].PDFFormLocator[formName],
+                                "fieldValue": formState[key]
+                            });
+                        }
                     }
 
                 }
