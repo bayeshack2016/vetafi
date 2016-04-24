@@ -1,7 +1,5 @@
 <div class="file-claim-view" ng-controller="fileClaimCtrl">
-    <h3>Pick forms to include in your file claim</h3>
-
-    <div >
+    <div>
         <h3>Pick forms to include in your file claim</h3>
 
         <div class="selection-wrapper" ng-repeat="formName in formNames">
@@ -10,6 +8,7 @@
                        ng-model="formSelections[formName]"
                        id="{{formName}}"
                        class="file-claim-checkbox"/>
+
                 <div class="form-description">
                     {{formName}}
                     <p>{{descriptions[formName]}}</p>
@@ -19,10 +18,6 @@
             <div class="tooltip-thing" ng-if="suggestions[formName]">
                 <p>Veterans like you<br>often fill out this form.</p>
             </div>
-        </div>
-
-        <div class="tooltip-thing" ng-if="suggestions[formName]">
-            <p>Veterans like you<br>often fill out this form.</p>
         </div>
     </div>
 
