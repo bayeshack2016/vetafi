@@ -1,34 +1,31 @@
 <div class="file-claim-view" ng-controller="fileClaimCtrl">
-    <h3>File a claim!</h3>
 
-    <div class="container">
-        <div ng-repeat="formName in formNames">
-            <div class="row form-option" ng-class="{'form-option-selected': formSelections[formName]}">
-                <div class="col-sm-1">
-                    <input type="checkbox"
-                           ng-model="formSelections[formName]"
-                           id="{{formName}}"
-                           class="file-claim-checkbox"/>
-                </div>
-                <div class="col-sm-4">
-                    {{formName}}
-                    <p class="form-description">{{descriptions[formName]}}</p>
-                </div>
-                <div class="col-sm-2 tooltip-thing" ng-visible="suggestions[formName]" ng-hide="formSelections[formName]" >
-                    <p>Veterans like you often fill out this form.</p>
-                </div>
-            </div>
-            <div class="row form-description">
-                <div class="col-sm-1"></div>
-                <div class="col-sm-4"></div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-2">
-                <button ng-click="onSubmit()">Begin Paperwork</button>
-            </div>
-        </div>
+    <div class="loading-view">
+        <h3>Loading your information...</h3>
+        <img src="icons/loading.png">
     </div>
-    <div>{{formSelections}}</div>
+
+    <div class="origin-view">
+        <h3>Pick forms to include in your file claim</h3>
+
+        <div class="selection-wrapper" ng-repeat="formName in formNames">
+            <div class="form-option" ng-class="{'form-option-selected': formSelections[formName]}">
+                <input type="checkbox"
+                       ng-model="formSelections[formName]"
+                       id="{{formName}}"
+                       class="file-claim-checkbox"/>
+                <div class="form-description">
+                    {{formName}}
+                    <p>{{descriptions[formName]}}</p>
+                </div>
+            </div>
+
+            <div class="tooltip-thing" ng-if="suggestions[formName]">
+                <p>Veterans like you<br>often fill out this form.</p>
+            </div>
+        </div>
+
+        <button class="begin-button" ng-click="onSubmit()">Begin Paperwork</button>
+    </div>
+
 </div>

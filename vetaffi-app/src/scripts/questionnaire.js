@@ -47,7 +47,7 @@ app.controller('questionCtrl', ['$scope', '$location', 'formState', '$mixpanel',
             });
             // Major/Severe Depression
             if (i >= 2) {
-                 formState.suggestForm('ptsd');
+                 formState.suggestForm('VBA-21-0781-ARE');
             }
             $location.path('/file-claim');
         };
