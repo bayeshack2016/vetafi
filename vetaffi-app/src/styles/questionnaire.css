@@ -1,28 +1,44 @@
+.question-view {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
 .question-view h3 {
     margin-bottom: 40px;
     text-align: center;
 }
 
+.question-view h4 {
+    line-height: 30px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+}
+
 .questionnaire-wrapper {
-    width: 80%;
-    margin: 0 auto;
+    margin-left: 50px;
 }
 
 .question-wrapper {
+    margin-bottom: 30px;
 }
 
 .question-text {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .answer-wrapper {
-
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.answer-wrapper.radios {
-    margin-left: 40px;
+.answer-wrapper input[type="radio"] {
+    margin-right: 15px;
 }
 
-.answer-wrapper.text {
-    p
+.answer-wrapper input[type="radio"]:checked+label {
+    color: green;
+}
+
+.answer-wrapper .option-text {
+    color: #aeb0b5;
 }

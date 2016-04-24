@@ -1,20 +1,23 @@
 <div class="question-view" ng-controller="questionCtrl">
     <h3>Help us by answering these questions</h3>
+    <h4>How often have you been bothered by<br>any of these problems?</h4>
     <div class="questionnaire-wrapper">
         <div class="question-wrapper" ng-repeat="question in questions">
             <div class="question-text">
                 <p>{{question.text}}</p>
             </div>
-            <div class="answer-wrapper radios"
-                 ng-if="question.type == 'radios'"
-                 ng-repeat="answer in question.answers">
-                <input type="radio" name="{{question.answerName}}" value="{{answer.val}}">{{answer.text}}
-            </div>
-            <div class="answer-wrapper text" ng-if="question.type == 'text'">
-                <textarea rows="4" cols="50" name="{{question.answerName}}" placeholder="{{answer.placeholder}}">
+            <div class="answer-wrapper" ng-repeat="answer in question.answers">
+                <input
+                       id="getUniqueLabel(question, answer)"
+                       type="radio"
+                       name="{{question.answerName}}"
+                       value="{{answer.val}}"
+                        ng-click="selectOption(question, answer)">
+                <label for="getUniqueLabel(question, answer)" class="option-text">
                     {{answer.text}}
-                </textarea>
+                </label>
             </div>
         </div>
     </div>
+    <button class="submit-btn" ng-click="onSubmit()">Submit</button>
 </div>
