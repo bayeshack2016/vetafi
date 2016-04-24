@@ -34,6 +34,10 @@
             suggestions[formName] = true;
         }
 
+        function getSuggestions() {
+            return suggestions;
+        }
+
         function getForms() {
             var output = [];
             for (var key in forms) {
@@ -59,9 +63,9 @@
             getForms: getForms,
             completeForm: completeForm,
             getValidForms: getValidForms,
-            suggestForm: suggestForm
+            suggestForm: suggestForm,
+            getSuggestions: getSuggestions
         }
-
     }]);
 
 

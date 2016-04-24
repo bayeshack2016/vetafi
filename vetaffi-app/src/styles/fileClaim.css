@@ -19,3 +19,13 @@ p.form-description {
     font-size: 14px;
     letter-spacing: 1.5px;
 }
+
+.tooltip-thing {
+    border-radius: 5px;
+    border: solid 1px #000000;
+    padding-top: 0.5em;
+    margin-bottom: -0.25em;
+    margin-top: -0.25em;
+    background-color: #f9c642;
+
+}

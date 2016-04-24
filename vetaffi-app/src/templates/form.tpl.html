@@ -6,11 +6,15 @@
                     <span class="pull-right">{{vaForm}}</span>
                 </div>
                 <div class="col-lg-6">
-                    <uib-progressbar animate="false" value="getProgress(vaForm)" type="{{getType(vaForm)}}"></uib-progressbar>
+                    <uib-progressbar
+                            animate="false"
+                            value="getProgress(vaForm)"
+                            type="{{getType(vaForm)}}">
+                    </uib-progressbar>
                 </div>
                 <div class="col-lg-2">
                     {{getProgressNumerator(vaForm)}}/{{getProgressDenominator(vaForm)}}
-                    </div>
+                </div>
             </div>
         </div>
     </div>
