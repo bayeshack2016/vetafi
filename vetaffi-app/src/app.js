@@ -194,6 +194,9 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when("/form", {
         templateUrl: "templates/form.tpl.html"
     });
+    $routeProvider.when("/claim-submitted", {
+        templateUrl: "templates/claimSubmitted.tpl.html"
+    });
     $routeProvider.otherwise({
         redirectTo: '/'
     });

@@ -1,3 +1,64 @@
 <div class="profile-view" ng-controller="profileCtrl">
-    <h1>Your profile</h1>
+    <div class="profile-info-wrapper">
+        <div class="profile-pic-wrapper">
+            <div class="profile-pic">
+                <img src="images/veteran-ann.jpg">
+            </div>
+        </div>
+        <div class="military-stats-wrapper">
+            <div class="military-stat" ng-repeat="stat in stats">
+                <div class="title">{{stat.title}}:</div>
+                <div class="value" ng-if="stat.value">{{stat.value}}</div>
+                <div class="values" ng-if="stat.values" ng-repeat="val in stat.values">{{val}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="personal-info-wrapper">
+        <div class="personal-info-right">
+            <div class="personal-info email">
+                <span class="personal-info-header">Email:</span>
+                <input id="profile-email" type="text" name="email" placeholder="{{user.email}}">
+            </div>
+
+            <div class="personal-info emergency">
+                <div class="personal-info-header">Emergency Contact:</div>
+                <input id="profile-emergency-person" type="text" name="emergency-person" placeholder="{{user.emergency.name}}"><br>
+                <input id="profile-emergency-number" type="text" name="emergency-number" placeholder="{{user.emergency.phone}}">
+            </div>
+        </div>
+
+        <div class="personal-info-left">
+            <div class="personal-info address">
+                <div class="personal-info-header">Address:</div>
+                <input id="profile-address" type="text" name="address1" placeholder="{{user.address}}"><br>
+                <input id="profile-city" type="text" name="city" placeholder="{{user.city}}"><br>
+                <input id="profile-state" type="text" name="state" placeholder="{{user.state}}">
+                <input id="profile-zipcode" type="text" name="zipCode" placeholder="{{user.zipCode}}"><br>
+                <input id="profile-country" type="text" name="country" placeholder="{{user.country}}">
+            </div>
+        </div>
+    </div>
+
+    <div class="actions-wrapper" ng-if="anyActions">
+        <div id="claims-in-progress" class="action-view-wrapper" ng-if="claimsInProgress">
+            <h4>Claims in progress</h4>
+            <div class="claim-progress-wrapper">
+                <div class="claim-progress-bar" ng-class="claimState"></div>
+                <div class="checkpoint-line received"></div>
+                <div class="checkpoint-line verified"></div>
+                <div class="checkpoint-line evaluated"></div>
+            </div>
+            <div class="claim-progress-description" ng-bind-html="claimTextMapper[claimState]"></div>
+        </div>
+        <div id="view-past-claims" class="action-view-wrapper" ng-if="pastClaims">
+            <h4>View your past claims</h4>
+            <ul>
+                <li>
+                    <a>{{formMapper[pastClaims].title}} - {{formMapper[pastClaims].name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
 </div>

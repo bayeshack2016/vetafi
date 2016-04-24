@@ -1,0 +1,23 @@
+.claim-submitted-view {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+}
+
+.claim-submitted-view h4 {
+    margin-top: 40px;
+    color: #205493;
+}
+
+.claim-submitted-view button {
+    padding: 10px 25px;
+    background-color: #f9c642;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.claim-submitted-view button:hover {
+    background-color: #fad980;
+}

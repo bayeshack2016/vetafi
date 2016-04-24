@@ -1,0 +1,174 @@
+.profile-view {
+    padding: 40px;
+}
+
+.profile-view h3 {
+    text-align: center;
+}
+
+.profile-view h4 {
+    text-align: left;
+}
+
+.profile-info-wrapper {
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+.profile-pic-wrapper {
+    float: left;
+}
+
+.profile-pic {
+}
+
+.profile-pic img {
+    width: 200px;
+}
+
+.military-stats-wrapper {
+    float: right;
+    width: calc(100% - 240px);
+}
+
+.military-stat {
+    margin-bottom: 20px;
+}
+
+.military-stat .title {
+    display: inline-block;
+    color: #205493;
+}
+
+.military-stat .value {
+    display: inline-block;
+}
+
+.military-stat .values {
+
+}
+
+.personal-info-wrapper {
+    display: block;
+    height: 230px;
+    margin-bottom: 20px;
+}
+
+.personal-info-header {
+    margin-bottom: 10px;
+}
+
+.personal-info input {
+    margin-bottom: 15px;
+    padding-left: 10px;
+    line-height: 30px;
+    border-radius: 8px;
+    border-style: solid;
+    border: 1px solid #aeb0b5;
+}
+
+.personal-info input::-webkit-input-placeholder {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #aeb0b5;
+}
+
+.personal-info-left {
+    float: left;
+}
+
+.personal-info-right {
+    float: right;
+}
+
+#profile-address {
+    width: 240px;
+}
+
+#profile-city {
+    width: 240px;
+}
+
+#profile-state {
+    width: 120px;
+}
+
+#profile-zipcode {
+    width: 80px;
+}
+
+#profile-country {
+    width: 120px;
+}
+
+.actions-wrapper {
+    display: block;
+    border-top: 1px solid #e4e2e0;
+    padding-top: 30px;
+}
+
+.action-view-wrapper {
+    margin-bottom: 40px;
+}
+
+#claims-in-progress {
+}
+
+#claims-in-progress .claim-progress-wrapper {
+    position: relative;
+    height: 40px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #e4e2e0;
+}
+
+#claims-in-progress .claim-progress-bar {
+    height: 100%;
+    background-color: #02bfe7;
+}
+
+#claims-in-progress .claim-progress-bar.received {
+    width: 15%;
+}
+
+#claims-in-progress .claim-progress-bar.verified {
+    width: 35%;
+}
+
+#claims-in-progress .claim-progress-bar.evaluated {
+    width: 65%;
+}
+
+.claim-progress-wrapper .checkpoint-line {
+    position: absolute;
+    top: 0px;
+    width: 1px;
+    height: 100%;
+    background-color: #aeb0b5;
+}
+
+.claim-progress-wrapper .checkpoint-line.received {
+    left: 15%;
+}
+
+.claim-progress-wrapper .checkpoint-line.verified {
+    left: 35%;
+}
+
+.claim-progress-wrapper .checkpoint-line.evaluated {
+    left: 65%;
+}
+
+.claim-progress-description {
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+#view-past-claims {
+
+}
+
+#view-past-claims ul {
+    margin-top: 20px;
+}
