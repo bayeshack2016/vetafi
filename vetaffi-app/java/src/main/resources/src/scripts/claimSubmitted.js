@@ -7,6 +7,10 @@ app.controller('claimSubmittedCtrl', ['$scope', '$mixpanel',
             email: 'kittykatvet@gmail.com'
         };
         $mixpanel.track("claim_submitted_page_landed", {});
+
+        $(function() {
+
+        });
     }
 ]);
 

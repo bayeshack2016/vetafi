@@ -1,6 +1,8 @@
 .faq-view {
     padding-left: 40px;
     padding-right: 40px;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .faq-view h3 {

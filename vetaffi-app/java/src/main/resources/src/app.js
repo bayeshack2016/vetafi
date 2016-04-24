@@ -22,8 +22,8 @@ angular.module('analytics.mixpanel')
         $mixpanelProvider.apiKey('a1edeb203acf26ad1d5e9c8ca4f24a07'); // your token is different than your API key
     }]);
 
-app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$http',
-    function ($scope, formData, formState, $mixpanel, $http) {
+app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$http', '$routeParams', '$location',
+    function ($scope, formData, formState, $mixpanel, $http, $routeParams, $location) {
         $mixpanel.track("Form start",
             {
                 formNames: $scope.vaForms
@@ -57,7 +57,8 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         var formStartTime = new Date();
         $scope.onSubmit = function (form) {
             console.log("submit");
-            if (!tv4.validate($scope.model, $scope.schema)) {
+            // Check if all fields are filled, unless a 'done' url parameter is set (for debug-only)
+            if (!$routeParams.done && !tv4.validate($scope.model, $scope.schema)) {
                 alert("Not done yet");
                 return;
             }
@@ -66,6 +67,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     formNames: $scope.vaForms,
                     timeSpent: (new Date() - formStartTime)
                 });
+            $location.path('/claim-submitted');
         };
 
         function downloadForms(forms) {
