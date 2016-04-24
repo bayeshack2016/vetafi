@@ -16,4 +16,5 @@ app.controller('fileClaimCtrl', ['$scope', 'formState', '$location', function($s
     };
 
     $scope.suggestions = formState.getSuggestions();
+    $scope.descriptions = formState.getDescriptions();
 }]);
