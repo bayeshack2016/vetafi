@@ -25,13 +25,8 @@
     <form sf-schema="schema"
           sf-form="form"
           sf-model="model"
-          ng-submit="onSubmit(myForm)"></form>
-    <!--<div>-->
-        <!--{{model}}-->
-    <!--</div>-->
-    <!--<div>-->
-        <!--{{schema}}-->
-    <!--</div>-->
+          ></form>
+    <button ng-submit="onSubmit(myForm)" class="btn btn-info">Submit</button>
     {{submitClaim}}
     <div class="submit-overlay" ng-show="submitClaim">
         <div class="submit-loading-modal">

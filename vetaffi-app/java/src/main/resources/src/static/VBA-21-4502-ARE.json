@@ -1,646 +1,699 @@
 {
-  "va_file_number": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "VA File Number",
-    "DatumId": "veteran_ssn",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_ssn": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Social Security Number",
-    "DatumId": "veteran_ssn",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_name": {
-    "type": "object",
-    "properties": {
-      "veteran_first_name": {
-        "type": "string",
-        "title": "First",
-        "DatumId": "prev_treatment_place",
-        "PDFFormLocator": null
-      },
-      "veteran_middle_initial": {
-        "type": "string",
-        "title": "Middle Initial",
-        "DatumId": "prev_treatment_start_date",
-        "PDFFormLocator": null
-      },
-      "veteran_last_name": {
-        "type": "string",
-        "title": "Last",
-        "DatumId": "prev_treatment_end_date",
-        "PDFFormLocator": null
-      }
-    },
-    "title": "Veteran Name",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_home_zip_code": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Home Zip Code",
-    "DatumId": "veteran_home_zip_code",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_home_street": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Home Street",
-    "DatumId": "veteran_home_street",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_home_city": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Home City",
-    "DatumId": "veteran_home_city",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_home_state": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Home State",
-    "DatumId": "veteran_home_state",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_home_country": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Home Country",
-    "DatumId": "veteran_home_country",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_forwarding_zip_code": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Forwarding Zip Code",
-    "DatumId": "veteran_forwarding_zip_code",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_forwarding_street": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Forwarding Street",
-    "DatumId": "veteran_forwarding_street",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_forwarding_city": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Forwarding City",
-    "DatumId": "veteran_forwarding_city",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_forwarding_state": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Forwarding State",
-    "DatumId": "veteran_forwarding_state",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_forwarding_country": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Forwarding Country",
-    "DatumId": "veteran_forwarding_country",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_service_branches": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "Veteran Service Branch",
-    "PDFFormLocator": null,
-    "DatumId": "veteran_service_branches",
-    "type": "string",
-    "enum": [
-      "Army",
-      "Navy",
-      "Marine Corps",
-      "Air Force",
-      "Coast Guard"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Army",
-          "name": "Army"
-        },
-        {
-          "value": "Navy",
-          "name": "Navy"
-        },
-        {
-          "value": "Marine Corps",
-          "name": "Marine Corps"
-        },
-        {
-          "value": "Air Force",
-          "name": "Air Force"
-        },
-        {
-          "value": "Coast Guard",
-          "name": "Coast Guard"
-        }
-      ]
+ "va_file_number": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "VA File Number", 
+  "DatumId": "veteran_ssn", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 0
+ }, 
+ "veteran_ssn": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Social Security Number", 
+  "DatumId": "veteran_ssn", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 1
+ }, 
+ "veteran_name": {
+  "type": "object", 
+  "properties": {
+   "veteran_first_name": {
+    "type": "string", 
+    "title": "First", 
+    "DatumId": "prev_treatment_place", 
+    "PDFFormLocator": null
+   }, 
+   "veteran_middle_initial": {
+    "type": "string", 
+    "title": "Middle Initial", 
+    "DatumId": "prev_treatment_start_date", 
+    "PDFFormLocator": null
+   }, 
+   "veteran_last_name": {
+    "type": "string", 
+    "title": "Last", 
+    "DatumId": "prev_treatment_end_date", 
+    "PDFFormLocator": null
+   }
+  }, 
+  "title": "Veteran Name", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 2
+ }, 
+ "veteran_home_zip_code": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Home Zip Code", 
+  "DatumId": "veteran_home_zip_code", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 3
+ }, 
+ "veteran_home_street": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Home Street", 
+  "DatumId": "veteran_home_street", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 4
+ }, 
+ "veteran_home_city": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Home City", 
+  "DatumId": "veteran_home_city", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 5
+ }, 
+ "veteran_home_state": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Home State", 
+  "DatumId": "veteran_home_state", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 6
+ }, 
+ "veteran_home_country": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Home Country", 
+  "DatumId": "veteran_home_country", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 7
+ }, 
+ "veteran_forwarding_zip_code": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Forwarding Zip Code", 
+  "DatumId": "veteran_forwarding_zip_code", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 8
+ }, 
+ "veteran_forwarding_street": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Forwarding Street", 
+  "DatumId": "veteran_forwarding_street", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 9
+ }, 
+ "veteran_forwarding_city": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Forwarding City", 
+  "DatumId": "veteran_forwarding_city", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 10
+ }, 
+ "veteran_forwarding_state": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Forwarding State", 
+  "DatumId": "veteran_forwarding_state", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 11
+ }, 
+ "veteran_forwarding_country": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Forwarding Country", 
+  "DatumId": "veteran_forwarding_country", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 12
+ }, 
+ "veteran_service_branches": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "Veteran Service Branch", 
+  "PDFFormLocator": null, 
+  "DatumId": "veteran_service_branches", 
+  "type": "string", 
+  "enum": [
+   "Army", 
+   "Navy", 
+   "Marine Corps", 
+   "Air Force", 
+   "Coast Guard"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Army", 
+     "name": "Army"
+    }, 
+    {
+     "value": "Navy", 
+     "name": "Navy"
+    }, 
+    {
+     "value": "Marine Corps", 
+     "name": "Marine Corps"
+    }, 
+    {
+     "value": "Air Force", 
+     "name": "Air Force"
+    }, 
+    {
+     "value": "Coast Guard", 
+     "name": "Coast Guard"
     }
-  },
-  "veteran_current_active_duty_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "ARE YOU ON ACTIVE DUTY?",
-    "PDFFormLocator": null,
-    "DatumId": "veteran_national_guard_currently_activated_y_n",
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 13
+ }, 
+ "veteran_current_active_duty_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "ARE YOU ON ACTIVE DUTY?", 
+  "PDFFormLocator": null, 
+  "DatumId": "veteran_national_guard_currently_activated_y_n", 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_active_duty_place_of_entry": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "PLACE OF ENTRY INTO ACTIVE DUTY",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_active_duty_date_of_entry": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "DATE OF ENTRY",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-
-  "veteran_active_duty_place_of_release": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "PLACE OF release INTO ACTIVE DUTY",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_active_duty_date_of_release": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "DATE OF release",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_applied_disability_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU APPLIED FOR VA DISABILITY COMPENSATION? ",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 14
+ }, 
+ "veteran_active_duty_place_of_entry": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "PLACE OF ENTRY INTO ACTIVE DUTY", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 15
+ }, 
+ "veteran_active_duty_date_of_entry": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "DATE OF ENTRY", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 16
+ }, 
+ "veteran_active_duty_place_of_release": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "PLACE OF release INTO ACTIVE DUTY", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 17
+ }, 
+ "veteran_active_duty_date_of_release": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "DATE OF release", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 18
+ }, 
+ "veteran_applied_disability_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU APPLIED FOR VA DISABILITY COMPENSATION? ", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_applied_disability_place": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "WHERE HAVE YOU APPLIED FOR VA DISABILITY COMPENSATION?",
-    "PDFFormLocator": null,
-    "x-schema-form": {
-      "condition": "model.veteran_applied_disability_y_n == 'Yes'"
-    },
-    "type": "string"
-  },
-  "veteran_applied_disability_date": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "WHEN DID YOU APPLIED FOR VA DISABILITY COMPENSATION?",
-    "PDFFormLocator": null,
-    "x-schema-form": {
-      "condition": "model.veteran_applied_disability_y_n == 'Yes'"
-    },
-    "type": "string", "format": "date"
-  },
-  "veteran_applied_disability_va_office": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "WHICH VA OFFICE HAS YOUR FILE FOR PREVIOUS APPLICATION?",
-    "PDFFormLocator": null,
-    "x-schema-form": {
-      "condition": "model.veteran_applied_disability_y_n == 'Yes'"
-    },
-    "type": "string"
-  },
-  "veteran_conveyance_applied_for": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "TYPE OF CONVEYANCE APPLIED FOR",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Automobile",
-      "Station Wagon", "Van", "Truck", "Other"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Automobile",
-          "name": "Automobile"
-        },
-        {
-          "value": "Station Wagon",
-          "name": "Station Wagon"
-        },
-        {
-          "value": "Van",
-          "name": "Van"
-        }
-      ,
-        {
-          "value": "Truck",
-          "name": "Truck"
-        },
-        {
-          "value": "Other",
-          "name": "Other"
-        }
-      ]
+   ]
+  }, 
+  "index": 19
+ }, 
+ "veteran_applied_disability_place": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "WHERE HAVE YOU APPLIED FOR VA DISABILITY COMPENSATION?", 
+  "PDFFormLocator": null, 
+  "x-schema-form": {
+   "condition": "model.veteran_applied_disability_y_n == 'Yes'"
+  }, 
+  "type": "string", 
+  "index": 20
+ }, 
+ "veteran_applied_disability_date": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "WHEN DID YOU APPLIED FOR VA DISABILITY COMPENSATION?", 
+  "PDFFormLocator": null, 
+  "x-schema-form": {
+   "condition": "model.veteran_applied_disability_y_n == 'Yes'"
+  }, 
+  "type": "string", 
+  "format": "date", 
+  "index": 21
+ }, 
+ "veteran_applied_disability_va_office": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "WHICH VA OFFICE HAS YOUR FILE FOR PREVIOUS APPLICATION?", 
+  "PDFFormLocator": null, 
+  "x-schema-form": {
+   "condition": "model.veteran_applied_disability_y_n == 'Yes'"
+  }, 
+  "type": "string", 
+  "index": 22
+ }, 
+ "veteran_conveyance_applied_for": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "TYPE OF CONVEYANCE APPLIED FOR", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Automobile", 
+   "Station Wagon", 
+   "Van", 
+   "Truck", 
+   "Other"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Automobile", 
+     "name": "Automobile"
+    }, 
+    {
+     "value": "Station Wagon", 
+     "name": "Station Wagon"
+    }, 
+    {
+     "value": "Van", 
+     "name": "Van"
+    }, 
+    {
+     "value": "Truck", 
+     "name": "Truck"
+    }, 
+    {
+     "value": "Other", 
+     "name": "Other"
     }
-  },
-  "veteran_conveyance_applied_for_other": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "WHAT WAS THE OTHER CONVEYANCE APPLIED FOR",
-    "PDFFormLocator": null,
-    "x-schema-form": {
-      "condition": "model.veteran_conveyance_applied_for == 'Other'"
-    },
-    "type": "string"
-  },
-  "veteran_applied_automobile_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU PREVIOUSLY APPLIED FOR AN AUTOMOBILE OR OTHER CONVEYANCE? (This is a once-per-lifetime grant)",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 23
+ }, 
+ "veteran_conveyance_applied_for_other": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "WHAT WAS THE OTHER CONVEYANCE APPLIED FOR", 
+  "PDFFormLocator": null, 
+  "x-schema-form": {
+   "condition": "model.veteran_conveyance_applied_for == 'Other'"
+  }, 
+  "type": "string", 
+  "index": 24
+ }, 
+ "veteran_applied_automobile_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU PREVIOUSLY APPLIED FOR AN AUTOMOBILE OR OTHER CONVEYANCE? (This is a once-per-lifetime grant)", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_applied_automobile_date": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "WHEN DID YOU PREVIOUSLY APPLY FOR AUTOMOBILE OR OTHER CONVEYANCE?",
-    "PDFFormLocator": null,
-    "x-schema-form": {
-      "condition": "model.veteran_applied_automobile_y_n == 'Yes'"
-    },
-    "type": "string", "format": "date"
-  },
-  "veteran_applied_automobile_place": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "WHERE DID YOU PREVIOUSLY APPLY FOR AUTOMOBILE OR OTHER CONVEYANCE?",
-    "PDFFormLocator": null,
-    "x-schema-form": {
-      "condition": "model.veteran_applied_automobile_y_n == 'Yes'"
-    },
-    "type": "string"
-  },
-  "veteran_phone_number": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Preferred Phone Number",
-    "DatumId": "veteran_phone_number",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_extremity_injury_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU HAD A SERIOUS INJURY TO YOUR HAND OR FOOT?",
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 25
+ }, 
+ "veteran_applied_automobile_date": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "WHEN DID YOU PREVIOUSLY APPLY FOR AUTOMOBILE OR OTHER CONVEYANCE?", 
+  "PDFFormLocator": null, 
+  "x-schema-form": {
+   "condition": "model.veteran_applied_automobile_y_n == 'Yes'"
+  }, 
+  "type": "string", 
+  "format": "date", 
+  "index": 26
+ }, 
+ "veteran_applied_automobile_place": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "WHERE DID YOU PREVIOUSLY APPLY FOR AUTOMOBILE OR OTHER CONVEYANCE?", 
+  "PDFFormLocator": null, 
+  "x-schema-form": {
+   "condition": "model.veteran_applied_automobile_y_n == 'Yes'"
+  }, 
+  "type": "string", 
+  "index": 27
+ }, 
+ "veteran_phone_number": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Preferred Phone Number", 
+  "DatumId": "veteran_phone_number", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 28
+ }, 
+ "veteran_extremity_injury_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU HAD A SERIOUS INJURY TO YOUR HAND OR FOOT?", 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_loss_of_foot": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU LOST A FOOT?",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Right",
-      "Left",
-      "Both"
-    ],
-    "required": false,
-    "x-schema-form": {
-      "condition": "model.veteran_extremity_injury_y_n == 'Yes'",
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Right",
-          "name": "Right"
-        },
-        {
-          "value": "Left",
-          "name": "Left"
-        },
-        {
-          "value": "Both",
-          "name": "Both"
-        }
-      ]
+   ]
+  }, 
+  "index": 29
+ }, 
+ "veteran_loss_of_foot": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU LOST A FOOT?", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Right", 
+   "Left", 
+   "Both"
+  ], 
+  "required": false, 
+  "x-schema-form": {
+   "condition": "model.veteran_extremity_injury_y_n == 'Yes'", 
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Right", 
+     "name": "Right"
+    }, 
+    {
+     "value": "Left", 
+     "name": "Left"
+    }, 
+    {
+     "value": "Both", 
+     "name": "Both"
     }
-  },
-  "veteran_loss_of_hand": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU LOST A HAND?",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Right",
-      "Left",
-      "Both"
-    ],
-    "required": false,
-    "x-schema-form": {
-      "condition": "model.veteran_extremity_injury_y_n == 'Yes'",
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Right",
-          "name": "Right"
-        },
-        {
-          "value": "Left",
-          "name": "Left"
-        },
-        {
-          "value": "Both",
-          "name": "Both"
-        }
-      ]
+   ]
+  }, 
+  "index": 30
+ }, 
+ "veteran_loss_of_hand": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU LOST A HAND?", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Right", 
+   "Left", 
+   "Both"
+  ], 
+  "required": false, 
+  "x-schema-form": {
+   "condition": "model.veteran_extremity_injury_y_n == 'Yes'", 
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Right", 
+     "name": "Right"
+    }, 
+    {
+     "value": "Left", 
+     "name": "Left"
+    }, 
+    {
+     "value": "Both", 
+     "name": "Both"
     }
-  },
-  "veteran_loss_of_use_of_foot": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU LOST PERMANENT USE OF A FOOT?",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Right",
-      "Left",
-      "Both"
-    ],
-    "required": false,
-    "x-schema-form": {
-      "condition": "model.veteran_extremity_injury_y_n == 'Yes'",
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Right",
-          "name": "Right"
-        },
-        {
-          "value": "Left",
-          "name": "Left"
-        },
-        {
-          "value": "Both",
-          "name": "Both"
-        }
-      ]
+   ]
+  }, 
+  "index": 31
+ }, 
+ "veteran_loss_of_use_of_foot": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU LOST PERMANENT USE OF A FOOT?", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Right", 
+   "Left", 
+   "Both"
+  ], 
+  "required": false, 
+  "x-schema-form": {
+   "condition": "model.veteran_extremity_injury_y_n == 'Yes'", 
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Right", 
+     "name": "Right"
+    }, 
+    {
+     "value": "Left", 
+     "name": "Left"
+    }, 
+    {
+     "value": "Both", 
+     "name": "Both"
     }
-  },
-  "veteran_loss_of_use_of_hand": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU LOST PERMANENT USE OF A HAND?",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Right",
-      "Left",
-      "Both"
-    ],
-    "required": false,
-    "x-schema-form": {
-      "condition": "model.veteran_extremity_injury_y_n == 'Yes'",
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Right",
-          "name": "Right"
-        },
-        {
-          "value": "Left",
-          "name": "Left"
-        },
-        {
-          "value": "Both",
-          "name": "Both"
-        }
-      ]
+   ]
+  }, 
+  "index": 32
+ }, 
+ "veteran_loss_of_use_of_hand": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU LOST PERMANENT USE OF A HAND?", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Right", 
+   "Left", 
+   "Both"
+  ], 
+  "required": false, 
+  "x-schema-form": {
+   "condition": "model.veteran_extremity_injury_y_n == 'Yes'", 
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Right", 
+     "name": "Right"
+    }, 
+    {
+     "value": "Left", 
+     "name": "Left"
+    }, 
+    {
+     "value": "Both", 
+     "name": "Both"
     }
-  },
-
-  "veteran_vision_impairment": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU HAD PERMANENT VISION IMPAIRMENT?",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "CENTRAL VISUAL ACUITY 20/200 OR LESS IN THE BETTER EYE WITH CORRECTIVE GLASSES",
-      "CONTRACTION OF THE PERIPHERAL FIELD OF VISION TO 20 DEGREES OR LESS IN THE BETTER EYE"
-    ],
-    "required": false,
-    "x-schema-form": {
-      "titleMap": [
-        {
-          "value": "CENTRAL VISUAL ACUITY 20/200 OR LESS IN THE BETTER EYE WITH CORRECTIVE GLASSES",
-          "name": "CENTRAL VISUAL ACUITY 20/200 OR LESS IN THE BETTER EYE WITH CORRECTIVE GLASSES"
-        },
-        {
-          "value": "CONTRACTION OF THE PERIPHERAL FIELD OF VISION TO 20 DEGREES OR LESS IN THE BETTER EYE",
-          "name": "CONTRACTION OF THE PERIPHERAL FIELD OF VISION TO 20 DEGREES OR LESS IN THE BETTER EYE"
-        }
-      ]
+   ]
+  }, 
+  "index": 33
+ }, 
+ "veteran_vision_impairment": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU HAD PERMANENT VISION IMPAIRMENT?", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "CENTRAL VISUAL ACUITY 20/200 OR LESS IN THE BETTER EYE WITH CORRECTIVE GLASSES", 
+   "CONTRACTION OF THE PERIPHERAL FIELD OF VISION TO 20 DEGREES OR LESS IN THE BETTER EYE"
+  ], 
+  "required": false, 
+  "x-schema-form": {
+   "titleMap": [
+    {
+     "value": "CENTRAL VISUAL ACUITY 20/200 OR LESS IN THE BETTER EYE WITH CORRECTIVE GLASSES", 
+     "name": "CENTRAL VISUAL ACUITY 20/200 OR LESS IN THE BETTER EYE WITH CORRECTIVE GLASSES"
+    }, 
+    {
+     "value": "CONTRACTION OF THE PERIPHERAL FIELD OF VISION TO 20 DEGREES OR LESS IN THE BETTER EYE", 
+     "name": "CONTRACTION OF THE PERIPHERAL FIELD OF VISION TO 20 DEGREES OR LESS IN THE BETTER EYE"
     }
-  },
-  "veteran_severe_burn_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "HAVE YOU HAD A SEVERE BURN INJURY? ",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 34
+ }, 
+ "veteran_severe_burn_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "HAVE YOU HAD A SEVERE BURN INJURY? ", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_als_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "DO YOU SUFFER FROM ALS?",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 35
+ }, 
+ "veteran_als_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "DO YOU SUFFER FROM ALS?", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_vehicle_make_and_model": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": " MAKE AND MODEL OF VEHICLE",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_vehicle_year": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "YEAR",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_vehicle_vin": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "YEAR",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_vehicle_purchase_price": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "YEAR",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_vehicle_date_of_sale": {
-    "PDFFormLocator": null,
-    "type": "string", "format": "date",
-    "title": "YEAR",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_will_operate_vehicle_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "VETERAN WILL OPERATE THIS VEHICLE",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 36
+ }, 
+ "veteran_vehicle_make_and_model": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": " MAKE AND MODEL OF VEHICLE", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 37
+ }, 
+ "veteran_vehicle_year": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "YEAR", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 38
+ }, 
+ "veteran_vehicle_vin": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "YEAR", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 39
+ }, 
+ "veteran_vehicle_purchase_price": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "YEAR", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 40
+ }, 
+ "veteran_vehicle_date_of_sale": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "title": "YEAR", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 41
+ }, 
+ "veteran_will_operate_vehicle_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "VETERAN WILL OPERATE THIS VEHICLE", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_has_license_y_n": {
-    "formName": "VBA-21-4502-ARE",
-    "title": "I HAVE A VALID STATE DRIVER'S LICENSE OR LEARNER'S PERMIT",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Yes",
-      "No"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
-      "titleMap": [
-        {
-          "value": "Yes",
-          "name": "Yes"
-        },
-        {
-          "value": "No",
-          "name": "No"
-        }
-      ]
+   ]
+  }, 
+  "index": 42
+ }, 
+ "veteran_has_license_y_n": {
+  "formName": "VBA-21-4502-ARE", 
+  "title": "I HAVE A VALID STATE DRIVER'S LICENSE OR LEARNER'S PERMIT", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Yes", 
+   "No"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Yes", 
+     "name": "Yes"
+    }, 
+    {
+     "value": "No", 
+     "name": "No"
     }
-  },
-  "veteran_name_seller": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "NAME OF SELLER",
-    "formName": "VBA-21-4502-ARE"
-  },
-  "veteran_address_seller": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "ADDRESS OF SELLER",
-    "formName": "VBA-21-4502-ARE",
-    "x-schema-form": {
-      "type": "textarea",
-      "placeholder": "Address of seller."
-    }
-  }
+   ]
+  }, 
+  "index": 43
+ }, 
+ "veteran_name_seller": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "NAME OF SELLER", 
+  "formName": "VBA-21-4502-ARE", 
+  "index": 44
+ }, 
+ "veteran_address_seller": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "ADDRESS OF SELLER", 
+  "formName": "VBA-21-4502-ARE", 
+  "x-schema-form": {
+   "type": "textarea", 
+   "placeholder": "Address of seller."
+  }, 
+  "index": 45
+ }
 }
