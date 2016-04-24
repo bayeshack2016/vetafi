@@ -1,7 +1,15 @@
 (function () {
     'use strict';
     var module = angular.module('formData', ['analytics.mixpanel']);
-    var validForms = ['VBA-21-526EZ-ARE'];
+    var validForms = ['VBA-21-526EZ-ARE', 'VBA-21-0781-ARE', 'VBA-21-4502-ARE'];
+    var formDescriptions = {
+        'VBA-21-526EZ-ARE':
+        "Essential basic form. Must be filled out for almost all claims.",
+        'VBA-21-0781-ARE':
+        "For claims relating to PTSD.",
+        'VBA-21-4502-ARE':
+        "For claims related to automobiles or other conveyances."
+    };
 
     module.factory('formData', ['$http', function ($http) {
 
@@ -27,7 +35,10 @@
 
         function removeForm(formName) {
             delete forms[formName];
+        }
 
+        function getDescriptions() {
+            return formDescriptions;
         }
 
         function suggestForm(formName) {
@@ -64,7 +75,8 @@
             completeForm: completeForm,
             getValidForms: getValidForms,
             suggestForm: suggestForm,
-            getSuggestions: getSuggestions
+            getSuggestions: getSuggestions,
+            getDescriptions: getDescriptions
         }
     }]);
 
