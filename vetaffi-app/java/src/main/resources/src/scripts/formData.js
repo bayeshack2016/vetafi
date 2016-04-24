@@ -11,10 +11,18 @@
     module.factory('formData', ['$http', '$sce', function ($http, $sce) {
 
         function getFormData(formName, successCb, errorCb) {
+            function suc(response) {
+                return successCb(formName, response)
+            }
+
+            function err(response) {
+                return errorCb(formName, response)
+            }
+
             $http({
                 method: 'GET',
                 url: 'static/' + formName + '.json'
-            }).then(successCb, errorCb);
+            }).then(suc, err);
         }
 
         return {
