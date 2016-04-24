@@ -1,23 +1,24 @@
 <div ng-controller="FormController">
     <div class="floating-progress">
         <div ng-repeat="vaForm in vaForms">
-            <div class="row">
-                <div class="col-lg-4">
-                    <span class="pull-right">{{vaForm}}</span>
-                </div>
-                <div class="col-lg-6">
+            <div class="form-row row">
+                <!--<div class="col-lg-4">-->
+                    <!--<span class="pull-right">{{vaForm}}</span>-->
+                <!--</div>-->
+                <span class="form-name">Form {{vaForm}}</span>
+                <div class="progress-number col-lg-6">
                     <uib-progressbar
                             animate="false"
                             value="getProgress(vaForm)"
                             type="{{getType(vaForm)}}">
                     </uib-progressbar>
                 </div>
-                <div class="col-lg-2">
+                <span class="progress-numbers col-lg-2">
                     {{getProgressNumerator(vaForm)}}/{{getProgressDenominator(vaForm)}}
-                </div>
-                <div class="col-lg-2">
+                </span>
+                <span class="download-link col-lg-2" ng-if="getProgressNumerator(vaForm) == getProgressDenominator(vaForm)">
                     <a download="pdf.pdf" ng-href="{{ url }}" ng-click="getPdfUrl(vaForm)">download</a>
-                </div>
+                </span>
             </div>
         </div>
     </div>
@@ -31,4 +32,14 @@
     <!--<div>-->
         <!--{{schema}}-->
     <!--</div>-->
+    {{submitClaim}}
+    <div class="submit-overlay" ng-show="submitClaim">
+        <div class="submit-loading-modal">
+            <h4>Just a minute! We're filing your claims...</h4>
+            <div class="submit-progress">
+                <div class="submit-progress-bar"></div>
+            </div>
+            <img src="icons/checkmark-gray.png">
+        </div>
+    </div>
 </div>

@@ -56,10 +56,12 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
 
         var formStartTime = new Date();
         $scope.onSubmit = function (form) {
+            $scope.submitClaim = true;
             console.log("submit");
             // Check if all fields are filled, unless a 'done' url parameter is set (for debug-only)
             if (!$routeParams.done && !tv4.validate($scope.model, $scope.schema)) {
-                alert("Not done yet");
+                alert("Woops, not done yet");
+                $scope.submitClaim = false;
                 return;
             }
             $mixpanel.track("Form submit",
@@ -67,7 +69,15 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     formNames: $scope.vaForms,
                     timeSpent: (new Date() - formStartTime)
                 });
-            $location.path('/claim-submitted');
+            $('.submit-progress-bar').animate({width: '65%'}, 1000, function() {
+                $('.submit-progress-bar').animate({width: '100%'}, 500, function() {
+                    $('.submit-loading-modal img').addClass('show');
+                    setTimeout(function() {
+                        $location.path('/claim-submitted');
+                        $scope.$apply();
+                    }, 500);
+                });
+            });
         };
 
         function downloadForms(forms) {
