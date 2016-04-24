@@ -164,6 +164,16 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                 return "info";
             }
         };
+
+        $scope.getPdf = function(formName) {
+            var data = [];
+            for (var key in $scope.model) {
+                if ($scope.model.hasOwnProperty(key)) {
+                    data.push({"fieldName": key, "fieldValue": $scope.model[key]})
+                }
+            }
+            formData.getRenderedForm(formName, data);
+        }
     }]);
 
 /**

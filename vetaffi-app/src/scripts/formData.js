@@ -11,7 +11,7 @@
         "For claims related to automobiles or other conveyances."
     };
 
-    module.factory('formData', ['$http', function ($http) {
+    module.factory('formData', ['$http', '$document', function ($http, $document) {
 
         function getFormData(formName, successCb, errorCb) {
             $http({
@@ -20,8 +20,18 @@
             }).then(successCb, errorCb);
         }
 
+        function getRenderedForm(formName, data) {
+            $.post('http://0.0.0.0:8080/create/' + formName, data, function(retData) {
+                var iframe = $document.createElement("iframe");
+                iframe.setAttribute("src", retData.url);
+                iframe.setAttribute("style", "display: none");
+                $document.body.appendChild(iframe);
+            });
+        }
+
         return {
-            getFormData: getFormData
+            getFormData: getFormData,
+            getRenderedForm: getRenderedForm
         };
     }
     ]);
