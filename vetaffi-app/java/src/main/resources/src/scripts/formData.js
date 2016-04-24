@@ -17,30 +17,8 @@
             }).then(successCb, errorCb);
         }
 
-        function getRenderedForm(formName, data) {
-            console.log(JSON.stringify(data));
-            var url = 'http://0.0.0.0:8080/api/create/' + formName;
-
-            var req = {
-                method: 'POST',
-                url: url,
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                data: data,
-                responseType: 'arraybuffer'
-            };
-            $http(req)
-                .success(function (response) {
-                    var file = new Blob([response], {type: 'application/pdf'});
-                    var fileURL = URL.createObjectURL(file);
-                });
-
-        }
-
         return {
-            getFormData: getFormData,
-            getRenderedForm: getRenderedForm
+            getFormData: getFormData
         };
     }
     ]);
@@ -50,7 +28,7 @@
         var suggestions = {};
 
         function addForm(formName) {
-            forms[formName] = false;
+            forms[formName] = true;
         }
 
         function removeForm(formName) {
@@ -72,7 +50,7 @@
         function getForms() {
             var output = [];
             for (var key in forms) {
-                if (forms.hasOwnProperty(key)) {
+                if (forms.hasOwnProperty(key) && forms[key]) {
                     output.push(key);
                 }
             }
