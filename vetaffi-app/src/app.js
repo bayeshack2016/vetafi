@@ -11,80 +11,61 @@ var app = angular.module('vetaffiApp', [
 ]);
 
 app.controller('FormController', ['$scope', 'formData', 'formState', function ($scope, formData, formState) {
+    /**
+     * These scope attributes are the main form data
+     */
+    // Describes all possible form elements.
     $scope.schema = {
         "type": "object",
-        "title": "Comment",
+        "title": "Form",
         "properties": {
-            "name": {
-                formName: "formB",
-                "title": "Name",
-                "type": "string"
-            },
-            "email": {
-                formName: "formA",
-                "title": "Email",
-                "type": "string",
-                "pattern": "^\\S+@\\S+$",
-                "description": "Email will be used for evil."
-            },
-            "comment": {
-                formName: "formA",
-                "title": "Comment",
-                "type": "string",
-                "maxLength": 20,
-                "validationMessage": "Don't be greedy!",
-                "x-schema-form": {
-                    "type": "textarea",
-                    "placeholder": "in da schema",
-                    "condition": "model.choice == 'one'"
+        },
+        "required": []
+    };
+    // Determines which form elements are rendered.
+    // Button should always be rendered last as a special case.
+    var button = {
+        "type": "submit",
+        "style": "btn-info",
+        "title": "OK"
+    };
+    $scope.form = [button];
+    // Holds responses to all form elements.
+    $scope.model = {};
+
+
+    $scope.vaForms = formState.getForms();
+    $scope.downloadedForms = 0;
+    downloadForms(['VBA-21-526EZ-ARE']);
+
+    function downloadForms(forms) {
+        for (var i = 0; i<forms.length; i++) {
+            formData.getFormData(forms[i], function(response) {
+                combineFormResponse(response.data);
+                $scope.downloadedForms += 1;
+            }, function(response) {
+                console.error(response);
+            });
+        }
+    }
+
+    function combineFormResponse(data) {
+        for (var key in data) {
+            if (data.hasOwnProperty(key)) {
+                $scope.schema.properties[key] = data[key];
+                if ($scope.schema.required.indexOf(key) === -1) {
+                    $scope.schema.required.push(key);
                 }
 
-            },
-            choice: {
-                formName: "formA",
-                type: "string",
-                enum: ["one", "two"],
-                "x-schema-form": {
-                    key: "choice",
-                    type: "radiobuttons",
-                    titleMap: [
-                        {value: "one", name: "One"},
-                        {value: "two", name: "More..."}
-                    ]
+                /**
+                 * Insert the new form element second to last (before the submit button)
+                 */
+                if ($scope.form.indexOf(key) === -1) {
+                    $scope.form.splice($scope.form.length - 1, 0, key)
                 }
             }
-        },
-        "required": [
-            "name",
-            "email",
-            "comment",
-            "something"
-        ]
-    };
-
-
-
-    formData.getFormData('VBA-21-526EZ-ARE', function(response) {
-        console.log(response.data)
-    }, function(response) {
-        console.error(response);
-    });
-
-    $scope.form = [
-        "name",
-        "email",
-        "comment",
-        "choice",
-
-        {
-            "type": "submit",
-            "style": "btn-info",
-            "title": "OK"
         }
-    ];
-
-    $scope.vaForms = ['formA', 'formB'];
-    $scope.model = {};
+    }
 
     $scope.getProgress = function (formName) {
         var total = 0;

@@ -1,3 +1,43 @@
+/*
+"name": {
+                formName: "formB",
+                "title": "Name",
+                "type": "string"
+            },
+            "email": {
+                formName: "formA",
+                "title": "Email",
+                "type": "string",
+                "pattern": "^\\S+@\\S+$",
+                "description": "Email will be used for evil."
+            },
+            "comment": {
+                formName: "formA",
+                "title": "Comment",
+                "type": "string",
+                "maxLength": 20,
+                "validationMessage": "Don't be greedy!",
+                "x-schema-form": {
+                    "type": "textarea",
+                    "placeholder": "in da schema",
+                    "condition": "model.choice == 'one'"
+                }
+
+            },
+            choice: {
+                formName: "formA",
+                type: "string",
+                enum: ["one", "two"],
+                "x-schema-form": {
+                    key: "choice",
+                    type: "radiobuttons",
+                    titleMap: [
+                        {value: "one", name: "One"},
+                        {value: "two", name: "More..."}
+                    ]
+                }
+            }*/
+
 [
   {
     "Form": "VBA-21-526EZ-ARE",
