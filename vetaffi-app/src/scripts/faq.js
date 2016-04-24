@@ -1,6 +1,20 @@
 var app = angular.module('vetaffiApp');
 
 app.controller('faqCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
+    $scope.searchText = '';
+    $scope.onSearchChange = function() {
+        $mixpanel.track("faq_search", {
+            query: $scope.searchText
+        });
+    };
+
+    $(function() {
+        $('.search-bar input').focus(function() {
+             $('.search-bar').addClass('highlight');
+        }).blur(function() {
+            $('.search-bar').removeClass('highlight');
+        });
+    });
 
     $scope.onClickSubtopic = function(topic) {
         if (topic.show) {
@@ -23,7 +37,7 @@ app.controller('faqCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
             title: 'Applying for Health Care Benefits',
             subtopics: [
                 {
-                    subtitle: 'How do I start?',
+                    subtitle: 'How do I start my claim?',
                     name: 'file_claim_start',
                     show: false,
                     content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum"

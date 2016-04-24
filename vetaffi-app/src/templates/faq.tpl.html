@@ -1,13 +1,14 @@
 <div class="faq-view" ng-controller="faqCtrl">
     <h3>Commonly Viewed Resources</h3>
-    <div class="">
-
+    <div class="search-bar">
+        <img class="search-icon" src="icons/search.png">
+        <input type="text" ng-model="searchText" ng-change="onSearchChange()" placeholder="Search for a topic...">
     </div>
     <div class="section-wrapper" ng-repeat="section in sections">
         <div class="section-title">{{section.title}}</div>
         <div class="section-content">
             <ul>
-                <li ng-repeat="topic in section.subtopics" ng-click="onClickSubtopic(topic)">
+                <li ng-repeat="topic in section.subtopics | filter:searchText" ng-click="onClickSubtopic(topic)">
                     <div class="subtopic-icon-wrapper">
                         <img class="subtopic-icon" ng-class="{show: topic.show}" src="icons/triangle-right.png">
                     </div>
