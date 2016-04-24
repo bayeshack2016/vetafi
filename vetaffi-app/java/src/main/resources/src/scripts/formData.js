@@ -17,30 +17,8 @@
             }).then(successCb, errorCb);
         }
 
-        function getRenderedForm(formName, data) {
-            console.log(JSON.stringify(data));
-            var url = 'http://0.0.0.0:8080/api/create/' + formName;
-
-            var req = {
-                method: 'POST',
-                url: url,
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                data: data,
-                responseType: 'arraybuffer'
-            };
-            $http(req)
-                .success(function (response) {
-                    var file = new Blob([response], {type: 'application/pdf'});
-                    var fileURL = URL.createObjectURL(file);
-                });
-
-        }
-
         return {
-            getFormData: getFormData,
-            getRenderedForm: getRenderedForm
+            getFormData: getFormData
         };
     }
     ]);

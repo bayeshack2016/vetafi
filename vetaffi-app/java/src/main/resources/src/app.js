@@ -82,7 +82,6 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         var currentKey;
         var elementStartTime;
         $scope.onChange = function (key, value) {
-            console.log(key, value);
             if (key != currentKey) {
                 if (currentKey) {
                     $mixpanel.track("Form element fill",
@@ -134,8 +133,6 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                             continue;
                         }
                         filledOut += 1;
-                        console.log(key);
-                        console.log($scope.model[key]);
                     }
                 }
             }
@@ -149,7 +146,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             for (var key in $scope.schema.properties) {
                 if ($scope.schema.properties.hasOwnProperty(key)) {
                     if ($scope.schema.properties[key].formName === formName) {
-                        if($scope.schema.properties[key]["x-schema-form"].condition) {
+                        if ($scope.schema.properties[key]["x-schema-form"].condition) {
                             if (!$scope.$eval($scope.schema.properties[key]["x-schema-form"].condition)) {
                                 continue;
                             }
@@ -170,13 +167,40 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
         };
 
-        $scope.getPdfUrl = function(formName) {
-            var data = [];
+        function prepareData(formState) {
+            var output = [];
+            var translation;
             for (var key in $scope.model) {
-                if ($scope.model.hasOwnProperty(key)) {
-                    data.push({"fieldName": key, "fieldValue": JSON.stringify($scope.model[key])})
+                console.log(key);
+                if ($scope.model.hasOwnProperty(key) && $scope.schema.properties[key].PDFFormLocator) {
+                    if ($scope.schema.properties[key].type === 'object') {
+                        translation = $scope.schema.properties[key].PDFFormLocator;
+                        console.log(translation);
+                        console.log(formState[key]);
+                        for (var key2 in translation) {
+                            if (translation.hasOwnProperty(key2)) {
+                                output.push({
+                                    "fieldName": translation[key],
+                                    "fieldValue": formState[key][translation[key]]
+                                });
+                            }
+                        }
+                    } else if ($scope.schema.properties[key].type === 'string') {
+                        output.push({
+                            "fieldName": translation,
+                            "fieldValue": formState[key]
+                        });
+                    }
+
                 }
             }
+            console.log(output);
+            return output;
+
+        }
+
+        $scope.getPdfUrl = function (formName) {
+            var data = prepareData($scope.model);
 
             var url = 'http://0.0.0.0:8080/api/create/' + formName;
 
@@ -191,9 +215,8 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             };
             $http(req)
                 .success(function (response) {
-                    console.log(response);
-                    var blob = new Blob([response], { type : 'application/pdf' });
-                    var url = (window.URL || window.webkitURL).createObjectURL( blob );
+                    var blob = new Blob([response], {type: 'application/pdf'});
+                    var url = (window.URL || window.webkitURL).createObjectURL(blob);
                     window.open(url);
                 });
         }
@@ -207,8 +230,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: "templates/intro.tpl.html"
     });
     $routeProvider.when("/faq", {
-            templateUrl: "templates/faq.tpl.html"
-        });
+        templateUrl: "templates/faq.tpl.html"
+    });
     $routeProvider.when("/signin", {
         templateUrl: "templates/signin.tpl.html"
     });
@@ -216,8 +239,8 @@ app.config(['$routeProvider', function ($routeProvider) {
         templateUrl: "templates/physicalInjury.tpl.html"
     });
     $routeProvider.when("/profile", {
-            templateUrl: "templates/profile.tpl.html"
-        });
+        templateUrl: "templates/profile.tpl.html"
+    });
     $routeProvider.when("/file-claim", {
         templateUrl: "templates/fileClaim.tpl.html"
     });

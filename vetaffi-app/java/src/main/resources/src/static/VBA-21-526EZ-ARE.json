@@ -1,6 +1,11 @@
 {
   "veteran_name": {
-    "PDFFormLocator": null,
+    "PDFFormLocator": {
+      "veteran_first_name": "namefirst1[0]",
+      "veteran_middle_initial": "namemiddleinitial[0]",
+      "veteran_last_name": "namelast1[0]"
+
+    },
     "type": "object",
     "properties": {
       "veteran_first_name": {
@@ -23,7 +28,7 @@
     "formName": "VBA-21-526EZ-ARE"
   },
   "veteran_ssn": {
-    "PDFFormLocator": null,
+    "PDFFormLocator": "ssna1[0]",
     "type": "string",
     "title": "Veteran Social Security Number",
     "DatumId": "veteran_ssn",
