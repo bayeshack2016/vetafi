@@ -26,7 +26,7 @@ public class PDFFillerResource {
     public Response createPDF(@PathParam("form") NonEmptyStringParam form, List<PDFField> fields) {
         String template = FilenameUtils.concat(formDir, form.get().get() + ".pdf");
 
-        logger.info("Processing request for template " + template);
+        logger.info("Processing request for template " + template + " with data " + fields);
 
         return Response.ok(new PDFStreamingOutput(fields, template)).build();
     }

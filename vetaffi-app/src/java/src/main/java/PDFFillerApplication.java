@@ -1,4 +1,6 @@
 import io.dropwizard.Application;
+import io.dropwizard.assets.AssetsBundle;
+import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
 /**
@@ -19,5 +21,10 @@ public class PDFFillerApplication extends Application<PDFFillerConfiguration> {
                 new PDFHealthCheck(pdfFillerConfiguration.getFormDir());
         environment.healthChecks().register("pdfForms", healthCheck);
         environment.jersey().register(resource);
+    }
+
+    @Override
+    public void initialize(Bootstrap<PDFFillerConfiguration> myConfigurationBootstrap) {
+        myConfigurationBootstrap.addBundle(new AssetsBundle("/assets", "/", "index.html"));
     }
 }

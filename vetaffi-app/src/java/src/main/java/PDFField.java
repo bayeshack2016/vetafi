@@ -30,4 +30,12 @@ public class PDFField {
     public PDFField() {
 
     }
+
+    @Override
+    public String toString() {
+        return "PDFField{" +
+                "fieldName='" + fieldName + '\'' +
+                ", fieldValue='" + fieldValue + '\'' +
+                '}';
+    }
 }
