@@ -12,13 +12,18 @@ var app = angular.module('vetaffiApp', [
     'analytics.mixpanel'
 ]);
 
+app.config(['$compileProvider',
+    function ($compileProvider) {
+        $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|ftp|mailto|tel|file|blob):/);
+    }]);
+
 angular.module('analytics.mixpanel')
     .config(['$mixpanelProvider', function ($mixpanelProvider) {
         $mixpanelProvider.apiKey('a1edeb203acf26ad1d5e9c8ca4f24a07'); // your token is different than your API key
     }]);
 
-app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$routeParams', '$location',
-    function ($scope, formData, formState, $mixpanel, $routeParams, $location) {
+app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$http', '$routeParams', '$location',
+    function ($scope, formData, formState, $mixpanel, $http, $routeParams, $location) {
         $mixpanel.track("Form start",
             {
                 formNames: $scope.vaForms
@@ -167,14 +172,32 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
         };
 
-        $scope.getPdf = function(formName) {
+        $scope.getPdfUrl = function(formName) {
             var data = [];
             for (var key in $scope.model) {
                 if ($scope.model.hasOwnProperty(key)) {
-                    data.push({"fieldName": key, "fieldValue": $scope.model[key]})
+                    data.push({"fieldName": key, "fieldValue": JSON.stringify($scope.model[key])})
                 }
             }
-            formData.getRenderedForm(formName, data);
+
+            var url = 'http://0.0.0.0:8080/api/create/' + formName;
+
+            var req = {
+                method: 'POST',
+                url: url,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: data,
+                responseType: 'arraybuffer'
+            };
+            $http(req)
+                .success(function (response) {
+                    console.log(response);
+                    var blob = new Blob([response], { type : 'application/pdf' });
+                    var url = (window.URL || window.webkitURL).createObjectURL( blob );
+                    window.open(url);
+                });
         }
     }]);
 

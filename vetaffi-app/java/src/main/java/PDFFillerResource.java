@@ -22,7 +22,7 @@ public class PDFFillerResource {
 
     @POST
     @Timed
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Consumes("application/json")
     public Response createPDF(@PathParam("form") NonEmptyStringParam form, List<PDFField> fields) {
         String template = FilenameUtils.concat(formDir, form.get().get() + ".pdf");
 
