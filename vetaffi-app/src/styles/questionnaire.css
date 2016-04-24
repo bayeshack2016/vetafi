@@ -1,0 +1,28 @@
+.question-view h3 {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.questionnaire-wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.question-wrapper {
+}
+
+.question-text {
+    font-size: 18px;
+}
+
+.answer-wrapper {
+
+}
+
+.answer-wrapper.radios {
+    margin-left: 40px;
+}
+
+.answer-wrapper.text {
+    p
+}

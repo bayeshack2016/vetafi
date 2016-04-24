@@ -1,0 +1,20 @@
+<div class="question-view" ng-controller="questionCtrl">
+    <h3>Help us by answering these questions</h3>
+    <div class="questionnaire-wrapper">
+        <div class="question-wrapper" ng-repeat="question in questions">
+            <div class="question-text">
+                <p>{{question.text}}</p>
+            </div>
+            <div class="answer-wrapper radios"
+                 ng-if="question.type == 'radios'"
+                 ng-repeat="answer in question.answers">
+                <input type="radio" name="{{question.answerName}}" value="{{answer.val}}">{{answer.text}}
+            </div>
+            <div class="answer-wrapper text" ng-if="question.type == 'text'">
+                <textarea rows="4" cols="50" name="{{question.answerName}}" placeholder="{{answer.placeholder}}">
+                    {{answer.text}}
+                </textarea>
+            </div>
+        </div>
+    </div>
+</div>

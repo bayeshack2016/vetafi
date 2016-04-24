@@ -37,20 +37,7 @@ app.controller('signinCtrl',
                 // on success
                 progressBar.animate(
                     { width: '100%' },
-                    { duration: 200 }
-                );
-                var action = $routeParams.action;
-                console.log('action ' + action);
-                if (action == 'file') {
-                    $location.url('/physical-injury')
-                    $scope.$apply();
-                } else if (action == 'profile') {
-                    $location.url('/profile');
-                    $scope.$apply();
-                } else {
-                    console.log('unknown action');
-                }
-
+                    200, redirectToAction);
 
                 // On fail!
                 // progressBar.addClass('fail');
@@ -60,6 +47,21 @@ app.controller('signinCtrl',
                 //              );
             }, 600);
         };
+
+        function redirectToAction() {
+            var action = $routeParams.action;
+            console.log('action ' + action);
+            if (action == 'file') {
+                $location.url('/physical-injury')
+                $scope.$apply();
+            } else if (action == 'profile') {
+                $location.url('/profile');
+                $scope.$apply();
+            } else {
+                console.log('unknown action');
+            }
+        }
+
     }
 ]);
 

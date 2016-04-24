@@ -36,13 +36,16 @@
     <div id="call-number" ng-class="{show: secondSelect && injury && !military}">
         <p>
             For more information about your injury and health provider,<br>
-            Call this toll-free number! 123-999-5343
+            Call this toll-free number!<br>
+            <div class="number">123-999-5343</div>
         </p>
+    </div>
+
+    <div id="done-filling-form" ng-class="{show: (secondSelect && injury && !military) || (firstSelect && !injury)}">
         <p>
-            When you're done,<br>
-            let's see what else we can do for you
+            Let's see what else we can do for you.
         </p>
-        <button class="btn-go" ng-click="goToQuestions()">I'm done</button>
+        <button class="btn-go" ng-click="goToQuestions()">Next</button>
     </div>
 
 </div>

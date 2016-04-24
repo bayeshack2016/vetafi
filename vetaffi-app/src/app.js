@@ -124,6 +124,12 @@ app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when("/profile", {
             templateUrl: "templates/profile.tpl.html"
         });
+    $routeProvider.when("/file-claim", {
+        templateUrl: "templates/file-claim.tpl.html"
+    });
+    $routeProvider.when("/questionnaire", {
+        templateUrl: "templates/questionnaire.tpl.html"
+    });
     $routeProvider.when("/form", {
         templateUrl: "templates/form.tpl.html"
     });

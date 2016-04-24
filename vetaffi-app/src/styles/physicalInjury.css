@@ -64,6 +64,17 @@
     text-align: center;
 }
 
+#call-number .number {
+    font-size: 18px;
+    color: #4aa564;
+}
+
+#done-filling-form {
+    display: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
 .btn-go {
     padding: 15px 20px;
     outline: none;
@@ -76,3 +87,4 @@
 .btn-go:hover {
     background-color: #fdbf34;
 }
+
