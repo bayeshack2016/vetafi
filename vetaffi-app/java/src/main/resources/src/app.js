@@ -119,6 +119,8 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         };
 
         var added = {};
+        var removed = 0;
+        var added_true = 0;
 
         function combineFormResponse(formName, data) {
             for (var key in data) {
@@ -152,6 +154,11 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     if (!added.hasOwnProperty(key)) {
                         $scope.form.push(newk);
                         added[key] = true;
+                        added_true += 1;
+                        console.log(added_true, removed)
+                    } else {
+                        removed += 1;
+                        console.log(added_true, removed);
                     }
                 }
             }

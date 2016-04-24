@@ -40,7 +40,7 @@
  "veteran_stress_incident_1_date": {
   "formName": "VBA-21-0781-ARE", 
   "title": "DATE INCIDENT OCCURRED", 
-  "PDFFormLocator": null, 
+  "PDFFormLocator": "DateOfInjury[0]",
   "type": "string", 
   "format": "date", 
   "index": 2
@@ -48,14 +48,14 @@
  "veteran_stress_incident_1_location": {
   "formName": "VBA-21-0781-ARE", 
   "title": "LOCATION INCIDENT OCCURRED", 
-  "PDFFormLocator": null, 
+  "PDFFormLocator": "Location[0]",
   "type": "string", 
   "index": 3
  }, 
  "veteran_stress_incident_1_assignment": {
   "formName": "VBA-21-0781-ARE", 
   "title": "ASSIGNMENT INCIDENT OCCURRED", 
-  "PDFFormLocator": null, 
+  "PDFFormLocator": "UnitAssignmentDuringIncident[0]",
   "type": "string", 
   "enum": [
    "Division", 
@@ -110,7 +110,7 @@
  "veteran_stress_incident_1_description": {
   "formName": "VBA-21-0781-ARE", 
   "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT", 
-  "PDFFormLocator": null, 
+  "PDFFormLocator": "Medals[0]",
   "type": "string", 
   "index": 7
  }, 
@@ -382,7 +382,7 @@
   "index": 15
  }, 
  "veteran_phone_number": {
-  "PDFFormLocator": null, 
+  "PDFFormLocator": "DAYTIMEPHONE[0]",
   "type": "string", 
   "title": "Veteran Preferred Phone Number", 
   "DatumId": "veteran_phone_number", 
