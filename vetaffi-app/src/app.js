@@ -18,7 +18,6 @@ angular.module('analytics.mixpanel')
 
 app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel',
     function ($scope, formData, formState, $mixpanel) {
-        formState.addForm('VBA-21-526EZ-ARE');
         $mixpanel.track("Form start",
             {
                 formNames: $scope.vaForms
@@ -165,7 +164,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: "templates/profile.tpl.html"
         });
     $routeProvider.when("/file-claim", {
-        templateUrl: "templates/file-claim.tpl.html"
+        templateUrl: "templates/fileClaim.tpl.html"
     });
     $routeProvider.when("/questionnaire", {
         templateUrl: "templates/questionnaire.tpl.html"
