@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var module = angular.module('formData');
+    var module = angular.module('formData', ['analytics.mixpanel']);
     module.factory('formData', ['$http', function ($http) {
 
         function getFormData(formName, successCb, errorCb) {
@@ -16,7 +16,7 @@
     }
     ]);
 
-    module.factory('formState', [function() {
+    module.factory('formState', ['$mixpanel', function($mixpanel) {
         var forms = {};
         function addForm(formName) {
             forms[formName] = false;
@@ -39,6 +39,7 @@
 
         function completeForm(formName) {
             forms[formName] = true;
+            $mixpanel.track("Form completed.")
         }
 
         return {

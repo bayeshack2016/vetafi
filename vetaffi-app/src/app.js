@@ -7,10 +7,17 @@ var app = angular.module('vetaffiApp', [
     'ngRoute',
     'formData',
     'schemaForm',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'analytics.mixpanel'
 ]);
 
-app.controller('FormController', ['$scope', 'formData', 'formState', function ($scope, formData, formState) {
+angular.module('analytics.mixpanel')
+    .config(['$mixpanelProvider', function($mixpanelProvider) {
+        $mixpanelProvider.apiKey('<your project token>'); // your token is different than your API key
+    }]);
+
+app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel',
+    function ($scope, formData, formState, $mixpanel) {
     formState.addForm('VBA-21-526EZ-ARE');
     /**
      * These scope attributes are the main form data
@@ -90,10 +97,8 @@ app.controller('FormController', ['$scope', 'formData', 'formState', function ($
     };
 
     $scope.getType = function (formName) {
-        console.log($scope.getProgress(formName));
         if ($scope.getProgress(formName) >= 100) {
             return "success";
-
         } else {
             return "info";
         }
