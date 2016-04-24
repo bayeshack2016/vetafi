@@ -135,6 +135,33 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             return (filledOut / total) * 100;
         };
 
+        $scope.getProgressNumerator = function (formName) {
+            var filledOut = 0;
+            for (var key in $scope.schema.properties) {
+                if ($scope.schema.properties.hasOwnProperty(key)) {
+                    if ($scope.model[key]) {
+                        filledOut += 1;
+                    }
+                }
+            }
+
+            return filledOut;
+        };
+
+        $scope.getProgressDenominator = function (formName) {
+            var total = 0;
+
+            for (var key in $scope.schema.properties) {
+                if ($scope.schema.properties.hasOwnProperty(key)) {
+                    if ($scope.schema.properties[key].formName === formName) {
+                        total += 1;
+                    }
+                }
+            }
+
+            return total;
+        };
+
         $scope.getType = function (formName) {
             if ($scope.getProgress(formName) >= 100) {
                 return "success";
