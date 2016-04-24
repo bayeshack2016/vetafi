@@ -25,7 +25,7 @@ app.controller('physicalInjuryCtrl', ['$scope', '$location',
         };
 
         $scope.goFile = function() {
-            $location.path('/file-claim')
+            $location.path('/file-claim');
         };
 
         $scope.goToQuestions = function() {
