@@ -1,593 +1,575 @@
-/*
-"name": {
-                formName: "formB",
-                "title": "Name",
-                "type": "string"
-            },
-            "email": {
-                formName: "formA",
-                "title": "Email",
-                "type": "string",
-                "pattern": "^\\S+@\\S+$",
-                "description": "Email will be used for evil."
-            },
-            "comment": {
-                formName: "formA",
-                "title": "Comment",
-                "type": "string",
-                "maxLength": 20,
-                "validationMessage": "Don't be greedy!",
-                "x-schema-form": {
-                    "type": "textarea",
-                    "placeholder": "in da schema",
-                    "condition": "model.choice == 'one'"
-                }
-
-            },
-            choice: {
-                formName: "formA",
-                type: "string",
-                enum: ["one", "two"],
-                "x-schema-form": {
-                    key: "choice",
-                    type: "radiobuttons",
-                    titleMap: [
-                        {value: "one", name: "One"},
-                        {value: "two", name: "More..."}
-                    ]
-                }
-            }*/
-
 {
-  "veteran_first_name": {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_dd_account_number": {
     "PDFFormLocator": null,
-    "title": "Veteran First Name",
     "type": "string",
-    "DatumId": "veteran_first_name"
+    "title": "ACCOUNT NUMBER",
+    "DatumId": "veteran_dd_account_number",
+    "formName": "VBA-21-526EZ-ARE"
   },
-  "veteran_middle_initial": {
+  "veteran_waive_va_benefits": {
     "formName": "VBA-21-526EZ-ARE",
+    "title": "I elect to waive VA benefits for the days I accrued inactive duty training pay in order to retain my inactive duty training pay.",
     "PDFFormLocator": null,
-    "title": "Veteran Middle Initial",
-    "type": "string",
-    "DatumId": "veteran_middle_initial"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Last Name",
-    "type": "string",
-    "DatumId": "veteran_last_name"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Social Security Number",
-    "type": "string",
-    "DatumId": "veteran_ssn"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Date of Birth",
-    "type": "date",
-    "DatumId": "veteran_dob"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Sex",
+    "DatumId": "veteran_waive_va_benefits",
     "type": "radio",
     "Options": [
-      "Male", "Female"
-    ],
-    "DatumId": "veteran_sex"
+      "Waive",
+      "Do Not Waive"
+    ]
   },
-  {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_home_city": {
     "PDFFormLocator": null,
-    "title": "Veteran Previous Claim",
-    "type": "radio",
-    "Options": [
-      "Yes", "No"
-    ],
-    "DatumId": "veteran_previous_claim_y_n"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran VA File Number",
     "type": "string",
-    "DependsOn": {
-      "DatumId": "veteran_previous_claim_y_n",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_previous_claim"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Homeless",
-    "type": "radio",
-    "Options": [
-      "Yes", "No"
-    ],
-    "DatumId": "veteran_homeless_y_n"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Point of Contact",
-    "type": "string",
-    "DependsOn": {
-      "DatumId": "veteran_homeless_y_n",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_homeless_point_of_contact"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Point of Contact Phone Number",
-    "type": "string",
-    "DependsOn": {
-      "DatumId": "veteran_homeless_y_n",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_homeless_point_of_contact_phone_number"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Service Branch",
-    "type": "checkbox",
-    "Options": [
-      "Army", "Navy", "Marine Corps", "Air Force", "Coast Guard" 
-    ],
-    "DatumId": "veteran_service_branches"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Service Component",
-    "type": "checkbox",
-    "Options": [
-      "Active", "Reserves", "National Guard"
-    ],
-    "DatumId": "veteran_service_components"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Home Zip Code",
-    "type": "string",
-    "DatumId": "veteran_home_zip_code"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Home Street",
-    "type": "string",
-    "DatumId": "veteran_home_street"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
     "title": "Veteran Home City",
-    "type": "string",
-    "DatumId": "veteran_home_city"
+    "DatumId": "veteran_home_city",
+    "formName": "VBA-21-526EZ-ARE"
   },
-  {
+  "veteran_national_guard_inactive_duty_training_pay_y_n": {
     "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran National Guard Currently Receiving Inactive Duty Training Pay",
     "PDFFormLocator": null,
-    "title": "Veteran Home State",
-    "type": "string",
-    "DatumId": "veteran_home_state"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Home Country",
-    "type": "string",
-    "DatumId": "veteran_home_country"
-  },
-
-  
-  
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Forwarding Zip Code",
-    "type": "string",
-    "DatumId": "veteran_forwarding_zip_code"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Forwarding Street",
-    "type": "string",
-    "DatumId": "veteran_forwarding_street"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Forwarding City",
-    "type": "string",
-    "DatumId": "veteran_forwarding_city"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Forwarding State",
-    "type": "string",
-    "DatumId": "veteran_forwarding_state"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Forwarding Country",
-    "type": "string",
-    "DatumId": "veteran_forwarding_country"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Forwarding Address Effective Date",
-    "type": "date",
-    "DatumId": "veteran_forwarding_address_effective_date"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Preferred Phone Number",
-    "type": "string",
-    "DatumId": "veteran_phone_number"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Preferred Email Address",
-    "type": "string",
-    "DatumId": "veteran_email"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Alternate Email Address",
-    "type": "string",
-    "DatumId": "veteran_alternate_email"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Disability",
-    "type": "group",
-    "MaxSubElements": 20,
-    "SubQuestions": [
-      {
-        "title": "Disability {N}",
-        "type": "string",
-        "DatumId": "disability"
-      }
-    ],
-    "DatumId": "veteran_disability"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran VA Medical Centers Visited",
-    "type": "group",
-    "MaxSubElements": 4,
-    "SubQuestions": [
-      {
-        "title": "Name and Location {N}",
-        "type": "string",
-        "DatumId": "prev_treatment_place"
-      },
-      {
-        "title": "Treatment Start {N}",
-        "type": "date",
-        "DatumId": "prev_treatment_start_date"
-      },
-      {
-        "title": "Treatment End {N}",
-        "type": "date",
-        "DatumId": "prev_treatment_end_date"
-      }
-    ],
-    "DatumId": "veteran_va_treatment"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Served Under Alternate Name Yes/No",
+    "DatumId": "veteran_national_guard_inactive_duty_training_pay_y_n",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "enum": ["Yes", "No"],
     "type": "radio",
-    "Options": ["Yes", "No"],
-    "DatumId": "veteran_served_under_alternate_name_yes_no"
+    "x-schema-form": {
+      "type": "radiobuttons",
+      "titleMap": [
+        {
+          "value": "Yes",
+          "name": "Yes"
+        },
+        {
+          "value": "No",
+          "name": "No"
+        }
+      ]
+    },
+    "Options": [
+      "Yes",
+      "No"
+    ]
   },
-  {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_alternate_email": {
     "PDFFormLocator": null,
-    "title": "Veteran Alternate Name Yes/No",
     "type": "string",
+    "title": "Veteran Alternate Email Address",
+    "DatumId": "veteran_alternate_email",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_served_national_guard_component": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran National Guard Component",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_served_national_guard_component",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "type": "radio",
+    "Options": [
+      "National Guard",
+      "Reserved"
+    ]
+  },
+  "veteran_alternate_name": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Alternate Name Yes/No",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_alternate_name",
     "DependsOn": {
       "DatumId": "veteran_served_under_alternate_name_yes_no",
       "Value": "Yes"
     },
-    "DatumId": "veteran_alternate_name"
+    "type": "string"
   },
-  {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_home_zip_code": {
     "PDFFormLocator": null,
-    "title": "Veteran Most Recent Active Service Entry",
-    "type": "date",
-    "DatumId": "veteran_most_recent_active_service_entry_date"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Service Number",
-    "NotApplicable": true,
     "type": "string",
-    "DatumId": "veteran_service_number"
+    "title": "Veteran Home Zip Code",
+    "DatumId": "veteran_home_zip_code",
+    "formName": "VBA-21-526EZ-ARE"
   },
-  {
+  "veteran_national_guard_unit_phone_number": {
     "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Most Recent Active Service Exit (Can be a date in the future)",
-    "type": "date",
-    "DatumId": "veteran_service_exit"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Served in Combat Zone Since 9/11/2001",
-    "type": "radio",
-    "Options": ["Yes", "No"],
-    "DatumId": "veteran_served_combat_zone_since_9_11"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Place of Last or Anticipated Separation",
-    "type": "string",
-    "DatumId": "veteran_place_of_last_or_anticipated_separation"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran Served National Guard",
-    "type": "radio",
-    "Options": ["Yes", "No"],
-    "DatumId": "veteran_served_national_guard_yes_no"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran National Guard Component",
-    "type": "radio",
-    "Options": ["National Guard", "Reserved"],
-    "DependsOn": {
-      "DatumId": "veteran_served_national_guard_yes_no",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_served_national_guard_component"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran National Guard Term of Service Start",
-    "type": "date",
-    "DependsOn": {
-      "DatumId": "veteran_served_national_guard_yes_no",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_served_national_guard_start_date"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran National Guard Term of Service End",
-    "type": "date",
-    "DependsOn": {
-      "DatumId": "veteran_served_national_guard_yes_no",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_served_national_guard_end_date"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran National Guard Name and Address of Unit",
-    "type": "string",
-    "DependsOn": {
-      "DatumId": "veteran_served_national_guard_yes_no",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_national_guard_unit_info"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
     "title": "Veteran National Guard Phone Number of Unit",
-    "type": "string",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_national_guard_unit_phone_number",
     "DependsOn": {
       "DatumId": "veteran_served_national_guard_yes_no",
       "Value": "Yes"
     },
-    "DatumId": "veteran_national_guard_unit_phone_number"
+    "type": "string"
   },
-  {
+  "veteran_separation_pay_y_n": {
     "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "Veteran National Guard Currently Receiving Inactive Duty Training Pay",
-    "type": "radio",
-    "Options": ["Yes", "No"],
-    "DependsOn": {
-      "DatumId": "veteran_served_national_guard_yes_no",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_national_guard_inactive_duty_training_pay_y_n"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "ARE YOU CURRENTLY ACTIVATED ON FEDERAL ORDERS WITHIN THE NATIONAL GUARD OR RESERVES?",
-    "type": "radio",
-    "Options": ["Yes", "No"],
-    "DatumId": "veteran_national_guard_currently_activated_y_n"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "DATE OF ACTIVATION",
-    "type": "date",
-    "DependsOn": {
-      "DatumId": "veteran_national_guard_currently_activated_y_n",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_national_guard_currently_activated_date_of_activation"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "ANTICIPATED SEPARATION DATE",
-    "type": "date",
-    "DependsOn": {
-      "DatumId": "veteran_national_guard_currently_activated_y_n",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_national_guard_currently_activated_date_of_separation"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "HAVE YOU EVER BEEN A PRISONER OF WAR?",
-    "type": "radio",
-    "Options": ["Yes", "No"],
-    "DatumId": "veteran_prisoner_of_war_y_n"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "DATE OF CONFINEMENT START",
-    "type": "date",
-    "DependsOn": {
-      "DatumId": "veteran_prisoner_of_war_y_n",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_prisoner_of_war_start_date"
-  },
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
-    "title": "DATE OF CONFINEMENT END",
-    "type": "date",
-    "DependsOn": {
-      "DatumId": "veteran_prisoner_of_war_y_n",
-      "Value": "Yes"
-    },
-    "DatumId": "veteran_prisoner_of_war_end_date"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
     "title": "DID/DO YOU RECEIVE ANY TYPE OF SEPARATION/SEVERANCE/RETIRED PAY",
-    "type": "radio",
-    "Options": ["Yes", "No"],
-    "DatumId": "veteran_separation_pay_y_n"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
     "PDFFormLocator": null,
-    "title": "LIST AMOUNT",
-    "type": "string",
+    "DatumId": "veteran_separation_pay_y_n",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_national_guard_currently_activated_y_n": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "ARE YOU CURRENTLY ACTIVATED ON FEDERAL ORDERS WITHIN THE NATIONAL GUARD OR RESERVES?",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_national_guard_currently_activated_y_n",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_prisoner_of_war_start_date": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "DATE OF CONFINEMENT START",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_prisoner_of_war_start_date",
     "DependsOn": {
-      "DatumId": "veteran_separation_pay_y_n",
+      "DatumId": "veteran_prisoner_of_war_y_n",
       "Value": "Yes"
     },
-    "DatumId": "veteran_separation_pay_amount"
+    "type": "date"
   },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_forwarding_street": {
     "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Forwarding Street",
+    "DatumId": "veteran_forwarding_street",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_forwarding_country": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Forwarding Country",
+    "DatumId": "veteran_forwarding_country",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_last_name": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Last Name",
+    "DatumId": "veteran_last_name",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_served_under_alternate_name_yes_no": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Served Under Alternate Name Yes/No",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_served_under_alternate_name_yes_no",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_most_recent_active_service_entry_date": {
+    "PDFFormLocator": null,
+    "type": "date",
+    "title": "Veteran Most Recent Active Service Entry",
+    "DatumId": "veteran_most_recent_active_service_entry_date",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_forwarding_zip_code": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Forwarding Zip Code",
+    "DatumId": "veteran_forwarding_zip_code",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_served_national_guard_start_date": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran National Guard Term of Service Start",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_served_national_guard_start_date",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "type": "date"
+  },
+  "veteran_home_state": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Home State",
+    "DatumId": "veteran_home_state",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_forwarding_city": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Forwarding City",
+    "DatumId": "veteran_forwarding_city",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_homeless_point_of_contact": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Point of Contact",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_homeless_point_of_contact",
+    "DependsOn": {
+      "DatumId": "veteran_homeless_y_n",
+      "Value": "Yes"
+    },
+    "type": "string"
+  },
+  "veteran_prisoner_of_war_y_n": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "HAVE YOU EVER BEEN A PRISONER OF WAR?",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_prisoner_of_war_y_n",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_email": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Preferred Email Address",
+    "DatumId": "veteran_email",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_middle_initial": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Middle Initial",
+    "DatumId": "veteran_middle_initial",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_national_guard_currently_activated_date_of_activation": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "DATE OF ACTIVATION",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_national_guard_currently_activated_date_of_activation",
+    "DependsOn": {
+      "DatumId": "veteran_national_guard_currently_activated_y_n",
+      "Value": "Yes"
+    },
+    "type": "date"
+  },
+  "veteran_forwarding_state": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Forwarding State",
+    "DatumId": "veteran_forwarding_state",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_served_national_guard_yes_no": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Served National Guard",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_served_national_guard_yes_no",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_homeless_y_n": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Homeless",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_homeless_y_n",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_separation_pay_type": {
+    "formName": "VBA-21-526EZ-ARE",
     "title": "LIST TYPE",
-    "type": "string",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_separation_pay_type",
     "DependsOn": {
       "DatumId": "veteran_separation_pay_y_n",
       "Value": "Yes"
     },
-    "DatumId": "veteran_separation_pay_type"
+    "type": "string"
   },
-
-  {
+  "veteran_service_number": {
     "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Service Number",
     "PDFFormLocator": null,
+    "NotApplicable": true,
+    "DatumId": "veteran_service_number",
+    "type": "string"
+  },
+  "veteran_forwarding_address_effective_date": {
+    "PDFFormLocator": null,
+    "type": "date",
+    "title": "Veteran Forwarding Address Effective Date",
+    "DatumId": "veteran_forwarding_address_effective_date",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_sex": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Sex",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_sex",
+    "type": "radio",
+    "Options": [
+      "Male",
+      "Female"
+    ]
+  },
+  "veteran_prisoner_of_war_end_date": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "DATE OF CONFINEMENT END",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_prisoner_of_war_end_date",
+    "DependsOn": {
+      "DatumId": "veteran_prisoner_of_war_y_n",
+      "Value": "Yes"
+    },
+    "type": "date"
+  },
+  "veteran_first_name": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran First Name",
+    "DatumId": "veteran_first_name",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_previous_claim_y_n": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Previous Claim",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_previous_claim_y_n",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_military_retired_pay_or_va_compensation": {
+    "formName": "VBA-21-526EZ-ARE",
     "title": "I want military retired pay instead of VA compensation",
-    "type": "radio",
-    "Options": ["Retired Pay", "VA Compensation"],
-    "DatumId": "veteran_military_retired_pay_or_va_compensation"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
     "PDFFormLocator": null,
-    "title": "I elect to waive VA benefits for the days I accrued inactive duty training pay in order to retain my inactive duty training pay.",
+    "DatumId": "veteran_military_retired_pay_or_va_compensation",
     "type": "radio",
-    "Options": ["Waive", "Do Not Waive"],
-    "DatumId": "veteran_waive_va_benefits"
+    "Options": [
+      "Retired Pay",
+      "VA Compensation"
+    ]
   },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_home_street": {
     "PDFFormLocator": null,
-    "title": "I elect to waive VA benefits for the days I accrued inactive duty training pay in order to retain my inactive duty training pay.",
-    "type": "radio",
-    "Options": ["Waive", "Do Not Waive"],
-    "DatumId": "veteran_waive_va_benefits"
+    "type": "string",
+    "title": "Veteran Home Street",
+    "DatumId": "veteran_home_street",
+    "formName": "VBA-21-526EZ-ARE"
   },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_service_exit": {
     "PDFFormLocator": null,
+    "type": "date",
+    "title": "Veteran Most Recent Active Service Exit (Can be a date in the future)",
+    "DatumId": "veteran_service_exit",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_separation_pay_amount": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "LIST AMOUNT",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_separation_pay_amount",
+    "DependsOn": {
+      "DatumId": "veteran_separation_pay_y_n",
+      "Value": "Yes"
+    },
+    "type": "string"
+  },
+  "veteran_national_guard_currently_activated_date_of_separation": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "ANTICIPATED SEPARATION DATE",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_national_guard_currently_activated_date_of_separation",
+    "DependsOn": {
+      "DatumId": "veteran_national_guard_currently_activated_y_n",
+      "Value": "Yes"
+    },
+    "type": "date"
+  },
+  "veteran_va_treatment": {
+    "SubQuestions": [
+      {
+        "type": "string",
+        "title": "Name and Location {N}",
+        "DatumId": "prev_treatment_place"
+      },
+      {
+        "type": "date",
+        "title": "Treatment Start {N}",
+        "DatumId": "prev_treatment_start_date"
+      },
+      {
+        "type": "date",
+        "title": "Treatment End {N}",
+        "DatumId": "prev_treatment_end_date"
+      }
+    ],
+    "formName": "VBA-21-526EZ-ARE",
+    "MaxSubElements": 4,
+    "title": "Veteran VA Medical Centers Visited",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_va_treatment",
+    "type": "group"
+  },
+  "veteran_ssn": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Social Security Number",
+    "DatumId": "veteran_ssn",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_national_guard_unit_info": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran National Guard Name and Address of Unit",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_national_guard_unit_info",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "type": "string"
+  },
+  "veteran_place_of_last_or_anticipated_separation": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Place of Last or Anticipated Separation",
+    "DatumId": "veteran_place_of_last_or_anticipated_separation",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_dob": {
+    "PDFFormLocator": null,
+    "type": "date",
+    "title": "Veteran Date of Birth",
+    "DatumId": "veteran_dob",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_home_country": {
+    "PDFFormLocator": null,
+    "type": "string",
+    "title": "Veteran Home Country",
+    "DatumId": "veteran_home_country",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_dd_account_type": {
+    "formName": "VBA-21-526EZ-ARE",
     "title": "ACCOUNT TYPE",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_dd_account_type",
     "type": "radio",
-    "Options": ["Checking", "Saving", "No Bank Account"],
-    "DatumId": "veteran_dd_account_type"
+    "Options": [
+      "Checking",
+      "Saving",
+      "No Bank Account"
+    ]
   },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
+  "veteran_phone_number": {
     "PDFFormLocator": null,
-    "title": "ACCOUNT NUMBER",
     "type": "string",
-    "DatumId": "veteran_dd_account_number"
+    "title": "Veteran Preferred Phone Number",
+    "DatumId": "veteran_phone_number",
+    "formName": "VBA-21-526EZ-ARE"
   },
-
-  {
+  "veteran_service_branches": {
     "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Service Branch",
     "PDFFormLocator": null,
-    "title": "ACCOUNT NUMBER",
+    "DatumId": "veteran_service_branches",
+    "type": "checkbox",
+    "Options": [
+      "Army",
+      "Navy",
+      "Marine Corps",
+      "Air Force",
+      "Coast Guard"
+    ]
+  },
+  "veteran_service_components": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Service Component",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_service_components",
+    "type": "checkbox",
+    "Options": [
+      "Active",
+      "Reserves",
+      "National Guard"
+    ]
+  },
+  "veteran_served_combat_zone_since_9_11": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Served in Combat Zone Since 9/11/2001",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_served_combat_zone_since_9_11",
+    "type": "radio",
+    "Options": [
+      "Yes",
+      "No"
+    ]
+  },
+  "veteran_dd_routing_number": {
+    "PDFFormLocator": null,
     "type": "string",
-    "DatumId": "veteran_dd_account_number"
-  },
-
-  {
-    "formName": "VBA-21-526EZ-ARE",
-    "PDFFormLocator": null,
     "title": "ACCOUNT ROUTING NUMBER",
-    "type": "string",
-    "DatumId": "veteran_dd_routing_number"
+    "DatumId": "veteran_dd_routing_number",
+    "formName": "VBA-21-526EZ-ARE"
+  },
+  "veteran_homeless_point_of_contact_phone_number": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran Point of Contact Phone Number",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_homeless_point_of_contact_phone_number",
+    "DependsOn": {
+      "DatumId": "veteran_homeless_y_n",
+      "Value": "Yes"
+    },
+    "type": "string"
+  },
+  "veteran_previous_claim": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran VA File Number",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_previous_claim",
+    "DependsOn": {
+      "DatumId": "veteran_previous_claim_y_n",
+      "Value": "Yes"
+    },
+    "type": "string"
+  },
+  "veteran_disability": {
+    "SubQuestions": [
+      {
+        "type": "string",
+        "title": "Disability {N}",
+        "DatumId": "disability"
+      }
+    ],
+    "formName": "VBA-21-526EZ-ARE",
+    "MaxSubElements": 20,
+    "title": "Veteran Disability",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_disability",
+    "type": "group"
+  },
+  "veteran_served_national_guard_end_date": {
+    "formName": "VBA-21-526EZ-ARE",
+    "title": "Veteran National Guard Term of Service End",
+    "PDFFormLocator": null,
+    "DatumId": "veteran_served_national_guard_end_date",
+    "DependsOn": {
+      "DatumId": "veteran_served_national_guard_yes_no",
+      "Value": "Yes"
+    },
+    "type": "date"
   }
+}

@@ -11,6 +11,7 @@ var app = angular.module('vetaffiApp', [
 ]);
 
 app.controller('FormController', ['$scope', 'formData', 'formState', function ($scope, formData, formState) {
+    formState.addForm('VBA-21-526EZ-ARE');
     /**
      * These scope attributes are the main form data
      */
@@ -34,9 +35,10 @@ app.controller('FormController', ['$scope', 'formData', 'formState', function ($
     $scope.model = {};
 
 
+
     $scope.vaForms = formState.getForms();
     $scope.downloadedForms = 0;
-    downloadForms(['VBA-21-526EZ-ARE']);
+    downloadForms($scope.vaForms);
 
     function downloadForms(forms) {
         for (var i = 0; i<forms.length; i++) {
