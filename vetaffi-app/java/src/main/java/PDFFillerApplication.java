@@ -26,6 +26,6 @@ public class PDFFillerApplication extends Application<PDFFillerConfiguration> {
 
     @Override
     public void initialize(Bootstrap<PDFFillerConfiguration> myConfigurationBootstrap) {
-        myConfigurationBootstrap.addBundle(new AssetsBundle("/assets", "/", "index.html"));
+        myConfigurationBootstrap.addBundle(new AssetsBundle("/src", "/", "index.html"));
     }
 }
