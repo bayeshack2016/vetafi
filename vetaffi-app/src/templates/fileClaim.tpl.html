@@ -2,28 +2,25 @@
     <h3>File a claim!</h3>
 
     <div class="container">
-        <div ng-repeat="formName in formNames"
-             >
+        <div ng-repeat="formName in formNames">
             <div class="row form-option" ng-class="{'form-option-selected': formSelections[formName]}">
-                <div class="col-lg-1">
+                <div class="col-sm-1">
                     <input type="checkbox"
                            ng-model="formSelections[formName]"
                            id="{{formName}}"
                            class="file-claim-checkbox"/>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-sm-4">
                     {{formName}}
                     <p class="form-description">Essential basic form. Must be filled out for almost all claims.</p>
                 </div>
-                <div class="col-lg-2 tooltip-thing" ng-visible="suggestions[formName]" ng-hide="formSelections[formName]" >
+                <div class="col-sm-2 tooltip-thing" ng-visible="suggestions[formName]" ng-hide="formSelections[formName]" >
                     <p>Veterans like you often fill out this form.</p>
                 </div>
             </div>
             <div class="row form-description">
-                <div class="col-lg-1"></div>
-                <div class="col-lg-4">
-
-                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4"></div>
             </div>
         </div>
 
