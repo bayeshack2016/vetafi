@@ -11,8 +11,14 @@
             </div>
         </div>
     </div>
-    <form sf-schema="schema" sf-form="form" sf-model="model"></form>
+    <form sf-schema="schema"
+          sf-form="form"
+          sf-model="model"
+          ng-submit="onSubmit(myForm)"></form>
     <div>
         {{model}}
+    </div>
+    <div>
+        {{schema}}
     </div>
 </div>

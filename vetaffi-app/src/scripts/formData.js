@@ -39,7 +39,7 @@
 
         function completeForm(formName) {
             forms[formName] = true;
-            $mixpanel.track("Form completed.")
+            $mixpanel.track("Form completed", {"formName": formName})
         }
 
         return {

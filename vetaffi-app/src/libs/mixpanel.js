@@ -1,102 +1,81 @@
-/*
- * Mixpanel JS Library v2.5.1
- *
- * Copyright 2012, Mixpanel, Inc. All Rights Reserved
- * http://mixpanel.com/
- *
- * Includes portions of Underscore.js
- * http://documentcloud.github.com/underscore/
- * (c) 2011 Jeremy Ashkenas, DocumentCloud Inc.
- * Released under the MIT License.
- */
+(function () {
+    'use strict';
 
-// ==ClosureCompiler==
-// @compilation_level ADVANCED_OPTIMIZATIONS
-// @output_file_name mixpanel-2.5.min.js
-// ==/ClosureCompiler==
+    /*
+     * Mixpanel JS Library
+     *
+     * Copyright 2012, Mixpanel, Inc. All Rights Reserved
+     * http://mixpanel.com/
+     *
+     * Includes portions of Underscore.js
+     * http://documentcloud.github.com/underscore/
+     * (c) 2011 Jeremy Ashkenas, DocumentCloud Inc.
+     * Released under the MIT License.
+     */
 
-/*
-Will export window.mixpanel
-*/
+    // ==ClosureCompiler==
+    // @compilation_level ADVANCED_OPTIMIZATIONS
+    // @output_file_name mixpanel-2.7.min.js
+    // ==/ClosureCompiler==
 
-/*
-SIMPLE STYLE GUIDE:
+    /*
+    SIMPLE STYLE GUIDE:
 
-this.x == public function
-this._x == internal - only use within this file
-this.__x == private - only use within the class
+    this.x == public function
+    this._x == internal - only use within this file
+    this.__x == private - only use within the class
 
-Globals should be all caps
-*/
-(function (mixpanel) {
+    Globals should be all caps
+    */
 
-/*
- * Saved references to long variable names, so that closure compiler can
- * minimize file size.
- */
-    var   ArrayProto     = Array.prototype
-        , FuncProto      = Function.prototype
-        , ObjProto       = Object.prototype
-        , slice          = ArrayProto.slice
-        , toString       = ObjProto.toString
-        , hasOwnProperty = ObjProto.hasOwnProperty
-        , windowConsole  = window.console
-        , navigator      = window.navigator
-        , document       = window.document
-        , userAgent      = navigator.userAgent;
+    var LIB_VERSION = '2.7.7';
 
-/*
- * Constants
- */
-/** @const */   var   PRIMARY_INSTANCE_NAME     = "mixpanel"
-/** @const */       , SET_QUEUE_KEY             = "__mps"
-/** @const */       , SET_ONCE_QUEUE_KEY        = "__mpso"
-/** @const */       , ADD_QUEUE_KEY             = "__mpa"
-/** @const */       , APPEND_QUEUE_KEY          = "__mpap"
-/** @const */       , UNION_QUEUE_KEY           = "__mpu"
-/** @const */       , SET_ACTION                = "$set"
-/** @const */       , SET_ONCE_ACTION           = "$set_once"
-/** @const */       , ADD_ACTION                = "$add"
-/** @const */       , APPEND_ACTION             = "$append"
-/** @const */       , UNION_ACTION              = "$union"
-// This key is deprecated, but we want to check for it to see whether aliasing is allowed.
-/** @const */       , PEOPLE_DISTINCT_ID_KEY    = "$people_distinct_id"
-/** @const */       , ALIAS_ID_KEY              = "__alias"
-/** @const */       , CAMPAIGN_IDS_KEY          = "__cmpns"
-/** @const */       , RESERVED_PROPERTIES       = [
-                        SET_QUEUE_KEY,
-                        SET_ONCE_QUEUE_KEY,
-                        ADD_QUEUE_KEY,
-                        APPEND_QUEUE_KEY,
-                        UNION_QUEUE_KEY,
-                        PEOPLE_DISTINCT_ID_KEY,
-                        ALIAS_ID_KEY,
-                        CAMPAIGN_IDS_KEY
-                    ];
-
-/*
- * Dynamic... constants? Is that an oxymoron?
- */
-    var HTTP_PROTOCOL = (("https:" == document.location.protocol) ? "https://" : "http://"),
-
-        LIB_VERSION = '2.5.1',
-        SNIPPET_VERSION = (mixpanel && mixpanel['__SV']) || 0,
-
-        // http://hacks.mozilla.org/2009/07/cross-site-xmlhttprequest-with-cors/
-        // https://developer.mozilla.org/en-US/docs/DOM/XMLHttpRequest#withCredentials
-        USE_XHR = (window.XMLHttpRequest && 'withCredentials' in new XMLHttpRequest()),
-
-        // IE<10 does not support cross-origin XHR's but script tags
-        // with defer won't block window.onload; ENQUEUE_REQUESTS
-        // should only be true for Opera<12
-        ENQUEUE_REQUESTS = !USE_XHR && (userAgent.indexOf('MSIE') == -1) && (userAgent.indexOf('Mozilla') == -1);
-
-/*
- * Closure-level globals
- */
-    var   _ = {}
-        , DEBUG = false
-        , DEFAULT_CONFIG = {
+    var init_type;
+    var mixpanel_master;
+    var INIT_MODULE  = 0;
+    var INIT_SNIPPET = 1;
+    var ArrayProto     = Array.prototype;
+    var FuncProto      = Function.prototype;
+    var ObjProto       = Object.prototype;
+    var slice          = ArrayProto.slice;
+    var toString       = ObjProto.toString;
+    var hasOwnProperty = ObjProto.hasOwnProperty;
+    var windowConsole  = window.console;
+    var navigator      = window.navigator;
+    var document       = window.document;
+    var userAgent      = navigator.userAgent;
+    var PRIMARY_INSTANCE_NAME     = "mixpanel";
+    var SET_QUEUE_KEY             = "__mps";
+    var SET_ONCE_QUEUE_KEY        = "__mpso";
+    var ADD_QUEUE_KEY             = "__mpa";
+    var APPEND_QUEUE_KEY          = "__mpap";
+    var UNION_QUEUE_KEY           = "__mpu";
+    var SET_ACTION                = "$set";
+    var SET_ONCE_ACTION           = "$set_once";
+    var ADD_ACTION                = "$add";
+    var APPEND_ACTION             = "$append";
+    var UNION_ACTION              = "$union";
+    var PEOPLE_DISTINCT_ID_KEY    = "$people_distinct_id";
+    var ALIAS_ID_KEY              = "__alias";
+    var CAMPAIGN_IDS_KEY          = "__cmpns";
+    var EVENT_TIMERS_KEY          = "__timers";
+    var RESERVED_PROPERTIES       = [
+                            SET_QUEUE_KEY,
+                            SET_ONCE_QUEUE_KEY,
+                            ADD_QUEUE_KEY,
+                            APPEND_QUEUE_KEY,
+                            UNION_QUEUE_KEY,
+                            PEOPLE_DISTINCT_ID_KEY,
+                            ALIAS_ID_KEY,
+                            CAMPAIGN_IDS_KEY,
+                            EVENT_TIMERS_KEY
+                        ];
+    var HTTP_PROTOCOL = (("https:" == document.location.protocol) ? "https://" : "http://");
+    var USE_XHR = (window.XMLHttpRequest && 'withCredentials' in new XMLHttpRequest());
+    var ENQUEUE_REQUESTS = !USE_XHR && (userAgent.indexOf('MSIE') == -1) && (userAgent.indexOf('Mozilla') == -1);
+    var _ = {};
+    var DEBUG = false;
+    var DEFAULT_CONFIG = {
               "api_host":               HTTP_PROTOCOL + 'api.mixpanel.com'
             , "cross_subdomain_cookie": true
             , "persistence":            "cookie"
@@ -117,9 +96,9 @@ Globals should be all caps
             , "disable_cookie":         false
             , "secure_cookie":          false
             , "ip":                     true
-        }
-        , DOM_LOADED = false;
-
+            , "property_blacklist":     []
+        };
+    var DOM_LOADED = false;
     // UNDERSCORE
     // Embed part of the Underscore Library
 
@@ -876,7 +855,7 @@ Globals should be all caps
     _.HTTPBuildQuery = function(formdata, arg_separator) {
         var key, use_val, use_key, tmp_arr = [];
 
-        if (typeof(arg_separator) === "undefined") {
+        if (_.isUndefined(arg_separator)) {
             arg_separator = '&';
         }
 
@@ -1001,11 +980,11 @@ Globals should be all caps
         // https://gist.github.com/1930440
 
         /**
-        * @param {Object} element
-        * @param {string} type
-        * @param {function(...[*])} handler
-        * @param {boolean=} oldSchool
-        */
+         * @param {Object} element
+         * @param {string} type
+         * @param {function(...[*])} handler
+         * @param {boolean=} oldSchool
+         */
         var register_event = function(element, type, handler, oldSchool) {
             if (!element) {
                 console.error("No valid element provided to register_event");
@@ -1293,13 +1272,17 @@ Globals should be all caps
          */
         browser: function(user_agent, vendor, opera) {
             var vendor = vendor || ''; // vendor is undefined for at least IE9
-            if (opera) {
+            if (opera || _.includes(user_agent, " OPR/")) {
                 if (_.includes(user_agent, "Mini")) {
                     return "Opera Mini";
                 }
                 return "Opera";
             } else if (/(BlackBerry|PlayBook|BB10)/i.test(user_agent)) {
                 return 'BlackBerry';
+            } else if (_.includes(user_agent, "IEMobile") || _.includes(user_agent, "WPDesktop")) {
+                return "Internet Explorer Mobile";
+            } else if (_.includes(user_agent, "Edge")) {
+                return "Microsoft Edge";
             } else if (_.includes(user_agent, "FBIOS")) {
                 return "Facebook Mobile";
             } else if (_.includes(user_agent, "Chrome")) {
@@ -1334,17 +1317,19 @@ Globals should be all caps
         browserVersion: function(userAgent, vendor, opera) {
             var browser = _.info.browser(userAgent, vendor, opera);
             var versionRegexs = {
-                "Chrome":            /Chrome\/(\d+(\.\d+)?)/,
-                "Chrome iOS":        /Chrome\/(\d+(\.\d+)?)/,
-                "Safari":            /Version\/(\d+(\.\d+)?)/,
-                "Mobile Safari":     /Version\/(\d+(\.\d+)?)/,
-                "Opera":             /Opera\/(\d+(\.\d+)?)/,
-                "Firefox":           /Firefox\/(\d+(\.\d+)?)/,
-                "Konqueror":         /Konqueror:(\d+(\.\d+)?)/,
-                "BlackBerry":        /BlackBerry (\d+(\.\d+)?)/,
-                "Android Mobile":    /android\s(\d+(\.\d+)?)/,
-                "Internet Explorer": /(rv:|MSIE )(\d+(\.\d+)?)/,
-                "Mozilla":           /rv:(\d+(\.\d+)?)/
+                "Internet Explorer Mobile": /rv:(\d+(\.\d+)?)/,
+                "Microsoft Edge":           /Edge\/(\d+(\.\d+)?)/,
+                "Chrome":                   /Chrome\/(\d+(\.\d+)?)/,
+                "Chrome iOS":               /Chrome\/(\d+(\.\d+)?)/,
+                "Safari":                   /Version\/(\d+(\.\d+)?)/,
+                "Mobile Safari":            /Version\/(\d+(\.\d+)?)/,
+                "Opera":                    /(Opera|OPR)\/(\d+(\.\d+)?)/,
+                "Firefox":                  /Firefox\/(\d+(\.\d+)?)/,
+                "Konqueror":                /Konqueror:(\d+(\.\d+)?)/,
+                "BlackBerry":               /BlackBerry (\d+(\.\d+)?)/,
+                "Android Mobile":           /android\s(\d+(\.\d+)?)/,
+                "Internet Explorer":        /(rv:|MSIE )(\d+(\.\d+)?)/,
+                "Mozilla":                  /rv:(\d+(\.\d+)?)/
             };
             var regex = versionRegexs[browser];
             if (regex == undefined) {
@@ -1360,7 +1345,7 @@ Globals should be all caps
         os: function() {
             var a = userAgent;
             if (/Windows/i.test(a)) {
-                if (/Phone/.test(a)) { return 'Windows Mobile'; }
+                if (/Phone/.test(a) || /WPDesktop/.test(a)) { return 'Windows Phone'; }
                 return 'Windows';
             } else if (/(iPhone|iPad|iPod)/.test(a)) {
                 return 'iOS';
@@ -1378,7 +1363,9 @@ Globals should be all caps
         },
 
         device: function(user_agent) {
-            if (/iPad/.test(user_agent)) {
+            if (/Windows Phone/i.test(user_agent) || /WPDesktop/.test(user_agent)) {
+                return 'Windows Phone';
+            } else if (/iPad/.test(user_agent)) {
                 return 'iPad';
             } else if (/iPod/.test(user_agent)) {
                 return 'iPod Touch';
@@ -1386,8 +1373,6 @@ Globals should be all caps
                 return 'iPhone';
             } else if (/(BlackBerry|PlayBook|BB10)/i.test(user_agent)) {
                 return 'BlackBerry';
-            } else if (/Windows Phone/i.test(user_agent)) {
-                return 'Windows Phone';
             } else if (/Android/.test(user_agent)) {
                 return 'Android';
             } else {
@@ -1411,6 +1396,7 @@ Globals should be all caps
                 '$referring_domain': _.info.referringDomain(document.referrer),
                 '$device': _.info.device(userAgent)
             }), {
+                '$current_url': window.location.href,
                 '$browser_version': _.info.browserVersion(userAgent, navigator.vendor, window.opera),
                 '$screen_height': screen.height,
                 '$screen_width': screen.width,
@@ -2013,6 +1999,23 @@ Globals should be all caps
         return this['props'][key] || (this['props'][key] = default_val);
     };
 
+    MixpanelPersistence.prototype.set_event_timer = function(event_name, timestamp) {
+        var timers = this['props'][EVENT_TIMERS_KEY] || {};
+        timers[event_name] = timestamp;
+        this['props'][EVENT_TIMERS_KEY] = timers;
+        this.save();
+    };
+
+    MixpanelPersistence.prototype.remove_event_timer = function(event_name) {
+        var timers = this['props'][EVENT_TIMERS_KEY] || {};
+        var timestamp = timers[event_name];
+        if (!_.isUndefined(timestamp)) {
+            delete this['props'][EVENT_TIMERS_KEY][event_name];
+            this.save();
+        }
+        return timestamp;
+    };
+
     /**
      * create_mplib(token:string, config:object, name:string)
      *
@@ -2022,14 +2025,19 @@ Globals should be all caps
      * declared before this file has loaded).
      */
     var create_mplib = function(token, config, name) {
-        var instance, target = (name === PRIMARY_INSTANCE_NAME) ? mixpanel : mixpanel[name];
+        var instance,
+            target = (name === PRIMARY_INSTANCE_NAME) ? mixpanel_master : mixpanel_master[name];
 
-        if (target && !_.isArray(target)) {
-            console.error("You have already initialized " + name);
-            return;
+        if (target && init_type === INIT_MODULE) {
+            instance = target;
+        } else {
+            if (target && !_.isArray(target)) {
+                console.error("You have already initialized " + name);
+                return;
+            }
+            instance = new MixpanelLib();
         }
 
-        instance = new MixpanelLib();
         instance._init(token, config, name);
 
         instance['people'] = new MixpanelPeople();
@@ -2041,11 +2049,17 @@ Globals should be all caps
 
         // if target is not defined, we called init after the lib already
         // loaded, so there won't be an array of things to execute
-        if (!_.isUndefined(target)) {
+        if (!_.isUndefined(target) && _.isArray(target)) {
             // Crunch through the people queue first - we queue this data up &
             // flush on identify, so it's better to do all these operations first
             instance._execute_array.call(instance['people'], target['people']);
             instance._execute_array(target);
+        }
+
+        try {
+            add_dom_event_handlers(instance, ['click', 'change']);
+        } catch (e) {
+            console.error(e);
         }
 
         return instance;
@@ -2060,23 +2074,23 @@ Globals should be all caps
     // Initialization methods
 
     /**
-     * This function initialize a new instance of the Mixpanel tracking object.
+     * This function initializes a new instance of the Mixpanel tracking object.
      * All new instances are added to the main mixpanel object as sub properties (such as
-     * mixpanel.your_library_name) and also returned by this function.  If you wanted
-     * to define a second instance on the page you would do it like so:
+     * mixpanel.library_name) and also returned by this function. To define a
+     * second instance on the page, you would call:
      *
-     *      mixpanel.init("new token", { your: "config" }, "library_name")
+     *     mixpanel.init("new token", { your: "config" }, "library_name");
      *
-     * and use it like this:
+     * and use it like so:
      *
-     *      mixpanel.library_name.track(...)
+     *     mixpanel.library_name.track(...);
      *
      * @param {String} token   Your Mixpanel API token
      * @param {Object} [config]  A dictionary of config options to override
      * @param {String} [name]    The name for the new mixpanel instance that you want created
      */
     MixpanelLib.prototype.init = function (token, config, name) {
-        if (typeof(name) === "undefined") {
+        if (_.isUndefined(name)) {
             console.error("You must name your new library: init(token, config, name)");
             return;
         }
@@ -2086,7 +2100,7 @@ Globals should be all caps
         }
 
         var instance = create_mplib(token, config, name);
-        mixpanel[name] = instance;
+        mixpanel_master[name] = instance;
         instance._loaded();
 
         return instance;
@@ -2269,7 +2283,7 @@ Globals should be all caps
      * (and are thus stored in an array so they can be called later)
      *
      * Note: we fire off all the mixpanel function calls && user defined
-     * functions BEFORE we fire off mixpanel tracking calls.  This is so
+     * functions BEFORE we fire off mixpanel tracking calls. This is so
      * identify/register/set_config calls can properly modify early
      * tracking calls.
      *
@@ -2320,13 +2334,13 @@ Globals should be all caps
     };
 
     /**
-     * Disable events on the Mixpanel object.  If passed no arguments,
-     * this function disables tracking of any event.  If passed an
+     * Disable events on the Mixpanel object. If passed no arguments,
+     * this function disables tracking of any event. If passed an
      * array of event names, those events will be disabled, but other
      * events will continue to be tracked.
      *
-     * Note: this function doesn't stop regular mixpanel functions from
-     * firing such as register and name_tag.
+     * Note: this function does not stop other mixpanel functions from
+     * firing, such as register() or people.set().
      *
      * @param {Array} [events] An array of event names to disable
      */
@@ -2339,29 +2353,27 @@ Globals should be all caps
     };
 
     /**
-     * Track an event.  This is the most important Mixpanel function and
-     * the one you will be using the most.
+     * Track an event. This is the most important and
+     * frequently used Mixpanel function.
      *
      * ### Usage:
      *
      *     // track an event named "Registered"
      *     mixpanel.track("Registered", {"Gender": "Male", "Age": 21});
      *
-     * For tracking link clicks or form submissions, see mixpanel.track_links or mixpanel.track_forms.
+     * To track link clicks or form submissions, see track_links() or track_forms().
      *
      * @param {String} event_name The name of the event. This can be anything the user does - "Button Click", "Sign Up", "Item Purchased", etc.
      * @param {Object} [properties] A set of properties to include with the event you're sending. These describe the user who did the event or details about the event itself.
      * @param {Function} [callback] If provided, the callback function will be called after tracking the event.
      */
     MixpanelLib.prototype.track = function(event_name, properties, callback) {
-        if (typeof(event_name) === "undefined") {
+        if (_.isUndefined(event_name)) {
             console.error("No event name provided to mixpanel.track");
             return;
         }
 
-        if (_.isBlockedUA(userAgent)
-        ||  this._flags.disable_all_events
-        ||  _.include(this.__disabled_events, event_name)) {
+        if (this._event_is_disabled(event_name)) {
             if (typeof(callback) !== 'undefined') { callback(0); }
             return;
         }
@@ -2369,6 +2381,13 @@ Globals should be all caps
         // set defaults
         properties = properties || {};
         properties['token'] = this.get_config('token');
+
+        // set $duration if time_event was previously called for this event
+        var start_timestamp = this['persistence'].remove_event_timer(event_name);
+        if (!_.isUndefined(start_timestamp)) {
+            var duration_in_ms = new Date().getTime() - start_timestamp;
+            properties['$duration'] = parseFloat((duration_in_ms / 1000).toFixed(3));
+        }
 
         // update persistence
         this['persistence'].update_search_keyword(document.referrer);
@@ -2387,6 +2406,28 @@ Globals should be all caps
             , this['persistence'].properties()
             , properties
         );
+
+        try {
+            if (this.mp_counts && event_name !== "mp_page_view" && event_name !== "$create_alias") {
+                properties = _.extend({}, properties, this.mp_counts);
+                this.mp_counts = {};
+                this.mp_counts['$__c'] = 0;
+
+                var name = this.get_config('name');
+                _.cookie.set('mp_' + name + '__c', 0, 1, true);
+            }
+        } catch (e) {
+            console.error(e);
+        }
+
+        var property_blacklist = this.get_config('property_blacklist');
+        if (_.isArray(property_blacklist)) {
+            _.each(property_blacklist, function(blacklisted_prop) {
+                delete properties[blacklisted_prop];
+            });
+        } else {
+            console.error('Invalid value for property_blacklist config: ' + property_blacklist);
+        }
 
         var data = {
               'event': event_name
@@ -2418,12 +2459,12 @@ Globals should be all caps
      * @api private
      */
     MixpanelLib.prototype.track_pageview = function(page) {
-        if (typeof(page) === "undefined") { page = document.location.href; }
+        if (_.isUndefined(page)) { page = document.location.href; }
         this.track("mp_page_view", _.info.pageviewInfo(page));
     };
 
     /**
-     * Track clicks on a set of document elements.  Selector must be a
+     * Track clicks on a set of document elements. Selector must be a
      * valid query. Elements must exist on the page at the time track_links is called.
      *
      * ### Usage:
@@ -2437,10 +2478,10 @@ Globals should be all caps
      * servers to respond. If they have not responded by that time
      * it will head to the link without ensuring that your event
      * has been tracked.  To configure this timeout please see the
-     * mixpanel.set_config docs below.
+     * set_config() documentation below.
      *
      * If you pass a function in as the properties argument, the
-     * function will receive the DOMElement which triggered the
+     * function will receive the DOMElement that triggered the
      * event as an argument.  You are expected to return an object
      * from the function; any properties defined on this object
      * will be sent to mixpanel as event properties.
@@ -2455,7 +2496,7 @@ Globals should be all caps
     };
 
     /**
-     * Tracks form submissions. Selector must be a valid query.
+     * Track form submissions. Selector must be a valid query.
      *
      * ### Usage:
      *
@@ -2468,10 +2509,10 @@ Globals should be all caps
      * servers to respond, if they have not responded by that time
      * it will head to the link without ensuring that your event
      * has been tracked.  To configure this timeout please see the
-     * mixpanel.set_config docs below.
+     * set_config() documentation below.
      *
      * If you pass a function in as the properties argument, the
-     * function will receive the DOMElement which triggered the
+     * function will receive the DOMElement that triggered the
      * event as an argument.  You are expected to return an object
      * from the function; any properties defined on this object
      * will be sent to mixpanel as event properties.
@@ -2486,8 +2527,49 @@ Globals should be all caps
     };
 
     /**
+     * Time an event by including the time between this call and a
+     * later 'track' call for the same event in the properties sent
+     * with the event.
+     *
+     * ### Usage:
+     *
+     *     // time an event named "Registered"
+     *     mixpanel.time_event("Registered");
+     *     mixpanel.track("Registered", {"Gender": "Male", "Age": 21});
+     *
+     * When called for a particular event name, the next track call for that event
+     * name will include the elapsed time between the 'time_event' and 'track'
+     * calls. This value is stored as seconds in the '$duration' property.
+     *
+     * @param {String} event_name The name of the event.
+     */
+    MixpanelLib.prototype.time_event = function(event_name) {
+        if (_.isUndefined(event_name)) {
+            console.error("No event name provided to mixpanel.time_event");
+            return;
+        }
+
+        if (this._event_is_disabled(event_name)) {
+            return;
+        }
+
+        this['persistence'].set_event_timer(event_name,  new Date().getTime());
+    };
+
+    /**
      * Register a set of super properties, which are included with all
-     * events.  This will overwrite previous super property values.
+     * events. This will overwrite previous super property values.
+     *
+     * ### Usage:
+     *
+     *     // register "Gender" as a super property
+     *     mixpanel.register({'Gender': 'Female'});
+     *
+     *     // register several super properties when a user signs up
+     *     mixpanel.register({
+     *         'Email': 'jdoe@example.com',
+     *         'Account Type': 'Free'
+     *     });
      *
      * @param {Object} properties An associative array of properties to store about the user
      * @param {Number} [days] How many days since the user's last visit to store the super properties
@@ -2497,8 +2579,15 @@ Globals should be all caps
     };
 
     /**
-     * Register a set of super properties only once.  This will not
+     * Register a set of super properties only once. This will not
      * overwrite previous super property values, unlike register().
+     *
+     * ### Usage:
+     *
+     *     // register a super property for the first time only
+     *     mixpanel.register_once({
+     *         'First Login Date': new Date().toISOString()
+     *     });
      *
      * ### Notes:
      *
@@ -2529,18 +2618,25 @@ Globals should be all caps
     };
 
     /**
-     * Identify a user with a unique id.  All subsequent
-     * actions caused by this user will be tied to this identity.  This
-     * property is used to track unique visitors.  If the method is
+     * Identify a user with a unique ID. All subsequent
+     * actions caused by this user will be tied to this unique ID. This
+     * property is used to track unique visitors. If the method is
      * never called, then unique visitors will be identified by a UUID
      * generated the first time they visit the site.
      *
-     * ### Note:
+     * ### Notes:
      *
      * You can call this function to overwrite a previously set
-     * unique id for the current user.  Mixpanel cannot translate
-     * between ids at this time, so when you change a users id
+     * unique ID for the current user. Mixpanel cannot translate
+     * between IDs at this time, so when you change a user's ID
      * they will appear to be a new user.
+     *
+     * identify() should not be called to link anonymous activity to
+     * subsequent activity when a unique ID is first assigned.
+     * Use alias() when a unique ID is first assigned (registration), and
+     * use identify() to identify the user with that unique ID on an ongoing
+     * basis (e.g., each time a user logs in after registering).
+     * Do not call identify() at the same time as alias().
      *
      * @param {String} unique_id A string that uniquely identifies a user
      */
@@ -2566,7 +2662,19 @@ Globals should be all caps
 
     /**
      * Returns the current distinct id of the user. This is either the id automatically
-     * generated by the library or the id that has been passed by a call to mixpanel.identify
+     * generated by the library or the id that has been passed by a call to identify().
+     *
+     * ### Notes:
+     *
+     * get_distinct_id() can only be called after the Mixpanel library has finished loading.
+     * init() has a loaded function available to handle this automatically. For example:
+     *
+     *     // set distinct_id after the mixpanel library has loaded
+     *     mixpanel.init("YOUR PROJECT TOKEN", {
+     *         loaded: function() {
+     *             distinct_id = mixpanel.get_distinct_id();
+     *         }
+     *     });
      */
     MixpanelLib.prototype.get_distinct_id = function() {
         return this.get_property('distinct_id');
@@ -2574,14 +2682,21 @@ Globals should be all caps
 
     /**
      * Create an alias, which Mixpanel will use to link two distinct_ids going forward (not retroactively).
-     *  Multiple aliases can map to the same original ID, but not vice-versa. Aliases can also be chained - the
-     *  following is a valid scenario:
+     * Multiple aliases can map to the same original ID, but not vice-versa. Aliases can also be chained - the
+     * following is a valid scenario:
      *
-     *      mixpanel.alias("new_id", "existing_id");
-     *      ...
-     *      mixpanel.alias("newer_id", "new_id");
+     *     mixpanel.alias("new_id", "existing_id");
+     *     ...
+     *     mixpanel.alias("newer_id", "new_id");
      *
      * If the original ID is not passed in, we will use the current distinct_id - probably the auto-generated GUID.
+     *
+     * ### Notes:
+     *
+     * The best practice is to call alias() when a unique ID is first created for a user
+     * (e.g., when a user first registers for an account and provides an email address).
+     * alias() should never be called more than once for a given user, except to
+     * chain a newer ID to a previously new ID, as described above.
      *
      * @param {String} alias A unique identifier that you want to use for this user in the future.
      * @param {String} [original] The current identifier being used for this user.
@@ -2613,9 +2728,9 @@ Globals should be all caps
     };
 
     /**
-     * Provide a string to recognize the user by.  The string passed to
+     * Provide a string to recognize the user by. The string passed to
      * this method will appear in the Mixpanel Streams product rather
-     * than an automatically generated name.  Name tags do not have to
+     * than an automatically generated name. Name tags do not have to
      * be unique.
      *
      * This value will only be included in Streams data.
@@ -2651,6 +2766,10 @@ Globals should be all caps
      *
      *       // name for super properties persistent store
      *       persistence_name:           ""
+     *
+     *       // names of properties/superproperties which should never
+     *       // be sent with track() calls
+     *       property_blacklist:         []
      *
      *       // if this is true, mixpanel cookies will be marked as
      *       // secure, meaning they will only be transmitted over https
@@ -2701,7 +2820,19 @@ Globals should be all caps
 
     /**
      * Returns the value of the super property named property_name. If no such
-     * property is set, get_property will return the undefined value.
+     * property is set, get_property() will return the undefined value.
+     *
+     * ### Notes:
+     *
+     * get_property() can only be called after the Mixpanel library has finished loading.
+     * init() has a loaded function available to handle this automatically. For example:
+     *
+     *     // grab value for "user_id" after the mixpanel library has loaded
+     *     mixpanel.init("YOUR PROJECT TOKEN", {
+     *         loaded: function() {
+     *             user_id = mixpanel.get_property("user_id");
+     *         }
+     *     });
      *
      * @param {String} property_name The name of the super property you want to retrieve
      */
@@ -2715,6 +2846,12 @@ Globals should be all caps
             name = PRIMARY_INSTANCE_NAME + "." + name;
         }
         return name;
+    };
+
+    MixpanelLib.prototype._event_is_disabled = function(event_name) {
+        return _.isBlockedUA(userAgent)
+            || this._flags.disable_all_events
+            || _.include(this.__disabled_events, event_name);
     };
 
     MixpanelLib.prototype._check_and_handle_notifications = function(distinct_id) {
@@ -2754,8 +2891,8 @@ Globals should be all caps
      */
     var MixpanelPeople = function(){ };
 
-    MixpanelPeople.prototype._init = function(mixpanel) {
-        this._mixpanel = mixpanel;
+    MixpanelPeople.prototype._init = function(mixpanel_instance) {
+        this._mixpanel = mixpanel_instance;
     };
 
     /*
@@ -2810,6 +2947,8 @@ Globals should be all caps
 
     /*
      * Set properties on a user record, only if they do not yet exist.
+     * This will not overwrite previous people property values, unlike
+     * people.set().
      *
      * ### Usage:
      *
@@ -2856,13 +2995,13 @@ Globals should be all caps
      *     mixpanel.people.increment('page_views');
      *
      *     // to decrement a counter, pass a negative number
-     *     mixpanel.people.increment('credits_left': -1);
+     *     mixpanel.people.increment('credits_left', -1);
      *
      *     // like mixpanel.people.set(), you can increment multiple
      *     // properties at once:
      *     mixpanel.people.increment({
      *         counter1: 1,
-     *         counter2: 1
+     *         counter2: 6
      *     });
      *
      * @param {Object|String} prop If a string, this is the name of the property. If an object, this is an associative array of names and numeric values.
@@ -2935,7 +3074,8 @@ Globals should be all caps
     };
 
     /*
-     * Merge a given list with a list-valued people analytics property.
+     * Merge a given list with a list-valued people analytics property,
+     * excluding duplicate values.
      *
      * ### Usage:
      *
@@ -2979,7 +3119,7 @@ Globals should be all caps
 
     /*
      * Record that you have charged the current user a certain amount
-     * of money. Charges recorded with track_charge will appear in the
+     * of money. Charges recorded with track_charge() will appear in the
      * Mixpanel revenue report.
      *
      * ### Usage:
@@ -4476,19 +4616,21 @@ Globals should be all caps
     // EXPORTS (for closure compiler)
 
     // Underscore Exports
-    _['toArray']         = _.toArray;
-    _['isObject']        = _.isObject;
-    _['JSONEncode']      = _.JSONEncode;
-    _['JSONDecode']      = _.JSONDecode;
-    _['isBlockedUA']     = _.isBlockedUA;
-    _['isEmptyObject']   = _.isEmptyObject;
-    _['info']            = _.info;
-    _['info']['device']  = _.info.device;
-    _['info']['browser'] = _.info.browser;
+    _['toArray']            = _.toArray;
+    _['isObject']           = _.isObject;
+    _['JSONEncode']         = _.JSONEncode;
+    _['JSONDecode']         = _.JSONDecode;
+    _['isBlockedUA']        = _.isBlockedUA;
+    _['isEmptyObject']      = _.isEmptyObject;
+    _['info']               = _.info;
+    _['info']['device']     = _.info.device;
+    _['info']['browser']    = _.info.browser;
+    _['info']['properties'] = _.info.properties;
 
     // MixpanelLib Exports
     MixpanelLib.prototype['init']                            = MixpanelLib.prototype.init;
     MixpanelLib.prototype['disable']                         = MixpanelLib.prototype.disable;
+    MixpanelLib.prototype['time_event']                      = MixpanelLib.prototype.time_event;
     MixpanelLib.prototype['track']                           = MixpanelLib.prototype.track;
     MixpanelLib.prototype['track_links']                     = MixpanelLib.prototype.track_links;
     MixpanelLib.prototype['track_forms']                     = MixpanelLib.prototype.track_forms;
@@ -4527,130 +4669,170 @@ Globals should be all caps
 
     _.safewrap_class(MixpanelLib, ['identify', '_check_and_handle_notifications', '_show_notification']);
 
-    // Initialization
-    if (_.isUndefined(mixpanel)) {
-        // mixpanel wasn't initialized properly, report error and quit
-        console.critical("'mixpanel' object not initialized. Ensure you are using the latest version of the Mixpanel JS Library along with the snippet we provide.");
-        return;
-    }
-    if (mixpanel['__loaded'] || (mixpanel['config'] && mixpanel['persistence'])) {
-        // lib has already been loaded at least once; we don't want to override the global object this time so bomb early
-        console.error("Mixpanel library has already been downloaded at least once.");
-        return;
-    }
-    if (SNIPPET_VERSION < 1.1) {
-        // mixpanel wasn't initialized properly, report error and quit
-        console.critical("Version mismatch; please ensure you're using the latest version of the Mixpanel code snippet.");
-        return;
-    }
-
-    // Load instances of the Mixpanel Library
     var instances = {};
-    _.each(mixpanel['_i'], function(item) {
-        var name, instance;
-        if (item && _.isArray(item)) {
-            name = item[item.length-1];
-            instance = create_mplib.apply(this, item);
-
-            instances[name] = instance;
-        }
-    });
-
     var extend_mp = function() {
         // add all the sub mixpanel instances
         _.each(instances, function(instance, name) {
-            if (name !== PRIMARY_INSTANCE_NAME) { mixpanel[name] = instance; }
+            if (name !== PRIMARY_INSTANCE_NAME) { mixpanel_master[name] = instance; }
         });
 
         // add private functions as _
-        mixpanel['_'] = _;
+        mixpanel_master['_'] = _;
     };
 
-    // we override the snippets init function to handle the case where a
-    // user initializes the mixpanel library after the script loads & runs
-    mixpanel['init'] = function(token, config, name) {
-        if (name) {
-            // initialize a sub library
-            if (!mixpanel[name]) {
-                mixpanel[name] = instances[name] = create_mplib(token, config, name);
-                mixpanel[name]._loaded();
-            }
-        } else {
-            var instance = mixpanel;
+    var override_mp_init_func = function() {
+        // we override the snippets init function to handle the case where a
+        // user initializes the mixpanel library after the script loads & runs
+        mixpanel_master['init'] = function(token, config, name) {
+            if (name) {
+                // initialize a sub library
+                if (!mixpanel_master[name]) {
+                    mixpanel_master[name] = instances[name] = create_mplib(token, config, name);
+                    mixpanel_master[name]._loaded();
+                }
+                return mixpanel_master[name];
+            } else {
+                var instance = mixpanel_master;
 
-            if (instances[PRIMARY_INSTANCE_NAME]) {
-                // main mixpanel lib already initialized
-                instance = instances[PRIMARY_INSTANCE_NAME];
-            } else if (token) {
-                // intialize the main mixpanel lib
-                instance = create_mplib(token, config, PRIMARY_INSTANCE_NAME);
-                instance._loaded();
-            }
-
-            window[PRIMARY_INSTANCE_NAME] = mixpanel = instance;
-            extend_mp();
-        }
-    };
-
-    mixpanel['init']();
-
-    // Fire loaded events after updating the window's mixpanel object
-    _.each(instances, function(instance) {
-        instance._loaded();
-    });
-
-    // Cross browser DOM Loaded support
-
-    function dom_loaded_handler() {
-        // function flag since we only want to execute this once
-        if (dom_loaded_handler.done) { return; }
-        dom_loaded_handler.done = true;
-
-        DOM_LOADED = true;
-        ENQUEUE_REQUESTS = false;
-
-        _.each(instances, function(inst) {
-            inst._dom_loaded();
-        });
-    }
-
-    if (document.addEventListener) {
-        if (document.readyState == "complete") {
-            // safari 4 can fire the DOMContentLoaded event before loading all
-            // external JS (including this file). you will see some copypasta
-            // on the internet that checks for 'complete' and 'loaded', but
-            // 'loaded' is an IE thing
-            dom_loaded_handler();
-        } else {
-            document.addEventListener("DOMContentLoaded", dom_loaded_handler, false);
-        }
-    } else if (document.attachEvent) {
-        // IE
-        document.attachEvent("onreadystatechange", dom_loaded_handler);
-
-        // check to make sure we arn't in a frame
-        var toplevel = false;
-        try {
-            toplevel = window.frameElement == null;
-        } catch(e) {}
-
-        if (document.documentElement.doScroll && toplevel) {
-            function do_scroll_check() {
-                try {
-                    document.documentElement.doScroll("left");
-                } catch(e) {
-                    setTimeout(do_scroll_check, 1);
-                    return;
+                if (instances[PRIMARY_INSTANCE_NAME]) {
+                    // main mixpanel lib already initialized
+                    instance = instances[PRIMARY_INSTANCE_NAME];
+                } else if (token) {
+                    // intialize the main mixpanel lib
+                    instance = create_mplib(token, config, PRIMARY_INSTANCE_NAME);
+                    instance._loaded();
+                    instances[PRIMARY_INSTANCE_NAME] = instance;
                 }
 
-                dom_loaded_handler();
-            };
+                mixpanel_master = instance;
+                if (init_type === INIT_SNIPPET) {
+                    window[PRIMARY_INSTANCE_NAME] = mixpanel_master;
+                }
+                extend_mp();
+            }
+        };
+    };
 
-            do_scroll_check();
+    var add_dom_loaded_handler = function() {
+        // Cross browser DOM Loaded support
+        function dom_loaded_handler() {
+            // function flag since we only want to execute this once
+            if (dom_loaded_handler.done) { return; }
+            dom_loaded_handler.done = true;
+
+            DOM_LOADED = true;
+            ENQUEUE_REQUESTS = false;
+
+            _.each(instances, function(inst) {
+                inst._dom_loaded();
+            });
+        }
+
+        function do_scroll_check() {
+            try {
+                document.documentElement.doScroll("left");
+            } catch(e) {
+                setTimeout(do_scroll_check, 1);
+                return;
+            }
+
+            dom_loaded_handler();
+        }
+
+        if (document.addEventListener) {
+            if (document.readyState == "complete") {
+                // safari 4 can fire the DOMContentLoaded event before loading all
+                // external JS (including this file). you will see some copypasta
+                // on the internet that checks for 'complete' and 'loaded', but
+                // 'loaded' is an IE thing
+                dom_loaded_handler();
+            } else {
+                document.addEventListener("DOMContentLoaded", dom_loaded_handler, false);
+            }
+        } else if (document.attachEvent) {
+            // IE
+            document.attachEvent("onreadystatechange", dom_loaded_handler);
+
+            // check to make sure we arn't in a frame
+            var toplevel = false;
+            try {
+                toplevel = window.frameElement == null;
+            } catch(e) {}
+
+            if (document.documentElement.doScroll && toplevel) {
+                do_scroll_check();
+            }
+        }
+
+        // fallback handler, always will work
+        _.register_event(window, 'load', dom_loaded_handler, true);
+    };
+
+    var add_dom_event_handlers = function(instance, event_types) {
+        var name = instance.get_config('name');
+
+        instance.mp_counts = instance.mp_counts || {};
+        instance.mp_counts['$__c'] = parseInt(_.cookie.get('mp_' + name + '__c')) || 0;
+
+        var increment_count = function() {
+            instance.mp_counts['$__c'] = (instance.mp_counts['$__c'] || 0) + 1;
+            _.cookie.set('mp_' + name + '__c', instance.mp_counts['$__c'], 1, true);
+        }
+
+        increment_count();
+
+        for (var i = 0; i < event_types.length; i++) {
+            _.register_event(document, event_types[i], function(e) {
+                try {
+                    instance.mp_counts = instance.mp_counts || {};
+                    increment_count();
+                } catch (e) {
+                    console.error(e);
+                };
+            });
         }
     }
 
-    // fallback handler, always will work
-    _.register_event(window, 'load', dom_loaded_handler, true);
+    function init_from_snippet() {
+        init_type = INIT_SNIPPET;
+        mixpanel_master = window[PRIMARY_INSTANCE_NAME];
 
-})(window['mixpanel']);
+        // Initialization
+        if (_.isUndefined(mixpanel_master)) {
+            // mixpanel wasn't initialized properly, report error and quit
+            console.critical("'mixpanel' object not initialized. Ensure you are using the latest version of the Mixpanel JS Library along with the snippet we provide.");
+            return;
+        }
+        if (mixpanel_master['__loaded'] || (mixpanel_master['config'] && mixpanel_master['persistence'])) {
+            // lib has already been loaded at least once; we don't want to override the global object this time so bomb early
+            console.error("Mixpanel library has already been downloaded at least once.");
+            return;
+        }
+        var snippet_version = mixpanel_master['__SV'] || 0;
+        if (snippet_version < 1.1) {
+            // mixpanel wasn't initialized properly, report error and quit
+            console.critical("Version mismatch; please ensure you're using the latest version of the Mixpanel code snippet.");
+            return;
+        }
+
+        // Load instances of the Mixpanel Library
+        _.each(mixpanel_master['_i'], function(item) {
+            if (item && _.isArray(item)) {
+                instances[item[item.length-1]] = create_mplib.apply(this, item);
+            }
+        });
+
+        override_mp_init_func();
+        mixpanel_master['init']();
+
+        // Fire loaded events after updating the window's mixpanel object
+        _.each(instances, function(instance) {
+            instance._loaded();
+        });
+
+        add_dom_loaded_handler();
+    };
+
+    init_from_snippet();
+
+}());
