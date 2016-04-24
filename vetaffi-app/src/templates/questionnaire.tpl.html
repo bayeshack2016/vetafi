@@ -20,4 +20,16 @@
         </div>
     </div>
     <button class="submit-btn" ng-click="onSubmit()">Submit</button>
+
+    <div class="progress-wrapper">
+        <div class="title">Your progress:</div>
+        <uib-progressbar
+                animate="false"
+                value="getProgress()"
+                type="{{getType()}}">
+        </uib-progressbar>
+        <span class="questions-stat">
+            <span>{{questionsFilled()}}</span>/<span>{{questions.length}}</span>
+        </span>
+    </div>
 </div>

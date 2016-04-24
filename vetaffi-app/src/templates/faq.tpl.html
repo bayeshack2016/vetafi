@@ -1,3 +1,19 @@
 <div class="faq-view" ng-controller="faqCtrl">
-    <h1>Frequently Asked Questions</h1>
+    <h3>Commonly Viewed Resources</h3>
+    <div class="section-wrapper" ng-repeat="section in sections">
+        <div class="section-title">{{section.title}}</div>
+        <div class="section-content">
+            <ul>
+                <li ng-repeat="topic in section.subtopics" ng-click="onClickSubtopic(topic)">
+                    <div class="subtopic-icon-wrapper">
+                        <img class="subtopic-icon" ng-class="{show: topic.show}" src="icons/triangle-right.png">
+                    </div>
+                    <span class="topic-header">{{topic.subtitle}}</span>
+                    <div class="topic-content" ng-class="{show: topic.show}">
+                        {{topic.content}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
 </div>

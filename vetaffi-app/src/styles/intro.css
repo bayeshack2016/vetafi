@@ -1,13 +1,15 @@
 .intro-view h1 {
+    margin-bottom: 30px;
     text-align: center;
 }
 
 .intro-view ul {
-
+    margin-left: 80px;
+    font-size: 20px;
 }
 
 .intro-view li {
-
+    margin-bottom: 30px;
 }
 
 .intro-link-wrapper {

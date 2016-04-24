@@ -1,8 +1,8 @@
 var app = angular.module('vetaffiApp');
 
 app.controller('signinCtrl',
-    ['$scope', '$routeParams', '$location',
-    function ($scope, $routeParams, $location) {
+    ['$scope', '$routeParams', '$location', '$mixpanel',
+    function ($scope, $routeParams, $location, $mixpanel) {
         $scope.inputForms = [
             {
                 title:'First Name',
@@ -19,10 +19,6 @@ app.controller('signinCtrl',
                 name: 'email',
                 placeholder:'Enter your email address'
             },
-            {
-                title:'Password',
-                name: 'pwd'
-            }
         ];
 
         $scope.onSubmit = function() {
@@ -33,11 +29,18 @@ app.controller('signinCtrl',
             );
 
             // after network query
+            $mixpanel.track("signin_submitted", {
+                submit: 'submitting'
+            });
+
             setTimeout(function() {
                 // on success
                 progressBar.animate(
                     { width: '100%' },
-                    200, redirectToAction);
+                    200, function() {
+                        $mixpanel.track("signin_submitted", { submit: 'success'});
+                        redirectToAction();
+                    });
 
                 // On fail!
                 // progressBar.addClass('fail');
@@ -45,6 +48,9 @@ app.controller('signinCtrl',
                 //                { width: '0%' },
                 //                { duration: 600 }
                 //              );
+                // $mixpanel.track("signin_submitted", {
+                //                   submit: 'fail'
+                //               });
             }, 600);
         };
 
@@ -62,6 +68,8 @@ app.controller('signinCtrl',
             }
         }
 
+
+        $mixpanel.track("signin_page_landed", {});
     }
 ]);
 

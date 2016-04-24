@@ -42,3 +42,46 @@
 .answer-wrapper .option-text {
     color: #aeb0b5;
 }
+
+.submit-btn {
+    margin-left: 50px;
+    padding: 10px 15px;
+    outline: none;
+    color: white;
+    background-color: #205493;
+    border: none;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    background-color: #36659d;
+}
+
+.progress-wrapper {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 400px;
+    padding: 20px 40px;
+    opacity: 1.0;
+    visibility: visible;
+    border-radius: 10px;
+    border: 2px solid #205493;
+    background-color: white;
+    transition: all linear 0.1s;
+}
+
+.progress-wrapper.disappear {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.progress-wrapper .title {
+    margin-bottom: 10px;
+}
+
+.questions-stat {
+    float: right;
+    margin-top: -5px;
+    margin-right: 5px;
+}
