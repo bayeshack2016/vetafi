@@ -1,23 +1,25 @@
 {
-  "veteran_first_name": {
+  "veteran_name": {
     "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran First Name",
-    "DatumId": "veteran_first_name",
-    "formName": "VBA-21-526EZ-ARE"
-  },
-  "veteran_middle_initial": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Middle Initial",
-    "DatumId": "veteran_middle_initial",
-    "formName": "VBA-21-526EZ-ARE"
-  },
-  "veteran_last_name": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Last Name",
-    "DatumId": "veteran_last_name",
+    "type": "object",
+    "properties": {
+      "veteran_first_name": {
+        "type": "string",
+        "title": "First",
+        "DatumId": "prev_treatment_place"
+      },
+      "veteran_middle_initial": {
+        "type": "string",
+        "title": "Middle Initial",
+        "DatumId": "prev_treatment_start_date"
+      },
+      "veteran_last_name": {
+        "type": "string",
+        "title": "Last",
+        "DatumId": "prev_treatment_end_date"
+      }
+    },
+    "title": "Veteran Name",
     "formName": "VBA-21-526EZ-ARE"
   },
   "veteran_ssn": {
