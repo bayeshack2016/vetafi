@@ -155,6 +155,11 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             for (var key in $scope.schema.properties) {
                 if ($scope.schema.properties.hasOwnProperty(key)) {
                     if ($scope.schema.properties[key].formName === formName) {
+                        if($scope.schema.properties[key]["x-schema-form"].condition) {
+                            if (!$scope.$eval($scope.schema.properties[key]["x-schema-form"].condition)) {
+                                continue;
+                            }
+                        }
                         total += 1;
                     }
                 }
