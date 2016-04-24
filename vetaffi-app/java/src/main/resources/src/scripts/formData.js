@@ -28,7 +28,7 @@
         var suggestions = {};
 
         function addForm(formName) {
-            forms[formName] = false;
+            forms[formName] = true;
         }
 
         function removeForm(formName) {
@@ -50,7 +50,7 @@
         function getForms() {
             var output = [];
             for (var key in forms) {
-                if (forms.hasOwnProperty(key)) {
+                if (forms.hasOwnProperty(key) && forms[key]) {
                     output.push(key);
                 }
             }

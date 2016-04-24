@@ -72,8 +72,9 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
 
         function downloadForms(forms) {
             for (var i = 0; i < forms.length; i++) {
-                formData.getFormData(forms[i], function (response) {
-                    combineFormResponse(response.data);
+                var formName = forms[i];
+                formData.getFormData(formName, function (response) {
+                    combineFormResponse(formName, response.data);
                     $scope.downloadedForms += 1;
                 }, function (response) {
                     console.error(response);
@@ -98,10 +99,17 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             elementStartTime = new Date();
         };
 
-        function combineFormResponse(data) {
+        function combineFormResponse(formName, data) {
             for (var key in data) {
                 if (data.hasOwnProperty(key)) {
+                    if (!$scope.schema.properties[key]) {
+                        $scope.schema.properties[key] = {};
+                        $scope.schema.properties[key].PDFFormLocator = {};
+                    }
+                    $scope.schema.properties[key].PDFFormLocator[formName] = data[key].PDFFormLocator;
+                    var tmp = $scope.schema.properties[key].PDFFormLocator;
                     $scope.schema.properties[key] = data[key];
+                    $scope.schema.properties[key].PDFFormLocator = tmp;
                     if ($scope.schema.properties[key]["x-schema-form"]) {
                         $scope.schema.properties[key]["x-schema-form"]['onChange'] = "onChange(form.key,modelValue)";
                     } else {
@@ -169,27 +177,28 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
         };
 
-        function prepareData(formState) {
+        function prepareData(formName, formState) {
+            console.log($scope.schema.properties);
             var output = [];
             var translation;
             for (var key in $scope.model) {
                 console.log(key);
-                if ($scope.model.hasOwnProperty(key) && $scope.schema.properties[key].PDFFormLocator) {
+                if ($scope.model.hasOwnProperty(key) && $scope.schema.properties[key].PDFFormLocator[formName]) {
                     if ($scope.schema.properties[key].type === 'object') {
-                        translation = $scope.schema.properties[key].PDFFormLocator;
+                        translation = $scope.schema.properties[key].PDFFormLocator[formName];
                         console.log(translation);
                         console.log(formState[key]);
                         for (var key2 in translation) {
                             if (translation.hasOwnProperty(key2)) {
                                 output.push({
-                                    "fieldName": translation[key],
-                                    "fieldValue": formState[key][translation[key]]
+                                    "fieldName": translation[key2],
+                                    "fieldValue": formState[key][key2]
                                 });
                             }
                         }
                     } else if ($scope.schema.properties[key].type === 'string') {
                         output.push({
-                            "fieldName": translation,
+                            "fieldName": $scope.schema.properties[key].PDFFormLocator[formName],
                             "fieldValue": formState[key]
                         });
                     }
@@ -202,7 +211,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         }
 
         $scope.getPdfUrl = function (formName) {
-            var data = prepareData($scope.model);
+            var data = prepareData(formName, $scope.model);
 
             var url = 'http://0.0.0.0:8080/api/create/' + formName;
 
