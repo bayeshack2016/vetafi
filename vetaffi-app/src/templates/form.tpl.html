@@ -1,3 +1,18 @@
 <div ng-controller="FormController">
+    <div class="container">
+        <div ng-repeat="vaForm in vaForms">
+            <div class="row">
+                <div class="col-lg-2">
+                    <span>{{vaForm}}</span>
+                </div>
+                <div class="col-lg-4">
+                    <uib-progressbar animate="false" value="getProgress(vaForm)" type="{{getType(vaForm)}}"></uib-progressbar>
+                </div>
+            </div>
+        </div>
+    </div>
     <form sf-schema="schema" sf-form="form" sf-model="model"></form>
+    <div>
+        {{model}}
+    </div>
 </div>
