@@ -2,6 +2,7 @@
  * Main AngularJS Web Application
  */
 'use strict';
+
 angular.module('formData', []);
 var app = angular.module('vetaffiApp', [
     'ngRoute',
@@ -133,6 +134,38 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
 
             return (filledOut / total) * 100;
+        };
+
+        $scope.getProgressNumerator = function (formName) {
+            var filledOut = 0;
+            for (var key in $scope.schema.properties) {
+                if ($scope.schema.properties.hasOwnProperty(key)) {
+                    if ($scope.model[key]) {
+                        filledOut += 1;
+                    }
+                }
+            }
+
+            return filledOut;
+        };
+
+        $scope.getProgressDenominator = function (formName) {
+            var total = 0;
+
+            for (var key in $scope.schema.properties) {
+                if ($scope.schema.properties.hasOwnProperty(key)) {
+                    if ($scope.schema.properties[key].formName === formName) {
+                        if($scope.schema.properties[key]["x-schema-form"].condition) {
+                            if (!$scope.$eval($scope.schema.properties[key]["x-schema-form"].condition)) {
+                                continue;
+                            }
+                        }
+                        total += 1;
+                    }
+                }
+            }
+
+            return total;
         };
 
         $scope.getType = function (formName) {

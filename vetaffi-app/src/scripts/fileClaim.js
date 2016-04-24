@@ -1,6 +1,7 @@
 var app = angular.module('vetaffiApp');
 
 app.controller('fileClaimCtrl', ['$scope', 'formState', '$location', function($scope, formState, $location) {
+    formState.suggestForm("VBA-21-526EZ-ARE");
     $scope.formNames = formState.getValidForms();
     $scope.formSelections = {};
 
@@ -12,7 +13,7 @@ app.controller('fileClaimCtrl', ['$scope', 'formState', '$location', function($s
         }
 
         $location.path('/form');
-    }
+    };
 
-
+    $scope.suggestions = formState.getSuggestions();
 }]);
