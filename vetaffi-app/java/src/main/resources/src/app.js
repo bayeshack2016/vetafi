@@ -22,8 +22,8 @@ angular.module('analytics.mixpanel')
         $mixpanelProvider.apiKey('a1edeb203acf26ad1d5e9c8ca4f24a07'); // your token is different than your API key
     }]);
 
-app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$http', '$routeParams', '$location',
-    function ($scope, formData, formState, $mixpanel, $http, $routeParams, $location) {
+app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$http', '$routeParams', '$location', '$timeout',
+    function ($scope, formData, formState, $mixpanel, $http, $routeParams, $location, $timeout) {
         $mixpanel.track("Form start",
             {
                 formNames: $scope.vaForms
@@ -45,7 +45,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             "style": "btn-info",
             "title": "OK"
         };
-        $scope.form = [button];
+        $scope.form = [];
         // Holds responses to all form elements.
         $scope.model = {};
 
@@ -69,10 +69,10 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     formNames: $scope.vaForms,
                     timeSpent: (new Date() - formStartTime)
                 });
-            $('.submit-progress-bar').animate({width: '60%'}, 1200, function() {
-                $('.submit-progress-bar').animate({width: '100%'}, 500, function() {
+            $('.submit-progress-bar').animate({width: '60%'}, 1200, function () {
+                $('.submit-progress-bar').animate({width: '100%'}, 500, function () {
                     $('.submit-loading-modal img').addClass('show');
-                    setTimeout(function() {
+                    setTimeout(function () {
                         $location.path('/claim-submitted');
                         $scope.$apply();
                     }, 500);
@@ -81,15 +81,23 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         };
 
         function downloadForms(forms) {
+            var q = $({});
             for (var i = 0; i < forms.length; i++) {
-                var formName = forms[i];
-                formData.getFormData(formName, function (formName, response) {
-                    console.log(formName);
-                    combineFormResponse(formName, response.data);
-                    $scope.downloadedForms += 1;
-                }, function (formName, response) {
-                    console.error(response);
-                });
+                q = q.queue(
+                    function(formName) {
+                        return function (next) {
+                            formData.getFormData(formName, function (formName, response) {
+                                console.log(formName);
+                                combineFormResponse(formName, response.data);
+                                $scope.$broadcast('schemaFormRedraw');
+                                $scope.downloadedForms += 1;
+                                next();
+                            }, function (formName, response) {
+                                console.error(response);
+                            })
+                        }
+                    }(forms[i])
+                );
             }
         }
 
@@ -109,6 +117,8 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             currentKey = key;
             elementStartTime = new Date();
         };
+
+        var added = {};
 
         function combineFormResponse(formName, data) {
             for (var key in data) {
@@ -135,11 +145,32 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     /**
                      * Insert the new form element second to last (before the submit button)
                      */
-                    if ($scope.form.indexOf(key) === -1) {
-                        $scope.form.splice($scope.form.length - 1, 0, key)
+                    var newk = {key: key, formName: data[key][formName], index: data[key].index};
+                    if (!added.hasOwnProperty(key)) {
+                        $scope.form.push(newk);
+                        added[key] = true;
                     }
                 }
             }
+            $scope.form.sort(function (x, y) {
+                if (x.formName < y.formName) return -1;
+                if (x.formName > y.formName) return 1;
+                if (x.index < y.index) return -1;
+                if (x.index > y.index) return 1;
+                return 0;
+            });
+        }
+
+
+        function isPresent(newKey, list) {
+            for (var i; i < list.length; i++) {
+                console.log(list[i], newKey);
+                if (list[i].key === newKey.key) {
+                    console.log("true");
+                    return true;
+                }
+            }
+            return false;
         }
 
         $scope.getProgress = function (formName) {
@@ -190,7 +221,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         };
 
         function findExistingOutputElement(output, fieldName) {
-            for (var i = 0; i<output.length; i++) {
+            for (var i = 0; i < output.length; i++) {
                 if (output[i].fieldName === fieldName) {
                     return output;
                 }
