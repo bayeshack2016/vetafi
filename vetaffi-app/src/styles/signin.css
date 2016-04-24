@@ -1,0 +1,68 @@
+.signin-view h1 {
+    text-align: center;
+}
+
+.signin-view form {
+    margin: 40px auto;
+    width: 400px;
+}
+
+.signin-view .input-form-wrapper {
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.signin-view .input-form-wrapper input {
+    float: right;
+    padding-left: 10px;
+    line-height: 30px;
+    border-radius: 5px;
+    border-style: solid;
+    border: 1px solid #aeb0b5;
+}
+
+.signin-view .input-form-wrapper input::-webkit-input-placeholder {
+    font-size: 10px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: #aeb0b5;
+}
+
+.signin-view .submit-btn {
+    position: relative;
+    float: right;
+    width: 130px;
+    height: 40px;
+    overflow: hidden;
+    border: none;
+    border-radius: 5px;
+    background-color: #02bfe7;
+    color: white;
+    outline: none;
+    cursor: pointer;
+}
+
+.signin-view .submit-btn:hover {
+    background-color: #34cbeb;
+}
+
+.signin-view .submit-btn .progress {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 0px;
+    background-color: #205493;
+}
+
+.signin-view .submit-btn .progress.fail {
+    background-color: #e31c3d;
+}
+
+.signin-view .submit-btn .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 1.5px;
+}

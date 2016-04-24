@@ -1,0 +1,78 @@
+.physical-injury-view h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.buttons-wrapper {
+    text-align: center;
+}
+
+.btn {
+    margin: 15px 30px;
+    padding: 10px 30px;
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn.yes {
+    background-color: #02bfe7;
+}
+
+.btn.yes:hover {
+    background-color: #34cbeb;
+}
+
+.btn.no {
+    background-color: #02bfe7;
+}
+
+.btn.no:hover {
+    background-color: #34cbeb;
+}
+
+.btn.selected {
+    background-color: #4aa564;
+    color: white;
+}
+
+.btn.selected:hover {
+    background-color: #4aa564;
+    color: white;
+}
+
+#injury-during-military {
+    display: none;
+    margin-top: 40px;
+}
+
+#file-claim {
+    display: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#call-number {
+    display: none;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.btn-go {
+    padding: 15px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #fdb81e;
+    color: #212121;
+}
+
+.btn-go:hover {
+    background-color: #fdbf34;
+}
