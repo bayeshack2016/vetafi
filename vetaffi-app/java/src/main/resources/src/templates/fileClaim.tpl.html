@@ -1,32 +1,24 @@
 <div class="file-claim-view" ng-controller="fileClaimCtrl">
+    <h3>Pick forms to include in your file claim</h3>
 
-    <div class="loading-view">
-        <h3>Loading your information...</h3>
-        <img class="spinner" src="icons/loading.png">
-    </div>
-
-    <div class="original-view">
-        <h3>Pick forms to include in your file claim</h3>
-
-        <div class="selection-wrapper" ng-repeat="formName in formNames">
-            <div class="form-option" ng-class="{'form-option-selected': formSelections[formName]}">
-                <input type="checkbox"
-                       ng-model="formSelections[formName]"
-                       id="{{formName}}"
-                       class="file-claim-checkbox"/>
-                <div class="form-description">
-                    {{formName}}
-                    <p>{{descriptions[formName]}}</p>
-                </div>
-            </div>
-
-            <div class="tooltip-thing" ng-if="suggestions[formName]">
-                <p>Veterans like you<br>often fill out this form.</p>
+    <div class="selection-wrapper" ng-repeat="formName in formNames">
+        <div class="form-option" ng-class="{'form-option-selected': formSelections[formName]}">
+            <input type="checkbox"
+                   ng-model="formSelections[formName]"
+                   id="{{formName}}"
+                   class="file-claim-checkbox"/>
+            <div class="form-description">
+                {{formName}}
+                <p>{{descriptions[formName]}}</p>
             </div>
         </div>
 
-        <button class="begin-button" ng-click="onSubmit()">Begin Paperwork</button>
+        <div class="tooltip-thing" ng-if="suggestions[formName]">
+            <p>Veterans like you<br>often fill out this form.</p>
+        </div>
     </div>
+
+    <button class="begin-button" ng-click="onSubmit()">Begin Paperwork</button>
     <div>
         {{formSelections}}
     </div>

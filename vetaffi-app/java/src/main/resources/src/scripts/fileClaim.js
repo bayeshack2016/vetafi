@@ -17,18 +17,5 @@ app.controller('fileClaimCtrl', ['$scope', 'formState', '$location',
 
         $scope.suggestions = formState.getSuggestions();
         $scope.descriptions = formState.getDescriptions();
-
-        // Loading Animation
-        $(function() {
-            var spinner = $('.spinner');
-            spinner.addClass('spin');
-            setTimeout(function() {
-                spinner.addClass('spin-faster');
-                setTimeout(function() {
-                    $('.loading-view').addClass('disappear');
-                    $('.original-view').addClass('appear');
-                }, 1000);
-            }, 1200);
-        });
     }
 ]);

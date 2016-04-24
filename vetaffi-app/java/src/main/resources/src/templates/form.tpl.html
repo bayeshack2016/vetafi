@@ -16,7 +16,7 @@
                 <span class="progress-numbers col-lg-2">
                     {{getProgressNumerator(vaForm)}}/{{getProgressDenominator(vaForm)}}
                 </span>
-                <span class="download-link col-lg-2" ng-if="getProgressNumerator(vaForm) == getProgressDenominator(vaForm)">
+                <span class="download-link col-lg-2">
                     <a download="pdf.pdf" ng-href="{{ url }}" ng-click="getPdfUrl(vaForm)">download</a>
                 </span>
             </div>
