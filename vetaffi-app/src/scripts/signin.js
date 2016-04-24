@@ -19,10 +19,6 @@ app.controller('signinCtrl',
                 name: 'email',
                 placeholder:'Enter your email address'
             },
-            {
-                title:'Password',
-                name: 'pwd'
-            }
         ];
 
         $scope.onSubmit = function() {

@@ -7,42 +7,45 @@
     text-align: center;
 }
 
-.btn {
+.flow-button {
     margin: 15px 30px;
     padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
     color: white;
-}
-
-.btn:hover {
-    color: white;
-}
-
-.btn:focus {
     outline: none;
 }
 
-.btn.yes {
+.flow-button:hover {
+    color: white;
+}
+
+.flow-button:focus {
+    outline: none;
+}
+
+.flow-button.yes {
     background-color: #02bfe7;
 }
 
-.btn.yes:hover {
+.flow-button.yes:hover {
     background-color: #34cbeb;
 }
 
-.btn.no {
+.flow-button.no {
     background-color: #02bfe7;
 }
 
-.btn.no:hover {
+.flow-button.no:hover {
     background-color: #34cbeb;
 }
 
-.btn.selected {
+.flow-button.selected {
     background-color: #4aa564;
     color: white;
 }
 
-.btn.selected:hover {
+.flow-button.selected:hover {
     background-color: #4aa564;
     color: white;
 }
@@ -75,7 +78,7 @@
     text-align: center;
 }
 
-.btn-go {
+.flow-button-go {
     padding: 15px 20px;
     outline: none;
     border: none;
@@ -84,7 +87,7 @@
     color: #212121;
 }
 
-.btn-go:hover {
+.flow-button-go:hover {
     background-color: #fdbf34;
 }
 

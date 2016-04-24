@@ -1,9 +1,9 @@
 var app = angular.module('vetaffiApp');
 
-app.controller('introCtrl', function($scope) {
+app.controller('introCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
   $scope.links = [
     {
-        title:'Health Care FAQ',
+        title:'View Health Resources',
         url:'#faq'
     },
     {
@@ -15,5 +15,7 @@ app.controller('introCtrl', function($scope) {
         url:'#signin?action=profile'
     }
   ];
+
+  $mixpanel.track("intro_page_landed", {});
 });
 

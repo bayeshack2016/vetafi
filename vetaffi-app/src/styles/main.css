@@ -23,11 +23,12 @@ body {
 }
 
 body a {
-  color: #02bfe7;
+  color: #205493;
   text-decoration: none;
 }
 
 body a:hover {
+  color: #02bfe7;
   text-decoration: underline;
 }
 

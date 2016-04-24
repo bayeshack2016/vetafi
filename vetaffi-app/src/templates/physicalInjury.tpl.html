@@ -1,12 +1,12 @@
 <div class="physical-injury-view" ng-controller="physicalInjuryCtrl">
     <h3>Do you have any physical injuries?</h3>
     <div class="buttons-wrapper">
-        <button class="btn yes"
+        <button class="flow-button yes"
                 ng-click="selectInjury(true)"
                 ng-class="{selected: firstSelect && injury}">
             Yes
         </button>
-        <button class="btn no"
+        <button class="flow-button no"
                 ng-click="selectInjury(false)"
                 ng-class="{selected: firstSelect && !injury}">
             No
@@ -17,11 +17,11 @@
     <div id="injury-during-military" ng-class="{show: injury}">
         <h3>Was it during military service?</h3>
         <div class="buttons-wrapper">
-            <button class="btn yes"
+            <button class="flow-button yes"
                     ng-click="selectMilitary(true)"
                     ng-class="{selected: secondSelect && military}">Yes
             </button>
-            <button class="btn no"
+            <button class="flow-button no"
                     ng-click="selectMilitary(false)"
                     ng-class="{selected: secondSelect && !military}">No
             </button>
@@ -30,7 +30,7 @@
 
     <div id="file-claim" ng-class="{show: injury && military}">
         <h4>Awesome, you're eligible to file a health claim!</h4>
-        <button class="btn-go" ng-click="goFile()">Cool, let's file!</button>
+        <button class="flow-button-go" ng-click="goFile()">Cool, let's file!</button>
     </div>
 
     <div id="call-number" ng-class="{show: secondSelect && injury && !military}">
@@ -45,7 +45,7 @@
         <p>
             Let's see what else we can do for you.
         </p>
-        <button class="btn-go" ng-click="goToQuestions()">Next</button>
+        <button class="flow-button-go" ng-click="goToQuestions()">Next</button>
     </div>
 
 </div>
