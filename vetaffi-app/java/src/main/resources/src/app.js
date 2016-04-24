@@ -145,7 +145,10 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     /**
                      * Insert the new form element second to last (before the submit button)
                      */
-                    var newk = {key: key, formName: data[key][formName], index: data[key].index};
+                    var newk = {key: key, formName: data[key][formName], index: data[key].index, style: {
+                        selected: "btn-primary",
+                            unselected: "btn-info"
+                    }};
                     if (!added.hasOwnProperty(key)) {
                         $scope.form.push(newk);
                         added[key] = true;
