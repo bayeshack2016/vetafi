@@ -17,5 +17,5 @@ app.controller('introCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) 
   ];
 
   $mixpanel.track("intro_page_landed", {});
-});
+}]);
 

@@ -1,7 +1,7 @@
 var app = angular.module('vetaffiApp');
 
-app.controller('physicalInjuryCtrl', ['$scope', '$location',
-    function($scope, $location) {
+app.controller('physicalInjuryCtrl', ['$scope', '$location', '$mixpanel',
+    function($scope, $location, $mixpanel) {
 
         $scope.firstSelect = false;
         $scope.secondSelect = false;
@@ -11,17 +11,17 @@ app.controller('physicalInjuryCtrl', ['$scope', '$location',
         $scope.selectInjury = function(answer) {
             $scope.injury = answer;
             $scope.firstSelect = true;
+            $mixpanel.track("physical_injury", {
+                physicalInjury: answer
+            });
         };
 
         $scope.selectMilitary = function(answer) {
             $scope.military = answer;
             $scope.secondSelect = true;
-
-            if ($scope.military) {
-                // let's file a claim!
-            } else {
-                // call this number
-            }
+            $mixpanel.track("military_injury", {
+                militaryInjury: answer
+            });
         };
 
         $scope.goFile = function() {

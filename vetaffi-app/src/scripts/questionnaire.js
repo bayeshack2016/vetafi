@@ -4,7 +4,7 @@ var app = angular.module('vetaffiApp');
     All questions here are from the PHQ-9 (Patient Health Questionnaire)
     These questions serve to measure & screen for severity of depression
 */
-app.controller('questionCtrl', ['$scope', '$location', 'formState', '$mixpanel'
+app.controller('questionCtrl', ['$scope', '$location', 'formState', '$mixpanel',
     function($scope, $location, formState, $mixpanel) {
         var symptomLimits = [5, 10, 15, 20];
         var symptomLevels = ['minimal', 'minor', 'major', 'severe'];
@@ -22,7 +22,9 @@ app.controller('questionCtrl', ['$scope', '$location', 'formState', '$mixpanel'
             console.log('score so far: ' + $scope.scoreSoFar);
 
             $mixpanel.track("Questionnaire element fill", {
-                key: question.answerName,
+                question: question.answerName,
+                currentScore: $scope.scoreSoFar,
+                progress: $scope.getProgress(),
                 timeSpent: (new Date() - surveyBeginTime)
             });
         };
@@ -39,13 +41,15 @@ app.controller('questionCtrl', ['$scope', '$location', 'formState', '$mixpanel'
                 }
             }
 
-            debugger;
+            $mixpanel.track("questionnaire_form", {
+                level: level,
+                score: $scope.scoreSoFar
+            });
             // Major/Severe Depression
             if (i >= 2) {
-                // formState.suggestForm('ptsd');
+                 formState.suggestForm('ptsd');
             }
             $location.path('/file-claim');
-            $scope.$apply();
         };
 
         function calcScore() {
@@ -144,7 +148,7 @@ app.controller('questionCtrl', ['$scope', '$location', 'formState', '$mixpanel'
             if (percent >= 100) {
                 setTimeout(function() {
                     $('.progress-wrapper').fadeOut();
-                }, 800);
+                }, 500);
             }
             return percent;
         };

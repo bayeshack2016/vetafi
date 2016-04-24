@@ -41,7 +41,7 @@ app.controller('faqCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
             subtopics: [
                 {
                     subtitle: 'View my past claims',
-                    name: 'view_past_claims,
+                    name: 'view_past_claims',
                     show: false,
                     content: "beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit"
                 }
@@ -50,5 +50,5 @@ app.controller('faqCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
     ];
 
     $mixpanel.track("faq_page_landed", {});
-]});
+}]);
 
