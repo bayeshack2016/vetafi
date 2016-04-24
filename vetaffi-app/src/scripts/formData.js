@@ -1,6 +1,8 @@
 (function () {
     'use strict';
     var module = angular.module('formData', ['analytics.mixpanel']);
+    var validForms = ['VBA-21-526EZ-ARE'];
+
     module.factory('formData', ['$http', function ($http) {
 
         function getFormData(formName, successCb, errorCb) {
@@ -42,11 +44,16 @@
             $mixpanel.track("Form completed", {"formName": formName})
         }
 
+        function getValidForms() {
+            return validForms.slice(0); // copy array
+        }
+
         return {
             addForm: addForm,
             removeForm: removeForm,
             getForms: getForms,
-            completeForm: completeForm
+            completeForm: completeForm,
+            getValidForms: getValidForms
         }
 
     }]);

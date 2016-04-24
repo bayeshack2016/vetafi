@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Merriweather-Light';
+  src: url('../fonts/Merriweather/Merriweather-Light.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   overflow-x: hidden;
   margin: 0px;
@@ -32,4 +39,5 @@ body a:hover {
   border: 2px solid #aeb0b5;
   border-radius: 10px;
   background-color: white;
+  overflow-x: hidden;
 }
