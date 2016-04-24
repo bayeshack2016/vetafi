@@ -83,11 +83,11 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         function downloadForms(forms) {
             for (var i = 0; i < forms.length; i++) {
                 var formName = forms[i];
-                formData.getFormData(formName, function (response) {
+                formData.getFormData(formName, function (formName, response) {
                     console.log(formName);
                     combineFormResponse(formName, response.data);
                     $scope.downloadedForms += 1;
-                }, function (response) {
+                }, function (formName, response) {
                     console.error(response);
                 });
             }
