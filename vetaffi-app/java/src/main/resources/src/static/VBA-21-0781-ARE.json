@@ -1,399 +1,392 @@
 {
-  "va_file_number": {
-    "PDFFormLocator": "VAFileNumber[0]",
-    "type": "string",
-    "title": "VA File Number",
-    "formName": "VBA-21-0781-ARE"
-  },
-  "veteran_name": {
-    "type": "object",
-    "PDFFormLocator": {
-      "veteran_first_name": "NameofVeteran[0]",
-      "veteran_middle_initial": "NameofVeteran[0]",
-      "veteran_last_name": "NameofVeteran[0]"
-    },
-    "properties": {
-      "veteran_first_name": {
-        "type": "string",
-        "title": "First",
-        "DatumId": "prev_treatment_place",
-        "PDFFormLocator": null
-      },
-      "veteran_middle_initial": {
-        "type": "string",
-        "title": "Middle Initial",
-        "DatumId": "prev_treatment_start_date",
-        "PDFFormLocator": null
-      },
-      "veteran_last_name": {
-        "type": "string",
-        "title": "Last",
-        "DatumId": "prev_treatment_end_date",
-        "PDFFormLocator": null
-      }
-    },
-    "title": "Veteran Name",
-    "formName": "VBA-21-0781-ARE"
-  },
-  "veteran_stress_incident_1_date": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "DATE INCIDENT OCCURRED",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_stress_incident_1_location": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "LOCATION INCIDENT OCCURRED",
-    "PDFFormLocator": null,
-    "type": "string"
-  },
-  "veteran_stress_incident_1_assignment": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "ASSIGNMENT INCIDENT OCCURRED",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Division",
-      "Wing",
-      "Battalion",
-      "Cavalry",
-      "Ship"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
+ "va_file_number": {
+  "PDFFormLocator": "VAFileNumber[0]", 
+  "type": "string", 
+  "title": "VA File Number", 
+  "formName": "VBA-21-0781-ARE", 
+  "index": 0
+ }, 
+ "veteran_name": {
+  "type": "object", 
+  "PDFFormLocator": {
+   "veteran_first_name": "NameofVeteran[0]", 
+   "veteran_middle_initial": "NameofVeteran[0]", 
+   "veteran_last_name": "NameofVeteran[0]"
+  }, 
+  "properties": {
+   "veteran_first_name": {
+    "type": "string", 
+    "title": "First", 
+    "DatumId": "prev_treatment_place", 
+    "PDFFormLocator": null
+   }, 
+   "veteran_middle_initial": {
+    "type": "string", 
+    "title": "Middle Initial", 
+    "DatumId": "prev_treatment_start_date", 
+    "PDFFormLocator": null
+   }, 
+   "veteran_last_name": {
+    "type": "string", 
+    "title": "Last", 
+    "DatumId": "prev_treatment_end_date", 
+    "PDFFormLocator": null
+   }
+  }, 
+  "title": "Veteran Name", 
+  "formName": "VBA-21-0781-ARE", 
+  "index": 1
+ }, 
+ "veteran_stress_incident_1_date": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "DATE INCIDENT OCCURRED", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 2
+ }, 
+ "veteran_stress_incident_1_location": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "LOCATION INCIDENT OCCURRED", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "index": 3
+ }, 
+ "veteran_stress_incident_1_assignment": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "ASSIGNMENT INCIDENT OCCURRED", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Division", 
+   "Wing", 
+   "Battalion", 
+   "Cavalry", 
+   "Ship"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Division", 
+     "name": "Division"
+    }, 
+    {
+     "value": "Wing", 
+     "name": "Wing"
+    }, 
+    {
+     "value": "Battalion", 
+     "name": "Battalion"
+    }, 
+    {
+     "value": "Cavalry", 
+     "name": "Cavalry"
+    }, 
+    {
+     "value": "Ship", 
+     "name": "Ship"
+    }
+   ]
+  }, 
+  "index": 4
+ }, 
+ "veteran_stress_incident_1_unit_assignment_start_date": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "UNIT ASSIGNMENT START", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 5
+ }, 
+ "veteran_stress_incident_1_unit_assignment_end_date": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "UNIT ASSIGNMENT END", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 6
+ }, 
+ "veteran_stress_incident_1_description": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "index": 7
+ }, 
+ "veteran_stress_incident_1_servicepeople": {
+  "items": {
+   "title": "INFORMATION ABOUT SERVICEPERSONS WHO WERE KILLED OR INJURED DURING INCIDENT NO. 1", 
+   "type": "object", 
+   "properties": {
+    "name": {
+     "type": "string", 
+     "title": "Name"
+    }, 
+    "rank": {
+     "type": "string", 
+     "title": "Rank"
+    }, 
+    "date_of_injury_death": {
+     "type": "string", 
+     "title": "Date of Injury Or Death"
+    }, 
+    "outcome": {
+     "type": "string", 
+     "title": "What happened to them?", 
+     "enum": [
+      "KILLED IN ACTION", 
+      "WOUNDED IN ACTION", 
+      "KILLED NON-BATTLE", 
+      "INJURED NON-BATTLE"
+     ], 
+     "x-schema-form": {
+      "type": "radiobuttons", 
       "titleMap": [
-        {
-          "value": "Division",
-          "name": "Division"
-        },
-        {
-          "value": "Wing",
-          "name": "Wing"
-        },
-        {
-          "value": "Battalion",
-          "name": "Battalion"
-        },
-        {
-          "value": "Cavalry",
-          "name": "Cavalry"
-        },
-        {
-          "value": "Ship",
-          "name": "Ship"
-        }
+       {
+        "value": "KILLED IN ACTION", 
+        "name": "KILLED IN ACTION"
+       }, 
+       {
+        "value": "WOUNDED IN ACTION", 
+        "name": "WOUNDED IN ACTION"
+       }, 
+       {
+        "value": "KILLED NON-BATTLE", 
+        "name": "KILLED NON-BATTLE"
+       }, 
+       {
+        "value": "INJURED NON-BATTLE", 
+        "name": "INJURED NON-BATTLE"
+       }
       ]
-    }
-  },
-  "veteran_stress_incident_1_unit_assignment_start_date": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "UNIT ASSIGNMENT START",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_stress_incident_1_unit_assignment_end_date": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "UNIT ASSIGNMENT END",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_stress_incident_1_description": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "DESCRIPTION OF EVENTS",
-    "PDFFormLocator": null,
-    "type": "string",
-    "x-schema-form": {
-      "type": "textarea",
-      "placeholder": "Brief description of what happened that day."
-    }
-  },
-  "veteran_stress_incident_1_description": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT",
-    "PDFFormLocator": null,
-    "type": "string"
-  },
-  "veteran_stress_incident_1_servicepeople": {
-    "items": {
-      "title": "INFORMATION ABOUT SERVICEPERSONS WHO WERE KILLED OR INJURED DURING INCIDENT NO. 1",
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "title": "Name"
-        },
-        "rank": {
-          "type": "string",
-          "title": "Rank"
-        },
-        "date_of_injury_death": {
-          "type": "string",
-          "title": "Date of Injury Or Death"
-        },
-        "outcome": {
-          "type": "string",
-          "title": "What happened to them?",
-          "enum": [
-            "KILLED IN ACTION",
-            "WOUNDED IN ACTION",
-            "KILLED NON-BATTLE",
-            "INJURED NON-BATTLE"
-          ],
-          "x-schema-form": {
-            "type": "radiobuttons",
-            "titleMap": [
-              {
-                "value": "KILLED IN ACTION",
-                "name": "KILLED IN ACTION"
-              },
-              {
-                "value": "WOUNDED IN ACTION",
-                "name": "WOUNDED IN ACTION"
-              },
-              {
-                "value": "KILLED NON-BATTLE",
-                "name": "KILLED NON-BATTLE"
-              },
-              {
-                "value": "INJURED NON-BATTLE",
-                "name": "INJURED NON-BATTLE"
-              }
-            ]
-          }
-        },
-        "assignment": {
-          "title": "Their ASSIGNMENT when INCIDENT OCCURRED",
-          "PDFFormLocator": null,
-          "type": "string",
-          "enum": [
-            "Division",
-            "Wing",
-            "Battalion",
-            "Cavalry",
-            "Ship"
-          ],
-          "x-schema-form": {
-            "type": "radiobuttons",
-            "titleMap": [
-              {
-                "value": "Division",
-                "name": "Division"
-              },
-              {
-                "value": "Wing",
-                "name": "Wing"
-              },
-              {
-                "value": "Battalion",
-                "name": "Battalion"
-              },
-              {
-                "value": "Cavalry",
-                "name": "Cavalry"
-              },
-              {
-                "value": "Ship",
-                "name": "Ship"
-              }
-            ]
-          }
-        }
-      }
-    },
-    "formName": "VBA-21-0781-ARE",
-    "MaxSubElements": 4,
-    "title": "Veteran VA Medical Centers Visited",
-    "PDFFormLocator": null,
-    "DatumId": "veteran_va_treatment",
-    "type": "array"
-  },
-
-
-
-
-
-
-
-
-
-
-  "veteran_stress_incident_2_date": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "DATE INCIDENT OCCURRED",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_stress_incident_2_location": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "LOCATION INCIDENT OCCURRED",
-    "PDFFormLocator": null,
-    "type": "string"
-  },
-  "veteran_stress_incident_2_assignment": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "ASSIGNMENT INCIDENT OCCURRED",
-    "PDFFormLocator": null,
-    "type": "string",
-    "enum": [
-      "Division",
-      "Wing",
-      "Battalion",
-      "Cavalry",
+     }
+    }, 
+    "assignment": {
+     "title": "Their ASSIGNMENT when INCIDENT OCCURRED", 
+     "PDFFormLocator": null, 
+     "type": "string", 
+     "enum": [
+      "Division", 
+      "Wing", 
+      "Battalion", 
+      "Cavalry", 
       "Ship"
-    ],
-    "x-schema-form": {
-      "type": "radiobuttons",
+     ], 
+     "x-schema-form": {
+      "type": "radiobuttons", 
       "titleMap": [
-        {
-          "value": "Division",
-          "name": "Division"
-        },
-        {
-          "value": "Wing",
-          "name": "Wing"
-        },
-        {
-          "value": "Battalion",
-          "name": "Battalion"
-        },
-        {
-          "value": "Cavalry",
-          "name": "Cavalry"
-        },
-        {
-          "value": "Ship",
-          "name": "Ship"
-        }
+       {
+        "value": "Division", 
+        "name": "Division"
+       }, 
+       {
+        "value": "Wing", 
+        "name": "Wing"
+       }, 
+       {
+        "value": "Battalion", 
+        "name": "Battalion"
+       }, 
+       {
+        "value": "Cavalry", 
+        "name": "Cavalry"
+       }, 
+       {
+        "value": "Ship", 
+        "name": "Ship"
+       }
       ]
+     }
     }
-  },
-  "veteran_stress_incident_2_unit_assignment_start_date": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "UNIT ASSIGNMENT START",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_stress_incident_2_unit_assignment_end_date": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "UNIT ASSIGNMENT END",
-    "PDFFormLocator": null,
-    "type": "string", "format": "date"
-  },
-  "veteran_stress_incident_2_description": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "DESCRIPTION OF EVENTS",
-    "PDFFormLocator": null,
-    "type": "string",
-    "x-schema-form": {
-      "type": "textarea",
-      "placeholder": "Brief description of what happened that day."
+   }
+  }, 
+  "formName": "VBA-21-0781-ARE", 
+  "MaxSubElements": 4, 
+  "title": "Veteran VA Medical Centers Visited", 
+  "PDFFormLocator": null, 
+  "DatumId": "veteran_va_treatment", 
+  "type": "array", 
+  "index": 8
+ }, 
+ "veteran_stress_incident_2_date": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "DATE INCIDENT OCCURRED", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 9
+ }, 
+ "veteran_stress_incident_2_location": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "LOCATION INCIDENT OCCURRED", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "index": 10
+ }, 
+ "veteran_stress_incident_2_assignment": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "ASSIGNMENT INCIDENT OCCURRED", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "enum": [
+   "Division", 
+   "Wing", 
+   "Battalion", 
+   "Cavalry", 
+   "Ship"
+  ], 
+  "x-schema-form": {
+   "type": "radiobuttons", 
+   "titleMap": [
+    {
+     "value": "Division", 
+     "name": "Division"
+    }, 
+    {
+     "value": "Wing", 
+     "name": "Wing"
+    }, 
+    {
+     "value": "Battalion", 
+     "name": "Battalion"
+    }, 
+    {
+     "value": "Cavalry", 
+     "name": "Cavalry"
+    }, 
+    {
+     "value": "Ship", 
+     "name": "Ship"
     }
-  },
-  "veteran_stress_incident_2_description": {
-    "formName": "VBA-21-0781-ARE",
-    "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT",
-    "PDFFormLocator": null,
-    "type": "string"
-  },
-  "veteran_stress_incident_2_servicepeople": {
-    "items": {
-      "title": "INFORMATION ABOUT SERVICEPERSONS WHO WERE KILLED OR INJURED DURING INCIDENT NO. 1",
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "title": "Name"
-        },
-        "rank": {
-          "type": "string",
-          "title": "Rank"
-        },
-        "date_of_injury_death": {
-          "type": "string",
-          "title": "Date of Injury Or Death"
-        },
-        "outcome": {
-          "type": "string",
-          "title": "What happened to them?",
-          "enum": [
-            "KILLED IN ACTION",
-            "WOUNDED IN ACTION",
-            "KILLED NON-BATTLE",
-            "INJURED NON-BATTLE"
-          ],
-          "x-schema-form": {
-            "type": "radiobuttons",
-            "titleMap": [
-              {
-                "value": "KILLED IN ACTION",
-                "name": "KILLED IN ACTION"
-              },
-              {
-                "value": "WOUNDED IN ACTION",
-                "name": "WOUNDED IN ACTION"
-              },
-              {
-                "value": "KILLED NON-BATTLE",
-                "name": "KILLED NON-BATTLE"
-              },
-              {
-                "value": "INJURED NON-BATTLE",
-                "name": "INJURED NON-BATTLE"
-              }
-            ]
-          }
-        },
-        "assignment": {
-          "title": "Their ASSIGNMENT when INCIDENT OCCURRED",
-          "PDFFormLocator": null,
-          "type": "string",
-          "enum": [
-            "Division",
-            "Wing",
-            "Battalion",
-            "Cavalry",
-            "Ship"
-          ],
-          "x-schema-form": {
-            "type": "radiobuttons",
-            "titleMap": [
-              {
-                "value": "Division",
-                "name": "Division"
-              },
-              {
-                "value": "Wing",
-                "name": "Wing"
-              },
-              {
-                "value": "Battalion",
-                "name": "Battalion"
-              },
-              {
-                "value": "Cavalry",
-                "name": "Cavalry"
-              },
-              {
-                "value": "Ship",
-                "name": "Ship"
-              }
-            ]
-          }
-        }
-      }
-    },
-    "formName": "VBA-21-0781-ARE",
-    "MaxSubElements": 4,
-    "title": "Veteran VA Medical Centers Visited",
-    "PDFFormLocator": null,
-    "DatumId": "veteran_va_treatment",
-    "type": "array"
-  },
-  "veteran_phone_number": {
-    "PDFFormLocator": null,
-    "type": "string",
-    "title": "Veteran Preferred Phone Number",
-    "DatumId": "veteran_phone_number",
-    "formName": "VBA-21-0781-ARE"
-  }
+   ]
+  }, 
+  "index": 11
+ }, 
+ "veteran_stress_incident_2_unit_assignment_start_date": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "UNIT ASSIGNMENT START", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 12
+ }, 
+ "veteran_stress_incident_2_unit_assignment_end_date": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "UNIT ASSIGNMENT END", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "format": "date", 
+  "index": 13
+ }, 
+ "veteran_stress_incident_2_description": {
+  "formName": "VBA-21-0781-ARE", 
+  "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT", 
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "index": 14
+ }, 
+ "veteran_stress_incident_2_servicepeople": {
+  "items": {
+   "title": "INFORMATION ABOUT SERVICEPERSONS WHO WERE KILLED OR INJURED DURING INCIDENT NO. 1", 
+   "type": "object", 
+   "properties": {
+    "name": {
+     "type": "string", 
+     "title": "Name"
+    }, 
+    "rank": {
+     "type": "string", 
+     "title": "Rank"
+    }, 
+    "date_of_injury_death": {
+     "type": "string", 
+     "title": "Date of Injury Or Death"
+    }, 
+    "outcome": {
+     "type": "string", 
+     "title": "What happened to them?", 
+     "enum": [
+      "KILLED IN ACTION", 
+      "WOUNDED IN ACTION", 
+      "KILLED NON-BATTLE", 
+      "INJURED NON-BATTLE"
+     ], 
+     "x-schema-form": {
+      "type": "radiobuttons", 
+      "titleMap": [
+       {
+        "value": "KILLED IN ACTION", 
+        "name": "KILLED IN ACTION"
+       }, 
+       {
+        "value": "WOUNDED IN ACTION", 
+        "name": "WOUNDED IN ACTION"
+       }, 
+       {
+        "value": "KILLED NON-BATTLE", 
+        "name": "KILLED NON-BATTLE"
+       }, 
+       {
+        "value": "INJURED NON-BATTLE", 
+        "name": "INJURED NON-BATTLE"
+       }
+      ]
+     }
+    }, 
+    "assignment": {
+     "title": "Their ASSIGNMENT when INCIDENT OCCURRED", 
+     "PDFFormLocator": null, 
+     "type": "string", 
+     "enum": [
+      "Division", 
+      "Wing", 
+      "Battalion", 
+      "Cavalry", 
+      "Ship"
+     ], 
+     "x-schema-form": {
+      "type": "radiobuttons", 
+      "titleMap": [
+       {
+        "value": "Division", 
+        "name": "Division"
+       }, 
+       {
+        "value": "Wing", 
+        "name": "Wing"
+       }, 
+       {
+        "value": "Battalion", 
+        "name": "Battalion"
+       }, 
+       {
+        "value": "Cavalry", 
+        "name": "Cavalry"
+       }, 
+       {
+        "value": "Ship", 
+        "name": "Ship"
+       }
+      ]
+     }
+    }
+   }
+  }, 
+  "formName": "VBA-21-0781-ARE", 
+  "MaxSubElements": 4, 
+  "title": "Veteran VA Medical Centers Visited", 
+  "PDFFormLocator": null, 
+  "DatumId": "veteran_va_treatment", 
+  "type": "array", 
+  "index": 15
+ }, 
+ "veteran_phone_number": {
+  "PDFFormLocator": null, 
+  "type": "string", 
+  "title": "Veteran Preferred Phone Number", 
+  "DatumId": "veteran_phone_number", 
+  "formName": "VBA-21-0781-ARE", 
+  "index": 16
+ }
 }
