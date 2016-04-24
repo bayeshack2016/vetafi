@@ -2,10 +2,10 @@
     <div class="floating-progress">
         <div ng-repeat="vaForm in vaForms">
             <div class="row">
-                <div class="col-lg-2">
+                <div class="col-lg-4">
                     <span>{{vaForm}}</span>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-7">
                     <uib-progressbar animate="false" value="getProgress(vaForm)" type="{{getType(vaForm)}}"></uib-progressbar>
                 </div>
             </div>

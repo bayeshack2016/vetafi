@@ -45,11 +45,12 @@ body a:hover {
 .floating-progress {
   position: fixed;
   bottom: 0;
-  width: 760px;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: -30px;
+  width: 797px;
   z-index: 999;
   background-color: #ffffff;
-
+  border-top: solid 1px #525252;
 }
