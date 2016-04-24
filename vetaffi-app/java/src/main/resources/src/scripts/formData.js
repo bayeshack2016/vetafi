@@ -3,15 +3,12 @@
     var module = angular.module('formData', ['analytics.mixpanel']);
     var validForms = ['VBA-21-526EZ-ARE', 'VBA-21-0781-ARE', 'VBA-21-4502-ARE'];
     var formDescriptions = {
-        'VBA-21-526EZ-ARE':
-        "Essential basic form. Must be filled out for almost all claims.",
-        'VBA-21-0781-ARE':
-        "For claims relating to PTSD.",
-        'VBA-21-4502-ARE':
-        "For claims related to automobiles or other conveyances."
+        'VBA-21-526EZ-ARE': "Essential basic form. Must be filled out for almost all claims.",
+        'VBA-21-0781-ARE': "For claims relating to PTSD.",
+        'VBA-21-4502-ARE': "For claims related to automobiles or other conveyances."
     };
 
-    module.factory('formData', ['$http', '$document', function ($http, $document) {
+    module.factory('formData', ['$http', '$sce', function ($http, $sce) {
 
         function getFormData(formName, successCb, errorCb) {
             $http({
@@ -21,12 +18,24 @@
         }
 
         function getRenderedForm(formName, data) {
-            $.post('http://0.0.0.0:8080/create/' + formName, data, function(retData) {
-                var iframe = $document.createElement("iframe");
-                iframe.setAttribute("src", retData.url);
-                iframe.setAttribute("style", "display: none");
-                $document.body.appendChild(iframe);
-            });
+            console.log(JSON.stringify(data));
+            var url = 'http://0.0.0.0:8080/api/create/' + formName;
+
+            var req = {
+                method: 'POST',
+                url: url,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data: data,
+                responseType: 'arraybuffer'
+            };
+            $http(req)
+                .success(function (response) {
+                    var file = new Blob([response], {type: 'application/pdf'});
+                    var fileURL = URL.createObjectURL(file);
+                });
+
         }
 
         return {
@@ -36,9 +45,10 @@
     }
     ]);
 
-    module.factory('formState', ['$mixpanel', function($mixpanel) {
+    module.factory('formState', ['$mixpanel', function ($mixpanel) {
         var forms = {};
         var suggestions = {};
+
         function addForm(formName) {
             forms[formName] = false;
         }
