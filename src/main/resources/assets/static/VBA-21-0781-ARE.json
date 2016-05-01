@@ -1,36 +1,31 @@
 {
  "va_file_number": {
-  "PDFFormLocator": "VAFileNumber[0]", 
+  "PDFFormLocator": [{"id": "VAFileNumber[0]"}],
   "type": "string", 
   "title": "VA File Number", 
   "formName": "VBA-21-0781-ARE", 
   "index": 0
  }, 
  "veteran_name": {
-  "type": "object", 
-  "PDFFormLocator": {
-   "veteran_first_name": "NameofVeteran[0]", 
-   "veteran_middle_initial": "NameofVeteran[0]", 
-   "veteran_last_name": "NameofVeteran[0]"
-  }, 
+  "type": "object",
   "properties": {
    "veteran_first_name": {
     "type": "string", 
     "title": "First", 
     "DatumId": "prev_treatment_place", 
-    "PDFFormLocator": null
+    "PDFFormLocator": [{"id": "NameofVeteran[0]", "order": 0}]
    }, 
    "veteran_middle_initial": {
     "type": "string", 
     "title": "Middle Initial", 
     "DatumId": "prev_treatment_start_date", 
-    "PDFFormLocator": null
+    "PDFFormLocator": [{"id": "NameofVeteran[0]", "order": 1}]
    }, 
    "veteran_last_name": {
     "type": "string", 
     "title": "Last", 
     "DatumId": "prev_treatment_end_date", 
-    "PDFFormLocator": null
+    "PDFFormLocator": [{"id": "NameofVeteran[0]", "order": 2}]
    }
   }, 
   "title": "Veteran Name", 
@@ -40,7 +35,7 @@
  "veteran_stress_incident_1_date": {
   "formName": "VBA-21-0781-ARE", 
   "title": "DATE INCIDENT OCCURRED", 
-  "PDFFormLocator": "DateOfInjury[0]",
+  "PDFFormLocator": [{"id": "DateOfInjury[0]"}],
   "type": "string", 
   "format": "date", 
   "index": 2
@@ -48,14 +43,14 @@
  "veteran_stress_incident_1_location": {
   "formName": "VBA-21-0781-ARE", 
   "title": "LOCATION INCIDENT OCCURRED", 
-  "PDFFormLocator": "Location[0]",
+  "PDFFormLocator": [{"id": "Location[0]"}],
   "type": "string", 
   "index": 3
  }, 
  "veteran_stress_incident_1_assignment": {
   "formName": "VBA-21-0781-ARE", 
   "title": "ASSIGNMENT INCIDENT OCCURRED", 
-  "PDFFormLocator": "UnitAssignmentDuringIncident[0]",
+  "PDFFormLocator": [{"id": "UnitAssignmentDuringIncident[0]"}],
   "type": "string", 
   "enum": [
    "Division", 
@@ -110,7 +105,7 @@
  "veteran_stress_incident_1_description": {
   "formName": "VBA-21-0781-ARE", 
   "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT", 
-  "PDFFormLocator": "Medals[0]",
+  "PDFFormLocator": [{"id": "Medals[0]"}],
   "type": "string", 
   "index": 7
  }, 

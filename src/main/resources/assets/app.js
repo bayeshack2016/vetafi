@@ -84,21 +84,26 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             var q = $({});
             for (var i = 0; i < forms.length; i++) {
                 q = q.queue(
-                    function(formName) {
+                    function (formName) {
                         return function (next) {
-                            formData.getFormData(formName, function (formName, response) {
-                                console.log(formName);
-                                combineFormResponse(formName, response.data);
-                                $scope.$broadcast('schemaFormRedraw');
-                                $scope.downloadedForms += 1;
-                                next();
-                            }, function (formName, response) {
-                                console.error(response);
-                            })
+                            formData.getFormData(formName,
+                                function (formName, response) {
+                                    console.log(formName);
+                                    combineFormResponse(response.data);
+                                    $scope.downloadedForms += 1;
+                                    next();
+                                }, function (formName, response) {
+                                    console.error(response);
+                                })
                         }
                     }(forms[i])
                 );
             }
+            q.queue(function (next) {
+                console.log("done");
+                $scope.$broadcast('schemaFormRedraw');
+                next();
+            });
         }
 
         var currentKey;
@@ -122,17 +127,10 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         var removed = 0;
         var added_true = 0;
 
-        function combineFormResponse(formName, data) {
+        function combineFormResponse(data) {
             for (var key in data) {
                 if (data.hasOwnProperty(key)) {
-                    if (!$scope.schema.properties[key]) {
-                        $scope.schema.properties[key] = {};
-                        $scope.schema.properties[key].PDFFormLocator = {};
-                    }
-                    $scope.schema.properties[key].PDFFormLocator[formName] = data[key].PDFFormLocator;
-                    var tmp = $scope.schema.properties[key].PDFFormLocator;
                     $scope.schema.properties[key] = data[key];
-                    $scope.schema.properties[key].PDFFormLocator = tmp;
 
                     if ($scope.schema.properties[key]["x-schema-form"]) {
                         $scope.schema.properties[key]["x-schema-form"]['onChange'] = "onChange(form.key,modelValue)";
@@ -140,25 +138,23 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                         $scope.schema.properties[key]["x-schema-form"] = {onChange: "onChange(form.key,modelValue)"};
                     }
 
-                    if ($scope.schema.required.indexOf(key) === -1) {
-                        $scope.schema.required.push(key);
-                    }
-
                     /**
                      * Insert the new form element second to last (before the submit button)
                      */
-                    var newk = {key: key, formName: data[key][formName], index: data[key].index, style: {
-                        selected: "btn-primary",
+                    var newk = {
+                        key: key,
+                        index: data[key].index,
+                        style: {
+                            selected: "btn-primary",
                             unselected: "btn-info"
-                    }};
+                        }
+                    };
                     if (!added.hasOwnProperty(key)) {
                         $scope.form.push(newk);
-                        added[key] = true;
+                        added[key] = newk;
                         added_true += 1;
-                        console.log(added_true, removed)
                     } else {
                         removed += 1;
-                        console.log(added_true, removed);
                     }
                 }
             }
@@ -171,18 +167,6 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             });
         }
 
-
-        function isPresent(newKey, list) {
-            for (var i; i < list.length; i++) {
-                console.log(list[i], newKey);
-                if (list[i].key === newKey.key) {
-                    console.log("true");
-                    return true;
-                }
-            }
-            return false;
-        }
-
         $scope.getProgress = function (formName) {
             return ($scope.getProgressNumerator(formName) / $scope.getProgressDenominator(formName)) * 100;
         };
@@ -190,7 +174,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         $scope.getProgressNumerator = function (formName) {
             var filledOut = 0;
             for (var key in $scope.schema.properties) {
-                if ($scope.schema.properties.hasOwnProperty(key)) {
+                if ($scope.schema.properties.hasOwnProperty(key) && $scope.schema.properties[key].formName === formName) {
                     if ($scope.model[key]) {
                         if ($scope.model[key].length === 1 && jQuery.isEmptyObject($scope.model[key][0])) {
                             continue;
@@ -207,15 +191,11 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             var total = 0;
 
             for (var key in $scope.schema.properties) {
-                if ($scope.schema.properties.hasOwnProperty(key)) {
-                    if ($scope.schema.properties[key].formName === formName) {
-                        if ($scope.schema.properties[key]["x-schema-form"].condition) {
-                            if (!$scope.$eval($scope.schema.properties[key]["x-schema-form"].condition)) {
-                                continue;
-                            }
-                        }
-                        total += 1;
+                if ($scope.schema.properties.hasOwnProperty(key) && $scope.schema.properties[key].formName === formName) {
+                    if ($scope.schema.properties[key]["x-schema-form"].condition && !$scope.$eval($scope.schema.properties[key]["x-schema-form"].condition)) {
+                        continue;
                     }
+                    total += 1;
                 }
             }
 
@@ -230,52 +210,35 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
         };
 
-        function findExistingOutputElement(output, fieldName) {
-            for (var i = 0; i < output.length; i++) {
-                if (output[i].fieldName === fieldName) {
-                    return output;
-                }
+        function prepareData(formState, formProperties, output) {
+            if (output === undefined) {
+                output = [];
             }
-            return false;
-        }
-
-        function prepareData(formName, formState) {
-            console.log($scope.schema.properties);
-            var output = [];
-            var translation;
-            for (var key in $scope.model) {
-                console.log(key);
-                if ($scope.model.hasOwnProperty(key) && $scope.schema.properties[key].PDFFormLocator[formName]) {
-                    if ($scope.schema.properties[key].type === 'object') {
-                        translation = $scope.schema.properties[key].PDFFormLocator[formName];
-                        console.log(translation);
-                        console.log(formState[key]);
-                        for (var key2 in translation) {
-                            if (translation.hasOwnProperty(key2) && formState[key][key2]) {
-                                output.push({
-                                    "fieldName": translation[key2],
-                                    "fieldValue": formState[key][key2]
-                                });
-                            }
+            for (var key in formProperties) {
+                if (formProperties.hasOwnProperty(key)) {
+                    if (formProperties[key].type === 'object') {
+                        prepareData(formProperties[key].properties, formState[key], output);
+                    } else if (formProperties[key].type === 'array') {
+                        for (var i; i < formState[key].length; i++) {
+                            prepareData(formProperties[key].items.properties, formState[key][i], output);
                         }
-                    } else if ($scope.schema.properties[key].type === 'string') {
+                    } else {
                         if (formState[key]) {
                             output.push({
-                                "fieldName": $scope.schema.properties[key].PDFFormLocator[formName],
+                                "fieldName": key,
                                 "fieldValue": formState[key]
                             });
                         }
                     }
-
                 }
+
             }
             console.log(output);
             return output;
-
         }
 
         $scope.getPdfUrl = function (formName) {
-            var data = prepareData(formName, $scope.model);
+            var data = prepareData($scope.model, $scope.schema.properties);
 
             var url = 'api/create/' + formName;
 

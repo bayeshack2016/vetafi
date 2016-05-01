@@ -1,3 +1,6 @@
+import pprint
+import sys
+
 from pdfminer.pdfparser import PDFParser
 from pdfminer.pdfdocument import PDFDocument
 from pdfminer.pdftypes import resolve1
@@ -8,14 +11,23 @@ def load_form(filename):
     with open(filename, 'rb') as file:
         parser = PDFParser(file)
         doc = PDFDocument(parser)
-        return [load_fields(resolve1(f)) for f in
-                   resolve1(doc.catalog['AcroForm'])['Fields']]
+        for f in resolve1(doc.catalog['AcroForm'])['Fields']:
+            for field_name in load_fields(resolve1(f)):
+                yield field_name
+
 
 def load_fields(field):
     """Recursively load form fields"""
     form = field.get('Kids', None)
     if form:
-        return [load_fields(resolve1(f)) for f in form]
+        for f in form:
+            for field_name in load_fields(resolve1(f)):
+                yield field_name
     else:
+        yield field.get('T').decode('utf-16')
         # Some field types, like signatures, need extra resolving
-        return (field.get('T').decode('utf-16'), field, resolve1(field.get('V')))
+        #return (field.get('T').decode('utf-16'), resolve1(field.get('V')))
+
+
+if __name__ == '__main__':
+    pprint.pprint(sorted([f for f in load_form(sys.argv[1])]))
