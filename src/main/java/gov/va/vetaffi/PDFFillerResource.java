@@ -27,9 +27,10 @@ public class PDFFillerResource {
     @Consumes("application/json")
     public Response createPDF(@PathParam("form") NonEmptyStringParam form, List<PDFField> fields) {
         String template = FilenameUtils.concat(formDir, form.get().get() + ".pdf");
+        String locators = FilenameUtils.concat(formDir, form.get().get() + ".locators.json");
 
         logger.info("Processing request for template " + template + " with data " + fields);
 
-        return Response.ok(new PDFStreamingOutput(fields, template)).build();
+        return Response.ok(new PDFStreamingOutput(fields, template, locators)).build();
     }
 }

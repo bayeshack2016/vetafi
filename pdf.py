@@ -24,7 +24,8 @@ def load_fields(field):
             for field_name in load_fields(resolve1(f)):
                 yield field_name
     else:
-        yield field.get('T').decode('utf-16')
+        #yield field.get('T').decode('utf-16')
+        yield field
         # Some field types, like signatures, need extra resolving
         #return (field.get('T').decode('utf-16'), resolve1(field.get('V')))
 

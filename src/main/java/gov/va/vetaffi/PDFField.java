@@ -26,8 +26,9 @@ public class PDFField {
     @JsonProperty
     public String fieldValue;
 
-    public PDFField() {
-
+    public PDFField(String fieldName, String fieldValue) {
+        this.fieldName = fieldName;
+        this.fieldValue = fieldValue;
     }
 
     @Override
