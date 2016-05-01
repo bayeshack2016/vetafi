@@ -214,13 +214,19 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             if (output === undefined) {
                 output = [];
             }
+            console.log(arguments);
             for (var key in formProperties) {
+                console.log(key);
                 if (formProperties.hasOwnProperty(key)) {
                     if (formProperties[key].type === 'object') {
-                        prepareData(formProperties[key].properties, formState[key], output);
+                        if (formState.hasOwnProperty(key)) {
+                            console.log("recurse object");
+                            prepareData(formState[key], formProperties[key].properties, output);
+                        }
                     } else if (formProperties[key].type === 'array') {
                         for (var i; i < formState[key].length; i++) {
-                            prepareData(formProperties[key].items.properties, formState[key][i], output);
+                            console.log("recurse array");
+                            prepareData(formState[key][i], formProperties[key].items.properties, output);
                         }
                     } else {
                         if (formState[key]) {
