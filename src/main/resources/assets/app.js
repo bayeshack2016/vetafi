@@ -57,7 +57,6 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         var formStartTime = new Date();
         $scope.onSubmit = function (form) {
             $scope.submitClaim = true;
-            console.log("submit");
             // Check if all fields are filled, unless a 'done' url parameter is set (for debug-only)
             if (!$routeParams.done && !tv4.validate($scope.model, $scope.schema)) {
                 alert("Woops, not done yet");
@@ -88,7 +87,6 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                         return function (next) {
                             formData.getFormData(formName,
                                 function (formName, response) {
-                                    console.log(formName);
                                     combineFormResponse(response.data);
                                     $scope.downloadedForms += 1;
                                     next();
@@ -100,7 +98,6 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                 );
             }
             q.queue(function (next) {
-                console.log("done");
                 $scope.$broadcast('schemaFormRedraw');
                 next();
             });
@@ -210,25 +207,22 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
         };
 
-        function prepareData(formState, formProperties, output) {
+        function prepareData(formState, output) {
             if (output === undefined) {
                 output = [];
             }
             console.log(arguments);
-            for (var key in formProperties) {
-                console.log(key);
-                if (formProperties.hasOwnProperty(key)) {
-                    if (formProperties[key].type === 'object') {
-                        if (formState.hasOwnProperty(key)) {
-                            console.log("recurse object");
-                            prepareData(formState[key], formProperties[key].properties, output);
+            for (var key in formState) {
+                if (formState.hasOwnProperty(key)) {
+                    if (Array.isArray(formState[key])) {
+                        for (var i = 0; i < formState[key].length; i++) {
+
+                            prepareData(formState[key][i], output);
                         }
-                    } else if (formProperties[key].type === 'array') {
-                        for (var i; i < formState[key].length; i++) {
-                            console.log("recurse array");
-                            prepareData(formState[key][i], formProperties[key].items.properties, output);
-                        }
+                    } else if (formState[key] !== null && typeof formState[key] === 'object') {
+                        prepareData(formState[key], output);
                     } else {
+                        console.log("normal");
                         if (formState[key]) {
                             output.push({
                                 "fieldName": key,
@@ -237,14 +231,13 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                         }
                     }
                 }
-
             }
-            console.log(output);
             return output;
         }
 
         $scope.getPdfUrl = function (formName) {
-            var data = prepareData($scope.model, $scope.schema.properties);
+            var data = prepareData($scope.model);
+            console.log(data);
 
             var url = 'api/create/' + formName;
 
