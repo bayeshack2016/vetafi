@@ -37,38 +37,10 @@ public class PDFStreamingOutput implements StreamingOutput {
 
     @Override
     public void write(OutputStream outputStream) throws IOException, WebApplicationException {
-        InputStream inputStream = PDFStreamingOutput.class.getClassLoader().getResourceAsStream(template);
-        PdfReader reader = new PdfReader(inputStream);
-        PdfStamper stamper;
-        List<PDFFieldLocator> pdfFieldLocators = PDFMapping.getSpec(PDFStreamingOutput.class.getClassLoader().getResourceAsStream(locators));
-        try {
-            stamper = new PdfStamper(reader, outputStream);
-        } catch (DocumentException e) {
-            throw Throwables.propagate(e);
-        }
-        AcroFields form = stamper.getAcroFields();
-        try {
-            Map<String, String> stringStringMap = PDFMapping.mapStringValues(fields, pdfFieldLocators);
-            for (Map.Entry<String, String> entry : stringStringMap.entrySet()) {
-                logger.info("Setting " + entry.getKey() + " to " + entry.getValue());
-                form.setField(entry.getKey(), entry.getValue());
-            }
-            Map<String, Boolean> stringBoolMap = PDFMapping.mapCheckboxValues(fields, pdfFieldLocators);
-            for (Map.Entry<String, Boolean> entry : stringBoolMap.entrySet()) {
-                logger.info("Setting " + entry.getKey() + " to " + entry.getValue());
-                if (entry.getValue()) {
-                    form.setField(entry.getKey(), "X");
-                }
-            }
-        } catch (DocumentException e) {
-            throw Throwables.propagate(e);
-        }
-        stamper.setFormFlattening(false);
-        try {
-            stamper.close();
-        } catch (DocumentException e) {
-            throw Throwables.propagate(e);
-        }
-        reader.close();
+        InputStream pdfTemplate =
+                PDFStreamingOutput.class.getClassLoader().getResourceAsStream(template);
+        List<PDFFieldLocator> pdfFieldLocators =
+                PDFMapping.getSpec(PDFStreamingOutput.class.getClassLoader().getResourceAsStream(locators));
+        PDFStamping.stampPdf(pdfTemplate, fields, pdfFieldLocators, outputStream);
     }
 }
