@@ -20,10 +20,11 @@ public class PDFMapping {
     private static final Logger logger = Logger.getLogger(PDFMapping.class);
 
     public static List<PDFFieldLocator> getSpec(InputStream inputStream) throws IOException {
+        logger.info("Reading " + inputStream);
         ObjectMapper mapper = new ObjectMapper();
 
         return mapper.readValue(inputStream,
-                mapper.getTypeFactory().constructCollectionType(List.class, PDFFieldLocatorSpec.class));
+                mapper.getTypeFactory().constructCollectionType(List.class, PDFFieldLocator.class));
     }
 
     private static final Ordering<PDFFieldLocator> CONCAT_ORDERING = new Ordering<PDFFieldLocator>() {
@@ -58,7 +59,8 @@ public class PDFMapping {
         for (PDFFieldLocator locator : checkboxLocators) {
             String pdfFieldId = null;
             for (Map.Entry<String, String> entry : locator.idMap.entrySet()) {
-                if (formValueMap.get(locator.elementId).equals(entry.getKey())) {
+                if (formValueMap.containsKey(locator.elementId) &&
+                        formValueMap.get(locator.elementId).equals(entry.getKey())) {
                     pdfFieldId = entry.getValue();
                 }
             }
@@ -107,13 +109,22 @@ public class PDFMapping {
             ImmutableList<PDFFieldLocator> pdfFieldLocators = grouped.get(key);
             List<PDFFieldLocator> pdfFieldLocatorsSorted = CONCAT_ORDERING.sortedCopy(pdfFieldLocators);
 
+            logger.info(formValueMap);
+
             String valueString = Joiner.on(" ").join(
-                    pdfFieldLocators.stream().map(
-                            pdfFieldLocator -> (formValueMap.get(pdfFieldLocator.elementId))).iterator());
+                    pdfFieldLocatorsSorted.stream().map(
+                            pdfFieldLocator -> {
+                                if (formValueMap.containsKey(pdfFieldLocator.elementId)) {
+                                    return formValueMap.get(pdfFieldLocator.elementId);
+                                } else {
+                                    return "";
+                                }
+                            }).iterator());
 
             if (pdfFieldLocators.size() == 1
                     && Iterables.getOnlyElement(pdfFieldLocators).substringStart != null
-                    && Iterables.getOnlyElement(pdfFieldLocators).substringEnd != null) {
+                    && Iterables.getOnlyElement(pdfFieldLocators).substringEnd != null
+                    && valueString.length() >= Iterables.getOnlyElement(pdfFieldLocators).substringEnd) {
                 valueString = valueString.substring(Iterables.getOnlyElement(pdfFieldLocators).substringStart,
                         Iterables.getOnlyElement(pdfFieldLocators).substringEnd);
             }

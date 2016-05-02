@@ -207,26 +207,28 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             }
         };
 
-        function prepareData(formState, output) {
+        function prepareData(formState, output, suffix) {
             if (output === undefined) {
                 output = [];
+            }
+
+            if (suffix === undefined) {
+                suffix = '';
             }
             console.log(arguments);
             for (var key in formState) {
                 if (formState.hasOwnProperty(key)) {
                     if (Array.isArray(formState[key])) {
                         for (var i = 0; i < formState[key].length; i++) {
-
-                            prepareData(formState[key][i], output);
+                            prepareData(formState[key][i], output, ('_' + i));
                         }
                     } else if (formState[key] !== null && typeof formState[key] === 'object') {
                         prepareData(formState[key], output);
                     } else {
-                        console.log("normal");
                         if (formState[key]) {
                             output.push({
-                                "fieldName": key,
-                                "fieldValue": formState[key]
+                                fieldName: key + suffix,
+                                fieldValue: formState[key]
                             });
                         }
                     }

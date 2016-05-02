@@ -24,11 +24,15 @@ def load_fields(field):
             for field_name in load_fields(resolve1(f)):
                 yield field_name
     else:
-        #yield field.get('T').decode('utf-16')
-        yield field
+        try:
+            yield field.get('T').decode('utf-16')
+        except:
+            yield field.get('T')
+
+        #yield field
         # Some field types, like signatures, need extra resolving
         #return (field.get('T').decode('utf-16'), resolve1(field.get('V')))
 
 
 if __name__ == '__main__':
-    pprint.pprint(sorted([f for f in load_form(sys.argv[1])]))
+    pprint.pprint([f for f in load_form(sys.argv[1])])

@@ -14,7 +14,7 @@
     "title": "First", 
     "DatumId": "prev_treatment_place", 
     "PDFFormLocator": [{"id": "NameofVeteran[0]", "order": 0}]
-   }, 
+   },
    "veteran_middle_initial": {
     "type": "string", 
     "title": "Middle Initial", 
@@ -50,8 +50,7 @@
  "veteran_stress_incident_1_assignment": {
   "formName": "VBA-21-0781-ARE", 
   "title": "ASSIGNMENT INCIDENT OCCURRED", 
-  "PDFFormLocator": [{"id": "UnitAssignmentDuringIncident[0]"}],
-  "type": "string", 
+  "type": "string",
   "enum": [
    "Division", 
    "Wing", 
@@ -104,29 +103,34 @@
  }, 
  "veteran_stress_incident_1_description": {
   "formName": "VBA-21-0781-ARE", 
-  "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT", 
-  "PDFFormLocator": [{"id": "Medals[0]"}],
-  "type": "string", 
+  "title": "DESCRIPTION OF THE INCIDENT",
+  "type": "string",
   "index": 7
- }, 
+ },
+ "veteran_stress_incident_1_metals": {
+  "formName": "VBA-21-0781-ARE",
+  "title": "MEDALS OR CITATIONS YOU RECEIVED BECAUSE OF THE INCIDENT",
+  "type": "string",
+  "index": 7
+ },
  "veteran_stress_incident_1_servicepeople": {
   "items": {
    "title": "INFORMATION ABOUT SERVICEPERSONS WHO WERE KILLED OR INJURED DURING INCIDENT NO. 1", 
    "type": "object", 
    "properties": {
-    "name": {
+    "veteran_stress_incident_1_servicepeople_name": {
      "type": "string", 
      "title": "Name"
     }, 
-    "rank": {
+    "veteran_stress_incident_1_servicepeople_rank": {
      "type": "string", 
      "title": "Rank"
     }, 
-    "date_of_injury_death": {
+    "veteran_stress_incident_1_servicepeople_date_of_injury_death": {
      "type": "string", 
      "title": "Date of Injury Or Death"
     }, 
-    "outcome": {
+    "veteran_stress_incident_1_servicepeople_outcome": {
      "type": "string", 
      "title": "What happened to them?", 
      "enum": [
@@ -157,7 +161,7 @@
       ]
      }
     }, 
-    "assignment": {
+    "veteran_stress_incident_1_servicepeople_assignment": {
      "title": "Their ASSIGNMENT when INCIDENT OCCURRED", 
      "PDFFormLocator": null, 
      "type": "string", 
@@ -276,11 +280,18 @@
  }, 
  "veteran_stress_incident_2_description": {
   "formName": "VBA-21-0781-ARE", 
-  "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT", 
+  "title": "DESCRIPTION OF THE INCIDENT",
   "PDFFormLocator": null, 
   "type": "string", 
   "index": 14
- }, 
+ },
+ "veteran_stress_incident_2_metals": {
+  "formName": "VBA-21-0781-ARE",
+  "title": "MEDAL OR CITATIONS RECEIVED BECAUSE OF INCIDENT",
+  "PDFFormLocator": null,
+  "type": "string",
+  "index": 14
+ },
  "veteran_stress_incident_2_servicepeople": {
   "items": {
    "title": "INFORMATION ABOUT SERVICEPERSONS WHO WERE KILLED OR INJURED DURING INCIDENT NO. 1", 

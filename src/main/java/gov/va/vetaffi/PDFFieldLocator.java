@@ -10,6 +10,8 @@ import java.util.Map;
  */
 public class PDFFieldLocator {
 
+    public PDFFieldLocator() {}
+
     /**
      * PDF field id
      */
@@ -37,7 +39,9 @@ public class PDFFieldLocator {
     /**
      * Define a substring of the value to be placed in the field
      */
+    @JsonProperty
     public Integer substringStart;
+    @JsonProperty
     public Integer substringEnd;
 
     public PDFFieldLocator(String pdfId,

@@ -60,7 +60,8 @@ public class PDFStamping {
                     float y = (float) rectVals[1];
                     img.setAbsolutePosition(x, y);
                     img.scaleAbsolute(linkLocation);
-                    stamper.getOverContent(1).addImage(img);
+                    Integer pageIdx = form.getFieldItem(entry.getKey()).getPage(0).intValue();
+                    stamper.getOverContent(pageIdx).addImage(img);
                     PdfDestination destination = new PdfDestination(PdfDestination.FIT);
                     PdfAnnotation link = PdfAnnotation.createLink(stamper.getWriter(),
                             linkLocation,
@@ -68,8 +69,7 @@ public class PDFStamping {
                             reader.getNumberOfPages(),
                             destination);
                     link.setBorder(new PdfBorderArray(0, 0, 0));
-                    stamper.addAnnotation(link, 1);
-                    stamper.close();
+                    stamper.addAnnotation(link, pageIdx);
                 }
             }
         } catch (DocumentException e) {

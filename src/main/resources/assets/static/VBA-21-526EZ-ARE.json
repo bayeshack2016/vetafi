@@ -1,10 +1,5 @@
 {
  "veteran_name": {
-  "PDFFormLocator": {
-   "veteran_first_name": "namefirst1[0]", 
-   "veteran_middle_initial": "namemiddleinitial[0]", 
-   "veteran_last_name": "namelast1[0]"
-  }, 
   "type": "object", 
   "properties": {
    "veteran_first_name": {
@@ -221,30 +216,24 @@
    ]
   }, 
   "index": 10
- }, 
- "veteran_home_zip_code": {
-  "PDFFormLocator": null, 
-  "type": "string", 
-  "title": "Veteran Home Zip Code", 
-  "DatumId": "veteran_home_zip_code", 
-  "formName": "VBA-21-526EZ-ARE", 
-  "index": 11
- }, 
+ },
  "veteran_home_street": {
-  "PDFFormLocator": null, 
-  "type": "string", 
-  "title": "Veteran Home Street", 
-  "DatumId": "veteran_home_street", 
-  "formName": "VBA-21-526EZ-ARE", 
-  "index": 12
- }, 
+  "PDFFormLocator": null,
+  "type": "string",
+  "title": "Veteran Home Street",
+  "DatumId": "veteran_home_street",
+  "formName": "VBA-21-526EZ-ARE",
+  "index": 11
+ },
+
+
  "veteran_home_city": {
   "PDFFormLocator": null, 
   "type": "string", 
   "title": "Veteran Home City", 
   "DatumId": "veteran_home_city", 
   "formName": "VBA-21-526EZ-ARE", 
-  "index": 13
+  "index": 12
  }, 
  "veteran_home_state": {
   "PDFFormLocator": null, 
@@ -252,8 +241,16 @@
   "title": "Veteran Home State", 
   "DatumId": "veteran_home_state", 
   "formName": "VBA-21-526EZ-ARE", 
+  "index": 13
+ },
+ "veteran_home_zip_code": {
+  "PDFFormLocator": null,
+  "type": "string",
+  "title": "Veteran Home Zip Code",
+  "DatumId": "veteran_home_zip_code",
+  "formName": "VBA-21-526EZ-ARE",
   "index": 14
- }, 
+ },
  "veteran_home_country": {
   "PDFFormLocator": null, 
   "type": "string", 

@@ -1,16 +1,5 @@
 package gov.va.vetaffi;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.base.Function;
-import com.google.common.base.Joiner;
-import com.google.common.base.Predicate;
-import com.google.common.base.Throwables;
-import com.google.common.collect.*;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.pdf.AcroFields;
-import com.itextpdf.text.pdf.PdfReader;
-import com.itextpdf.text.pdf.PdfStamper;
 import org.apache.log4j.Logger;
 
 import javax.ws.rs.WebApplicationException;
@@ -19,7 +8,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.List;
-import java.util.Map;
 
 public class PDFStreamingOutput implements StreamingOutput {
 
@@ -39,8 +27,14 @@ public class PDFStreamingOutput implements StreamingOutput {
     public void write(OutputStream outputStream) throws IOException, WebApplicationException {
         InputStream pdfTemplate =
                 PDFStreamingOutput.class.getClassLoader().getResourceAsStream(template);
-        List<PDFFieldLocator> pdfFieldLocators =
-                PDFMapping.getSpec(PDFStreamingOutput.class.getClassLoader().getResourceAsStream(locators));
+        List<PDFFieldLocator> pdfFieldLocators;
+        try {
+            pdfFieldLocators =
+                    PDFMapping.getSpec(PDFStreamingOutput.class.getClassLoader().getResourceAsStream(locators));
+        } catch (Exception e) {
+            logger.error(e);
+            throw e;
+        }
         PDFStamping.stampPdf(pdfTemplate, fields, pdfFieldLocators, outputStream);
     }
 }

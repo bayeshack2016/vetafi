@@ -28,4 +28,9 @@ public class PDFMappingTest {
         assertEquals("a b c", stringStringMap.get("pdfField"));
         assertEquals("a", stringStringMap.get("pdfSubSField"));
     }
+
+    @Test
+    public void testReadLocators() throws Exception {
+        PDFMapping.getSpec(PDFMapping.class.getClassLoader().getResourceAsStream("forms/VBA-21-0781-ARE.locators.json"));
+    }
 }

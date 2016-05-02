@@ -3,16 +3,14 @@
   "PDFFormLocator": null, 
   "type": "string", 
   "title": "VA File Number", 
-  "DatumId": "veteran_ssn", 
-  "formName": "VBA-21-4502-ARE", 
+  "formName": "VBA-21-4502-ARE",
   "index": 0
  }, 
  "veteran_ssn": {
   "PDFFormLocator": null, 
   "type": "string", 
   "title": "Veteran Social Security Number", 
-  "DatumId": "veteran_ssn", 
-  "formName": "VBA-21-4502-ARE", 
+  "formName": "VBA-21-4502-ARE",
   "index": 1
  }, 
  "veteran_name": {
@@ -40,39 +38,39 @@
   "title": "Veteran Name", 
   "formName": "VBA-21-4502-ARE", 
   "index": 2
- }, 
+ },
+ "veteran_home_street": {
+  "PDFFormLocator": null,
+  "type": "string",
+  "title": "Veteran Home Street",
+  "DatumId": "veteran_home_street",
+  "formName": "VBA-21-4502-ARE",
+  "index": 3
+ },
+ "veteran_home_city": {
+  "PDFFormLocator": null,
+  "type": "string",
+  "title": "Veteran Home City",
+  "DatumId": "veteran_home_city",
+  "formName": "VBA-21-4502-ARE",
+  "index": 4
+ },
+ "veteran_home_state": {
+  "PDFFormLocator": null,
+  "type": "string",
+  "title": "Veteran Home State",
+  "DatumId": "veteran_home_state",
+  "formName": "VBA-21-4502-ARE",
+  "index": 5
+ },
  "veteran_home_zip_code": {
   "PDFFormLocator": null, 
   "type": "string", 
   "title": "Veteran Home Zip Code", 
   "DatumId": "veteran_home_zip_code", 
   "formName": "VBA-21-4502-ARE", 
-  "index": 3
- }, 
- "veteran_home_street": {
-  "PDFFormLocator": null, 
-  "type": "string", 
-  "title": "Veteran Home Street", 
-  "DatumId": "veteran_home_street", 
-  "formName": "VBA-21-4502-ARE", 
-  "index": 4
- }, 
- "veteran_home_city": {
-  "PDFFormLocator": null, 
-  "type": "string", 
-  "title": "Veteran Home City", 
-  "DatumId": "veteran_home_city", 
-  "formName": "VBA-21-4502-ARE", 
-  "index": 5
- }, 
- "veteran_home_state": {
-  "PDFFormLocator": null, 
-  "type": "string", 
-  "title": "Veteran Home State", 
-  "DatumId": "veteran_home_state", 
-  "formName": "VBA-21-4502-ARE", 
   "index": 6
- }, 
+ },
  "veteran_home_country": {
   "PDFFormLocator": null, 
   "type": "string", 
