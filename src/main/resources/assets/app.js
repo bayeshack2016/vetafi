@@ -237,7 +237,10 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             return output;
         }
 
+        $scope.formLoading = {};
+
         $scope.getPdfUrl = function (formName) {
+            $scope.formLoading[formName] = true;
             var data = prepareData($scope.model);
             console.log(data);
 
@@ -257,6 +260,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
                     var blob = new Blob([response], {type: 'application/pdf'});
                     var url = (window.URL || window.webkitURL).createObjectURL(blob);
                     window.open(url);
+                    $scope.formLoading[formName] = false;
                 });
         }
     }]);
