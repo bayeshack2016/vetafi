@@ -48,19 +48,23 @@ body a:hover {
 
 .floating-progress {
   position: fixed;
+  min-width: 50vw;
   right: 20px;
   bottom: 20px;
   padding: 10px 20px;
-  margin-left: -30px;
-  width: 400px;
   z-index: 999;
   background-color: white;
   border: solid 1px #525252;
   border-radius: 10px;
 }
 
-.floating-progress .form-name {
-  margin-left: 20px;
+.floating-progress-text {
+  text-align: end;
+}
+
+.form-name {
+  white-space: nowrap;
+  margin-right: 20px;
 }
 
 .floating-progress .progress {
@@ -126,12 +130,11 @@ body a:hover {
 
 .loader {
   font-size: 3px;
-  margin-left: 150%;
-  margin-top: 25%;
+  margin-left: 50%;
+  margin-top: 3em;
   width: 1em;
   height: 1em;
   border-radius: 50%;
-  position: relative;
   text-indent: -9999em;
   -webkit-animation: load5 1.1s infinite ease;
   animation: load5 1.1s infinite ease;

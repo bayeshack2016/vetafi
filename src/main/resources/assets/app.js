@@ -22,8 +22,9 @@ angular.module('analytics.mixpanel')
         $mixpanelProvider.apiKey('a1edeb203acf26ad1d5e9c8ca4f24a07'); // your token is different than your API key
     }]);
 
-app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$http', '$routeParams', '$location', '$timeout',
-    function ($scope, formData, formState, $mixpanel, $http, $routeParams, $location, $timeout) {
+app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel', '$http',
+    '$routeParams', '$location', '$timeout', '$window',
+    function ($scope, formData, formState, $mixpanel, $http, $routeParams, $location, $timeout, $window) {
         $mixpanel.track("Form start",
             {
                 formNames: $scope.vaForms
@@ -258,8 +259,11 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             $http(req)
                 .success(function (response) {
                     var blob = new Blob([response], {type: 'application/pdf'});
-                    var url = (window.URL || window.webkitURL).createObjectURL(blob);
-                    window.open(url);
+                    var reader = new FileReader();
+                    reader.onloadend = function(e) {
+                        $window.open(reader.result);
+                    };
+                    reader.readAsDataURL(blob);
                     $scope.formLoading[formName] = false;
                 });
         }

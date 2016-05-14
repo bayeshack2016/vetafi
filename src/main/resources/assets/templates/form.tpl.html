@@ -2,23 +2,26 @@
     <div class="floating-progress">
         <div ng-repeat="vaForm in vaForms">
             <div class="form-row row">
-                <span class="form-name">Form {{vaForm}}</span>
-                <div class="col-lg-6">
+
+
+                <div class="col-xs-6">
+                    <span class="form-name">Form {{vaForm}}</span>
                     <uib-progressbar
                             animate="false"
                             value="getProgress(vaForm)"
                             type="{{getType(vaForm)}}">
                     </uib-progressbar>
                 </div>
-                <div class="col-lg-2">
-                    <span class="progress-numbers col-lg-2">
+                <div class="col-xs-3 floating-progress-text">
+                    <span class="progress-numbers">
                         {{getProgressNumerator(vaForm)}}/{{getProgressDenominator(vaForm)}}
                     </span>
-                    </div>
-                <div class="col-lg-2">
-                    <span class="download-link col-lg-2" ng-show="!formLoading[vaForm]">
+                </div>
+                <div class="col-xs-3 floating-progress-text">
+                    <span class="download-link" ng-show="!formLoading[vaForm]">
                         <a download="pdf.pdf" ng-href="{{ url }}" ng-click="getPdfUrl(vaForm)">download</a>
                     </span>
+
                     <div class="loader" ng-show="formLoading[vaForm]"></div>
                 </div>
             </div>
@@ -27,11 +30,12 @@
     <form sf-schema="schema"
           sf-form="form"
           sf-model="model"
-          ></form>
+            ></form>
     <button ng-click="onSubmit(myForm)" class="btn btn-info">Submit</button>
     <div class="submit-overlay" ng-show="submitClaim">
         <div class="submit-loading-modal">
             <h4>Just a minute! We're filing your claims...</h4>
+
             <div class="submit-progress">
                 <div class="submit-progress-bar"></div>
             </div>
