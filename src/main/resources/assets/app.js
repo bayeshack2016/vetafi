@@ -128,7 +128,12 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         function combineFormResponse(data) {
             for (var key in data) {
                 if (data.hasOwnProperty(key)) {
-                    $scope.schema.properties[key] = data[key];
+                    if ($scope.schema.properties.hasOwnProperty(key)) {
+                        $scope.schema.properties[key].formName.push(data[key].formName);
+                    } else {
+                        data[key].formName = [data[key].formName];
+                        $scope.schema.properties[key] = data[key];
+                    }
 
                     if ($scope.schema.properties[key]["x-schema-form"]) {
                         $scope.schema.properties[key]["x-schema-form"]['onChange'] = "onChange(form.key,modelValue)";
@@ -172,7 +177,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
         $scope.getProgressNumerator = function (formName) {
             var filledOut = 0;
             for (var key in $scope.schema.properties) {
-                if ($scope.schema.properties.hasOwnProperty(key) && $scope.schema.properties[key].formName === formName) {
+                if ($scope.schema.properties.hasOwnProperty(key) && $scope.schema.properties[key].formName.indexOf(formName) > -1) {
                     if ($scope.model[key]) {
                         if ($scope.model[key].length === 1 && jQuery.isEmptyObject($scope.model[key][0])) {
                             continue;
@@ -189,7 +194,7 @@ app.controller('FormController', ['$scope', 'formData', 'formState', '$mixpanel'
             var total = 0;
 
             for (var key in $scope.schema.properties) {
-                if ($scope.schema.properties.hasOwnProperty(key) && $scope.schema.properties[key].formName === formName) {
+                if ($scope.schema.properties.hasOwnProperty(key) && $scope.schema.properties[key].formName.indexOf(formName) > -1) {
                     if ($scope.schema.properties[key]["x-schema-form"].condition && !$scope.$eval($scope.schema.properties[key]["x-schema-form"].condition)) {
                         continue;
                     }
