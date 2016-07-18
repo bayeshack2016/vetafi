@@ -1,0 +1,54 @@
+@import "standards.styl"
+
+.vfi-tos-view
+  background-color: colorWarmLightGray
+
+  .vfi-tos-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: megaSpacing auto
+    padding-bottom largeSpacing
+    background-color: colorWhite
+
+  .vfi-title
+    padding-left: largeSpacing
+    background-color: colorPrimaryBlue
+    color: colorWhite
+    font-family: Merriweather
+    font-weight: heading1_weight
+    font-size: heading1_size
+    line-height: (2 * heading1_lineHeight)
+    letter-spacing: heading1_letterSpacing
+
+  .vfi-tos-scroller
+    height: 250px
+    padding: largeSpacing megaSpacing
+    overflow-y: auto
+    border-bottom: 1px solid colorLightGray
+
+    & p
+      font-family: SourceSansPro
+      font-weight: bodyFont_weight
+      font-size: bodyFont_size
+      line-height: bodyFont_lineHeight
+      letter-spacing: bodyFont_letterSpacing
+
+  .vfi-checkbox
+    margin: largeSpacing 0 largeSpacing megaSpacing
+    font-family: SourceSansPro
+    font-weight: bodyFont_weight
+    font-size: bodyFont_size
+    line-height: bodyFont_lineHeight
+    letter-spacing: bodyFont_letterSpacing
+
+    & input
+      margin-right: mediumSpacing
+
+  .vfi-accept-btn
+    margin-left: (megaSpacing + smallSpacing)
+    margin-right: megaSpacing
+    background-color: colorPrimaryBlue
+
+  .vfi-decline-btn
+    background-color: colorLightGray
+    color: colorBlack

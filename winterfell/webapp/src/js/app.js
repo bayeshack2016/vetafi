@@ -15,8 +15,10 @@ app.config(function ($routeProvider) {
         templateUrl: "templates/home.html"
     }).when("/faq", {
         templateUrl: "templates/faq.html"
-    }).when("/profile", {
+    }).when("/profile/*", {
         templateUrl: "templates/profile.html"
+    }).when("/tos", {
+        templateUrl: "templates/tos.html"
     }).when("/start-file-claim", {
         templateUrl: "templates/startFileClaim.html"
     }).otherwise({
