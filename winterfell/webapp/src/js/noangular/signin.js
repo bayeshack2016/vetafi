@@ -76,7 +76,6 @@ $(document).ready(function(){
 
 
   $('.vfi-login-view .vfi-submit-btn').click(function(e) {
-    debugger;
     e.preventDefault();
     var email = $('.vfi-input-email').val();
     var password = $('.vfi-input-password').val();

@@ -31,7 +31,7 @@ var State = {
 
 // Get methods
 userSchema.statics.getByExtId = function(extId, callback) {
-  return this.model('User').findOne({externalId: extId}, callback);
+  return this.model('User').findOne({externalId: extId, state: User.State.ACTIVE}, callback);
 }
 
 var User = mongoose.model('User', userSchema);

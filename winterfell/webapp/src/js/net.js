@@ -3,7 +3,7 @@ var app = angular.module('vetafiApp');
 app.factory('net', ['$http', function($http) {
   var baseUrl = "http://localhost:3999";
 
-  var get = function (url, data) {
+  var httpGet = function (url, data) {
     return $http({
       url: baseUrl + url,
       method: "GET",
@@ -11,7 +11,7 @@ app.factory('net', ['$http', function($http) {
     });
   };
 
-  var post = function(url, data) {
+  var httpPost = function(url, data) {
     return $http({
       url: baseUrl + url,
       method: "POST",
@@ -20,23 +20,35 @@ app.factory('net', ['$http', function($http) {
     });
   };
 
+  var httpDelete = function(url) {
+    return $http.delete(url);
+  };
+
+  var getSessionUserId = function() {
+    return sessionStorageHelper.getPair(vfiConstants.keyUserId);
+  }
+
   return {
     login: function (email, password) {
       var data = {
         email: email,
         password: password
       };
-      return post("/auth/login", data);
+      return httpPost("/auth/login", data);
     },
     logout: function() {
-      return get("/auth/logout");
+      return httpGet("/auth/logout");
     },
     signup: function(userData) {
-      return post("/auth/signup", userData);
+      return httpPost("/auth/signup", userData);
     },
     getUserInfo: function() {
-      var userId = sessionStorageHelper.getPair(vfiConstants.keyUserId);
-      return get("/user/" + userId);
+      var userId = getSessionUserId();
+      return httpGet("/user/" + userId);
+    },
+    deleteUserAccount: function() {
+      var userId = getSessionUserId();
+      return httpDelete("/user/" + userId);
     }
   };
 }]);

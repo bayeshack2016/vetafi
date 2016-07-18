@@ -36,7 +36,7 @@ module.exports = function (app) {
     };
 
     // First find a user with this email
-    User.findOne({email: data.email}, function (err, user) {
+    User.findOne({email: data.email, state: User.State.ACTIVE}, function (err, user) {
       if (lodash.isEmpty(user)) { // User does not exist, create a new one!
         var callbacks = {
           onError: function(errorCode, errorMsg) {

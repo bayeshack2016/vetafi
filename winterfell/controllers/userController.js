@@ -25,17 +25,27 @@ module.exports = function (app) {
 
   // Set a user account to INACTIVE - find by externalId
   app.delete('/user/:extUserId', function (req, res) {
-    console.log('[deleteUser] request received for ' + req.extUserId);
-    var query = { externalId: req.extUserId };
+    console.log('[deleteUser] request received for ' + req.params.extUserId);
+    var query = { externalId: req.params.extUserId, state: User.State.ACTIVE };
     var update = { state: User.State.INACTIVE };
-    User.update({ externalId: req.extUserId }, function(err) {
-      if (err) {
-        console.log('[deleteUser] Not found! ' + req.extUserId);
+    var callback = function (dbErr) {
+      if (dbErr) {
+        console.log('[deleteUser] Not found!');
+        res.sendStatus(400);
       } else {
-        console.log('[deleteUser] Successfully deleted ' + req.extUserId);
+        console.log('[deleteUser] Successfully deleted');
+        // Destroy session
+        req.session.destroy(function (redisErr) {
+            if(redisErr) {
+                console.log(redisErr);
+                res.end('done');
+            } else {
+                res.sendStatus(200);
+            }
+        });
       }
-    });
-    res.sendStatus(200);
+    };
+    User.update(query, update, callback);
   });
 
 };

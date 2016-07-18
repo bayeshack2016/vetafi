@@ -56,7 +56,6 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
     };
 
     $scope.clickLogout = function() {
-      console.log('logging out!');
       net.logout().then(function(resp) {
         sessionStorageHelper.removePair(vfiConstants.keyUserId);
         profileService.userInfo = {};
@@ -67,10 +66,14 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
     };
 
     $scope.clickDeleteAccount = function() {
-      console.log('delete account!!');
-      sessionStorageHelper.removePair(vfiConstants.keyUserId);
-      profileService.userInfo = {};
-      debugger;
+      net.deleteUserAccount().then(function(resp) {
+        debugger;
+        sessionStorageHelper.removePair(vfiConstants.keyUserId);
+        profileService.userInfo = {};
+        if (resp.status == 200) {
+          $location.path('/');
+        }
+      });
     };
   }
 ]);

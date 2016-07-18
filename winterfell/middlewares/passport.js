@@ -30,7 +30,7 @@ module.exports = function (app) {
       console.log('evaluating password ' + password);
         var normalizedEmail = _.isString(email) ? email.toLowerCase() : email;
 
-        User.findOne({ email: normalizedEmail }, function (err, user) {
+        User.findOne({ email: normalizedEmail, state: User.State.ACTIVE }, function (err, user) {
             if (err) {
               return next(err);
             }
