@@ -2,6 +2,8 @@
 Winterfell is the server that handles all control logic in the application. This includes authentication, handling user information, it is basically the bulk of the main logistics.
 
 ### Install Node
+This project is designed to work with node.js v5. 
+
 If you haven't already, we'll need to install node. Run the following at the same directory level as _package.json_.
 ```
 $ npm install
