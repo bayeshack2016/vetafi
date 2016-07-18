@@ -26,8 +26,9 @@ gulp.task('js', function() {
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream());
 });
+
 gulp.task('other-js', function() {
-	return gulp.src('src/js/other/**/*.js')
+	return gulp.src('src/js/noangular/**/*.js')
 		.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
 		.pipe(gulp.dest('build/js'))
 		.pipe(browserSync.stream());

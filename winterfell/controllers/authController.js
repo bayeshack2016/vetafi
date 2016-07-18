@@ -12,7 +12,7 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('signup.html', {root: './webapp/build/templates'});
+      res.sendFile('signup.html', {root: './webapp/build/templates/noangular'});
     }
   });
 
@@ -23,28 +23,37 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('login.html', {root: './webapp/build/templates'});
+      res.sendFile('login.html', {root: './webapp/build/templates/noangular'});
     }
   });
 
   // Endpoint to authenticate sign-ups and begin session
   app.post('/auth/signup', function(req, res) {
     console.log('[authSignUp] request received for ' + JSON.stringify(req.body));
-    var user = {
+    var data = {
       email: req.body.email,
       password: req.body.password
     };
-    var callbacks = {
-      onError: function(errorCode, errorMsg) {
-        console.log('[authSignUp] ' + errorCode + ' Error creating user: ' + errorMsg);
-        res.sendStatus(errorCode, errorMsg);
-      },
-      onSuccess: function(user) {
-        console.log('[authSignUp] Successfully created user ' + user.externalId);
-        res.sendStatus(200);
+
+    // First find a user with this email
+    User.findOne({email: data.email}, function (err, user) {
+      if (lodash.isEmpty(user)) { // User does not exist, create a new one!
+        var callbacks = {
+          onError: function(errorCode, errorMsg) {
+            console.log('[authSignUp] ' + errorCode + ' Error creating user: ' + errorMsg);
+            res.sendStatus(errorCode, errorMsg);
+          },
+          onSuccess: function(user) {
+            console.log('[authSignUp] Successfully created user ' + user.externalId);
+            var extUserId = user.externalId;
+            res.status(200).send({userId: extUserId, redirect: '/'});
+          }
+        };
+        UserService.createNewUser(data, callbacks);
+      } else { // User does exist!
+          res.status(400).send({ error: "email_exists"});
       }
-    };
-    UserService.createNewUser(user, callbacks);
+    });
   });
 
   // Endpoint to authenticate logins and begin session

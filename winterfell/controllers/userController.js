@@ -3,23 +3,9 @@ var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserService = require('./../services/userService');
 
-/*
-  This endpoint servers creates a new user.
-  Return 200 (OK) if user successfully created
-  Return 400 (BAD_REQUEST) if user already exists or request is invalid
-*/
 module.exports = function (app) {
 
-  app.post('/user/:extUserId/modify', function (req, res) {
-    console.log('[modifyUser] request received for ' + JSON.stringify(req.body));
-    res.sendStatus(200);
-  });
-
-  app.delete('/user/:extUserId', function (req, res) {
-    
-    res.sendStatus(200);
-  });
-
+  // Get a user's information based on externalId
   app.get('/user/:extUserId', function (req, res) {
     console.log('[getUser] request received for ' + req.params.extUserId);
     User.getByExtId(req.params.extUserId, function(err, user) {
@@ -29,6 +15,27 @@ module.exports = function (app) {
         res.sendStatus(404);
       }
     });
+  });
+
+  // Modify a user's information - find by externalId
+  app.post('/user/:extUserId/modify', function (req, res) {
+    console.log('[modifyUser] request received for ' + JSON.stringify(req.body));
+    res.sendStatus(200);
+  });
+
+  // Set a user account to INACTIVE - find by externalId
+  app.delete('/user/:extUserId', function (req, res) {
+    console.log('[deleteUser] request received for ' + req.extUserId);
+    var query = { externalId: req.extUserId };
+    var update = { state: User.State.INACTIVE };
+    User.update({ externalId: req.extUserId }, function(err) {
+      if (err) {
+        console.log('[deleteUser] Not found! ' + req.extUserId);
+      } else {
+        console.log('[deleteUser] Successfully deleted ' + req.extUserId);
+      }
+    });
+    res.sendStatus(200);
   });
 
 };
