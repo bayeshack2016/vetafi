@@ -1,0 +1,60 @@
+.vfi-profile-view(ng-controller="profileCtrl")
+
+  .vfi-profile-banner
+    .vfi-profile-banner-overlay
+
+    .vfi-profile-header-wrapper
+      .vfi-profile-pic-wrapper
+        button.vfi-change-picture-overlay(ng-click='clickChangePic()')
+          img(src='../icons/camera.svg')
+          | Change Profile Picture
+        img.vfi-profile-pic(ng-src="{{userInfo.profileSrc || '../icons/default-profile.svg'}}" ng-class="{'vfi-default' : !userInfo.profileSrc}")
+      .vfi-profile-basic-info
+        .vfi-line FirstName Middlename Lastname Suffix
+        .vfi-line Email
+        .vfi-line Address
+        .vfi-line Gender
+        .vfi-line Date of Birth
+        button.vfi-edit-info-btn(ng-click='clickEdit()') Edit Information
+
+  // Profile Body
+  .vfi-profile-container
+
+    .vfi-profile-section.military-info
+      .vfi-section-header Military Information
+      .vfi-section-content
+        .vfi-line Military Id
+        .vfi-line Date of Discharge
+
+      .vfi-section-divider
+
+      .vfi-section-header Military Background
+      .vfi-section-content.military-bg(ng-repeat='military in militaryInfo')
+        img.vfi-insignia.army(ng-src='{{insigniaUrls[military.branch]}}')
+        .vfi-line {{rankStrings[military.rank]}}
+        .vfi-line {{branchStrings[military.branch]}}
+        .vfi-line {{military.yearStart}} - {{military.yearEnd}}
+
+      .vfi-section-divider
+
+      .vfi-section-content.add-military
+        button(ng-click='clickAddMilitary()')
+          img.vfi-add-sign(src='../icons/add.svg')
+          | Add Military Background
+
+
+    .vfi-profile-section.claims
+      .vfi-section-header File Claims History
+      .vfi-section-content(ng-if="claims.length == 0")
+        | You have no pending file claims at the moment.
+        br
+        | Click <a href="#/start-file-claim">here</a> to start a file claim.
+
+    .vfi-profile-section.options
+      .vfi-section-header Options
+      .vfi-section-content
+        | Log out of your account
+        button.vfi-option-btn.logout(ng-click="clickLogout()") Log out
+      .vfi-section-content
+        | Delete your account and remove all your content
+        button.vfi-option-btn.delete-account(ng-click="clickDeleteAccount()") Delete Account

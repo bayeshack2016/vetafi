@@ -2,3 +2,8 @@ demo/*.iml
 demo/.idea
 demo/target/
 demo/dependency-reduced-pom.xml
+
+winterfell/node_modules
+winterfell/webapp/node_modules
+winterfell/webapp/build
+winterfell/dump.rdb

@@ -1,0 +1,69 @@
+@import "standards.styl"
+
+.vfi-header
+  width: 100%
+  height: headerHeightPx
+  background-color: colorPrimaryDarkBlue
+
+.vfi-header-content
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  height: 100%
+  margin: 0 auto
+
+.vfi-header-logo-wrapper
+  float: left
+  height: 100%
+  line-height: headerHeightPx
+
+  & img
+    display: inline-block
+    width: 32px
+    height: 32px
+    margin-right: miniSpacing
+
+  & .vfi-header-logo
+    display: inline-block
+    color: colorWhite
+    font-family: Merriweather
+    font-size: heading1_big_size
+    font-weight: heading1_weight
+    letter-spacing: heading1_big_letterSpacing
+
+    &:hover
+      text-decoration: none
+
+    @media screen and (max-width: minWindowWidthPx)
+      display: none
+
+.vfi-header-links
+  line-height: headerHeightPx
+
+  & a
+    position: relative
+    float: right
+    margin-left: largeSpacing
+    color: colorWhite
+    font-family: Merriweather
+    font-size: heading1_small_size
+
+    &:hover
+      text-decoration: none
+      cursor: pointer
+
+      & .vfi-underline-border
+        opacity: 1.0
+        visibility: visible
+
+    @media screen and (max-width: minWindowWidthPx)
+      font-size: heading1_mini_size
+
+.vfi-underline-border
+  position: absolute
+  bottom: 10px
+  width: 100%
+  height: 2px
+  background-color: white
+  opacity: 0.0
+  visibility: hidden
+  transition: all linear 0.1s

@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    title=Vetafi
+    link(rel='stylesheet', href='css/main.css')
+    script(type='text/javascript', src='libs/libs.js')
+    script(type='text/javascript', src='js/signin.js')
+
+  body.vfi-login-view
+    .vfi-bg
+      .vfi-bg-overlay
+
+      .vfi-view-wrapper
+        .vfi-heading Vetafi
+        .vfi-subheading  Lorem ipsum dolor sit amet consectetur
+        .vfi-login-wrapper
+          h3 Log into your account
+          .vfi-form-wrapper
+            input.vfi-input-email(placeholder="Email", type="text")
+            input.vfi-input-password(placeholder="Password", type="password")
+            button.vfi-submit-btn
+              .vfi-progress
+              .vfi-txt LOG IN
+            .vfi-error-msg
+    .vfi-footer

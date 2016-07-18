@@ -1,0 +1,103 @@
+@import "standards.styl"
+
+.vfi-signup-view
+.vfi-login-view
+
+  .vfi-bg
+    position: relative
+    width: 100%
+    height: 600px
+    background: url('../icons/veteran-dog-bg.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    border-bottom: 4px solid colorPrimaryDarkBlue
+
+  .vfi-bg-overlay
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(255, 255, 255, 0.35)
+
+  .vfi-view-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    width: 90%
+    max-width: 940px
+    height: 100%
+    margin: 0 auto
+
+  .vfi-footer
+    background-color: colorDarkGray
+
+  .vfi-heading
+    position: absolute
+    top: largeSpacing
+    left: 0
+    font-family: Merriweather
+    font-weight: 700
+    font-size: heading1_big_size
+    letter-spacing: heading1_big_letterSpacing
+    color: colorBlack
+
+  .vfi-subheading
+    position: absolute
+    bottom: largeSpacing
+    left: 0
+    font-family: Merriweather
+    font-weight: 400
+    font-size: heading1_size
+    letter-spacing: heading1_letterSpacing
+    color: colorBlack
+
+  .vfi-login-wrapper
+    position: absolute
+    top: megaSpacing
+    right: 0
+    width: (6 * megaSpacing)
+    padding: smallSpacing largeSpacing largeSpacing
+    box-sizing: border-box
+    background-color: colorPrimaryDarkBlue
+    color: colorWhite
+
+  .vfi-form-wrapper
+    margin-top: mediumSpacing
+
+  .vfi-submit-btn
+    position: relative
+    float: right
+    background-color: colorYellowLight
+    color: colorBlack
+    overflow: hidden
+
+    & .vfi-progress
+      position: absolute
+      top: 0px
+      left: 0px
+      width: 0%
+      height: 100%
+      background-color: colorYellow
+
+  .vfi-error-msg
+    float: left
+    color: colorRed
+
+  & input
+    display: block
+    width: 100%
+    margin: 0 auto smallSpacing
+    padding: miniSpacing smallSpacing
+    box-sizing: border-box
+    border: 1px solid transparent
+    border-radius: 4px
+    outline: none
+    font-size: bodyFont_size
+
+    &:active
+    &:focus
+      box-shadow: 0px 0px 1px 1px colorLightBlue
+      border: 1px solid colorLightBlue

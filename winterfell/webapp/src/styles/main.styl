@@ -1,0 +1,54 @@
+@import "standards.styl"
+
+body
+	margin: 0
+	background-color: colorWarmLightGray
+	// default font
+	font-family: SourceSansPro
+	font-weight: bodyFont_weight
+	font-size: bodyFont_size
+	line-height: bodyFont_lineHeight
+	letter-spacing: bodyFont_letterSpacing
+
+	& a
+		color: colorRed
+		text-decoration: none
+
+		&:hover
+			text-decoration: underline
+
+	& button
+		padding: 10px 20px
+		background-color: colorPrimaryDarkBlue
+		border: none
+		outline: none
+		color: white
+		font-size: 14px
+		letter-spacing: 1px
+
+		&:hover
+			filter: brightness(1.2)
+			-webkit-filter: brightness(1.2)
+			-moz-filter: brightness(1.2)
+			-ms-filter: brightness(1.2)
+			cursor: pointer
+
+.vfi-single-view
+	width: maxLayoutWidthPct
+	max-width: maxLayoutWidthPx
+	margin: megaSpacing auto
+	padding: largeSpacing
+	box-sizing: border-box
+	border: 2px solid colorWarmDarkGray
+	background-color: colorWhite
+
+	@media screen and (max-width: tabletWidth)
+		width: maxLayoutWidthPct
+		margin: largeSpacing auto
+		padding: mediumSpacing
+
+	@media screen and (max-width: mobileWidth)
+		width: 100%
+		border: none
+		margin: smallSpacing 0
+		padding: smallSpacing

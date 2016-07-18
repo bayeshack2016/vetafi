@@ -1,0 +1,24 @@
+.vfi-home-view(ng-controller="homeCtrl")
+  .vfi-banner-wrapper
+    .vfi-banner-img
+    .vfi-banner-overlay
+      .vfi-banner-text-wrapper
+        | Get the benefits that you deserve
+        button.vfi-banner-action(ng-if='!isLoggedIn')
+          | Sign Up Now
+    .vfi-banner-border
+
+  .vfi-home-option-wrapper
+    a.vfi-home-option-link(href='#/signup')
+      .vfi-option-title File a Health Claim
+      .vfi-option-text-wrapper
+        p We can help you file a Fully Developed Claim. Completely submit your information once and avoid having to tediously go back and forth with the VA.
+      img.vfi-icon-popup(src='../icons/home-folder.svg')
+  .vfi-home-option-wrapper
+    a.vfi-home-option-link(href='#/faq')
+      .vfi-option-title Learn about your Benefits
+      .vfi-option-text-wrapper
+        p Got questions about what benefits and entitlements you are eligible for? Click here to learn about what you can do.
+      img.vfi-icon-popup(src='../icons/home-health.svg')
+
+  .vfi-home-footer-wrapper

@@ -1,4 +1,4 @@
-# Vetaffi
+# (DEMO version) Vetaffi
 Vetaffi is a powerful, easy-to-use web-app that improves health claim filing experiences for U.S. veterans.
 
 # We can help you...
@@ -19,7 +19,7 @@ We use Mixpanel to track metrics regarding how users use the application to help
  - VBA-21-4502-ARE (Mobility disability)
  - Patient Health Questionnaire (PHQ-9)
 
-# Tech stack 
+# Tech stack
  - AngularJs
  - DropWizard
  - iTextPDF

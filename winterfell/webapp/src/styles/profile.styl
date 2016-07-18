@@ -1,0 +1,173 @@
+@import "standards.styl"
+
+.vfi-profile-view
+  background-color: colorWarmLightGray
+
+//
+// Profile Banner section
+//
+.vfi-profile-banner
+  position: relative
+  width: 100%
+  height: (5 * megaSpacing)
+  margin-bottom: largeSpacing
+  background: url('../icons/america-flag-bg.jpg')
+  background-size: cover
+  border-bottom: 2px solid colorWarmDarkGray
+
+.vfi-profile-banner-overlay
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.5)
+
+.vfi-profile-header-wrapper
+  position: absolute
+  left: 0
+  right: 0
+  bottom: 0
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto
+
+.vfi-profile-pic-wrapper
+  position: relative
+  display: inline-block
+  vertical-align: top
+  margin-right: largeSpacing
+
+  &:hover .vfi-change-picture-overlay
+    height: 3em
+    cursor: pointer
+
+.vfi-change-picture-overlay
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 0
+  padding: 0 8px
+  box-sizing: border-box
+  overflow: hidden
+  background-color: rgba(0, 0, 0, 0.7)
+  color: colorWhite
+  transition: height 0.1s linear
+
+  & img
+    margin-right: smallSpacing
+    vertical-align: middle
+
+.vfi-profile-pic
+  height: (3 * megaSpacing)
+  margin-bottom: -0.5em
+  background-color: colorWarmLightGray
+  border: 2px solid colorWarmDarkGray
+
+  &.vfi-default
+    padding: mediumSpacing
+
+.vfi-profile-basic-info
+  display: inline-block
+  color: colorWhite
+  font-weight: 400
+  font-size: heading1_smaller_size
+  line-height: heading1_smaller_lineHeight
+
+  & .vfi-line:first-child
+    font-size: heading1_small_size
+    line-height: heading1_small_lineHeight
+    margin-bottom: mediumSpacing
+
+.vfi-edit-info-btn
+  position: absolute
+  bottom: 0
+  background-color: colorYellow
+  color: colorBlack
+
+//
+//  Profile Body Section
+//
+.vfi-profile-container
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto
+
+.vfi-profile-section
+  width: 100%
+  margin-bottom: mediumSpacing
+  padding: largeSpacing megaSpacing
+  box-sizing: border-box
+  background-color: colorWhite
+  border: 2px solid colorWarmDarkGray
+
+  & .vfi-section-header
+    font-family: Merriweather
+    font-size: heading1_small_size
+    line-height: heading1_small_lineHeight
+    letter-spacing: heading1_letterSpacing
+
+//
+// Profile Military section
+//
+.vfi-profile-section.military-info
+  & .vfi-section-header
+    margin-bottom: mediumSpacing
+
+  & .vfi-section-content
+    position: relative
+    margin-bottom: largeSpacing
+
+    &.military-bg
+      height: (2 * megaSpacing)
+
+    &.add-military
+      margin-bottom: 0
+
+      & button
+        background-color: colorYellow
+        color: colorBlack
+
+  & .vfi-section-divider
+    margin: mediumSpacing 0
+    border-bottom: 1px solid colorWarmLightGray
+
+  & .vfi-insignia
+    position: absolute
+    top: 0
+    right: 0
+    width: (2 * megaSpacing)
+    height: (2 * megaSpacing)
+
+  & .vfi-add-sign
+    display: inline-block
+    width: largeSpacing
+    height: largeSpacing
+    margin-right: smallSpacing
+    vertical-align: middle
+
+//
+// Profile Military section
+//
+.vfi-profile-section.claims
+  & .vfi-section-header
+    margin-bottom: mediumSpacing
+
+//
+// Profile Options section
+//
+.vfi-profile-section.options
+  & .vfi-section-header
+    margin-bottom: mediumSpacing
+
+  & .vfi-section-content
+    height: megaSpacing
+
+  & .vfi-option-btn
+    float: right
+    &.logout
+      background-color: colorDarkGray
+
+    &.delete-account
+      background-color: colorRed
