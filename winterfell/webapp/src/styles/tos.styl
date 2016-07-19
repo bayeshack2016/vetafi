@@ -1,5 +1,7 @@
 @import "standards.styl"
 
+leftSpacing = megaSpacing
+
 .vfi-tos-view
   background-color: colorWarmLightGray
 
@@ -11,7 +13,7 @@
     background-color: colorWhite
 
   .vfi-title
-    padding-left: largeSpacing
+    padding-left: (leftSpacing / 2)
     background-color: colorPrimaryBlue
     color: colorWhite
     font-family: Merriweather
@@ -34,7 +36,7 @@
       letter-spacing: bodyFont_letterSpacing
 
   .vfi-checkbox
-    margin: largeSpacing 0 largeSpacing megaSpacing
+    margin: largeSpacing 0 largeSpacing leftSpacing
     font-family: SourceSansPro
     font-weight: bodyFont_weight
     font-size: bodyFont_size
@@ -45,10 +47,15 @@
       margin-right: mediumSpacing
 
   .vfi-accept-btn
-    margin-left: (megaSpacing + smallSpacing)
+    margin-left: (leftSpacing + smallSpacing)
     margin-right: megaSpacing
     background-color: colorPrimaryBlue
 
   .vfi-decline-btn
     background-color: colorLightGray
     color: colorBlack
+
+  .vfi-error-msg
+    margin-top: mediumSpacing
+    margin-left: leftSpacing
+    color: colorRed

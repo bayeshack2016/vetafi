@@ -10,5 +10,6 @@
       .vfi-checkbox
         input(type="checkbox", name="accept")
         | I have read this Agreement and agree to the terms and conditions.
-      button.vfi-accept-btn ACCEPT
-      button.vfi-decline-btn BACK
+      button.vfi-accept-btn(ng-click="onAccept()") ACCEPT
+      button.vfi-decline-btn(ng-click="onDecline()") BACK
+      .vfi-error-msg
