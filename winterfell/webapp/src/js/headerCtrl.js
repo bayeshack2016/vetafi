@@ -45,7 +45,7 @@ app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location',
 			return profileService.userInfo;
 		}, function (newVal) {
 			if (_.isEmpty(newVal)) {
-				$scope.isSignedIn = true;
+				$scope.isSignedIn = false;
 			} else {
 				$scope.isSignedIn = true;
 			}
