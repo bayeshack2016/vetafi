@@ -4,7 +4,8 @@
 'use strict';
 
 var app = angular.module('vetafiApp', [
-    'ngRoute'
+    'ngRoute',
+    'angular-click-outside'
 ]);
 
 /**
@@ -20,8 +21,7 @@ app.config(function ($routeProvider) {
     // Profile Pages
     .when("/profile", {
         templateUrl: "templates/profile.html"
-    })
-    .when("/profile/:subPage", {
+    }).when("/profile/:subPage", {
         templateUrl: "templates/profile.html"
     })
 

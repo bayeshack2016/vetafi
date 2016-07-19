@@ -46,10 +46,6 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
       $location.path('/profile/settings');
     };
 
-
-    //
-    // Old Stuff
-    //
     $scope.clickEdit = function() {
       debugger;
       modalService.activateModal();
@@ -65,10 +61,19 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
       modalService.activateModal();
     };
 
+    $scope.clickChangeEmail = function() {
+      debugger;
+      modalService.activateModal();
+    }
+
+    $scope.clickChangePassword = function() {
+      debugger;
+      modalService.activateModal();
+    }
+
     $scope.clickLogout = function() {
       net.logout().then(function(resp) {
-        sessionStorageHelper.removePair(vfiConstants.keyUserId);
-        profileService.userInfo = {};
+        profileService.clearUserInfo();
         if (resp.status == 200) {
           $location.path('/');
         }
@@ -77,9 +82,7 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
 
     $scope.clickDeleteAccount = function() {
       net.deleteUserAccount().then(function(resp) {
-        debugger;
-        sessionStorageHelper.removePair(vfiConstants.keyUserId);
-        profileService.userInfo = {};
+        profileService.clearUserInfo();
         if (resp.status == 200) {
           $location.path('/');
         }

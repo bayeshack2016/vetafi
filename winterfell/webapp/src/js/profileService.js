@@ -2,6 +2,10 @@
 var app = angular.module('vetafiApp');
 app.factory('profileService', function() {
   return {
-    userInfo: {}
+    userInfo: {},
+    clearUserInfo: function() {
+      sessionStorageHelper.removePair(vfiConstants.keyUserId);
+      userInfo = {};
+    }
   };
 });
