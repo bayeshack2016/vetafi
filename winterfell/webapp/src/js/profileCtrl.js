@@ -1,6 +1,8 @@
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', 'modalService',
-  function($scope, $location, profileService, net, modalService) {
+app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', 'modalService', 'strings',
+  function($scope, $location, profileService, net, modalService, strings) {
+    $scope.ranks = strings.ranks;
+    $scope.branches = strings.branches;
     $scope.insigniaUrls = {
       airforce: '../icons/us_insignia_airforce.svg',
       army: '../icons/us_insignia_army.svg',
@@ -9,20 +11,12 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
       navy: '../icons/us_insignia_navy.svg'
     };
 
-    $scope.branchStrings = {
-      airforce: 'United States Department of the Air Force',
-      army: 'United States Department of the Army',
-      coastguard: 'United States Coast Guard',
-      marine: 'United States Marine Corps',
-      navy: 'United States Department of the Navy'
-    }
-
-    $scope.rankStrings = {
-      captain: 'Captain',
-      lieutenant: 'Lieutenant Commander',
-      vice_admiral: 'Vice Admiral'
+    var tabValues = {
+      military: 'military',
+      fileClaims: 'file_claims',
+      settings: 'settings'
     };
-
+    $scope.currentTab = tabValues.military;
     $scope.userInfo = {};
     $scope.militaryInfo = [
       {
@@ -40,6 +34,22 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
     ];
     $scope.claims = [];
 
+    $scope.clickMilitaryTab = function() {
+      $location.path('/profile/military');
+    };
+
+    $scope.clickFileClaimsTab = function() {
+      $location.path('/profile/file_claims');
+    };
+
+    $scope.clickSettingsTab = function() {
+      $location.path('/profile/settings');
+    };
+
+
+    //
+    // Old Stuff
+    //
     $scope.clickEdit = function() {
       debugger;
       modalService.activateModal();
@@ -75,5 +85,20 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
         }
       });
     };
+
+    $scope.$watch(function() {
+      return $location.path();
+    }, function(newVal, oldVal) {
+      if (newVal == '/profile/' + tabValues.military) {
+        $scope.currentTab = tabValues.military;
+      } else if (newVal == '/profile/' + tabValues.fileClaims) {
+        $scope.currentTab = tabValues.fileClaims;
+      } else if (newVal == '/profile/' + tabValues.settings) {
+        $scope.currentTab = tabValues.settings;
+      } else {
+        $scope.currentTab = tabValues.military;
+      }
+    });
+
   }
 ]);

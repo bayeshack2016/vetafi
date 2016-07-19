@@ -1,5 +1,8 @@
 @import "standards.styl"
 
+colorBorder = colorPrimaryDarkBlue
+borderType = 2px solid colorBorder
+
 .vfi-profile-view
   background-color: colorWarmLightGray
 
@@ -94,15 +97,42 @@
   max-width: maxLayoutWidthPx
   margin: 0 auto
 
+.vfi-tab-row
+  width: 720px
+
+.vfi-profile-tab
+  width: 33.333%
+  background-color: colorBorder
+  color: colorWhite
+  border-radius: 16px 16px 0px 0px
+
+  &.vfi-active
+    background-color: colorWhite
+    color: colorPrimaryDarkBlue
+    border-top: borderType
+    border-left: borderType
+    border-right: borderType
+    cursor: initial
+
+    &:hover
+      filter: brightness(1.0)
+      -webkit-filter: brightness(1.0)
+      -moz-filter: brightness(1.0)
+      -ms-filter: brightness(1.0)
+
+
 .vfi-profile-section
   width: 100%
   margin-bottom: mediumSpacing
   padding: largeSpacing megaSpacing
   box-sizing: border-box
   background-color: colorWhite
-  border: 2px solid colorWarmDarkGray
+  border-left: borderType
+  border-bottom: borderType
+  border-right: borderType
 
   & .vfi-section-header
+    margin-bottom: mediumSpacing
     font-family: Merriweather
     font-size: heading1_small_size
     line-height: heading1_small_lineHeight
@@ -111,9 +141,7 @@
 //
 // Profile Military section
 //
-.vfi-profile-section.military-info
-  & .vfi-section-header
-    margin-bottom: mediumSpacing
+.vfi-profile-section.military
 
   & .vfi-section-content
     position: relative
@@ -150,21 +178,17 @@
 //
 // Profile Military section
 //
-.vfi-profile-section.claims
-  & .vfi-section-header
-    margin-bottom: mediumSpacing
+.vfi-profile-section.file-claims
 
 //
 // Profile Options section
 //
-.vfi-profile-section.options
-  & .vfi-section-header
-    margin-bottom: mediumSpacing
+.vfi-profile-section.settings
 
   & .vfi-section-content
     height: megaSpacing
 
-  & .vfi-option-btn
+  & .vfi-settings-btn
     float: right
     &.logout
       background-color: colorDarkGray
