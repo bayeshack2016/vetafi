@@ -10,7 +10,7 @@ Vetafi is a powerful, easy-to-use web-app that improves health claim filing expe
 - Automatically generate VA forms with your information already filled out!
 
 # Demo
-For our hackathon demo, please visit: http://vetaffi.herokuapp.com/<br>
+For our hackathon demo, please visit: http://vetafi.herokuapp.com/<br>
 Our production site is coming soon! :smile:
 
 # Brought to you by:
