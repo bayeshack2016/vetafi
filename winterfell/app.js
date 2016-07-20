@@ -2,6 +2,7 @@ var express = require('express');
 var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
+var bodyParser = require('body-parser');
 
 var environment = process.env.NODE_ENV || 'local';
 var app = express();
