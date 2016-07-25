@@ -9,12 +9,12 @@ html(lang="en")
 		script(type='text/javascript', src='js/main.js')
 
 	body(ng-app="vetafiApp").vfi-body-style
-		.vfi-header
-			.vfi-header-content(ng-controller="headerCtrl")
+		div.vfi-header
+			div.vfi-header-content(ng-controller="headerCtrl")
 				a.vfi-header-logo-wrapper(href="/")
 					img.vfi-header-logo-img(src='../icons/logo.png')
-					.vfi-header-logo Vetafi
-				.vfi-header-links
+					div.vfi-header-logo Vetafi
+				div.vfi-header-links
 
 					// If not signed in
 					a(href='/signup' ng-if='!isSignedIn')
@@ -22,14 +22,14 @@ html(lang="en")
 						.vfi-underline-border
 					a(href='/login' ng-if='!isSignedIn')
 						| Log In
-						.vfi-underline-border
+						div.vfi-underline-border
 
 					// If signed in
-					.vfi-menu-wrapper(ng-if="isSignedIn")
+					div.vfi-menu-wrapper(ng-if="isSignedIn")
 						button#vfi-menu-btn(ng-click="onToggleMenu()")
-							.vfi-menu-icon
+							div.vfi-menu-icon
 						ul#vfi-menu-list(ng-class="{'vfi-show':menuToggled}" click-outside="closeThisMenu()" outside-if-not="vfi-menu-btn")
 							li(ng-click="onClickProfileOption()") My Profile
 							li(ng-click="onClickLogoutOption()") Log out
 
-		.vfi-main-view-wrapper(ng-view)
+		div.vfi-main-view-wrapper(ng-view)

@@ -31,5 +31,8 @@
     "@iamadamjowett/angular-click-outside": "^2.8.3",
     "run-sequence": "^1.2.2",
     "yargs": "^4.7.1"
+  },
+  "dependencies": {
+    "ng-dialog": "^0.6.2"
   }
 }

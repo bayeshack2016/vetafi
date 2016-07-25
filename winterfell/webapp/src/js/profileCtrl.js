@@ -1,6 +1,6 @@
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', 'modalService', 'strings',
-  function($scope, $location, profileService, net, modalService, strings) {
+app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', 'strings', 'ngDialog',
+  function($scope, $location, profileService, net, strings, ngDialog) {
     $scope.ranks = strings.ranks;
     $scope.branches = strings.branches;
     $scope.insigniaUrls = {
@@ -48,27 +48,22 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
 
     $scope.clickEdit = function() {
       debugger;
-      modalService.activateModal();
     };
 
     $scope.clickChangePic = function() {
       debugger;
-      modalService.activateModal();
     };
 
     $scope.clickAddMilitary = function() {
       debugger;
-      modalService.activateModal();
     };
 
     $scope.clickChangeEmail = function() {
       debugger;
-      modalService.activateModal();
     }
 
     $scope.clickChangePassword = function() {
-      debugger;
-      modalService.activateModal();
+      ngDialog.open({ template: '../templates/modals/changePassword.html', className: 'ngdialog-theme-default' });
     }
 
     $scope.clickLogout = function() {

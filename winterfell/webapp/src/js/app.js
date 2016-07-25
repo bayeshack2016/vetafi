@@ -5,7 +5,8 @@
 
 var app = angular.module('vetafiApp', [
     'ngRoute',
-    'angular-click-outside'
+    'angular-click-outside',
+    'ngDialog'
 ]);
 
 /**

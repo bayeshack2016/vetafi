@@ -35,7 +35,7 @@ gulp.task('other-js', function() {
 });
 
 gulp.task('stylus', function() {
-  return gulp.src('src/styles/*.styl')
+  return gulp.src('src/styles/**/*')
     .pipe(stylus({
         'include css': true
     }))
@@ -57,7 +57,8 @@ gulp.task('libs', function() {
       "jquery-2.2.3.min.js",
       "lodash-v411-1.js",
       "angular.min.js",
-      "angular-route.min.js"
+      "angular-route.min.js",
+			"**/*.js"
     ]))
     .pipe(concat('libs.js'))
     .pipe(gulp.dest('build/libs'));
@@ -84,7 +85,7 @@ gulp.task('initBrowserSync', function() {
 
 gulp.task('watch', function () {
   gulp.watch('src/js/**/*.js', ['js', 'other-js']);
-  gulp.watch('src/styles/*.styl', ['stylus']);
+  gulp.watch('src/styles/**/*.styl', ['stylus']);
   gulp.watch('src/**/*.jade', ['jade']);
 });
 
