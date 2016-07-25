@@ -17,51 +17,46 @@ var uuid = require('uuid');
  */
 module.exports = function (app) {
 
-  app.post('/render', function(req, res) {
-    if (req.session.key) {
-      request({
-        url: config.address,
-        method: 'POST',
-        json: req.body
-      }, function(error, response, body) {
-        if (error) {
-          res.sendStatus(500);
+    app.post('/render', function (req, res) {
+        if (req.session.key) {
+            request({
+                url: config.address,
+                method: 'POST',
+                json: req.body
+            }, function (error, response, body) {
+                if (error) {
+                    res.sendStatus(500);
+                    return;
+                }
+
+                var renderedDocumentId = uuid.v4();
+                client.hset(req.session.key, renderedDocumentId, body);
+                res.redirect('/document/' + renderedDocumentId);
+            });
+        } else {
+            res.sendStatus(404);
         }
+    });
 
-        var renderedDocumentId = uuid.v4();
-        client.set(renderedDocumentId, {
-          document: body,
-          sessionKey: req.session.key
-        });
-        res.redirect('/document/' + renderedDocumentId);
-      });
-    } else {
-      res.sendStatus(404);
-    }
-  });
+    app.get('/document/:id', function (req, res) {
+        if (req.session.key) {
+            client.hget(
+                req.session.key,
+                req.params.id,
+                function (err, data) {
+                    if (err) {
+                        res.sendStatus(500);
+                    }
 
-  app.get('/document/:id', function(req, res) {
-    if (req.session.key) {
-      client.get(
-          req.params.id,
-          function(err, data) {
-            if (err) {
-              res.sendStatus(500);
-            }
-
-            if (data.sessionKey !== req.session.key) {
-              res.sendStatus(403);
-            }
-
-            res
-                .status(200)
-                .set('Content-Type', 'application/pdf')
-                .send(data.document);
-          }
-      )
-    } else {
-      res.sendStatus(404);
-    }
-  });
+                    res
+                        .status(200)
+                        .set('Content-Type', 'application/pdf')
+                        .send(data);
+                }
+            )
+        } else {
+            res.sendStatus(404);
+        }
+    });
 
 };
