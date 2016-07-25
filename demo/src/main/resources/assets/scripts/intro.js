@@ -3,16 +3,16 @@ var app = angular.module('vetaffiApp');
 app.controller('introCtrl', ['$scope', '$mixpanel', function($scope, $mixpanel) {
   $scope.links = [
     {
-        title:'View Health Resources',
-        url:'#faq'
-    },
-    {
-        title:'File a Health Claim',
+        title:'File a Benefits Claim',
         url:'#signin?action=file'
     },
     {
-        title:'View your Health Status',
+        title:'View your Claim Status',
         url:'#signin?action=profile'
+    },
+    {
+        title:'Benefits Resources',
+        url:'#faq'
     }
   ];
 
