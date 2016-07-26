@@ -1,147 +1,148 @@
 @import "standards.styl"
 
-.vfi-banner-wrapper
-  position: relative
-  width: 100%
-
-  & .vfi-banner-img
+#home-view
+  & .vfi-banner-wrapper
+    position: relative
     width: 100%
-    height: 300px
-    background: colorPrimaryDarkBlue
-    background-image: url('../icons/banner-child.jpg')
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
 
-    @media screen and (max-width: maxWindowWidthPx)
-      background-position: -200px 0px
-    @media screen and (max-width: minWindowWidthPx)
-      background-position: -320px 0px
-
-  & .vfi-banner-overlay
-    position: absolute
-    bottom: 0px
-    left: 0px
-    width: 100%
-    height: 70px
-    background-color: rgba(25, 25, 25, 0.8)
-
-    @media screen and (max-width: minWindowWidthPx)
-      height: 120px
-
-    & .vfi-banner-text-wrapper
-      position: relative
-      width: maxLayoutWidthPct
-      max-width: maxLayoutWidthPx
-      margin: 0 auto
-      line-height: 70px
-      color: colorWhite
-      font-family: Merriweather
-      font-weight: 700
-      font-size: (heading1_size - 4)
-      letter-spacing: heading1_letterSpacing
-      text-align: left
+    & .vfi-banner-img
+      width: 100%
+      height: 300px
+      background: colorPrimaryDarkBlue
+      background-image: url('../icons/banner-child.jpg')
+      background-size: cover
+      background-position: center
+      background-repeat: no-repeat
 
       @media screen and (max-width: maxWindowWidthPx)
-        text-align: left
-        font-size: (heading1_small_size - 5)
+        background-position: -200px 0px
       @media screen and (max-width: minWindowWidthPx)
-        text-align: center
+        background-position: -320px 0px
 
-    & .vfi-banner-action
-      display: inline-block
+    & .vfi-banner-overlay
       position: absolute
-      top: 50%
-      right: 0px
-      transform: translateY(-50%)
-      background-color: colorYellow
-      color: colorBlack
+      bottom: 0px
+      left: 0px
+      width: 100%
+      height: 70px
+      background-color: rgba(25, 25, 25, 0.8)
 
       @media screen and (max-width: minWindowWidthPx)
-        top: calc(50% + 10px)
-        right: 50%
-        transform: translate(50%, 50%)
+        height: 120px
 
-& .vfi-banner-border
-  position: absolute
-  bottom: -6px
-  height: 6px
-  width: 100%
-  background-color: colorPrimaryDarkBlue
+      & .vfi-banner-text-wrapper
+        position: relative
+        width: maxLayoutWidthPct
+        max-width: maxLayoutWidthPx
+        margin: 0 auto
+        line-height: 70px
+        color: colorWhite
+        font-family: Merriweather
+        font-weight: 700
+        font-size: (heading1_size - 4)
+        letter-spacing: heading1_letterSpacing
+        text-align: left
 
-.vfi-home-option-link
-  color: white
+        @media screen and (max-width: maxWindowWidthPx)
+          text-align: left
+          font-size: (heading1_small_size - 5)
+        @media screen and (max-width: minWindowWidthPx)
+          text-align: center
 
-  &:hover
-    text-decoration: none
-    cursor: pointer
+      & .vfi-banner-action
+        display: inline-block
+        position: absolute
+        top: 50%
+        right: 0px
+        transform: translateY(-50%)
+        background-color: colorYellow
+        color: colorBlack
 
-  @media screen and (max-width: minWindowWidthPx)
-    color: colorPrimaryDarkBlue
+        @media screen and (max-width: minWindowWidthPx)
+          top: calc(50% + 10px)
+          right: 50%
+          transform: translate(50%, 50%)
 
-.vfi-home-option-wrapper
-  width: maxLayoutWidthPct
-  max-width: maxLayoutWidthPx
-  margin: megaSpacing auto 0
-  box-sizing: border-box
-  background-color: colorPrimaryDarkBlue
+  & .vfi-banner-border
+    position: absolute
+    bottom: -6px
+    height: 6px
+    width: 100%
+    background-color: colorPrimaryDarkBlue
 
-  &:hover
-    filter: brightness(1.2)
-    -webkit-filter: brightness(1.2)
-    -moz-filter: brightness(1.2)
-    -ms-filter: brightness(1.2)
-
-    & img
-      opacity: 1.0
-      visibility: visible
-      transform: translateY(0px)
-
-  @media screen and (max-width: minWindowWidthPx)
-    width: 90%
-    margin-top: smallSpacing
-    background-color: colorWhite
-    border: 2px solid transparent
+  .vfi-home-option-link
+    color: white
 
     &:hover
-      border: 2px solid colorPrimaryDarkBlue
-
-  & a
-    display: block
-    padding: largeSpacing megaSpacing
-
-  & .vfi-option-title
-    font-family: Merriweather
-    font-weight: heading1_weight
-    font-size: heading1_small_size
-    line-height: heading1_small_lineHeight
-    letter-spacing: heading1_small_letterSpacing
+      text-decoration: none
+      cursor: pointer
 
     @media screen and (max-width: minWindowWidthPx)
-      font-size: heading1_smaller_size
-      line-height: heading1_smaller_lineHeight
+      color: colorPrimaryDarkBlue
 
-  & .vfi-option-text-wrapper
-    display: inline-block
-    width: calc(100% - 200px)
+  .vfi-home-option-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: megaSpacing auto 0
+    box-sizing: border-box
+    background-color: colorPrimaryDarkBlue
 
-    @media screen and (max-width: maxWindowWidthPx)
-      width: 100%
+    &:hover
+      filter: brightness(1.2)
+      -webkit-filter: brightness(1.2)
+      -moz-filter: brightness(1.2)
+      -ms-filter: brightness(1.2)
 
-  & img
-    float: right
-    width: 80px
-    vertical-align: center
-    opacity: 0.0
-    visibility: hidden
-    transform: translateY(20px)
-    transition: all 0.1s linear
+      & img
+        opacity: 1.0
+        visibility: visible
+        transform: translateY(0px)
 
-    @media screen and (max-width: maxWindowWidthPx)
-      display: none
+    @media screen and (max-width: minWindowWidthPx)
+      width: 90%
+      margin-top: smallSpacing
+      background-color: colorWhite
+      border: 2px solid transparent
 
-.vfi-home-footer-wrapper
-  width: 100%
-  height: 200px
-  margin-top: (megaSpacing * 2)
-  background-color: colorDarkGray
+      &:hover
+        border: 2px solid colorPrimaryDarkBlue
+
+    & a
+      display: block
+      padding: largeSpacing megaSpacing
+
+    & .vfi-option-title
+      font-family: Merriweather
+      font-weight: heading1_weight
+      font-size: heading1_small_size
+      line-height: heading1_small_lineHeight
+      letter-spacing: heading1_small_letterSpacing
+
+      @media screen and (max-width: minWindowWidthPx)
+        font-size: heading1_smaller_size
+        line-height: heading1_smaller_lineHeight
+
+    & .vfi-option-text-wrapper
+      display: inline-block
+      width: calc(100% - 200px)
+
+      @media screen and (max-width: maxWindowWidthPx)
+        width: 100%
+
+    & img
+      float: right
+      width: 80px
+      vertical-align: center
+      opacity: 0.0
+      visibility: hidden
+      transform: translateY(20px)
+      transition: all 0.1s linear
+
+      @media screen and (max-width: maxWindowWidthPx)
+        display: none
+
+  .vfi-footer-wrapper
+    width: 100%
+    height: 200px
+    margin-top: (megaSpacing * 2)
+    background-color: colorDarkGray

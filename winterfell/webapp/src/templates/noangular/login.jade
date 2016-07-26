@@ -7,14 +7,15 @@ html(lang="en")
     script(type='text/javascript', src='libs/libs.js')
     script(type='text/javascript', src='js/signin.js')
 
-  body.vfi-login-view
-    .vfi-bg
-      .vfi-bg-overlay
+  body#login-view
+    #bg
+      #bg-overlay
 
-      .vfi-view-wrapper
+      #vfi-view-wrapper
         .vfi-heading Vetafi
         .vfi-subheading  Lorem ipsum dolor sit amet consectetur
-        .vfi-login-wrapper
+
+        #login-wrapper
           h3 Log into your account
           form.vfi-form-wrapper
             input.vfi-input-email(placeholder="Email", type="text")
@@ -23,4 +24,4 @@ html(lang="en")
               .vfi-progress
               .vfi-txt LOG IN
             .vfi-error-msg
-    .vfi-footer
+    #footer

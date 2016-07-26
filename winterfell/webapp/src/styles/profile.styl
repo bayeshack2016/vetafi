@@ -3,13 +3,13 @@
 colorBorder = colorPrimaryDarkBlue
 borderType = 2px solid colorBorder
 
-.vfi-profile-view
+#profile-view
   background-color: colorWarmLightGray
 
 //
 // Profile Banner section
 //
-.vfi-profile-banner
+#profile-banner
   position: relative
   width: 100%
   height: (5 * megaSpacing)
@@ -18,7 +18,7 @@ borderType = 2px solid colorBorder
   background-size: cover
   border-bottom: 2px solid colorWarmDarkGray
 
-.vfi-profile-banner-overlay
+#profile-banner-overlay
   position: absolute
   top: 0
   left: 0
@@ -26,7 +26,7 @@ borderType = 2px solid colorBorder
   height: 100%
   background: rgba(0, 0, 0, 0.5)
 
-.vfi-profile-header-wrapper
+#profile-header-wrapper
   position: absolute
   left: 0
   right: 0
@@ -92,56 +92,56 @@ borderType = 2px solid colorBorder
 //
 //  Profile Body Section
 //
-.vfi-profile-container
+#profile-container
   width: maxLayoutWidthPct
   max-width: maxLayoutWidthPx
   margin: 0 auto
 
-.vfi-tab-row
-  width: 100%
+  .vfi-tab-row
+    width: 100%
 
-.vfi-profile-tab
-  width: 33.333%
-  background-color: colorBorder
-  color: colorWhite
-  border-radius: 16px 16px 0px 0px
+  .vfi-profile-tab
+    width: 33.333%
+    background-color: colorBorder
+    color: colorWhite
+    border-radius: 16px 16px 0px 0px
 
-  &.vfi-active
-    background-color: colorWhite
-    color: colorPrimaryDarkBlue
-    border-top: borderType
-    border-left: borderType
-    border-right: borderType
-    cursor: initial
+    &.vfi-active
+      background-color: colorWhite
+      color: colorPrimaryDarkBlue
+      border-top: borderType
+      border-left: borderType
+      border-right: borderType
+      cursor: initial
 
-    &:hover
-      filter: brightness(1.0)
-      -webkit-filter: brightness(1.0)
-      -moz-filter: brightness(1.0)
-      -ms-filter: brightness(1.0)
+      &:hover
+        filter: brightness(1.0)
+        -webkit-filter: brightness(1.0)
+        -moz-filter: brightness(1.0)
+        -ms-filter: brightness(1.0)
 
 
-.vfi-profile-section
-  width: 100%
-  margin-bottom: mediumSpacing
-  padding: largeSpacing megaSpacing
-  box-sizing: border-box
-  background-color: colorWhite
-  border-left: borderType
-  border-bottom: borderType
-  border-right: borderType
-
-  & .vfi-section-header
+  & .vfi-profile-section
+    width: 100%
     margin-bottom: mediumSpacing
-    font-family: Merriweather
-    font-size: heading1_small_size
-    line-height: heading1_small_lineHeight
-    letter-spacing: heading1_letterSpacing
+    padding: largeSpacing megaSpacing
+    box-sizing: border-box
+    background-color: colorWhite
+    border-left: borderType
+    border-bottom: borderType
+    border-right: borderType
+
+    & .vfi-section-header
+      margin-bottom: mediumSpacing
+      font-family: Merriweather
+      font-size: heading1_small_size
+      line-height: heading1_small_lineHeight
+      letter-spacing: heading1_letterSpacing
 
 //
 // Profile Military section
 //
-.vfi-profile-section.military
+.vfi-profile-section#military
 
   & .vfi-section-content
     position: relative
@@ -178,12 +178,12 @@ borderType = 2px solid colorBorder
 //
 // Profile Military section
 //
-.vfi-profile-section.file-claims
+.vfi-profile-section#file-claims
 
 //
 // Profile Options section
 //
-.vfi-profile-section.settings
+.vfi-profile-section#settings
 
   & .vfi-section-content
     height: megaSpacing

@@ -1,77 +1,76 @@
-.vfi-profile-view(ng-controller="profileCtrl")
+div#profile-view(ng-controller="profileCtrl")
 
-  .vfi-profile-banner
-    .vfi-profile-banner-overlay
-
-    .vfi-profile-header-wrapper
-      .vfi-profile-pic-wrapper
+  div#profile-banner
+    div#profile-banner-overlay
+    div#profile-header-wrapper
+      div.vfi-profile-pic-wrapper
         button.vfi-change-picture-overlay(ng-click='clickChangePic()')
           img(src='../icons/camera.svg')
           | Change Profile Picture
         img.vfi-profile-pic(ng-src="{{userInfo.profileSrc || '../icons/default-profile.svg'}}" ng-class="{'vfi-default' : !userInfo.profileSrc}")
-      .vfi-profile-basic-info
-        .vfi-line FirstName Middlename Lastname Suffix
-        .vfi-line Email
-        .vfi-line Address
-        .vfi-line Gender
-        .vfi-line Date of Birth
+      div.vfi-profile-basic-info
+        div.vfi-line FirstName Middlename Lastname Suffix
+        div.vfi-line Email
+        div.vfi-line Address
+        div.vfi-line Gender
+        div.vfi-line Date of Birth
         button.vfi-edit-info-btn(ng-click='clickEdit()') Edit Information
 
   // Profile Body
-  .vfi-profile-container
+  div#profile-container
 
-    .vfi-tab-row
+    div.vfi-tab-row
       button.vfi-profile-tab(ng-click="clickMilitaryTab()", ng-class="{'vfi-active' : currentTab=='military'}") Military Background
       button.vfi-profile-tab(ng-click="clickFileClaimsTab()", ng-class="{'vfi-active' : currentTab=='file_claims'}") File Claims
       button.vfi-profile-tab(ng-click="clickSettingsTab()", ng-class="{'vfi-active' : currentTab=='settings'}") Settings
 
 
     // Military Background
-    .vfi-profile-section.military(ng-if="currentTab=='military'")
-      .vfi-section-header Military Information
-      .vfi-section-content
-        .vfi-line Military Id
-        .vfi-line Date of Discharge
+    div.vfi-profile-section#military(ng-if="currentTab=='military'")
+      div.vfi-section-header Military Information
+      div.vfi-section-content
+        div.vfi-line Military Id
+        div.vfi-line Date of Discharge
 
-      .vfi-section-divider
+      div.vfi-section-divider
 
-      .vfi-section-header Military Background
-      .vfi-section-content.military-bg(ng-repeat='military in militaryInfo')
+      div.vfi-section-header Military Background
+      div.vfi-section-content.military-bg(ng-repeat='military in militaryInfo')
         img.vfi-insignia.army(ng-src='{{insigniaUrls[military.branch]}}')
-        .vfi-line {{ranks[military.rank]}}
-        .vfi-line {{branches[military.branch]}}
-        .vfi-line {{military.yearStart}} - {{military.yearEnd}}
+        div.vfi-line {{ranks[military.rank]}}
+        div.vfi-line {{branches[military.branch]}}
+        div.vfi-line {{military.yearStart}} - {{military.yearEnd}}
 
-      .vfi-section-divider
+      div.vfi-section-divider
 
-      .vfi-section-content.add-military
+      div.vfi-section-content.add-military
         button(ng-click='clickAddMilitary()')
           img.vfi-add-sign(src='../icons/add.svg')
           | Add Military Background
 
 
     // File Claims
-    .vfi-profile-section.file-claims(ng-if="currentTab=='file_claims'")
-      .vfi-section-content(ng-if="claims.length == 0")
+    div.vfi-profile-section#file-claims(ng-if="currentTab=='file_claims'")
+      div.vfi-section-content(ng-if="claims.length == 0")
         | You have no pending file claims at the moment.
         br
         | Click <a href="#/start-file-claim">here</a> to start a file claim.
 
 
     // Settings
-    .vfi-profile-section.settings(ng-if="currentTab=='settings'")
-      .vfi-section-content
+    div.vfi-profile-section#settings(ng-if="currentTab=='settings'")
+      div.vfi-section-content
         | Change Email
         button.vfi-settings-btn.change-email(ng-click="clickChangeEmail()") Change Email
 
-      .vfi-section-content
+      div.vfi-section-content
         | Change Password
         button.vfi-settings-btn.change-password(ng-click="clickChangePassword()") Change Password
 
-      .vfi-section-content
+      div.vfi-section-content
         | Log out of your account
         button.vfi-settings-btn.logout(ng-click="clickLogout()") Log out
 
-      .vfi-section-content
+      div.vfi-section-content
         | Delete your account and remove all your content
         button.vfi-settings-btn.delete-account(ng-click="clickDeleteAccount()") Delete Account

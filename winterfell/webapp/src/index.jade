@@ -9,8 +9,8 @@ html(lang="en")
 		script(type='text/javascript', src='js/main.js')
 
 	body(ng-app="vetafiApp").vfi-body-style
-		div.vfi-header
-			div.vfi-header-content(ng-controller="headerCtrl")
+		div#header
+			div#header-content(ng-controller="headerCtrl")
 				a.vfi-header-logo-wrapper(href="/")
 					img.vfi-header-logo-img(src='../icons/logo.png')
 					div.vfi-header-logo Vetafi
@@ -26,9 +26,9 @@ html(lang="en")
 
 					// If signed in
 					div.vfi-menu-wrapper(ng-if="isSignedIn")
-						button#vfi-menu-btn(ng-click="onToggleMenu()")
+						button.vfi-menu-btn(ng-click="onToggleMenu()")
 							div.vfi-menu-icon
-						ul#vfi-menu-list(ng-class="{'vfi-show':menuToggled}" click-outside="closeThisMenu()" outside-if-not="vfi-menu-btn")
+						ul.vfi-menu-list(ng-class="{'vfi-show':menuToggled}" click-outside="closeThisMenu()" outside-if-not="vfi-menu-btn")
 							li(ng-click="onClickProfileOption()") My Profile
 							li(ng-click="onClickLogoutOption()") Log out
 
