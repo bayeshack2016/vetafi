@@ -1,5 +1,3 @@
-var lodash = require('lodash');
-
 module.exports = function (app) {
 
   // Endpoint for checking if session still exists on server

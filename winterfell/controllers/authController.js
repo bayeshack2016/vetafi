@@ -1,4 +1,4 @@
-var lodash = require('lodash');
+var _ = require('lodash');
 var passport = require('passport');
 var User = require('./../models/user');
 var UserService = require('./../services/userService');
@@ -37,7 +37,7 @@ module.exports = function (app) {
 
     // First find a user with this email
     User.findOne({email: data.email, state: User.State.ACTIVE}, function (err, user) {
-      if (lodash.isEmpty(user)) { // User does not exist, create a new one!
+      if (_.isEmpty(user)) { // User does not exist, create a new one!
         var callbacks = {
           onError: function(errorCode, errorMsg) {
             console.log('[authSignUp] ' + errorCode + ' Error creating user: ' + errorMsg);

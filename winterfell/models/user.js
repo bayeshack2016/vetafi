@@ -1,6 +1,6 @@
 'use strict';
 var uuid = require('uuid');
-var lodash = require('lodash');
+var _ = require('lodash');
 var mongoose = require('mongoose');
 var SocialUser = require('./socialUser');
 var Schema = mongoose.Schema;
@@ -42,7 +42,7 @@ module.exports.State = State;
 // Serialize
 //
 module.exports.externalize = function(user) {
-  return lodash.pick(user, ['firstname', 'middlename', 'lastname', 'email', 'externalId']);
+  return _.pick(user, ['firstname', 'middlename', 'lastname', 'email', 'externalId']);
 };
 
 //

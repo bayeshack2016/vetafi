@@ -1,4 +1,3 @@
-var lodash = require('lodash');
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserService = require('./../services/userService');
