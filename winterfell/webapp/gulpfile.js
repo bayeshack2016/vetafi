@@ -11,27 +11,11 @@ var order = require('gulp-order');
 var del = require('del');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
-var runSequence = require('run-sequence');
 
 var release = args.release ? true : false;
 
 gulp.task('clean', function() {
 	return del.sync('build');
-});
-
-gulp.task('js', function() {
-  return gulp.src('src/js/*.js')
-    .pipe(concat('main.js'))
-    .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
-    .pipe(gulp.dest('build/js'))
-    .pipe(browserSync.stream());
-});
-
-gulp.task('other-js', function() {
-	return gulp.src('src/js/noangular/**/*.js')
-		.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
-		.pipe(gulp.dest('build/js'))
-		.pipe(browserSync.stream());
 });
 
 gulp.task('stylus', function() {
@@ -64,6 +48,21 @@ gulp.task('libs', function() {
     .pipe(gulp.dest('build/libs'));
 });
 
+gulp.task('other-js', function() {
+	return gulp.src('src/js/noangular/**/*.js')
+		.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
+		.pipe(gulp.dest('build/js'))
+		.pipe(browserSync.stream());
+});
+
+gulp.task('js', function() {
+	return gulp.src('src/js/*.js')
+    .pipe(concat('main.js'))
+    .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
+    .pipe(gulp.dest('build/js'))
+    .pipe(browserSync.stream());
+});
+
 gulp.task('fonts', function() {
   return gulp.src('src/fonts/**/*')
   	.pipe(gulp.dest('build/fonts'));
@@ -75,7 +74,7 @@ gulp.task('icons', function(){
   .pipe(gulp.dest('build/icons'))
 });
 
-gulp.task('initBrowserSync', function() {
+gulp.task('initBrowserSync', ['build'], function() {
   browserSync.init({
     server: {
       baseDir: 'build'
@@ -83,16 +82,12 @@ gulp.task('initBrowserSync', function() {
   })
 });
 
-gulp.task('watch', function () {
+gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/js/**/*.js', ['js', 'other-js']);
   gulp.watch('src/styles/**/*.styl', ['stylus']);
   gulp.watch('src/**/*.jade', ['jade']);
 });
 
-gulp.task('build', function() {
-	runSequence('clean', ['fonts', 'icons'], 'libs', 'js', 'other-js', 'stylus', 'jade');
-});
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'js', 'other-js', 'stylus', 'jade']);
 
-gulp.task('default', function() {
-  runSequence('build', 'initBrowserSync', 'watch');
-});
+gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);
