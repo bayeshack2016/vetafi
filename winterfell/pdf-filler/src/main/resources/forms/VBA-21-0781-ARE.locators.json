@@ -1,0 +1,233 @@
+[
+  {
+    "pdfId": "VAFileNumber[0]",
+    "elementId": "va_file_number"
+  },
+  {
+    "pdfId": "NameofVeteran[0]",
+    "elementId": "veteran_first_name",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "NameofVeteran[0]",
+    "elementId": "veteran_middle_initial",
+    "concatOrder": 1
+  },
+  {
+    "pdfId": "NameofVeteran[0]",
+    "elementId": "veteran_last_name",
+    "concatOrder": 2
+  },
+  {
+    "pdfId": "Date[0]",
+    "elementId": "veteran_stress_incident_1_date",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Location[0]",
+    "elementId": "veteran_stress_incident_1_location",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "UnitAssignment[0]",
+    "elementId": "veteran_stress_incident_1_assignment",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Description[0]",
+    "elementId": "veteran_stress_incident_1_description",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Medals[0]",
+    "elementId": "veteran_stress_incident_1_metals",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateFrom[0]",
+    "elementId": "veteran_stress_incident_1_unit_assignment_start_date",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateTo[0]",
+    "elementId": "veteran_stress_incident_1_unit_assignment_end_date",
+    "concatOrder": 0
+  },
+
+
+  {
+    "pdfId": "NameofServicePerson[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_name_0",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "RANK4B[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_rank_0",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateOfInjury[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_date_of_injury_death_0",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_stress_incident_1_servicepeople_outcome_0",
+    "idMap": {
+      "KILLED IN ACTION": "KILLEDINACTION4[0]",
+      "WOUNDED IN ACTION": "WOUNDEDINACTION4[0]",
+      "KILLED NON-BATTLE": "KILLEDNONBATTLE4[0]",
+      "INJURED NON-BATTLE": "INJUREDNONBATTLE4[0]"
+    }
+  },
+  {
+    "pdfId": "UnitAssignmentDuringIncident[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_assignment_0",
+    "concatOrder": 0
+  },
+
+
+
+  {
+    "pdfId": "NameofServicePerson5[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_name_1",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "RANK5B[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_rank_1",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateOfInjury5[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_date_of_injury_death_1",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_stress_incident_1_servicepeople_outcome_1",
+    "idMap": {
+      "KILLED IN ACTION": "KILLEDINACTION5[0]",
+      "WOUNDED IN ACTION": "WOUNDEDINACTION5[0]",
+      "KILLED NON-BATTLE": "KILLEDNONBATTLE5[0]",
+      "INJURED NON-BATTLE": "INJUREDNONBATTLE5[0]"
+    }
+  },
+  {
+    "pdfId": "UnitAssignmentDuringIncident5[0]",
+    "elementId": "veteran_stress_incident_1_servicepeople_assignment_1",
+    "concatOrder": 0
+  },
+
+  {
+    "pdfId": "Date6A[0]",
+    "elementId": "veteran_stress_incident_2_date",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Location6[0]",
+    "elementId": "veteran_stress_incident_2_location",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "UnitAssignment6[0]",
+    "elementId": "veteran_stress_incident_2_assignment",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateFrom6[0]",
+    "elementId": "veteran_stress_incident_2_unit_assignment_start_date",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateTo6[0]",
+    "elementId": "veteran_stress_incident_2_unit_assignment_end_date",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Description6[0]",
+    "elementId": "veteran_stress_incident_2_description",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Medals6[0]",
+    "elementId": "veteran_stress_incident_2_metals",
+    "concatOrder": 0
+  },
+
+
+
+
+  {
+    "pdfId": "NameofServicePerson7[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_name_0",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Rank7B[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_rank_0",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateOfInjury7C[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_date_of_injury_death_0",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_stress_incident_2_servicepeople_outcome_0",
+    "idMap": {
+      "KILLED IN ACTION": "KILLEDINACTION7[0]",
+      "WOUNDED IN ACTION": "WOUNDEDINACTION7[0]",
+      "KILLED NON-BATTLE": "KILLEDNONBATTLE7[0]",
+      "INJURED NON-BATTLE": "INJUREDNONBATTLE7[0]"
+    }
+  },
+  {
+    "pdfId": "UnitAssignment7E[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_assignment_0",
+    "concatOrder": 0
+  },
+
+
+
+
+
+  {
+    "pdfId": "NameofServicePerson8[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_name_1",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "Rank8B[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_rank_1",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "DateOfInjury8C[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_date_of_injury_death_1",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_stress_incident_2_servicepeople_outcome_1",
+    "idMap": {
+      "KILLED IN ACTION": "KILLEDINACTION8[0]",
+      "WOUNDED IN ACTION": "WOUNDEDINACTION8[0]",
+      "KILLED NON-BATTLE": "KILLEDNONBATTLE8[0]",
+      "INJURED NON-BATTLE": "INJUREDNONBATTLE8[0]"
+    }
+  },
+  {
+    "pdfId": "UnitAssignment8E[0]",
+    "elementId": "veteran_stress_incident_2_servicepeople_assignment_1",
+    "concatOrder": 0
+  },
+
+
+  {
+    "pdfId": "DAYTIMEPHONE[0]",
+    "elementId": "veteran_phone_number",
+    "concatOrder": 0
+  }
+]

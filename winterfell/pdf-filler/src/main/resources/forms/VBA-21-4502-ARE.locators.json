@@ -1,0 +1,55 @@
+[
+  {
+    "pdfId": "form1[0].Page_3[0].VAFileNo\\._1of9[0]",
+    "elementId": "va_file_number"
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].#area[0].ssna1[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 0,
+    "substringEnd": 3
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].#area[0].ssna2[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 3,
+    "substringEnd": 5
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].#area[0].ssna3[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 5,
+    "substringEnd": 9
+  },
+
+  {
+    "pdfId": "form1[0].Page_3[0].namefirst1[0]",
+    "elementId": "veteran_first_name"
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].namemiddleinitial[0]",
+    "elementId": "veteran_middle_initial"
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].namelast1[7]",
+    "elementId": "veteran_last_name"
+  },
+
+  {
+    "pdfId": "form1[0].Page_3[0].namelast1[14]",
+    "elementId": "veteran_home_street"
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].namelast1[10]",
+    "elementId": "veteran_home_city"
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].namelast1[12]",
+    "elementId": "veteran_home_state"
+  },
+  {
+    "pdfId": "form1[0].Page_3[0].namelast1[11]",
+    "elementId": "veteran_home_zip_code"
+  }
+
+]

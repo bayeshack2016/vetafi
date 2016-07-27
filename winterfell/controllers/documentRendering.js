@@ -12,25 +12,31 @@ var uuid = require('uuid');
  * 1. Relay the posted JSON body to the microservice and collect the rendered document.
  * 2. Store the rendered document in redis along with the session key, under a randomly generated document key.
  * 3. Redirect to another route, with the document key as a path parameter.
- * 4. Retrieve document from redis and if session key matches, return 200, otherwise return 401
- * Then when the redirected get hits,
+ * 4. Retrieve document from redis and if session key matches, return 200, otherwise return 404
  */
 module.exports = function (app) {
 
-    app.post('/render', function (req, res) {
+    app.post('/render/:form', function (req, res) {
         if (req.session.key) {
             request({
-                url: config.address,
+                url: config.address + req.params.form,
                 method: 'POST',
-                json: req.body
-            }, function (error, response, body) {
+                json: req.body,
+                headers: {'Accept': 'application/pdf'}
+            }, function (error, microserviceResponse, body) {
                 if (error) {
+                    console.error(error);
                     res.sendStatus(500);
                     return;
                 }
 
+                if (microserviceResponse.statusCode !== 200) {
+                    res.sendStatus(microserviceResponse.statusCode);
+                    return;
+                }
+
                 var renderedDocumentId = uuid.v4();
-                client.hset(req.session.key, renderedDocumentId, body);
+                client.hset(req.session.key, renderedDocumentId, microserviceResponse.body);
                 res.redirect('/document/' + renderedDocumentId);
             });
         } else {
@@ -58,5 +64,4 @@ module.exports = function (app) {
             res.sendStatus(404);
         }
     });
-
 };
