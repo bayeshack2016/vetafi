@@ -40,7 +40,7 @@
     "gulp-uglify": "^1.5.3",
     "@iamadamjowett/angular-click-outside": "^2.8.3",
     "ng-dialog": "^0.6.2",
-    "yargs": "^4.7.1"
+    "yargs": "^4.7.1",
     "supertest": "^1.2.0",
     "supertest-session": "^2.0.1",
     "underscore": "^1.8.3",
