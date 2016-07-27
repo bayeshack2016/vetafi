@@ -14,8 +14,8 @@ export DEBIAN_FRONTEND=noninteractive
 # To install the add-apt-repository utility
 apt-get -y install software-properties-common python-software-properties
 
-# Node
-curl -sL https://deb.nodesource.com/setup | bash -
+# Node 4.x
+curl -sL https://deb.nodesource.com/setup_4.x | bash -
 apt-get -y install nodejs
 
 # MongoDB

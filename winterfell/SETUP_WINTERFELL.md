@@ -1,49 +1,26 @@
 # Setting up Winterfell
 Winterfell is the server that handles all control logic in the application. This includes authentication, handling user information, it is basically the bulk of the main logistics.
 
-### Install Node
-This project is designed to work with node.js v5. 
+### Install Node Modules
+This project is designed to work with node.js v4.x.
 
 If you haven't already, we'll need to install node. Run the following at the same directory level as _package.json_.
 ```
 $ npm install
 ```
 
-### Install MongoDb No-SQL Database
-Refer to the [MongoDb installation page](https://docs.mongodb.com/master/installation/) to install.
-We used Homebrew to install Mongo.
+### Startup Vagrant
+
 ```
-$ brew install mongodb
+$ vagrant up
 ```
 
-### Install Redis In-Memory DataStore
-We used NPM to install [Redis](http://redis.io/).
-```
-$ npm install redis
-```
+### Run tests
 
-## Running Winterfell locally
-Make sure a _MongoDb_ instance is started in a separate terminal, we assume the database is on port 27017.
 ```
-$ mongod
-```
-or
-```
-$ ./start-mongod.sh
-```
-
-Make sure a _Redis_ instance is started in a separate terminal, we assume the database is on port 6379.
-```
-$ redis-server
-```
-or
-```
-$ ./start-redis.sh
-```
-
-Simply run the _start.sh_ script from the command line. The server should start up at port 3999.
-```
-$ ./start-server.sh
+$ vagrant up
+$ vagrant ssh
+$ ./run-tests.sh
 ```
 
 ## Codebase Organization
