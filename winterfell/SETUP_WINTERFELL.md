@@ -5,7 +5,9 @@ Winterfell is the server that handles all control logic in the application. This
 This project is designed to work with node.js v4.x.
 
 If you haven't already, we'll need to install node. Run the following at the same directory level as _package.json_.
+
 ```
+$ brew install node
 $ npm install
 ```
 
@@ -18,16 +20,16 @@ $ vagrant up
 ### Run Tests
 
 ```
-$ vagrant up
 $ vagrant ssh
+$ cd /vagrant/winterfell
 $ ./run-tests.sh
 ```
 
 ### Run Server
 
 ```
-$ vagrant up
 $ vagrant ssh
+$ cd /vagrant/winterfell
 $ ./start-server.sh
 ```
 
@@ -40,6 +42,7 @@ The codebase directories are organized as such:
 - services		  app logic to manipulate databases
 - models		    database access objects that represent db tables
 - middlewares		utilities to help process requests before hitting the controllers
+- pdf-filler    PDF rendering microservice
 - tests         unit tests
 - utils         general programming utilities and constants
 - webapp        the front-end web application to be served
