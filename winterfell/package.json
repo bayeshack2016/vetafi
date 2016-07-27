@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
   "scripts": {
-    "test": "mocha ./tests"
+    "test": "mocha"
   },
   "author": "",
   "license": "ISC",
@@ -30,8 +27,6 @@
     "redis": "^2.6.2",
     "request": "^2.72.0",
     "should": "^9.0.2",
-    "uuid": "^2.0.2",
-
     "browser-sync": "^2.12.5",
     "del": "^2.2.0",
     "gulp": "^3.9.1",
@@ -46,5 +41,9 @@
     "@iamadamjowett/angular-click-outside": "^2.8.3",
     "ng-dialog": "^0.6.2",
     "yargs": "^4.7.1"
+    "supertest": "^1.2.0",
+    "supertest-session": "^2.0.1",
+    "underscore": "^1.8.3",
+    "uuid": "^2.0.2"
   }
 }

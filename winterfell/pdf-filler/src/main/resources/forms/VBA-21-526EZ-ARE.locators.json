@@ -1,0 +1,139 @@
+[
+  {
+    "pdfId": "F[0].Page_7[0].namefirst1[0]",
+    "elementId": "veteran_first_name"
+  },
+  {
+    "pdfId": "F[0].Page_7[0].namemiddleinitial[0]",
+    "elementId": "veteran_middle_initial"
+  },
+  {
+    "pdfId": "F[0].Page_7[0].namelast1[0]",
+    "elementId": "veteran_last_name"
+  },
+
+  {
+    "pdfId": "F[0].Page_7[0].#area[0].ssna1[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 0,
+    "substringEnd": 3
+  },
+  {
+    "pdfId": "F[0].Page_7[0].#area[0].ssna2[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 3,
+    "substringEnd": 5
+  },
+  {
+    "pdfId": "F[0].Page_7[0].#area[0].ssna3[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 5,
+    "substringEnd": 9
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_sex",
+    "idMap": {
+      "Male": "F[0].Page_7[0].Male[0]",
+      "Female": "F[0].Page_7[0].Female[0]"
+    }
+  },
+
+  {
+    "pdfId": "F[0].Page_7[0].#area[1].BeginningDateOfEmployment_month1[0]",
+    "elementId": "veteran_dob",
+    "substringStart": 5,
+    "substringEnd": 7
+  },
+
+  {
+    "pdfId": "F[0].Page_7[0].#area[1].BeginningDateOfEmployment_Year1[0]",
+    "elementId": "veteran_dob",
+    "substringStart": 0,
+    "substringEnd": 4
+  },
+
+  {
+    "pdfId": "F[0].Page_7[0].#area[1].BeginningDateOfEmployment_Day1[0]",
+    "elementId": "veteran_dob",
+    "substringStart": 8,
+    "substringEnd": 10
+  },
+
+  {
+    "pdfId": null,
+    "elementId": "veteran_previous_claim_y_n",
+    "idMap": {
+      "Yes": "F[0].Page_7[0].YesNo1[0]",
+      "No": "F[0].Page_7[0].YesNo1[1]"
+    }
+  },
+  {
+    "pdfId": "F[0].Page_7[0].VAFileNo\\._1of9[0]",
+    "elementId": "veteran_previous_claim"
+  },
+
+  {
+    "pdfId": null,
+    "elementId": "veteran_homeless_y_n",
+    "idMap": {
+      "Yes": "F[0].Page_7[0].YesNo2[0]",
+      "No": "F[0].Page_7[0].YesNo2[1]"
+    }
+  },
+
+  {
+    "pdfId": "F[0].Page_7[0].NameOfPointOfContact[0]",
+    "elementId": "veteran_homeless_point_of_contact"
+  },
+
+  {
+    "pdfId": "F[0].Page_7[0].PointOfContactAreaCode[0]",
+    "elementId": "veteran_homeless_point_of_contact_phone_number",
+    "substringStart": 0,
+    "substringEnd": 3
+  },
+  {
+    "pdfId": "F[0].Page_7[0].PointOfContactPhoneNo\\.[0]",
+    "elementId": "veteran_homeless_point_of_contact_phone_number",
+    "substringStart": 3,
+    "substringEnd": 10
+  },
+
+  {
+    "pdfId": null,
+    "elementId": "veteran_service_branches",
+    "idMap": {
+      "Army": "F[0].Page_7[0].Army[0]",
+      "Navy": "F[0].Page_7[0].Navy[0]",
+      "Marine Corps": "F[0].Page_7[0].MarineCorps[0]",
+      "Air Force": "F[0].Page_7[0].AirForce[0]",
+      "Coast Guard": "F[0].Page_7[0].CoastGuard[0]"
+    }
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_service_components",
+    "idMap": {
+      "Active": "F[0].Page_7[0].Regular[0]",
+      "Reserves": "F[0].Page_7[0].Reserve[0]",
+      "National Guard": "F[0].Page_7[0].NationalGuard[0]"
+    }
+  },
+  {
+    "pdfId": "F[0].Page_7[0].namelast1[7]",
+    "elementId": "veteran_home_street"
+  },
+  {
+    "pdfId": "F[0].Page_7[0].namelast1[3]",
+    "elementId": "veteran_home_city"
+  },
+  {
+    "pdfId": "F[0].Page_7[0].namelast1[5]",
+    "elementId": "veteran_home_state"
+  },
+  {
+    "pdfId": "F[0].Page_7[0].namelast1[4]",
+    "elementId": "veteran_home_zip_code"
+  }
+]

@@ -2,7 +2,6 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var redis = require('redis');
 var redisStore = require('connect-redis')(session);
-var bodyParser = require('body-parser');
 
 module.exports = function (app) {
   var port = 6379;
@@ -28,7 +27,6 @@ module.exports = function (app) {
       saveUninitialized: false,
       resave: false
   }));
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({extended: true}));
+
   return app;
-}
+};

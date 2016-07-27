@@ -1,0 +1,6 @@
+{
+  "name": "Vetaffi",
+  "description": "VA Claims Filling App.",
+  "image": "heroku/java",
+  "addons": []
+}

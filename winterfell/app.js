@@ -2,6 +2,7 @@ var express = require('express');
 var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
+var bodyParser = require('body-parser');
 
 var environment = process.env.NODE_ENV || 'local';
 var app = express();
@@ -29,5 +30,7 @@ app.get('/', function(req, resp) {
 require('./config/mongoose')(environment);
 
 var port = 3999;
-app.listen(process.env.PORT || port);
+var server = app.listen(process.env.PORT || port);
 console.log("Listening on port " + port + ". Winter is coming!");
+
+module.exports = server;
