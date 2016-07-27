@@ -15,13 +15,23 @@ $ npm install
 $ vagrant up
 ```
 
-### Run tests
+### Run Tests
 
 ```
 $ vagrant up
 $ vagrant ssh
 $ ./run-tests.sh
 ```
+
+### Run Server
+
+```
+$ vagrant up
+$ vagrant ssh
+$ ./start-server.sh
+```
+
+And navigate to http://localhost:3999 in your local browser.
 
 ## Codebase Organization
 The codebase directories are organized as such:
