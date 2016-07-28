@@ -16,7 +16,7 @@ Our production site is coming soon! :smile:
 # Developing
 
 We use vagrant to manage our development environments. 
-Currently we use virtual machines managed by VirtualBox for development.
+Currently we use VirtualBox / vagrant for development, and we use [atlas](https://atlas.hashicorp.com) to manage our vagrant boxes.
 
 Please see installation instructions for vagrant and VirtualBox below: 
 
@@ -30,6 +30,22 @@ If you are on OSX the easiest was to get setup is to use the brew package manage
 ## Windows
 
 Please see https://www.vagrantup.com/downloads.html for instructions.
+
+## Setup Vagrant Box
+
+Sign up for an account at [atlas](https://atlas.hashicorp.com) and tell an admin your atlas username for access, then:
+
+```
+vagrant login
+```
+
+To login with your credentials, and then:
+
+```
+vagrant up
+```
+
+To install the vetafi vagrant box.
 
 One you are setup you can run `vagrant ssh` to shell into the development environment, and then run
 `winterfell/start-server.sh` to start the server. Then browse to http://localhost:3999 in your local browser.
