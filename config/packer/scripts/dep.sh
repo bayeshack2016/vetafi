@@ -15,7 +15,7 @@ export DEBIAN_FRONTEND=noninteractive
 apt-get -y install software-properties-common python-software-properties
 
 # Node 4.x
-curl -sL https://deb.nodesource.com/setup_4.x | bash -
+curl -sL https://deb.nodesource.com/setup_5.x | bash -
 apt-get -y install nodejs
 
 # MongoDB
