@@ -16,6 +16,8 @@ function loadIntoBuild (app, targetDir) {
   });
   return app;
 }
+
+loadIntoBuild(app, 'utils');
 loadIntoBuild(app, 'middlewares');
 loadIntoBuild(app, 'services');
 loadIntoBuild(app, 'controllers');

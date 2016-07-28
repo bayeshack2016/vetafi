@@ -37,7 +37,7 @@ function displayError(msg) {
 }
 
 $(document).ready(function(){
-  $('.vfi-signup-view .vfi-submit-btn').click(function(e) {
+  $('#signup-view .vfi-submit-btn').click(function(e) {
     e.preventDefault();
     var email = $('.vfi-input-email').val();
     var password = $('.vfi-input-password.vfi-first-pwd').val();
@@ -75,7 +75,7 @@ $(document).ready(function(){
   });
 
 
-  $('.vfi-login-view .vfi-submit-btn').click(function(e) {
+  $('#login-view .vfi-submit-btn').click(function(e) {
     e.preventDefault();
     var email = $('.vfi-input-email').val();
     var password = $('.vfi-input-password').val();
