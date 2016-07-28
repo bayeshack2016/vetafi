@@ -68,6 +68,11 @@ module.exports = function (app) {
     }
   });
 
+  // Endpoint to authenticate logins and begin session
+  app.get('/auth/login/idme', passport.authenticate('idme'), function(req, res) {
+    console.log(req, res);
+  });
+
   // Endpoint to logout and remove session
   app.get('/auth/logout', function(req, res) {
     console.log('[authLogOut] log out for ' + JSON.stringify(req.session));
