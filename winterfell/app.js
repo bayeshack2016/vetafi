@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var express = require('express');
 var session = require('express-session');
 var fs = require('fs');
