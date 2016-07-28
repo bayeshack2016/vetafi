@@ -1,13 +1,14 @@
-var session = require('express-session');
 var cookieParser = require('cookie-parser');
-var redis = require('redis');
+var session = require('express-session');
 var redisStore = require('connect-redis')(session);
+var RedisService = require('../services/redisService');
+var Constants = require('../utils/constants');
 
 module.exports = function (app) {
   var port = 6379;
   var host = 'localhost';
 
-  var redisClient = redis.createClient();
+  var redisClient = RedisService.getClient();
   redisClient.on('connect', function() {
       console.log('Redis connected at ' + host + ':' + port);
   });
@@ -23,7 +24,7 @@ module.exports = function (app) {
         host: host,
         port: port,
         client: redisClient,
-        ttl :  1200}), // expires after 20 minutes
+        ttl: Constants.SESSION_EXPIRE_TIME}), // expires after 20 minutes
       saveUninitialized: false,
       resave: false
   }));

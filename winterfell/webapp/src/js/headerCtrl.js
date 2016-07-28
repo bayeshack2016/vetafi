@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location',
-	function ($scope, profileService, net, $location) {
+app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$interval',
+	function ($scope, profileService, net, $location, $interval) {
 		$scope.isSignedIn = false;
 
 		if (sessionStorageHelper.getPair(vfiConstants.keyUserId)) {
@@ -50,5 +50,14 @@ app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location',
 				$scope.isSignedIn = true;
 			}
 		});
+
+		$interval(function() {
+			net.checkSession().then(function(resp) {
+				if (resp.status != 200) {
+					console.log('session expired!');
+				}
+			});
+		}, 10000); // check session every 10 seconds
+
 	}
 ]);
