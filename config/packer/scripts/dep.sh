@@ -14,7 +14,7 @@ export DEBIAN_FRONTEND=noninteractive
 # To install the add-apt-repository utility
 apt-get -y install software-properties-common python-software-properties
 
-# Node 4.x
+# Node 5.x
 curl -sL https://deb.nodesource.com/setup_5.x | bash -
 apt-get -y install nodejs
 
