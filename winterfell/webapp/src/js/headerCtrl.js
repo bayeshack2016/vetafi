@@ -52,7 +52,7 @@ app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$
 					net.touchSession();
 				}
 				$scope.inactive = true; // reset inactivity
-			}, 10 * 1000); // check every 20 minutes
+			}, 20 * 60 * 1000); // check every 20 minutes
 		}
 
 		//
