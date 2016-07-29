@@ -5,7 +5,7 @@ app.factory('profileService', function() {
     userInfo: {},
     clearUserInfo: function() {
       sessionStorageHelper.removePair(vfiConstants.keyUserId);
-      userInfo = {};
+      this.userInfo = {};
     }
   };
 });

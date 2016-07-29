@@ -42,11 +42,8 @@ app.factory('net', ['$http', function($http) {
     signup: function(userData) {
       return httpPost("/auth/signup", userData);
     },
-    checkSession: function() {
-      return httpGet("/session/check");
-    },
-    extendSession: function() {
-      return httpPost("/session/extend");
+    touchSession: function() {
+      return httpGet("/session/touch");
     },
     getUserInfo: function() {
       var userId = getSessionUserId();

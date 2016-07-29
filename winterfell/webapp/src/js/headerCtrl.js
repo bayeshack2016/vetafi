@@ -1,8 +1,10 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$interval',
-	function ($scope, profileService, net, $location, $interval) {
+app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$interval', 'ngDialog',
+	function ($scope, profileService, net, $location, $interval, ngDialog) {
 		$scope.isSignedIn = false;
+		$scope.inactive = true;
+		$scope.inactivityHandler = undefined;
 
 		if (sessionStorageHelper.getPair(vfiConstants.keyUserId)) {
 			net.getUserInfo().then(function(resp) {
@@ -38,6 +40,21 @@ app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$
 			});
 		};
 
+		function startInactivityHandler() {
+			return $interval(function() {
+				if ($scope.inactive) {
+					net.logout();
+					profileService.clearUserInfo();
+					$location.path('/');
+					ngDialog.open({ template: '../templates/modals/sessionExpired.html', className: 'ngdialog-theme-default' });
+				} else {
+					console.log('Still active!');
+					net.touchSession();
+				}
+				$scope.inactive = true; // reset inactivity
+			}, 10 * 1000); // check every 20 minutes
+		}
+
 		//
 		// Watchers
 		//
@@ -46,18 +63,18 @@ app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$
 		}, function (newVal) {
 			if (_.isEmpty(newVal)) {
 				$scope.isSignedIn = false;
+				if ($scope.inactivityHandler) {
+					$interval.cancel($scope.inactivityHandler);
+					$scope.inactivityHandler = undefined;
+				}
 			} else {
 				$scope.isSignedIn = true;
+				$scope.inactivityHandler = startInactivityHandler();
 			}
 		});
 
-		$interval(function() {
-			net.checkSession().then(function(resp) {
-				if (resp.status != 200) {
-					console.log('session expired!');
-				}
-			});
-		}, 10000); // check session every 10 seconds
-
+		$scope.$on('$routeChangeSuccess', function(next, current) {
+			$scope.inactive = false;
+		});
 	}
 ]);
