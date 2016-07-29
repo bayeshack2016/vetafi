@@ -72,7 +72,7 @@ module.exports = function (app) {
   app.get('/auth/logout', function(req, res) {
     console.log('[authLogOut] log out for ' + JSON.stringify(req.session));
     req.session.destroy(function (err) {
-        if(err){
+        if(err) {
             console.log(err);
             res.end('done');
         } else {
