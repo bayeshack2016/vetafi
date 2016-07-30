@@ -4,14 +4,14 @@ var User = require('./../models/user');
 
 var MAX_PASSWORD_LENGTH = 6;
 
-function UserService (app) {
+function UserService(app) {
     this.app = app;
 };
 
 function validateEmail(email) {
   // emailvalidator requires redis and sends a ping to the email to check its validity.
   //return validator.checkEmailAddress(email);
-  return email.indexOf('@') > -1;
+  return email.indexOf('@') > -1 && email.indexOf('.') > -1;
 }
 
 function validatePassword(password) {
@@ -56,4 +56,10 @@ module.exports.createNewUser = function(user, callbacks) {
   } else {
     callbacks.onError(errorCode, errorMsg);
   }
+};
+
+module.exports.setUserState = function(userId, state, callback) {
+  var query = { id: userId };
+  var update = { state: state };
+  User.update(query, update, callback);
 };

@@ -7,9 +7,9 @@ module.exports = function (app) {
   // Get a user's information based on externalId
   app.get('/user/:extUserId', function (req, res) {
     console.log('[getUser] request received for ' + req.params.extUserId);
-    User.getByExtId(req.params.extUserId, function(err, user) {
+    User.find().byExternalId(req.params.extUserId).exec(function(err, user) {
       if (user) {
-        res.status(200).send({user: User.externalize(user)});
+        res.status(200).send({user: user.externalize()});
       } else {
         res.sendStatus(404);
       }
@@ -25,8 +25,6 @@ module.exports = function (app) {
   // Set a user account to INACTIVE - find by externalId
   app.delete('/user/:extUserId', function (req, res) {
     console.log('[deleteUser] request received for ' + req.params.extUserId);
-    var query = { externalId: req.params.extUserId, state: User.State.ACTIVE };
-    var update = { state: User.State.INACTIVE };
     var callback = function (dbErr) {
       if (dbErr) {
         console.log('[deleteUser] Not found!');
@@ -44,7 +42,13 @@ module.exports = function (app) {
         });
       }
     };
-    User.update(query, update, callback);
+    User.find().byExternalId(req.params.extUserId).exec(function(err, user) {
+      if (user) {
+        UserService.setUserState(user.id, User.State.INACTIVE, callback);
+      } else {
+        res.sendStatus(404);
+      }
+    });
   });
 
 };
