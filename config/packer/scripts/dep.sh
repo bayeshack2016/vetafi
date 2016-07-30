@@ -38,3 +38,10 @@ echo debconf shared/accepted-oracle-license-v1-1 seen true | debconf-set-selecti
 apt-get -y install oracle-java8-installer
 # Set default java
 apt-get -y install oracle-java8-set-default
+
+# Biscuit (secrets management)
+wget https://github.com/dcoker/biscuit/releases/download/v0.1.2/biscuit-linux_amd64.tgz
+tar -xzvf biscuit-linux_amd64.tgz
+chmod +x biscuit
+mv biscuit /usr/local/bin/biscuit
+rm biscuit-linux_amd64.tgz
