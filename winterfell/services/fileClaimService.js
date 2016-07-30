@@ -1,4 +1,5 @@
-var lodash = require('lodash');
+var _ = require('lodash');
+var http = require('./../utils/httpResponses');
 var FileClaim = require('./../models/fileClaim');
 
 function FileClaimService(app) {
@@ -7,26 +8,26 @@ function FileClaimService(app) {
 
 module.exports = FileClaimService;
 module.exports.createNewClaim = function(userId, callbacks) {
-  // find if claim with state INCOMPLETE exists.
-  // if it does, return error.
-  // if does not exist, create new file claim
-  FileClaim.find({ userId: userId, state: FileClaim.State.INCOMPLETE }).exec(function(err, fileClaim) {
-    if (err == null && fileClaim == null) {
-      FileClaim.quickCreate(userId).then(function(claim, error) {
-        if (lodash.isEmpty(callbacks)) {
-          return;
-        } else if (claim) {
-          callbacks.onSuccess(claim);
+  FileClaim.find({}).exec(function(err, claims) {
+    console.log('claimsAll: ' + JSON.stringify(claims));
+  });
+  return FileClaim.findOne({ userId: userId, state: FileClaim.State.INCOMPLETE }).exec(function(err, fileClaim) {
+    console.log('claims: ' + JSON.stringify(fileClaim));
+    if (_.isEmpty(fileClaim)) {
+      return FileClaim.quickCreate(userId).then(function(claim, error) {
+        if (claim) {
+          _.isEmpty(callbacks) ? null : callbacks.onSuccess(claim);
+          return claim;
         } else {
-          callbacks.onError(500, 'database_error');
+          _.isEmpty(callbacks) ? null : callbacks.onError(http.CODE_INTERNAL_SERVER_ERROR, http.ERROR_DATABASE);
+          return null;
         }
       });
-    } else if (err) {
-      console.log('Error: ' + err);
-    } else if (fileClaim) {
-      console.log('Incomplete File Claim already exists');
+    } else {
+      _.isEmpty(callbacks) ? null : callbacks.onError(http.CODE_BAD_REQUEST, http.ERROR_CLAIM_INCOMPLETE_EXISTS);
     }
-  })
+    return null;
+  });
 };
 
 module.exports.addFileToClaim = function(fileClaimId, file, callbacks) {
@@ -40,5 +41,5 @@ module.exports.removeFileFromClaim = function(fileClaimId, file, callbacks) {
 module.exports.setClaimState = function(fileClaimId, state, callback) {
   var query = { id: fileClaimId };
   var update = { state: state };
-  FileClaim.update(query, update, callback);
+  return FileClaim.update(query, update, callback);
 };

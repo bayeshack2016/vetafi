@@ -1,6 +1,4 @@
 var should = require('should');
-var nock = require('nock');
-var request = require('request');
 
 describe('HealthCheckController', function() {
 

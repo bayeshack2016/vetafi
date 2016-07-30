@@ -29,3 +29,5 @@ module.exports.ERROR_UNKNOWN = "unknown_error";
 
 // Auth related errors
 module.exports.ERROR_AUTH_MISMATCH = "auth_mismatch";
+module.exports.ERROR_INVALID_EMAIL = "invalid_email";
+module.exports.ERROR_INVALID_PASSWORD = "invalid_password";
