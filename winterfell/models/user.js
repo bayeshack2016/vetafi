@@ -31,12 +31,10 @@ var State = {
 };
 
 // Query helpers
-UserSchema.query.byExternalId = function(extId) {
-  return this.find({ externalId: extId });
-};
+// None yet
 
 // Static methods
-UserSchema.statics.quickCreate = function(userId) {
+UserSchema.statics.quickCreate = function(user) {
   var now = Date.now();
   return User.create({
     firstname: user.firstname,
@@ -54,10 +52,12 @@ UserSchema.statics.quickCreate = function(userId) {
   });
 };
 
-// Instance methods
-UserSchema.methods.externalize = function() {
-  return _.pick(this, ['firstname', 'middlename', 'lastname', 'email', 'externalId']);
+UserSchema.statics.externalize = function(user) {
+  return _.pick(user, ['firstname', 'middlename', 'lastname', 'email', 'externalId']);
 };
+
+// Instance methods
+// None yet
 
 var User = mongoose.model('User', UserSchema);
 module.exports = User;

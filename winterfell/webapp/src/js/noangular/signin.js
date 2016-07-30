@@ -54,7 +54,6 @@ $(document).ready(function(){
       password: password
     };
     var success = function(resp) {
-      debugger;
       if (resp.userId) {
         sessionStorageHelper.setPair(vfiConstants.keyUserId, resp.userId);
       }
@@ -64,7 +63,6 @@ $(document).ready(function(){
     };
     var error = function(resp) {
       console.log('Error: ' + JSON.stringify(resp));
-      debugger;
       if (resp.responseJSON.error == "email_exists") {
         displayError("This email already being used. Try logging in with this email or try another email.");
       } else {

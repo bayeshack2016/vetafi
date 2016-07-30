@@ -1,5 +1,6 @@
 var _ = require('lodash');
 var passport = require('passport');
+var http = require('./../utils/httpResponses');
 var User = require('./../models/user');
 var UserService = require('./../services/userService');
 
@@ -41,17 +42,17 @@ module.exports = function (app) {
         var callbacks = {
           onError: function(errorCode, errorMsg) {
             console.log('[authSignUp] ' + errorCode + ' Error creating user: ' + errorMsg);
-            res.sendStatus(errorCode, errorMsg);
+            res.status(errorCode).send({error: errorMsg});
           },
           onSuccess: function(user) {
             console.log('[authSignUp] Successfully created user ' + user.externalId);
             var extUserId = user.externalId;
-            res.status(200).send({userId: extUserId, redirect: '/'});
+            res.status(http.CODE_SUCCESS).send({userId: extUserId, redirect: '/'});
           }
         };
         UserService.createNewUser(data, callbacks);
       } else { // User does exist!
-          res.status(400).send({ error: "email_exists"});
+          res.status(http.CODE_NOT_FOUND).send({error: http.ERROR_USER_EXISTS});
       }
     });
   });
@@ -62,9 +63,9 @@ module.exports = function (app) {
     if (req.user) {
       req.session.key = req.body.email;
       var extUserId = req.user.externalId;
-      res.status(200).send({userId: extUserId, redirect: '/'});
+      res.status(http.CODE_SUCCESS).send({userId: extUserId, redirect: '/'});
     } else {
-      res.status(403);
+      res.status(http.CODE_UNAUTHORIZED);
     }
   });
 
@@ -74,7 +75,7 @@ module.exports = function (app) {
     req.session.destroy(function (err) {
         if(err) {
             console.log(err);
-            res.end('done');
+            res.status(http.CODE_INTERNAL_SERVER_ERROR);
         } else {
             res.redirect('/');
         }

@@ -10,7 +10,7 @@ module.exports.createNewClaim = function(userId, callbacks) {
   // find if claim with state INCOMPLETE exists.
   // if it does, return error.
   // if does not exist, create new file claim
-  FileClaim.find().byUserAndState(userId, FileClaim.State.INCOMPLETE).exec(function(err, fileClaim) {
+  FileClaim.find({ userId: userId, state: FileClaim.State.INCOMPLETE }).exec(function(err, fileClaim) {
     if (err == null && fileClaim == null) {
       FileClaim.quickCreate(userId).then(function(claim, error) {
         if (lodash.isEmpty(callbacks)) {
