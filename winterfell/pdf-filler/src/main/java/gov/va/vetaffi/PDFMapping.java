@@ -109,8 +109,6 @@ public class PDFMapping {
             ImmutableList<PDFFieldLocator> pdfFieldLocators = grouped.get(key);
             List<PDFFieldLocator> pdfFieldLocatorsSorted = CONCAT_ORDERING.sortedCopy(pdfFieldLocators);
 
-            logger.info(formValueMap);
-
             String valueString = Joiner.on(" ").join(
                     pdfFieldLocatorsSorted.stream().map(
                             pdfFieldLocator -> {
