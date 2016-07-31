@@ -12,7 +12,7 @@ import java.util.List;
 @Path("/create/{form}")
 @Produces("application/pdf")
 public class PDFFillerResource {
-    private static final Logger logger = Logger.getLogger(PDFStreamingOutput.class);
+    private static final Logger logger = Logger.getLogger(PDFFillerResource.class);
 
     private final String formDir;
 

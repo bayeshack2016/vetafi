@@ -1,8 +1,11 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
+/**
+ * Represent a letter that has been sent, containing multiple documents.
+ */
 var letterSchema = new Schema({
-    externalId: String,
+    vendorId: String, // Unique iq lob.com associates with the letter
     createdAt: Date,
     expectedDeliveryDate: Date,
     recipient: Schema.Types.ObjectId,

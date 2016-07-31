@@ -5,6 +5,7 @@ var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
 var ENVIRONMENT = require('../utils/constants').environment;
+var documentRenderingConfig = require('config/documentRendering');
 
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
 var biscuit = require('../services/biscuit')(require('../config/biscuit')[environment]);
@@ -42,6 +43,9 @@ biscuit.get(environment + '::lob-api-key', function(err, secret) {
 
   app.set('lobApiKey', secret);
 });
+
+// Set address of document rendering microservice
+app.set('documentRenderingServiceAddress', documentRenderingConfig.address)
 
 var port = 3999;
 var server = app.listen(process.env.PORT || port);

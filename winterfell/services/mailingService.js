@@ -1,4 +1,9 @@
 var lob = require('Lob');
+var Document = require('./../models/document');
+var Letter = require('./../models/letter');
+var UserAddress = require('./../models/userAddress');
+var DestinationAddress = require('./../models/destinationAddress');
+var DocumentRenderingService = require('documentRenderingService');
 
 /**
  * Abstraction around a mailing api.
@@ -14,13 +19,66 @@ function MailingService(app) {
 }
 
 /**
+ * Send a set of rendered documents to the recipient.
  *
- * @param recipiant Recipient
- * @param sender Recipient
- * @param document
+ * @param recipient DestinationAddress
+ * @param sender UserAddress
+ * @param documents Array of Document
+ * @param callback function
  */
-MailingService.prototype.sendLetter = function (recipiant, sender, document) {
+MailingService.prototype.sendLetter = function (sender, recipient, documents, callback) {
+    var that = this;
+    DocumentRenderingService.concatenateDocs(documents, function(documentRenderingError, pdf) {
+        if (documentRenderingError) {
+            callback(documentRenderingError, null);
+            return;
+        }
 
+        that.Lob.letters.create({description: "Description",
+            to: {
+                name: recipient.name,
+                address_line1: recipient.addressLine1,
+                address_line2: recipient.addressLine2,
+                address_city: recipient.addressCity,
+                address_state: recipient.addressState,
+                address_zip: recipient.addressZip,
+                address_country: recipient.addressCountry
+            },
+            from: {
+                name: sender.name,
+                address_line1: sender.addressLine1,
+                address_line2: sender.addressLine2,
+                address_city: sender.addressCity,
+                address_state: sender.addressState,
+                address_zip: sender.addressZip,
+                address_country: sender.addressCountry
+            },
+            file: pdf
+        }, function (lobError, res) {
+            if (lobError) {
+                callback(lobError, null);
+                return;
+            }
+
+            Letter.create({
+                vendorId: res.id,
+                expectedDeliveryDate: res.expected_delivery_date,
+                recipient: recipient._id,
+                sender: sender._id,
+                documents: documents.map(function(doc) {
+                    return doc._id;
+                }),
+                user: sender.user
+            }, function(databaseError, doc) {
+                if (databaseError) {
+                    callback(databaseError, null);
+                    return;
+                }
+
+                callback(null, doc);
+            });
+        });
+    });
 };
 
 

@@ -19,7 +19,7 @@ module.exports = function (app) {
     app.post('/render/:form', function (req, res) {
         if (req.session.key) {
             request({
-                url: config.address + req.params.form,
+                url: config.address + 'create/' + req.params.form,
                 method: 'POST',
                 json: req.body,
                 headers: {'Accept': 'application/pdf'}

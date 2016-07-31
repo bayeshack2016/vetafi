@@ -11,15 +11,14 @@ public class PDFFillerApplication extends Application<PDFFillerConfiguration> {
 
     @Override
     public void run(PDFFillerConfiguration pdfFillerConfiguration, Environment environment) throws Exception {
-        final PDFFillerResource resource = new PDFFillerResource(
+        environment.jersey().register(new PDFFillerResource(
                 pdfFillerConfiguration.getFormDir()
-        );
-        environment.jersey().register(resource);
+        ));
+        environment.jersey().register(new PDFConcatResource());
         final PDFHealthCheck healthCheck =
                 new PDFHealthCheck(pdfFillerConfiguration.getFormDir());
         environment.healthChecks().register("pdfForms", healthCheck);
         environment.jersey().setUrlPattern("/api/*");
-        environment.jersey().register(resource);
     }
 
     @Override
