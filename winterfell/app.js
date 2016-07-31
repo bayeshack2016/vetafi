@@ -4,8 +4,10 @@ var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
+var ENVIRONMENT = require('../utils/constants').environment;
 
-var environment = process.env.NODE_ENV || 'local';
+var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
+var biscuit = require('../services/biscuit')(require('../config/biscuit')[environment]);
 var app = express();
 
 app.environment = environment;
@@ -31,6 +33,15 @@ app.get('/', function(req, resp) {
 
 // Connect to a mongodb server using mongoose
 require('./config/mongoose')(environment);
+
+// Setup lob api
+biscuit.get(environment + '::lob-api-key', function(err, secret) {
+  if (err) {
+    throw err;
+  }
+
+  app.set('lobApiKey', secret);
+});
 
 var port = 3999;
 var server = app.listen(process.env.PORT || port);
