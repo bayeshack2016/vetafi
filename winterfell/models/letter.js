@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var letterSchema = new Schema({
-    id: String,
+    externalId: String,
     createdAt: Date,
     expectedDeliveryDate: Date,
     recipient: Schema.Types.ObjectId,
