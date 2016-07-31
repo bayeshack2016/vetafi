@@ -50,6 +50,7 @@ describe('DocumentRenderingController', function () {
     });
 
     it('POST / should return 302', function (done) {
+        this.timeout(10000);
         testSession
             .post('/render/VBA-21-0781-ARE')
             .send([])
@@ -58,6 +59,7 @@ describe('DocumentRenderingController', function () {
     });
 
     it('POST / should redirect to pdf', function (done) {
+        this.timeout(10000);
         testSession
             .post('/render/VBA-21-0781-ARE')
             .send([])

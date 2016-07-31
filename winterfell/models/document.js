@@ -7,8 +7,7 @@ var Schema = mongoose.Schema;
 var documentSchema = new Schema({
     key: String, // Code name for the form
     pdf: Buffer,
-    user: Schema.Types.ObjectId,
-    nPages: Number
+    user: Schema.Types.ObjectId
 });
 
 var Document = mongoose.model('Document', documentSchema);

@@ -3,7 +3,7 @@ var Document = require('./../models/document');
 var Letter = require('./../models/letter');
 var UserAddress = require('./../models/userAddress');
 var DestinationAddress = require('./../models/destinationAddress');
-var DocumentRenderingService = require('documentRenderingService');
+var DocumentRenderingService = require('./documentRenderingService');
 
 /**
  * Abstraction around a mailing api.
@@ -16,7 +16,10 @@ function MailingService(app) {
     this.Lob = lob(app.get('lobApiKey'), {
         apiVersion: '2016-06-30'
     });
+    this.app = app;
 }
+
+module.exports = MailingService;
 
 /**
  * Send a set of rendered documents to the recipient.
@@ -28,7 +31,8 @@ function MailingService(app) {
  */
 MailingService.prototype.sendLetter = function (sender, recipient, documents, callback) {
     var that = this;
-    DocumentRenderingService.concatenateDocs(documents, function(documentRenderingError, pdf) {
+    var documentRenderingService = new DocumentRenderingService(this.app);
+    documentRenderingService.concatenateDocs(documents, function(documentRenderingError, pdf) {
         if (documentRenderingError) {
             callback(documentRenderingError, null);
             return;
@@ -80,9 +84,3 @@ MailingService.prototype.sendLetter = function (sender, recipient, documents, ca
         });
     });
 };
-
-
-
-
-
-module.exports = {};

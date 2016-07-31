@@ -1,8 +1,8 @@
 var exec = require('child_process').exec;
 var BISCUIT_BIN='biscuit';
 
-function Biscuit (secretsYamlFile) {
-    this.secretsYamlFile = secretsYamlFile;
+function Biscuit (app) {
+    this.secretsYamlFile = app.get('secretsFile');
 }
 
 Biscuit.prototype.get = function(secret, callback) {
@@ -13,6 +13,4 @@ Biscuit.prototype.get = function(secret, callback) {
         });
 };
 
-module.exports = function(secretsYamlFile) {
-    return new Biscuit(secretsYamlFile);
-};
+module.exports = Biscuit;

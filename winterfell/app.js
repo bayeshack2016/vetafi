@@ -4,12 +4,15 @@ var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
-var ENVIRONMENT = require('../utils/constants').environment;
-var documentRenderingConfig = require('config/documentRendering');
+var ENVIRONMENT = require('./utils/constants').environment;
+var documentRenderingConfig = require('./config/documentRendering');
 
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
-var biscuit = require('../services/biscuit')(require('../config/biscuit')[environment]);
+var Biscuit = require('./services/biscuit');
+
 var app = express();
+app.set('secretsFile', require('./config/biscuit')[environment]);
+var biscuit = new Biscuit(app);
 
 app.environment = environment;
 
@@ -45,10 +48,13 @@ biscuit.get(environment + '::lob-api-key', function(err, secret) {
 });
 
 // Set address of document rendering microservice
-app.set('documentRenderingServiceAddress', documentRenderingConfig.address)
+app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
+
+
 
 var port = 3999;
 var server = app.listen(process.env.PORT || port);
+server.app = app;
 console.log("Listening on port " + port + ". Winter is coming!");
 
 module.exports = server;
