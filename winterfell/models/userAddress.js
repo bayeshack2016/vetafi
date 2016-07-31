@@ -1,11 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-var recipientSchema = new Schema({
-    type: String, // User or government office
+var userAddressSchema = new Schema({
+    user: Schema.Types.ObjectId,
     name: String, // Name line
-    createdAt: Date,
-    updatedAt: Date,
     addressLine1: String,
     addressLine2: String,
     addressCity: String,
@@ -14,5 +12,5 @@ var recipientSchema = new Schema({
     addressCountry: String
 });
 
-var Recipient = mongoose.model('Recipient', recipientSchema);
-module.exports = Recipient;
+var UserAddress = mongoose.model('UserAddress', userAddressSchema);
+module.exports = UserAddress;
