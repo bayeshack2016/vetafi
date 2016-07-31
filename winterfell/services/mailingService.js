@@ -57,7 +57,8 @@ MailingService.prototype.sendLetter = function (sender, recipient, documents, ca
                 address_zip: sender.addressZip,
                 address_country: sender.addressCountry
             },
-            file: pdf
+            file: pdf,
+            double_sided: true
         }, function (lobError, res) {
             if (lobError) {
                 callback(lobError, null);
