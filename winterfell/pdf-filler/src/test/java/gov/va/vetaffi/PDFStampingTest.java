@@ -58,6 +58,5 @@ public class PDFStampingTest {
         }
         AcroFields form = stamper.getAcroFields();
         Map<String, AcroFields.Item> fields = form.getFields();
-        System.out.println(fields);
     }
 }

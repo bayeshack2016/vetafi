@@ -1,0 +1,26 @@
+{
+  "apps": [
+    {
+      "name": "PdfMicroservice",
+      "cwd": "pdf-filler",
+      "args": [
+        "-Ddw.server.applicationConnectors[0].port=9797",
+        "-jar",
+        "target/pdf-filler-1.0-SNAPSHOT.jar",
+        "server",
+        "config.yaml"
+      ],
+      "env": {},
+      "script": "java",
+      "node_args": [],
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "exec_interpreter": "none",
+      "exec_mode": "fork"
+    },
+    {
+      "name": "Express",
+      "script": "app.js",
+      "watch": true
+    }
+  ]
+}
