@@ -5,10 +5,4 @@ pushd webapp
 
 popd
 
-pushd pdf-filler
-
-java -Ddw.server.applicationConnectors\[0\].port=9797 -jar target/pdf-filler-1.0-SNAPSHOT.jar server config.yaml &
-
-popd
-
-./app.js
+pm2 start process.json

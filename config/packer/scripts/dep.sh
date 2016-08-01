@@ -45,3 +45,6 @@ tar -xzvf biscuit-linux_amd64.tgz
 chmod +x biscuit
 mv biscuit /usr/local/bin/biscuit
 rm biscuit-linux_amd64.tgz
+
+# PM2 (process management / monitoring)
+npm install pm2 -g
