@@ -1,0 +1,6 @@
+div(ng-controller="formCtrl")
+    signature-pad(dataurl="dataurl" accept="accept" clear="clear" height="220" width="568")
+    button(ng-click="clear()")
+        | Clear
+    button(ng-click="signature = accept()")
+        | Accept

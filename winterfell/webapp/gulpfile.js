@@ -42,7 +42,8 @@ gulp.task('libs', function() {
       "lodash-v411-1.js",
       "angular.min.js",
       "angular-route.min.js",
-			"**/*.js"
+        "signature_pad.min.js",
+		"**/*.js"
     ]))
     .pipe(concat('libs.js'))
     .pipe(gulp.dest('build/libs'));
