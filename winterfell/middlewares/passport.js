@@ -1,6 +1,7 @@
 var _ = require('lodash');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
+var http = require('../utils/httpResponses');
 var User = require('../models/user');
 var AuthService = require('../services/authService');
 
@@ -36,13 +37,13 @@ module.exports = function (app) {
             }
 
             if (!user) {
-              return next(null, false, 'auth_mismatch'); // email does not match
+              return next(null, false, http.ERROR_AUTH_MISMATCH); // email does not match
             }
 
             if (AuthService.isPasswordCorrect(user.password, password)) {
               return next(null, user);
             } else {
-              return next(null, false, 'auth_mismatch'); // password does not match
+              return next(null, false, http.ERROR_AUTH_MISMATCH); // password does not match
             }
         });
     }

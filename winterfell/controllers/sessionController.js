@@ -1,4 +1,5 @@
 var RedisService = require('../services/redisService');
+var http = require('http-status-codes');
 var Constants = require('../utils/constants');
 
 module.exports = function (app) {
@@ -7,10 +8,10 @@ module.exports = function (app) {
   app.get('/session/touch', function(req, res) {
     console.log('[sessionTouch] request received');
     if (req.session.key) {
-      res.sendStatus(200);
+      res.sendStatus(http.OK);
     } else {
       console.log('[sessionTouch] session expired!');
-      res.sendStatus(404);
+      res.sendStatus(http.UNAUTHORIZED);
     }
   });
 };

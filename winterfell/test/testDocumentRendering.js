@@ -2,7 +2,6 @@ var User = require('./../models/user');
 var UserService = require('./../services/userService');
 var session = require('supertest-session');
 
-
 describe('DocumentRenderingController', function () {
     var server;
     var testSession;
