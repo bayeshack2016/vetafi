@@ -1,6 +1,7 @@
 @import "standards.styl"
 
 iconSearchSize = 36px
+iconCancelSearchSize = 28px
 iconWarningSize = 56px
 
 #faq-view
@@ -10,6 +11,7 @@ iconWarningSize = 56px
   max-width: maxLayoutWidthPx
 
   & .search-wrapper
+    position: relative
     width: 100%
     padding: miniSpacing
     padding-left: megaSpacing
@@ -34,7 +36,7 @@ iconWarningSize = 56px
     background-size: cover
 
   & .search-bar
-    width: "calc(100% - %s)" % (iconSearchSize + smallSpacingPx)
+    width: "calc(100% - %s)" % (iconSearchSize + smallSpacingPx + iconCancelSearchSize)
     height: largeSpacing
     line-height: largeSpacing
     box-sizing: border-box
@@ -42,6 +44,18 @@ iconWarningSize = 56px
     font-size: heading1_small_size
     outline: none
     border: none
+
+  & .cancel-icon
+    position: absolute
+    right: smallSpacing
+    top: 50%
+    transform: translateY(-50%)
+    width: iconCancelSearchSize
+    height: iconCancelSearchSize
+    padding: 0
+    background: url('../icons/cancel.svg')
+    background-repeat: no-repeat
+    background-size: cover
 
 .section-card
   margin-bottom: largeSpacing

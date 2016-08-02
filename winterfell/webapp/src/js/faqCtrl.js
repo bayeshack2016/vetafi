@@ -21,5 +21,8 @@ app.controller('faqCtrl', ['$scope', function($scope) {
   $scope.searchText = '';
   $scope.onSearchChange = function() {
   };
+  $scope.cancelSearch = function() {
+    $scope.searchText = '';
+  };
 
 }]);
