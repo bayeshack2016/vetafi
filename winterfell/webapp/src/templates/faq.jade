@@ -6,3 +6,9 @@
     div.section-title {{section.title}}
     div.section-divider
     div.section-content {{section.content}}
+  div.section-card.vfi-error(ng-show="(sections | filter:searchText).length == 0")
+    div.warning-icon
+    div.section-content
+      | Looks like we can't find what you searched for.
+      br
+      | Try simplifying your search keywords to get more results.
