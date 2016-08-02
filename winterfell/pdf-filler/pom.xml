@@ -7,6 +7,10 @@
     <groupId>pdf-filler</groupId>
     <artifactId>pdf-filler</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <dropwizard.version>1.0.0-rc2</dropwizard.version>
+    </properties>
+
 
     <dependencies>
         <dependency>
@@ -17,8 +21,15 @@
         <dependency>
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
-            <version>1.0.0-rc2</version>
+            <version>${dropwizard.version}</version>
         </dependency>
+        <dependency>
+            <groupId>io.dropwizard</groupId>
+            <artifactId>dropwizard-forms</artifactId>
+            <version>${dropwizard.version}</version>
+            <type>pom</type>
+        </dependency>
+
         <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>

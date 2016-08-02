@@ -1,8 +1,8 @@
-# Be sure to start the mongodb server on another terminal
-# run `mongod`
-
 # Runs the server in this terminal
-cd webapp
-gulp build
-cd ..
-node app.js
+pushd webapp
+
+./../node_modules/gulp/bin/gulp.js build
+
+popd
+
+pm2 start process.json

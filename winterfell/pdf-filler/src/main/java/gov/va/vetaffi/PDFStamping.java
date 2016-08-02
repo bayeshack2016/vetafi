@@ -40,12 +40,10 @@ public class PDFStamping {
         try {
             Map<String, String> stringStringMap = PDFMapping.mapStringValues(fields, pdfFieldLocators);
             for (Map.Entry<String, String> entry : stringStringMap.entrySet()) {
-                logger.info("Setting " + entry.getKey() + " to " + entry.getValue());
                 form.setField(entry.getKey(), entry.getValue());
             }
             Map<String, Boolean> stringBoolMap = PDFMapping.mapCheckboxValues(fields, pdfFieldLocators);
             for (Map.Entry<String, Boolean> entry : stringBoolMap.entrySet()) {
-                logger.info("Setting " + entry.getKey() + " to " + entry.getValue());
                 if (entry.getValue()) {
                     form.setField(entry.getKey(), "1");
 
