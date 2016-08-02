@@ -26,7 +26,7 @@ describe('UserService', function() {
       email: 'badEmail',
       password: 'asdfqwer',
     };
-    mockedCallbacks.expects('onError').once().withArgs(http.OK, httpErrors.INVALID_EMAIL);
+    mockedCallbacks.expects('onError').once().withArgs(http.BAD_REQUEST, httpErrors.INVALID_EMAIL);
     mockedCallbacks.expects('onSuccess').never();
 
     // Execute
