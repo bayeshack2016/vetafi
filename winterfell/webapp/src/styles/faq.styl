@@ -1,5 +1,8 @@
 @import "standards.styl"
 
+iconSearchSize = 36px
+iconWarningSize = 56px
+
 #faq-view
   margin: largeSpacing auto
   box-sizing: border-box
@@ -22,8 +25,8 @@
 
   & .search-icon
     display: inline-block
-    width: 36px
-    height: 36px
+    width: iconSearchSize
+    height: iconSearchSize
     margin-left: -8px
     margin-right: smallSpacing
     background: url('../icons/search.svg')
@@ -31,7 +34,7 @@
     background-size: cover
 
   & .search-bar
-    width: calc(100% - 72px)
+    width: "calc(100% - %s)" % (iconSearchSize + smallSpacingPx)
     height: largeSpacing
     line-height: largeSpacing
     box-sizing: border-box
@@ -61,3 +64,17 @@
     line-height: bodyFont_lineHeight
     font-size: bodyFont_size
     font-weight: bodyFont_weight
+
+.section-card.vfi-error
+  & .warning-icon
+    display: inline-block
+    width: iconWarningSize
+    height: iconWarningSize
+    margin-right: mediumSpacing
+    background: url('../icons/warning.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+  & .section-content
+    display: inline-block
+    vertical-align: top
