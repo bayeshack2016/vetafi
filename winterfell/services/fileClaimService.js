@@ -1,5 +1,6 @@
 var _ = require('lodash');
-var http = require('./../utils/httpResponses');
+var http = require('http-status-codes');
+var httpErrors = require('./../utils/httpErrors');
 var FileClaim = require('./../models/fileClaim');
 
 function FileClaimService(app) {
@@ -19,12 +20,12 @@ module.exports.createNewClaim = function(userId, callbacks) {
           _.isEmpty(callbacks) ? null : callbacks.onSuccess(claim);
           return claim;
         } else {
-          _.isEmpty(callbacks) ? null : callbacks.onError(http.CODE_INTERNAL_SERVER_ERROR, http.ERROR_DATABASE);
+          _.isEmpty(callbacks) ? null : callbacks.onError(http.INTERNAL_SERVER_ERROR, httpErrors.DATABASE);
           return null;
         }
       });
     } else {
-      _.isEmpty(callbacks) ? null : callbacks.onError(http.CODE_BAD_REQUEST, http.ERROR_CLAIM_INCOMPLETE_EXISTS);
+      _.isEmpty(callbacks) ? null : callbacks.onError(http.BAD_REQUEST, httpErrors.CLAIM_INCOMPLETE_EXISTS);
     }
     return null;
   });

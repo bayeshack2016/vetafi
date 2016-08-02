@@ -1,6 +1,7 @@
 var should = require('should');
 var sinon = require('sinon');
-var http = require('../utils/httpResponses');
+var http = require('http-status-codes');
+var httpErrors = require('./../utils/httpErrors');
 var User = require('../models/user');
 var UserService = require('../services/userService');
 
@@ -25,7 +26,7 @@ describe('UserService', function() {
       email: 'badEmail',
       password: 'asdfqwer',
     };
-    mockedCallbacks.expects('onError').once().withArgs(http.CODE_BAD_REQUEST, http.ERROR_INVALID_EMAIL);
+    mockedCallbacks.expects('onError').once().withArgs(http.OK, httpErrors.INVALID_EMAIL);
     mockedCallbacks.expects('onSuccess').never();
 
     // Execute
@@ -46,7 +47,7 @@ describe('UserService', function() {
       email: 'moose@test.com',
       password: 'asdf',
     };
-    mockedCallbacks.expects('onError').once().withArgs(http.CODE_BAD_REQUEST, http.ERROR_INVALID_PASSWORD);
+    mockedCallbacks.expects('onError').once().withArgs(http.BAD_REQUEST, httpErrors.INVALID_PASSWORD);
     mockedCallbacks.expects('onSuccess').never();
 
     // Execute

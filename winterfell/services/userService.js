@@ -1,5 +1,6 @@
 var _ = require('lodash');
-var http = require('../utils/httpResponses');
+var http = require('http-status-codes');
+var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
 
 var MAX_PASSWORD_LENGTH = 6;
@@ -24,12 +25,12 @@ module.exports.createNewUser = function(user, callbacks) {
   var errorCode = 0;
   var errorMsg = null;
   if (!validateEmail(email)) {
-    errorCode = http.CODE_BAD_REQUEST;
-    errorMsg = http.ERROR_INVALID_EMAIL;
+    errorCode = http.BAD_REQUEST;
+    errorMsg = httpErrors.INVALID_EMAIL;
   }
   if (!validatePassword(password)) {
-    errorCode = http.CODE_BAD_REQUEST;
-    errorMsg = http.ERROR_INVALID_PASSWORD;
+    errorCode = http.BAD_REQUEST;
+    errorMsg = httpErrors.INVALID_PASSWORD;
   }
 
   if (errorCode == 0) {
@@ -45,7 +46,7 @@ module.exports.createNewUser = function(user, callbacks) {
       if (user) {
         _.isEmpty(callbacks) ? null : callbacks.onSuccess(user);
       } else {
-        _.isEmpty(callbacks) ? null : callbacks.onError(http.CODE_INTERNAL_SERVER_ERROR, http.ERROR_DATABASE);
+        _.isEmpty(callbacks) ? null : callbacks.onError(http.INTERNAL_SERVER_ERROR, httpErrors.DATABASE);
       }
     });
   } else if (!_.isEmpty(callbacks)) {

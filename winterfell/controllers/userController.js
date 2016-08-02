@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var http = require('../utils/httpResponses');
+var http = require('http-status-codes');
+var httpErrors = require('./../utils/httpErrors');
 var User = require('../models/user');
 var UserService = require('./../services/userService');
 
@@ -10,9 +11,9 @@ module.exports = function (app) {
     console.log('[getUser] request received for ' + req.params.extUserId);
     User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
       if (user) {
-        res.status(http.CODE_SUCCESS).send({user: User.externalize(user)});
+        res.status(http.OK).send({user: User.externalize(user)});
       } else {
-        res.status(http.CODE_NOT_FOUND).send({error: http.ERROR_USER_NOT_FOUND});
+        res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       }
     });
   });
@@ -20,7 +21,7 @@ module.exports = function (app) {
   // Modify a user's information - find by externalId
   app.post('/user/:extUserId/modify', function (req, res) {
     console.log('[modifyUser] request received for ' + JSON.stringify(req.body));
-    res.status(http.CODE_SUCCESS).send({});
+    res.status(http.OK).send({});
   });
 
   // Set a user account to INACTIVE - find by externalId
@@ -29,16 +30,16 @@ module.exports = function (app) {
     var callback = function (dbErr) {
       if (dbErr) {
         console.log('[deleteUser] Not found!');
-        res.status(http.CODE_NOT_FOUND).send({error: http.ERROR_USER_NOT_FOUND});
+        res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       } else {
         console.log('[deleteUser] Successfully deleted');
         // Destroy session
         req.session.destroy(function (redisErr) {
           if(redisErr) {
             console.log(redisErr);
-            res.status(http.CODE_INTERNAL_SERVER_ERROR);
+            res.status(http.INTERNAL_SERVER_ERROR);
           } else {
-            res.status(http.CODE_SUCCESS);
+            res.status(http.OK);
           }
         });
       }
@@ -47,7 +48,7 @@ module.exports = function (app) {
       if (user) {
         UserService.setUserState(user.id, User.State.INACTIVE, callback);
       } else {
-        res.status(http.CODE_NOT_FOUND);
+        res.status(http.NOT_FOUND);
       }
     });
   });

@@ -1,4 +1,5 @@
 var request = require('request');
+var http = require('http-status-codes');
 var config = require('../config/documentRendering');
 var redis = require("redis"),
     client = redis.createClient();
@@ -26,11 +27,11 @@ module.exports = function (app) {
             }, function (error, microserviceResponse, body) {
                 if (error) {
                     console.error(error);
-                    res.sendStatus(500);
+                    res.sendStatus(http.INTERNAL_SERVER_ERROR);
                     return;
                 }
 
-                if (microserviceResponse.statusCode !== 200) {
+                if (microserviceResponse.statusCode !== http.OK) {
                     res.sendStatus(microserviceResponse.statusCode);
                     return;
                 }
@@ -40,7 +41,7 @@ module.exports = function (app) {
                 res.redirect('/document/' + renderedDocumentId);
             });
         } else {
-            res.sendStatus(404);
+            res.sendStatus(http.NOT_FOUND);
         }
     });
 
@@ -51,17 +52,17 @@ module.exports = function (app) {
                 req.params.id,
                 function (err, data) {
                     if (err) {
-                        res.sendStatus(500);
+                        res.sendStatus(http.INTERNAL_SERVER_ERROR);
                     }
 
                     res
-                        .status(200)
+                        .status(http.OK)
                         .set('Content-Type', 'application/pdf')
                         .send(data);
                 }
             )
         } else {
-            res.sendStatus(404);
+            res.sendStatus(http.NOT_FOUND);
         }
     });
 };

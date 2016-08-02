@@ -1,6 +1,7 @@
 var should = require('should');
 var sinon = require('sinon');
-var http = require('../utils/httpResponses');
+var http = require('http-status-codes');
+var httpErrors = require('./../utils/httpErrors');
 var FileClaim = require('../models/fileClaim');
 var FileClaimService = require('../services/fileClaimService');
 var User = require('../models/user');
@@ -36,7 +37,7 @@ describe('FileClaimService', function() {
     };
     var mockedCallbacks = sinon.mock(callbacks);
     mockedCallbacks.expects('onSuccess').never();
-    mockedCallbacks.expects('onError').once().withArgs(http.CODE_BAD_REQUEST, http.ERROR_CLAIM_INCOMPLETE_EXISTS);
+    mockedCallbacks.expects('onError').once().withArgs(http.BAD_REQUEST, httpErrors.CLAIM_INCOMPLETE_EXISTS);
 
     createNewUser().then(function() {
       User.findOne({}).exec(function(err, user) {

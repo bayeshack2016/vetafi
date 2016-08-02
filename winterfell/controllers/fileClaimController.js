@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-var http = require('../utils/httpResponses');
+var http = require('http-status-codes');
+var httpErrors = require('./../utils/httpErrors');
 var FileClaim = require('../models/fileClaim');
 var FileClaimService = require('./../services/fileClaimService');
 var User = require('../models/user');
@@ -15,10 +16,10 @@ module.exports = function (app) {
           var extClaims = _.map(claims, function(c) {
             return c.externalize();
           });
-          res.status(http.CODE_SUCCESS).send({claims: extClaims});
+          res.status(http.OK).send({claims: extClaims});
         });
       } else {
-        res.status(http.CODE_NOT_FOUND).send({error: http.ERROR_USER_NOT_FOUND});
+        res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       }
     });
   });
@@ -28,9 +29,9 @@ module.exports = function (app) {
     console.log('[getClaim] request received for ' + req.params.extClaimId);
     FileClaim.find({externalId: req.params.extClaimId}).exec(function(err, claim) {
       if (claim) {
-        res.status(http.CODE_SUCCESS).send({claim: claim.externalize()});
+        res.status(http.OK).send({claim: claim.externalize()});
       } else {
-        res.status(http.CODE_NOT_FOUND).send({error: http.ERROR_CLAIM_NOT_FOUND});
+        res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
       }
     });
   });
@@ -40,10 +41,10 @@ module.exports = function (app) {
     var extUserId = req.body.extUserId;
     var callbacks = {
       onSuccess: function(claim) {
-        res.status(http.CODE_SUCCESS).send({claim: FileClaim.externalize(claim)});
+        res.status(http.OK).send({claim: FileClaim.externalize(claim)});
       },
       onError: function(errCode, status) {
-        res.status(http.CODE_INTERNAL_SERVER_ERROR).send({error: http.ERROR_DATABASE});
+        res.status(http.INTERNAL_SERVER_ERROR).send({error: httpErrors.DATABASE});
       }
     }
     if (extUserId) {
@@ -51,11 +52,11 @@ module.exports = function (app) {
         if (user) {
           FileClaimService.createNewClaim(user.id, callbacks);
         } else {
-          res.status(http.CODE_NOT_FOUND).send({error: http.ERROR_USER_NOT_FOUND});
+          res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
         }
       });
     } else {
-      res.status(http.CODE_BAD_REQUEST).send({error: http.ERROR_INVALID_USER_ID});
+      res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_USER_ID});
     }
   });
 
@@ -65,10 +66,10 @@ module.exports = function (app) {
     FileClaim.findOne({externalId: extClaimId}).exec(function(err, claim) {
       if (claim) {
         FileClaimService.setClaimState(claim.id, FileClaim.State.DISCARDED, function() {
-          res.status(http.CODE_SUCCESS);
+          res.status(http.OK);
         });
       } else {
-        res.status(http.CODE_NOT_FOUND).send({error: http.ERROR_CLAIM_NOT_FOUND});
+        res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
       }
     });
   });
