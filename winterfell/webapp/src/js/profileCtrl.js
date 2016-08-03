@@ -1,6 +1,6 @@
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', 'strings', 'ngDialog',
-  function($scope, $location, profileService, net, strings, ngDialog) {
+app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimService', 'net', 'strings', 'ngDialog',
+  function($scope, $location, profileService, claimService, net, strings, ngDialog) {
     $scope.ranks = strings.ranks;
     $scope.branches = strings.branches;
     $scope.insigniaUrls = {
@@ -18,6 +18,7 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
     };
     $scope.currentTab = tabValues.military;
     $scope.userInfo = {};
+    $scope.claims = [];
     $scope.militaryInfo = [
       {
         rank: 'lieutenant',
@@ -32,7 +33,6 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
         yearEnd: '2013'
       }
     ];
-    $scope.claims = [];
 
     $scope.clickMilitaryTab = function() {
       $location.path('/profile/' + tabValues.military);
@@ -84,6 +84,23 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
       });
     };
 
+    function updateClaims() {
+      _.map($scope.claims, function(claim) {
+        if (!claim.actionMessage) {
+          if (claim.state == 'incomplete') {
+            claim.dateMessage = 'Last modified on ' + claim.updatedAt;
+          } else if (claim.state == 'submitted') {
+            claim.dateMessage = 'Submitted on ' + claim.updatedAt;
+          } else if (claim.state == 'processed') {
+            claim.dateMessage = 'Processed by the VA on ' + claim.updatedAt;
+          }
+        }
+      });
+    }
+
+    //
+    // Watchers
+    //
     $scope.$watch(function() {
       return $location.path();
     }, function(newVal, oldVal) {
@@ -97,6 +114,13 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
         $scope.currentTab = tabValues.military;
       }
     });
+
+    $scope.$watch(function () {
+			return claimService.userClaims;
+		}, function (newVal) {
+			$scope.claims = claimService.userClaims;
+      updateClaims();
+		});
 
   }
 ]);

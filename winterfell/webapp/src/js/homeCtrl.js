@@ -1,9 +1,13 @@
 var app = angular.module('vetafiApp');
-app.controller('homeCtrl', ['$scope', 'profileService',
-  function($scope, profileService) {
+app.controller('homeCtrl', ['$scope', 'profileService', 'claimService',
+  function($scope, profileService, claimService) {
     $scope.isLoggedIn = false;
+    $scope.hasIncompleteClaim = false;
 
-		$scope.$watch(function () {
+    //
+    // Watchers
+    //
+		$scope.$watch(function() {
 			return profileService.userInfo;
 		}, function (newVal) {
 			if (_.isEmpty(newVal)) {
@@ -12,5 +16,11 @@ app.controller('homeCtrl', ['$scope', 'profileService',
 				$scope.isLoggedIn = true;
 			}
 		});
+
+    $scope.$watch(function() {
+      return claimService.userClaims;
+    }, function (newVal) {
+      $scope.hasIncompleteClaim = claimService.hasIncompleteClaim();
+    })
   }
 ]);

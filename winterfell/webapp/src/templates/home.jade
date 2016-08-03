@@ -2,7 +2,11 @@
   div.vfi-banner-wrapper
     div.vfi-banner-img
     div.vfi-banner-overlay
-      div.vfi-banner-text-wrapper
+      div.vfi-banner-text-wrapper(ng-show="hasIncompleteClaim")
+        | Continue your previous claim
+        a(href="#/tos")
+          button.vfi-banner-action Continue claim
+      div.vfi-banner-text-wrapper(ng-show="!hasIncompleteClaim")
         | Get the benefits that you deserve
         a(href="#/tos")
           button.vfi-banner-action Start a claim

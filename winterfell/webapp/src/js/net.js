@@ -45,6 +45,8 @@ app.factory('net', ['$http', function($http) {
     touchSession: function() {
       return httpGet("/session/touch");
     },
+
+    // User
     getUserInfo: function() {
       var userId = getSessionUserId();
       return httpGet("/user/" + userId);
@@ -52,6 +54,18 @@ app.factory('net', ['$http', function($http) {
     deleteUserAccount: function() {
       var userId = getSessionUserId();
       return httpDelete("/user/" + userId);
+    },
+
+    // File claims
+    getClaimsForUser: function() {
+      var userId = getSessionUserId();
+      return httpGet("/claims/user" + userId);
+    },
+    submitClaim: function(extClaimId) {
+      return httpPost("/claim/" + extClaimId + "/submit");
+    },
+    discardClaim: function(extClaimId) {
+      return httpDelete("/claim/" + extClaimId);
     }
   };
 }]);

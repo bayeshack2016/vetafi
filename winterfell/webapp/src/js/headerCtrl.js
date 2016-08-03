@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$interval', 'ngDialog',
-	function ($scope, profileService, net, $location, $interval, ngDialog) {
+app.controller("headerCtrl", ['$scope', 'profileService', 'claimService', 'net', '$location', '$interval', 'ngDialog',
+	function ($scope, profileService, claimService, net, $location, $interval, ngDialog) {
 		$scope.isSignedIn = false;
 		$scope.inactive = true;
 		$scope.inactivityHandler = undefined;
@@ -10,6 +10,9 @@ app.controller("headerCtrl", ['$scope', 'profileService', 'net', '$location', '$
 			net.getUserInfo().then(function(resp) {
 				var user = resp.data.user;
 				profileService.userInfo = user;
+				net.getClaimsForUser(user.id).then(function(resp) {
+					claimService.userClaims = resp.data.claims;
+				});
 			});
 		}
 
