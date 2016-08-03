@@ -19,7 +19,6 @@ var FileClaimSchema = new Schema({
 
 var State = {
   INCOMPLETE: 'incomplete',
-  COMPLETED: 'completed',
   DISCARDED: 'discarded',
   SUBMITTED: 'submitted',
   PROCESSED: 'processed'

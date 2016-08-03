@@ -180,6 +180,64 @@ borderType = 2px solid colorBorder
 //
 .vfi-profile-section#claims
 
+  & .vfi-section-content
+    margin-bottom: largeSpacing
+    padding: mediumSpacing largeSpacing
+    border: 2px solid colorDarkGray
+    border-radius: 6px
+
+    &:hover
+      cursor: pointer
+    &.vfi-incomplete:hover
+      border-color: colorYellow
+    &.vfi-submitted:hover
+      border-color: colorPrimaryBlue
+    &.vfi-processed:hover
+      border-color: colorLightGreen
+
+  & .vfi-top-message
+    margin-bottom: megaSpacing
+    color: colorBlack
+
+    & .vfi-date
+      float: left
+
+    & .vfi-check-icon
+      float: right
+      width: 42px
+      height: 42px
+      background: url('../icons/checkmark-green.svg')
+      background-size: cover
+      background-repeat: no-repeat
+
+    & .vfi-action
+      float: right
+      background-color: colorYellow
+      color: colorBlack
+
+  & .vfi-bar
+    position: relative
+    width: 100%
+    height: mediumSpacing
+    background-color: colorLightGray
+    border-radius: 12px
+    overflow: hidden
+
+  & .vfi-progress
+    position: absolute
+    top: 0px
+    left: 0px
+    height: 100%
+    width: 40%
+    background-color: colorPrimaryBlue
+
+    &.vfi-submitted
+      width: 100%
+
+    &.vfi-processed
+      width: 100%
+      background-color: colorLightGreen
+
 //
 // Profile Options section
 //

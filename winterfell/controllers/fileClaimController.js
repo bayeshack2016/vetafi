@@ -60,18 +60,35 @@ module.exports = function (app) {
     }
   });
 
-  app.delete('/claims/:extClaimId', function (req, res) {
-    console.log('[deleteClaim] request received for ' + req.params.extClaimId);
-    var extClaimId = req.body.extClaimId;
+  function handleClaimStateChange(extClaimId, claimState) {
     FileClaim.findOne({externalId: extClaimId}).exec(function(err, claim) {
       if (claim) {
-        FileClaimService.setClaimState(claim.id, FileClaim.State.DISCARDED, function() {
-          res.status(http.OK);
+        FileClaimService.setClaimState(claim.id, claimState, function() {
+          res.status(http.NO_CONTENT);
         });
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
       }
     });
+  }
+
+  app.post('/claims/:extClaimId/submit', function(req, res) {
+    var extClaimId = req.body.extClaimId;
+    if (extClaimId) {
+      handleClaimStateChange(extClaimId, FileClaim.State.SUBMITTED);
+    } else {
+      res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_CLAIM_ID});
+    }
+  });
+
+  app.delete('/claims/:extClaimId', function (req, res) {
+    console.log('[deleteClaim] request received for ' + req.params.extClaimId);
+    var extClaimId = req.body.extClaimId;
+    if (extClaimId) {
+      handleClaimStateChange(extClaimId, FileClaim.State.DISCARDED);
+    } else {
+      res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_CLAIM_ID});
+    }
   });
 
 };

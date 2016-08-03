@@ -36,6 +36,8 @@ app.config(function ($routeProvider) {
         templateUrl: "templates/claimConfirm.html"
     }).when("/claim/submitted", {
         templateUrl: "templates/claimSubmitted.html"
+    }).when("/claim/:claimId", {
+        templateUrl: "templates/claimView.html"
     })
 
     .when("/form", {
