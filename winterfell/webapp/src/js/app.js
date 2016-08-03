@@ -6,7 +6,8 @@
 var app = angular.module('vetafiApp', [
     'ngRoute',
     'angular-click-outside',
-    'ngDialog'
+    'ngDialog',
+    'signature'
 ]);
 
 /**
@@ -35,7 +36,14 @@ app.config(function ($routeProvider) {
         templateUrl: "templates/claimConfirm.html"
     }).when("/claim/submitted", {
         templateUrl: "templates/claimSubmitted.html"
-    }).otherwise({
+    })
+
+    .when("/form", {
+        templateUrl: "templates/form.html"
+    })
+
+    // Otherwise
+    .otherwise({
         redirectTo: '/'
     });
 });

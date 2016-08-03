@@ -11,6 +11,7 @@ var order = require('gulp-order');
 var del = require('del');
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var sourcemaps = require('gulp-sourcemaps');
 
 var release = args.release ? true : false;
 
@@ -25,14 +26,16 @@ gulp.task('stylus', function() {
     }))
     .pipe(concat('main.css'))
     .pipe(gulp.dest('build/css'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('jade', function() {
   return gulp.src('src/**/*.jade')
     .pipe(jade())
     .pipe(gulp.dest('build'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('libs', function() {
@@ -42,17 +45,20 @@ gulp.task('libs', function() {
       "lodash-v411-1.js",
       "angular.min.js",
       "angular-route.min.js",
-			"**/*.js"
+      "signature_pad.min.js",
+      "**/*.js"
     ]))
     .pipe(concat('libs.js'))
-    .pipe(gulp.dest('build/libs'));
+    .pipe(gulp.dest('build/libs'))
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('other-js', function() {
 	return gulp.src('src/js/noangular/**/*.js')
 		.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
 		.pipe(gulp.dest('build/js'))
-		.pipe(browserSync.stream());
+		.pipe(browserSync.stream())
+        .pipe(sourcemaps.write());
 });
 
 gulp.task('js', function() {
@@ -60,7 +66,8 @@ gulp.task('js', function() {
     .pipe(concat('main.js'))
     .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.stream())
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('fonts', function() {
