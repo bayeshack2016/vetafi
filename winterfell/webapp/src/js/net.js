@@ -56,7 +56,7 @@ app.factory('net', ['$http', function($http) {
       return httpDelete("/user/" + userId);
     },
 
-    // File claims
+    // Claims
     getClaimsForUser: function() {
       var userId = getSessionUserId();
       return httpGet("/claims/user" + userId);

@@ -116,11 +116,11 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
     });
 
     $scope.$watch(function () {
-			return claimService.userClaims;
-		}, function (newVal) {
-			$scope.claims = claimService.userClaims;
+      return claimService.userClaims;
+    }, function (newVal) {
+      $scope.claims = claimService.userClaims;
       updateClaims();
-		});
+    });
 
   }
 ]);

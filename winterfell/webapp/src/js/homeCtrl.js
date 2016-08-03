@@ -7,15 +7,15 @@ app.controller('homeCtrl', ['$scope', 'profileService', 'claimService',
     //
     // Watchers
     //
-		$scope.$watch(function() {
-			return profileService.userInfo;
-		}, function (newVal) {
-			if (_.isEmpty(newVal)) {
-				$scope.isLoggedIn = false;
-			} else {
-				$scope.isLoggedIn = true;
-			}
-		});
+    $scope.$watch(function() {
+      return profileService.userInfo;
+    }, function (newVal) {
+      if (_.isEmpty(newVal)) {
+        $scope.isLoggedIn = false;
+      } else {
+        $scope.isLoggedIn = true;
+      }
+    });
 
     $scope.$watch(function() {
       return claimService.userClaims;
