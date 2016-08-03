@@ -29,8 +29,12 @@ app.config(function ($routeProvider) {
     // File Claims Pages
     .when("/tos", {
         templateUrl: "templates/tos.html"
-    }).when("/start-file-claim", {
-        templateUrl: "templates/startFileClaim.html"
+    }).when("/claim/start", {
+        templateUrl: "templates/claimStart.html"
+    }).when("/claim/confirm", {
+        templateUrl: "templates/claimConfirm.html"
+    }).when("/claim/submitted", {
+        templateUrl: "templates/claimSubmitted.html"
     }).otherwise({
         redirectTo: '/'
     });

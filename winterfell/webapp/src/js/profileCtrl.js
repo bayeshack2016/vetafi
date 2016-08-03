@@ -13,7 +13,7 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
 
     var tabValues = {
       military: 'military',
-      fileClaims: 'file_claims',
+      fileClaims: 'claims',
       settings: 'settings'
     };
     $scope.currentTab = tabValues.military;
@@ -35,15 +35,15 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'net', '
     $scope.claims = [];
 
     $scope.clickMilitaryTab = function() {
-      $location.path('/profile/military');
+      $location.path('/profile/' + tabValues.military);
     };
 
     $scope.clickFileClaimsTab = function() {
-      $location.path('/profile/file_claims');
+      $location.path('/profile/' + tabValues.fileClaims);
     };
 
     $scope.clickSettingsTab = function() {
-      $location.path('/profile/settings');
+      $location.path('/profile/' + tabValues.settings);
     };
 
     $scope.clickEdit = function() {

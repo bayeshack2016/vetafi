@@ -50,7 +50,7 @@ div#profile-view(ng-controller="profileCtrl")
 
 
     // File Claims
-    div.vfi-profile-section#file-claims(ng-if="currentTab=='file_claims'")
+    div.vfi-profile-section#claims(ng-if="currentTab=='claims'")
       div.vfi-section-content(ng-if="claims.length == 0")
         | You have no pending file claims at the moment.
         br
