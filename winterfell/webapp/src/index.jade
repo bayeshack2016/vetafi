@@ -13,15 +13,15 @@ html(lang="en")
 			div#header-content(ng-controller="headerCtrl")
 				a.vfi-header-logo-wrapper(href="#/")
 					img.vfi-header-logo-img(src='../icons/logo.png')
-					div.vfi-header-logo Vetafi
+					h1.vfi-header-logo Vetafi
 				div.vfi-header-links
 
 					// If not signed in
 					a(href='/signup' ng-if='!isSignedIn')
-						| Sign Up
+						h3 Sign Up
 						.vfi-underline-border
 					a(href='/login' ng-if='!isSignedIn')
-						| Log In
+						h3 Log In
 						div.vfi-underline-border
 
 					// If signed in
