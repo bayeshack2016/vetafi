@@ -48,25 +48,25 @@ describe('DocumentRenderingController', function () {
             .expect(404, done);
     });
 
-    it('POST / should return 302', function (done) {
+    it('POST / should return 200 with redirect url', function (done) {
         this.timeout(10000);
         testSession
             .post('/render/VBA-21-0781-ARE')
             .send([])
-            .expect(302)
-            .expect('Location', /\/document\/.*/, done);
+            .expect(200)
+            .expect(/\/document\/.*/, done);
     });
 
-    it('POST / should redirect to pdf', function (done) {
-        this.timeout(10000);
+    it('POST / redirect url should work', function (done) {
+        this.timeout(20000);
         testSession
             .post('/render/VBA-21-0781-ARE')
             .send([])
-            .expect(302)
-            .expect('Location', /\/document\/.*/)
+            .expect(200)
+            .expect(/\/document\/.*/)
             .end(function (err, res) {
                 testSession
-                    .get(res.header['location'])
+                    .get(res.text)
                     .expect(200)
                     .expect('Content-Type', /application\/pdf/, done);
             });

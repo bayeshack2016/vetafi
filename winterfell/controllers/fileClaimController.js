@@ -14,7 +14,7 @@ module.exports = function (app) {
       if (user) {
         FileClaim.find({userId: user._id}).exec(function(err, claims) {
           var extClaims = _.map(claims, function(c) {
-            return c.externalize();
+            return c;
           });
           res.status(http.OK).send({claims: extClaims});
         });
@@ -29,7 +29,7 @@ module.exports = function (app) {
     console.log('[getClaim] request received for ' + req.params.extClaimId);
     FileClaim.find({externalId: req.params.extClaimId}).exec(function(err, claim) {
       if (claim) {
-        res.status(http.OK).send({claim: claim.externalize()});
+        res.status(http.OK).send({claim: claim});
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
       }
@@ -41,7 +41,7 @@ module.exports = function (app) {
     var extUserId = req.body.extUserId;
     var callbacks = {
       onSuccess: function(claim) {
-        res.status(http.OK).send({claim: FileClaim.externalize(claim)});
+        res.status(http.OK).send({claim: FileClaim});
       },
       onError: function(errCode, status) {
         res.status(http.INTERNAL_SERVER_ERROR).send({error: httpErrors.DATABASE});

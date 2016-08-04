@@ -2,7 +2,7 @@ var request = require('request');
 var http = require('http-status-codes');
 var config = require('../config/documentRendering');
 var redis = require("redis"),
-    client = redis.createClient();
+    client = redis.createClient({'return_buffers': true});
 var uuid = require('uuid');
 /**
  * Endpoint for rendering a PDF form with populated information.
@@ -23,7 +23,8 @@ module.exports = function (app) {
                 url: config.address + 'create/' + req.params.form,
                 method: 'POST',
                 json: req.body,
-                headers: {'Accept': 'application/pdf'}
+                headers: {'Accept': 'application/pdf'},
+                encoding: null
             }, function (error, microserviceResponse, body) {
                 if (error) {
                     console.error(error);
@@ -37,8 +38,8 @@ module.exports = function (app) {
                 }
 
                 var renderedDocumentId = uuid.v4();
-                client.hset(req.session.key, renderedDocumentId, microserviceResponse.body);
-                res.redirect('/document/' + renderedDocumentId);
+                client.hset(req.session.key, renderedDocumentId, body);
+                res.status(http.OK).send('/document/' + renderedDocumentId);
             });
         } else {
             res.sendStatus(http.NOT_FOUND);
