@@ -1,0 +1,120 @@
+@import "standards.styl"
+
+#claim-view
+  width: maxLayoutWidthPx
+  margin: largeSpacing auto
+  padding: largeSpacing megaSpacing
+  box-sizing: border-box
+  background-color: colorWhite
+
+  & .claim-header
+    position: relative
+    border-bottom: 1px solid colorLightGray
+    margin-bottom: mediumSpacing
+
+  & .vfi-actions
+    position: absolute
+    top: 0px
+    right: 0px
+
+    & button
+      position: relative
+      width: 42px
+      height: 42px
+      padding: 0
+      background-color: transparent
+      border-radius: 50%
+
+      &:hover
+        background-color: colorPrimaryBlue
+
+      &.vfi-edit-btn
+        &:hover .vfi-icon
+          background: url('../icons/edit-white.svg')
+          background-size: cover
+        & .vfi-icon
+          background: url('../icons/edit-black.svg')
+          background-size: cover
+
+      &.vfi-discard-btn
+        &:hover .vfi-icon
+          background: url('../icons/delete-white.svg')
+          background-size: cover
+        & .vfi-icon
+          background: url('../icons/delete-black.svg')
+          background-size: cover
+
+      & .vfi-icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 24px
+        height: 24px
+
+  & .vfi-title
+    font-family: Merriweather
+    line-height: heading1_lineHeight
+    margin-bottom: miniSpacing
+    font-size: heading1_size
+
+  & .vfi-subtitle
+    font-family: Merriweather
+    line-height: heading1_smaller_lineHeight
+    font-size: heading1_smaller_size
+    margin-bottom: smallSpacing
+
+
+  & .file-content
+    height: megaSpacing
+    margin-bottom: largeSpacing
+    border-bottom: 1px solid colorLightGray
+
+    &:hover
+      cursor: pointer
+
+    & .file-text-wrapper
+      float: left
+      width: calc(100% - 36px)
+
+    & .file-title
+      font-family: SourceSansPro
+      font-size: bodyFont_big_size
+
+    & .file-description
+      font-family: SourceSansPro
+      font-size: bodyFont_size
+
+    & .vfi-download-btn
+      float: right
+
+
+  & .file-content:hover .vfi-download-btn
+    opacity: 1.0
+    visibility visible
+
+  & .vfi-download-btn
+    position: relative
+    width: 36px
+    height: 36px
+    padding: 0
+    background: none
+    opacity: 0.0
+    visibility: hidden
+    transition: all linear 0.1s
+
+    &:hover .vfi-hover-msg
+      opacity: 1.0
+      visibility: visible
+
+  & .vfi-hover-msg
+    position: absolute
+    left: calc(100% + 10px)
+    bottom: 0px
+    width: 80px
+    padding: miniSpacing
+    background-color: colorBlack
+    color: colorWhite
+    opacity: 0.0
+    visibility: hidden
+    transition: all linear 0.1s

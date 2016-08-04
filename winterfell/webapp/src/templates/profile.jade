@@ -55,12 +55,13 @@ div#profile-view(ng-controller="profileCtrl")
         | You have no pending file claims at the moment.
         br
         | Click <a href="#/start-file-claim">here</a> to start a file claim.
-      a(ng-href="#/claims/{{claim.id}}", ng-repeat="claim in claims", ng-show="claims.length > 0")
+      a(ng-href="#/claim/{{claim.id}}", ng-repeat="claim in claims", ng-show="claims.length > 0")
         div.vfi-section-content(ng-class="{'vfi-incomplete': claim.state=='incomplete', 'vfi-submitted': claim.state=='submitted', 'vfi-processed': claim.state=='processed'}")
-          div.vfi-top-message
+          div.vfi-section-head
             div.vfi-date {{claim.dateMessage}}
             div.vfi-check-icon(ng-if="claim.state=='submitted' || claim.state=='processed'")
-            button.vfi-action(ng-if="claim.state=='incomplete'") Continue Claim
+            button.vfi-action.vfi-continue(ng-if="claim.state=='incomplete'") Continue
+            button.vfi-action.vfi-discard(ng-if="claim.state=='incomplete'") Discard
           div.vfi-bar
             div.vfi-progress(ng-class="{'vfi-incomplete': claim.state=='incomplete', 'vfi-submitted': claim.state=='submitted', 'vfi-processed': claim.state=='processed'}")
 
