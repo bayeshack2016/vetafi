@@ -6,7 +6,7 @@
     button.cancel-icon(ng-click="cancelSearch()" ng-show="searchText.length > 0")
 
   div.section-card(ng-repeat="section in sections | filter:searchText")
-    div.section-title {{section.title}}
+    h3.section-title {{section.title}}
     div.section-divider
     div.section-content {{section.content}}
 

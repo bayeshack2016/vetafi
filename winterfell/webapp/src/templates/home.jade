@@ -2,11 +2,11 @@
   div.vfi-banner-wrapper
     div.vfi-banner-img
     div.vfi-banner-overlay
-      div.vfi-banner-text-wrapper(ng-show="hasIncompleteClaim")
+      h3.vfi-banner-text-wrapper(ng-show="hasIncompleteClaim")
         | Continue your previous claim
         a(href="#/tos")
           button.vfi-banner-action Continue claim
-      div.vfi-banner-text-wrapper(ng-show="!hasIncompleteClaim")
+      h3.vfi-banner-text-wrapper(ng-show="!hasIncompleteClaim")
         | Get the benefits that you deserve
         a(href="#/tos")
           button.vfi-banner-action Start a claim
@@ -14,13 +14,13 @@
 
   div.vfi-home-option-wrapper
     a.vfi-home-option-link(href='#/signup')
-      div.vfi-option-title File a Health Claim
+      h3.vfi-option-title File a Health Claim
       div.vfi-option-text-wrapper
         p We can help you file a Fully Developed Claim. Completely submit your information once and avoid having to tediously go back and forth with the VA.
       img.vfi-icon-popup(src='../icons/home-folder.svg')
   div.vfi-home-option-wrapper
     a.vfi-home-option-link(href='#/faq')
-      div.vfi-option-title Learn about your Benefits
+      h3.vfi-option-title Learn about your Benefits
       div.vfi-option-text-wrapper
         p Got questions about what benefits and entitlements you are eligible for? Click here to learn about what you can do.
       img.vfi-icon-popup(src='../icons/home-health.svg')

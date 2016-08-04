@@ -9,11 +9,11 @@ div#profile-view(ng-controller="profileCtrl")
           | Change Profile Picture
         img.vfi-profile-pic(ng-src="{{userInfo.profileSrc || '../icons/default-profile.svg'}}" ng-class="{'vfi-default' : !userInfo.profileSrc}")
       div.vfi-profile-basic-info
-        div.vfi-line FirstName Middlename Lastname Suffix
-        div.vfi-line Email
-        div.vfi-line Address
-        div.vfi-line Gender
-        div.vfi-line Date of Birth
+        h4.vfi-line FirstName Middlename Lastname Suffix
+        h4.vfi-line Email
+        h4.vfi-line Address
+        h4.vfi-line Gender
+        h4.vfi-line Date of Birth
         button.vfi-edit-info-btn(ng-click='clickEdit()') Edit Information
 
   // Profile Body
@@ -21,20 +21,20 @@ div#profile-view(ng-controller="profileCtrl")
 
     div.vfi-tab-row
       button.vfi-profile-tab(ng-click="clickMilitaryTab()", ng-class="{'vfi-active' : currentTab=='military'}") Military Background
-      button.vfi-profile-tab(ng-click="clickFileClaimsTab()", ng-class="{'vfi-active' : currentTab=='file_claims'}") File Claims
+      button.vfi-profile-tab(ng-click="clickFileClaimsTab()", ng-class="{'vfi-active' : currentTab=='claims'}") File Claims
       button.vfi-profile-tab(ng-click="clickSettingsTab()", ng-class="{'vfi-active' : currentTab=='settings'}") Settings
 
 
     // Military Background
     div.vfi-profile-section#military(ng-if="currentTab=='military'")
-      div.vfi-section-header Military Information
+      h3.vfi-section-header Military Information
       div.vfi-section-content
         div.vfi-line Military Id
         div.vfi-line Date of Discharge
 
       div.vfi-section-divider
 
-      div.vfi-section-header Military Background
+      h3.vfi-section-header Military Background
       div.vfi-section-content.military-bg(ng-repeat='military in militaryInfo')
         img.vfi-insignia.army(ng-src='{{insigniaUrls[military.branch]}}')
         div.vfi-line {{ranks[military.rank]}}
