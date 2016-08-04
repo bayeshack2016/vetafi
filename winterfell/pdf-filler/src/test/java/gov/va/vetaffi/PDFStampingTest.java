@@ -48,7 +48,7 @@ public class PDFStampingTest {
     @Test
     public void t() throws Exception {
         InputStream pdfTemplate =
-                PDFStreamingOutput.class.getClassLoader().getResourceAsStream("forms/VBA-21-526EZ-ARE.pdf");
+                PDFStreamingOutput.class.getClassLoader().getResourceAsStream("forms/VBA-21-0966-ARE.pdf");
         PdfReader reader = new PdfReader(pdfTemplate);
         PdfStamper stamper;
         try {

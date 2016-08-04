@@ -1,0 +1,170 @@
+[
+  {
+    "pdfId": "F[0].Page_1[0].PreferredEmail[0]",
+    "elementId": "veteran_email"
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_sex",
+    "idMap": {
+      "Male": "F[0].Page_1[0].Male[0]",
+      "Female": "F[0].Page_1[0].Female[0]"
+    }
+  },
+  {
+    "pdfId": "F[0].Page_1[0].DateSigned[0]",
+    "elementId": "veteran_date_signed_0966"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].DateSigned[0]",
+    "elementId": ""
+  },
+  {
+    "pdfId": null,
+    "elementId": "represented_by_surviving_dependent_y_n",
+    "idMap": {
+      "Yes": "F[0].Page_1[0].SurvivorsPensionOrDependencyAndIndemnityCompensationDIC[0]"
+    }
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_intent_to_file_compensation_y_n",
+    "idMap": {
+      "Yes": "F[0].Page_1[0].Compensation[1]"
+    }
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_intent_to_file_pension_y_n",
+    "idMap": {
+      "Yes": "F[0].Page_1[0].Pension[1]"
+    }
+  },
+  {
+    "pdfId": null,
+    "elementId": "veteran_previous_claim_with_va_y_n",
+    "idMap": {
+      "Yes": "F[0].Page_1[0].YES[0]",
+      "No": "F[0].Page_1[0].NO[0]"
+    }
+  },
+  {
+    "pdfId": "F[0].Page_1[0].NameOfAttorney_Agent_VeteransServiceOrganization[0]",
+    "elementId": "veteran_attorney_or_vso"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].ClaimantSSN1[0]",
+    "elementId": "claimant_ssn",
+    "substringStart": 0,
+    "substringEnd": 3
+  },
+  {
+    "pdfId": "F[0].Page_1[0].ClaimantSSN4[0]",
+    "elementId": "claimant_ssn",
+    "substringStart": 3,
+    "substringEnd": 5
+  },
+  {
+    "pdfId": "F[0].Page_1[0].ClaimantSSN6[0]",
+    "elementId": "claimant_ssn",
+    "substringStart": 5,
+    "substringEnd": 9
+  },
+  {
+    "pdfId": "F[0].Page_1[0].VeteranSSN1[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 0,
+    "substringEnd": 3
+  },
+  {
+    "pdfId": "F[0].Page_1[0].VeteranSSN4[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 3,
+    "substringEnd": 5
+  },
+  {
+    "pdfId": "F[0].Page_1[0].VeteranSSN6[0]",
+    "elementId": "veteran_ssn",
+    "substringStart": 5,
+    "substringEnd": 9
+  },
+  {
+    "pdfId": "F[0].Page_1[0].namefirst1[1]",
+    "elementId": "veteran_first_name"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].namemiddleinitial[1]",
+    "elementId": "veteran_middle_initial"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].namelast1[1]",
+    "elementId": "veteran_last_name"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].namefirst1[0]",
+    "elementId": "claimant_first_name"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].namemiddleinitial[0]",
+    "elementId": "claimant_middle_initial"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].namelast1[0]",
+    "elementId": "claimant_last_name"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].noandstreet1[0]",
+    "elementId": "veteran_home_address_line1"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].noandstreet100[0]",
+    "elementId": "veteran_home_address_line2"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].aptno1[0]",
+    "elementId": "veteran_home_apartment_number"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].city1[0]",
+    "elementId": "veteran_home_city"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].state1[0]",
+    "elementId": "veteran_home_state"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].zip1[0]",
+    "elementId": "veteran_home_zip_code"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].Country_1of9[0]",
+    "elementId": "veteran_home_country"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].PreferredPhoneNumber[0]",
+    "elementId": "veteran_phone_number",
+    "concatOrder": 0
+  },
+  {
+    "pdfId": "F[0].Page_1[0].VAFileNo\\._1of9[0]",
+    "elementId": "va_file_number"
+  },
+  {
+    "pdfId": "F[0].Page_1[0].dateofbirth5[0]",
+    "elementId": "veteran_dob",
+    "substringStart": 0,
+    "substringEnd": 4
+  },
+  {
+    "pdfId": "F[0].Page_1[0].dateofbirth1[0]",
+    "elementId": "veteran_dob",
+    "substringStart": 5,
+    "substringEnd": 7
+  },
+  {
+    "pdfId": "F[0].Page_1[0].dateofbirth3[0]",
+    "elementId": "veteran_dob",
+    "substringStart": 8,
+    "substringEnd": 10
+  }
+]
