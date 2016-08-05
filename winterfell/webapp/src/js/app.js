@@ -8,7 +8,8 @@ var app = angular.module('vetafiApp', [
     'angular-click-outside',
     'ngDialog',
     'signature',
-    'formly'
+    'formly',
+    'formlyBootstrap'
 ]);
 
 /**
