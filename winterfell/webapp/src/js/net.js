@@ -1,9 +1,16 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.factory('net', ['$http', function($http) {
+  var localDevHost = 'localhost:3000';
   var baseUrl = "http://localhost:3999";
 
   var httpGet = function (url, data) {
+    /* For Front-end only Development */
+    if (window.location.host == localDevHost) {
+      var future = $.Deferred();
+      future.resolve();
+      return future;
+    }
     return $http({
       url: baseUrl + url,
       method: "GET",
@@ -12,6 +19,12 @@ app.factory('net', ['$http', function($http) {
   };
 
   var httpPost = function(url, data) {
+    /* For Front-end only Development */
+    if (window.location.host == localDevHost) {
+      var future = $.Deferred();
+      future.resolve();
+      return future;
+    }
     return $http({
       url: baseUrl + url,
       method: "POST",
@@ -21,6 +34,12 @@ app.factory('net', ['$http', function($http) {
   };
 
   var httpDelete = function(url) {
+    /* For Front-end only Development */
+    if (window.location.host == localDevHost) {
+      var future = $.Deferred();
+      future.resolve();
+      return future;
+    }
     return $http.delete(url);
   };
 
@@ -61,11 +80,14 @@ app.factory('net', ['$http', function($http) {
       var userId = getSessionUserId();
       return httpGet("/claims/user" + userId);
     },
+    startClaim: function() {
+      return httpPost("/claims/create");
+    },
     submitClaim: function(extClaimId) {
-      return httpPost("/claim/" + extClaimId + "/submit");
+      return httpPost("/claims/" + extClaimId + "/submit");
     },
     discardClaim: function(extClaimId) {
-      return httpDelete("/claim/" + extClaimId);
+      return httpDelete("/claims/" + extClaimId);
     }
   };
 }]);

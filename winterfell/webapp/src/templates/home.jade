@@ -4,16 +4,16 @@
     div.vfi-banner-overlay
       h3.vfi-banner-text-wrapper(ng-show="hasIncompleteClaim")
         | Continue your previous claim
-        a(href="#/tos")
+        a(href="#/claim/select-forms")
           button.vfi-banner-action Continue claim
       h3.vfi-banner-text-wrapper(ng-show="!hasIncompleteClaim")
         | Get the benefits that you deserve
-        a(href="#/tos")
+        a(href="#/claim/start")
           button.vfi-banner-action Start a claim
     div.vfi-banner-border
 
   div.vfi-home-option-wrapper
-    a.vfi-home-option-link(href='#/signup')
+    a.vfi-home-option-link(href='#/claim/start')
       h3.vfi-option-title File a Health Claim
       div.vfi-option-text-wrapper
         p We can help you file a Fully Developed Claim. Completely submit your information once and avoid having to tediously go back and forth with the VA.

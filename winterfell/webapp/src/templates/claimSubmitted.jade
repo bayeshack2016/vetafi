@@ -1,9 +1,12 @@
 #claim-submitted-view(ng-controller="claimSubmittedCtrl")
-  h2.vfi-header Claim Submitted
+  h2.vfi-header(ng-show="!declined") Congratulations, Claim Submitted!
+  h2.vfi-header(ng-show="declined") Error: Claim Rejected
   div.vfi-divider
+  h4 Sorry, it seems like your claim was rejected for the following reason:
+  h4 {{errorMessage}}
   p Words
   p Words
   p Words
-  p Words
-  p You can view your claim here
-  a(href="#/profile/claims") here
+  h4(ng-show="!declined") View your finished claim #[a(href="#/profile/claims") here].
+  h4(ng-show="declined && canFix") Go back to fix your forms #[a(href="#/claim/select-forms") here].
+  h4(ng-show="declined && !canFix") Download your claim #[a(href="#/profile/claims") here] and contact your nearest Veterans Affairs Agency.

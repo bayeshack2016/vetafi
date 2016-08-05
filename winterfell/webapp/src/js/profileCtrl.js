@@ -47,19 +47,19 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
     };
 
     $scope.clickEdit = function() {
-      debugger;
+      console.log('Edit User Information');
     };
 
     $scope.clickChangePic = function() {
-      debugger;
+      console.log('Change Profile Picture');
     };
 
     $scope.clickAddMilitary = function() {
-      debugger;
+      console.log('Edit Military Information');
     };
 
     $scope.clickChangeEmail = function() {
-      debugger;
+      console.log('Change Email');
     }
 
     $scope.clickChangePassword = function() {
@@ -82,6 +82,14 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
           $location.path('/');
         }
       });
+    };
+
+    $scope.clickClaimContinue = function() {
+      $location.path('/claim/select-forms');
+    };
+
+    $scope.clickClaimDiscard = function(claimId) {
+      claimService.removeClaim(claimId);
     };
 
     function updateClaims() {

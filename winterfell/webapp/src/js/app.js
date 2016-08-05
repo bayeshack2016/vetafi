@@ -32,6 +32,8 @@ app.config(function ($routeProvider) {
         templateUrl: "templates/tos.html"
     }).when("/claim/start", {
         templateUrl: "templates/claimStart.html"
+    }).when("/claim/select-forms", {
+        templateUrl: "templates/claimSelectForms.html"
     }).when("/claim/confirm", {
         templateUrl: "templates/claimConfirm.html"
     }).when("/claim/submitted", {
