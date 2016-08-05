@@ -84,12 +84,16 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
       });
     };
 
-    $scope.clickClaimContinue = function() {
+    $scope.clickClaimEdit = function() {
       $location.path('/claim/select-forms');
     };
 
     $scope.clickClaimDiscard = function(claimId) {
       claimService.removeClaim(claimId);
+    };
+
+    $scope.clickClaimView = function(claimId) {
+      $location.path('/claim/' + claimId);
     };
 
     function updateClaims() {

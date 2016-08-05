@@ -172,13 +172,12 @@ borderType = 2px solid colorBorder
 .vfi-profile-section#claims
 
   & .vfi-section-content
+    position: relative
     margin-bottom: largeSpacing
     padding: mediumSpacing largeSpacing
     border: 2px solid colorDarkGray
     border-radius: 6px
 
-    &:hover
-      cursor: pointer
     &.vfi-incomplete:hover
       border-color: colorYellow
     &.vfi-submitted:hover
@@ -193,27 +192,57 @@ borderType = 2px solid colorBorder
     & .vfi-date
       float: left
 
-    & .vfi-check-icon
-      float: right
-      width: 42px
-      height: 42px
-      background: url('../icons/checkmark-green.svg')
-      background-size: cover
-      background-repeat: no-repeat
+  & .vfi-action-wrapper
+    position: absolute
+    top: mediumSpacing
+    right: largeSpacing
 
-    & .vfi-action
-      float: right
-      margin-left: mediumSpacing
-      background-color: colorYellow
-      color: colorBlack
+    & button
+      position: relative
+      width: 36px
+      height: 36px
+      padding: 0
+      margin-left: smallSpacing
+      background-color: transparent
+      border-radius: 50%
 
-      &.vfi-discard
-        background-color: colorLightGray
-        color: colorBlack
+      &:hover
+        background-color: colorPrimaryBlue
+
+        & .vfi-edit
+          background: url('../icons/edit-white.svg')
+          background-size: cover
+        & .vfi-delete
+          background: url('../icons/delete-white.svg')
+          background-size: cover
+        & .vfi-view
+          background: url('../icons/view-white.svg')
+          background-size: cover
+
+    & .vfi-icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 24px
+      height: 24px
+
+      &.vfi-edit
+        background: url('../icons/edit-black.svg')
+        background-size: cover
+
+      &.vfi-delete
+        background: url('../icons/delete-black.svg')
+        background-size: cover
+
+      &.vfi-view
+        background: url('../icons/view-black.svg')
+        background-size: cover
+
 
   & .vfi-bar
     position: relative
-    width: 100%
+    width: calc(100% - 56px)
     height: mediumSpacing
     background-color: colorLightGray
     border-radius: 12px
@@ -233,6 +262,15 @@ borderType = 2px solid colorBorder
     &.vfi-processed
       width: 100%
       background-color: colorLightGreen
+
+  & .vfi-check-icon
+    float: right
+    width: 36px
+    height: 36px
+    margin-top: -8px
+    background: url('../icons/checkmark-green.svg')
+    background-size: cover
+    background-repeat: no-repeat
 
 //
 // Profile Options section
