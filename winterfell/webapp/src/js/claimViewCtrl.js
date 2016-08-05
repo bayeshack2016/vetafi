@@ -6,6 +6,10 @@ app.controller('claimViewCtrl', ['$scope', '$location', 'claimService', 'net', '
     $scope.claim = {};
 
     function updateClaim(claim) {
+      if (!claim) {
+        console.log('claim undefined ' + claim);
+        return;
+      }
       if (claim.state == 'incomplete') {
         claim.title = 'Last modified on ' + claim.updatedAt;
         claim.subtitle = 'This claim has not been submitted yet.';
