@@ -8,7 +8,8 @@ app.factory('claimService', ['net',
        * Claim objects contains:
        * id
        * state
-       *
+       * updatedAt
+       * files
        */
       userClaims: [],
       clearClaims: function() {
