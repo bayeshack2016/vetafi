@@ -7,7 +7,8 @@ var app = angular.module('vetafiApp', [
     'ngRoute',
     'angular-click-outside',
     'ngDialog',
-    'signature'
+    'signature',
+    'formly'
 ]);
 
 /**

@@ -45,6 +45,8 @@ gulp.task('libs', function() {
       "angular.min.js",
       "angular-route.min.js",
       "signature_pad.min.js",
+      "api-check.js", 
+      "formly.js",
       "**/*.js"
     ]))
     .pipe(concat('libs.js'))
