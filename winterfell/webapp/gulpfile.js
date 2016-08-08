@@ -11,7 +11,6 @@ var order = require('gulp-order');
 var del = require('del');
 var cache = require('gulp-cache');
 var sourcemaps = require('gulp-sourcemaps');
-var debug = require('gulp-debug');
 
 var release = args.release ? true : false;
 
@@ -46,7 +45,7 @@ gulp.task('libs', function() {
       "angular.min.js",
       "angular-route.min.js",
       "signature_pad.min.js",
-      "api-check.js", 
+      "api-check.js",
       "formly.js",
       "angular-formly-templates-bootstrap.js",
       "**/*.js"

@@ -43,6 +43,7 @@ module.exports = function (app) {
             });
         } else {
             console.log("[/render/:form] no credentials");
+            console.log(req.session);
             res.sendStatus(http.NOT_FOUND);
         }
     });
