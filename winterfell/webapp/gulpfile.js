@@ -11,6 +11,7 @@ var order = require('gulp-order');
 var del = require('del');
 var cache = require('gulp-cache');
 var sourcemaps = require('gulp-sourcemaps');
+var debug = require('gulp-debug');
 
 var release = args.release ? true : false;
 

@@ -11,7 +11,8 @@ app.factory('formRenderingService', ['$window', '$http', function ($window, $htt
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                data: data
+                data: data,
+                withCredentials: true
             };
 
             $http(req)
