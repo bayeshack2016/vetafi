@@ -1,0 +1,97 @@
+@import "standards.styl"
+
+iconWrapperSize = 36px
+iconSize = 24px
+
+#select-forms-view
+  & .header-wrapper
+    height: megaSpacing
+    line-height: megaSpacing
+    text-align: center
+    background-color: colorPrimaryBlue
+    color: colorWhite
+
+  & .footer-wrapper
+    height: (2 * megaSpacing)
+    padding-top: smallSpacing
+    background-color: colorPrimaryDarkBlue
+
+    & .vfi-button-wrapper
+      width: maxLayoutWidthPx
+      max-width: maxLayoutWidthPct
+      margin: largeSpacing auto
+
+    & .vfi-cancel-btn
+      float: left
+      background-color: colorLightGray
+      color: colorBlack
+
+    & .vfi-finish-btn
+      float: right
+      background-color: colorYellow
+      color: colorBlack
+
+.vfi-form-card
+  position: relative
+  width: maxLayoutWidthPx
+  max-width: maxLayoutWidthPct
+  margin: largeSpacing auto
+  padding: mediumSpacing largeSpacing
+  box-sizing: border-box
+  background-color: colorWhite
+  border: 2px solid colorLightGray
+  color: colorBlack
+
+  &.vfi-required
+    border: 2px solid colorRed
+
+  &.vfi-completed
+    border: 2px solid colorLightGreen
+
+  & .vfi-form-title
+    margin-bottom: smallSpacing
+
+  & .vfi-form-description
+    width: "calc(100% - %s)" % iconWrapperSize
+    line-height: 1.5em
+
+  & .vfi-icon-wrapper
+    position: absolute
+    top: mediumSpacing
+    right: largeSpacing
+    width: iconWrapperSize
+    height: iconWrapperSize
+    border-radius: 50%
+    background-color: colorWhite
+    border: 2px solid colorBlack
+
+    &:hover
+      background-color: colorBlack
+
+      & .vfi-next-icon
+        background: url('../icons/next-white.svg')
+        background-size: cover
+
+    &.vfi-completed
+      background-color: colorWhite
+      border: 2px solid colorLightGreen
+
+      &:hover
+        background-color: colorWhite
+
+  & .vfi-next-icon
+  & .vfi-completed-icon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: iconSize
+    height: iconSize
+
+  & .vfi-next-icon
+    background: url('../icons/next-black.svg')
+    background-size: cover
+
+  & .vfi-completed-icon
+    background: url('../icons/checkmark-green.svg')
+    background-size: cover

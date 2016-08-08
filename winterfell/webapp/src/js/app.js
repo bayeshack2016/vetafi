@@ -38,6 +38,8 @@ app.config(function ($routeProvider) {
         templateUrl: "templates/claimConfirm.html"
     }).when("/claim/submitted", {
         templateUrl: "templates/claimSubmitted.html"
+    }).when("claim/form/:formId", {
+        template: "<div>Some Form</div>" // replace to claim/form/:formId when it's ready
     }).when("/claim/:claimId", {
         templateUrl: "templates/claimView.html"
     })
