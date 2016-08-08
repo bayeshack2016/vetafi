@@ -9,7 +9,6 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var order = require('gulp-order');
 var del = require('del');
-var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -77,7 +76,6 @@ gulp.task('fonts', function() {
 
 gulp.task('icons', function(){
   return gulp.src('src/icons/**/*.+(png|jpg|gif|svg)')
-  .pipe(cache(imagemin()))
   .pipe(gulp.dest('build/icons'))
 });
 
