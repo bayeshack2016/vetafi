@@ -42,6 +42,8 @@ module.exports = function (app) {
                 res.status(http.OK).send('/document/' + renderedDocumentId);
             });
         } else {
+            console.log("[/render/:form] no credentials");
+            console.log(req.session);
             res.sendStatus(http.NOT_FOUND);
         }
     });

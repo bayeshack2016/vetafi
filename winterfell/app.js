@@ -50,8 +50,6 @@ biscuit.get(environment + '::lob-api-key', function(err, secret) {
 // Set address of document rendering microservice
 app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
 
-
-
 var port = 3999;
 var server = app.listen(process.env.PORT || port);
 server.app = app;
