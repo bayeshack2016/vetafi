@@ -9,6 +9,29 @@ app.controller("formCtrl", ['$scope', 'formRenderingService', function($scope, f
     });
 
     $scope.render = function() {
-        formRenderingService.render('VBA-21-0966-ARE', [{fieldName: 'veteran_first_name', fieldValue: 'jeff'}]);
-    }
+        var out = [];
+        for (var k in $scope.model) {
+            if ($scope.model.hasOwnProperty(k)) {
+                out.push({fieldName: k, fieldValue: $scope.model[k]})
+            }
+        }
+        formRenderingService.render('VBA-21-0966-ARE', out);
+    };
+
+    $scope.onSubmit = function() {
+        $scope.render();
+    };
+
+    $scope.fields = [
+        {
+            key: 'veteran_first_name',
+            type: 'input',
+            templateOptions: {
+                label: 'Name',
+                placeholder: 'Name'
+            }
+        }
+    ];
+
+    $scope.model = {};
 }]);

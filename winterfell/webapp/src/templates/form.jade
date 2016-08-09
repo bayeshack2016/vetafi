@@ -1,4 +1,10 @@
 div(ng-controller="formCtrl")
+
+    form(ng-submit="onSubmit()" name="form")
+        formly-form(model="model" fields="fields" options="options" form="form")
+            button(type="submit")
+                | Submit
+
     signature-pad(dataurl="dataurl" accept="accept" clear="clear" height="220" width="568")
     button(ng-click="clear()")
         | Clear
