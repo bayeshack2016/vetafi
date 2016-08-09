@@ -11,6 +11,7 @@ var FileClaimSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
+  fileNumber: String,    // VA file number given after processing
   createdAt: Date,       // Date of row creation
   updatedAt: Date,       // Date of last row modification
   state: String,         // FileClaim.State

@@ -61,5 +61,5 @@ UserSchema.statics.externalize = function(user) {
 
 var User = mongoose.model('User', UserSchema);
 module.exports = User;
-module.exports.Scema = UserSchema;
+module.exports.Schema = UserSchema;
 module.exports.State = State;

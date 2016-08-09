@@ -43,7 +43,6 @@ biscuit.get(environment + '::lob-api-key', function(err, secret) {
   if (err) {
     throw err;
   }
-
   app.set('lobApiKey', secret);
 });
 

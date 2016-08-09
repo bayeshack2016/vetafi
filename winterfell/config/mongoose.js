@@ -1,4 +1,9 @@
 var mongoose = require('mongoose');
+var Form = require('./../models/form');
+
+function setupDb() {
+  Form.saveAllForms();
+}
 
 module.exports = function(environment) {
   var address = '0.0.0.0:27017'; // default
@@ -13,6 +18,7 @@ module.exports = function(environment) {
   });
   db.on('open', function () {
       console.log('Database connection opened at ' + address);
+      setupDb();
   });
   db.on('disconnected', function (err) {
       console.log('Database disconnected.');
