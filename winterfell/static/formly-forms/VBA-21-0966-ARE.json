@@ -1,0 +1,210 @@
+[
+  {
+    "key": "veteran_email",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_sex",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_date_signed_0966",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "represented_by_surviving_dependent_y_n",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_intent_to_file_compensation_y_n",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_intent_to_file_pension_y_n",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_previous_claim_with_va_y_n",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_attorney_or_vso",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "claimant_ssn",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_ssn",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_first_name",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_middle_initial",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_last_name",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "claimant_first_name",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "claimant_middle_initial",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "claimant_last_name",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_home_address_line1",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_home_address_line2",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_home_apartment_number",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_home_city",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_home_state",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_home_zip_code",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_home_country",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_phone_number",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "va_file_number",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  },
+  {
+    "key": "veteran_dob",
+    "type": "input",
+    "templateOptions": {
+      "label": "Name",
+      "placeholder": "Name"
+    }
+  }
+]

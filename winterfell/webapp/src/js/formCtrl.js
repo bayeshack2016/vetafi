@@ -3,35 +3,31 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller("formCtrl", ['$scope', 'formRenderingService', function($scope, formRenderingService) {
-    $scope.$watch("signature", function(newVal, oldVal) {
-        console.log(newVal, oldVal);
-    });
+app.controller("formCtrl", ['$scope', 'formRenderingService', 'formTemplateService', '$routeParams',
+    function ($scope, formRenderingService, formTemplateService, $routeParams) {
+        $scope.$watch("signature", function (newVal, oldVal) {
+            console.log(newVal, oldVal);
+        });
 
-    $scope.render = function() {
-        var out = [];
-        for (var k in $scope.model) {
-            if ($scope.model.hasOwnProperty(k)) {
-                out.push({fieldName: k, fieldValue: $scope.model[k]})
+        $scope.render = function () {
+            var out = [];
+            for (var k in $scope.model) {
+                if ($scope.model.hasOwnProperty(k)) {
+                    out.push({fieldName: k, fieldValue: $scope.model[k]})
+                }
             }
-        }
-        formRenderingService.render('VBA-21-0966-ARE', out);
-    };
+            formRenderingService.render($routeParams.formId, out);
+        };
 
-    $scope.onSubmit = function() {
-        $scope.render();
-    };
+        $scope.onSubmit = function () {
+            $scope.render();
+        };
 
-    $scope.fields = [
-        {
-            key: 'veteran_first_name',
-            type: 'input',
-            templateOptions: {
-                label: 'Name',
-                placeholder: 'Name'
-            }
-        }
-    ];
+        $scope.fields = [];
 
-    $scope.model = {};
-}]);
+        formTemplateService($routeParams.formId, function(fields, error) {
+            $scope.fields = fields;
+        });
+
+        $scope.model = {};
+    }]);
