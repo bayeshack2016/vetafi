@@ -20,7 +20,7 @@ var FormSchema = new Schema({
 // Static methods
 var allForms = [
   {
-    // _id: FormProps.INTENT_TO_FILE_CLAIM,
+    _id: FormProps.INTENT_TO_FILE_CLAIM,
     title: 'Intent to File a Claim',
     summary: 'This form notifies the VA of your intent to file for general benefits.',
     description: 'By completing an application within one year of filing this form, your completed application will be considered filed on the date the VA received this form. Your benefit effective start date may be able to start earlier.',
