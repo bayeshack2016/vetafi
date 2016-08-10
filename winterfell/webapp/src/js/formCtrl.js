@@ -23,11 +23,7 @@ app.controller("formCtrl", ['$scope', 'formRenderingService', 'formTemplateServi
             $scope.render();
         };
 
-        $scope.fields = [];
-
-        formTemplateService($routeParams.formId, function(fields, error) {
-            $scope.fields = fields;
-        });
+        $scope.fields = formTemplateService[$routeParams.formId];
 
         $scope.model = {};
     }]);

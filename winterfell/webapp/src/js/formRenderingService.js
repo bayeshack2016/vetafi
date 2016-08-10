@@ -27,29 +27,3 @@ app.factory('formRenderingService', ['$window', '$http', function ($window, $htt
         }
     }
 }]);
-
-/**
- * Service to retrieve the formly template (which is just a static JSON file)
- * for a given form.
- */
-app.factory('formTemplateService', ['$http', function ($http) {
-    return function (formName, cb) {
-        var req = {
-            method: 'GET',
-            url: '/static/formly-forms/' + formName + '.json',
-            headers: {
-                Accept: 'application/json'
-            }
-        };
-
-        $http(req)
-            .then(function (response) {
-                cb(response.data, null);
-
-            },
-            function (response) {
-                console.error(response);
-                cb(null, response);
-            });
-    }
-}]);
