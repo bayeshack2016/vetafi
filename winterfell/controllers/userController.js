@@ -58,7 +58,7 @@ module.exports = function (app) {
     var extUserId = req.params.extUserId;
     User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
       if (user) {
-        UserValues.findOne({user_id: user._id}).exec(function(err, userValues) {
+        UserValues.findOne({userId: user._id}).exec(function(err, userValues) {
           res.status(http.OK).send({ values: userValues || {} });
         });
       } else {

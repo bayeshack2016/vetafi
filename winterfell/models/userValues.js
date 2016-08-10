@@ -4,7 +4,7 @@ var User = require('./user');
 var Schema = mongoose.Schema;
 
 var UserValueSchema = new Schema({
-  user_id: {
+  userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },

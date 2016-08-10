@@ -68,10 +68,10 @@ module.exports.setUserState = function(userId, state, callback) {
  * in given mapping. Leave all all other fields as is.
  */
 module.exports.upsertUserValues = function(userId, keyValues, callback) {
-  UserValues.findOne({user_id: userId}, function(err, userValue) {
+  UserValues.findOne({userId: userId}, function(err, userValue) {
     if (!userValue) {
       userValue = new UserValues;
-      userValue.user_id = userId;
+      userValue.userId = userId;
       userValue.values = {};
     }
     _.forEach(_.keys(keyValues), function(key) {

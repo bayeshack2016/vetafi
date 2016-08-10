@@ -43,7 +43,7 @@ describe('UserValuesService', function() {
   it('Add a userValue', function(done) {
     UserService.upsertUserValues(targetUser._id, {'some_key': 'some_value'}, function(err, update) {
       Boolean(err).should.equal(false);
-      update.user_id.should.equal(targetUser._id);
+      update.userId.should.equal(targetUser._id);
       update.values.some_key.should.equal('some_value');
       done();
     });
@@ -62,7 +62,7 @@ describe('UserValuesService', function() {
   it('Get userValues', function(done) {
     UserService.upsertUserValues(targetUser._id, {'some_key1': 'some_value'}, function() {
       UserService.upsertUserValues(targetUser._id, {'some_key2': 'some_other_value'}, function() {
-        UserValues.findOne({user_id: targetUser._id}, function(err, userValues) {
+        UserValues.findOne({userId: targetUser._id}, function(err, userValues) {
           userValues.values.some_key1.should.equal('some_value');
           userValues.values.some_key2.should.equal('some_other_value');
           _.size(userValues.values).should.equal(2);
