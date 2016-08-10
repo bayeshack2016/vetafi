@@ -22,3 +22,6 @@ module.exports.UNKNOWN = "unknown_error";
 module.exports.AUTH_MISMATCH = "auth_mismatch";
 module.exports.INVALID_EMAIL = "invalid_email";
 module.exports.INVALID_PASSWORD = "invalid_password";
+
+// Input errors
+module.exports.INVALID_INPUT = "invalid_input";

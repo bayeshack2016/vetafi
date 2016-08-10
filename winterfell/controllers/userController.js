@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('../models/user');
+var UserValues = require('../models/userValues');
 var UserService = require('./../services/userService');
 
 module.exports = function (app) {
@@ -51,6 +52,35 @@ module.exports = function (app) {
         res.status(http.NOT_FOUND);
       }
     });
+  });
+
+  app.get('/user/:extUserId/values', function(req, res) {
+    var extUserId = req.params.extUserId;
+    User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
+      if (user) {
+        UserValues.findOne({user_id: user._id}).exec(function(err, userValues) {
+          res.status(http.OK).send({ values: userValues || {} });
+        });
+      } else {
+        res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
+      }
+    });
+  });
+
+  app.post('/user/:extUserId/values', function(req, res) {
+    var extUserId = req.params.extUserId;
+    var valuesToUpdate = req.body.values;
+    if (valuesToUpdate && valuesToUpdate.key && valuesToUpdate.value) {
+      User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
+        if (user) {
+          UserService.updateUserValue(user._id, valuesToUpdate.key, valuesToUpdate.value);
+        } else {
+          res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
+        }
+      });
+    } else {
+      res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_INPUT});
+    }
   });
 
 };
