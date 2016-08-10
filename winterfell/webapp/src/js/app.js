@@ -46,7 +46,7 @@ app.config(function ($routeProvider) {
         templateUrl: "templates/claimView.html"
     })
 
-    .when("/form", {
+    .when("/form/:formId", {
         templateUrl: "templates/form.html"
     })
 
