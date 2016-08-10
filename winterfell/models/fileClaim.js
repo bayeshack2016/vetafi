@@ -14,7 +14,7 @@ var FileClaimSchema = new Schema({
   state: String,         // FileClaim.State
   stateUpdatedAt: Date,  // Date of last state modification
 }, {
-  timestamp: true
+  timestamps: true
 });
 
 var State = {

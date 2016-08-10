@@ -12,7 +12,7 @@ var letterSchema = new Schema({
     documents: [Schema.Types.ObjectId],
     user: Schema.Types.ObjectId
 }, {
-  timestamp: true
+  timestamps: true
 });
 
 var Letter = mongoose.model('Letter', letterSchema);

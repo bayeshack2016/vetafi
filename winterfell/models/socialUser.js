@@ -7,7 +7,7 @@ var socialUserSchema = new Schema({
   state: Number,
   stateUpdatedAt: Date  // Date of last state modification
 }, {
-  timestamp: true
+  timestamps: true
 });
 
 var State = {

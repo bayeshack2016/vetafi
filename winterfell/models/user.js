@@ -22,7 +22,7 @@ var UserSchema = new Schema({
   admin: Boolean,                     // Is user an admin?
   test: Boolean                       // Is user a test account?
 }, {
-  timestamp: true
+  timestamps: true
 });
 
 var State = {

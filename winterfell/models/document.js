@@ -9,7 +9,7 @@ var documentSchema = new Schema({
     pdf: Buffer,
     user: Schema.Types.ObjectId
 }, {
-  timestamp: true
+  timestamps: true
 });
 
 var Document = mongoose.model('Document', documentSchema);
