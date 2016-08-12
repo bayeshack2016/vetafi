@@ -2,6 +2,7 @@ var _ = require('lodash');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
+var UserValues = require('./../models/userValues');
 
 var MAX_PASSWORD_LENGTH = 6;
 
@@ -59,4 +60,24 @@ module.exports.setUserState = function(userId, state, callback) {
   var query = { _id: userId };
   var update = { state: state };
   return User.update(query, update, callback);
+};
+
+/**
+ * Given a userId, and an object mapping { key: value },
+ * Create a new 'values' object for UserValue or update all fields
+ * in given mapping. Leave all all other fields as is.
+ */
+module.exports.upsertUserValues = function(userId, keyValues, callback) {
+  UserValues.findOne({userId: userId}, function(err, userValue) {
+    if (!userValue) {
+      userValue = new UserValues;
+      userValue.userId = userId;
+      userValue.values = {};
+    }
+    _.forEach(_.keys(keyValues), function(key) {
+      userValue.values[key] = keyValues[key];
+    });
+    userValue.markModified('values');
+    userValue.save(callback);
+  });
 };
