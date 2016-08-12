@@ -28,7 +28,7 @@ var State = {
 // None yet
 
 // Static methods
-FileClaimSchema.statics.quickCreate = function(userId) {
+FileClaimSchema.statics.quickCreate = function(userId, callback) {
   var now = Date.now();
   return FileClaim.create({
     externalId: uuid.v4(),
@@ -37,7 +37,7 @@ FileClaimSchema.statics.quickCreate = function(userId) {
     updatedAt: now,
     state: FileClaim.State.INCOMPLETE,
     stateUpdatedAt: now
-  });
+  }, callback);
 };
 
 FileClaimSchema.statics.externalize = function(claim) {

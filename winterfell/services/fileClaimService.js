@@ -8,24 +8,12 @@ function FileClaimService(app) {
 };
 
 module.exports = FileClaimService;
-module.exports.createNewClaim = function(userId, callbacks) {
-  FileClaim.find({}).exec(function(err, claims) {
-    console.log('claimsAll: ' + JSON.stringify(claims));
-  });
+module.exports.createNewClaim = function(userId, callback) {
   return FileClaim.findOne({ userId: userId, state: FileClaim.State.INCOMPLETE }).exec(function(err, fileClaim) {
-    console.log('claims: ' + JSON.stringify(fileClaim));
     if (_.isEmpty(fileClaim)) {
-      return FileClaim.quickCreate(userId).then(function(claim, error) {
-        if (claim) {
-          _.isEmpty(callbacks) ? null : callbacks.onSuccess(claim);
-          return claim;
-        } else {
-          _.isEmpty(callbacks) ? null : callbacks.onError(http.INTERNAL_SERVER_ERROR, httpErrors.DATABASE);
-          return null;
-        }
-      });
-    } else {
-      _.isEmpty(callbacks) ? null : callbacks.onError(http.BAD_REQUEST, httpErrors.CLAIM_INCOMPLETE_EXISTS);
+      return FileClaim.quickCreate(userId, callback);
+    } else if (_.isFunction(callback)) {
+      callback({code: http.BAD_REQUEST, msg: httpErrors.CLAIM_INCOMPLETE_EXISTS});
     }
     return null;
   });

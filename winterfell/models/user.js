@@ -1,6 +1,6 @@
 'use strict';
-var uuid = require('uuid');
 var _ = require('lodash');
+var uuid = require('uuid');
 var mongoose = require('mongoose');
 var SocialUser = require('./socialUser');
 var FileClaim = require('./fileClaim');

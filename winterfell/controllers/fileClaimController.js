@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var mongoose = require('mongoose');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
@@ -10,7 +11,7 @@ module.exports = function (app) {
   // Get all claims for a user
   app.get('/claims/user/:extUserId', function (req, res) {
     console.log('[getClaimsForUser] request received for ' + req.params.extUserId);
-    User.find({externalId: req.params.extUserId}).exec(function(err, user) {
+    User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
       if (user) {
         FileClaim.find({userId: user._id}).exec(function(err, claims) {
           var extClaims = _.map(claims, function(c) {
@@ -27,7 +28,7 @@ module.exports = function (app) {
   // Get a particular claim
   app.get('/claims/:extClaimId', function (req, res) {
     console.log('[getClaim] request received for ' + req.params.extClaimId);
-    FileClaim.find({externalId: req.params.extClaimId}).exec(function(err, claim) {
+    FileClaim.findOne({externalId: req.params.extClaimId}).exec(function(err, claim) {
       if (claim) {
         res.status(http.OK).send({claim: claim});
       } else {
@@ -39,18 +40,18 @@ module.exports = function (app) {
   app.post('/claims/create', function (req, res) {
     console.log('[createClaim] request received for ' + JSON.stringify(req.body));
     var extUserId = req.body.extUserId;
-    var callbacks = {
-      onSuccess: function(claim) {
-        res.status(http.OK).send({claim: FileClaim});
-      },
-      onError: function(errCode, status) {
-        res.status(http.INTERNAL_SERVER_ERROR).send({error: httpErrors.DATABASE});
-      }
-    }
     if (extUserId) {
-      User.findOne({externalId: extUserId}).exec(function(err, user) {
+      User.findOne({externalId: extUserId}).exec(function(userErr, user) {
         if (user) {
-          FileClaimService.createNewClaim(user.id, callbacks);
+          FileClaimService.createNewClaim(user.id, function(claimErr, claim) {
+            if (claim) {
+              res.status(http.OK).send({claim: claim});
+            } else if (!_.isEmpty(claimErr)) {
+              res.status(claimErr.code).send({error: claimErr.msg});
+            } else {
+              res.status(http.INTERNAL_SERVER_ERROR).send({error: httpErrors.DATABASE});
+            }
+          });
         } else {
           res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
         }
@@ -60,22 +61,29 @@ module.exports = function (app) {
     }
   });
 
-  function handleClaimStateChange(extClaimId, claimState) {
+  function handleClaimStateChange(extClaimId, claimState, callback) {
     FileClaim.findOne({externalId: extClaimId}).exec(function(err, claim) {
       if (claim) {
-        FileClaimService.setClaimState(claim.id, claimState, function() {
-          res.status(http.NO_CONTENT);
-        });
-      } else {
-        res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
+        FileClaimService.setClaimState(claim._id, claimState, callback);
+      } else if (_.isFunction(callback)) {
+        callback({code: http.NOT_FOUND, msg: httpErrors.CLAIM_NOT_FOUND});
       }
     });
   }
 
   app.post('/claims/:extClaimId/submit', function(req, res) {
-    var extClaimId = req.body.extClaimId;
+    console.log('[submitClaim] request received ' + JSON.stringify(req.body));
+    var extClaimId = req.params.extClaimId;
     if (extClaimId) {
-      handleClaimStateChange(extClaimId, FileClaim.State.SUBMITTED);
+      handleClaimStateChange(extClaimId, FileClaim.State.SUBMITTED, function(err, claim) {
+        if (claim) {
+          res.sendStatus(http.OK);
+        } else if (err.code == http.NOT_FOUND) {
+          res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
+        } else {
+          res.status(err.code).send({error: err.msg});
+        }
+      });
     } else {
       res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_CLAIM_ID});
     }
@@ -83,9 +91,14 @@ module.exports = function (app) {
 
   app.delete('/claims/:extClaimId', function (req, res) {
     console.log('[deleteClaim] request received for ' + req.params.extClaimId);
-    var extClaimId = req.body.extClaimId;
+    var extClaimId = req.params.extClaimId;
     if (extClaimId) {
-      handleClaimStateChange(extClaimId, FileClaim.State.DISCARDED);
+      var statusCode = handleClaimStateChange(extClaimId, FileClaim.State.DISCARDED);
+      if (statusCode == http.NOT_FOUND) {
+        res.status(statusCode).send({error: httpErrors.CLAIM_NOT_FOUND});
+      } else {
+        res.sendStatus(statusCode);
+      }
     } else {
       res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_CLAIM_ID});
     }
