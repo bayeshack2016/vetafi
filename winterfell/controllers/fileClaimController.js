@@ -39,18 +39,17 @@ module.exports = function (app) {
   app.post('/claims/create', function (req, res) {
     console.log('[createClaim] request received for ' + JSON.stringify(req.body));
     var extUserId = req.body.extUserId;
-    var callbacks = {
-      onSuccess: function(claim) {
+    var callback = function(err, claim) {
+      if (claim) {
         res.status(http.OK).send({claim: FileClaim});
-      },
-      onError: function(errCode, status) {
+      } else {
         res.status(http.INTERNAL_SERVER_ERROR).send({error: httpErrors.DATABASE});
       }
-    }
+    };
     if (extUserId) {
       User.findOne({externalId: extUserId}).exec(function(err, user) {
         if (user) {
-          FileClaimService.createNewClaim(user.id, callbacks);
+          FileClaimService.createNewClaim(user.id, callback);
         } else {
           res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
         }

@@ -8,39 +8,28 @@ function FileClaimService(app) {
 };
 
 module.exports = FileClaimService;
-module.exports.createNewClaim = function(userId, callbacks) {
-  FileClaim.find({}).exec(function(err, claims) {
-    console.log('claimsAll: ' + JSON.stringify(claims));
-  });
+module.exports.createNewClaim = function(userId, callback) {
   return FileClaim.findOne({ userId: userId, state: FileClaim.State.INCOMPLETE }).exec(function(err, fileClaim) {
-    console.log('claims: ' + JSON.stringify(fileClaim));
     if (_.isEmpty(fileClaim)) {
-      return FileClaim.quickCreate(userId).then(function(claim, error) {
-        if (claim) {
-          _.isEmpty(callbacks) ? null : callbacks.onSuccess(claim);
-          return claim;
-        } else {
-          _.isEmpty(callbacks) ? null : callbacks.onError(http.INTERNAL_SERVER_ERROR, httpErrors.DATABASE);
-          return null;
-        }
-      });
-    } else {
-      _.isEmpty(callbacks) ? null : callbacks.onError(http.BAD_REQUEST, httpErrors.CLAIM_INCOMPLETE_EXISTS);
+      return FileClaim.quickCreate(userId, callback);
+    }
+    if (_.isFunction(callback)) {
+      callback();
     }
     return null;
   });
 };
 
-module.exports.addFileToClaim = function(fileClaimId, file, callbacks) {
+module.exports.addForm = function(fileClaimId, file, callbacks) {
   console.log('[addFileToClaim] not implemented');
 };
 
-module.exports.removeFileFromClaim = function(fileClaimId, file, callbacks) {
-  console.log('[removeFileFromClaim] not implemented');
+module.exports.removeForm = function(fileClaimId, file, callbacks) {
+  console.log('[removeFormFromClaim] not implemented');
 };
 
 module.exports.setClaimState = function(fileClaimId, state, callback) {
-  var query = { id: fileClaimId };
+  var query = { _id: fileClaimId };
   var update = { state: state };
   return FileClaim.update(query, update, callback);
 };

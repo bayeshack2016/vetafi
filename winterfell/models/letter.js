@@ -6,14 +6,14 @@ var Schema = mongoose.Schema;
  */
 var letterSchema = new Schema({
     vendorId: String, // Unique iq lob.com associates with the letter
-    createdAt: Date,
     expectedDeliveryDate: Date,
     recipient: Schema.Types.ObjectId,
     sender: Schema.Types.ObjectId,
     documents: [Schema.Types.ObjectId],
     user: Schema.Types.ObjectId
+}, {
+  timestamps: true
 });
 
 var Letter = mongoose.model('Letter', letterSchema);
 module.exports = Letter;
-

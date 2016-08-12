@@ -11,10 +11,10 @@ var FileClaimSchema = new Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
   },
-  createdAt: Date,       // Date of row creation
-  updatedAt: Date,       // Date of last row modification
   state: String,         // FileClaim.State
   stateUpdatedAt: Date,  // Date of last state modification
+}, {
+  timestamps: true
 });
 
 var State = {
@@ -28,16 +28,14 @@ var State = {
 // None yet
 
 // Static methods
-FileClaimSchema.statics.quickCreate = function(userId) {
+FileClaimSchema.statics.quickCreate = function(userId, callback) {
   var now = Date.now();
   return FileClaim.create({
     externalId: uuid.v4(),
     userId: userId,
-    createdAt: now,
-    updatedAt: now,
     state: FileClaim.State.INCOMPLETE,
     stateUpdatedAt: now
-  });
+  }, callback);
 };
 
 FileClaimSchema.statics.externalize = function(claim) {

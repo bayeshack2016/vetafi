@@ -13,8 +13,6 @@ var UserSchema = new Schema({
   email: String,                      // Email address
   externalId: String,                 // External User Id
   password: String,                   // Encrypted password
-  createdAt: Date,                    // Date of row creation
-  updatedAt: Date,                    // Date of last row modification
   state: String,                      // User.State
   stateUpdatedAt: Date,               // Date of last state modification
   socialUsers:[{
@@ -23,6 +21,8 @@ var UserSchema = new Schema({
   }],
   admin: Boolean,                     // Is user an admin?
   test: Boolean                       // Is user a test account?
+}, {
+  timestamps: true
 });
 
 var State = {
@@ -43,8 +43,6 @@ UserSchema.statics.quickCreate = function(user) {
     email: user.email,
     password: user.password,
     externalId: uuid.v4(),
-    createdAt: now,
-    updatedAt: now,
     state: User.State.ACTIVE,
     stateUpdatedAt: now,
     admin: user.admin,
