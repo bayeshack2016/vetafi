@@ -1,5 +1,4 @@
 var should = require('should');
-var sinon = require('sinon');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var FileClaim = require('../models/fileClaim');
@@ -34,7 +33,8 @@ describe('FileClaimService', function() {
     });
   });
 
-  after(function() {
+  beforeEach(function(done) {
+    FileClaim.remove({}, done);
   });
 
   it('Create new INCOMPLETE FileClaim - already exists', function(done) {
@@ -43,6 +43,7 @@ describe('FileClaimService', function() {
       state: FileClaim.State.INCOMPLETE
     });
     existingFileClaim.save(function(err, claim) {
+<<<<<<< HEAD
       FileClaimService.createNewClaim(targetUser._id, function(err, claim) {
         Boolean(err).should.equal(false);
         Boolean(claim).should.equal(false);
@@ -69,10 +70,17 @@ describe('FileClaimService', function() {
           updatedClaim.state.should.equal(FileClaim.State.SUBMITTED);
           done();
         });
+=======
+      FileClaimService.createNewClaim(targetUser._id, function(err2) {
+        err2.code.should.equal(http.BAD_REQUEST);
+        err2.msg.should.equal(httpErrors.CLAIM_INCOMPLETE_EXISTS);
+        done();
+>>>>>>> Add unit tests for controllers
       });
     });
   });
 
+<<<<<<< HEAD
   it('Set FileClaim state to DISCARDED', function(done) {
     FileClaimService.createNewClaim(targetUser._id, function(err, claim) {
       FileClaimService.setClaimState(claim._id, FileClaim.State.DISCARDED, function(err, update) {
@@ -83,6 +91,13 @@ describe('FileClaimService', function() {
           done();
         });
       });
+=======
+  it('Create new INCOMPLETE FileClaim - success', function(done) {
+    FileClaimService.createNewClaim(targetUser._id, function(claimErr, claim) {
+      claim.userId.should.equal(targetUser._id);
+      claim.state.should.equal(FileClaim.State.INCOMPLETE);
+      done();
+>>>>>>> Add unit tests for controllers
     });
   });
 
