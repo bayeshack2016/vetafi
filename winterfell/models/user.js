@@ -34,7 +34,7 @@ var State = {
 // None yet
 
 // Static methods
-UserSchema.statics.quickCreate = function(user) {
+UserSchema.statics.quickCreate = function(user, callback) {
   var now = Date.now();
   return User.create({
     firstname: user.firstname,
@@ -49,7 +49,7 @@ UserSchema.statics.quickCreate = function(user) {
     stateUpdatedAt: now,
     admin: user.admin,
     test: false
-  });
+  }, callback);
 };
 
 UserSchema.statics.externalize = function(user) {
