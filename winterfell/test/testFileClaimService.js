@@ -52,11 +52,29 @@ describe('FileClaimService', function() {
   });
 
   it('Set FileClaim state to COMPLETED', function(done) {
-    done();
+    FileClaimService.createNewClaim(targetUser._id, function(claimErr, claim) {
+      claim.userId.should.equal(targetUser._id);
+      claim.state.should.equal(FileClaim.State.INCOMPLETE);
+      FileClaimService.setClaimState(claim._id, FileClaim.State.SUBMITTED, function(err, claim1) {
+        FileClaim.findOne({_id: claim._id}, function(err, testClaim) {
+          testClaim.state.should.equal(FileClaim.State.SUBMITTED);
+          done();
+        });
+      });
+    });
   });
 
   it('Set FileClaim state to DISCARDED', function(done) {
-    done();
+    FileClaimService.createNewClaim(targetUser._id, function(claimErr, claim) {
+      claim.userId.should.equal(targetUser._id);
+      claim.state.should.equal(FileClaim.State.INCOMPLETE);
+      FileClaimService.setClaimState(claim._id, FileClaim.State.DISCARDED, function(err, claim1) {
+        FileClaim.findOne({_id: claim._id}, function(err, testClaim) {
+          testClaim.state.should.equal(FileClaim.State.DISCARDED);
+          done();
+        });
+      });
+    });
   });
 
 });

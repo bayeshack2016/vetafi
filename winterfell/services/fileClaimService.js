@@ -4,7 +4,7 @@ var httpErrors = require('./../utils/httpErrors');
 var FileClaim = require('./../models/fileClaim');
 
 function FileClaimService(app) {
-    this.app = app;
+  this.app = app;
 };
 
 module.exports = FileClaimService;
@@ -28,7 +28,7 @@ module.exports.removeFileFromClaim = function(fileClaimId, file, callbacks) {
 };
 
 module.exports.setClaimState = function(fileClaimId, state, callback) {
-  var query = { id: fileClaimId };
+  var query = { _id: fileClaimId };
   var update = { state: state };
   return FileClaim.update(query, update, callback);
 };
