@@ -1,37 +1,21 @@
 [
   {
-    "key": "veteran_email",
-    "type": "input",
-    "templateOptions": {
-      "label": "Email",
-      "placeholder": "you@website.com"
-    }
-  },
-  {
-    "key": "veteran_sex",
+    "key": "filing_for_self",
     "type": "radio",
     "templateOptions": {
-      "label": "Sex",
+      "label": "Are you filing for yourself, or for someone else?",
       "options": [
         {
-          "name": "Male",
-          "value": "Male"
+          "name": "For myself",
+          "value": true
         },
         {
-          "name": "Female",
-          "value": "Female"
+          "name": "For someone else",
+          "value": false
         }
       ]
-    }
-  },
-
-  {
-    "key": "veteran_date_signed_0966",
-    "type": "input",
-    "templateOptions": {
-      "label": "Name",
-      "placeholder": "Name"
-    }
+    },
+    "defaultValue": true
   },
   {
     "key": "represented_by_surviving_dependent_y_n",
@@ -48,9 +32,37 @@
           "value": "No"
         }
       ]
-    }
+    },
+    "hideExpression": "model.filing_for_self"
   },
 
+  {
+    "key": "contact_email",
+    "type": "input",
+    "optionsTypes": [
+      "email"
+    ],
+    "templateOptions": {
+      "label": "Your Email",
+    }
+  },
+  {
+    "key": "veteran_sex",
+    "type": "radio",
+    "templateOptions": {
+      "label": "Veteran's Gender",
+      "options": [
+        {
+          "name": "Male",
+          "value": "Male"
+        },
+        {
+          "name": "Female",
+          "value": "Female"
+        }
+      ]
+    }
+  },
   {
     "key": "veteran_intent_to_file_compensation_y_n",
     "type": "radio",
@@ -68,7 +80,6 @@
       ]
     }
   },
-
   {
     "key": "veteran_intent_to_file_pension_y_n",
     "type": "radio",
@@ -110,8 +121,8 @@
     "type": "textarea",
     "templateOptions": {
       "label": "Name of attorney, agent, or veterans service organization",
-      "rows": "2",
-      "columns": "100"
+      "rows": 2,
+      "columns": 100
     }
   },
   {
@@ -120,7 +131,11 @@
     "templateOptions": {
       "label": "Claimant's social security number",
       "placeholder": "000-00-0000"
-    }
+    },
+    "optionsTypes": [
+      "ssn"
+    ],
+    "hideExpression": "model.filing_for_self"
   },
   {
     "key": "veteran_ssn",
@@ -128,7 +143,10 @@
     "templateOptions": {
       "label": "Veteran's social security number",
       "placeholder": "000-00-0000"
-    }
+    },
+    "optionsTypes": [
+      "ssn"
+    ]
   },
   {
     "key": "veteran_first_name",
@@ -160,7 +178,8 @@
     "templateOptions": {
       "label": "Claimant's First Name",
       "placeholder": "John"
-    }
+    },
+    "hideExpression": "model.filing_for_self"
   },
   {
     "key": "claimant_middle_initial",
@@ -168,7 +187,8 @@
     "templateOptions": {
       "label": "Claimant's Middle Initial",
       "placeholder": "C"
-    }
+    },
+    "hideExpression": "model.filing_for_self"
   },
   {
     "key": "claimant_last_name",
@@ -176,7 +196,8 @@
     "templateOptions": {
       "label": "Claimant's Last Name",
       "placeholder": "Doe"
-    }
+    },
+    "hideExpression": "model.filing_for_self"
   },
   {
     "key": "veteran_home_address_line1",
@@ -221,9 +242,11 @@
   {
     "key": "veteran_home_zip_code",
     "type": "input",
+    "optionsTypes": [
+      "zipCode"
+    ],
     "templateOptions": {
       "label": "Veteran Zipcode",
-      "placeholder": "00000"
     }
   },
   {
@@ -235,11 +258,13 @@
     }
   },
   {
-    "key": "veteran_phone_number",
+    "key": "contact_phone_number",
     "type": "input",
+    "optionsTypes": [
+      "phoneNumber"
+    ],
     "templateOptions": {
-      "label": "Veteran Phone Number",
-      "placeholder": "000-000-0000"
+      "label": "Your Phone Number"
     }
   },
   {
@@ -253,8 +278,22 @@
   {
     "key": "veteran_dob",
     "type": "input",
+    "optionsTypes": [
+      "date"
+    ],
     "templateOptions": {
       "label": "Veteran Date of Birth",
+      "placeholder": "MM/DD/YYYY"
+    }
+  },
+  {
+    "key": "veteran_date_signed_0966",
+    "type": "input",
+    "optionsTypes": [
+      "date"
+    ],
+    "templateOptions": {
+      "label": "Date Signed",
       "placeholder": "MM/DD/YYYY"
     }
   }
