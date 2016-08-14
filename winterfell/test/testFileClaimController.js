@@ -161,7 +161,7 @@ describe('FileClaimController', function() {
     });
   });
 
-  xit('Delete claim - success', function(done) {
+  it('Delete claim - success', function(done) {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
