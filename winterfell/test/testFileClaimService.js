@@ -27,13 +27,6 @@ describe('FileClaimService', function() {
    });
 
   beforeEach(function(done) {
-    // Clear all FileClaims
-    FileClaim.remove({}).then(function() {
-      done();
-    });
-  });
-
-  beforeEach(function(done) {
     FileClaim.remove({}, done);
   });
 
@@ -85,7 +78,6 @@ describe('FileClaimService', function() {
       });
     });
   });
-
 
   xit('Add form to claim', function(done) {
 
