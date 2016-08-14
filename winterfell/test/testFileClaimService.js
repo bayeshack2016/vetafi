@@ -1,5 +1,4 @@
 var should = require('should');
-var sinon = require('sinon');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var FileClaim = require('../models/fileClaim');
@@ -28,13 +27,7 @@ describe('FileClaimService', function() {
    });
 
   beforeEach(function(done) {
-    // Clear all FileClaims
-    FileClaim.remove({}).then(function() {
-      done();
-    });
-  });
-
-  after(function() {
+    FileClaim.remove({}, done);
   });
 
   it('Create new INCOMPLETE FileClaim - already exists', function(done) {
@@ -60,7 +53,7 @@ describe('FileClaimService', function() {
     });
   });
 
-  it('Set FileClaim state to COMPLETED', function(done) {
+  it('Set FileClaim state to SUBMITTED', function(done) {
     FileClaimService.createNewClaim(targetUser._id, function(err, claim) {
       FileClaimService.setClaimState(claim._id, FileClaim.State.SUBMITTED, function(err, update) {
         Boolean(err).should.equal(false);

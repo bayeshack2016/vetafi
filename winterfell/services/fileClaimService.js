@@ -4,7 +4,7 @@ var httpErrors = require('./../utils/httpErrors');
 var FileClaim = require('./../models/fileClaim');
 
 function FileClaimService(app) {
-    this.app = app;
+  this.app = app;
 };
 
 module.exports = FileClaimService;

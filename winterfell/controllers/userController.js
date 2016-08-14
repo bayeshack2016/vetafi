@@ -38,9 +38,9 @@ module.exports = function (app) {
         req.session.destroy(function (redisErr) {
           if(redisErr) {
             console.log(redisErr);
-            res.status(http.INTERNAL_SERVER_ERROR);
+            res.status(http.INTERNAL_SERVER_ERROR).send();
           } else {
-            res.status(http.OK);
+            res.sendStatus(http.OK);
           }
         });
       }
@@ -49,7 +49,7 @@ module.exports = function (app) {
       if (user) {
         UserService.setUserState(user.id, User.State.INACTIVE, callback);
       } else {
-        res.status(http.NOT_FOUND);
+        res.sendStatus(http.NOT_FOUND);
       }
     });
   });
