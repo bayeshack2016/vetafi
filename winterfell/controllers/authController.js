@@ -3,6 +3,7 @@ var passport = require('passport');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
+var UserValues = require('./../models/userValues');
 var UserService = require('./../services/userService');
 
 module.exports = function (app) {
@@ -44,10 +45,16 @@ module.exports = function (app) {
           if (user) {
             console.log('[authSignUp] Successfully created user ' + user.externalId);
             var extUserId = user.externalId;
-            res.status(http.OK).send({userId: extUserId, redirect: '/'});
-          } else {
-            console.log('[authSignUp] ' + error.code + ' Error creating user: ' + error.msg);
-            res.status(error.code).send({error: error.msg});
+            UserValues.create(
+              {},
+              function(error, userValues) {
+                if (error) {
+                  res.sendStatus(http.INTERNAL_SERVER_ERROR);
+                  return
+                }
+                res.status(http.OK).send({userId: extUserId, redirect: '/'});
+              }
+            );
           }
         });
       } else { // User does exist!
@@ -61,6 +68,7 @@ module.exports = function (app) {
     console.log('[authLogIn] request received for ' + JSON.stringify(req.body));
     if (req.user) {
       req.session.key = req.body.email;
+      req.session.userId = req.user._id;
       var extUserId = req.user.externalId;
       res.status(http.OK).send({userId: extUserId, redirect: '/'});
     } else {

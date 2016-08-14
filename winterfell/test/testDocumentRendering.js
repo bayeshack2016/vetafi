@@ -22,7 +22,7 @@ describe('DocumentRenderingController', function () {
 
     it('POST / should return 404 before signin', function(done) {
         testSession
-            .get('/render/form')
+            .post('/render/form')
             .expect(404, done);
     });
 
