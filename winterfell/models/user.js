@@ -20,7 +20,23 @@ var UserSchema = new Schema({
       ref: 'SocialUser'
   }],
   admin: Boolean,                     // Is user an admin?
-  test: Boolean                       // Is user a test account?
+  test: Boolean,                       // Is user a test account?
+
+  dateOfBirth: Date,                  // Date of Birth
+  ssn: String,                        // Social Security Number
+  contact: {                          // Anything related to contact information
+    phoneNumber: String,              // Phone Number
+    address: {                        // Anything related to address
+      name: String,                   // Name of Address (Home) (optional)
+      line1: String,                  // Street name & number
+      line2: String,                  // Secondary Address (Suite, Apt, Room, P.O.)
+      city: String,                   // City
+      state: String,                  // U.S. State
+      zip: String,                    // U.S. ZipCode
+      country: String                 // Country
+    }
+  }
+
 }, {
   timestamps: true
 });
