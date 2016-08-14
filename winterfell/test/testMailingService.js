@@ -3,10 +3,9 @@ var should = require('should');
 var fs = require('fs');
 
 var DestinationAddress = require('../models/destinationAddress');
-var UserAddress = require('../models/userAddress');
+var User = require('../models/user');
 var Letter = require('../models/letter');
 var Document = require('../models/document');
-var User = require('../models/document');
 
 var mockLob = {
     letters: {
@@ -22,17 +21,19 @@ var testUser = {
     lastname: "LastName",
     email: "test@test.com",
     externalId: "value",
-    password: "password"
-};
-
-var testUserAddress = {
-    name: "Name", // Name line
-    addressLine1: "Address1",
-    addressLine2: "Address2",
-    addressCity: "City",
-    addressState: "State",
-    addressZip: "Zip",
-    addressCountry: "Country"
+    password: "password",
+    state: User.State.ACTIVE,
+    contact: {
+      address: {
+          name: "Name",
+          line1: "Address1",
+          line2: "Address2",
+          city: "City",
+          state: "State",
+          zip: "Zip",
+          country: "Country"
+      }
+    }
 };
 
 var testDestinationAddress = {
@@ -56,7 +57,6 @@ describe('Mailing', function () {
     var service;
     var testUserInstance;
     var testDocumentInstance;
-    var testUserAddressInstance;
     var testDestinationAddressInstance;
 
     before(function (done) {
@@ -64,21 +64,20 @@ describe('Mailing', function () {
         service = new MailingService(server.app);
         service.Lob = mockLob;
 
-        User.create(testUser, function (userErr, user) {
+        User.remove({}, function() {
+          User.create(testUser, function(userErr, user) {
             testUserInstance = user;
-            testUserAddress.user = user._id;
-            UserAddress.create(testUserAddress, function (userErr, userAddress) {
-                testUserAddressInstance = userAddress;
-                DestinationAddress.create(testDestinationAddress, function (destinationErr, destinationAddress) {
-                    testDestinationAddressInstance = destinationAddress;
-                    testDocument.user = user._id;
-                    Document.create(testDocument, function (documentErr, document) {
-                        testDocumentInstance = document;
-                        done();
-                    });
+
+            DestinationAddress.create(testDestinationAddress, function (destinationErr, destinationAddress) {
+                testDestinationAddressInstance = destinationAddress;
+                testDocument.user = user._id;
+                Document.create(testDocument, function (documentErr, document) {
+                    testDocumentInstance = document;
+                    done();
                 });
-            })
-        })
+            });
+          });
+        });
     });
 
     after(function () {
@@ -87,7 +86,7 @@ describe('Mailing', function () {
 
     it('Should send letter without error', function (done) {
         service.sendLetter(
-            testUserAddressInstance,
+            testUserInstance,
             testDestinationAddressInstance,
             [testDocumentInstance],
             function (sendLetterErr, letter) {
@@ -95,7 +94,7 @@ describe('Mailing', function () {
                 Letter.findOne({_id: letter._id}, function(queryErr, letter) {
                     should.not.exist(queryErr);
                     letter.user.should.deepEqual(testUserInstance._id);
-                    letter.sender.should.deepEqual(testUserAddressInstance._id);
+                    letter.sender.should.deepEqual(testUserInstance._id);
                     letter.recipient.should.deepEqual(testDestinationAddressInstance._id);
                     done();
                 });

@@ -1,6 +1,6 @@
 'use strict';
-var uuid = require('uuid');
 var _ = require('lodash');
+var uuid = require('uuid');
 var mongoose = require('mongoose');
 var SocialUser = require('./socialUser');
 var Schema = mongoose.Schema;
@@ -12,8 +12,6 @@ var UserSchema = new Schema({
   email: String,                      // Email address
   externalId: String,                 // External User Id
   password: String,                   // Encrypted password
-  createdAt: Date,                    // Date of row creation
-  updatedAt: Date,                    // Date of last row modification
   state: String,                      // User.State
   stateUpdatedAt: Date,               // Date of last state modification
   socialUsers:[{
@@ -21,7 +19,25 @@ var UserSchema = new Schema({
       ref: 'SocialUser'
   }],
   admin: Boolean,                     // Is user an admin?
-  test: Boolean                       // Is user a test account?
+  test: Boolean,                       // Is user a test account?
+
+  dateOfBirth: Date,                  // Date of Birth
+  ssn: String,                        // Social Security Number
+  contact: {                          // Anything related to contact information
+    phoneNumber: String,              // Phone Number
+    address: {                        // Anything related to address
+      name: String,                   // Name of Address (Home) (optional)
+      line1: String,                  // Street name & number
+      line2: String,                  // Secondary Address (Suite, Apt, Room, P.O.)
+      city: String,                   // City
+      state: String,                  // U.S. State
+      zip: String,                    // U.S. ZipCode
+      country: String                 // Country
+    }
+  }
+
+}, {
+  timestamps: true
 });
 
 var State = {
@@ -33,7 +49,7 @@ var State = {
 // None yet
 
 // Static methods
-UserSchema.statics.quickCreate = function(user) {
+UserSchema.statics.quickCreate = function(user, callback) {
   var now = Date.now();
   return User.create({
     firstname: user.firstname,
@@ -42,13 +58,11 @@ UserSchema.statics.quickCreate = function(user) {
     email: user.email,
     password: user.password,
     externalId: uuid.v4(),
-    createdAt: now,
-    updatedAt: now,
     state: User.State.ACTIVE,
     stateUpdatedAt: now,
     admin: user.admin,
     test: false
-  });
+  }, callback);
 };
 
 UserSchema.statics.externalize = function(user) {

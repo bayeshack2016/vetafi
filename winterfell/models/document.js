@@ -8,8 +8,9 @@ var documentSchema = new Schema({
     key: String, // Code name for the form
     pdf: Buffer,
     user: Schema.Types.ObjectId
+}, {
+  timestamps: true
 });
 
 var Document = mongoose.model('Document', documentSchema);
 module.exports = Document;
-
