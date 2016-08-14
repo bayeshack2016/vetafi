@@ -2,15 +2,15 @@ var should = require('should');
 var sinon = require('sinon');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var FileClaim = require('../models/fileClaim');
-var FileClaimService = require('../services/fileClaimService');
+var Claim = require('../models/claim');
+var ClaimService = require('../services/claimService');
 var User = require('../models/user');
 var UserService = require('../services/userService');
 
-describe('FileClaimService', function() {
+describe('ClaimService', function() {
 
   before(function(done) {
-    FileClaim.remove({}).then(function() {
+    Claim.remove({}).then(function() {
       User.remove({}).then(function() {
         done();
       });
@@ -30,7 +30,7 @@ describe('FileClaimService', function() {
     });
   }
 
-  it('Create new INCOMPLETE FileClaim - already exists', function(done) {
+  it('Create new INCOMPLETE Claim - already exists', function(done) {
     var callbacks = {
       onSuccess: function() {},
       onError: function() {}
@@ -41,12 +41,12 @@ describe('FileClaimService', function() {
 
     createNewUser().then(function() {
       User.findOne({}).exec(function(err, user) {
-        var existingFileClaim = new FileClaim({
+        var existingClaim = new Claim({
           userId: user._id,
-          state: FileClaim.State.INCOMPLETE
+          state: Claim.State.INCOMPLETE
         });
-        existingFileClaim.save(function(err, claim) {
-          FileClaimService.createNewClaim(user._id, callbacks).then(function() {
+        existingClaim.save(function(err, claim) {
+          ClaimService.createNewClaim(user._id, callbacks).then(function() {
             mockedCallbacks.verify();
             done();
           });
@@ -55,7 +55,7 @@ describe('FileClaimService', function() {
     });
   });
 
-  xit('Create new INCOMPLETE FileClaim - success', function(done) {
+  xit('Create new INCOMPLETE Claim - success', function(done) {
     var callbacks = {
       onSuccess: function() {},
       onError: function() {}
@@ -65,7 +65,7 @@ describe('FileClaimService', function() {
 
     createNewUser().then(function() {
       User.findOne({}).exec(function(err, user) {
-        FileClaimService.createNewClaim(user._id, callbacks).then(function() {
+        ClaimService.createNewClaim(user._id, callbacks).then(function() {
           mockedCallbacks.verify();
           done();
         });
@@ -73,11 +73,11 @@ describe('FileClaimService', function() {
     });
   });
 
-  it('Set FileClaim state to COMPLETED', function(done) {
+  it('Set Claim state to COMPLETED', function(done) {
     done();
   });
 
-  it('Set FileClaim state to DISCARDED', function(done) {
+  it('Set Claim state to DISCARDED', function(done) {
     done();
   });
 

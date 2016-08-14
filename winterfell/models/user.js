@@ -3,7 +3,6 @@ var uuid = require('uuid');
 var _ = require('lodash');
 var mongoose = require('mongoose');
 var SocialUser = require('./socialUser');
-var FileClaim = require('./fileClaim');
 var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({

@@ -1,21 +1,21 @@
 var _ = require('lodash');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var FileClaim = require('./../models/fileClaim');
+var Claim = require('./../models/claim');
 
-function FileClaimService(app) {
+function ClaimService(app) {
     this.app = app;
 };
 
-module.exports = FileClaimService;
+module.exports = ClaimService;
 module.exports.createNewClaim = function(userId, callbacks) {
-  FileClaim.find({}).exec(function(err, claims) {
+  Claim.find({}).exec(function(err, claims) {
     console.log('claimsAll: ' + JSON.stringify(claims));
   });
-  return FileClaim.findOne({ userId: userId, state: FileClaim.State.INCOMPLETE }).exec(function(err, fileClaim) {
-    console.log('claims: ' + JSON.stringify(fileClaim));
-    if (_.isEmpty(fileClaim)) {
-      return FileClaim.quickCreate(userId).then(function(claim, error) {
+  return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, claim) {
+    console.log('claims: ' + JSON.stringify(claim));
+    if (_.isEmpty(claim)) {
+      return Claim.quickCreate(userId).then(function(claim, error) {
         if (claim) {
           _.isEmpty(callbacks) ? null : callbacks.onSuccess(claim);
           return claim;
@@ -31,16 +31,16 @@ module.exports.createNewClaim = function(userId, callbacks) {
   });
 };
 
-module.exports.addFileToClaim = function(fileClaimId, file, callbacks) {
+module.exports.addFileToClaim = function(claimId, file, callbacks) {
   console.log('[addFileToClaim] not implemented');
 };
 
-module.exports.removeFileFromClaim = function(fileClaimId, file, callbacks) {
+module.exports.removeFileFromClaim = function(claimId, file, callbacks) {
   console.log('[removeFileFromClaim] not implemented');
 };
 
-module.exports.setClaimState = function(fileClaimId, state, callback) {
-  var query = { id: fileClaimId };
+module.exports.setClaimState = function(claimId, state, callback) {
+  var query = { id: claimId };
   var update = { state: state };
-  return FileClaim.update(query, update, callback);
+  return Claim.update(query, update, callback);
 };

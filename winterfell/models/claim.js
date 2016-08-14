@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var User = require('./user');
 var Schema = mongoose.Schema;
 
-var FileClaimSchema = new Schema({
+var ClaimSchema = new Schema({
   externalId: String,
   userId: {
     type: mongoose.Schema.Types.ObjectId,
@@ -13,7 +13,7 @@ var FileClaimSchema = new Schema({
   },
   createdAt: Date,       // Date of row creation
   updatedAt: Date,       // Date of last row modification
-  state: String,         // FileClaim.State
+  state: String,         // Claim.State
   stateUpdatedAt: Date,  // Date of last state modification
 });
 
@@ -28,25 +28,25 @@ var State = {
 // None yet
 
 // Static methods
-FileClaimSchema.statics.quickCreate = function(userId) {
+ClaimSchema.statics.quickCreate = function(userId) {
   var now = Date.now();
-  return FileClaim.create({
+  return Claim.create({
     externalId: uuid.v4(),
     userId: userId,
     createdAt: now,
     updatedAt: now,
-    state: FileClaim.State.INCOMPLETE,
+    state: Claim.State.INCOMPLETE,
     stateUpdatedAt: now
   });
 };
 
-FileClaimSchema.statics.externalize = function(claim) {
+ClaimSchema.statics.externalize = function(claim) {
   return _.pick(claim, ['externalId', 'state', 'updatedAt']);
 };
 
 // Instance methods
 // None yet
 
-var FileClaim = mongoose.model('FileClaim', FileClaimSchema);
-module.exports = FileClaim;
+var Claim = mongoose.model('Claim', ClaimSchema);
+module.exports = Claim;
 module.exports.State = State;
