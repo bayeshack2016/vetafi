@@ -40,20 +40,18 @@ module.exports = function (app) {
     // First find a user with this email
     User.findOne({email: data.email, state: User.State.ACTIVE}, function (err, user) {
       if (_.isEmpty(user)) { // User does not exist, create a new one!
-        var callbacks = {
-          onError: function(errorCode, errorMsg) {
-            console.log('[authSignUp] ' + errorCode + ' Error creating user: ' + errorMsg);
-            res.status(errorCode).send({error: errorMsg});
-          },
-          onSuccess: function(user) {
+        UserService.createNewUser(data, function(err, user) {
+          if (user) {
             console.log('[authSignUp] Successfully created user ' + user.externalId);
             var extUserId = user.externalId;
             res.status(http.OK).send({userId: extUserId, redirect: '/'});
+          } else {
+            console.log('[authSignUp] ' + error.code + ' Error creating user: ' + error.msg);
+            res.status(error.code).send({error: error.msg});
           }
-        };
-        UserService.createNewUser(data, callbacks);
+        });
       } else { // User does exist!
-          res.status(http.NOT_FOUND).send({error: httpErrors.USER_EXISTS});
+          res.status(http.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
       }
     });
   });

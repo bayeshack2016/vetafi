@@ -19,22 +19,24 @@ function validatePassword(password) {
 }
 
 module.exports = UserService;
-module.exports.createNewUser = function(user, callbacks) {
+module.exports.createNewUser = function(user, callback) {
   var email = _.trim(user.email);
   var password = user.password;
 
-  var errorCode = 0;
-  var errorMsg = null;
+  var errorObj = {
+    code: 0,
+    msg: ""
+  };
   if (!validateEmail(email)) {
-    errorCode = http.BAD_REQUEST;
-    errorMsg = httpErrors.INVALID_EMAIL;
+    errorObj.code = http.BAD_REQUEST;
+    errorObj.msg = httpErrors.INVALID_EMAIL;
   }
   if (!validatePassword(password)) {
-    errorCode = http.BAD_REQUEST;
-    errorMsg = httpErrors.INVALID_PASSWORD;
+    errorObj.code = http.BAD_REQUEST;
+    errorObj.msg = httpErrors.INVALID_PASSWORD;
   }
 
-  if (errorCode == 0) {
+  if (errorObj.code == 0) {
     var newUser = {
       firstname: null,
       middlename: null,
@@ -43,15 +45,9 @@ module.exports.createNewUser = function(user, callbacks) {
       password: password,
       admin: false
     };
-    return User.quickCreate(newUser).then(function(user, error) {
-      if (user) {
-        _.isEmpty(callbacks) ? null : callbacks.onSuccess(user);
-      } else {
-        _.isEmpty(callbacks) ? null : callbacks.onError(http.INTERNAL_SERVER_ERROR, httpErrors.DATABASE);
-      }
-    });
-  } else if (!_.isEmpty(callbacks)) {
-    callbacks.onError(errorCode, errorMsg)
+    return User.quickCreate(newUser, callback);
+  } else if (_.isFunction(callback)) {
+    callback(errorObj);
   }
   return null;
 };
