@@ -2,12 +2,12 @@
 var should = require('should');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var FileClaim = require('../models/fileClaim');
+var Claim = require('../models/claim');
 var User = require('../models/user');
 var session = require('supertest-session');
 var uuid = require('uuid');
 
-describe('FileClaimController', function() {
+describe('ClaimController', function() {
   var targetUser;
   var server;
   var testSession;
@@ -33,9 +33,7 @@ describe('FileClaimController', function() {
   });
 
   beforeEach(function(done) {
-    FileClaim.remove({}, function() {
-      done();
-    });
+    Claim.remove({}, done);
   });
 
   after(function() {
@@ -77,9 +75,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .get('/claims/' + claim.externalId)
         .expect(http.OK, done);
@@ -103,15 +101,15 @@ describe('FileClaimController', function() {
       {
         userId: targetUser._id,
         externalId: uuid.v4(),
-        state: FileClaim.State.INCOMPLETE
+        state: Claim.State.INCOMPLETE
       },
       {
         userId: targetUser._id,
         externalId: uuid.v4(),
-        state: FileClaim.State.INCOMPLETE
+        state: Claim.State.INCOMPLETE
       }
     ];
-    FileClaim.create(claimsArr, function() {
+    Claim.create(claimsArr, function() {
       testSession
         .get('/claims/' + claimsArr[0].externalId)
         .expect(http.OK, function() {
@@ -126,9 +124,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .post('/claims/qwer/submit')
         .expect(http.NOT_FOUND, done);
@@ -139,9 +137,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .post('/claims/' + claim.externalId + '/submit')
         .expect(http.OK, done);
@@ -152,9 +150,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .del('/claims/qwer/submit')
         .expect(http.NOT_FOUND, done);
@@ -165,9 +163,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .del('/claims/' + claim.externalId)
         .expect(http.OK, done);
