@@ -42,20 +42,22 @@ module.exports = function (app) {
     User.findOne({email: data.email, state: User.State.ACTIVE}, function (err, user) {
       if (_.isEmpty(user)) { // User does not exist, create a new one!
         UserService.createNewUser(data, function(err, user) {
-          if (user) {
-            console.log('[authSignUp] Successfully created user ' + user.externalId);
-            var extUserId = user.externalId;
-            UserValues.create(
-              {},
-              function(error, userValues) {
-                if (error) {
-                  res.sendStatus(http.INTERNAL_SERVER_ERROR);
-                  return
-                }
-                res.status(http.OK).send({userId: extUserId, redirect: '/'});
-              }
-            );
+          if (err) {
+            res.sendStatus(http.INTERNAL_SERVER_ERROR);
+            return;
           }
+          console.log('[authSignUp] Successfully created user ' + user.externalId);
+          var extUserId = user.externalId;
+          UserValues.create(
+            {},
+            function (error, userValues) {
+              if (error) {
+                res.sendStatus(http.INTERNAL_SERVER_ERROR);
+                return
+              }
+              res.status(http.OK).send({userId: extUserId, redirect: '/'});
+            }
+          );
         });
       } else { // User does exist!
           res.status(http.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
