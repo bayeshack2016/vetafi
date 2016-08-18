@@ -112,7 +112,7 @@ module.exports = function (app) {
     });
   }
 
-  app.post('/admin/reset-test-users', function (req, res) {
+  app.get('/admin/reset-test-users', function (req, res) {
     console.log('Reset test users requested...');
     removeTestUsers(function() {
       _.forEach(allTestUsers, function(userToCreate) {
