@@ -3,6 +3,7 @@ var UserService = require('./../services/userService');
 var session = require('supertest-session');
 
 describe('DocumentRenderingController', function () {
+    this.timeout(2000);
     var server;
     var testSession;
     before(function () {
@@ -27,18 +28,17 @@ describe('DocumentRenderingController', function () {
     });
 
     it('should sign in', function (done) {
-        var callbacks = {
-            onError: function (errorCode, errorMsg) {
-                done();
-            },
-            onSuccess: function (user) {
-                testSession.post('/auth/login')
-                    .send({email: 'test@test.com', password: '1234abcd!'})
-                    .expect(200, done);
-            }
-        };
         UserService.createNewUser({email: 'test@test.com', password: '1234abcd!'},
-            callbacks);
+          function (error, user) {
+              if (error) {
+                  done();
+                  return;
+              }
+
+              testSession.post('/auth/login')
+                .send({email: 'test@test.com', password: '1234abcd!'})
+                .expect(200, done);
+          });
     });
 
     it('POST / should return 404 if form doesnt exist', function (done) {
@@ -49,7 +49,6 @@ describe('DocumentRenderingController', function () {
     });
 
     it('POST / should return 200 with redirect url', function (done) {
-        this.timeout(10000);
         testSession
             .post('/render/VBA-21-0781-ARE')
             .send([])
@@ -58,7 +57,6 @@ describe('DocumentRenderingController', function () {
     });
 
     it('POST / redirect url should work', function (done) {
-        this.timeout(20000);
         testSession
             .post('/render/VBA-21-0781-ARE')
             .send([])
