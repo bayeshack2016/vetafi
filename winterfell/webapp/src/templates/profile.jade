@@ -74,16 +74,21 @@ div#profile-view(ng-controller="profileCtrl")
     div.vfi-profile-section#settings(ng-if="currentTab=='settings'")
       div.vfi-section-content
         | Change Email
-        button.vfi-settings-btn.change-email(ng-click="clickChangeEmail()") Change Email
+        button.vfi-settings-btn#change-email(ng-click="clickChangeEmail()") Change Email
 
       div.vfi-section-content
         | Change Password
-        button.vfi-settings-btn.change-password(ng-click="clickChangePassword()") Change Password
+        button.vfi-settings-btn#change-password(ng-click="clickChangePassword()") Change Password
+
+      div.vfi-section-content
+        | Link your ID.me account
+        button.vfi-settings-btn#idme(ng-click="clickLinkIdMe()")
+          div#logo-icon
 
       div.vfi-section-content
         | Log out of your account
-        button.vfi-settings-btn.logout(ng-click="clickLogout()") Log out
+        button.vfi-settings-btn#logout(ng-click="clickLogout()") Log out
 
       div.vfi-section-content
         | Delete your account and remove all your content
-        button.vfi-settings-btn.delete-account(ng-click="clickDeleteAccount()") Delete Account
+        button.vfi-settings-btn#delete-account(ng-click="clickDeleteAccount()") Delete Account

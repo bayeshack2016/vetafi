@@ -1,5 +1,6 @@
 var _ = require('lodash');
 var passport = require('passport');
+var requestify = require('requestify');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
@@ -44,14 +45,14 @@ module.exports = function (app) {
           if (user) {
             console.log('[authSignUp] Successfully created user ' + user.externalId);
             var extUserId = user.externalId;
-            res.status(http.OK).send({userId: extUserId, redirect: '/'});
+            res.status(httpStatus.OK).send({userId: extUserId, redirect: '/'});
           } else {
             console.log('[authSignUp] ' + error.code + ' Error creating user: ' + error.msg);
             res.status(error.code).send({error: error.msg});
           }
         });
       } else { // User does exist!
-          res.status(http.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
+          res.status(httpStatus.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
       }
     });
   });
@@ -62,9 +63,9 @@ module.exports = function (app) {
     if (req.user) {
       req.session.key = req.body.email;
       var extUserId = req.user.externalId;
-      res.status(http.OK).send({userId: extUserId, redirect: '/'});
+      res.status(httpStatus.OK).send({userId: extUserId, redirect: '/'});
     } else {
-      res.status(http.UNAUTHORIZED);
+      res.status(httpStatus.UNAUTHORIZED);
     }
   });
 
@@ -74,11 +75,32 @@ module.exports = function (app) {
     req.session.destroy(function (err) {
         if(err) {
             console.log(err);
-            res.status(http.INTERNAL_SERVER_ERROR);
+            res.status(httpStatus.INTERNAL_SERVER_ERROR);
         } else {
             res.redirect('/');
         }
     });
+  });
+
+  // Endpoint for routing idme authorization
+  // https://api.id.me/oauth/authorize?...
+  app.get('/auth/link/idme', function(req, res) {
+    console.log('[authLinkIdMe] link request with ' + JSON.stringify(req.params));
+    var code = req.params.code;
+    if (code) {
+      requestify.post('https://api.id.me/oauth/token', {
+        code: code,
+        client_id: '71ffbd3f04241a56e63fa6a960fbb15e',
+        client_secret: 'ed6a5f95b0d4421673a63e1fc927c93f',
+        redirect_uri: 'www.vetafi.org/',
+        grant_type: 'authorization_code'
+      }).then(function(socialResp) {
+        console.log('[authLinkIdMe] idme linked! ' + JSON.stringify(socialResp));
+        res.sendStatus(http.OK);
+      });
+    } else {
+      res.sendStatus(http.BAD_REQUEST);
+    }
   });
 
 };
