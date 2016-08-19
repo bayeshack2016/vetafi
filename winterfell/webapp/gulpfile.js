@@ -94,6 +94,11 @@ gulp.task('icons', function () {
     .pipe(gulp.dest('build/icons'))
 });
 
+gulp.task('xhrEnv', function () {
+  return gulpif(release, gulp.src('src/js/xhrEnvRelease.js'), gulp.src('src/js/xhrEnvDev.js'))
+    .pipe(gulp.dest('build/js'));
+});
+
 gulp.task('initBrowserSync', ['build'], function () {
   browserSync.init({
     server: {
@@ -108,6 +113,6 @@ gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/**/*.jade', ['jade']);
 });
 
-gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'js', 'other-js', 'stylus', 'jade', 'browserify']);
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'stylus', 'jade', 'browserify']);
 
 gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);
