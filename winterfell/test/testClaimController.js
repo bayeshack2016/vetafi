@@ -39,37 +39,31 @@ describe('ClaimController', function() {
     Claim.remove({}, done);
   });
 
-  after(function() {
-      server.close();
-  });
-
-  it('Create claim for user - no external user id', function(done) {
+  it('Get claims for user - 404 if not authed', function(done) {
     testSession
-      .post('/claims/create')
-      .expect(http.BAD_REQUEST, done);
-  });
-
-  it('Create claim for user - user dne', function(done) {
-    testSession
-      .post('/claims/create')
-      .send({ extUserId: 'asdf' })
+      .get('/claims')
       .expect(http.NOT_FOUND, done);
   });
+
+  it('should sign in', function (done) {
+    testSession.post('/auth/login')
+      .send({email: targetUser.email, password: targetUser.password})
+      .expect(200, done);
+  });
+
 
   it('Create claim for user - success', function(done) {
     testSession
       .post('/claims/create')
-      .send({ extUserId: targetUser.externalId })
-      .expect(http.OK, done);
+      .expect(http.CREATED, done);
   });
 
   it('Get claim - claim dne', function(done) {
     testSession
       .post('/claims/create')
-      .send({ extUserId: targetUser.externalId })
       .expect(http.OK, function() {
         testSession
-          .get('/claims/qwer')
+          .get('/claim/qwer')
           .expect(http.NOT_FOUND, done);
       });
   });
@@ -82,21 +76,9 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .get('/claims/' + claim.externalId)
+        .get('/claim/' + claim.externalId)
         .expect(http.OK, done);
     });
-  });
-
-  it('Get claims for user - user dne', function(done) {
-    testSession
-        .get('/claims/user/qwer')
-        .expect(http.NOT_FOUND, done);
-  });
-
-  it('Get claims for user - no claims', function(done) {
-    testSession
-        .get('/claims/user/' + targetUser.externalId)
-        .expect(http.OK, done);
   });
 
   it('Get claims for user - success', function(done) {
@@ -114,10 +96,10 @@ describe('ClaimController', function() {
     ];
     Claim.create(claimsArr, function() {
       testSession
-        .get('/claims/' + claimsArr[0].externalId)
+        .get('/claim/' + claimsArr[0].externalId)
         .expect(http.OK, function() {
           testSession
-            .get('/claims/' + claimsArr[1].externalId)
+            .get('/claim/' + claimsArr[1].externalId)
             .expect(http.OK, done);
         });
     });
@@ -131,7 +113,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .post('/claims/qwer/submit')
+        .post('/claim/qwer/submit')
         .expect(http.NOT_FOUND, done);
     });
   });
@@ -144,7 +126,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .post('/claims/' + claim.externalId + '/submit')
+        .post('/claim/' + claim.externalId + '/submit')
         .expect(http.OK, done);
     });
   });
@@ -157,7 +139,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .del('/claims/qwer/submit')
+        .del('/claim/qwer')
         .expect(http.NOT_FOUND, done);
     });
   });
@@ -170,7 +152,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .del('/claims/' + claim.externalId)
+        .del('/claim/' + claim.externalId)
         .expect(http.OK, done);
     });
   });
