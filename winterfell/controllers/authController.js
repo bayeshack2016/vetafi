@@ -45,14 +45,14 @@ module.exports = function (app) {
           if (user) {
             console.log('[authSignUp] Successfully created user ' + user.externalId);
             var extUserId = user.externalId;
-            res.status(httpStatus.OK).send({userId: extUserId, redirect: '/'});
+            res.status(http.OK).send({userId: extUserId, redirect: '/'});
           } else {
             console.log('[authSignUp] ' + error.code + ' Error creating user: ' + error.msg);
             res.status(error.code).send({error: error.msg});
           }
         });
       } else { // User does exist!
-          res.status(httpStatus.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
+          res.status(http.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
       }
     });
   });
@@ -63,9 +63,9 @@ module.exports = function (app) {
     if (req.user) {
       req.session.key = req.body.email;
       var extUserId = req.user.externalId;
-      res.status(httpStatus.OK).send({userId: extUserId, redirect: '/'});
+      res.status(http.OK).send({userId: extUserId, redirect: '/'});
     } else {
-      res.status(httpStatus.UNAUTHORIZED);
+      res.status(http.UNAUTHORIZED);
     }
   });
 
@@ -75,7 +75,7 @@ module.exports = function (app) {
     req.session.destroy(function (err) {
         if(err) {
             console.log(err);
-            res.status(httpStatus.INTERNAL_SERVER_ERROR);
+            res.status(http.INTERNAL_SERVER_ERROR);
         } else {
             res.redirect('/');
         }
@@ -91,7 +91,7 @@ module.exports = function (app) {
       requestify.post('https://api.id.me/oauth/token', {
         code: code,
         client_id: '71ffbd3f04241a56e63fa6a960fbb15e',
-        client_secret: 'ed6a5f95b0d4421673a63e1fc927c93f',
+        client_secret: 'some_secret_client_id',
         redirect_uri: 'www.vetafi.org/',
         grant_type: 'authorization_code'
       }).then(function(socialResp) {
