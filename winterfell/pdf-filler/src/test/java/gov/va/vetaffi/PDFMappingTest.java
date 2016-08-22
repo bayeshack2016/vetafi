@@ -19,10 +19,10 @@ public class PDFMappingTest {
                         new PDFField("field4", "abc")
                 ),
                 Lists.newArrayList(
-                        new PDFFieldLocator("pdfField", "field1", 0, null, null, null),
-                        new PDFFieldLocator("pdfField", "field2", 1, null, null, null),
-                        new PDFFieldLocator("pdfField", "field3", 2, null, null, null),
-                        new PDFFieldLocator("pdfSubSField", "field4", 0, null, 0, 1)
+                        new PDFFieldLocator("pdfField", "field1", 0, null, null, null, false),
+                        new PDFFieldLocator("pdfField", "field2", 1, null, null, null, false),
+                        new PDFFieldLocator("pdfField", "field3", 2, null, null, null, false),
+                        new PDFFieldLocator("pdfSubSField", "field4", 0, null, 0, 1, false)
                 ));
 
         assertEquals("a b c", stringStringMap.get("pdfField"));

@@ -36,6 +36,26 @@ public class PDFMapping {
         }
     };
 
+    public static Map<String, String> mapBase64ImageBlogValues(List<PDFField> input, final List<PDFFieldLocator> spec) {
+        HashMap<String, String> output = Maps.newHashMap();
+        HashMap<String, String> values = Maps.newHashMap();
+        List<PDFFieldLocator> imageLocators =
+                Lists.newArrayList(spec.stream().filter(locator -> (locator.isBase64ImageBlob)).iterator());
+
+        Set<String> formElementSet = Sets.newHashSet(
+                imageLocators.stream().map(locator -> (locator.elementId)).iterator());
+
+        Stream<PDFField> filtered = input.stream().filter(pdfField -> (formElementSet.contains(pdfField.fieldName)));
+
+        filtered.forEach(pdfField -> {
+            values.put(pdfField.getFieldName(), pdfField.getFieldValue());
+        });
+
+        imageLocators.forEach(locator -> { output.put(locator.pdfId, values.get(locator.elementId));});
+
+        return output;
+    }
+
     /**
      * Map all checkbox values to their PDF fields and checkbox state
      */
@@ -83,7 +103,7 @@ public class PDFMapping {
         HashMap<String, String> output = Maps.newHashMap();
 
         List<PDFFieldLocator> nonCheckboxLocators =
-                Lists.newArrayList(spec.stream().filter(locator -> (!locator.hasIdMap())).iterator());
+                Lists.newArrayList(spec.stream().filter(locator -> (!locator.hasIdMap() && !locator.isBase64ImageBlob)).iterator());
 
         Set<String> formElementSet = Sets.newHashSet(
                 nonCheckboxLocators.stream().map(locator -> (locator.elementId)).iterator());
