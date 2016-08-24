@@ -6,7 +6,8 @@ var Schema = mongoose.Schema;
 var UserValueSchema = new Schema({
   userId: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User'
+    ref: 'User',
+    index: {unique: true}
   },
   values: Schema.Types.Mixed
 }, { timestamps: true });

@@ -2,12 +2,15 @@
 var should = require('should');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var FileClaim = require('../models/fileClaim');
+var Claim = require('../models/claim');
+var Form = require('./../models/form');
 var User = require('../models/user');
+var UserValues = require('../models/userValues');
+var UserService = require('./../services/userService');
 var session = require('supertest-session');
 var uuid = require('uuid');
 
-describe('FileClaimController', function() {
+describe('ClaimController', function() {
   var targetUser;
   var server;
   var testSession;
@@ -33,9 +36,7 @@ describe('FileClaimController', function() {
   });
 
   beforeEach(function(done) {
-    FileClaim.remove({}, function() {
-      done();
-    });
+    Claim.remove({}, done);
   });
 
   after(function() {
@@ -77,9 +78,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .get('/claims/' + claim.externalId)
         .expect(http.OK, done);
@@ -103,15 +104,15 @@ describe('FileClaimController', function() {
       {
         userId: targetUser._id,
         externalId: uuid.v4(),
-        state: FileClaim.State.INCOMPLETE
+        state: Claim.State.INCOMPLETE
       },
       {
         userId: targetUser._id,
         externalId: uuid.v4(),
-        state: FileClaim.State.INCOMPLETE
+        state: Claim.State.INCOMPLETE
       }
     ];
-    FileClaim.create(claimsArr, function() {
+    Claim.create(claimsArr, function() {
       testSession
         .get('/claims/' + claimsArr[0].externalId)
         .expect(http.OK, function() {
@@ -126,9 +127,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .post('/claims/qwer/submit')
         .expect(http.NOT_FOUND, done);
@@ -139,9 +140,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .post('/claims/' + claim.externalId + '/submit')
         .expect(http.OK, done);
@@ -152,9 +153,9 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .del('/claims/qwer/submit')
         .expect(http.NOT_FOUND, done);
@@ -165,12 +166,74 @@ describe('FileClaimController', function() {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     };
-    FileClaim.create(claim, function() {
+    Claim.create(claim, function() {
       testSession
         .del('/claims/' + claim.externalId)
         .expect(http.OK, done);
     });
+  });
+});
+
+describe('SaveClaimController', function () {
+  var testSession, server, targetUser, targetClaim;
+
+  before(function (done) {
+    this.timeout(20000);
+    server = require('../app');
+    testSession = session(server);
+
+    // Remove all users and create one user with user values
+    User.remove({}, function () {
+      var user = {
+        firstname: 'User1',
+        lastname: 'McUser',
+        email: 'user1@email.com',
+        password: 'testword',
+        state: User.State.ACTIVE
+      };
+      User.create(user, function (err, user) {
+        targetUser = user;
+        console.log(targetUser);
+        UserValues.remove({}, function () {
+          UserValues.create(
+            {userId: targetUser._id},
+            function (err, userValues) {
+              console.log(userValues);
+              FileClaim.create({user: targetUser._id}, function(err, claim) {
+                targetClaim = claim;
+                done();
+              });
+            });
+        });
+      });
+    });
+  });
+
+  it('should 404 before sign in', function (done) {
+    testSession
+      .post('/save/1/1')
+      .expect(404, done);
+  });
+
+  it('should sign in', function (done) {
+    testSession.post('/auth/login')
+      .send({email: targetUser.email, password: targetUser.password})
+      .expect(200, done);
+  });
+
+
+  it('Should save the claim form after signin', function(done) {
+    testSession
+      .post('/save/' + targetClaim._id + '/1')
+      .send({key1: 'value1', key2: 'value2'})
+      .expect(201, function() {
+        Form.findOne({key: '1', user: targetUser._id}, function(error, doc) {
+          should.not.exist(error);
+          doc.responses.should.deepEqual({key1: 'value1', key2: 'value2'});
+          done();
+        })
+      });
   });
 });
