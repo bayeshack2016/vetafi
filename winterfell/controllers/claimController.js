@@ -64,24 +64,46 @@ module.exports = function (app) {
     }
   });
 
+  function handleClaimStateChange(extClaimId, claimState, callback) {
+    Claim.findOne({externalId: extClaimId}).exec(function(err, claim) {
+      if (claim) {
+        ClaimService.setClaimState(claim._id, claimState, callback);
+      } else if (_.isFunction(callback)) {
+        callback({code: http.NOT_FOUND, msg: httpErrors.CLAIM_NOT_FOUND});
+      }
+    });
+  }
+
   app.post('/claims/:extClaimId/submit', function(req, res) {
     console.log('[submitClaim] request received ' + JSON.stringify(req.body));
     var extClaimId = req.params.extClaimId;
     if (extClaimId) {
-      handleClaimStateChange(extClaimId, FileClaim.State.SUBMITTED, function(code, msg) {
-        res.status(code).send({error: httpErrors.CLAIM_NOT_FOUND});
+      handleClaimStateChange(extClaimId, Claim.State.SUBMITTED, function(err, claim) {
+        if (claim) {
+          res.sendStatus(http.OK);
+        } else if (err.code == http.NOT_FOUND) {
+          res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
+        } else {
+          res.status(err.code).send({error: err.msg});
+        }
       });
     } else {
       res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_CLAIM_ID});
     }
   });
 
-  app.delete('/claims/:extClaimId', function (req, res) {
+  app.delete('/claims/:extClaimId', function(req, res) {
     console.log('[deleteClaim] request received for ' + req.params.extClaimId);
     var extClaimId = req.params.extClaimId;
     if (extClaimId) {
-      handleClaimStateChange(extClaimId, FileClaim.State.DISCARDED, function(code, msg) {
-        res.status(code).send({error: httpErrors.CLAIM_NOT_FOUND});
+      handleClaimStateChange(extClaimId, Claim.State.DISCARDED, function(err, claim) {
+        if (claim) {
+          res.sendStatus(http.OK);
+        } else if (err.code == http.NOT_FOUND) {
+          res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
+        } else {
+          res.status(err.code).send({error: err.msg});
+        }
       });
     } else {
       res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_CLAIM_ID});
