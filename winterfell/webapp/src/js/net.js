@@ -1,14 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.factory('net', ['$http', function($http) {
-  var localFrontDevHost = 'localhost:3000';
-  var baseUrl;
-  var dev = true; // todo this should be determined by a gulp task
-  if (dev) {
-    baseUrl = "http://localhost:3999";
-  } else {
-    baseUrl = "https://www.vetafi.org";
-  }
+app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
+  var baseUrl = xhrEnv.baseServerUrl;
 
   // social properties
   var socialIdMe = {
@@ -19,8 +12,9 @@ app.factory('net', ['$http', function($http) {
   };
 
   var httpGet = function (url, data) {
-    /* For Front-end only Development */
-    if (window.location.host == localFrontDevHost) {
+    // For Front-end only Development
+    // This is used for testing "success" server calls
+    if (xhrEnv.isDev) {
       var future = $.Deferred();
       future.resolve();
       return future;
@@ -33,8 +27,9 @@ app.factory('net', ['$http', function($http) {
   };
 
   var httpPost = function(url, data) {
-    /* For Front-end only Development */
-    if (window.location.host == localFrontDevHost) {
+    // For Front-end only Development
+    // This is used for testing "success" server calls
+    if (xhrEnv.isDev) {
       var future = $.Deferred();
       future.resolve();
       return future;
