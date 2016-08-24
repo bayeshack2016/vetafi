@@ -9,7 +9,7 @@ module.exports.INVALID_USER_ID = "invalid_user_id";
 module.exports.USER_NOT_FOUND = "user_not_found";
 module.exports.USER_EXISTS = "user_exists";
 
-// FileClaims related errors (4xx)
+// Claims related errors (4xx)
 module.exports.INVALID_CLAIM_ID = "invalid_claim_id";
 module.exports.CLAIM_NOT_FOUND = "claim_not_found";
 module.exports.CLAIM_INCOMPLETE_EXISTS = "claim_incomplete_exists";

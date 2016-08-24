@@ -41,18 +41,20 @@ gulp.task('jade', function () {
 });
 
 gulp.task('libs', function () {
-  return gulp.src('src/libs/**/*')
+  return gulp.src('src/libs/*.js')
     .pipe(order([
-      "jquery-2.2.3.min.js",
-      "lodash-v411-1.js",
-      "angular.min.js",
-      "angular-route.min.js",
-      "signature_pad.min.js",
-      "api-check.js",
-      "formly.js",
-      "angular-formly-templates-bootstrap.js",
-      "**/*.js"
-    ]))
+      "src/libs/jquery.js",
+      "src/libs/bootstrap.js",
+      "src/libs/lodash.js",
+      "src/libs/angular.min.js",
+      "src/libs/angular-route.min.js",
+      "src/libs/signature_pad.min.js",
+      "src/libs/api-check.js",
+      "src/libs/formly.js",
+      "src/libs/angular-formly-templates-bootstrap.js",
+      "src/libs/angular-momentjs-service.js",
+      "src/libs/*.js"
+    ], {base: './'}))
     .pipe(concat('libs.js'))
     .pipe(gulp.dest('build/libs'))
     .pipe(sourcemaps.write());

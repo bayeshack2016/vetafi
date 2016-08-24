@@ -2,6 +2,7 @@ var Biscuit = require('../services/biscuit');
 var should = require('should');
 
 describe('Biscuit', function () {
+    this.timeout(20000);
     var server;
     var biscuit;
     before(function () {
