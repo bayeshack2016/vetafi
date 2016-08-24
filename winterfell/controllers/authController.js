@@ -3,6 +3,7 @@ var passport = require('passport');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
+var UserValues = require('./../models/userValues');
 var UserService = require('./../services/userService');
 
 module.exports = function (app) {
@@ -41,14 +42,22 @@ module.exports = function (app) {
     User.findOne({email: data.email, state: User.State.ACTIVE}, function (err, user) {
       if (_.isEmpty(user)) { // User does not exist, create a new one!
         UserService.createNewUser(data, function(err, user) {
-          if (user) {
-            console.log('[authSignUp] Successfully created user ' + user.externalId);
-            var extUserId = user.externalId;
-            res.status(http.OK).send({userId: extUserId, redirect: '/'});
-          } else {
-            console.log('[authSignUp] ' + error.code + ' Error creating user: ' + error.msg);
-            res.status(error.code).send({error: error.msg});
+          if (err) {
+            res.sendStatus(http.INTERNAL_SERVER_ERROR);
+            return;
           }
+          console.log('[authSignUp] Successfully created user ' + user.externalId);
+          var extUserId = user.externalId;
+          UserValues.create(
+            {},
+            function (error, userValues) {
+              if (error) {
+                res.sendStatus(http.INTERNAL_SERVER_ERROR);
+                return
+              }
+              res.status(http.OK).send({userId: extUserId, redirect: '/'});
+            }
+          );
         });
       } else { // User does exist!
           res.status(http.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
@@ -61,6 +70,7 @@ module.exports = function (app) {
     console.log('[authLogIn] request received for ' + JSON.stringify(req.body));
     if (req.user) {
       req.session.key = req.body.email;
+      req.session.userId = req.user._id;
       var extUserId = req.user.externalId;
       res.status(http.OK).send({userId: extUserId, redirect: '/'});
     } else {
