@@ -1,12 +1,12 @@
 var should = require('should');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var FileClaim = require('../models/fileClaim');
-var FileClaimService = require('../services/fileClaimService');
+var Claim = require('../models/claim');
+var ClaimService = require('../services/claimService');
 var User = require('../models/user');
 var UserService = require('../services/userService');
 
-describe('FileClaimService', function() {
+describe('ClaimService', function() {
   var targetUser = undefined;
 
   before(function(done) {
@@ -27,16 +27,16 @@ describe('FileClaimService', function() {
    });
 
   beforeEach(function(done) {
-    FileClaim.remove({}, done);
+    Claim.remove({}, done);
   });
 
-  it('Create new INCOMPLETE FileClaim - already exists', function(done) {
-    var existingFileClaim = new FileClaim({
+  it('Create new INCOMPLETE Claim - already exists', function(done) {
+    var existingClaim = new Claim({
       userId: targetUser._id,
-      state: FileClaim.State.INCOMPLETE
+      state: Claim.State.INCOMPLETE
     });
-    existingFileClaim.save(function(err, claim) {
-      FileClaimService.createNewClaim(targetUser._id, function(err, claim) {
+    existingClaim.save(function(err, claim) {
+      ClaimService.createNewClaim(targetUser._id, function(err, claim) {
         Boolean(err).should.equal(false);
         Boolean(claim).should.equal(false);
         done();
@@ -44,35 +44,35 @@ describe('FileClaimService', function() {
     });
   });
 
-  it('Create new INCOMPLETE FileClaim - success', function(done) {
-    FileClaimService.createNewClaim(targetUser._id, function(err, claim) {
+  it('Create new INCOMPLETE Claim - success', function(done) {
+    ClaimService.createNewClaim(targetUser._id, function(err, claim) {
       Boolean(err).should.equal(false);
       claim.userId.should.equal(targetUser._id);
-      claim.state.should.equal(FileClaim.State.INCOMPLETE);
+      claim.state.should.equal(Claim.State.INCOMPLETE);
       done();
     });
   });
 
-  it('Set FileClaim state to SUBMITTED', function(done) {
-    FileClaimService.createNewClaim(targetUser._id, function(err, claim) {
-      FileClaimService.setClaimState(claim._id, FileClaim.State.SUBMITTED, function(err, update) {
+  it('Set Claim state to SUBMITTED', function(done) {
+    ClaimService.createNewClaim(targetUser._id, function(err, claim) {
+      ClaimService.setClaimState(claim._id, Claim.State.SUBMITTED, function(err, update) {
         Boolean(err).should.equal(false);
         update.ok.should.equal(1);
-        FileClaim.findOne({_id: claim._id}, function(err, updatedClaim) {
-          updatedClaim.state.should.equal(FileClaim.State.SUBMITTED);
+        Claim.findOne({_id: claim._id}, function(err, updatedClaim) {
+          updatedClaim.state.should.equal(Claim.State.SUBMITTED);
           done();
         });
       });
     });
   });
 
-  it('Set FileClaim state to DISCARDED', function(done) {
-    FileClaimService.createNewClaim(targetUser._id, function(err, claim) {
-      FileClaimService.setClaimState(claim._id, FileClaim.State.DISCARDED, function(err, update) {
+  it('Set Claim state to DISCARDED', function(done) {
+    ClaimService.createNewClaim(targetUser._id, function(err, claim) {
+      ClaimService.setClaimState(claim._id, Claim.State.DISCARDED, function(err, update) {
         Boolean(err).should.equal(false);
         update.ok.should.equal(1);
-        FileClaim.findOne({_id: claim._id}, function(err, claim) {
-          claim.state.should.equal(FileClaim.State.DISCARDED);
+        Claim.findOne({_id: claim._id}, function(err, claim) {
+          claim.state.should.equal(Claim.State.DISCARDED);
           done();
         });
       });
