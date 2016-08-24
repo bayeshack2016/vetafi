@@ -1,5 +1,6 @@
 var _ = require('lodash');
 var passport = require('passport');
+var requestify = require('requestify');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
@@ -89,6 +90,27 @@ module.exports = function (app) {
             res.redirect('/');
         }
     });
+  });
+
+  // Endpoint for routing idme authorization
+  // https://api.id.me/oauth/authorize?...
+  app.get('/auth/link/idme', function(req, res) {
+    console.log('[authLinkIdMe] link request with ' + JSON.stringify(req.params));
+    var code = req.params.code;
+    if (code) {
+      requestify.post('https://api.id.me/oauth/token', {
+        code: code,
+        client_id: '71ffbd3f04241a56e63fa6a960fbb15e',
+        client_secret: 'some_secret_client_id',
+        redirect_uri: 'www.vetafi.org/',
+        grant_type: 'authorization_code'
+      }).then(function(socialResp) {
+        console.log('[authLinkIdMe] idme linked! ' + JSON.stringify(socialResp));
+        res.sendStatus(http.OK);
+      });
+    } else {
+      res.sendStatus(http.BAD_REQUEST);
+    }
   });
 
 };

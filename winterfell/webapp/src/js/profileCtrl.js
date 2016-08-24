@@ -1,3 +1,4 @@
+'use strict';
 var app = angular.module('vetafiApp');
 app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimService', 'net', 'strings', 'ngDialog',
   function($scope, $location, profileService, claimService, net, strings, ngDialog) {
@@ -60,11 +61,17 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
 
     $scope.clickChangeEmail = function() {
       console.log('Change Email');
-    }
+    };
 
     $scope.clickChangePassword = function() {
       ngDialog.open({ template: '../templates/modals/changePassword.html', className: 'ngdialog-theme-default' });
-    }
+    };
+
+    $scope.clickLinkIdMe = function() {
+      net.linkIdMe().then(function(resp) {
+        debugger;
+      });
+    };
 
     $scope.clickLogout = function() {
       net.logout().then(function(resp) {

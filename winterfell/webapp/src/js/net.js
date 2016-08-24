@@ -1,12 +1,26 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.factory('net', ['$http', function($http) {
-  var localDevHost = 'localhost:3000';
-  var baseUrl = "http://localhost:3999";
+  var localFrontDevHost = 'localhost:3000';
+  var baseUrl;
+  var dev = true; // todo this should be determined by a gulp task
+  if (dev) {
+    baseUrl = "http://localhost:3999";
+  } else {
+    baseUrl = "https://www.vetafi.org";
+  }
+
+  // social properties
+  var socialIdMe = {
+    clientId: '71ffbd3f04241a56e63fa6a960fbb15e',
+    redirectServerUri: baseUrl + "/auth/link/idme",
+    responseType: 'code',
+    scope: 'military'
+  };
 
   var httpGet = function (url, data) {
     /* For Front-end only Development */
-    if (window.location.host == localDevHost) {
+    if (window.location.host == localFrontDevHost) {
       var future = $.Deferred();
       future.resolve();
       return future;
@@ -20,7 +34,7 @@ app.factory('net', ['$http', function($http) {
 
   var httpPost = function(url, data) {
     /* For Front-end only Development */
-    if (window.location.host == localDevHost) {
+    if (window.location.host == localFrontDevHost) {
       var future = $.Deferred();
       future.resolve();
       return future;
@@ -73,6 +87,19 @@ app.factory('net', ['$http', function($http) {
     deleteUserAccount: function() {
       var userId = getSessionUserId();
       return httpDelete("/user/" + userId);
+    },
+    linkIdMe: function() {
+      var url = 'https://api.id.me/oauth/authorize';
+      url += '?client_id=' + encodeURIComponent(socialIdMe.clientId);
+      url += '&redirect_uri=' + encodeURIComponent(socialIdMe.redirectServerUri);
+      url += '&response_type=' + encodeURIComponent(socialIdMe.responseType);
+      url += '&scope=' + encodeURIComponent(socialIdMe.scope);
+
+      return $http({
+        url: url,
+        method: "JSONP",
+        headers: { 'Content-Type': 'application/json' },
+      });
     },
 
     // Claims

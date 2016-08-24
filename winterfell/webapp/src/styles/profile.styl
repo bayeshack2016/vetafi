@@ -282,8 +282,32 @@ borderType = 2px solid colorBorder
 
   & .vfi-settings-btn
     float: right
-    &.logout
+
+    &#idme
+      width: 96px
+      height: 42px
+      background-color: colorWhite
+      border: 2px solid colorBlack
+      border-radius: 4px
+
+      &.vfi-active
+        background-color: #2D3E51
+        border: 2px solid #2D3E51
+
+        & #logo-icon
+          background: url('../icons/idme-logo-white.png')
+          background-size: cover
+          background-repeat: no-repeat
+
+      & #logo-icon
+        width: 100%
+        height: 100%
+        background: url('../icons/idme-logo-black.png')
+        background-size: cover
+        background-repeat: no-repeat
+
+    &#logout
       background-color: colorDarkGray
 
-    &.delete-account
+    &#delete-account
       background-color: colorRed
