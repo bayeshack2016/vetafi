@@ -162,7 +162,7 @@ describe('ClaimController', function() {
     });
   });
 
-  xit('Delete claim - success', function(done) {
+  it('Delete claim - success', function(done) {
     var claim = {
       userId: targetUser._id,
       externalId: uuid.v4(),
@@ -195,13 +195,11 @@ describe('SaveClaimController', function () {
       };
       User.create(user, function (err, user) {
         targetUser = user;
-        console.log(targetUser);
         UserValues.remove({}, function () {
           UserValues.create(
             {userId: targetUser._id},
             function (err, userValues) {
-              console.log(userValues);
-              FileClaim.create({user: targetUser._id}, function(err, claim) {
+              Claim.create({user: targetUser._id}, function(err, claim) {
                 targetClaim = claim;
                 done();
               });

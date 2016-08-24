@@ -92,16 +92,19 @@ module.exports = function (app) {
     }
   });
 
-  app.delete('/claims/:extClaimId', function (req, res) {
+  app.delete('/claims/:extClaimId', function(req, res) {
     console.log('[deleteClaim] request received for ' + req.params.extClaimId);
     var extClaimId = req.params.extClaimId;
     if (extClaimId) {
-      var statusCode = handleClaimStateChange(extClaimId, Claim.State.DISCARDED);
-      if (statusCode == http.NOT_FOUND) {
-        res.status(statusCode).send({error: httpErrors.CLAIM_NOT_FOUND});
-      } else {
-        res.sendStatus(statusCode);
-      }
+      handleClaimStateChange(extClaimId, Claim.State.DISCARDED, function(err, claim) {
+        if (claim) {
+          res.sendStatus(http.OK);
+        } else if (err.code == http.NOT_FOUND) {
+          res.status(http.NOT_FOUND).send({error: httpErrors.CLAIM_NOT_FOUND});
+        } else {
+          res.status(err.code).send({error: err.msg});
+        }
+      });
     } else {
       res.status(http.BAD_REQUEST).send({error: httpErrors.INVALID_CLAIM_ID});
     }
