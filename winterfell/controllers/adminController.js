@@ -4,8 +4,8 @@ var http = require('http-status-codes');
 var uuid = require('uuid');
 var User = require('../models/user');
 var UserService = require('./../services/userService');
-var FileClaim = require('../models/fileClaim');
-var FileClaimService = require('./../services/fileClaimService');
+var Claim = require('../models/claim');
+var ClaimService = require('./../services/claimService');
 
 module.exports = function (app) {
 
@@ -25,7 +25,7 @@ module.exports = function (app) {
       lastName: 'Stark',
       email: 'ned' + TEST_EMAIL,
       password: TEST_USER_PASSWORD,
-      fileClaimInfos: [],
+      claimInfos: [],
       documentInfos: [],
       letterInfos: []
     },
@@ -37,7 +37,7 @@ module.exports = function (app) {
       lastName: 'Stark',
       email: 'robb' + TEST_EMAIL,
       password: TEST_USER_PASSWORD,
-      fileClaimInfos: [FileClaim.State.INCOMPLETE],
+      claimInfos: [Claim.State.INCOMPLETE],
       documentInfos: [],
       letterInfos: []
     },
@@ -49,7 +49,7 @@ module.exports = function (app) {
       lastName: 'Stark',
       email: 'arya' + TEST_EMAIL,
       password: TEST_USER_PASSWORD,
-      fileClaimInfos: [FileClaim.State.SUBMITTED],
+      claimInfos: [Claim.State.SUBMITTED],
       documentInfos: [],
       letterInfos: []
     },
@@ -61,7 +61,7 @@ module.exports = function (app) {
       lastName: 'Stark',
       email: 'sansa' + TEST_EMAIL,
       password: TEST_USER_PASSWORD,
-      fileClaimInfos: [FileClaim.State.PROCESSED],
+      claimInfos: [Claim.State.PROCESSED],
       documentInfos: [],
       letterInfos: []
     }
@@ -95,15 +95,15 @@ module.exports = function (app) {
       test: true
     }, function(err, user) {
       if (user) {
-        createFileClaimForUser(user, userInput.fileClaimInfos);
+        createClaimForUser(user, userInput.claimInfos);
       }
     });
   }
 
-  function createFileClaimForUser(user, fileClaimInfos) {
+  function createClaimForUser(user, claimInfos) {
     var now = Date.now();
-    _.forEach(fileClaimInfos, function(claimState) {
-      FileClaim.create({
+    _.forEach(claimInfos, function(claimState) {
+      Claim.create({
         externalId: uuid.v4(),
         userId: user._id,
         state: claimState,
