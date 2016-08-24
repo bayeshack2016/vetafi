@@ -3,7 +3,6 @@ var should = require('should');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var Claim = require('../models/claim');
-var FileClaim = require('../models/fileClaim');
 var Form = require('./../models/form');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
