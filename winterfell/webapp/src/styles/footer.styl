@@ -1,0 +1,38 @@
+@import "standards.styl"
+
+#footer-view
+  width: 100%
+  margin-top: largeSpacing
+  padding: megaSpacing 0
+  background-color: colorDarkGray
+
+  & .footer-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+
+  & .footer-layout
+    color: colorWhite
+    font-family: SourceSansPro
+    font-size: h5_size
+    font-weight: 400
+    letter-spacing: 1px
+
+    &.vfi-links a
+      display: block
+      margin-bottom: smallSpacing
+      color: colorWhite
+
+      &:hover
+        cursor: pointer
+
+    &.vfi-disclaimer
+      font-size: h6_size
+      color: colorLightGray
+
+  & .footer-section
+    margin-bottom: smallSpacing
+
+  & img
+    width: 48px
+    margin-right: smallSpacing
