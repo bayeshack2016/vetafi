@@ -92,11 +92,11 @@ module.exports = function (app) {
     });
   });
 
-  // Endpoint for routing idme authorization
+  // Server endpoint for redirecting from idme authorization
   // https://api.id.me/oauth/authorize?...
   app.get('/auth/link/idme', function(req, res) {
-    console.log('[authLinkIdMe] link request with ' + JSON.stringify(req.params));
-    var code = req.params.code;
+    console.log('[authLinkIdMe] link request with ' + JSON.stringify(req.query));
+    var code = req.query.code;
     if (code) {
       requestify.post('https://api.id.me/oauth/token', {
         code: code,
