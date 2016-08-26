@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimService', 'net', 'strings', 'ngDialog',
-  function($scope, $location, profileService, claimService, net, strings, ngDialog) {
+app.controller('profileCtrl', ['$scope', '$location', '$window', 'profileService', 'claimService', 'net', 'strings', 'ngDialog',
+  function($scope, $location, $window, profileService, claimService, net, strings, ngDialog) {
     $scope.ranks = strings.ranks;
     $scope.branches = strings.branches;
     $scope.insigniaUrls = {
@@ -68,9 +68,8 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
     };
 
     $scope.clickLinkIdMe = function() {
-      net.linkIdMe().then(function(resp) {
-        debugger;
-      });
+      // Redirect to IdMe auth page, which will redirect to the specified uri setup with IdMe.
+      $window.location.href = net.getAuthIdMeUrl();
     };
 
     $scope.clickLogout = function() {

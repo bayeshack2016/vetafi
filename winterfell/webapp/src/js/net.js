@@ -3,14 +3,6 @@ var app = angular.module('vetafiApp');
 app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
   var baseUrl = xhrEnv.baseServerUrl;
 
-  // social properties
-  var socialIdMe = {
-    clientId: '71ffbd3f04241a56e63fa6a960fbb15e',
-    redirectServerUri: baseUrl + "/auth/link/idme",
-    responseType: 'code',
-    scope: 'military'
-  };
-
   var httpGet = function (url, data) {
     // For Front-end only Development
     // This is used for testing "success" server calls
@@ -83,18 +75,9 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
       var userId = getSessionUserId();
       return httpDelete("/user/" + userId);
     },
-    linkIdMe: function() {
-      var url = 'https://api.id.me/oauth/authorize';
-      url += '?client_id=' + encodeURIComponent(socialIdMe.clientId);
-      url += '&redirect_uri=' + encodeURIComponent(socialIdMe.redirectServerUri);
-      url += '&response_type=' + encodeURIComponent(socialIdMe.responseType);
-      url += '&scope=' + encodeURIComponent(socialIdMe.scope);
-
-      return $http({
-        url: url,
-        method: "JSONP",
-        headers: { 'Content-Type': 'application/json' },
-      });
+    getAuthIdMeUrl: function() {
+      // Retrieved from the Id.Me Vetafi dashboard
+      return "https://api.id.me/oauth/authorize?client_id=71ffbd3f04241a56e63fa6a960fbb15e&redirect_uri=http://www.vetafi.org/auth/link/idme&response_type=code&scope=military";
     },
 
     // Claims
