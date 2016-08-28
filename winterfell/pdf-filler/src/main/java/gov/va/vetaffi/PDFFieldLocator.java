@@ -44,32 +44,43 @@ public class PDFFieldLocator {
     @JsonProperty
     public Integer substringEnd;
 
+    /**
+     * Is the value a base64 encoded image to be overlayed?
+     */
+    @JsonProperty
+    public Boolean isBase64ImageBlob = false;
+
     public PDFFieldLocator(String pdfId,
                            String elementId,
                            Integer concatOrder,
                            @Nullable Map<String, String> idMap,
                            @Nullable Integer substringStart,
-                           @Nullable Integer substringEnd) {
+                           @Nullable Integer substringEnd,
+                           Boolean isBase64ImageBlob) {
         this.pdfId = pdfId;
         this.elementId = elementId;
         this.concatOrder = concatOrder;
         this.idMap = idMap;
         this.substringStart = substringStart;
         this.substringEnd = substringEnd;
+        this.isBase64ImageBlob = isBase64ImageBlob;
     }
 
     public boolean hasIdMap() {
         return !(idMap == null);
     }
 
+
     @Override
     public String toString() {
         return "PDFFieldLocator{" +
-                "id='" + pdfId + '\'' +
+                "pdfId='" + pdfId + '\'' +
+                ", elementId='" + elementId + '\'' +
                 ", concatOrder=" + concatOrder +
                 ", idMap=" + idMap +
                 ", substringStart=" + substringStart +
                 ", substringEnd=" + substringEnd +
+                ", isBase64ImageBlob=" + isBase64ImageBlob +
                 '}';
     }
 }
