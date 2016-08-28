@@ -1,10 +1,10 @@
 var app = angular.module('vetafiApp');
 app.factory('formService', ['$http', function ($http) {
   return {
-    render: function (formName, data, cb) {
+    save: function (claimId, formName, data, cb) {
       var req = {
         method: 'POST',
-        url: '/save/' + formName,
+        url: '/save/' + claimId + '/' + formName,
         headers: {
           'Content-Type': 'application/json'
         },
