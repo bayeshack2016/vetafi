@@ -1,0 +1,20 @@
+div#footer-view
+  div.footer-wrapper
+
+    div.footer-layout.vfi-links.row
+      div.footer-section.col-sm-6
+        a(href="#/") Home
+        a(href="") About Us
+        a(href="#/faq") FAQ
+      div.footer-section.col-sm-6
+        a(href="#/profile", ng-if="isLoggedIn") My Profile
+        a(href="") Stories
+        a(href="") Terms of Service
+        a(href="") Support
+
+    div.footer-layout.vfi-disclaimer.row
+      div.footer-section.col-sm-2
+        img(src="../icons/logo.png")
+      div.footer-section.col-sm-10
+        p Vetafi is a non-profit organization. It is not affiliated with the U.S. Department of Veteran Affairs. We do not sell advertising and will not market to you.
+          | Our only goal is to assist our returning military veterans to file their health claim benefits.
