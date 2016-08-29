@@ -29,12 +29,11 @@ var State = {
 
 // Static methods
 ClaimSchema.statics.quickCreate = function(userId, callback) {
-  var now = Date.now();
   return Claim.create({
     externalId: uuid.v4(),
     userId: userId,
     state: Claim.State.INCOMPLETE,
-    stateUpdatedAt: now
+    stateUpdatedAt: Date.now()
   }, callback);
 };
 

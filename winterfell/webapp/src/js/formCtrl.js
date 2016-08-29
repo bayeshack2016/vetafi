@@ -40,7 +40,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingSer
         };
 
         $scope.model = {};
-        $scope.fields = formTemplateService[$routeParams.formId];
+        $scope.fields = formTemplateService[$routeParams.formId].fields;
 
         for (var i=0; i<$scope.fields.length; i++) {
             if ($scope.fields[i].key.indexOf('date_signed') !== -1) {

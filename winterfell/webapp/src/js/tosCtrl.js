@@ -2,15 +2,12 @@ var app = angular.module('vetafiApp');
 app.controller('tosCtrl', ['$scope', '$location', 'claimService',
   function($scope, $location, claimService) {
     $scope.onAccept = function() {
-      var input = $('.vfi-checkbox input');
-      if (input.prop('checked')) {
+      console.log("onAccept", $scope);
+      if ($scope.accept) {
         claimService.acceptTos(true);
-        var fakeClaim = {
-          id: 'qwer',
-          state: 'incomplete'
-        };
-        claimService.createNewClaim(fakeClaim);
-        $location.path('/claim/select-forms')
+        if (typeof $scope.$close !== 'undefined') {
+          $scope.$close(true);
+        }
       } else {
         $('.vfi-error-msg').text('You must check the checkbox above to agree and continue.');
       }

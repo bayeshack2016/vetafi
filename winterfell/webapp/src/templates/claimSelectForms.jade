@@ -1,9 +1,9 @@
 #select-forms-view(ng-controller="claimSelectFormsCtrl")
   h2.header-wrapper Select Forms to Fill
-  div.vfi-form-card(ng-repeat="form in forms", ng-class="{'vfi-required': form.required, 'vfi-completed': form.completed}")
+  div.vfi-form-card(ng-repeat="(formId, form) in forms", ng-class="{'vfi-required': form.required, 'vfi-completed': form.completed}")
     h3.vfi-form-title {{form.name}}
     h5.vfi-form-description {{form.description}}
-    a.vfi-form-btn(ng-href="/claim/form/{{form.id}}", ng-if="!form.completed")
+    a.vfi-form-btn(ng-href="#/claim/{{claimId}}/form/{{formId}}", ng-if="!form.completed")
       div.vfi-icon-wrapper
         div.vfi-next-icon
     div.vfi-icon-wrapper.vfi-completed(ng-if="form.completed")

@@ -1,18 +1,23 @@
 var app = angular.module('vetafiApp');
-app.controller('claimStartCtrl', ['$scope', '$location', 'net', 'claimService',
-  function($scope, $location, net, claimService) {
-    $scope.onClickNext = function() {
-      net.startClaim().then(function() {
-        var fakeClaim = {
-          id: 'qwer',
-          state: 'incomplete'
-        };
-        if (claimService.acceptedTos()) {
-          claimService.createNewClaim(fakeClaim);
-          $location.path('/claim/select-forms');
-        } else {
-          $location.path('/tos');
+app.controller('claimStartCtrl', ['$scope', '$location', 'net', 'claimService', '$uibModal',
+  function ($scope, $location, net, claimService, $uibModal) {
+    function getTosAgreement() {
+      return $uibModal.open({
+        controller: 'tosCtrl',
+        templateUrl: 'templates/tos.html'
+      });
+    }
+
+    $scope.onClickNext = function () {
+      if (!claimService.acceptedTos()) {
+        if (!getTosAgreement()) {
+          console.log('TOS Declined');
+          return;
         }
+      }
+      net.startClaim().then(function (res) {
+        console.log('/claim/' + res.data.claim.externalId + '/select-forms');
+        $location.path('/claim/' + res.data.claim.externalId + '/select-forms');
       });
     };
   }
