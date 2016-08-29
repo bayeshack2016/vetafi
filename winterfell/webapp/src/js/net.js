@@ -77,13 +77,13 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     },
     getAuthIdMeUrl: function() {
       // Retrieved from the Id.Me Vetafi dashboard
+      debugger;
       var clientId = xhrEnv.idMeClientId;
       var url = "https://api.id.me/oauth/authorize";
       url += "?client_id=" + clientId;
       url += "&redirect_uri=" + baseUrl + "/auth/link/idme";
       url += "&response_type=code";
       url += "&scope=military";
-      debugger;
       return url;
     },
 

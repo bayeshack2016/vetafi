@@ -1,6 +1,6 @@
 var _ = require('lodash');
 var passport = require('passport');
-var requestify = require('requestify');
+var request = require('request');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
@@ -98,19 +98,74 @@ module.exports = function (app) {
     console.log('[authLinkIdMe] link request with ' + JSON.stringify(req.query));
     var code = req.query.code;
     if (code) {
-      requestify.post('https://api.id.me/oauth/token', {
+      var data = {
         code: code,
-        client_id: '71ffbd3f04241a56e63fa6a960fbb15e',
-        client_secret: 'some_secret_client_id',
-        redirect_uri: 'www.vetafi.org/',
+        client_id: '684c7204feed7758b25527eae2d66e28',
+        client_secret: '57ebec28ad4bae403d0a2702f2f81801',
+        // client_secret: 'some_secret_client_id',
+        redirect_uri: 'http://localhost:3999/auth/link/idme',
         grant_type: 'authorization_code'
-      }).then(function(socialResp) {
-        console.log('[authLinkIdMe] idme linked! ' + JSON.stringify(socialResp));
-        res.sendStatus(http.OK);
+      };
+      console.log('[authLinkIdMe] request token with data: ' + JSON.stringify(data));
+      request.post({
+        url: 'https://api.id.me/oauth/token',
+        json: true,
+        body: data
+      }, function(error, response, body) {
+        var accessToken = body.access_token; // provided by idMe
+        if (accessToken) {
+          request.get('https://api.id.me/api/public/v2/attributes.json?access_token=' + accessToken, function(accessError, accessResponse, accessBody) {
+            var idmeBody = JSON.parse(accessBody);
+            if (!idmeBody.id) { // if id is not available, we messed up
+              res.status(http.BAD_REQUEST).send({error: httpErrors.BAD_SOCIAL_AUTH});
+              return;
+            }
+            handleSocialResponse(SocialUser.Type.ID_ME, accessToken, idmeBody.email, idmeBody);
+          });
+        } else {
+          res.status(http.BAD_REQUEST).send({error: httpErrors.BAD_SOCIAL_AUTH});
+        }
       });
     } else {
-      res.sendStatus(http.BAD_REQUEST);
+      res.status(http.BAD_REQUEST).send({error: httpErrors.BAD_SOCIAL_AUTH});
     }
   });
+
+  function handleSocialResponse(socialType, socialToken, socialEmail, socialBody) {
+    // find user with ACTIVE socialUser with (type, token)
+    UserService.findUserWithSocial(socialType, socialToken, function(err, user) {
+      if (err) {
+        res.sendStatus(http.INTERNAL_SERVER_ERROR);
+      } else if (user) {
+        res.status(http.BAD_REQUEST).send({error: httpErrors.SOCIAL_ALREADY_USED});
+      } else {
+        // find a user with matching email from social
+        User.findOne({email: socialEmail}, function(err, user) {
+          var responseCallback = function(err) {
+            if (err) {
+              res.status(http.INTERNAL_SERVER_ERROR).send({error: httpErrors.DATABASE});
+            } else {
+              res.status(http.OK).redirect('/');
+            }
+          };
+          
+          if (err) {
+            res.sendStatus(http.INTERNAL_SERVER_ERROR);
+          } else if (user) {
+            // add social to user
+            user.socialUsers.push({type: socialType, oauthToken: socialToken, state: SocialUser.State.ACTIVE});
+            user.save(responseCallback);
+          } else {
+            // Create new user and UserValues, then add social to user
+            UserService.createNewUserFromIdMe(idmeBody, function(err, user) {
+              UserValues.create({}, function() {
+                UserService.pushSocialUser(user._id, socialType, socialToken, responseCallback);
+              });
+            });
+          }
+        });
+      }
+    });
+  }
 
 };

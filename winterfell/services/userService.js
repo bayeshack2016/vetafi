@@ -1,6 +1,7 @@
 var _ = require('lodash');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
+var SocialUser = require('./../utils/socialUser');
 var User = require('./../models/user');
 var UserValues = require('./../models/userValues');
 
@@ -75,5 +76,55 @@ module.exports.upsertUserValues = function(userId, keyValues, callback) {
     });
     userValue.markModified('values');
     userValue.save(callback);
+  });
+};
+
+module.exports.findUserWithSocial = function(type, token, callback) {
+  var match = {
+    type: type,
+    oauthToken: token,
+    state: SocialUser.State.ACTIVE
+  };
+  User.findOne({socialUsers: {$elemMatch: match}}, callback);
+};
+
+/**
+ * Expected input object from idme:
+ * {
+ *  id
+ *  verified
+ *  affiliation
+ *  fname
+ *  lname
+ *  zip
+ *  uuid
+ *  email
+ * }
+ */
+module.exports.createNewUserFromIdMe = function(idmeInfo, callback) {
+  var newUser = {
+    firstname: idmeInfo.fname,
+    middlename: null,
+    lastname: idmeInfo.lname,
+    email: idmeInfo.email,
+    password: "fakepassword", // todo: generate a short random 8-char password
+    admin: false
+  };
+  User.quickCreate(newUser, function(err, user) {
+    // update user's zip code?
+    callback(err, user);
+  });
+};
+
+module.exports.pushSocialUser = function(userId, type, token, callback) {
+  var now = Date.now();
+  User.findOne({_id: userId}, function(err, user) {
+    user.socialUsers.push({
+      type: type,
+      oauthToken: token,
+      state: SocialUser.State.ACTIVE,
+      stateUpdatedAt: now,
+      createdAt: now
+    });
   });
 };
