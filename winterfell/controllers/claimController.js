@@ -56,7 +56,7 @@ module.exports = function (app) {
 
     User.findById(req.session.userId).exec(function (userErr, user) {
       if (user) {
-        FileClaimService.createNewClaim(user.id, callback);
+        ClaimService.createNewClaim(user.id, callback);
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       }
@@ -96,7 +96,7 @@ module.exports = function (app) {
     console.log('[submitClaim] request received ' + JSON.stringify(req.body));
 
     handleClaimStateChange(req.params.extClaimId,
-      FileClaim.State.SUBMITTED,
+      Claim.State.SUBMITTED,
       claimUpdateCallbackFactory(res));
   });
 
@@ -104,7 +104,7 @@ module.exports = function (app) {
     console.log('[deleteClaim] request received for ' + req.params.extClaimId);
 
     handleClaimStateChange(req.params.extClaimId,
-      FileClaim.State.DISCARDED,
+      Claim.State.DISCARDED,
       claimUpdateCallbackFactory(res));
   });
 
