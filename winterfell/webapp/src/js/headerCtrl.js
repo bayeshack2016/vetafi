@@ -26,7 +26,7 @@ app.controller("headerCtrl", ['$scope', 'profileService', 'claimService', 'net',
 
 		$scope.closeThisMenu = function () {
         $scope.menuToggled = false;
-    }
+    };
 
 		$scope.onClickProfileOption = function() {
 			$scope.menuToggled = false;

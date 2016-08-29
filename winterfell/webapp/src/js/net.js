@@ -20,7 +20,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
       return future;
     }
     return $http({
-      url: baseUrl + url,
+      url: url,
       method: "GET",
       headers: { 'Content-Type': 'application/json' }
     });
@@ -35,7 +35,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
       return future;
     }
     return $http({
-      url: baseUrl + url,
+      url: url,
       method: "POST",
       data: data || {},
       headers: { 'Content-Type': 'application/json' }
@@ -99,17 +99,16 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
     // Claims
     getClaimsForUser: function() {
-      var userId = getSessionUserId();
-      return httpGet("/claims/user/" + userId);
+      return httpGet("/claims");
     },
     startClaim: function() {
-      return httpPost("/claims/create");
+      return httpPost("/claim/create");
     },
     submitClaim: function(extClaimId) {
-      return httpPost("/claims/" + extClaimId + "/submit");
+      return httpPost("/claim/" + extClaimId + "/submit");
     },
     discardClaim: function(extClaimId) {
-      return httpDelete("/claims/" + extClaimId);
+      return httpDelete("/claim/" + extClaimId);
     }
   };
 }]);
