@@ -102,7 +102,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
       return httpGet("/claims");
     },
     startClaim: function() {
-      return httpPost("/claim/create");
+      return httpPost("/claims/create");
     },
     submitClaim: function(extClaimId) {
       return httpPost("/claim/" + extClaimId + "/submit");

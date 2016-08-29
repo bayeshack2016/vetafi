@@ -5,19 +5,11 @@ var Claim = require('./../models/claim');
 
 function ClaimService(app) {
   this.app = app;
-};
+}
 
 module.exports = ClaimService;
 module.exports.createNewClaim = function(userId, callback) {
-  return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, fileClaim) {
-    if (_.isEmpty(fileClaim)) {
-      return Claim.quickCreate(userId, callback);
-    }
-    if (_.isFunction(callback)) {
-      callback();
-    }
-    return null;
-  });
+  return Claim.quickCreate(userId, callback);
 };
 
 module.exports.addForm = function(claimId, file, callbacks) {

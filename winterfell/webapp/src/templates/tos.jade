@@ -8,7 +8,7 @@
         p At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
 
       div.vfi-checkbox
-        input(type="checkbox", name="accept")
+        input(type="checkbox", name="accept", ng-model="accept")
         | I have read this Agreement and agree to the terms and conditions.
       button.vfi-accept-btn(ng-click="onAccept()") ACCEPT
       button.vfi-decline-btn(ng-click="onDecline()") BACK
