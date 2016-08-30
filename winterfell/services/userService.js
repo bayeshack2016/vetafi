@@ -44,7 +44,8 @@ module.exports.createNewUser = function(user, callback) {
       lastname: null,
       email: email,
       password: password,
-      admin: false
+      admin: user.admin,
+      test: user.test
     };
     return User.quickCreate(newUser, callback);
   } else if (_.isFunction(callback)) {
@@ -79,15 +80,6 @@ module.exports.upsertUserValues = function(userId, keyValues, callback) {
   });
 };
 
-module.exports.findUserWithSocial = function(type, token, callback) {
-  var match = {
-    type: type,
-    oauthToken: token,
-    state: SocialUser.State.ACTIVE
-  };
-  User.findOne({socialUsers: {$elemMatch: match}}, callback);
-};
-
 /**
  * Expected input object from idme:
  * {
@@ -108,7 +100,6 @@ module.exports.createNewUserFromIdMe = function(idmeInfo, callback) {
     lastname: idmeInfo.lname,
     email: idmeInfo.email,
     password: "fakepassword", // todo: generate a short random 8-char password
-    admin: false
   };
   User.quickCreate(newUser, function(err, user) {
     // update user's zip code?
@@ -116,7 +107,8 @@ module.exports.createNewUserFromIdMe = function(idmeInfo, callback) {
   });
 };
 
-module.exports.pushSocialUser = function(userId, type, token, callback) {
+// Method to add an ACTIVE socialUser to a User
+module.exports.addSocialUser = function(userId, type, token, callback) {
   var now = Date.now();
   User.findOne({_id: userId}, function(err, user) {
     user.socialUsers.push({
@@ -126,5 +118,31 @@ module.exports.pushSocialUser = function(userId, type, token, callback) {
       stateUpdatedAt: now,
       createdAt: now
     });
+    user.save(callback);
   });
+};
+
+// Method to remove an ACTIVE socialUser from a User
+module.exports.removeSocialUser = function(userId, type, callback) {
+  var query = {
+    '_id': userId,
+    'socialUsers.type': type,
+    'socialUsers.state': SocialUser.State.ACTIVE
+  };
+  User.update(query,
+    { '$set' :
+      {
+        'socialUsers.$.state': SocialUser.State.INACTIVE,
+        'socialUsers.$.stateUpdatedAt:': Date.now()
+      }
+    }, callback);
+};
+
+module.exports.findUserWithSocial = function(type, token, callback) {
+  var match = {
+    type: type,
+    oauthToken: token,
+    state: SocialUser.State.ACTIVE
+  };
+  User.findOne({socialUsers: {$elemMatch: match}}, callback);
 };

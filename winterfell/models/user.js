@@ -64,8 +64,9 @@ UserSchema.statics.quickCreate = function(user, callback) {
     externalId: uuid.v4(),
     state: User.State.ACTIVE,
     stateUpdatedAt: now,
+    socialUsers: [],
     admin: user.admin || false,
-    test: false
+    test: user.test || false
   }, callback);
 };
 

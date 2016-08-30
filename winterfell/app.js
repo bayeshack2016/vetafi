@@ -15,6 +15,7 @@ app.set('secretsFile', require('./config/biscuit')[environment]);
 var biscuit = new Biscuit(app);
 
 app.environment = environment;
+console.log('environment: ' + JSON.stringify(app.environment));
 
 function loadIntoBuild (app, targetDir) {
   var normalizedPath = path.join(__dirname, targetDir);
