@@ -46,7 +46,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var getSessionUserId = function() {
     return sessionStorageHelper.getPair(vfiConstants.keyUserId);
-  }
+  };
 
   return {
     login: function (email, password) {
@@ -90,7 +90,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     // Claims
     getClaimsForUser: function() {
       var userId = getSessionUserId();
-      return httpGet("/claims/user" + userId);
+      return httpGet("/claims/user/" + userId);
     },
     startClaim: function() {
       return httpPost("/claims/create");

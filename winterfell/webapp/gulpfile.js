@@ -24,11 +24,17 @@ gulp.task('clean', function () {
   return del.sync('build');
 });
 
+gulp.task('css-libs', function() {
+  return gulp.src('src/styles/libs/*.css')
+    .pipe(concat('libs.css'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(browserSync.stream())
+    .pipe(sourcemaps.write());
+});
+
 gulp.task('stylus', function () {
   return gulp.src('src/styles/**/*')
-    .pipe(stylus({
-      'include css': true
-    }))
+    .pipe(stylus())
     .pipe(concat('main.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream())
@@ -51,7 +57,8 @@ gulp.task('libs', function () {
       "src/libs/lodash.js",
       "src/libs/angular.min.js",
       "src/libs/angular-route.min.js",
-      "src/libs/signature_pad.min.js",
+      "src/libs/signature_pad.js",
+      "src/libs/signature-pad-angular.js",
       "src/libs/api-check.js",
       "src/libs/formly.js",
       "src/libs/angular-formly-templates-bootstrap.js",
@@ -121,6 +128,6 @@ gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/**/*.jade', ['jade']);
 });
 
-gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'stylus', 'jade']);
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'jade', 'browserify']);
 
 gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);

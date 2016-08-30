@@ -3,15 +3,18 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller("formCtrl", ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', '$routeParams',
-    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, $routeParams) {
-        $scope.$watch("signature", function (newVal, oldVal) {
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', 'formService', '$routeParams',
+    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $routeParams) {
+        $scope.$watch('signature', function (newVal, oldVal) {
             console.log(newVal, oldVal);
+            if (newVal) {
+                $scope.model['signature'] = newVal.dataUrl;
+            }
         });
 
         function currentDate() {
             return $filter('date')(new Date(), 'MM/dd/yyyy');
-        };
+        }
 
         $scope.render = function () {
             var out = [];
@@ -28,6 +31,12 @@ app.controller("formCtrl", ['$scope', '$filter', '$rootScope', 'formRenderingSer
             console.log($scope.model);
 
             //$scope.render();
+        };
+
+        $scope.save = function () {
+            formService.save($routeParams.claimId, $routeParams.formId, $scope.model, function(err, response) {
+                console.log(err, response);
+            })
         };
 
         $scope.model = {};

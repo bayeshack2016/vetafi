@@ -26,7 +26,7 @@ app.controller('claimSelectFormsCtrl', ['$scope', '$location', 'claimService',
         category: '',
         required: false,
         completed: true
-      },
+      }
     ];
 
     $scope.onClickFinish = function() {

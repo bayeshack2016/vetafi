@@ -5,10 +5,11 @@ pushd pdf-filler
 ./mvnw clean package
 popd
 
-# Then run java server
-pm2 start process.json --only PdfMicroservice
+# Then run servers
+pm2 start process.json
 
 # Then run node.js/express tests
+pm2 stop Express
 NODE_ENV=test ./node_modules/mocha/bin/mocha
 
 # Cleanup microservice

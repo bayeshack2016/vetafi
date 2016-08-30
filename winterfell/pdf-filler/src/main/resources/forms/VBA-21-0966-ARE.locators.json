@@ -166,5 +166,10 @@
     "elementId": "veteran_dob",
     "substringStart": 8,
     "substringEnd": 10
+  },
+  {
+    "pdfId": "F[0].Page_1[0].SignatureOfClaimant_AuthorizedRepresentative[0]",
+    "elementId": "signature",
+    "isBase64ImageBlob": true
   }
 ]
