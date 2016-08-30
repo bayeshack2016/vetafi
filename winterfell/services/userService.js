@@ -138,11 +138,15 @@ module.exports.removeSocialUser = function(userId, type, callback) {
     }, callback);
 };
 
+// Method to finds ANY ACTIVE user with the target socialUser info
 module.exports.findUserWithSocial = function(type, token, callback) {
   var match = {
     type: type,
     oauthToken: token,
     state: SocialUser.State.ACTIVE
   };
-  User.findOne({socialUsers: {$elemMatch: match}}, callback);
+  User.findOne({
+    state: User.State.ACTIVE,
+    socialUsers: {$elemMatch: match}
+  }, callback);
 };

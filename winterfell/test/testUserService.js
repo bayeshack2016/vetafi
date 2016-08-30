@@ -172,6 +172,25 @@ describe('UserService', function() {
     });
   });
 
+  it('SocialUser - find user with existing socialUser (but user is INACTIVE)', function(done) {
+    var social = {
+      type: SocialUser.Type.ID_ME,
+      token: "some-random-token"
+    };
+    UserService.createNewUser(userInput, function(err, user1) {
+      user1.state = User.State.INACTIVE;
+      user1.save(function() {
+        UserService.addSocialUser(user1._id, social.type, social.token, function() {
+          UserService.findUserWithSocial(social.type, social.token, function(err, user2) {
+            // socialUser found is for the original user
+            user1._id.should.not.equal(user2._id);
+            done();
+          });
+        });
+      });
+    });
+  });
+
   it('SocialUser - find user with existing socialUser (correct user)', function(done) {
     var social = {
       type: SocialUser.Type.ID_ME,
