@@ -1,132 +1,118 @@
 @import "standards.styl"
 
-#home-view
-  & .vfi-banner-wrapper
+linkIconWidthPx = 48px
+linkIconHeightPx = 48px
+
+#vfi-home-view
+  & .banner-wrapper
     position: relative
-    width: 100%
+    height: 360px
+    background: colorPrimaryDarkBlue
+    background-image: url('../icons/banner-child.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    border-bottom: 4px solid colorPrimaryDarkBlue
 
-    & .vfi-banner-img
-      width: 100%
-      height: 300px
-      background: colorPrimaryDarkBlue
-      background-image: url('../icons/banner-child.jpg')
-      background-size: cover
-      background-position: center
-      background-repeat: no-repeat
-
-      @media screen and (max-width: maxWindowWidthPx)
-        background-position: -200px 0px
-      @media screen and (max-width: minWindowWidthPx)
-        background-position: -320px 0px
-
-    & .vfi-banner-overlay
-      position: absolute
-      bottom: 0px
-      left: 0px
-      width: 100%
-      height: 70px
-      background-color: rgba(25, 25, 25, 0.8)
-
-      @media screen and (max-width: minWindowWidthPx)
-        height: 120px
-
-      & .vfi-banner-text-wrapper
-        position: relative
-        width: maxLayoutWidthPct
-        max-width: maxLayoutWidthPx
-        margin: 0 auto
-        line-height: 70px
-        color: colorWhite
-        text-align: left
-
-        @media screen and (max-width: maxWindowWidthPx)
-          text-align: left
-        @media screen and (max-width: minWindowWidthPx)
-          text-align: center
-
-      & .vfi-banner-action
-        display: inline-block
-        position: absolute
-        top: 50%
-        right: 0px
-        transform: translateY(-50%)
-        background-color: colorYellow
-        color: colorBlack
-
-        @media screen and (max-width: minWindowWidthPx)
-          top: calc(50% + 10px)
-          right: 50%
-          transform: translate(50%, 50%)
-
-  & .vfi-banner-border
-    position: absolute
-    bottom: -6px
-    height: 6px
-    width: 100%
-    background-color: colorPrimaryDarkBlue
-
-  .vfi-home-option-link
-    color: white
-
-    &:hover
-      text-decoration: none
-      cursor: pointer
-
+    @media screen and (max-width: maxWindowWidthPx)
+      background-position: -360px 0px
     @media screen and (max-width: minWindowWidthPx)
-      color: colorPrimaryDarkBlue
+      height: 420px
+      background-position: calc(100% + 240px)
 
-  .vfi-home-option-wrapper
+  & .banner-overlay
+    position: absolute
+    bottom: 0
+    width: 100%
+    background-color: rgba(25, 25, 25, 0.8)
+
+  & .headline-wrapper
     width: maxLayoutWidthPct
     max-width: maxLayoutWidthPx
-    margin: megaSpacing auto 0
-    box-sizing: border-box
-    background-color: colorPrimaryDarkBlue
+    margin: 0 auto
+    padding: smallSpacing
+    color: colorWhite
+
+    h3
+      text-align: left
+      line-height: 40px
+
+      @media screen and (max-width: maxWindowWidthPx)
+        text-align: center
+
+      @media screen and (max-width: minWindowWidthPx)
+        text-align: center
+        line-height: h3_lineHeight
+        font-size: h3_size
+        margin-bottom: smallSpacing
+
+    button
+      display: inline-block
+      background-color: colorYellow
+      color: colorBlack
+
+      @media screen and (max-width: maxWindowWidthPx)
+        display: block
+        margin: 0 auto
+
+      @media screen and (max-width: minWindowWidthPx)
+        display: block
+        margin: 0 auto
+
+  & .home-link
+    display: block
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: largeSpacing auto
+    color: colorWhite
+    border: 2px solid colorPrimaryBlue
 
     &:hover
       filter: brightness(1.2)
       -webkit-filter: brightness(1.2)
       -moz-filter: brightness(1.2)
       -ms-filter: brightness(1.2)
+      color: colorWhite
+      text-decoration: none
+      cursor: pointer
 
-      & img
-        opacity: 1.0
-        visibility: visible
-        transform: translateY(0px)
-
-    @media screen and (max-width: minWindowWidthPx)
-      width: 90%
-      margin-top: smallSpacing
-      background-color: colorWhite
-      border: 2px solid transparent
-
-      &:hover
-        border: 2px solid colorPrimaryDarkBlue
-
-    & a
-      display: block
-      padding: largeSpacing megaSpacing
-
-    & .vfi-option-title
+    & .title
+      padding-left: largeSpacing
+      line-height: 200%
+      background-color: colorPrimaryBlue
+      color: colorWhite
+      text-align: left
 
       @media screen and (max-width: minWindowWidthPx)
-        font-size: h4_size
-        line-height: h4_lineHeight
+        padding-left: 0
+        text-align: center
 
-    & .vfi-option-text-wrapper
-      display: inline-block
-      width: calc(100% - 200px)
+    & .content
+      background-color: colorWhite
+      color: colorPrimaryBlue
+      margin-left: 0px
+      margin-right: 0px
+      padding: mediumSpacing
 
-      @media screen and (max-width: maxWindowWidthPx)
-        width: 100%
+      & p
+        padding-left: smallSpacing
 
-    & img
-      float: right
-      width: 80px
-      vertical-align: center
-      opacity: 0.0
-      visibility: hidden
-      transform: translateY(20px)
-      transition: all 0.1s linear
+        @media screen and (max-width: minWindowWidthPx)
+          margin-top: mediumSpacing
+          padding-left: 0
 
-      @media screen and (max-width: maxWindowWidthPx)
-        display: none
+    &.claim .icon
+      width: linkIconWidthPx
+      height: linkIconHeightPx
+      margin: 0 auto
+      background: url('../icons/docs-blue.svg')
+      background-size: cover
+      background-repeat: no-repeat
+
+    &.faq .icon
+      width: linkIconWidthPx
+      height: linkIconHeightPx
+      margin: 0 auto
+      background: url('../icons/health-blue.svg')
+      background-size: cover
+      background-repeat: no-repeat
