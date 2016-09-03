@@ -15,7 +15,6 @@ app.controller('claimStartCtrl', ['$scope', '$location', 'net', 'claimService', 
         }
       }
       net.startClaim().then(function (res) {
-        console.log('/claim/' + res.data.claim.externalId + '/select-forms');
         $location.path('/claim/' + res.data.claim.externalId + '/select-forms');
       });
     };

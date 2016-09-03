@@ -2,7 +2,6 @@ var app = angular.module('vetafiApp');
 app.controller('tosCtrl', ['$scope', '$location', 'claimService',
   function($scope, $location, claimService) {
     $scope.onAccept = function() {
-      console.log("onAccept", $scope);
       if ($scope.accept) {
         claimService.acceptTos(true);
         if (typeof $scope.$close !== 'undefined') {

@@ -5,8 +5,6 @@ app.controller('claimSelectFormsCtrl', ['$scope', '$location', 'claimService', '
     $scope.claimId = $routeParams.claimId;
     $scope.forms = formTemplateService;
 
-    console.log(formTemplateService);
-
     $scope.onClickFinish = function() {
       $location.path('/claim/confirm');
     };
