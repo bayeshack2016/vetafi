@@ -8,3 +8,13 @@ The `test_secrets.yaml` file contains unencrypted fake secrets for usage in the 
 For instance `test::lob-api-key` just contains a nonsense string. This is because we should not actually call external services in our unit tests.
 Because `test_secrets.yaml` entries are unencrypted, biscuit does not need to talk to AWS to fetch them, further isolating our unit tests
 from external services.
+
+
+Adding New Secrets
+==================
+
+Run this command to add new secrets:
+
+```
+biscuit put -f secrets.yaml <env name>::<secret name> <secret string>
+```
