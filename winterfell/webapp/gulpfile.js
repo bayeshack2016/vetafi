@@ -21,11 +21,17 @@ gulp.task('clean', function () {
   return del.sync('build');
 });
 
+gulp.task('css-libs', function() {
+  return gulp.src('src/styles/libs/*.css')
+    .pipe(concat('libs.css'))
+    .pipe(gulp.dest('build/css'))
+    .pipe(browserSync.stream())
+    .pipe(sourcemaps.write());
+});
+
 gulp.task('stylus', function () {
   return gulp.src('src/styles/**/*')
-    .pipe(stylus({
-      'include css': true
-    }))
+    .pipe(stylus())
     .pipe(concat('main.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream())
@@ -116,6 +122,6 @@ gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/**/*.jade', ['jade']);
 });
 
-gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'stylus', 'jade', 'browserify']);
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'jade', 'browserify']);
 
 gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);
