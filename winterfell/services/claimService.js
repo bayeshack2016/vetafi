@@ -8,8 +8,16 @@ function ClaimService(app) {
 }
 
 module.exports = ClaimService;
-module.exports.createNewClaim = function(userId, callback) {
-  return Claim.quickCreate(userId, callback);
+module.exports.findIncompleteClaimOrCreate = function(userId, callback) {
+  return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, fileClaim) {
+    if (_.isEmpty(fileClaim)) {
+      return Claim.quickCreate(userId, callback);
+    }
+    if (_.isFunction(callback)) {
+      callback();
+    }
+    return null;
+  });
 };
 
 module.exports.addForm = function(claimId, file, callbacks) {

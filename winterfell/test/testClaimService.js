@@ -36,7 +36,7 @@ describe('ClaimService', function() {
       state: Claim.State.INCOMPLETE
     });
     existingClaim.save(function(err, claim) {
-      ClaimService.createNewClaim(targetUser._id, function(err, claim) {
+      ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
         Boolean(err).should.equal(false);
         Boolean(claim).should.equal(false);
         done();
@@ -45,7 +45,7 @@ describe('ClaimService', function() {
   });
 
   it('Create new INCOMPLETE Claim - success', function(done) {
-    ClaimService.createNewClaim(targetUser._id, function(err, claim) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
       Boolean(err).should.equal(false);
       claim.userId.should.equal(targetUser._id);
       claim.state.should.equal(Claim.State.INCOMPLETE);
@@ -54,7 +54,7 @@ describe('ClaimService', function() {
   });
 
   it('Set Claim state to SUBMITTED', function(done) {
-    ClaimService.createNewClaim(targetUser._id, function(err, claim) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
       ClaimService.setClaimState(claim._id, Claim.State.SUBMITTED, function(err, update) {
         Boolean(err).should.equal(false);
         update.ok.should.equal(1);
@@ -67,7 +67,7 @@ describe('ClaimService', function() {
   });
 
   it('Set Claim state to DISCARDED', function(done) {
-    ClaimService.createNewClaim(targetUser._id, function(err, claim) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
       ClaimService.setClaimState(claim._id, Claim.State.DISCARDED, function(err, update) {
         Boolean(err).should.equal(false);
         update.ok.should.equal(1);

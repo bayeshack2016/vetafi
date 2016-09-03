@@ -56,7 +56,7 @@ module.exports = function (app) {
 
     User.findById(req.session.userId).exec(function (userErr, user) {
       if (user) {
-        ClaimService.createNewClaim(user.id, callback);
+        ClaimService.findIncompleteClaimOrCreate(user.id, callback);
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       }
