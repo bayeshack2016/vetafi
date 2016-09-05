@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimService', 'net', 'strings', 'ngDialog',
-  function($scope, $location, profileService, claimService, net, strings, ngDialog) {
+app.controller('profileCtrl', ['$scope', '$location', 'Profile', 'claimService', 'net', 'strings', '$uibModal', '$state',
+  function($scope, $location, Profile, claimService, net, strings, $uibModal, $state) {
     $scope.ranks = strings.ranks;
     $scope.branches = strings.branches;
     $scope.insigniaUrls = {
@@ -35,18 +35,6 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
       }
     ];
 
-    $scope.clickMilitaryTab = function() {
-      $location.path('/profile/' + tabValues.military);
-    };
-
-    $scope.clickFileClaimsTab = function() {
-      $location.path('/profile/' + tabValues.fileClaims);
-    };
-
-    $scope.clickSettingsTab = function() {
-      $location.path('/profile/' + tabValues.settings);
-    };
-
     $scope.clickEdit = function() {
       console.log('Edit User Information');
     };
@@ -64,7 +52,7 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
     };
 
     $scope.clickChangePassword = function() {
-      ngDialog.open({ template: '../templates/modals/changePassword.html', className: 'ngdialog-theme-default' });
+      $uibModal.open({ templateUrl: 'templates/modals/changePassword.html', windowClass: 'ngdialog-theme-default' });
     };
 
     $scope.clickLinkIdMe = function() {
@@ -75,7 +63,7 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
 
     $scope.clickLogout = function() {
       net.logout().then(function(resp) {
-        profileService.clearUserInfo();
+        Profile.logout();
         if (resp.status == 200) {
           $location.path('/');
         }
@@ -84,62 +72,15 @@ app.controller('profileCtrl', ['$scope', '$location', 'profileService', 'claimSe
 
     $scope.clickDeleteAccount = function() {
       net.deleteUserAccount().then(function(resp) {
-        profileService.clearUserInfo();
+        Profile.logout();
         if (resp.status == 200) {
           $location.path('/');
         }
       });
     };
 
-    $scope.clickClaimEdit = function() {
-      $location.path('/claim/select-forms');
-    };
-
     $scope.clickClaimDiscard = function(claimId) {
       claimService.removeClaim(claimId);
     };
-
-    $scope.clickClaimView = function(claimId) {
-      $location.path('/claim/' + claimId);
-    };
-
-    function updateClaims() {
-      _.map($scope.claims, function(claim) {
-        if (!claim.actionMessage) {
-          if (claim.state == 'incomplete') {
-            claim.dateMessage = 'Last modified on ' + claim.updatedAt;
-          } else if (claim.state == 'submitted') {
-            claim.dateMessage = 'Submitted on ' + claim.updatedAt;
-          } else if (claim.state == 'processed') {
-            claim.dateMessage = 'Processed by the VA on ' + claim.updatedAt;
-          }
-        }
-      });
-    }
-
-    //
-    // Watchers
-    //
-    $scope.$watch(function() {
-      return $location.path();
-    }, function(newVal, oldVal) {
-      if (newVal == '/profile/' + tabValues.military) {
-        $scope.currentTab = tabValues.military;
-      } else if (newVal == '/profile/' + tabValues.fileClaims) {
-        $scope.currentTab = tabValues.fileClaims;
-      } else if (newVal == '/profile/' + tabValues.settings) {
-        $scope.currentTab = tabValues.settings;
-      } else {
-        $scope.currentTab = tabValues.military;
-      }
-    });
-
-    $scope.$watch(function () {
-      return claimService.userClaims;
-    }, function (newVal) {
-      $scope.claims = claimService.userClaims;
-      updateClaims();
-    });
-
   }
 ]);

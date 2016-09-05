@@ -3,8 +3,8 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', 'formService', '$routeParams',
-    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $routeParams) {
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', 'formService', '$stateParams',
+    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $stateParams) {
         $scope.$watch('signature', function (newVal, oldVal) {
             console.log(newVal, oldVal);
             if (newVal) {
@@ -23,7 +23,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingSer
                     out.push({fieldName: k, fieldValue: $scope.model[k]})
                 }
             }
-            formRenderingService.render($routeParams.formId, out);
+            formRenderingService.render($stateParams.formId, out);
         };
 
         $scope.onSubmit = function () {
@@ -34,13 +34,13 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingSer
         };
 
         $scope.save = function () {
-            formService.save($routeParams.claimId, $routeParams.formId, $scope.model, function(err, response) {
+            formService.save($stateParams.claimId, $stateParams.formId, $scope.model, function(err, response) {
                 console.log(err, response);
             })
         };
 
         $scope.model = {};
-        $scope.fields = formTemplateService[$routeParams.formId].fields;
+        $scope.fields = formTemplateService[$stateParams.formId].fields;
 
         for (var i=0; i<$scope.fields.length; i++) {
             if ($scope.fields[i].key.indexOf('date_signed') !== -1) {

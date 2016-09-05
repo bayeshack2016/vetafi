@@ -48,15 +48,12 @@ $(document).ready(function(){
       return false;
     }
 
-    var url = "http://localhost:3999/auth/signup";
+    var url = "/auth/signup";
     var data = {
       email: email,
       password: password
     };
     var success = function(resp) {
-      if (resp.userId) {
-        sessionStorageHelper.setPair(vfiConstants.keyUserId, resp.userId);
-      }
       if (resp.redirect) {
         window.location.href = resp.redirect;
       }
@@ -83,12 +80,9 @@ $(document).ready(function(){
       return;
     }
 
-    var url = "http://localhost:3999/auth/login";
+    var url = "/auth/login";
     var data = {"email": email, "password": password};
     var success = function(resp) {
-      if (resp.userId) {
-        sessionStorageHelper.setPair(vfiConstants.keyUserId, resp.userId);
-      }
       if (resp.redirect) {
         window.location.href = resp.redirect;
       }

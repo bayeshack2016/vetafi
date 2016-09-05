@@ -1,30 +1,28 @@
-#vfi-home-view(ng-controller="homeCtrl")
+div.banner-wrapper
+  div.banner-overlay
+    div.headline-wrapper.row(ng-show="hasIncompleteClaim")
+      h3.col-sm-9 Continue your previous claim
+      a(ui-sref="root.claimselect")
+        button.col-sm-3 Continue claim
+    div.headline-wrapper.row(ng-show="!hasIncompleteClaim")
+      h3.col-sm-9 Get the benefits that you deserve
+      a(ui-sref="root.claimstart")
+        button.col-sm-3 Start a claim
 
-  div.banner-wrapper
-    div.banner-overlay
-      div.headline-wrapper.row(ng-show="hasIncompleteClaim")
-        h3.col-sm-9 Continue your previous claim
-        a(href="#/claim/select-forms")
-          button.col-sm-3 Continue claim
-      div.headline-wrapper.row(ng-show="!hasIncompleteClaim")
-        h3.col-sm-9 Get the benefits that you deserve
-        a(href="#/claim/start")
-          button.col-sm-3 Start a claim
+a.home-link.claim
+  h4.title File a claim
+  div.content.row
+    div.col-sm-1
+      .icon
+    div.col-sm-11
+      p We can help you file a Fully Developed Claim. Completely submit your information once and avoid having to tediously go back and forth with the VA.
 
-  a.home-link.claim
-    h4.title File a claim
-    div.content.row
-      div.col-sm-1
-        .icon
-      div.col-sm-11
-        p We can help you file a Fully Developed Claim. Completely submit your information once and avoid having to tediously go back and forth with the VA.
+a.home-link.faq
+  h4.title Resources
+  div.content.row
+    div.col-sm-1
+      .icon
+    div.col-sm-11
+      p Got questions about what benefits and entitlements you are eligible for? Click here to learn about what you can do.
 
-  a.home-link.faq
-    h4.title Resources
-    div.content.row
-      div.col-sm-1
-        .icon
-      div.col-sm-11
-        p Got questions about what benefits and entitlements you are eligible for? Click here to learn about what you can do.
-
-  vfi-footer
+vfi-footer

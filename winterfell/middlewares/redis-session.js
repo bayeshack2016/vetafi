@@ -22,8 +22,8 @@ module.exports = function (app) {
       store: new redisStore({
         host: host,
         port: port,
-        client: redisClient,
-        ttl: Constants.SESSION_EXPIRE_TIME}), // expires after 20 minutes
+        client: redisClient}), 
+      cookie: {expires: new Date(Date.now() + Constants.SESSION_EXPIRE_TIME)}, // expires after 20 minutes
       saveUninitialized: false,
       resave: false
   }));
