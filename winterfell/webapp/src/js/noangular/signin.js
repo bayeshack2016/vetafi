@@ -37,6 +37,18 @@ function displayError(msg) {
 }
 
 $(document).ready(function(){
+  $('.email-btn').click(function(e) {
+    e.preventDefault();
+    $('.options').addClass('vfi-hide');
+    $('.inputs').addClass('vfi-show');
+  });
+
+  $('.back-btn').click(function(e) {
+    e.preventDefault();
+    $('.options').removeClass('vfi-hide');
+    $('.inputs').removeClass('vfi-show');
+  });
+
   $('#signup-view .vfi-submit-btn').click(function(e) {
     e.preventDefault();
     var email = $('.vfi-input-email').val();

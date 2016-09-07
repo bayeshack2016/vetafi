@@ -1,97 +1,208 @@
 @import "standards.styl"
 
+backgroundUrl = '../icons/veteran-dog-bg.jpg'
+movePicWidth = maxLayoutWidthPx
+changeLayoutWidth = minWindowWidthPx
+
 #signup-view
 #login-view
+  background: url(backgroundUrl)
+  background-attachment: fixed
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
 
-  #bg
-    position: relative
-    width: 100%
-    height: 600px
-    background: url('../icons/veteran-dog-bg.jpg')
-    background-size: cover
-    background-position: center
-    background-repeat: no-repeat
-    border-bottom: 4px solid colorPrimaryDarkBlue
-
-  #bg-overlay
-    position: absolute
+  & .bg-overlay
+    position: fixed
     top: 0
     left: 0
     width: 100%
     height: 100%
-    background: rgba(255, 255, 255, 0.35)
+    background: rgba(255, 255, 255, 0.4)
 
-  #view-wrapper
-    position: absolute
-    top: 0
-    left: 0
-    right: 0
-    width: 90%
-    max-width: 940px
-    height: 100%
-    margin: 0 auto
-
-  #footer
-    background-color: colorDarkGray
-
-  .vfi-heading
-    position: absolute
-    top: largeSpacing
-    left: 0
-    color: colorBlack
-
-  .vfi-subheading
-    position: absolute
-    bottom: largeSpacing
-    left: 0
-    color: colorBlack
-
-  #signup-wrapper
-  #login-wrapper
-    position: absolute
-    top: megaSpacing
-    right: 0
-    width: (6 * megaSpacing)
-    padding: smallSpacing largeSpacing largeSpacing
-    box-sizing: border-box
-    background-color: colorPrimaryDarkBlue
-    color: colorWhite
-
-  .vfi-form-wrapper
-    margin-top: mediumSpacing
-
-  .vfi-submit-btn
-    position: relative
-    float: right
-    background-color: colorYellowLight
-    color: colorBlack
+  & .viewer
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: maxLayoutWidthPx
+    height: 420px
+    background-color: colorWhite
+    box-shadow: 0px 0px 16px 4px
+    border-radius: 6px
     overflow: hidden
 
-    & .vfi-progress
-      position: absolute
-      top: 0px
-      left: 0px
-      width: 0%
+    @media screen and (max-width: movePicWidth)
+      width: 360px
+      height: initial
+
+    @media screen and (max-width: changeLayoutWidth)
+      width: 100%
       height: 100%
-      background-color: colorYellow
+      top: 0
+      left: 0
+      transform: none
+      border-radius: 0px
+      background: rgba(0, 0, 0, 0.6)
 
-  .vfi-error-msg
-    float: left
-    color: colorRed
+  & .pic-section
+    display: inline-block
+    width: 55%
+    height: 100%
+    background: url('../icons/veteran-dog-bg.jpg')
+    background-position: -50px 0px
+    background-size: cover
+    background-repeat: no-repeat
 
-  & input
-    display: block
+    @media screen and (max-width: movePicWidth)
+      display: none
+
+  & .interact-section
+    display: inline-block
+    vertical-align: top
+    width: 45%
+    padding: largeSpacing
+
+    @media screen and (max-width: movePicWidth)
+      display: block
+      width: 100%
+      padding: largeSpacing megaSpacing
+
+    @media screen and (max-width: changeLayoutWidth)
+      padding: largeSpacing megaSpacing
+
+    & img.logo
+      display: block
+      width: 120px
+      margin: 0 auto largeSpacing
+
+      @media screen and (max-width: changeLayoutWidth)
+        content: url('../icons/Vetafi-white.png')
+
+    & .screen
+      position: relative
+      width: 100%
+      height: 320px
+      overflow: hidden
+
+  & .options
+    position: absolute
+    top: 0
+    left: 0%
     width: 100%
-    margin: 0 auto smallSpacing
-    padding: miniSpacing smallSpacing
-    box-sizing: border-box
-    border: 1px solid transparent
-    border-radius: 4px
-    outline: none
-    font-size: bodyFont_size
-    color: colorBlack
+    opacity: 1.0
+    visibility: visible
+    transition: 0.2s linear all
 
-    &:active
-    &:focus
-      box-shadow: 0px 0px 1px 1px colorLightBlue
-      border: 1px solid colorLightBlue
+    &.vfi-hide
+      left: -50%
+      opacity: 0.0
+      visibility: hidden
+
+    & .divider
+      margin-bottom: mediumSpacing
+      text-align: center
+      color: colorDarkGray
+
+      @media screen and (max-width: changeLayoutWidth)
+        color: colorWhite
+
+    & button
+      width: 100%
+      margin-bottom: mediumSpacing
+      text-align: left
+
+      &.fb-btn
+        background-color: colorFacebook
+      &.idme-btn
+        background-color: colorIdMeNavy
+
+      & .icon-container
+        display: inline-block
+        width: calc(100% - 155px)
+        vertical-align: bottom
+
+      & .txt-container
+        display: inline-block
+        width: 155px
+
+      & .fb-icon
+        height: 24px
+        width: 24px
+        margin-left: -10px
+        margin-top: -3px
+        background: url('../icons/fb-icon.svg')
+        background-size: cover
+        background-repeat: no-repeat
+
+      & .idme-icon
+        height: 16px
+        width: 44px
+        background: url('../icons/idme-logo-white.png')
+        background-size: cover
+        background-repeat: no-repeat
+
+      & .email-icon
+        width: 40px
+        height: 24px
+        background: url('../icons/email-white.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: -7px -7px
+
+  & .inputs
+    position: absolute
+    top: 0
+    left: 50%
+    width: 100%
+    opacity: 0.0
+    visibility: hidden
+    transition: 0.2s linear all
+
+    &.vfi-show
+      left: 0%
+      opacity: 1.0
+      visibility: visible
+
+    & input
+      display: block
+      width: 100%
+      margin-bottom: smallSpacing
+      padding: miniSpacing smallSpacing
+      border-radius: 4px
+      outline: none
+      border: 2px solid colorLightGray
+      box-shadow: none
+
+      &:active
+      &:focus
+        border: 2px solid colorLightBlue
+
+    & button
+      display: block
+      width: 100%
+      margin-bottom: smallSpacing
+
+    & .back-btn
+      position: absolute
+      top: calc(100% + 24px)
+      left: 0
+      background-color: transparent
+      color: colorDarkGray
+
+      @media screen and (max-width: changeLayoutWidth)
+        color: colorWhite
+
+    & a
+      display: block
+      margin-bottom: smallSpacing
+      text-align: left
+      color: colorPrimaryBlue
+
+      &:hover
+        cursor: pointer
+
+      @media screen and (max-width: movePicWidth)
+        text-align: center
+      @media screen and (max-width: changeLayoutWidth)
+        color: colorWhite
