@@ -4,7 +4,8 @@ var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
-var ENVIRONMENT = require('./utils/constants').environment;
+var constants = require('./utils/constants');
+var ENVIRONMENT = constants.environment;
 var documentRenderingConfig = require('./config/documentRendering');
 
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
@@ -39,14 +40,20 @@ app.get('/', function(req, resp) {
 // Connect to a mongodb server using mongoose
 require('./config/mongoose')(environment);
 
-// Setup lob api
-biscuit.get(environment + '::lob-api-key', function(err, secret) {
-  if (err) {
-    throw err;
-  }
+// Setup biscuit keys
+function setupBiscuitKey(keyName) {
+  var yamlKey = constants.biscuitKeys[keyName];
+  biscuit.get(environment + '::' + yamlKey, function(err, secret) {
+    if (err) {
+      throw err;
+    }
+    app.set(keyName, secret);
+  });
+}
 
-  app.set('lobApiKey', secret);
-});
+setupBiscuitKey(constants.KEY_LOB_API);
+setupBiscuitKey(constants.KEY_IDME_CLIENT_ID);
+setupBiscuitKey(constants.KEY_IDME_SECRET_ID);
 
 // Set address of document rendering microservice
 app.set('documentRenderingServiceAddress', documentRenderingConfig.address);

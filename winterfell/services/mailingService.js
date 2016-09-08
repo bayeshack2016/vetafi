@@ -1,4 +1,5 @@
 var lob = require('Lob');
+var Constants = require('./../utils/constants');
 var Document = require('./../models/document');
 var Letter = require('./../models/letter');
 var User = require('./../models/user');
@@ -13,7 +14,7 @@ var DocumentRenderingService = require('./documentRenderingService');
  * if we have need to.
  */
 function MailingService(app) {
-    this.Lob = lob(app.get('lobApiKey'), {
+    this.Lob = lob(app.get(Constants.KEY_LOB_API), {
         apiVersion: '2016-06-30'
     });
     this.app = app;

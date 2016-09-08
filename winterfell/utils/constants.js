@@ -9,3 +9,12 @@ module.exports.environment = {
     LOCAL: 'local',
     PROD: 'production'
 };
+
+module.exports.KEY_LOB_API = 'lobApiKey';
+module.exports.KEY_IDME_CLIENT_ID = 'idmeClientId';
+module.exports.KEY_IDME_SECRET_ID = 'idmeSecretId';
+module.exports.biscuitKeys = {
+  lobApiKey: 'lob-api-key',
+  idmeClientId: 'id-me-client-id',
+  idmeSecretId: 'id-me-client-secret'
+};
