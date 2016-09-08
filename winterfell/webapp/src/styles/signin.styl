@@ -1,8 +1,9 @@
 @import "standards.styl"
 
 backgroundUrl = '../icons/veteran-dog-bg.jpg'
-movePicWidth = maxLayoutWidthPx
+removePicWidth = maxLayoutWidthPx
 changeLayoutWidth = minWindowWidthPx
+textContainerWidthPx = 165px
 
 #signup-view
 #login-view
@@ -32,7 +33,7 @@ changeLayoutWidth = minWindowWidthPx
     border-radius: 6px
     overflow: hidden
 
-    @media screen and (max-width: movePicWidth)
+    @media screen and (max-width: removePicWidth)
       width: 400px
       height: initial
 
@@ -54,7 +55,7 @@ changeLayoutWidth = minWindowWidthPx
     background-size: cover
     background-repeat: no-repeat
 
-    @media screen and (max-width: movePicWidth)
+    @media screen and (max-width: removePicWidth)
       display: none
 
   & .interact-section
@@ -63,12 +64,9 @@ changeLayoutWidth = minWindowWidthPx
     width: 50%
     padding: largeSpacing
 
-    @media screen and (max-width: movePicWidth)
+    @media screen and (max-width: removePicWidth)
       display: block
       width: 100%
-      padding: largeSpacing megaSpacing
-
-    @media screen and (max-width: changeLayoutWidth)
       padding: largeSpacing megaSpacing
 
     & img.logo
@@ -79,26 +77,41 @@ changeLayoutWidth = minWindowWidthPx
       @media screen and (max-width: changeLayoutWidth)
         content: url('../icons/Vetafi-white.png')
 
-    & .screen
-      position: relative
-      width: 100%
-      height: 320px
-      overflow: hidden
 
-  & .options
-    position: absolute
-    top: 0
-    left: 0%
+  & .carousel
+    position: relative
     width: 100%
-    opacity: 1.0
-    visibility: visible
-    transition: 0.2s linear all
+    height: 360px
+    overflow: hidden
 
-    &.vfi-hide
-      left: -50%
-      opacity: 0.0
-      visibility: hidden
+    & .screen
+      position: absolute
+      top: 0
+      width: 100%
+      transition: 0.2s linear all
 
+      &.options
+        left: 0%
+        opacity: 1.0
+        visibility: visible
+
+        &.vfi-hide
+          left: -50%
+          opacity: 0.0
+          visibility: hidden
+
+      &.inputs
+        left: 50%
+        opacity: 0.0
+        visibility: hidden
+
+        &.vfi-show
+          left: 0%
+          opacity: 1.0
+          visibility: visible
+
+
+  & .screen.options
     & .divider
       margin-bottom: mediumSpacing
       text-align: center
@@ -112,19 +125,14 @@ changeLayoutWidth = minWindowWidthPx
       margin-bottom: mediumSpacing
       text-align: left
 
-      &.fb-btn
-        background-color: colorFacebook
-      &.idme-btn
-        background-color: colorIdMeNavy
-
       & .icon-container
         display: inline-block
-        width: calc(100% - 165px)
+        width: "calc(100% - %s)" % textContainerWidthPx
         vertical-align: bottom
 
       & .txt-container
         display: inline-block
-        width: 165px
+        width: textContainerWidthPx
 
       & .fb-icon
         height: 24px
@@ -150,20 +158,15 @@ changeLayoutWidth = minWindowWidthPx
         background-repeat: no-repeat
         background-position: -7px -7px
 
-  & .inputs
-    position: absolute
-    top: 0
-    left: 50%
-    width: 100%
-    opacity: 0.0
-    visibility: hidden
-    transition: 0.2s linear all
+      &.fb-btn
+        background-color: colorFacebook
+      &.idme-btn
+        background-color: colorIdMeNavy
+      &.email-btn
+        background-color: colorPrimaryBlue
 
-    &.vfi-show
-      left: 0%
-      opacity: 1.0
-      visibility: visible
 
+  & .screen.inputs
     & input
       display: block
       width: 100%
@@ -183,10 +186,15 @@ changeLayoutWidth = minWindowWidthPx
       width: 100%
       margin-bottom: smallSpacing
 
+    & .error-msg
+      height: 28px
+      color: colorRed
+      text-align: left
+
+      @media screen and (max-width: removePicWidth)
+        text-align: center
+
     & .back-btn
-      position: absolute
-      top: calc(100% + 24px)
-      left: 0
       background-color: transparent
       color: colorDarkGray
 
@@ -202,7 +210,7 @@ changeLayoutWidth = minWindowWidthPx
       &:hover
         cursor: pointer
 
-      @media screen and (max-width: movePicWidth)
+      @media screen and (max-width: removePicWidth)
         text-align: center
       @media screen and (max-width: changeLayoutWidth)
         color: colorWhite

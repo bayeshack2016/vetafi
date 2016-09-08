@@ -3,7 +3,6 @@ html(lang="en")
   head
     meta(charset='utf-8')
     title=Vetafi
-    link(rel='stylesheet', href='css/libs.css')
     link(rel='stylesheet', href='css/main.css')
     script(type='text/javascript', src='libs/libs.js')
     script(type='text/javascript', src='js/signin.js')
@@ -15,8 +14,8 @@ html(lang="en")
       div.interact-section
         img.logo(src='../icons/Vetafi-black.png')
 
-        div.screen
-          div.options
+        div.carousel
+          div.screen.options
             button.fb-btn
               div.icon-container
                 div.fb-icon
@@ -33,11 +32,11 @@ html(lang="en")
                 div.email-icon
               div.txt-container Signup with your email
 
-          div.inputs
-            input(placeholder='Email Address')
-            input(placeholder='Password')
-            input(placeholder='Confirm Password')
-            button SIGN UP
+          div.screen.inputs
+            input.email(placeholder='Email Address', type='text')
+            input.pwd(placeholder='Password', type='password')
+            input.confirm-pwd(placeholder='Confirm Password', type='password')
+            button.submit-btn SIGN UP
             a(href="/login") Already have an account?
             p.error-msg
             button.back-btn Back

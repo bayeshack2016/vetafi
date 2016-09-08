@@ -15,8 +15,10 @@ html(lang="en")
       div.interact-section
         img.logo(src='../icons/Vetafi-black.png')
 
-        div.screen
-          div.options
+        // Carousel can have multiple screens
+        div.carousel
+
+          div.screen.options
             button.fb-btn
               div.icon-container
                 div.fb-icon
@@ -33,10 +35,10 @@ html(lang="en")
                 div.email-icon
               div.txt-container Login with your email
 
-          div.inputs
-            input(placeholder='Email Address')
-            input(placeholder='Password')
-            button LOG IN
+          div.screen.inputs
+            input.email(placeholder='Email Address', type='text')
+            input.pwd(placeholder='Password', type='password')
+            button.submit-btn LOG IN
             a Forgot password?
             a Forgot email?
             a(href="/signup") Need an account?
