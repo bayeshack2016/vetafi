@@ -37,8 +37,7 @@ module.exports.handleSocial = function(socialType, socialToken, socialEmail, soc
           callback(err, null);
         } else if (user) {
           // Add social to user
-          user.socialUsers.push({type: socialType, oauthToken: socialToken, state: SocialUser.State.ACTIVE});
-          user.save(function() {
+          UserService.addSocialUser(user._id, socialType, socialToken, function() {
             callback(null, user);
           });
         } else {

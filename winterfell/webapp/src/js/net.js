@@ -1,7 +1,6 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
-  var baseUrl = xhrEnv.baseServerUrl;
 
   var httpGet = function (url, data) {
     // For Front-end only Development
@@ -76,14 +75,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
       return httpDelete("/user/" + userId);
     },
     getAuthIdMeUrl: function() {
-      // Retrieved from the Id.Me Vetafi dashboard
-      var clientId = xhrEnv.idMeClientId;
-      var url = "https://api.id.me/oauth/authorize";
-      url += "?client_id=" + clientId;
-      url += "&redirect_uri=" + baseUrl + "/auth/link/idme";
-      url += "&response_type=code";
-      url += "&scope=military";
-      return url;
+      return '/auth/idme';
     },
 
     // Claims
