@@ -1,33 +1,9 @@
 var app = angular.module('vetafiApp');
-app.controller('claimSelectFormsCtrl', ['$scope', '$location', 'claimService',
-  function($scope, $location, claimService) {
+app.controller('claimSelectFormsCtrl', ['$scope', '$location', 'claimService', 'formTemplateService', '$routeParams',
+  function($scope, $location, claimService, formTemplateService, $routeParams) {
 
-    $scope.forms = [
-      {
-        id: 'asdf',
-        name: 'Form A',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.',
-        category: '',
-        required: true,
-        completed: false
-      },
-      {
-        id: 'qwer',
-        name: 'Form B',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, eiusmod tempor incididunt ut labore et dolore magna.',
-        category: '',
-        required: false,
-        completed: false,
-      },
-      {
-        id: 'zxcv',
-        name: 'Form C',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
-        category: '',
-        required: false,
-        completed: true
-      }
-    ];
+    $scope.claimId = $routeParams.claimId;
+    $scope.forms = formTemplateService;
 
     $scope.onClickFinish = function() {
       $location.path('/claim/confirm');

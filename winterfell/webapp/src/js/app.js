@@ -10,10 +10,9 @@ var app = angular.module('vetafiApp', [
   'signature',
   'formly',
   'formlyBootstrap',
-  'angular-momentjs'
+  'angular-momentjs',
+  'ui.bootstrap'
 ]);
-
-
 
 /**
  * Configure routes
@@ -37,7 +36,7 @@ app.config(function ($routeProvider) {
       templateUrl: "templates/tos.html"
     }).when("/claim/start", {
       templateUrl: "templates/claimStart.html"
-    }).when("/claim/select-forms", {
+    }).when("/claim/:claimId/select-forms", {
       templateUrl: "templates/claimSelectForms.html"
     }).when("/claim/confirm", {
       templateUrl: "templates/claimConfirm.html"
