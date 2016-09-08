@@ -1,6 +1,5 @@
 var _ = require('lodash');
 var passport = require('passport');
-var request = require('request');
 var constants = require('./../utils/constants');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');

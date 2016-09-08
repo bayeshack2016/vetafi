@@ -1,12 +1,13 @@
 var _ = require('lodash');
+var http = require('http-status-codes');
+var request = require('request');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
-var http = require('http-status-codes');
-var constants = require('../utils/constants');
 var httpErrors = require('./../utils/httpErrors');
 var Constants = require('./../utils/constants');
 var User = require('../models/user');
+var SocialUser = require('../utils/socialUser');
 var AuthService = require('../services/authService');
 
 module.exports = function (app) {
@@ -63,14 +64,13 @@ module.exports = function (app) {
         callbackURL: '/auth/idme/callback'
       },
       function(accessToken, refreshToken, profile, done) {
-        console.log('[PASSPORT] token: ' + accessToken);
         request.get('https://api.id.me/api/public/v2/attributes.json?access_token=' + accessToken, function(accessError, accessResponse, accessBody) {
           var idmeBody = JSON.parse(accessBody);
           if (!idmeBody.id) { // if id is not available, we messed up
             res.status(http.BAD_REQUEST).send({error: httpErrors.BAD_SOCIAL_AUTH});
             return;
           }
-          handleSocial(SocialUser.Type.ID_ME, accessToken, idmeBody.email, idmeBody, function(err, user) {
+          AuthService.handleSocial(SocialUser.Type.ID_ME, accessToken, idmeBody.email, idmeBody, function(err, user) {
             done(err, user);
           });
         });

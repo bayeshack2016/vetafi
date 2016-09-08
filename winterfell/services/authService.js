@@ -1,4 +1,8 @@
 var _ = require('lodash');
+var SocialUser = require('../utils/socialUser');
+var User = require('../models/user');
+var UserValues = require('../models/userValues');
+var UserService = require('../services/userService');
 
 function AuthService (app) {
     this.app = app;
@@ -40,9 +44,9 @@ module.exports.handleSocial = function(socialType, socialToken, socialEmail, soc
         } else {
           // Create new user and UserValues, then add social to user
           if (socialType == SocialUser.Type.ID_ME) {
-            UserService.createNewUserFromIdMe(idmeBody, function(err, user) {
+            UserService.createNewUserFromIdMe(socialBody, function(err, user) {
               UserValues.create({}, function() {
-                UserService.pushSocialUser(user._id, socialType, socialToken, callback);
+                UserService.addSocialUser(user._id, socialType, socialToken, callback);
               });
             });
           } else {
