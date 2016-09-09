@@ -7,7 +7,6 @@ div.form-wrapper
         formly-form(model="model" fields="fields" options="options" form="form")
 
     div.container.nopadding
-
         label(for="signature-form-row" ng-class="{'signature-success': model.signature}")
             | Sign below
         div.row(id="signature-form-row")
@@ -24,3 +23,10 @@ div.form-wrapper
                 | Download
             button(ng-click="save()")
                 | Save
+
+div.floating-progress
+    div.row
+        div.col-xs-9
+            uib-progressbar(animate="false" value="getProgress()")
+        div.col-xs-3.floating-progress-text
+            span.progress-numbers {{answered}} / {{answerable}}
