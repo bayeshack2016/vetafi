@@ -3,8 +3,16 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', 'formService', '$stateParams',
-    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $stateParams) {
+app.controller('formCtrl',
+   ['$scope',
+    '$filter',
+    '$rootScope',
+    'formRenderingService',
+    'formTemplateService',
+    'formService',
+    '$stateParams',
+    'userValues',
+    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $stateParams, userValues) {
         $scope.$watch('signature', function (newVal, oldVal) {
             console.log(newVal, oldVal);
             if (newVal) {
@@ -39,7 +47,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingSer
             })
         };
 
-        $scope.model = {};
+        $scope.model = userValues;
         $scope.fields = formTemplateService[$stateParams.formId].fields;
 
         for (var i=0; i<$scope.fields.length; i++) {
