@@ -1,0 +1,17 @@
+div.vfi-profile-section#military
+   h3.vfi-section-header Military Information
+   div.vfi-section-content
+      div.vfi-line Military Id
+      div.vfi-line Date of Discharge
+   div.vfi-section-divider
+   h3.vfi-section-header Military Background
+   div.vfi-section-content.military-bg(ng-repeat='military in militaryInfo')
+      img.vfi-insignia.army(ng-src='{{insigniaUrls[military.branch]}}')
+      div.vfi-line {{ranks[military.rank]}}
+      div.vfi-line {{branches[military.branch]}}
+      div.vfi-line {{military.yearStart}} - {{military.yearEnd}}
+   div.vfi-section-divider
+   div.vfi-section-content.add-military
+      button(ng-click='clickAddMilitary()')
+         img.vfi-add-sign(src='../icons/add.svg')
+         | Add Military Background

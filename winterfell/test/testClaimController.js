@@ -51,7 +51,6 @@ describe('ClaimController', function() {
       .expect(200, done);
   });
 
-
   it('Create claim for user - success', function(done) {
     testSession
       .post('/claims/create')

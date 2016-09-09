@@ -1,6 +1,6 @@
 var app = angular.module('vetafiApp');
-app.controller('claimStartCtrl', ['$scope', '$location', 'net', 'claimService', '$uibModal',
-  function ($scope, $location, net, claimService, $uibModal) {
+app.controller('claimStartCtrl', ['$scope', '$state', 'net', 'claimService', '$uibModal',
+  function ($scope, $state, net, claimService, $uibModal) {
     function getTosAgreement() {
       return $uibModal.open({
         controller: 'tosCtrl',
@@ -15,7 +15,7 @@ app.controller('claimStartCtrl', ['$scope', '$location', 'net', 'claimService', 
         }
       }
       net.startClaim().then(function (res) {
-        $location.path('/claim/' + res.data.claim.externalId + '/select-forms');
+        $state.transitionTo('root.claimselect', {claimId: res.data.claim.externalId});
       });
     };
   }

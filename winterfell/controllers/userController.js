@@ -4,13 +4,14 @@ var httpErrors = require('./../utils/httpErrors');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var UserService = require('./../services/userService');
+var auth = require('../middlewares/auth');
 
 module.exports = function (app) {
 
   // Get a user's information based on externalId
-  app.get('/user/:extUserId', function (req, res) {
-    console.log('[getUser] request received for ' + req.params.extUserId);
-    User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
+  app.get('/user', auth.authenticatedOr404, function (req, res) {
+    console.log('[getUser] request received for ' + req.session.userId);
+    User.findById(req.session.userId).exec(function(err, user) {
       if (user) {
         res.status(http.OK).send({user: User.externalize(user)});
       } else {
@@ -26,8 +27,8 @@ module.exports = function (app) {
   });
 
   // Set a user account to INACTIVE - find by externalId
-  app.delete('/user/:extUserId', function (req, res) {
-    console.log('[deleteUser] request received for ' + req.params.extUserId);
+  app.delete('/user', auth.authenticatedOr404, function (req, res) {
+    console.log('[deleteUser] request received for ' + req.session.userId);
     var callback = function (dbErr) {
       if (dbErr) {
         console.log('[deleteUser] Not found!');
@@ -45,7 +46,7 @@ module.exports = function (app) {
         });
       }
     };
-    User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
+    User.findById(req.session.userId).exec(function(err, user) {
       if (user) {
         UserService.setUserState(user.id, User.State.INACTIVE, callback);
       } else {

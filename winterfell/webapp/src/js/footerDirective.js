@@ -1,10 +1,10 @@
 var app = angular.module('vetafiApp');
-app.directive('vfiFooter', ['profileService', function (profileService) {
+app.directive('vfiFooter', ['Profile', function (Profile) {
   return {
     restrict: 'E',
     templateUrl: '../templates/footer.html',
     link: function(scope, element) {
-      scope.isLoggedIn = !_.isEmpty(profileService.userInfo);
+      scope.isLoggedIn = Profile.isSetUser();
     }
   };
 }]);

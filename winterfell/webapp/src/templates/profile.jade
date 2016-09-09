@@ -1,4 +1,4 @@
-div#profile-view(ng-controller="profileCtrl")
+div#profile-view
 
   div#profile-banner
     div#profile-banner-overlay
@@ -20,75 +20,8 @@ div#profile-view(ng-controller="profileCtrl")
   div#profile-container
 
     div.vfi-tab-row
-      button.vfi-profile-tab(ng-click="clickMilitaryTab()", ng-class="{'vfi-active' : currentTab=='military'}") Military Background
-      button.vfi-profile-tab(ng-click="clickFileClaimsTab()", ng-class="{'vfi-active' : currentTab=='claims'}") File Claims
-      button.vfi-profile-tab(ng-click="clickSettingsTab()", ng-class="{'vfi-active' : currentTab=='settings'}") Settings
+      button.vfi-profile-tab(ui-sref="root.profile.military", ui-sref-active="vfi-active") Military Background
+      button.vfi-profile-tab(ui-sref="root.profile.claims", ui-sref-active="vfi-active") File Claims
+      button.vfi-profile-tab(ui-sref="root.profile.settings", ui-sref-active="vfi-active") Settings
 
-
-    // Military Background
-    div.vfi-profile-section#military(ng-if="currentTab=='military'")
-      h3.vfi-section-header Military Information
-      div.vfi-section-content
-        div.vfi-line Military Id
-        div.vfi-line Date of Discharge
-
-      div.vfi-section-divider
-
-      h3.vfi-section-header Military Background
-      div.vfi-section-content.military-bg(ng-repeat='military in militaryInfo')
-        img.vfi-insignia.army(ng-src='{{insigniaUrls[military.branch]}}')
-        div.vfi-line {{ranks[military.rank]}}
-        div.vfi-line {{branches[military.branch]}}
-        div.vfi-line {{military.yearStart}} - {{military.yearEnd}}
-
-      div.vfi-section-divider
-
-      div.vfi-section-content.add-military
-        button(ng-click='clickAddMilitary()')
-          img.vfi-add-sign(src='../icons/add.svg')
-          | Add Military Background
-
-
-    // File Claims
-    div.vfi-profile-section#claims(ng-if="currentTab=='claims'")
-      div.vfi-section-content(ng-show="claims.length == 0")
-        | You have no pending file claims at the moment.
-        br
-        | Click <a href="#/claim/start">here</a> to start a file claim.
-      div.vfi-section-content(ng-class="{'vfi-incomplete': claim.state=='incomplete', 'vfi-submitted': claim.state=='submitted', 'vfi-processed': claim.state=='processed'}", ng-repeat="claim in claims", ng-show="claims.length > 0")
-        div.vfi-section-head
-          h4.vfi-date {{claim.dateMessage}}
-          div.vfi-action-wrapper
-            button.vfi-edit-btn(ng-click="clickClaimEdit()", ng-if="claim.state=='incomplete'")
-              div.vfi-icon.vfi-edit
-            button.vfi-discard-btn(ng-click="clickClaimDiscard()", ng-if="claim.state=='incomplete'")
-              div.vfi-icon.vfi-delete
-            button.vfi-view-btn(ng-click="clickClaimView(claim.id)")
-              div.vfi-icon.vfi-view
-        div.vfi-check-icon(ng-if="claim.state=='submitted' || claim.state=='processed'")
-        div.vfi-bar
-          div.vfi-progress(ng-class="{'vfi-incomplete': claim.state=='incomplete', 'vfi-submitted': claim.state=='submitted', 'vfi-processed': claim.state=='processed'}")
-
-
-    // Settings
-    div.vfi-profile-section#settings(ng-if="currentTab=='settings'")
-      div.vfi-section-content
-        | Change Email
-        button.vfi-settings-btn#change-email(ng-click="clickChangeEmail()") Change Email
-
-      div.vfi-section-content
-        | Change Password
-        button.vfi-settings-btn#change-password(ng-click="clickChangePassword()") Change Password
-
-      div.vfi-section-content
-        | Link your ID.me account
-        button.vfi-settings-btn#idme(ng-click="clickLinkIdMe()")
-          div#logo-icon
-
-      div.vfi-section-content
-        | Log out of your account
-        button.vfi-settings-btn#logout(ng-click="clickLogout()") Log out
-
-      div.vfi-section-content
-        | Delete your account and remove all your content
-        button.vfi-settings-btn#delete-account(ng-click="clickDeleteAccount()") Delete Account
+    ui-view

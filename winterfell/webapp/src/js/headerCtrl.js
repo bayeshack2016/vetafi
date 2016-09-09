@@ -1,83 +1,57 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller("headerCtrl", ['$scope', 'profileService', 'claimService', 'net', '$location', '$interval', 'ngDialog',
-	function ($scope, profileService, claimService, net, $location, $interval, ngDialog) {
-		$scope.isSignedIn = false;
-		$scope.inactive = true;
-		$scope.inactivityHandler = undefined;
+app.controller("headerCtrl",
+  ['$scope', 'Profile', 'claimService', 'net', '$window', '$interval', '$uibModal', 'user',
+    function ($scope, Profile, claimService, net, $window, $interval, $uibModal, user) {
+      $scope.user = Profile.getUser();
+      $scope.isSignedIn = Profile.isSetUser();
 
-		if (sessionStorageHelper.getPair(vfiConstants.keyUserId)) {
-			net.getUserInfo().then(function(resp) {
-				var user = resp.data.user;
-				profileService.userInfo = user;
-				net.getClaimsForUser(user.id).then(function(resp) {
-					claimService.userClaims = resp.data.claims;
-				});
-			});
-		}
+      //
+      // Header Menu
+      //
+      $scope.menuToggled = false;
+      $scope.onToggleMenu = function () {
+        $scope.menuToggled = !$scope.menuToggled;
+      };
 
-		//
-		// Header Menu
-		//
-		$scope.menuToggled = false;
-		$scope.onToggleMenu = function() {
-			$scope.menuToggled = !$scope.menuToggled;
-		};
-
-		$scope.closeThisMenu = function () {
+      $scope.closeThisMenu = function () {
         $scope.menuToggled = false;
-    };
+      };
 
-		$scope.onClickProfileOption = function() {
-			$scope.menuToggled = false;
-			$location.path('/profile');
-		};
+      function ExpirationChecker() {
+        this.active = false;
+      }
 
-		$scope.onClickLogoutOption = function() {
-			$scope.menuToggled = false;
-			net.logout().then(function(resp) {
-				profileService.clearUserInfo();
-				if (resp.status == 200) {
-					$location.path('/');
-				}
-			});
-		};
+      ExpirationChecker.prototype.checkSessionExpiration = function () {
+        if (this.active) {
+          return;
+        }
 
-		function startInactivityHandler() {
-			return $interval(function() {
-				if ($scope.inactive) {
-					net.logout();
-					profileService.clearUserInfo();
-					$location.path('/');
-					ngDialog.open({ template: '../templates/modals/sessionExpired.html', className: 'ngdialog-theme-default' });
-				} else {
-					console.log('Still active!');
-					net.touchSession();
-				}
-				$scope.inactive = true; // reset inactivity
-			}, 20 * 60 * 1000); // check every 20 minutes
-		}
+        var that = this;
+        net.touchSession().then(function success(res) {
 
-		//
-		// Watchers
-		//
-		$scope.$watch(function () {
-			return profileService.userInfo;
-		}, function (newVal) {
-			if (_.isEmpty(newVal)) {
-				$scope.isSignedIn = false;
-				if ($scope.inactivityHandler) {
-					$interval.cancel($scope.inactivityHandler);
-					$scope.inactivityHandler = undefined;
-				}
-			} else {
-				$scope.isSignedIn = true;
-				$scope.inactivityHandler = startInactivityHandler();
-			}
-		});
+        }, function failure(res) {
+          that.active = true;
+          var modal = $uibModal.open({templateUrl: 'templates/modals/sessionExpired.html', windowClass: 'ngdialog-theme-default'});
+          modal.result.then(
+            function success() {
+              console.log("success");
+              that.active = false;
+              $window.location.href = '/login';
+            },
+            function failure() {
+              console.log("fail");
+              that.active = false;
+              $window.location.href = '/login';
+            }
+          );
+        });
+      };
 
-		$scope.$on('$routeChangeSuccess', function(next, current) {
-			$scope.inactive = false;
-		});
-	}
-]);
+      var expirationChecker = new ExpirationChecker();
+
+      $interval(function() {
+        expirationChecker.checkSessionExpiration();
+      }, 20 * 60 * 1000); // check every 20 minutes
+    }]
+);

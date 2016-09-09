@@ -29,7 +29,7 @@ describe('UserService', function() {
   it('Create new user - invalid password', function(done) {
     var user = {
       email: 'moose@test.com',
-      password: 'asdf',
+      password: 'asdf'
     };
 
     // Execute
@@ -43,7 +43,7 @@ describe('UserService', function() {
   it('Create new user - success', function(done) {
     var userInput = {
       email: 'moose@test.com',
-      password: 'asdfqwer',
+      password: 'asdfqwer'
     };
 
     // Execute
@@ -59,7 +59,7 @@ describe('UserService', function() {
   it('Set user state', function(done) {
     var userInput = {
       email: 'moose@test.com',
-      password: 'asdfqwer',
+      password: 'asdfqwer'
     };
     UserService.createNewUser(userInput, function() {
       User.findOne({email: 'moose@test.com'}).exec(function(err, user) {

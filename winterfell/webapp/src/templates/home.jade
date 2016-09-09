@@ -4,11 +4,11 @@
     div.banner-overlay
       div.headline-wrapper.row(ng-show="hasIncompleteClaim")
         h3.col-sm-9 Continue your previous claim
-        a(href="#/claim/select-forms")
+        a(ui-sref="root.claimselect")
           button.col-sm-3 Continue claim
       div.headline-wrapper.row(ng-show="!hasIncompleteClaim")
         h3.col-sm-9 Get the benefits that you deserve
-        a(href="#/claim/start")
+        a(ui-sref="root.claimstart")
           button.col-sm-3 Start a claim
 
   a.home-link.claim

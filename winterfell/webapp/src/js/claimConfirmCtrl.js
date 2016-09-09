@@ -1,23 +1,21 @@
 var app = angular.module('vetafiApp');
-app.controller('claimConfirmCtrl', ['$scope', '$location', 'net', 'claimService',
-  function($scope, $location, net, claimService) {
-    $scope.onClickBack = function() {
-      $location.path('/claim/select-forms');
-    };
+app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '$stateParams',
+  function($scope, $location, net, claimService, $stateParams) {
+    $scope.claimId = $stateParams.claimId;
 
     $scope.onClickConfirm = function() {
       var claim = claimService.getIncompleteClaim();
       if (!_.isEmpty(claim)) {
-        net.submitClaim(claim.id).then(function(resp) {
+        net.submitClaim($stateParams.claimId).then(function(resp) {
           // todo: set claim state or re-fetch all user claims?
           if (resp) {
-            $location.path("/claim/submitted");
+            $state.transitionTo("root.claimsubmit", {claimId: $stateParams.claimId});
           } else {
-            $location.path("/claim/submitted").search({error: 'missing'});
+            $state.transitionTo("root.claimsubmit", {claimId: $stateParams.claimId, error: 'missing'});
           }
         });
       } else {
-        $location.path("/claim/submitted").search({error: 'unknown'});
+        $state.transitionTo("root.claimsubmit", {claimId: $stateParams.claimId, error: 'unknown'});
       }
     };
   }
