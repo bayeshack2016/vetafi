@@ -45,7 +45,7 @@ module.exports = function (app) {
   });
 
   app.post('/claims/create', auth.authenticatedOr404, function (req, res) {
-    console.log('[createClaim] request received for ' + JSON.stringify(req.body));
+    console.log('[createClaim] request received for ' + req.session.userId);
     var callback = function (err, claim) {
       if (claim) {
         res.status(http.CREATED).send({claim: claim});
@@ -54,9 +54,10 @@ module.exports = function (app) {
       }
     };
 
+
     User.findById(req.session.userId).exec(function (userErr, user) {
       if (user) {
-        ClaimService.findIncompleteClaimOrCreate(user.id, callback);
+        ClaimService.findIncompleteClaimOrCreate(user._id, callback);
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       }

@@ -56,7 +56,7 @@ gulp.task('libs', function () {
       "src/libs/bootstrap.js",
       "src/libs/lodash.js",
       "src/libs/angular.min.js",
-      "src/libs/angular-route.min.js",
+      "src/libs/angular-ui-router.js",
       "src/libs/ui-bootstrap-tpls-2.1.3.js",
       "src/libs/signature_pad.js",
       "src/libs/signature-pad-angular.js",

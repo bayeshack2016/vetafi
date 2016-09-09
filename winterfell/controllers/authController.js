@@ -85,7 +85,7 @@ module.exports = function (app) {
     req.session.destroy(function (err) {
         if(err) {
             console.log(err);
-            res.status(http.INTERNAL_SERVER_ERROR);
+            res.sendStatus(http.INTERNAL_SERVER_ERROR);
         } else {
             res.redirect('/');
         }

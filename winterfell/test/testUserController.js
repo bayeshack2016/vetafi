@@ -34,27 +34,33 @@ describe('UserController', function() {
       server.close();
   });
 
-  it('Get user endpoint - user dne', function(done) {
+  it('Get user endpoint - 404 if not authed', function(done) {
     testSession
-        .get('/user/asdf')
+        .get('/user')
         .expect(http.NOT_FOUND, done);
+  });
+
+  it('Delete user endpoint - 404 if not authed', function(done) {
+    testSession
+      .del('/user')
+      .expect(http.NOT_FOUND, done);
+  });
+
+  it('should sign in', function (done) {
+    testSession.post('/auth/login')
+      .send({email: targetUser.email, password: targetUser.password})
+      .expect(200, done);
   });
 
   it('Get user endpoint - success', function(done) {
     testSession
-        .get('/user/' + targetUser.externalId)
+        .get('/user')
         .expect(http.OK, done);
-  });
-
-  it('Delete user endpoint - user dne', function(done) {
-    testSession
-        .del('/user/asdf')
-        .expect(http.NOT_FOUND, done);
   });
 
   it('Delete user endpoint - success', function(done) {
     testSession
-        .del('/user/' + targetUser.externalId)
+        .del('/user')
         .expect(http.OK, done);
   });
 

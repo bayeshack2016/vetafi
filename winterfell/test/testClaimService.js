@@ -38,7 +38,7 @@ describe('ClaimService', function() {
     existingClaim.save(function(err, claim) {
       ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
         Boolean(err).should.equal(false);
-        Boolean(claim).should.equal(false);
+        Boolean(claim).should.equal(true);
         done();
       });
     });

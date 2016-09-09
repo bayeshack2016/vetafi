@@ -10,13 +10,13 @@ function ClaimService(app) {
 module.exports = ClaimService;
 module.exports.findIncompleteClaimOrCreate = function(userId, callback) {
   return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, fileClaim) {
-    if (_.isEmpty(fileClaim)) {
-      return Claim.quickCreate(userId, callback);
+    if (err) {
+      callback(err, null);
+    } else if (_.isEmpty(fileClaim)) {
+      Claim.quickCreate(userId, callback);
+    } else {
+      callback(null, fileClaim)
     }
-    if (_.isFunction(callback)) {
-      callback();
-    }
-    return null;
   });
 };
 

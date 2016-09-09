@@ -1,4 +1,4 @@
-div(ng-controller="formCtrl")
+div
 
     form(ng-submit="onSubmit()" name="form")
         formly-form(model="model" fields="fields" options="options" form="form")
@@ -12,6 +12,6 @@ div(ng-controller="formCtrl")
         | Accept
     button(ng-click="render()")
         | Download
-    button(ng=click="save()")
+    button(ng-click="save()")
         | Save
 

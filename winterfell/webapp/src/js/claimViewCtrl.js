@@ -1,8 +1,8 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('claimViewCtrl', ['$scope', '$location', 'claimService', 'net', 'ngDialog',
-  function($scope, $location, claimService, net) {
-    $scope.claimId = $location.path().substring(7);
+app.controller('claimViewCtrl', ['$scope', '$stateParams', 'claimService', 'net', 'ngDialog',
+  function($scope, $stateParams, claimService, net) {
+    $scope.claimId = $stateParams.claimId;
     $scope.claim = {};
 
     function updateClaim(claim) {

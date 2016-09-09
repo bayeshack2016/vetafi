@@ -4,56 +4,126 @@
 'use strict';
 
 var app = angular.module('vetafiApp', [
-  'ngRoute',
   'angular-click-outside',
-  'ngDialog',
   'signature',
   'formly',
   'formlyBootstrap',
   'angular-momentjs',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'ui.router'
 ]);
 
 /**
  * Configure routes
  */
-app.config(function ($routeProvider) {
-  $routeProvider.when("/", {
-    templateUrl: "templates/home.html"
-  }).when("/faq", {
-    templateUrl: "templates/faq.html"
-  })
+app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-    // Profile Pages
-    .when("/profile", {
-      templateUrl: "templates/profile.html"
-    }).when("/profile/:subPage", {
-      templateUrl: "templates/profile.html"
-    })
+  $stateProvider.state({
+    name: 'root',
+    url: '/app',
+    abstract: true,
+    templateUrl: 'templates/root.html',
+    controller: 'headerCtrl',
+    resolve: {
+      user: ['Profile', function(Profile) {
+        return Profile.resolveUser();
+      }]
+    }
+  });
 
-    // File Claims Pages
-    .when("/tos", {
-      templateUrl: "templates/tos.html"
-    }).when("/claim/start", {
-      templateUrl: "templates/claimStart.html"
-    }).when("/claim/:claimId/select-forms", {
-      templateUrl: "templates/claimSelectForms.html"
-    }).when("/claim/confirm", {
-      templateUrl: "templates/claimConfirm.html"
-    }).when("/claim/submitted", {
-      templateUrl: "templates/claimSubmitted.html"
-    }).when("claim/form/:formId", {
-      template: "<div>Some Form</div>" // replace to claim/form/:formId when it's ready
-    }).when("/claim/:claimId", {
-      templateUrl: "templates/claimView.html"
-    })
+  $urlRouterProvider.otherwise('/app');
 
-    .when("/claim/:claimId/form/:formId", {
-      templateUrl: "templates/form.html"
-    })
+  // Home
+  $stateProvider.state({
+    name: 'root.home',
+    url: '',
+    templateUrl: 'templates/home.html',
+    controller: 'homeCtrl'
+  });
 
-    // Otherwise
-    .otherwise({
-      redirectTo: '/'
-    });
-});
+  // FAQ
+  $stateProvider.state({
+    name: 'root.faq',
+    url: '/faq',
+    templateUrl: 'templates/faq.html',
+    controller: 'faqCtrl'
+  });
+
+  // Settings
+  $stateProvider.state({
+    name: 'root.profile',
+    url: '/profile',
+    templateUrl: 'templates/profile.html',
+    controller: 'profileCtrl',
+    abstract: true
+  });
+
+  $stateProvider.state({
+    name: 'root.profile.military',
+    url: '/military',
+    templateUrl: 'templates/profile/military.html'
+  });
+
+  $stateProvider.state({
+    name: 'root.profile.claims',
+    url: '/claims',
+    templateUrl: 'templates/profile/claims.html'
+  });
+
+  $stateProvider.state({
+    name: 'root.profile.settings',
+    url: '/settings',
+    templateUrl: 'templates/profile/settings.html'
+  });
+
+  // TOS
+  $stateProvider.state({
+    name: 'root.tos',
+    url: '/tos',
+    templateUrl: 'templates/tos.html',
+    controller: 'tosCtrl'
+  });
+
+  // Claims
+  $stateProvider.state({
+    name: 'root.claimstart',
+    url: '/claim/start',
+    templateUrl: 'templates/claimStart.html',
+    controller: 'claimStartCtrl'
+  });
+
+  $stateProvider.state({
+    name: 'root.claimselect',
+    url: '/claim/{claimId}/select-forms',
+    templateUrl: 'templates/claimSelectForms.html',
+    controller: 'claimSelectFormsCtrl'
+  });
+
+  $stateProvider.state({
+    name: 'root.claimconfirm',
+    url: '/claim/{claimId}/confirm',
+    templateUrl: 'templates/claimConfirm.html',
+    controller: 'claimConfirmCtrl'
+  });
+
+  $stateProvider.state({
+    name: 'root.claimsubmit',
+    url: '/claim/{claimId}/submit',
+    templateUrl: 'templates/claimSubmitted.html',
+    controller: 'claimSubmittedCtrl'
+  });
+
+  $stateProvider.state({
+    name: 'root.claimview',
+    url: '/claim/{claimId}',
+    templateUrl: 'templates/claimView.html',
+    controller: 'claimViewCtrl'
+  });
+
+  $stateProvider.state({
+    name: 'root.form',
+    url: '/claim/{claimId}/form/{formId}',
+    templateUrl: 'templates/form.html',
+    controller: 'formCtrl'
+  });
+}]);

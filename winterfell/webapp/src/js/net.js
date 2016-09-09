@@ -43,10 +43,6 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     return $http.delete(url);
   };
 
-  var getSessionUserId = function() {
-    return sessionStorageHelper.getPair(vfiConstants.keyUserId);
-  };
-
   return {
     login: function (email, password) {
       var data = {
@@ -67,12 +63,10 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
     // User
     getUserInfo: function() {
-      var userId = getSessionUserId();
-      return httpGet("/user/" + userId);
+      return httpGet("/user");
     },
     deleteUserAccount: function() {
-      var userId = getSessionUserId();
-      return httpDelete("/user/" + userId);
+      return httpDelete("/user");
     },
     getAuthIdMeUrl: function() {
       return '/auth/idme';

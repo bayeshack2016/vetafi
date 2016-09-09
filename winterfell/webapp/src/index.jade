@@ -11,27 +11,4 @@ html(lang="en")
 		script(type='text/javascript', src='js/xhrEnv.js')
 
 	body(ng-app="vetafiApp").vfi-body-style
-		div#header
-			div#header-content(ng-controller="headerCtrl")
-				a.vfi-header-logo-wrapper(href="#/")
-					img.vfi-header-logo-img(src='../icons/logo.png')
-					h1.vfi-header-logo Vetafi
-				div.vfi-header-links
-
-					// If not signed in
-					a(href='/signup' ng-if='!isSignedIn')
-						h3 Sign Up
-						.vfi-underline-border
-					a(href='/login' ng-if='!isSignedIn')
-						h3 Log In
-						div.vfi-underline-border
-
-					// If signed in
-					div.vfi-menu-wrapper(ng-if="isSignedIn")
-						button.vfi-menu-btn(ng-click="onToggleMenu()")
-							div.vfi-menu-icon
-						ul.vfi-menu-list(ng-class="{'vfi-show':menuToggled}" click-outside="closeThisMenu()" outside-if-not="vfi-menu-btn")
-							li(ng-click="onClickProfileOption()") My Profile
-							li(ng-click="onClickLogoutOption()") Log out
-
-		div.vfi-main-view-wrapper(ng-view)
+		ui-view
