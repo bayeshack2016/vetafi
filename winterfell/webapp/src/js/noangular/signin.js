@@ -33,15 +33,27 @@ function validateInputs(email, password, confirmPassword) {
 }
 
 function displayError(msg) {
-  $('.vfi-error-msg').text(msg);
+  $('.error-msg').text(msg);
 }
 
 $(document).ready(function(){
-  $('#signup-view .vfi-submit-btn').click(function(e) {
+  $('.email-btn').click(function(e) {
     e.preventDefault();
-    var email = $('.vfi-input-email').val();
-    var password = $('.vfi-input-password.vfi-first-pwd').val();
-    var confirmPwd = $('.vfi-input-password.vfi-confirm').val();
+    $('.options').addClass('vfi-hide');
+    $('.inputs').addClass('vfi-show');
+  });
+
+  $('.back-btn').click(function(e) {
+    e.preventDefault();
+    $('.options').removeClass('vfi-hide');
+    $('.inputs').removeClass('vfi-show');
+  });
+
+  $('#signup-view .submit-btn').click(function(e) {
+    e.preventDefault();
+    var email = $('input.email').val();
+    var password = $('input.pwd').val();
+    var confirmPwd = $('input.confirm-pwd').val();
 
     // Check inputs & display error if there is one.
     if (!validateInputs(email, password, confirmPwd)) {
@@ -70,10 +82,10 @@ $(document).ready(function(){
   });
 
 
-  $('#login-view .vfi-submit-btn').click(function(e) {
+  $('#login-view .submit-btn').click(function(e) {
     e.preventDefault();
-    var email = $('.vfi-input-email').val();
-    var password = $('.vfi-input-password').val();
+    var email = $('input.email').val();
+    var password = $('input.pwd').val();
 
     // Check inputs & display error if there is one.
     if (!validateInputs(email, password)) {

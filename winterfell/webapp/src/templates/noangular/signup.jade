@@ -8,21 +8,35 @@ html(lang="en")
     script(type='text/javascript', src='js/signin.js')
 
   body#signup-view
-    #bg
-      #bg-overlay
+    div.bg-overlay
+    div.viewer
+      div.pic-section
+      div.interact-section
+        img.logo(src='../icons/Vetafi-black.png')
 
-      #view-wrapper
-        h1.vfi-heading Vetafi
-        h2.vfi-subheading  Lorem ipsum dolor sit amet consectetur
+        div.carousel
+          div.screen.options
+            button.fb-btn
+              div.icon-container
+                div.fb-icon
+              div.txt-container Signup with Facebook
+            button.idme-btn
+              div.icon-container
+                div.idme-icon
+              div.txt-container Signup with Id.Me
 
-        #signup-wrapper
-          h3 Sign up for an account
-          form.vfi-form-wrapper
-            input.vfi-input-email(placeholder="Email", type="text")
-            input.vfi-input-password.vfi-first-pwd(placeholder="Password", type="password")
-            input.vfi-input-password.vfi-confirm(placeholder="Confirm Password", type="password")
-            button.vfi-submit-btn(type="submit")
-              .vfi-progress
-              .vfi-txt SIGN UP
-            .vfi-error-msg
-    #footer
+            p.divider - OR -
+
+            button.email-btn
+              div.icon-container
+                div.email-icon
+              div.txt-container Signup with your email
+
+          div.screen.inputs
+            input.email(placeholder='Email Address', type='text')
+            input.pwd(placeholder='Password', type='password')
+            input.confirm-pwd(placeholder='Confirm Password', type='password')
+            button.submit-btn SIGN UP
+            a(href="/login") Already have an account?
+            p.error-msg
+            button.back-btn Back

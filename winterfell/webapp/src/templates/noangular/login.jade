@@ -3,25 +3,44 @@ html(lang="en")
   head
     meta(charset='utf-8')
     title=Vetafi
+    link(rel='stylesheet', href='css/libs.css')
     link(rel='stylesheet', href='css/main.css')
     script(type='text/javascript', src='libs/libs.js')
     script(type='text/javascript', src='js/signin.js')
 
   body#login-view
-    #bg
-      #bg-overlay
+    div.bg-overlay
+    div.viewer
+      div.pic-section
+      div.interact-section
+        img.logo(src='../icons/Vetafi-black.png')
 
-      #view-wrapper
-        h1.vfi-heading Vetafi
-        h2.vfi-subheading  Lorem ipsum dolor sit amet consectetur
+        // Carousel can have multiple screens
+        div.carousel
 
-        #login-wrapper
-          h3 Log into your account
-          form.vfi-form-wrapper
-            input.vfi-input-email(placeholder="Email", type="text")
-            input.vfi-input-password(placeholder="Password", type="password")
-            button.vfi-submit-btn(type="submit")
-              .vfi-progress
-              .vfi-txt LOG IN
-            .vfi-error-msg
-    #footer
+          div.screen.options
+            button.fb-btn
+              div.icon-container
+                div.fb-icon
+              div.txt-container Login with Facebook
+            button.idme-btn
+              div.icon-container
+                div.idme-icon
+              div.txt-container Login with Id.Me
+
+            p.divider - OR -
+
+            button.email-btn
+              div.icon-container
+                div.email-icon
+              div.txt-container Login with your email
+
+          div.screen.inputs
+            input.email(placeholder='Email Address', type='text')
+            input.pwd(placeholder='Password', type='password')
+            button.submit-btn LOG IN
+            a Forgot password?
+            a Forgot email?
+            a(href="/signup") Need an account?
+            p.error-msg
+            button.back-btn Back
