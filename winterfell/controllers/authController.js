@@ -59,6 +59,8 @@ module.exports = function (app) {
               }
               req.login(user, function(err) {
                 if (err) { return next(err); }
+                req.session.key = req.body.email;
+                req.session.userId = req.user._id;
                 return res.status(http.OK).send({redirect: '/'});
               });
             }
