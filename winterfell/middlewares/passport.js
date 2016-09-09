@@ -61,7 +61,7 @@ module.exports = function (app) {
         tokenURL: 'https://api.id.me/oauth/token',
         clientID: idmeClientId,
         clientSecret: idmeSecretId,
-        callbackURL: '/auth/idme/callback'
+        callbackURL: app.baseUrl + '/auth/idme/callback'
       },
       function(accessToken, refreshToken, profile, done) {
         request.get('https://api.id.me/api/public/v2/attributes.json?access_token=' + accessToken, function(accessError, accessResponse, accessBody) {

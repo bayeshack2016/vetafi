@@ -9,6 +9,10 @@ module.exports.environment = {
     LOCAL: 'local',
     PROD: 'production'
 };
+module.exports.baseUrl = {
+    LOCAL: 'http://localhost:3999',
+    PROD: 'https://www.vetafi.org'
+};
 
 module.exports.KEY_LOB_API = 'lobApiKey';
 module.exports.KEY_IDME_CLIENT_ID = 'idmeClientId';
