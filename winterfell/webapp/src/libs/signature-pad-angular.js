@@ -79,10 +79,10 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
         scope.onResize = function() {
           var canvas = element.find('canvas')[0];
           var ratio =  Math.max($window.devicePixelRatio || 1, 1);
-          canvas.width = canvas.offsetWidth * ratio;
-          canvas.height = canvas.offsetHeight * ratio;
+          console.log(element);
+          canvas.width = element.clientWidth * ratio;
+          canvas.height = element.clientHeight * ratio;
           canvas.getContext("2d").scale(ratio, ratio);
-
           // reset dataurl
           scope.dataurl = null;
         };
