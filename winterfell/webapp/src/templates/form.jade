@@ -1,4 +1,7 @@
-div
+div.form-wrapper
+    h2.form-title {{formId}}
+
+    hr
 
     form(ng-submit="onSubmit()" name="form")
         formly-form(model="model" fields="fields" options="options" form="form")
@@ -15,3 +18,9 @@ div
     button(ng-click="save()")
         | Save
 
+div.floating-progress
+    div.row
+        div.col-xs-9
+            uib-progressbar(animate="false" value="getProgress()")
+        div.col-xs-3.floating-progress-text
+            span.progress-numbers {{answered}} / {{answerable}}
