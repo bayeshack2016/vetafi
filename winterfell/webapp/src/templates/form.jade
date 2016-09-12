@@ -5,18 +5,25 @@ div.form-wrapper
 
     form(ng-submit="onSubmit()" name="form")
         formly-form(model="model" fields="fields" options="options" form="form")
+
+    div.container.nopadding
+
+        label(for="signature-form-row")
+            | Sign below
+        div.row(id="signature-form-row")
+            div.col-xs-6.nopadding
+                signature-pad(dataurl="dataurl" clear="clear")
+            div.col-xs-1.nopadding
+                button(ng-click="clear()")
+                    | Clear Signature
+
+        div.row.form-submit-button-group
             button(type="submit")
                 | Submit
-
-    signature-pad(dataurl="dataurl" accept="accept" clear="clear")
-    button(ng-click="clear()")
-        | Clear
-    button(ng-click="signature = accept()")
-        | Accept
-    button(ng-click="render()")
-        | Download
-    button(ng-click="save()")
-        | Save
+            button(ng-click="render()")
+                | Download
+            button(ng-click="save()")
+                | Save
 
 div.floating-progress
     div.row

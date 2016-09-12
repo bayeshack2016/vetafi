@@ -15,10 +15,12 @@ app.controller('formCtrl',
     function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $stateParams, userValues) {
       $scope.formId = $stateParams.formId;
 
-      $scope.$watch('signature', function (newVal, oldVal) {
+      $scope.$watch('dataurl', function (newVal, oldVal) {
         console.log(newVal, oldVal);
         if (newVal) {
-          $scope.model['signature'] = newVal.dataUrl;
+          $scope.model.signature = newVal;
+        } else {
+          delete $scope.model.signature;
         }
       });
 
