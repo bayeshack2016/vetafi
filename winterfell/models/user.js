@@ -2,8 +2,15 @@
 var _ = require('lodash');
 var uuid = require('uuid');
 var mongoose = require('mongoose');
-var SocialUser = require('./socialUser');
 var Schema = mongoose.Schema;
+
+var socialUserSchema = new Schema({
+  type: String,                   // SocialUser.Type
+  oauthToken: String,             // Token provided by oauth
+  state: String,                  // SocialUser.State
+  stateUpdatedAt: Date,
+  createdAt: Date                 // When social was linked to this user
+});
 
 var UserSchema = new Schema({
   firstname: String,                  // First name
@@ -14,10 +21,7 @@ var UserSchema = new Schema({
   password: String,                   // Encrypted password
   state: String,                      // User.State
   stateUpdatedAt: Date,               // Date of last state modification
-  socialUsers:[{
-      type: Schema.Types.ObjectId,
-      ref: 'SocialUser'
-  }],
+  socialUsers: [socialUserSchema],
   admin: Boolean,                     // Is user an admin?
   test: Boolean,                       // Is user a test account?
 
@@ -60,8 +64,9 @@ UserSchema.statics.quickCreate = function(user, callback) {
     externalId: uuid.v4(),
     state: User.State.ACTIVE,
     stateUpdatedAt: now,
-    admin: user.admin,
-    test: false
+    socialUsers: [],
+    admin: user.admin || false,
+    test: user.test || false
   }, callback);
 };
 

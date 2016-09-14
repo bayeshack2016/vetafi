@@ -23,5 +23,9 @@ module.exports.AUTH_MISMATCH = "auth_mismatch";
 module.exports.INVALID_EMAIL = "invalid_email";
 module.exports.INVALID_PASSWORD = "invalid_password";
 
+// Social Auth related errors
+module.exports.BAD_SOCIAL_AUTH = "bad_social_auth";
+module.exports.SOCIAL_ALREADY_USED = "social_already_used";
+
 // Input errors
 module.exports.INVALID_INPUT = "invalid_input";

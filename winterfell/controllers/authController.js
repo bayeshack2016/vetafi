@@ -1,6 +1,6 @@
 var _ = require('lodash');
 var passport = require('passport');
-var requestify = require('requestify');
+var constants = require('./../utils/constants');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
@@ -92,25 +92,24 @@ module.exports = function (app) {
     });
   });
 
-  // Endpoint for routing idme authorization
-  // https://api.id.me/oauth/authorize?...
-  app.get('/auth/link/idme', function(req, res) {
-    console.log('[authLinkIdMe] link request with ' + JSON.stringify(req.params));
-    var code = req.params.code;
-    if (code) {
-      requestify.post('https://api.id.me/oauth/token', {
-        code: code,
-        client_id: '71ffbd3f04241a56e63fa6a960fbb15e',
-        client_secret: 'some_secret_client_id',
-        redirect_uri: 'www.vetafi.org/',
-        grant_type: 'authorization_code'
-      }).then(function(socialResp) {
-        console.log('[authLinkIdMe] idme linked! ' + JSON.stringify(socialResp));
-        res.sendStatus(http.OK);
-      });
-    } else {
-      res.sendStatus(http.BAD_REQUEST);
+
+  /*
+   * OAuth Endpoints
+   */
+
+  // Id.Me oauth endpoint
+  app.get('/auth/idme',
+    passport.authenticate('idme', {scope: 'military'})
+  );
+
+  // Id.Me oauth callback endpoint
+  // If authorization was granted, the user will be logged in.
+  // Otherwise, authentication has failed.
+  app.get('/auth/idme/callback',
+    passport.authenticate('idme', {
+      successRedirect: '/',
+      failureRedirect: '/login'
     }
-  });
+  ));
 
 };

@@ -16,6 +16,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var fs = require('fs');
 
 var release = args.release ? true : false;
+if (release) {
+  console.log('Building in release!');
+}
 
 gulp.task('clean', function () {
   return del.sync('build');
@@ -69,14 +72,22 @@ gulp.task('libs', function () {
 });
 
 gulp.task('other-js', function () {
-  return gulp.src('src/js/noangular/**/*.js')
+  return gulp.src('src/js/noangular/*.js')
     .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
 });
 
-gulp.task('js', function () {
+gulp.task('xhrEnv', function () {
+  return gulpif(release,
+      gulp.src('src/js/xhrEnv/xhrEnvRelease.js'),
+      gulp.src('src/js/xhrEnv/xhrEnvDev.js'))
+    .pipe(concat('xhrEnv.js'))
+    .pipe(gulp.dest('build/js'));
+});
+
+gulp.task('js', ['xhrEnv'], function () {
   return gulp.src('src/js/*.js')
     .pipe(concat('main.js'))
     .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
@@ -104,11 +115,6 @@ gulp.task('icons', function () {
     .pipe(gulp.dest('build/icons'))
 });
 
-gulp.task('xhrEnv', function () {
-  return gulpif(release, gulp.src('src/js/xhrEnvRelease.js'), gulp.src('src/js/xhrEnvDev.js'))
-    .pipe(gulp.dest('build/js'));
-});
-
 gulp.task('initBrowserSync', ['build'], function () {
   browserSync.init({
     server: {
@@ -118,7 +124,7 @@ gulp.task('initBrowserSync', ['build'], function () {
 });
 
 gulp.task('watch', ['build', 'initBrowserSync'], function () {
-  gulp.watch('src/js/**/*.js', ['js', 'other-js']);
+  gulp.watch('src/js/*.js', ['js', 'other-js']);
   gulp.watch('src/styles/**/*.styl', ['stylus']);
   gulp.watch('src/**/*.jade', ['jade']);
 });

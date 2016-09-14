@@ -1,15 +1,6 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
-  var baseUrl = xhrEnv.baseServerUrl;
-
-  // social properties
-  var socialIdMe = {
-    clientId: '71ffbd3f04241a56e63fa6a960fbb15e',
-    redirectServerUri: baseUrl + "/auth/link/idme",
-    responseType: 'code',
-    scope: 'military'
-  };
 
   var httpGet = function (url, data) {
     // For Front-end only Development
@@ -77,18 +68,8 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     deleteUserAccount: function() {
       return httpDelete("/user");
     },
-    linkIdMe: function() {
-      var url = 'https://api.id.me/oauth/authorize';
-      url += '?client_id=' + encodeURIComponent(socialIdMe.clientId);
-      url += '&redirect_uri=' + encodeURIComponent(socialIdMe.redirectServerUri);
-      url += '&response_type=' + encodeURIComponent(socialIdMe.responseType);
-      url += '&scope=' + encodeURIComponent(socialIdMe.scope);
-
-      return $http({
-        url: url,
-        method: "JSONP",
-        headers: { 'Content-Type': 'application/json' },
-      });
+    getAuthIdMeUrl: function() {
+      return '/auth/idme';
     },
 
     // Claims

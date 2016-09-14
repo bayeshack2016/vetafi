@@ -4,7 +4,8 @@ var session = require('express-session');
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
-var ENVIRONMENT = require('./utils/constants').environment;
+var Constants = require('./utils/constants');
+var ENVIRONMENT = Constants.environment;
 var documentRenderingConfig = require('./config/documentRendering');
 
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
@@ -15,6 +16,8 @@ app.set('secretsFile', require('./config/biscuit')[environment]);
 var biscuit = new Biscuit(app);
 
 app.environment = environment;
+app.baseUrl = constants.baseUrl[app.environment];
+console.log('environment: ' + JSON.stringify(app.environment));
 
 function loadIntoBuild (app, targetDir) {
   var normalizedPath = path.join(__dirname, targetDir);
@@ -38,14 +41,20 @@ app.get('/', function(req, resp) {
 // Connect to a mongodb server using mongoose
 require('./config/mongoose')(environment);
 
-// Setup lob api
-biscuit.get(environment + '::lob-api-key', function(err, secret) {
-  if (err) {
-    throw err;
-  }
+// Setup biscuit keys
+function setupBiscuitKey(keyName) {
+  var yamlKey = Constants.biscuitKeys[keyName];
+  biscuit.get(environment + '::' + yamlKey, function(err, secret) {
+    if (err) {
+      throw err;
+    }
+    app.set(keyName, secret);
+  });
+}
 
-  app.set('lobApiKey', secret);
-});
+setupBiscuitKey(Constants.KEY_LOB_API);
+setupBiscuitKey(Constants.KEY_IDME_CLIENT_ID);
+setupBiscuitKey(Constants.KEY_IDME_SECRET_ID);
 
 // Set address of document rendering microservice
 app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
