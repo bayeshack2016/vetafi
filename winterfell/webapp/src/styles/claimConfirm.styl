@@ -1,134 +1,26 @@
 @import "standards.styl"
 
 #claim-confirm-view
-  width: 100%
+  width: maxLayoutWidthPx
+  margin: largeSpacing auto
+  padding: largeSpacing megaSpacing
+  box-sizing: border-box
   background-color: colorWhite
-  margin: 0
 
-#claim-confirm-wrapper
-  width: 80%
-  max-width: maxLayoutWidthPx
-  margin: 0 auto
-  padding-top: largeSpacing
-  padding-bottom: largeSpacing
-
-  & .header
-    margin-bottom: smallSpacing
-
-  & .section
-    margin-bottom: megaSpacing
-
-    & h4
-      display: inline-block
-      color: colorPrimaryDarkBlue
-
-    &.intro
-    &.basic-info
-      margin-bottom: largeSpacing
-
-      & .basic-row
-        width: 50%
-
-        @media screen and (max-width: maxWindowWidthPx)
-          width: 100%
-
-        & span:last-child
-          float: right
-
-      & .confirm-btn
-        float: right
-
-        @media screen and (max-width: maxWindowWidthPx)
-          float: left
-
-  & .section-header
-    width: 100%
-    padding-bottom: 6px
-    border-bottom: 2px solid colorLightGray
-
-  & .row-wrapper
-    padding-top: miniSpacing
-    padding-bottom: miniSpacing
-    border-bottom: 2px solid colorLightGray
-
-  & .mailing-list
-  & .email-list
-  & .forms-list
-    & div:first-child
-      padding-left: 0px
-
-    & .row-wrapper
-      padding: smallSpacing 0
-
-      @media screen and (max-width: maxWindowWidthPx)
-        padding: mediumSpacing 0
-        text-align: center
-
-  & .mailing-list
-  & .email-list
-    & .title
-      margin-top: 9px
-      @media screen and (max-width: maxWindowWidthPx)
-        margin-top: 0px
-
-    & button
-      float: right
-      width: 100px
-
-      @media screen and (max-width: maxWindowWidthPx)
-        float: none
-        margin-top: miniSpacing
-
-    & .add-row
-      text-align: center
-      border-bottom: none
-
-    & .add-btn
-      float: none
-      width: initial
-      background-color: transparent
-      color: colorPrimaryBlue
-      border: 2px solid colorPrimaryBlue
-
-  & .forms-list
-    & .section-header button
-      position: relative
-      top: -24px
-      float: right
-
-  & .edit-icon
-    display: inline-block
-    width: 24px
-    height: 24px
-    margin-right: miniSpacing
-    background: url('../icons/edit-white.svg')
-    background-size: cover
-    background-repeat: no-repeat
-    vertical-align: top
-
-  & .add-icon
-    display: inline-block
-    width: 24px
-    height: 24px
-    margin-right: miniSpacing
-    background: url('../icons/add-blue.svg')
-    background-size: cover
-    background-repeat: no-repeat
-    vertical-align: top
+  & .vfi-divider
+    margin: largeSpacing 0
+    border-bottom: 1px solid colorLightGray
 
   & .button-wrapper
-    position: relative
     width: 100%
     height: largeSpacing
-    margin-bottom: miniSpacing
+    margin-top: mediumSpacing
 
-    & .back-btn
-      float: left
-      background-color: colorLightGray
+  & .vfi-back
+    float: left
+    background-color: colorLightGray
 
-    & .confirm-btn
-      float: right
-
-  & .confirm-btn
+  & .vfi-confirm
+    float: right
     background-color: colorYellow
     color: colorBlack

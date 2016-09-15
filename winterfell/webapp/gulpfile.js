@@ -29,7 +29,7 @@ gulp.task('css-libs', function() {
     .pipe(concat('libs.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream())
-    .pipe(gulpif(release, sourcemaps.write()));
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('stylus', function () {
@@ -38,7 +38,7 @@ gulp.task('stylus', function () {
     .pipe(concat('main.css'))
     .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream())
-    .pipe(gulpif(release, sourcemaps.write()));
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('jade', function () {
@@ -46,7 +46,7 @@ gulp.task('jade', function () {
     .pipe(jade())
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream())
-    .pipe(gulpif(release, sourcemaps.write()));
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('libs', function () {
@@ -68,7 +68,7 @@ gulp.task('libs', function () {
     ], {base: './'}))
     .pipe(concat('libs.js'))
     .pipe(gulp.dest('build/libs'))
-    .pipe(gulpif(release, sourcemaps.write()));
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('other-js', function () {
@@ -76,7 +76,7 @@ gulp.task('other-js', function () {
     .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream())
-    .pipe(gulpif(release, sourcemaps.write()));
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('xhrEnv', function () {
@@ -87,13 +87,13 @@ gulp.task('xhrEnv', function () {
     .pipe(gulp.dest('build/js'));
 });
 
-gulp.task('js', function () {
+gulp.task('js', ['xhrEnv'], function () {
   return gulp.src('src/js/*.js')
     .pipe(concat('main.js'))
     .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream())
-    .pipe(gulpif(release, sourcemaps.write()));
+    .pipe(sourcemaps.write());
 });
 
 gulp.task('browserify', ['js'], function () {
