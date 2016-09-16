@@ -32,8 +32,9 @@
           div.title.col-sm-5
             b {{mailingInfo.title}}
           div.address.col-sm-5
+            div.address-line {{mailingInfo.address.sendTo}}
             div.address-line {{mailingInfo.address.line1}} {{mailingInfo.address.line2}}
-            div.address-line {{mailingInfo.address.city}}, {{mailingInfo.address.state}}, {{mailingInfo.address.zip}}
+            div.address-line {{mailingInfo.address.city}}, {{mailingInfo.address.state}}, {{mailingInfo.address.country}} {{mailingInfo.address.zip}}
           button.col-sm-2(ng-click="onClickEditAddress($index)", ng-if="$index > 0")
             div.edit-icon
             | Edit
@@ -48,8 +49,9 @@
         h4 E-mail electronic copies to:
       div.container-fluid
         div.row-wrapper.row(ng-repeat="emailInfo in emailList")
-          div.title.col-sm-10
-            b {{emailInfo.email}}
+          div.name.col-sm-5
+            b {{emailInfo.name}}
+          div.title.col-sm-5 {{emailInfo.email}}
           button.col-sm-2(ng-click="onClickEditEmail($index)")
             div.edit-icon
             | Edit

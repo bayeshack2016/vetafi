@@ -23,8 +23,16 @@
       color: colorPrimaryDarkBlue
 
     &.intro
-    &.basic-info
       margin-bottom: largeSpacing
+
+      & .confirm-btn
+        float: right
+
+        @media screen and (max-width: maxWindowWidthPx)
+          float: left
+
+    &.basic-info
+      margin-bottom: megaSpacing
 
       & .basic-row
         width: 50%
@@ -35,21 +43,15 @@
         & span:last-child
           float: right
 
-      & .confirm-btn
-        float: right
-
-        @media screen and (max-width: maxWindowWidthPx)
-          float: left
-
   & .section-header
     width: 100%
     padding-bottom: 6px
-    border-bottom: 2px solid colorLightGray
+    border-bottom: 2px solid colorLighterGray
 
   & .row-wrapper
     padding-top: miniSpacing
     padding-bottom: miniSpacing
-    border-bottom: 2px solid colorLightGray
+    border-bottom: 2px solid colorLighterGray
 
   & .mailing-list
   & .email-list
@@ -61,7 +63,7 @@
       padding: smallSpacing 0
 
       @media screen and (max-width: maxWindowWidthPx)
-        padding: mediumSpacing 0
+        padding: smallSpacing 0
         text-align: center
 
   & .mailing-list

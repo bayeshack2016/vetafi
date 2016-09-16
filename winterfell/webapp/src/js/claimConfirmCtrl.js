@@ -14,6 +14,7 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '
         line1: 'Somewhere Street',
         city: 'Washington',
         state: 'DC',
+        country: 'USA',
         zip: '20854'
       }
     };
@@ -23,17 +24,35 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '
       {
         title: 'Home',
         address: {
-          line1: '1200 4th Street',
-          line2: 'Apt #219',
+          sendTo: 'Aaron Hsu',
+          line1: '1223 4th Street',
+          line2: 'Apt #211',
           city: 'San Francisco',
           state: 'CA',
+          country: 'USA',
           zip: '94158'
         }
-      }
+      },
+      {
+        title: "Brother's crib",
+        address: {
+          sendTo: 'Austin Hsu',
+          line1: '983 Victory Road',
+          city: 'Rockville',
+          state: 'MD',
+          country: 'USA',
+          zip: '20834'
+        }
+      },
     ];
     $scope.emailList = [
       {
-        email: 'ahsu1230@gmail.com'
+        name: 'Me',
+        email: 'ahsu@gmail.com'
+      },
+      {
+        name: 'Mom',
+        email: 'mom@gmail.com'
       }
     ];
 
@@ -45,29 +64,34 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '
       }
     ];
 
-    $scope.onClickAddAddress = function(index) {
-      return $uibModal.open({
-        template: '<h3>Add Address</h3>'
-      });
+    $scope.onClickAddAddress = function() {
+      return openModifyContactModal('address', $scope.mailingList);
     };
 
     $scope.onClickEditAddress = function(index) {
-      return $uibModal.open({
-        template: '<h3>Edit Address</h3>'
-      });
+      return openModifyContactModal('address', $scope.mailingList, index);
     };
 
     $scope.onClickAddEmail = function() {
-      return $uibModal.open({
-        template: '<h3>Add Email</h3>'
-      });
+      return openModifyContactModal('email', $scope.emailList);
     };
 
-    $scope.onClickEditEmail = function() {
-      return $uibModal.open({
-        template: '<h3>Edit Email</h3>'
-      });
+    $scope.onClickEditEmail = function(index) {
+      return openModifyContactModal('email', $scope.emailList, index);
     };
+
+    function openModifyContactModal(forType, list, index) {
+      $scope.modalData = {
+        forType: forType,
+        list: list,
+        targetIndex: index >= 0 ? index : -1
+      };
+      return $uibModal.open({
+        scope: $scope,
+        controller: 'claimConfirmModifyContactCtrl',
+        templateUrl: 'templates/modals/confirmClaimModifyContact.html'
+      });
+    }
 
     $scope.onClickConfirm = function() {
       var claim = claimService.getIncompleteClaim();
