@@ -1,4 +1,5 @@
 #select-forms-view
+  vfi-breadcrumbs(page="1")
   h2.header-wrapper Select Forms to Fill
   div.vfi-form-card(ng-repeat="(formId, form) in forms", ng-class="{'vfi-required': form.required, 'vfi-completed': form.completed}")
     h3.vfi-form-title {{form.name}}
