@@ -86,13 +86,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
   // Claims
   $stateProvider.state({
-    name: 'root.claimstart',
-    url: '/claim/start',
-    templateUrl: 'templates/claimStart.html',
-    controller: 'claimStartCtrl'
-  });
-
-  $stateProvider.state({
     name: 'root.claimselect',
     url: '/claim/{claimId}/select-forms',
     templateUrl: 'templates/claimSelectForms.html',
