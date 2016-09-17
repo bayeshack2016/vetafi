@@ -1,97 +1,169 @@
 @import "standards.styl"
 
-iconWrapperSize = 36px
-iconSize = 24px
-
 #select-forms-view
-  & .header-wrapper
-    height: megaSpacing
-    line-height: megaSpacing
-    text-align: center
-    background-color: colorPrimaryBlue
-    color: colorWhite
+  width: 100%
+  background-color: colorWhite
 
-  & .footer-wrapper
-    height: (2 * megaSpacing)
-    padding-top: smallSpacing
-    background-color: colorPrimaryDarkBlue
+#select-forms-wrapper
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto
+  padding: largeSpacing 0
 
-    & .vfi-button-wrapper
-      width: maxLayoutWidthPx
-      max-width: maxLayoutWidthPct
-      margin: largeSpacing auto
+  & h3
+    margin-bottom: mediumSpacing
+    color: colorPrimaryBlue
 
-    & .vfi-cancel-btn
+  & h4
+    display: inline-block
+    line-height: 40px
+    color: colorPrimaryBlue
+
+  & .section
+    margin-bottom: largeSpacing
+
+    & .section-header
+      & .progressbar
+        position: relative
+        top: 5px
+        width: 50%
+        height: 25px
+        margin: 0
+        float: right
+
+      & .progress-bar
+        line-height: 25px
+        background-color: colorPrimaryDarkBlue
+
+      & .progress-bar-success
+        background-color: colorLightGreen
+
+  & .form-wrapper
+    padding: smallSpacing 0
+    background-color: colorWhite
+    border-top: 2px solid colorLightGray
+
+    &:last-child
+      border-bottom: 2px solid colorLightGray
+
+    & .form-content
+      display: inline-block
+      width: 70%
+
+      @media screen and (max-width: maxWindowWidthPx)
+        width: 100%
+
+    & .form-buttons
+      display: inline-block
+      width: 30%
+      vertical-align: top
+      text-align: right
+
+      @media screen and (max-width: maxWindowWidthPx)
+        width: 100%
+        text-align: center
+
+      & button
+        display: inline-block
+        width: 150px
+        margin-bottom: smallSpacing
+
+        &:last-child
+          margin-bottom: 0
+
+        &.download-btn
+          background-color: colorLightGreen
+
+        @media screen and (max-width: maxWindowWidthPx)
+          display: inline-block
+          margin: 0 smallSpacing
+
+    & .form-title
+      display: inline-block
+      vertical-align: middle
+
+    & .form-summary
+      margin: smallSpacing 0
+
+    & .state-wrapper
+      display: inline-block
+      position: relative
+      width: 36px
+      height: 36px
+      margin-right: miniSpacing
+      border-radius: 50%
+      background-color: colorLightGray
+      vertical-align: middle
+
+      &.complete
+        background-color: colorLightGreen
+
+    & .state-icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -55%)
+      width: 26px
+      height: 26px
+      background: url('../icons/warning-white.svg')
+      background-repeat: no-repeat
+      background-size: cover
+
+      &.complete
+        transform: translate(-50%, -50%)
+        width: 22px
+        height: 22px
+        background: url('../icons/checkmark-white.svg')
+        background-repeat: no-repeat
+        background-size: cover
+
+    & .edit-icon
+      display: inline-block
+      width: 20px
+      height: 20px
+      margin-right: miniSpacing
+      background: url('../icons/edit-white.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      vertical-align: top
+
+    & .download-icon
+      display: inline-block
+      width: 20px
+      height: 20px
+      margin-right: miniSpacing
+      background: url('../icons/download-white.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      vertical-align: top
+
+  & .button-wrapper
+    & .cancel-btn
       float: left
       background-color: colorLightGray
       color: colorBlack
 
-    & .vfi-finish-btn
+    & .done-btn
       float: right
-      background-color: colorYellow
-      color: colorBlack
-
-.vfi-form-card
-  position: relative
-  width: maxLayoutWidthPx
-  max-width: maxLayoutWidthPct
-  margin: largeSpacing auto
-  padding: mediumSpacing largeSpacing
-  box-sizing: border-box
-  background-color: colorWhite
-  border: 2px solid colorLightGray
-  color: colorBlack
-
-  &.vfi-required
-    border: 2px solid colorRed
-
-  &.vfi-completed
-    border: 2px solid colorLightGreen
-
-  & .vfi-form-title
-    margin-bottom: smallSpacing
-
-  & .vfi-form-description
-    width: "calc(100% - %s)" % iconWrapperSize
-    line-height: 1.5em
-
-  & .vfi-icon-wrapper
-    position: absolute
-    top: mediumSpacing
-    right: largeSpacing
-    width: iconWrapperSize
-    height: iconWrapperSize
-    border-radius: 50%
-    background-color: colorWhite
-    border: 2px solid colorBlack
-
-    &:hover
-      background-color: colorBlack
-
-      & .vfi-next-icon
-        background: url('../icons/next-white.svg')
-        background-size: cover
-
-    &.vfi-completed
-      background-color: colorWhite
-      border: 2px solid colorLightGreen
+      background-color: colorLightGray
+      cursor: initial
 
       &:hover
-        background-color: colorWhite
+        filter: brightness(1)
+        -webkit-filter: brightness(1)
+        -moz-filter: brightness(1)
+        -ms-filter: brightness(1)
 
-  & .vfi-next-icon
-  & .vfi-completed-icon
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: iconSize
-    height: iconSize
+      &.ready
+        background-color: colorYellow
+        color: colorBlack
+        cursor: pointer
 
-  & .vfi-next-icon
-    background: url('../icons/next-black.svg')
-    background-size: cover
+        &.ready:hover
+          filter: brightness(1.2)
+          -webkit-filter: brightness(1.2)
+          -moz-filter: brightness(1.2)
+          -ms-filter: brightness(1.2)
 
-  & .vfi-completed-icon
-    background: url('../icons/checkmark-green.svg')
-    background-size: cover
+    & .clearer
+      clear: both
