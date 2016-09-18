@@ -55,9 +55,6 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
         scope.onResize = function() {
           var canvas = element.find('canvas')[0];
           var ratio =  Math.max($window.devicePixelRatio || 1, 1);
-          console.log($window.devicePixelRatio);
-          console.log(element[0].clientWidth);
-          console.log(element[0].clientHeight);
           canvas.width = element[0].clientWidth * ratio;
           canvas.height = element[0].clientHeight * ratio;
           canvas.getContext("2d").scale(ratio, ratio);
