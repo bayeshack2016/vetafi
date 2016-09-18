@@ -13,31 +13,14 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
     return {
       restrict: 'EA',
       replace: true,
-      template: '<div class="signature" ng-style="{height: height + \'px\', width: width + \'px\'}"><canvas ng-mouseup="updateModel()"></canvas></div>',
+      template: '<div class="signature"><canvas ng-mouseup="updateModel()"></canvas></div>',
       scope: {
-        accept: '=',
         clear: '=',
-        dataurl: '=',
-        height: '@',
-        width: '@'
+        dataurl: '='
       },
       controller: [
         '$scope',
         function ($scope) {
-          $scope.accept = function () {
-            var signature = {};
-
-            if (!$scope.signaturePad.isEmpty()) {
-              signature.dataUrl = $scope.signaturePad.toDataURL();
-              signature.isEmpty = false;
-            } else {
-              signature.dataUrl = EMPTY_IMAGE;
-              signature.isEmpty = true;
-            }
-
-            return signature;
-          };
-
           $scope.updateModel = function () {
             /*
              defer handling mouseup event until $scope.signaturePad handles
@@ -45,8 +28,7 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
              */
             $timeout()
               .then(function () {
-                var result = $scope.accept();
-                $scope.dataurl = result.isEmpty ? undefined : result.dataUrl;
+                $scope.dataurl = $scope.signaturePad.isEmpty() ? undefined : $scope.signaturePad.toDataURL();
               });
           };
 
@@ -73,8 +55,11 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
         scope.onResize = function() {
           var canvas = element.find('canvas')[0];
           var ratio =  Math.max($window.devicePixelRatio || 1, 1);
-          canvas.width = canvas.offsetWidth * ratio;
-          canvas.height = canvas.offsetHeight * ratio;
+          console.log($window.devicePixelRatio);
+          console.log(element[0].clientWidth);
+          console.log(element[0].clientHeight);
+          canvas.width = element[0].clientWidth * ratio;
+          canvas.height = element[0].clientHeight * ratio;
           canvas.getContext("2d").scale(ratio, ratio);
 
           // reset dataurl
