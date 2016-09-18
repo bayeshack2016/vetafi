@@ -1,0 +1,10 @@
+div.vfi-modal#basic-two-button
+  div.header
+    button.close-btn
+      div.close-icon
+    {{title}}
+  div.content {{message}}
+  div.button-wrapper
+    button.cancel-btn(ng-click="onCancel()") {{successText}}
+    button.success-btn(ng-click="onSuccess()") {{cancelText}}
+    div.clearer

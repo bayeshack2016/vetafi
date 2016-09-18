@@ -1,0 +1,35 @@
+@import "../standards.styl"
+
+#basic-one-button
+#basic-two-button
+  & .header
+    position: relative
+    height: 30px
+    line-height: 30px
+    margin-bottom: mediumSpacing
+    border-bottom: 2px solid colorLightGray
+
+    & button
+      position: absolute
+      top: 0
+      right: 0
+      padding: 0
+      background-color: transparent
+
+    & .close-icon
+      width: 24px
+      height: 24px
+      background: url('../icons/cancel.svg')
+      background-repeat: no-repeat
+      background-size: cover
+
+  & .content
+    margin-bottom: mediumSpacing
+
+  & .button-wrapper
+    & .cancel-btn
+      float: left
+    & .success-btn
+      float: right
+    & .clearer
+      clear: both
