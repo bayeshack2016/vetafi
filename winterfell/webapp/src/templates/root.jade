@@ -1,26 +1,25 @@
 div#header
     div#header-content
         a.vfi-header-logo-wrapper(ui-sref="root.home")
-            img.vfi-header-logo-img(src='../icons/logo.png')
-            h1.vfi-header-logo Vetafi
-        div.vfi-header-links
+            img(src="icons/vetafi-logo.svg")
+        div.header-links
             // If not signed in
             a.big-link(href='/signup' ng-if='!isSignedIn')
-                h3 Sign Up
-                .vfi-underline-border
+                h5 Sign Up
+                .underline-border
             a.big-link(href='/login' ng-if='!isSignedIn')
-                h3 Log In
-                div.vfi-underline-border
+                h5 Log In
+                div.underline-border
             // If signed in
-            div.vfi-menu-wrapper(ng-if="isSignedIn")
-                button.vfi-menu-btn(ng-click="onToggleMenu()")
-                    div.vfi-menu-icon
-                ul.vfi-menu-list(ng-class="{'vfi-show':menuToggled}"
+            div.menu-wrapper(ng-if="isSignedIn")
+                button.menu-btn(ng-click="onToggleMenu()")
+                    div.menu-icon
+                ul.menu-list(ng-class="{'vfi-show':menuToggled}"
                 click-outside="closeThisMenu()"
-                outside-if-not="vfi-menu-btn"
+                outside-if-not="menu-btn"
                 ng-click="onToggleMenu()")
                     li(ui-sref="root.profile.military") My Profile
                     a(href="/auth/logout")
                         li Log out
-div.vfi-main-view-wrapper
+div.main-view-wrapper
    ui-view
