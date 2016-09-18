@@ -1,7 +1,66 @@
+.signature-success
+  color: #3c763d
+
+.signature::before
+  content: "X"
+  color: black
+  position: relative
+  top: 28vh
+  left: 5px
+  font-size: 5vh
+
+.nopadding
+  padding: 0 !important
+  margin: 0 !important
+
 .signature
   width: 100%
-  height: 150px
+  height: 33vh
+  border-bottom-style: dotted
+  position: relative
+  background-color: white
 
-  & .canvas
-    width: 100%
-    height: 100%
+  & canvas
+    padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+.form-wrapper
+  margin-left: 10%
+  margin-right: 10%
+
+.form-submit-button-group
+  margin-top: 3vh
+
+.form-title
+  margin-top: 1em
+
+.floating-progress
+  position: fixed
+  min-width: 33vw
+  right: 3vw
+  bottom: 3vh
+  padding: 10px 20px
+  z-index: 999
+  background-color: white
+  border: solid 1px #525252
+  border-radius: 10px
+
+.floating-progress-text
+  text-align: end
+
+.form-name
+  white-space: nowrap
+  margin-right: 20px
+
+.floating-progress
+  & .progress
+    margin-bottom: 0
+  & .form-row
+    margin-bottom: 10px
+
