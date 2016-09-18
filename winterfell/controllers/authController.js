@@ -50,13 +50,19 @@ module.exports = function (app) {
           console.log('[authSignUp] Successfully created user ' + user.externalId);
           var extUserId = user.externalId;
           UserValues.create(
-            {},
+            {userId: user._id},
             function (error, userValues) {
               if (error) {
                 res.sendStatus(http.INTERNAL_SERVER_ERROR);
-                return
+                console.error(error);
+                return;
               }
-              res.status(http.OK).send({userId: extUserId, redirect: '/'});
+              req.login(user, function(err) {
+                if (err) { return next(err); }
+                req.session.key = req.body.email;
+                req.session.userId = req.user._id;
+                return res.status(http.OK).send({redirect: '/'});
+              });
             }
           );
         });
