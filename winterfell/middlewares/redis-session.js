@@ -23,7 +23,7 @@ module.exports = function (app) {
         host: host,
         port: port,
         client: redisClient}), 
-      cookie: {expires: new Date(Date.now() + Constants.SESSION_EXPIRE_TIME)}, // expires after 20 minutes
+      cookie: {maxAge: Constants.SESSION_EXPIRE_TIME}, // expires after 20 minutes
       saveUninitialized: false,
       resave: false
   }));
