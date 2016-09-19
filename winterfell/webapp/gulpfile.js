@@ -111,7 +111,7 @@ gulp.task('fonts', function () {
 });
 
 gulp.task('icons', function () {
-  return gulp.src('src/icons/**/*.+(png|jpg|gif|svg)')
+  return gulp.src('src/icons/**/*.+(png|jpg|gif|svg|ico)')
     .pipe(gulp.dest('build/icons'))
 });
 
