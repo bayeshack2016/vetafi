@@ -1,5 +1,5 @@
 #vfi-breadcrumbs
   div.breadcrumbs-wrapper
     div.link-wrapper(ng-repeat="link in links")
-      span(ng-class="{'lighten': link.lighten}", ng-if="$index > 0") >
+      span(ng-class="{'lighten': link.lighten}", ng-if="$index > 0") &gt;
       span(ng-class="{'lighten': link.lighten, 'current': link.current}") {{link.title}}
