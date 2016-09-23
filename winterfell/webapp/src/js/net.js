@@ -20,12 +20,6 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
   };
 
   var httpDelete = function(url) {
-    /* For Front-end only Development */
-    if (window.location.host == localDevHost) {
-      var future = $.Deferred();
-      future.resolve();
-      return future;
-    }
     return $http.delete(url);
   };
 

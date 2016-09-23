@@ -3,49 +3,93 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', 'formService', '$stateParams',
-    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $stateParams) {
-        $scope.$watch('signature', function (newVal, oldVal) {
-            console.log(newVal, oldVal);
-            if (newVal) {
-                $scope.model['signature'] = newVal.dataUrl;
-            }
-        });
+app.controller('formCtrl',
+  ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', 'formService', '$stateParams', 'userValues',
+    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $stateParams, userValues) {
+      $scope.formId = $stateParams.formId;
 
-        function currentDate() {
-            return $filter('date')(new Date(), 'MM/dd/yyyy');
+      $scope.$watch('dataurl', function (newVal, oldVal) {
+        console.log(newVal, oldVal);
+        if (newVal) {
+          $scope.model.signature = newVal;
+        } else {
+          delete $scope.model.signature;
         }
+      });
 
-        $scope.render = function () {
-            var out = [];
-            for (var k in $scope.model) {
-                if ($scope.model.hasOwnProperty(k)) {
-                    out.push({fieldName: k, fieldValue: $scope.model[k]})
-                }
-            }
-            formRenderingService.render($stateParams.formId, out);
-        };
+      function currentDate() {
+        return $filter('date')(new Date(), 'MM/dd/yyyy');
+      }
 
-        $scope.onSubmit = function () {
-            console.log($scope.fields);
-            console.log($scope.model);
-
-            //$scope.render();
-        };
-
-        $scope.save = function () {
-            formService.save($stateParams.claimId, $stateParams.formId, $scope.model, function(err, response) {
-                console.log(err, response);
-            })
-        };
-
-        $scope.model = {};
-        $scope.fields = formTemplateService[$stateParams.formId].fields;
-
-        for (var i=0; i<$scope.fields.length; i++) {
-            if ($scope.fields[i].key.indexOf('date_signed') !== -1) {
-                $scope.model[$scope.fields[i].key] = currentDate();
-            }
+      $scope.render = function () {
+        var out = [];
+        for (var k in $scope.model) {
+          if ($scope.model.hasOwnProperty(k)) {
+            out.push({fieldName: k, fieldValue: $scope.model[k]})
+          }
         }
+        formRenderingService.render($stateParams.formId, out);
+      };
+
+      $scope.onSubmit = function () {
+        console.log($scope.fields);
+        console.log($scope.model);
+
+        //$scope.render();
+        console.log($scope);
+      };
+
+      $scope.save = function () {
+        formService.save($stateParams.claimId, $stateParams.formId, $scope.model, function (err, response) {
+          console.log(err, response);
+        })
+      };
+
+      $scope.model = userValues;
+      $scope.fields = formTemplateService[$stateParams.formId].fields;
+
+
+      for (var i = 0; i < $scope.fields.length; i++) {
+        if ($scope.fields[i].key.indexOf('date_signed') !== -1) {
+          $scope.model[$scope.fields[i].key] = currentDate();
+        }
+      }
+
+
+      function countAnswerable(model) {
+        var total = 0;
+        for (var i = 0; i < $scope.fields.length; i++) {
+          if ($scope.fields[i].hasOwnProperty('hideExpression')) {
+            if (!$scope.$eval($scope.fields[i].hideExpression)) {
+              total += 1;
+            }
+          } else {
+            total += 1;
+          }
+        }
+        return total;
+      }
+
+      function countAnswered(model) {
+        var k, count = 0;
+        for (k in model) {
+          if (model.hasOwnProperty(k)) {
+            count++;
+          }
+        }
+        return count;
+      }
+
+      $scope.answered = 0;
+      $scope.answerable = 0;
+
+      $scope.getProgress = function () {
+        return ($scope.answered / $scope.answerable) * 100.0;
+      };
+
+      $scope.$watch('model', function (newVal, oldVal) {
+        $scope.answered = countAnswered(newVal);
+        $scope.answerable = countAnswerable(newVal);
+      }, true)
     }]);
 
