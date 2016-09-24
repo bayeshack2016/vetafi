@@ -1,6 +1,6 @@
 // For Confirm Claim page
 #vfi-confirm-modify-contact-modal
-  button.close-modal-btn(ng-click="onCloseModal()")
+  button.close-modal-btn(ng-click="$close()")
     div.close-icon
   h3 {{modalTitle}}
 
@@ -20,7 +20,7 @@
     input(placeholder="Confirm Email")
 
   div.button-wrapper
-    button.cancel-btn(ng-click="onCloseModal()", ng-if="targetIndex < 0") Cancel
+    button.cancel-btn(ng-click="$close({$value: null})", ng-if="targetIndex < 0") Cancel
     button.delete-btn(ng-click="onDelete()", ng-if="targetIndex >= 0") Remove
-    button.save-btn(ng-click="onSave()") Save
+    button.save-btn(ng-click="$close({$value: 'some_address'})") Save
     div.clearer

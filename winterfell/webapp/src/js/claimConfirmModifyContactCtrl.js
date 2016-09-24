@@ -1,6 +1,6 @@
 var app = angular.module('vetafiApp');
-app.controller('claimConfirmModifyContactCtrl', ['$scope', '$uibModalInstance',
-  function($scope, $uibModalInstance) {
+app.controller('claimConfirmModifyContactCtrl', ['$scope',
+  function($scope) {
     var modalData = $scope.modalData;
 
     $scope.forType = modalData.forType;
@@ -12,17 +12,8 @@ app.controller('claimConfirmModifyContactCtrl', ['$scope', '$uibModalInstance',
       $scope.modalTitle = $scope.targetIndex >= 0 ? 'Edit Email' : 'Add Email';
     }
 
-    $scope.onCloseModal = function() {
-      $uibModalInstance.close();
-    };
-
     $scope.onDelete = function() {
       console.log('remove from list!');
-      $scope.onCloseModal();
-    };
-
-    $scope.onSave = function() {
-      console.log('save and add to list!');
       $scope.onCloseModal();
     };
   }

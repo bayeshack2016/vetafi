@@ -1,11 +1,8 @@
 @import "standards.styl"
 
-#claim-confirm-view
-  width: maxLayoutWidthPx
-  margin: largeSpacing auto
-  padding: largeSpacing megaSpacing
-  box-sizing: border-box
+#vfi-claim-confirm-view
   background-color: colorWhite
+  padding-bottom: largeSpacing
 
 #claim-confirm-wrapper
   width: 80%
@@ -70,11 +67,16 @@
 
   & .mailing-list
   & .email-list
+  & .forms-list
     & .title
-      margin-top: 9px
+      line-height: 45px
+      padding-left: 0px
+      padding-right: 0px
       @media screen and (max-width: maxWindowWidthPx)
-        margin-top: 0px
+        line-height: 25px
 
+  & .mailing-list
+  & .email-list
     & button
       float: right
       width: 100px

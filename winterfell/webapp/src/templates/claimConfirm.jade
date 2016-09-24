@@ -1,9 +1,9 @@
-#claim-confirm-view
+#vfi-claim-confirm-view
   #claim-confirm-wrapper
     h2.header Confirm Claim
 
     div.section.intro
-      h4 Hi {{user.firstName}}!
+      h4 Hi {{user.firstname}}!
       div.row
         div.col-sm-6
           p
@@ -29,7 +29,7 @@
         h4 Mail physical copies to:
       div.container-fluid
         div.row-wrapper.row(ng-repeat="mailingInfo in mailingList")
-          div.title.col-sm-5
+          h5.title.col-sm-5
             b {{mailingInfo.title}}
           div.address.col-sm-5
             div.address-line {{mailingInfo.address.sendTo}}
@@ -49,7 +49,7 @@
         h4 E-mail electronic copies to:
       div.container-fluid
         div.row-wrapper.row(ng-repeat="emailInfo in emailList")
-          div.name.col-sm-5
+          h5.title.col-sm-5
             b {{emailInfo.name}}
           div.title.col-sm-5 {{emailInfo.email}}
           button.col-sm-2(ng-click="onClickEditEmail($index)")
@@ -68,7 +68,7 @@
           | Review Forms
       div.container-fluid
         div.row-wrapper.row(ng-repeat="form in formsList")
-          div.form-name.col-sm-5
+          h5.title.col-sm-5
             b {{form.title}}
           div.form-description.col-sm-7 {{form.summary}}
 

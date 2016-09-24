@@ -1,30 +1,17 @@
 var app = angular.module('vetafiApp');
-app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '$stateParams',
-  function($scope, $location, net, claimService, $stateParams) {
+app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', 'claimService', 'Profile', 'vaService', '$uibModal',
+  function($scope, $state, $stateParams, net, claimService, Profile, vaService, $uibModal) {
     $scope.claimId = $stateParams.claimId;
-
-    $scope.user = {
-      firstName: 'Aaron',
-      lastName: 'Hsu'
-    };
-
-    $scope.vaAddress = {
-      title: 'Department of Veteran Affairs',
-      address: {
-        line1: 'Somewhere Street',
-        city: 'Washington',
-        state: 'DC',
-        country: 'USA',
-        zip: '20854'
-      }
-    };
+    $scope.user = Profile.getUser().user;
+    $scope.vaAddress = vaService.getAddress();
 
     $scope.mailingList = [
       $scope.vaAddress,
+      // TODO: placeholder home address for now
       {
         title: 'Home',
         address: {
-          sendTo: 'Aaron Hsu',
+          sendTo: $scope.user.firstname + ' ' + $scope.user.lastname,
           line1: '1223 4th Street',
           line2: 'Apt #211',
           city: 'San Francisco',
@@ -33,29 +20,17 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '
           zip: '94158'
         }
       },
-      {
-        title: "Brother's crib",
-        address: {
-          sendTo: 'Austin Hsu',
-          line1: '983 Victory Road',
-          city: 'Rockville',
-          state: 'MD',
-          country: 'USA',
-          zip: '20834'
-        }
-      },
     ];
+
     $scope.emailList = [
       {
         name: 'Me',
-        email: 'ahsu@gmail.com'
-      },
-      {
-        name: 'Mom',
-        email: 'mom@gmail.com'
+        email: $scope.user.email
       }
     ];
 
+    // list of forms user has filled out
+    // TODO: placeholder forms for now
     $scope.formsList = [
       {
         id: 'va_2723',
