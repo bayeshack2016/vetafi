@@ -26,7 +26,7 @@
       & .progressbar
         position: relative
         top: 5px
-        width: 50%
+        width: 45%
         height: 25px
         margin: 0
         float: right
@@ -68,19 +68,26 @@
         width: 150px
         margin-bottom: smallSpacing
 
-        &:last-child
-          margin-bottom: 0
-
         &.download-btn
           background-color: colorLightGreen
 
         @media screen and (max-width: maxWindowWidthPx)
           display: inline-block
-          margin: 0 smallSpacing
+          margin: 0 smallSpacing smallSpacing
 
-    & .form-title
+    & .form-title-wrapper
       display: inline-block
       vertical-align: middle
+
+      & .title
+        display: inline-block
+        &.required
+          color: colorRed
+
+      & .warning
+        display: inline-block
+        &.required
+          color: colorRed
 
     & .form-summary
       margin: smallSpacing 0
@@ -95,27 +102,38 @@
       background-color: colorLightGray
       vertical-align: middle
 
+      &.required
+        background-color: colorRed
+
+        & .state-icon
+          transform: translate(-50%, -55%)
+          width: 26px
+          height: 26px
+          background: url('../icons/warning-white.svg')
+          background-repeat: no-repeat
+          background-size: cover
+
       &.complete
         background-color: colorLightGreen
+
+        & .state-icon
+          transform: translate(-50%, -50%)
+          width: 22px
+          height: 22px
+          background: url('../icons/checkmark-white.svg')
+          background-repeat: no-repeat
+          background-size: cover
 
     & .state-icon
       position: absolute
       top: 50%
       left: 50%
-      transform: translate(-50%, -55%)
-      width: 26px
-      height: 26px
-      background: url('../icons/warning-white.svg')
+      transform: translate(-50%, -50%)
+      width: 22px
+      height: 22px
+      background: url('../icons/docs-white.svg')
       background-repeat: no-repeat
       background-size: cover
-
-      &.complete
-        transform: translate(-50%, -50%)
-        width: 22px
-        height: 22px
-        background: url('../icons/checkmark-white.svg')
-        background-repeat: no-repeat
-        background-size: cover
 
     & .edit-icon
       display: inline-block

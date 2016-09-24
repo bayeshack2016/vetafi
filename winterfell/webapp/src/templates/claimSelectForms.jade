@@ -6,17 +6,20 @@
     div.section.required
       div.section-header
         h4 Required Forms:
-        uib-progressbar.progressbar(value="numRequiredCompleted", max="allForms.length", type="{{progressBarType}}")
-          span {{numRequiredCompleted}}/{{allForms.length}}
+        uib-progressbar.progressbar(value="numRequiredCompleted", max="requiredForms.length", type="{{progressBarType}}")
+          span {{numRequiredCompleted}}/{{requiredForms.length}}
 
       div.form-wrapper(ng-repeat="form in requiredForms")
         div.form-content
-          div.state-wrapper
+          div.state-wrapper(ng-class="{'required': form.state=='required_incomplete', 'complete': form.state=='complete'}")
             div.state-icon
-          div.form-title {{form.title}}
-          div.form-summary {{form.summary}}
+          div.form-title-wrapper
+            h5.title(ng-class="{'required': form.state=='required_incomplete'}") {{form.id}}
+            h5.warning.required(ng-if="form.state=='required_incomplete'") &nbsp;(required)
+            h5.subtitle {{form.unofficialTitle}}
+          div.form-summary {{form.unofficialDescription}}
         div.form-buttons
-          button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
+          button.edit-btn(ui-sref="root.form({claimId: claimId, formId: form.id})")
             div.edit-icon
             | Edit
           button.download-btn
