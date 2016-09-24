@@ -116,7 +116,31 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
         if (!value) {
           return '';
         }
-        return value.replace(new RegExp('[^0-9]', 'g'), '');
+        return value.replace(new RegExp('[^0-9]', 'g'), '').substring(0, 5);
+      }]
+    }
+  });
+
+  formlyConfig.setType({
+    name: 'state',
+    defaultOptions: {
+      "templateOptions": {
+        placeholder: 'XX'
+      },
+      link: updateViewWithParsed,
+      validators: {
+        state: function (viewValue, modelValue) {
+          if (!viewValue) {
+            return true;
+          }
+          return /^[A-Z]{2}$/.test(viewValue);
+        }
+      },
+      parsers: [function (value) {
+        if (!value) {
+          return '';
+        }
+        return value.toUpperCase().replace(new RegExp('[^A-Z]', 'g'), '').substring(0, 2);
       }]
     }
   });

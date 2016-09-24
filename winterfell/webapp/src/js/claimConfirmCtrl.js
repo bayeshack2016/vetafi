@@ -1,6 +1,6 @@
 var app = angular.module('vetafiApp');
-app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '$stateParams', '$uibModal',
-  function($scope, $location, net, claimService, $stateParams, $uibModal) {
+app.controller('claimConfirmCtrl', ['$scope', '$state', 'net', 'claimService', '$stateParams',
+  function($scope, $location, net, claimService, $stateParams) {
     $scope.claimId = $stateParams.claimId;
 
     $scope.user = {

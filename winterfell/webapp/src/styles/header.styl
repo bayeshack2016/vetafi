@@ -3,7 +3,7 @@
 #header
   width: 100%
   height: headerHeightPx
-  background-color: colorPrimaryDarkBlue
+  background-color: colorPrimaryDarkestBlue
 
 #header-content
   position: relative
@@ -12,36 +12,20 @@
   height: 100%
   margin: 0 auto
 
-.vfi-header-logo-wrapper
-  float: left
-  height: 100%
-  line-height: headerHeightPx
-
   & img
-    display: inline-block
-    width: 32px
-    height: 32px
-    margin-right: miniSpacing
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    height: 30px
 
-  & .vfi-header-logo
-    display: inline-block
-    margin-top: 4px
-    color: colorWhite
-
-    &:hover
-      text-decoration: none
-
-    @media screen and (max-width: minWindowWidthPx)
-      display: none
-
-.vfi-header-links
+.header-links
   height: headerHeightPx
   line-height: headerHeightPx
 
   & .big-link
     position: relative
     float: right
-    margin-top: 15px
+    margin-top: 25px
     margin-left: largeSpacing
     color: colorWhite
 
@@ -49,14 +33,14 @@
       text-decoration: none
       cursor: pointer
 
-      & .vfi-underline-border
+      & .underline-border
         opacity: 1.0
         visibility: visible
 
     @media screen and (max-width: minWindowWidthPx)
       font-size: h5_size
 
-  & .vfi-underline-border
+  & .underline-border
     position: absolute
     bottom: -8px
     width: 100%
@@ -66,7 +50,7 @@
     visibility: hidden
     transition: all linear 0.1s
 
-.vfi-menu-btn
+.menu-btn
   position: absolute
   top: 50%
   right: 0
@@ -76,7 +60,7 @@
   background-color: white
   border-radius: 50%
 
-  & .vfi-menu-icon
+  & .menu-icon
     position: absolute
     top: 50%
     left: 50%
@@ -87,7 +71,7 @@
     background-size: cover
     background-repeat: no-repeat
 
-.vfi-menu-list
+.menu-list
   position: absolute
   top: 36px
   right: 24px

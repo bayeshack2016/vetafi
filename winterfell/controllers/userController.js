@@ -55,9 +55,13 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/user/:extUserId/values', function(req, res) {
-    var extUserId = req.params.extUserId;
-    User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
+  app.get('/user/values', function(req, res) {
+    User.findById(req.session.userId).exec(function(err, user) {
+      if (err) {
+        res.status(http.INTERNAL_SERVER_ERROR).send();
+        return;
+      }
+
       if (user) {
         UserValues.findOne({userId: user._id}).exec(function(err, userValues) {
           res.status(http.OK).send({ values: userValues || {} });
@@ -68,11 +72,15 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/user/:extUserId/values', function(req, res) {
-    var extUserId = req.params.extUserId;
+  app.post('/user/values', function(req, res) {
     var valuesToUpdate = req.body.values;
     if (valuesToUpdate && valuesToUpdate.key && valuesToUpdate.value) {
-      User.findOne({externalId: req.params.extUserId}).exec(function(err, user) {
+      User.findById(req.session.userId).exec(function(err, user) {
+        if (err) {
+          res.status(http.INTERNAL_SERVER_ERROR).send();
+          return;
+        }
+
         if (user) {
           UserService.updateUserValue(user._id, valuesToUpdate.key, valuesToUpdate.value);
         } else {

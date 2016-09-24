@@ -1,9 +1,11 @@
 @import "standards.styl"
 
 #claim-confirm-view
-  width: 100%
+  width: maxLayoutWidthPx
+  margin: largeSpacing auto
+  padding: largeSpacing megaSpacing
+  box-sizing: border-box
   background-color: colorWhite
-  margin: 0
 
 #claim-confirm-wrapper
   width: 80%
@@ -119,18 +121,15 @@
     vertical-align: top
 
   & .button-wrapper
-    position: relative
     width: 100%
     height: largeSpacing
-    margin-bottom: miniSpacing
+    margin-top: mediumSpacing
 
-    & .back-btn
-      float: left
-      background-color: colorLightGray
-
-    & .confirm-btn
-      float: right
+  & .back-btn
+    float: left
+    background-color: colorLightGray
 
   & .confirm-btn
+    float: right
     background-color: colorYellow
     color: colorBlack
