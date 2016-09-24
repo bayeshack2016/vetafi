@@ -1,26 +1,137 @@
 @import "standards.styl"
 
-#claim-confirm-view
-  width: maxLayoutWidthPx
-  margin: largeSpacing auto
-  padding: largeSpacing megaSpacing
-  box-sizing: border-box
+#vfi-claim-confirm-view
   background-color: colorWhite
+  padding-bottom: largeSpacing
 
-  & .vfi-divider
-    margin: largeSpacing 0
-    border-bottom: 1px solid colorLightGray
+#claim-confirm-wrapper
+  width: 80%
+  max-width: maxLayoutWidthPx
+  margin: 0 auto
+  padding-top: largeSpacing
+  padding-bottom: largeSpacing
+
+  & .header
+    margin-bottom: smallSpacing
+
+  & .section
+    margin-bottom: megaSpacing
+
+    & h4
+      display: inline-block
+      color: colorPrimaryDarkBlue
+
+    &.intro
+      margin-bottom: largeSpacing
+
+      & .confirm-btn
+        float: right
+
+        @media screen and (max-width: maxWindowWidthPx)
+          float: left
+
+    &.basic-info
+      margin-bottom: megaSpacing
+
+      & .basic-row
+        width: 50%
+
+        @media screen and (max-width: maxWindowWidthPx)
+          width: 100%
+
+        & span:last-child
+          float: right
+
+  & .section-header
+    width: 100%
+    padding-bottom: 6px
+    border-bottom: 2px solid colorLighterGray
+
+  & .row-wrapper
+    padding-top: miniSpacing
+    padding-bottom: miniSpacing
+    border-bottom: 2px solid colorLighterGray
+
+  & .mailing-list
+  & .email-list
+  & .forms-list
+    & div:first-child
+      padding-left: 0px
+
+    & .row-wrapper
+      padding: smallSpacing 0
+
+      @media screen and (max-width: maxWindowWidthPx)
+        padding: smallSpacing 0
+        text-align: center
+
+  & .mailing-list
+  & .email-list
+  & .forms-list
+    & .title
+      line-height: 45px
+      padding-left: 0px
+      padding-right: 0px
+      @media screen and (max-width: maxWindowWidthPx)
+        line-height: 25px
+
+  & .mailing-list
+  & .email-list
+    & button
+      float: right
+      width: 100px
+
+      @media screen and (max-width: maxWindowWidthPx)
+        float: none
+        margin-top: miniSpacing
+
+    & .add-row
+      text-align: center
+      border-bottom: none
+
+    & .add-btn
+      float: none
+      width: initial
+      background-color: transparent
+      color: colorPrimaryBlue
+      border: 2px solid colorPrimaryBlue
+
+  & .forms-list
+    & .section-header button
+      position: relative
+      top: -24px
+      float: right
+
+  & .edit-icon
+    display: inline-block
+    width: 24px
+    height: 24px
+    margin-right: miniSpacing
+    background: url('../icons/edit-white.svg')
+    background-size: cover
+    background-repeat: no-repeat
+    vertical-align: top
+
+  & .add-icon
+    display: inline-block
+    width: 24px
+    height: 24px
+    margin-right: miniSpacing
+    background: url('../icons/add-blue.svg')
+    background-size: cover
+    background-repeat: no-repeat
+    vertical-align: top
 
   & .button-wrapper
     width: 100%
     height: largeSpacing
     margin-top: mediumSpacing
 
-  & .vfi-back
+  & .back-btn
     float: left
     background-color: colorLightGray
 
-  & .vfi-confirm
+  & .confirm-btn
     float: right
     background-color: colorYellow
     color: colorBlack

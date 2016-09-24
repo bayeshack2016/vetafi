@@ -3,13 +3,6 @@ var app = angular.module('vetafiApp');
 app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var httpGet = function (url, data) {
-    // For Front-end only Development
-    // This is used for testing "success" server calls
-    if (xhrEnv.isDev) {
-      var future = $.Deferred();
-      future.resolve();
-      return future;
-    }
     return $http({
       url: url,
       method: "GET",
@@ -18,13 +11,6 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
   };
 
   var httpPost = function(url, data) {
-    // For Front-end only Development
-    // This is used for testing "success" server calls
-    if (xhrEnv.isDev) {
-      var future = $.Deferred();
-      future.resolve();
-      return future;
-    }
     return $http({
       url: url,
       method: "POST",
@@ -34,12 +20,6 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
   };
 
   var httpDelete = function(url) {
-    /* For Front-end only Development */
-    if (window.location.host == localDevHost) {
-      var future = $.Deferred();
-      future.resolve();
-      return future;
-    }
     return $http.delete(url);
   };
 
@@ -64,6 +44,9 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     // User
     getUserInfo: function() {
       return httpGet("/user");
+    },
+    getUserValues: function() {
+      return httpGet("/user/values");
     },
     deleteUserAccount: function() {
       return httpDelete("/user");

@@ -124,6 +124,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     name: 'root.form',
     url: '/claim/{claimId}/form/{formId}',
     templateUrl: 'templates/form.html',
-    controller: 'formCtrl'
+    controller: 'formCtrl',
+    resolve: {
+      userValues: ['net', '$q', function(net, $q) {
+        var deferred = $q.defer();
+
+        net.getUserValues().then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+
+        return deferred.promise;
+      }]
+    }
   });
 }]);

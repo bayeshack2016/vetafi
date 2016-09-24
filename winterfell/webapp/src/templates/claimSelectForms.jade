@@ -1,4 +1,5 @@
 #select-forms-view
+  vfi-breadcrumbs(page="1")
   #select-forms-wrapper
     h3 Select Forms for Claim
 
@@ -15,7 +16,7 @@
           div.form-title {{form.title}}
           div.form-summary {{form.summary}}
         div.form-buttons
-          button.edit-btn
+          button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
             div.edit-icon
             | Edit
           button.download-btn

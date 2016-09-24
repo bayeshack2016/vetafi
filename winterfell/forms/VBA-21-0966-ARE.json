@@ -234,9 +234,11 @@
     {
       "key": "veteran_home_state",
       "type": "input",
+      "optionsTypes": [
+        "state"
+      ],
       "templateOptions": {
         "label": "Veteran State",
-        "placeholder": ""
       }
     },
     {
