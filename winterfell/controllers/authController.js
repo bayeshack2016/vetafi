@@ -16,7 +16,7 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('signup.html', {root: './webapp/build/templates/noangular'});
+      res.sendFile('signin.html', {root: './webapp/build/templates/noangular'});
     }
   });
 
@@ -27,7 +27,7 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('login.html', {root: './webapp/build/templates/noangular'});
+      res.sendFile('signin.html', {root: './webapp/build/templates/noangular'});
     }
   });
 

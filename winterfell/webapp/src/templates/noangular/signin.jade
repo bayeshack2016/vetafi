@@ -7,14 +7,17 @@ html(lang="en")
     script(type='text/javascript', src='libs/libs.js')
     script(type='text/javascript', src='js/signin.js')
 
-  body#signup-view
+  body
     div.bg-overlay
     div.viewer
       div.pic-section
       div.interact-section
-        img.logo(src='../icons/vetafi-logo-black.svg')
+        a(href="/")
+          img.logo(src='../icons/vetafi-logo-black.svg')
 
+        // Carousel can have multiple screens
         div.carousel
+
           div.screen.options
             button.fb-btn
               div.icon-container
@@ -32,11 +35,23 @@ html(lang="en")
                 div.email-icon
               div.txt-container Signup with your email
 
-          div.screen.inputs
-            input.email(placeholder='Email Address', type='text')
-            input.pwd(placeholder='Password', type='password')
-            input.confirm-pwd(placeholder='Confirm Password', type='password')
-            button.submit-btn SIGN UP
+          div.screen.inputs.signup
+            form
+              input.email(placeholder='Email Address', type='text')
+              input.pwd(placeholder='Password', type='password')
+              input.confirm-pwd(placeholder='Confirm Password', type='password')
+              input.submit(value='SIGN UP', type='submit')
             a(href="/login") Already have an account?
+            p.error-msg
+            button.back-btn Back
+
+          div.screen.inputs.login
+            form
+              input.email(placeholder='Email Address', type='text')
+              input.pwd(placeholder='Password', type='password')
+              input.submit(value='LOG IN', type='submit')
+            a Forgot password?
+            a Forgot email?
+            a(href="/signup") Need an account?
             p.error-msg
             button.back-btn Back
