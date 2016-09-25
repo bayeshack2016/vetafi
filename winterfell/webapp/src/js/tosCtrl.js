@@ -13,6 +13,7 @@ app.controller('tosCtrl', ['$scope', '$location', 'claimService',
     };
 
     $scope.onDecline = function() {
+      $scope.$close(true);
       $location.path('/');
     };
   }

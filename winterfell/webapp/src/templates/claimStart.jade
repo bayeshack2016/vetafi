@@ -1,11 +1,48 @@
 #claim-start-view
   vfi-breadcrumbs(page="0")
-  h2.vfi-header Start Claim
-  div.vfi-divider
-  p Words
-  p Words
-  p Words
-  p Words
-  p Are you ready to proceed?
-  div.button-wrapper
-    button.vfi-next(ng-click="onClickNext()") Proceed
+  #claim-start-wrapper
+    h3 Ready to Start?
+
+    div.content.container
+      div.content-row.row
+        div.icon-wrapper.col-sm-2.docs
+          div.icon
+        div.content-wrapper.col-sm-10
+          p
+            | Greetings! Today, Vetafi will help you fill out a VA 21-0966 "Intent to File" form.
+            | This form is used to notify the VA that you intend to file a claim for benefits
+            | and secure the start date of your benefit package.
+
+      div.content-row.row
+        div.icon-wrapper.col-sm-2.info
+          div.icon
+        div.content-wrapper.col-sm-10
+          p
+            | If you require more time to gather other information, you will have one year after filling this form to complete a claim.
+            | Even with a late claim, your benefit effective date will be based on the date the VA received the form and NOT when the VA received your completed claim.
+          p
+            | For more information on how the Intent to File process works, you may look #[a(href="http://helpdesk.vetsfirst.org/index.php?pg=kb.page&id=1762") here].
+
+      div.content-row.row
+        div.icon-wrapper.col-sm-2.send
+          div.icon
+        div.content-wrapper.col-sm-10
+          p
+            | After you are finished filling out the form, you will be able to send yourself, or any family members, copies of your claim.
+            | You can choose to mail physical copies or email electronic copies. Up to you!
+
+      div.content-row.row
+        div.icon-wrapper.col-sm-2.download
+          div.icon
+        div.content-wrapper.col-sm-10
+          p
+            | In the case that you would rather fill out a form by hand,
+            | at any time, you may download a copy of the form with all your answers already filled out.
+            | No need to start over!
+
+    div.proceed-wrapper
+      h4.proceed Are you ready to proceed?
+      button.proceed-btn(ng-click="onClickNext()")
+        | Proceed
+        div.next-icon
+vfi-footer
