@@ -8,6 +8,8 @@ var Form = require('../models/form');
 var UserValues = require('../models/userValues');
 var auth = require('../middlewares/auth');
 var _ = require('lodash');
+var bulk = require('bulk-require');
+var formlyFields = bulk('../webapp/src/forms/', ['*']);
 
 module.exports = function (app) {
 
@@ -141,42 +143,64 @@ module.exports = function (app) {
     );
   }
 
-  app.post('/save/:claim/:form', function (req, res) {
-    if (req.session.key) {
-      console.log("/save/:claim/:form authed");
-      Form.findOneAndUpdate(
-        {
-          key: req.params.form,
-          user: req.session.userId,
-          claim: req.params.claim
-        },
-        {
-          key: req.params.form,
-          responses: req.body,
-          user: req.session.userId,
-          claim: req.params.claim
-        },
-        {upsert: true,
-          "new": true},
-        function (error, form) {
-          if (error) {
-            res.sendStatus(http.INTERNAL_SERVER_ERROR);
-          } else {
-            updateUserValuesFromForm(form,
-              function (error, userValues) {
-                if (error) {
-                  res.sendStatus(http.INTERNAL_SERVER_ERROR);
-                  return;
-                }
-                res.sendStatus(http.CREATED);
+  function calculateAnswered(formName, data) {
+
+  }
+
+  app.post('/save/:claim/:form', auth.authenticatedOr404, function (req, res) {
+    Form.findOneAndUpdate(
+      {
+        key: req.params.form,
+        user: req.session.userId,
+        claim: req.params.claim
+      },
+      {
+        key: req.params.form,
+        responses: req.body,
+        user: req.session.userId,
+        claim: req.params.claim
+      },
+      {
+        upsert: true,
+        'new': true
+      },
+      function (error, form) {
+        if (error) {
+          res.sendStatus(http.INTERNAL_SERVER_ERROR);
+        } else {
+          updateUserValuesFromForm(form,
+            function (error, userValues) {
+              if (error) {
+                res.sendStatus(http.INTERNAL_SERVER_ERROR);
+                return;
               }
-            );
-          }
-        });
-    } else {
-      console.log("[/save/:claim:/:form] no credentials");
-      console.log(req.session);
-      res.sendStatus(http.NOT_FOUND);
-    }
+              res.sendStatus(http.CREATED);
+            }
+          );
+        }
+      });
+  });
+
+  app.post('/claim/:claim/form/:form', auth.authenticatedOr404, function (req, res) {
+    Form.findOne({
+        key: req.params.form,
+        user: req.session.userId,
+        claim: req.params.claim
+      },
+      function (error, form) {
+        res.status(http.OK).send({form: form});
+      }
+    );
+  });
+
+  app.post('/claim/:claim/forms', auth.authenticatedOr404, function (req, res) {
+    Form.find({
+        user: req.session.userId,
+        claim: req.params.claim
+      },
+      function (error, forms) {
+        res.status(http.OK).send({form: forms});
+      }
+    );
   });
 };

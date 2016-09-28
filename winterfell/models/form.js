@@ -8,7 +8,9 @@ var formSchema = new Schema({
   key: String, // Code name for the form
   responses: Schema.Types.Mixed,
   user: Schema.Types.ObjectId,
-  claim: Schema.Types.ObjectId
+  claim: Schema.Types.ObjectId,
+  answered: Schema.Types.Integer,
+  answerable: Schema.Types.Integer
 }, {
   timestamps: true
 });
