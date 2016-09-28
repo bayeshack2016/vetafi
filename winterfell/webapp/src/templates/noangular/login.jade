@@ -1,46 +1,17 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset='utf-8')
-    title=Vetafi
-    link(rel='stylesheet', href='css/libs.css')
-    link(rel='stylesheet', href='css/main.css')
-    script(type='text/javascript', src='libs/libs.js')
-    script(type='text/javascript', src='js/signin.js')
+extends signinLayout.jade
 
-  body#login-view
-    div.bg-overlay
-    div.viewer
-      div.pic-section
-      div.interact-section
-        img.logo(src='../icons/vetafi-logo-black.svg')
+block fbText
+  div.txt-container Login with Facebook
+block idmeText
+  div.txt-container Login with Id.Me
+block emailText
+  div.txt-container Login with your email
 
-        // Carousel can have multiple screens
-        div.carousel
-
-          div.screen.options
-            button.fb-btn
-              div.icon-container
-                div.fb-icon
-              div.txt-container Login with Facebook
-            button.idme-btn
-              div.icon-container
-                div.idme-icon
-              div.txt-container Login with Id.Me
-
-            p.divider - OR -
-
-            button.email-btn
-              div.icon-container
-                div.email-icon
-              div.txt-container Login with your email
-
-          div.screen.inputs
-            input.email(placeholder='Email Address', type='text')
-            input.pwd(placeholder='Password', type='password')
-            button.submit-btn LOG IN
-            a Forgot password?
-            a Forgot email?
-            a(href="/signup") Need an account?
-            p.error-msg
-            button.back-btn Back
+block inputs
+  form
+    input.email(placeholder='Email Address', type='text')
+    input.pwd(placeholder='Password', type='password')
+    input.submit(value='LOG IN', type='submit')
+  a Forgot password?
+  a Forgot email?
+  a(href="/signup") Need an account?
