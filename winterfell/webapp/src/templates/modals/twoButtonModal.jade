@@ -2,9 +2,9 @@ div.vfi-modal#basic-two-button-modal
   div.close-wrapper
     button.close-icon(ng-click="$dismiss()")
   div.header
-    h3 {{modalData.headline}}
+    h3 {{headline}}
   div.message
-    p {{modalData.message}}
+    p {{message}}
   div.button-wrapper
-    button.cancel(ng-click="$dismiss()") {{modalData.cancelText || 'Cancel'}}
-    button.continue(ng-class="{'success': modalData.choice == 'success', 'warning': modalData.choice == 'warning'}", ng-click="$close(true)") {{modalData.continueText || 'OK'}}
+    button.cancel(ng-click="$dismiss()") {{cancelText || 'Cancel'}}
+    button.continue(ng-class="{'success': choice == 'success', 'warning': choice == 'warning'}", ng-click="$close(true)") {{continueText || 'OK'}}

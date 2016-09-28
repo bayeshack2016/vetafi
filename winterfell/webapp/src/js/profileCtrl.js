@@ -73,12 +73,10 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     };
 
     $scope.clickDeleteAccount = function() {
-      $scope.modalData = {
-        headline: "Delete Account",
-        message: "Are you sure you want to delete your account? All your saved personal information will be lost.",
-        choice: 'warning',
-        continueText: 'Delete'
-      };
+      $scope.headline = "Delete Account";
+      $scope.message = "Are you sure you want to delete your account? All your saved personal information will be lost.";
+      $scope.choice = 'warning';
+      $scope.continueText = 'Delete';
       var modal = $uibModal.open({
         scope: $scope,
         templateUrl: 'templates/modals/twoButtonModal.html',

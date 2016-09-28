@@ -32,10 +32,8 @@ app.controller("headerCtrl",
 
         }, function failure(res) {
           that.active = true;
-          $scope.modalData = {
-            headline: "Session Expired",
-            message: "For security reasons, your session has expired due to inactivity. Please log back in to continue your work."
-          };
+          $scope.headline = "Session Expired";
+          $scope.message = "For security reasons, your session has expired due to inactivity. Please log back in to continue your work.";
           var modal = $uibModal.open({
             scope: $scope,
             templateUrl: 'templates/modals/oneButtonModal.html',

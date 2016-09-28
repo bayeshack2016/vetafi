@@ -2,8 +2,8 @@ div.vfi-modal#basic-one-button-modal
   div.close-wrapper
     button.close-icon(ng-click="$close()")
   div.header
-    h3 {{modalData.headline}}
+    h3 {{headline}}
   div.message
-    p {{modalData.message}}
+    p {{message}}
   div.button-wrapper
-    button(ng-click="$close()") {{modalData.btnText || 'OK'}}
+    button(ng-click="$close()") {{btnText || 'OK'}}
