@@ -16,23 +16,23 @@
 
   & h4
     display: inline-block
-    line-height: 40px
+    line-height: 2.5em
     color: colorPrimaryBlue
 
   & .section
     margin-bottom: largeSpacing
 
     & .section-header
-      & .progressbar
+      & .progressbar // the wrapper
         position: relative
         top: 5px
         width: 45%
-        height: 25px
+        height: 1.5em
         margin: 0
         float: right
 
-      & .progress-bar
-        line-height: 25px
+      & .progress-bar // the inside increasing bar
+        height: 1.5em
         background-color: colorPrimaryDarkBlue
 
       & .progress-bar-success
@@ -65,7 +65,7 @@
 
       & button
         display: inline-block
-        width: 150px
+        width: 9em
         margin-bottom: smallSpacing
 
         &.download-btn
