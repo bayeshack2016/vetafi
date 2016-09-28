@@ -38,43 +38,21 @@ function displayError(msg) {
   $('.error-msg').text(msg);
 }
 
-function adjustTextsForLogin() {
-  $('.fb-btn .txt-container').text('Login with Facebook');
-  $('.idme-btn .txt-container').text('Login with Id.Me');
-  $('.email-btn .txt-container').text('Login with your email');
-}
-
-function adjustTextsForSignup() {
-  $('.fb-btn .txt-container').text('Signup with Facebook');
-  $('.idme-btn .txt-container').text('Signup with Id.Me');
-  $('.email-btn .txt-container').text('Signup with your email');
-}
-
-$(document).ready(function(){
+$(document).ready(function() {
   var isLogin = window.location.pathname == '/login';
   document.body.id = isLogin ? 'login-view' : 'signup-view';
 
-  if (isLogin) {
-    adjustTextsForLogin();
-    $('.screen.inputs.signup').remove();
-  } else {
-    adjustTextsForSignup();
-    $('.screen.inputs.login').remove();
-  }
-
-  $('.email-btn').click(function(e) {
-    e.preventDefault();
+  $('.email-btn').click(function() {
     $('.options').addClass('vfi-hide');
     $('.inputs').addClass('vfi-show');
   });
 
-  $('.back-btn').click(function(e) {
-    e.preventDefault();
+  $('.back-btn').click(function() {
     $('.options').removeClass('vfi-hide');
     $('.inputs').removeClass('vfi-show');
   });
 
-  $('#signup-view .inputs form').submit(function(e) {
+  $('#signup-view form').submit(function(e) {
     e.preventDefault();
     var email = $('input.email').val();
     var password = $('input.pwd').val();
@@ -107,7 +85,7 @@ $(document).ready(function(){
   });
 
 
-  $('#login-view .inputs form').submit(function(e) {
+  $('#login-view form').submit(function(e) {
     e.preventDefault();
     var email = $('input.email').val();
     var password = $('input.pwd').val();

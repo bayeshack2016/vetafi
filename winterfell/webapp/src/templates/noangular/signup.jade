@@ -1,0 +1,16 @@
+extends signinLayout.jade
+
+block fbText
+  div.txt-container Signup with Facebook
+block idmeText
+  div.txt-container Signup with Id.Me
+block emailText
+  div.txt-container Signup with your email
+
+block inputs
+  form
+    input.email(placeholder='Email Address', type='text')
+    input.pwd(placeholder='Password', type='password')
+    input.confirm-pwd(placeholder='Confirm Password', type='password')
+    input.submit(value='SIGN UP', type='submit')
+  a(href="/login") Already have an account?

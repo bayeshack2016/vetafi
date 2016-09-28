@@ -1,0 +1,41 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset='utf-8')
+    title=Vetafi
+    link(rel='stylesheet', href='css/main.css')
+    script(type='text/javascript', src='libs/libs.js')
+    script(type='text/javascript', src='js/signin.js')
+
+  body
+    div.bg-overlay
+    div.viewer
+      div.pic-section
+      div.interact-section
+        a(href="/")
+          img.logo(src='../icons/vetafi-logo-black.svg')
+
+        // Carousel can have multiple screens
+        div.carousel
+
+          div.screen.options
+            button.fb-btn
+              div.icon-container
+                div.fb-icon
+              block fbText
+            button.idme-btn
+              div.icon-container
+                div.idme-icon
+              block idmeText
+
+            p.divider - OR -
+
+            button.email-btn
+              div.icon-container
+                div.email-icon
+              block emailText
+
+          div.screen.inputs
+            block inputs
+            p.error-msg
+            button.back-btn Back
