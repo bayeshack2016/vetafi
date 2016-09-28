@@ -9,6 +9,7 @@ var UserValues = require('../models/userValues');
 var auth = require('../middlewares/auth');
 var _ = require('lodash');
 var bulk = require('bulk-require');
+var expressions = require("angular-expressions");
 var formlyFields = bulk('../webapp/src/forms/', ['*']);
 
 module.exports = function (app) {
@@ -143,11 +144,39 @@ module.exports = function (app) {
     );
   }
 
-  function calculateAnswered(formName, data) {
+  /**
+   * For a given form and set of responses, calculate how many questions
+   * were answered (which is simply then number of keys in the responses),
+   * and more complicatedly, how many questions on the form were answerable,
+   * which requires evaluating the angular hideExpression attribute for
+   * each field against the current responses.
+   *
+   * @param formName
+   * @param data
+   * @returns {{answerable: number, answered: number}}
+   */
+  function calculateProgress(formName, data) {
+    var evaluate, i;
+    var template = formlyFields[formName];
+    var output = {answerable: 0, answered: _.size(data)};
 
+    for (i = 0; i < template.fields.length; i++) {
+      var field = template.fields[i];
+      if (field.hasOwnProperty('hideExpression')) {
+        evaluate = expressions.compile(field.hideExpression);
+        if (evaluate({model: data})) {
+          output.answerable += 1;
+        }
+      } else {
+        output.answerable += 1;
+      }
+    }
+
+    return output;
   }
 
   app.post('/save/:claim/:form', auth.authenticatedOr404, function (req, res) {
+    var progress = calculateProgress(req.params.form, req.body);
     Form.findOneAndUpdate(
       {
         key: req.params.form,
@@ -158,7 +187,9 @@ module.exports = function (app) {
         key: req.params.form,
         responses: req.body,
         user: req.session.userId,
-        claim: req.params.claim
+        claim: req.params.claim,
+        answered: progress.answered,
+        answerable: progress.answerable
       },
       {
         upsert: true,

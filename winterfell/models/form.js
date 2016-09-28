@@ -9,8 +9,8 @@ var formSchema = new Schema({
   responses: Schema.Types.Mixed,
   user: Schema.Types.ObjectId,
   claim: Schema.Types.ObjectId,
-  answered: Schema.Types.Integer,
-  answerable: Schema.Types.Integer
+  answered: Number,
+  answerable: Number
 }, {
   timestamps: true
 });
