@@ -1,22 +1,81 @@
 @import "standards.styl"
 
+maxContentWidthPx = 560px
+iconWrapperPx = 54px
+
 #claim-start-view
-  width: maxLayoutWidthPx
-  margin: largeSpacing auto
-  padding: largeSpacing megaSpacing
-  box-sizing: border-box
   background-color: colorWhite
 
-  & .vfi-divider
-    margin: largeSpacing 0
-    border-bottom: 1px solid colorLightGray
+#claim-start-wrapper
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto
+  padding: largeSpacing 0
 
-  & .button-wrapper
-    width: 100%
-    height: largeSpacing
-    margin-top: mediumSpacing
+  & h3
+    margin-bottom: mediumSpacing
+    color: colorPrimaryBlue
 
-  & .vfi-next
-    float: right
+  & .content-row
+    margin-bottom: mediumSpacing
+    min-height: 80px
+
+  & .icon-wrapper
+    position: relative
+    width: iconWrapperPx
+    height: iconWrapperPx
+    margin-right: smallSpacing
+    border-radius: 50%
+    background-color: colorPrimaryBlue
+
+    @media screen and (max-width: maxWindowWidthPx)
+      margin: 0 auto mediumSpacing
+
+    &.docs
+      & .icon
+        width: 32px
+        height: 32px
+        background: colorPrimaryBlue url('../icons/docs-white.svg') no-repeat
+        background-size: cover
+
+    &.send
+      background-color: colorPurple
+      & .icon
+        width: 36px
+        height: 36px
+        background: colorPurple url('../icons/email-white.svg') no-repeat
+        background-size: cover
+
+    &.download
+      background-color: colorLightGreen
+      & .icon
+        width: 26px
+        height: 26px
+        background: colorLightGreen url('../icons/download-white.svg') no-repeat
+        background-size: cover
+
+    & .icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+  & p
+    max-width: maxContentWidthPx
+
+  & .proceed
+    margin-bottom: smallSpacing
+
+  & .proceed-btn
     background-color: colorYellow
     color: colorBlack
+
+    & .next-icon
+      position: relative
+      top: 4px
+      display: inline-block
+      width: 18px
+      height: 18px
+      margin-left: 6px
+      background: colorYellow url('../icons/next-black.svg') no-repeat
+      background-size: cover

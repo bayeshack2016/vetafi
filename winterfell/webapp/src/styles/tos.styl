@@ -18,7 +18,7 @@ leftSpacing = megaSpacing
     color: colorWhite
 
   .vfi-tos-scroller
-    height: 250px
+    height: 360px
     padding: largeSpacing megaSpacing
     overflow-y: auto
     border-bottom: 1px solid colorLightGray
@@ -33,16 +33,22 @@ leftSpacing = megaSpacing
     & input
       margin-right: mediumSpacing
 
-  .vfi-accept-btn
-    margin-left: (leftSpacing + smallSpacing)
-    margin-right: megaSpacing
-    background-color: colorPrimaryBlue
-
-  .vfi-decline-btn
-    background-color: colorLightGray
-    color: colorBlack
-
-  .vfi-error-msg
+  & .vfi-error-msg
     margin-top: mediumSpacing
     margin-left: leftSpacing
     color: colorRed
+
+  & .button-wrapper
+    padding: smallSpacing leftSpacing
+
+  .vfi-accept-btn
+    float: right
+    background-color: colorPrimaryBlue
+
+  .vfi-decline-btn
+    float: left
+    background-color: colorLightGray
+    color: colorBlack
+
+  .clearer
+    clear: both
