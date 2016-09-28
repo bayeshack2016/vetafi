@@ -4,12 +4,13 @@ app.controller('claimSelectFormsCtrl', ['$scope', '$state', '$stateParams', 'cla
     $scope.claimId = $stateParams.claimId;
 
     $scope.allForms = formTemplateService; // returns an object {formId -> {...}}
-    var userForms = [ // TODO: state of all forms edited by user
-      {
-        id: 'VBA-21-0966-ARE',
-        state: 'incomplete'
-      }
-    ];
+    var userForms = {};                    // should be {formId -> {...}}
+    // TODO: state of all forms edited by user
+    // var userForms = {
+    //   'VBA-21-0966-ARE': {
+    //      state: 'complete'
+    //   }
+    // };
     $scope.requiredForms = [];
     $scope.optionalForms = [];
     $scope.numRequiredCompleted = 0;
@@ -33,19 +34,19 @@ app.controller('claimSelectFormsCtrl', ['$scope', '$state', '$stateParams', 'cla
 
     function calcFormsCompleted() {
       var numRequiredCompleted = 0;
-      for(var i = 0; i < userForms.length; i++) {
-        var userForm = userForms[i];
-        var targetForm = $scope.allForms[userForm.id];
-        if (targetForm) {
-          var required = targetForm.required;
-          var state = calcFormState(userForm.state, required);
-          $scope.allForms[userForm.id].id = userForm.id;
-          $scope.allForms[userForm.id].state = state;
-          if (required && state == 'complete') {
-            numRequiredCompleted++;
-          }
+
+      _.map(_.keys($scope.allForms), function(formId) {
+        var targetForm = $scope.allForms[formId];
+        var userForm = userForms[formId];
+        var userFormState = userForm ? userForm.state : 'incomplete';
+        targetForm.id = formId;
+        targetForm.state = calcFormState(userFormState, targetForm.required);
+
+        if (targetForm.required && targetForm.state == 'complete') {
+          numRequiredCompleted++;
         }
-      }
+      });
+
       $scope.numRequiredCompleted = numRequiredCompleted;
       $scope.progressBarType = $scope.numRequiredCompleted == $scope.requiredForms.length ? 'success' : undefined;
     }
