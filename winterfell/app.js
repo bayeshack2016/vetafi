@@ -17,7 +17,17 @@ var biscuit = new Biscuit(app);
 
 app.environment = environment;
 app.baseUrl = Constants.baseUrl[app.environment];
-console.log('environment: ' + JSON.stringify(app.environment));
+
+// Setup biscuit keys
+function setupBiscuitKey(keyName) {
+  var yamlKey = Constants.biscuitKeys[keyName];
+  var secret = biscuit.get(environment + '::' + yamlKey);
+  app.set(keyName, secret);
+}
+
+setupBiscuitKey(Constants.KEY_LOB_API);
+setupBiscuitKey(Constants.KEY_IDME_CLIENT_ID);
+setupBiscuitKey(Constants.KEY_IDME_SECRET_ID);
 
 function loadIntoBuild (app, targetDir) {
   var normalizedPath = path.join(__dirname, targetDir);
@@ -32,6 +42,7 @@ loadIntoBuild(app, 'middlewares');
 loadIntoBuild(app, 'services');
 loadIntoBuild(app, 'controllers');
 
+
 // Serve static files
 app.use(express.static(path.join(__dirname, '/webapp/build')));
 app.get('/', function(req, resp) {
@@ -40,21 +51,6 @@ app.get('/', function(req, resp) {
 
 // Connect to a mongodb server using mongoose
 require('./config/mongoose')(environment);
-
-// Setup biscuit keys
-function setupBiscuitKey(keyName) {
-  var yamlKey = Constants.biscuitKeys[keyName];
-  biscuit.get(environment + '::' + yamlKey, function(err, secret) {
-    if (err) {
-      throw err;
-    }
-    app.set(keyName, secret);
-  });
-}
-
-setupBiscuitKey(Constants.KEY_LOB_API);
-setupBiscuitKey(Constants.KEY_IDME_CLIENT_ID);
-setupBiscuitKey(Constants.KEY_IDME_SECRET_ID);
 
 // Set address of document rendering microservice
 app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
