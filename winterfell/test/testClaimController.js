@@ -211,6 +211,7 @@ describe('SaveClaimController', function () {
       .expect(201, function() {
         Form.findOne({key: '1', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
+          should.exist(doc);
           doc.responses.should.deepEqual({key1: 'value1', key2: 'value2'});
           done();
         })
@@ -219,13 +220,29 @@ describe('SaveClaimController', function () {
 
   it('Should correctly calculate progress after save', function(done) {
     testSession
-      .post('/save/' + targetClaim._id + '/1')
+      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .send({filing_for_self: false})
       .expect(201, function() {
-        Form.findOne({key: '1', user: targetUser._id}, function(error, doc) {
+        Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
+          should.exist(doc);
           doc.answered.should.be.exactly(1);
-          doc.answerable.should.be.exactly(23);
+          doc.answerable.should.be.exactly(27);
+          done();
+        })
+      })
+  });
+
+  it('Should correctly calculate progress after save with hidden questions', function(done) {
+    testSession
+      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
+      .send({filing_for_self: true})
+      .expect(201, function() {
+        Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
+          should.not.exist(error);
+          should.exist(doc);
+          doc.answered.should.be.exactly(1);
+          doc.answerable.should.be.exactly(22);
           done();
         })
       })

@@ -10,7 +10,7 @@ var auth = require('../middlewares/auth');
 var _ = require('lodash');
 var bulk = require('bulk-require');
 var expressions = require("angular-expressions");
-var formlyFields = bulk('../webapp/src/forms/', ['*']);
+var formlyFields = bulk(__dirname + '/../forms/', ['*']);
 
 module.exports = function (app) {
 
@@ -160,11 +160,16 @@ module.exports = function (app) {
     var template = formlyFields[formName];
     var output = {answerable: 0, answered: _.size(data)};
 
+    if (!template) {
+      output.answerable = null;
+      return output;
+    }
+
     for (i = 0; i < template.fields.length; i++) {
       var field = template.fields[i];
       if (field.hasOwnProperty('hideExpression')) {
         evaluate = expressions.compile(field.hideExpression);
-        if (evaluate({model: data})) {
+        if (!evaluate({model: data})) {
           output.answerable += 1;
         }
       } else {
