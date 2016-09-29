@@ -59,14 +59,17 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     getClaimsForUser: function() {
       return httpGet("/claims");
     },
-    startClaim: function() {
-      return httpPost("/claims/create");
+    startClaim: function(data) {
+      return httpPost("/claims/create", data);
     },
     submitClaim: function(extClaimId) {
       return httpPost("/claim/" + extClaimId + "/submit");
     },
     discardClaim: function(extClaimId) {
       return httpDelete("/claim/" + extClaimId);
+    },
+    getFormsForUser: function(extClaimId) {
+      return httpGet("/claim/" + extClaimId + "/forms");
     }
   };
 }]);

@@ -57,10 +57,11 @@ module.exports = function (app) {
       }
     };
 
-
     User.findById(req.session.userId).exec(function (userErr, user) {
       if (user) {
-        ClaimService.findIncompleteClaimOrCreate(user._id, callback);
+        ClaimService.findIncompleteClaimOrCreate(user._id,
+          (req.body.forms || []),
+          callback);
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       }
