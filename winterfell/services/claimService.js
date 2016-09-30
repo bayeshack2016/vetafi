@@ -14,8 +14,8 @@ function ClaimService(app) {
 
 /**
  * For a given form and set of responses, calculate how many questions
- * were answered (which is simply then number of keys in the responses),
- * and more complicatedly, how many questions on the form were answerable,
+ * were answered (which is simply the number of keys in the responses),
+ * and more complicatedly: how many questions on the form were answerable,
  * which requires evaluating the angular hideExpression attribute for
  * each field against the current responses.
  *
@@ -61,7 +61,7 @@ module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
           callback(err, null);
           return;
         }
-        // Create all the forms and dont call the callback
+        // Create all the forms and don't call the callback
         // until this is done by using a promise chain.
         var promise = Q();
         forms.forEach(function(form) {
