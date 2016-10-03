@@ -40,7 +40,10 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     };
 
     $scope.clickChangePassword = function() {
-      $uibModal.open({ templateUrl: 'templates/modals/changePassword.html', windowClass: 'ngdialog-theme-default' });
+      $uibModal.open({
+        templateUrl: 'templates/modals/changePassword.html',
+        windowClass: 'ngdialog-theme-default'
+      });
     };
 
     $scope.clickLinkIdMe = function() {
@@ -58,11 +61,23 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     };
 
     $scope.clickDeleteAccount = function() {
-      net.deleteUserAccount().then(function(resp) {
-        Profile.logout();
-        if (resp.status == 200) {
-          $location.path('/');
-        }
+      var newScope = $scope.$new(true);
+      newScope.headline = "Delete Account";
+      newScope.message = "Are you sure you want to delete your account? All your saved personal information will be lost.";
+      newScope.choice = 'warning';
+      newScope.continueText = 'Delete';
+      var modal = $uibModal.open({
+        scope: newScope,
+        templateUrl: 'templates/modals/twoButtonModal.html',
+        windowClass: 'ngdialog-theme-default'
+      });
+      modal.result.then(function() {
+        net.deleteUserAccount().then(function(resp) {
+          Profile.logout();
+          if (resp.status == 200) {
+            $location.path('/');
+          }
+        });
       });
     };
 

@@ -32,19 +32,18 @@ app.controller("headerCtrl",
 
         }, function failure(res) {
           that.active = true;
-          var modal = $uibModal.open({templateUrl: 'templates/modals/sessionExpired.html', windowClass: 'ngdialog-theme-default'});
-          modal.result.then(
-            function success() {
-              console.log("success");
-              that.active = false;
-              $window.location.href = '/login';
-            },
-            function failure() {
-              console.log("fail");
-              that.active = false;
-              $window.location.href = '/login';
-            }
-          );
+          var newScope = $scope.$new(true);
+          newScope.headline = "Session Expired";
+          newScope.message = "For security reasons, your session has expired due to inactivity. Please log back in to continue your work.";
+          var modal = $uibModal.open({
+            scope: newScope,
+            templateUrl: 'templates/modals/oneButtonModal.html',
+            windowClass: 'ngdialog-theme-default'
+          });
+          modal.result.then(function() {
+            that.active = false;
+            $window.location.href = '/login';
+          });
         });
       };
 

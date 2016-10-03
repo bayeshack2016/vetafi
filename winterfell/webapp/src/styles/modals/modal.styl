@@ -3,10 +3,52 @@
 .vfi-modal
   padding: smallSpacing mediumSpacing
 
-  & .vfi-title-separator
-    width: 100%
-    margin: mediumSpacing 0
-    border-bottom: 1px solid colorLightGray
+#basic-one-button-modal
+#basic-two-button-modal
+  position: relative
 
-  & p
-    margin: largeSpacing 0
+  & .close-wrapper
+    position: absolute
+    top: miniSpacing
+    right: smallSpacing
+
+    & button
+      width: 36px
+      height: 36px
+      padding: 0
+      background: url('../../icons/x-gray.svg')
+      background-size: cover
+      background-repeat: no-repeat
+
+  & .header
+    height: largeSpacing
+    line-height: largeSpacing
+    border-bottom: 1px solid colorLighterGray
+
+    & h3
+      color: colorPrimaryDarkBlue
+
+  & .message
+    margin-top: mediumSpacing
+    margin-bottom: mediumSpacing
+
+    & p
+      width: 90%
+      margin: 0 auto
+      text-align: center
+
+  & .button-wrapper
+    text-align: center
+
+    & button
+      width: 6em
+      margin: 0 mediumSpacing
+
+      &.continue
+        background-color: colorPrimaryDarkBlue
+      &.cancel
+        background-color: colorLightGray
+      &.warning
+        background-color: colorRed
+      &.success
+        background-color: colorLightGreen

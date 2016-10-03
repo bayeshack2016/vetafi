@@ -15,18 +15,16 @@ describe('Biscuit', function () {
     });
 
     it('should return secrets that exist', function(done) {
-        biscuit.get('test::secret', function(err, secret) {
-            should.not.exist(err);
-            secret.should.equal('stuff');
-            done();
-        });
+        var secret = biscuit.get('test::secret');
+        secret.should.equal('stuff');
+        done();
     });
 
 
     it('should error if secret does not exist', function(done) {
-        biscuit.get('test::not_in_yaml', function(err, secret) {
-            err.should.be.Error();
-            done();
-        });
+        should(function () {
+            biscuit.get('test::not_in_yaml')
+        }).throw(Error);
+        done();
     });
 });

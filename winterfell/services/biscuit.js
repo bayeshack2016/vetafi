@@ -1,16 +1,13 @@
-var exec = require('child_process').exec;
+var execSync = require('child_process').execSync;
 var BISCUIT_BIN='biscuit';
 
 function Biscuit (app) {
     this.secretsYamlFile = app.get('secretsFile');
 }
 
-Biscuit.prototype.get = function(secret, callback) {
+Biscuit.prototype.get = function(secret) {
     var command = BISCUIT_BIN + ' get -f ' + this.secretsYamlFile + ' \'' + secret + '\'';
-    exec(command,
-        function(err, stdout, stderr) {
-            callback(err, stdout);
-        });
+    return execSync(command, {encoding: 'utf8'});
 };
 
 module.exports = Biscuit;
