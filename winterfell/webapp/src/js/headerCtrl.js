@@ -32,10 +32,11 @@ app.controller("headerCtrl",
 
         }, function failure(res) {
           that.active = true;
-          $scope.headline = "Session Expired";
-          $scope.message = "For security reasons, your session has expired due to inactivity. Please log back in to continue your work.";
+          var newScope = $scope.$new(true);
+          newScope.headline = "Session Expired";
+          newScope.message = "For security reasons, your session has expired due to inactivity. Please log back in to continue your work.";
           var modal = $uibModal.open({
-            scope: $scope,
+            scope: newScope,
             templateUrl: 'templates/modals/oneButtonModal.html',
             windowClass: 'ngdialog-theme-default'
           });

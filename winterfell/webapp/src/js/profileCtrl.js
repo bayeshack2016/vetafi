@@ -73,12 +73,13 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     };
 
     $scope.clickDeleteAccount = function() {
-      $scope.headline = "Delete Account";
-      $scope.message = "Are you sure you want to delete your account? All your saved personal information will be lost.";
-      $scope.choice = 'warning';
-      $scope.continueText = 'Delete';
+      var newScope = $scope.$new(true);
+      newScope.headline = "Delete Account";
+      newScope.message = "Are you sure you want to delete your account? All your saved personal information will be lost.";
+      newScope.choice = 'warning';
+      newScope.continueText = 'Delete';
       var modal = $uibModal.open({
-        scope: $scope,
+        scope: newScope,
         templateUrl: 'templates/modals/twoButtonModal.html',
         windowClass: 'ngdialog-theme-default'
       });
