@@ -1,0 +1,10 @@
+div.vfi-modal#basic-two-button-modal
+  div.close-wrapper
+    button.close-icon(ng-click="$dismiss()")
+  div.header
+    h3 {{headline}}
+  div.message
+    p {{message}}
+  div.button-wrapper
+    button.cancel(ng-click="$dismiss()") {{cancelText || 'Cancel'}}
+    button.continue(ng-class="{'success': choice == 'success', 'warning': choice == 'warning'}", ng-click="$close(true)") {{continueText || 'OK'}}
