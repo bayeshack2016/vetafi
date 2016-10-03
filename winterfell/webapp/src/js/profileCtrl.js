@@ -4,8 +4,14 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
   function($scope, $location, $window, Profile, claimService, net, $uibModal, $state) {
 
     $scope.user = Profile.user.user;
-    $scope.claims = [];
-    // $scope.claims = [
+    $scope.claims = []; // list of user's claims
+    // Every claim has the following:
+    // * claimId
+    // * date of submission or last modified
+    // * claim state (incomplete, submitted)
+    // * list of formIds
+
+    // $scope.claims = [ // TODO: have server return lastModifiedAt date and list of formIds per claim
     //   {
     //     id: '1234',
     //     date: '3/16/2016',
