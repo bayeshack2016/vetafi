@@ -1,113 +1,147 @@
 @import "standards.styl"
 
+colorSentTo = colorPurple
+iconWrapperSizePx = 40px
+
 #claim-view
-  width: maxLayoutWidthPx
-  margin: largeSpacing auto
-  padding: largeSpacing megaSpacing
-  box-sizing: border-box
   background-color: colorWhite
 
-  & .claim-header
+  #claim-view-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+    padding: largeSpacing 0 megaSpacing
+
+    & h3
+      margin-bottom: mediumSpacing
+
+    & .content
+      margin-bottom: largeSpacing
+
+    & .content-header
+      height: 2em
+      color: colorPrimaryDarkBlue
+
+      &.underline
+        border-bottom: 2px solid colorDarkGray
+
+#claim-view .general .line
+  display: block
+  width: 18em
+  height: 1.6em
+
+  & span:first-child
+    float: left
+  & span:last-child
+    float: right
+
+#claim-view .sent-to
+  & .line
     position: relative
+    padding: smallSpacing 0
     border-bottom: 1px solid colorLightGray
-    margin-bottom: mediumSpacing
 
-  & .vfi-actions
+    &:hover
+      color: colorSentTo
+      cursor: pointer
+
+      & .icon-wrapper
+        transform: scale(1.1)
+
+    &.collapsed
+      border-bottom: 1px solid transparent
+
+      & .down-arrow-icon
+        transform: rotate(180deg)
+        transform-origin: 50% 30%
+
+  & .collapse-wrapper
+    padding-left: (iconWrapperSizePx / 2)
+
+    & ul
+      border-left: 2px solid colorSentTo
+      padding-left: largeSpacing
+      list-style: none
+
+    &.email li
+      line-height: 2em
+    &.address li
+      margin-bottom: smallSpacing
+
+  & .icon-wrapper
+    display: inline-block
+    position: relative
+    width: iconWrapperSizePx
+    height: iconWrapperSizePx
+    margin-right: smallSpacing
+    vertical-align: middle
+    border-radius: 50%
+    background-color: colorSentTo
+
+    & .email-icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 28px
+      height: 28px
+      background: url('../icons/email-white.svg')
+      background-size: cover
+
+  & .down-arrow-icon
     position: absolute
-    top: 0px
+    top: 50%
     right: 0px
+    transform: translateY(-50%)
+    width: 32px
+    height: 32px
+    vertical-align: middle
+    background: url('../icons/arrow-down-unfilled-black.svg')
+    background-size: cover
 
-    & button
+
+#claim-view .forms
+  & .form-wrapper
+    padding: smallSpacing 0
+    border-bottom: 1px solid colorLightGray
+
+    & .icon-wrapper
+      display: inline-block
       position: relative
-      width: 42px
-      height: 42px
-      padding: 0
-      background-color: transparent
+      width: iconWrapperSizePx
+      height: iconWrapperSizePx
+      margin-right: smallSpacing
+      vertical-align: text-bottom
       border-radius: 50%
+      background-color: colorDarkGray
 
-      &:hover
-        background-color: colorPrimaryBlue
-
-      &.vfi-edit-btn
-        &:hover .vfi-icon
-          background: url('../icons/edit-white.svg')
-          background-size: cover
-        & .vfi-icon
-          background: url('../icons/edit-black.svg')
-          background-size: cover
-
-      &.vfi-discard-btn
-        &:hover .vfi-icon
-          background: url('../icons/delete-white.svg')
-          background-size: cover
-        & .vfi-icon
-          background: url('../icons/delete-black.svg')
-          background-size: cover
-
-      & .vfi-icon
+      & .form-icon
         position: absolute
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
-        width: 24px
-        height: 24px
+        width: 20px
+        height: 20px
+        background: url('../icons/docs-white.svg')
+        background-size: cover
 
-  & .vfi-title
-    margin-bottom: miniSpacing
+    & .form-header
+      display: inline-block
+      line-height: 1.2em
 
-  & .vfi-subtitle
-    margin-bottom: smallSpacing
-
-  & .file-content
-    height: megaSpacing
-    margin-bottom: largeSpacing
-    border-bottom: 1px solid colorLightGray
-
-    &:hover
-      cursor: pointer
-
-    & .file-text-wrapper
-      float: left
-      width: calc(100% - 36px)
-
-    & .file-title
-      font-family: SourceSansPro
-      font-size: lead_size
-
-    & .file-description
-      font-family: SourceSansPro
-      font-size: bodyFont_size
-
-    & .vfi-download-btn
+    & button
       float: right
 
+      @media screen and (max-width: minWindowWidthPx)
+        float: none
+        display: block
+        margin-top: miniSpacing
 
-  & .file-content:hover .vfi-download-btn
-    opacity: 1.0
-    visibility visible
-
-  & .vfi-download-btn
-    position: relative
-    width: 36px
-    height: 36px
-    padding: 0
-    background: none
-    opacity: 0.0
-    visibility: hidden
-    transition: all linear 0.1s
-
-    &:hover .vfi-hover-msg
-      opacity: 1.0
-      visibility: visible
-
-  & .vfi-hover-msg
-    position: absolute
-    left: calc(100% + 10px)
-    bottom: 0px
-    width: 80px
-    padding: miniSpacing
-    background-color: colorBlack
-    color: colorWhite
-    opacity: 0.0
-    visibility: hidden
-    transition: all linear 0.1s
+      & .download-icon
+        display: inline-block
+        width: 18px
+        height: 18px
+        margin-right: miniSpacing
+        vertical-align: middle
+        background: url('../icons/download-white.svg')
+        background-size: cover
