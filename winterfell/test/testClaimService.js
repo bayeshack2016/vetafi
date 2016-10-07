@@ -11,7 +11,6 @@ describe('ClaimService', function() {
   var server, targetUser;
 
   before(function (done) {
-    this.timeout(10000);
     server = require('../app');
 
     // Remove all users and create one user
@@ -84,10 +83,10 @@ describe('ClaimService', function() {
   });
 
   it('Create claim with forms', function (done) {
-    ClaimService.findIncompleteClaimOrCreate(targetUser._id, ['a', 'b', 'c'], function (err, claim) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, ['VBA-21-0966-ARE'], function (err, claim) {
       Form.find({claim: claim._id}, function (err, forms) {
         Boolean(err).should.equal(false);
-        forms.length.should.be.exactly(3);
+        forms.length.should.be.exactly(1);
         done();
       });
     });

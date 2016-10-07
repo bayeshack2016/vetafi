@@ -12,6 +12,8 @@ function ClaimService(app) {
   this.app = app;
 }
 
+module.exports = ClaimService;
+
 /**
  * For a given form and set of responses, calculate how many questions
  * were answered (which is simply the number of keys in the responses),
@@ -19,13 +21,16 @@ function ClaimService(app) {
  * which requires evaluating the angular hideExpression attribute for
  * each field against the current responses.
  *
- * @param formName
+ * @param formId
  * @param data
  * @returns {{answerable: number, answered: number}}
  */
-function calculateProgress(formName, data) {
+module.exports.calculateProgress = function calculateProgress(formId, data) {
   var evaluate, i;
-  var template = formlyFields[formName];
+  if (!(formId in formlyFields)) {
+    throw new Error("Unknown formId: " + formId);
+  }
+  var template = formlyFields[formId];
   var output = {answerable: 0, answered: _.size(data)};
 
   if (!template) {
@@ -46,11 +51,8 @@ function calculateProgress(formName, data) {
   }
 
   return output;
-}
+};
 
-module.exports.calculateProgress = calculateProgress;
-
-module.exports = ClaimService;
 module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
   return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, fileClaim) {
     if (err) {

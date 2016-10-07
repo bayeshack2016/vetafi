@@ -101,7 +101,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
       forms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
         var deferred = $q.defer();
 
-        net.getFormsForUser($stateParams.claimId).then(
+        net.getFormsForClaim($stateParams.claimId).then(
           function success(res) {
             deferred.resolve(res.data);
           }, function failure(res) {
