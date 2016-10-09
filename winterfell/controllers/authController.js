@@ -1,7 +1,8 @@
 var _ = require('lodash');
 var passport = require('passport');
-var constants = require('./../utils/constants');
 var http = require('http-status-codes');
+var auth = require('../middlewares/auth');
+var constants = require('./../utils/constants');
 var httpErrors = require('./../utils/httpErrors');
 var User = require('./../models/user');
 var UserValues = require('./../models/userValues');
@@ -117,5 +118,36 @@ module.exports = function (app) {
       failureRedirect: '/login'
     }
   ));
+
+
+  /*
+   * Other Endpoints
+   */
+   app.post('/auth/password', auth.authenticatedOr404, function(req, res) {
+     console.log('[authPassword] request received for ' + JSON.stringify(req.body));
+     var oldPwd = req.body.old;
+     User.findById(req.session.userId).exec(function(err, user) {
+       if (err) {
+         res.sendStatus(http.INTERNAL_SERVER_ERROR);
+         return;
+       }
+       if (user) {
+         if (oldPwd != user.password) {
+           res.status(http.BAD_REQUEST).send(httpErrors.AUTH_MISMATCH);
+         } else {
+           // save new password
+           User.update(
+             { _id: req.session.userId }, // query
+             { password: req.body.new }, // new password
+             function() {
+                res.sendStatus(http.NO_CONTENT);
+             }
+           );
+         }
+       } else {
+         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
+       }
+     });
+   });
 
 };
