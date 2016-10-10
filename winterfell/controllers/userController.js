@@ -1,14 +1,14 @@
-var ApiLog = require('./../middlewares/api-logger');
 var auth = require('../middlewares/auth');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
+var LogHelper = require('./../utils/logHelper');
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var UserService = require('./../services/userService');
 
 module.exports = function (app) {
-  var middlewares = [auth.authenticatedOr404, ApiLog.logApi];
+  var middlewares = [auth.authenticatedOr404, LogHelper.logApi];
 
   // Get a user's information based on externalId
   app.get('/user', middlewares, function (req, res) {

@@ -25,6 +25,7 @@ var log = bunyan.createLogger({
   }]
 });
 app.log = log;
+app.logApi = app.log.child({widget_type: 'api'});
 app.log.info("New logger created.");
 
 // Initialize Node Modules`

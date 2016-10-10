@@ -1,4 +1,3 @@
-var ApiLog = require('./../middlewares/api-logger');
 var http = require('http-status-codes');
 var LogHelper = require('./../utils/logHelper');
 /*
@@ -8,7 +7,7 @@ var LogHelper = require('./../utils/logHelper');
   and you should get a 200 (OK) status.
 */
 module.exports = function (app) {
-  app.get('/healthz', [ApiLog.logApi], function (req, res) {
+  app.get('/healthz', [LogHelper.logApi], function (req, res) {
     LogHelper.logConsole('health OK!');
     res.sendStatus(http.OK);
   });
