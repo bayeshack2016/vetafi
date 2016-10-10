@@ -1,8 +1,9 @@
-var request = require('request');
-var http = require('http-status-codes');
 var config = require('../config/documentRendering');
+var http = require('http-status-codes');
+var LogHelper = require('../utils/logHelper');
 var redis = require("redis"),
     client = redis.createClient({'return_buffers': true});
+var request = require('request');
 var uuid = require('uuid');
 /**
  * Endpoint for rendering a PDF form with populated information.
@@ -17,7 +18,7 @@ var uuid = require('uuid');
  */
 module.exports = function (app) {
 
-    app.post('/render/:form', function (req, res) {
+    app.post('/render/:form', [LogHelper.logApi], function (req, res) {
         if (req.session.key) {
             request({
                 url: config.address + 'create/' + req.params.form,
@@ -48,7 +49,7 @@ module.exports = function (app) {
         }
     });
 
-    app.get('/document/:id', function (req, res) {
+    app.get('/document/:id', [LogHelper.logApi], function (req, res) {
         if (req.session.key) {
             client.hget(
                 req.session.key,
