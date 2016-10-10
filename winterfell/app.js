@@ -21,11 +21,11 @@ app.baseUrl = Constants.baseUrl[app.environment];
 var log = bunyan.createLogger({
   name: 'vetafi_' + environment,
   streams: [{
-    path: '../logs/app.js'
+    path: '../logs/app.js' // todo: these logs need to be moved into the same level
   }]
 });
-app.log = log;
-app.logApi = app.log.child({widget_type: 'api'});
+app.log = log;                                    // Main logger
+app.logApi = app.log.child({widget_type: 'api'}); // Logger for API request/responses
 app.log.info("New logger created.");
 
 // Initialize Node Modules`
