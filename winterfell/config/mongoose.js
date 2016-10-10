@@ -1,3 +1,4 @@
+var LogHelper = require('../utils/logHelper');
 var mongoose = require('mongoose');
 
 module.exports = function(environment) {
@@ -9,12 +10,12 @@ module.exports = function(environment) {
 
   var db = mongoose.connection;
   db.on('error', function (err) {
-      console.log('Error connecting to database ', err);
+    LogHelper.logConsole('Error connecting to database ' + err);
   });
   db.on('open', function () {
-      console.log('Database connection opened at ' + address);
+    LogHelper.logConsole('Database connection opened at ' + address);
   });
   db.on('disconnected', function (err) {
-      console.log('Database disconnected.');
+    LogHelper.logConsole('Database disconnected.');
   });
 };

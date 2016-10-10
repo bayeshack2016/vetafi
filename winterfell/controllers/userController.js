@@ -1,16 +1,17 @@
-var mongoose = require('mongoose');
+var ApiLog = require('./../middlewares/api-logger');
+var auth = require('../middlewares/auth');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
+var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var UserService = require('./../services/userService');
-var auth = require('../middlewares/auth');
 
 module.exports = function (app) {
+  var middlewares = [auth.authenticatedOr404, ApiLog.logApi];
 
   // Get a user's information based on externalId
-  app.get('/user', auth.authenticatedOr404, function (req, res) {
-    console.log('[getUser] request received for ' + req.session.userId);
+  app.get('/user', middlewares, function (req, res) {
     User.findById(req.session.userId).exec(function(err, user) {
       if (user) {
         res.status(http.OK).send({user: User.externalize(user)});
@@ -21,14 +22,12 @@ module.exports = function (app) {
   });
 
   // Modify a user's information - find by externalId
-  app.post('/user/:extUserId/modify', function (req, res) {
-    console.log('[modifyUser] request received for ' + JSON.stringify(req.body));
-    res.status(http.OK).send({});
+  app.post('/user/:extUserId/modify', middlewares, function (req, res) {
+    res.sendStatus(http.OK);
   });
 
   // Set a user account to INACTIVE - find by externalId
-  app.delete('/user', auth.authenticatedOr404, function (req, res) {
-    console.log('[deleteUser] request received for ' + req.session.userId);
+  app.delete('/user', middlewares, function (req, res) {
     var callback = function (dbErr) {
       if (dbErr) {
         console.log('[deleteUser] Not found!');
@@ -38,7 +37,6 @@ module.exports = function (app) {
         // Destroy session
         req.session.destroy(function (redisErr) {
           if(redisErr) {
-            console.log(redisErr);
             res.status(http.INTERNAL_SERVER_ERROR).send();
           } else {
             res.sendStatus(http.OK);
@@ -55,7 +53,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/user/values', function(req, res) {
+  app.get('/user/values', middlewares, function(req, res) {
     User.findById(req.session.userId).exec(function(err, user) {
       if (err) {
         res.status(http.INTERNAL_SERVER_ERROR).send();
@@ -72,7 +70,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/user/values', function(req, res) {
+  app.post('/user/values', middlewares, function(req, res) {
     var valuesToUpdate = req.body.values;
     if (valuesToUpdate && valuesToUpdate.key && valuesToUpdate.value) {
       User.findById(req.session.userId).exec(function(err, user) {

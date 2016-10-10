@@ -1,9 +1,10 @@
 var http = require('http-status-codes');
 
+var Log;
 function Auth(app) {
   this.app = app;
+  Log = app.log;
 }
-
 module.exports = Auth;
 
 module.exports.authenticatedOr404 = function (req, res, next) {
@@ -11,7 +12,7 @@ module.exports.authenticatedOr404 = function (req, res, next) {
     return next();
   }
 
-  console.log("Not authed");
+  Log.info("No session userId");
   res.sendStatus(http.NOT_FOUND);
 };
 
