@@ -1,5 +1,5 @@
 var Constants = require('../utils/constants');
-var LogHelper = require('../utils/logHelper');
+var Log = require('../utils/logHelper');
 var session = require('express-session');
 var redisStore = require('connect-redis')(session);
 var RedisService = require('../services/redisService');
@@ -10,10 +10,10 @@ module.exports = function (app) {
 
   var redisClient = RedisService.getClient();
   redisClient.on('connect', function() {
-    LogHelper.logConsole('Redis connected at ' + host + ':' + port);
+    Log.console('Redis connected at ' + host + ':' + port);
   });
   redisClient.on('error', function(err) {
-    LogHelper.logConsole('Redis error: ' + err);
+    Log.console('Redis error: ' + err);
   });
   redisClient.set('project', 'Vetafi');
 

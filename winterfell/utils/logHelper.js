@@ -1,16 +1,16 @@
 var mung = require('express-mung');
 
-var Log, ApiLog;
+var mainLog, apiLog;
 function LogHelper(app) {
   this.app = app;
-  Log = app.log;
-  ApiLog = app.logApi;
+  mainLog = app.log;
+  apiLog = app.logApi;
 
   // Log endpoint response
   app.use(mung.json(
     function transform(body, req, res) {
       var eventTag = req.method + " " + req.url;
-      ApiLog.info({
+      apiLog.info({
         response: {
           event: eventTag,
           body: body,
@@ -24,17 +24,16 @@ function LogHelper(app) {
 
 module.exports = LogHelper;
 
-// Log console
-module.exports.logConsole = function(msg) {
-  Log.info(msg);
+// Log console (info)
+module.exports.console = function(msg) {
+  mainLog.info(msg);
   console.log(msg);
 };
 
-// Log endpoint request
-module.exports.logApi = function(req, res, next) {
+// Log endpoint request (info)
+module.exports.api = function(req, res, next) {
   var eventTag = req.method + " " + req.url;
-
-  Log.info({
+  apiLog.info({
     request: {
       event: eventTag,
       params: req.params,

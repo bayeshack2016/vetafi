@@ -2,7 +2,7 @@ var _ = require('lodash');
 var constants = require('./../utils/constants');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var LogHelper = require('./../utils/logHelper');
+var Log = require('./../utils/logHelper');
 var passport = require('passport');
 var User = require('./../models/user');
 var UserValues = require('./../models/userValues');
@@ -11,7 +11,7 @@ var UserService = require('./../services/userService');
 module.exports = function (app) {
 
   // Endpoint for routing sign-up
-  app.get('/signup', [LogHelper.logApi], function(req, res) {
+  app.get('/signup', [Log.api], function(req, res) {
     if (req.session.key) {
       res.redirect('/');
     } else {
@@ -20,7 +20,7 @@ module.exports = function (app) {
   });
 
   // Endpoint for routing login
-  app.get('/login', [LogHelper.logApi], function(req, res) {
+  app.get('/login', [Log.api], function(req, res) {
     if (req.session.key) {
       res.redirect('/');
     } else {
@@ -29,7 +29,7 @@ module.exports = function (app) {
   });
 
   // Endpoint to authenticate sign-ups and begin session
-  app.post('/auth/signup', [LogHelper.logApi], function(req, res) {
+  app.post('/auth/signup', [Log.api], function(req, res) {
     var data = {
       email: req.body.email,
       password: req.body.password
@@ -69,7 +69,7 @@ module.exports = function (app) {
   });
 
   // Endpoint to authenticate logins and begin session
-  app.post('/auth/login', [passport.authenticate('local'), LogHelper.logApi], function(req, res) {
+  app.post('/auth/login', [passport.authenticate('local'), Log.api], function(req, res) {
     if (req.user) {
       req.session.key = req.body.email;
       req.session.userId = req.user._id;
@@ -81,7 +81,7 @@ module.exports = function (app) {
   });
 
   // Endpoint to logout and remove session
-  app.get('/auth/logout', [LogHelper.logApi], function(req, res) {
+  app.get('/auth/logout', [Log.api], function(req, res) {
     req.session.destroy(function (err) {
         if(err) {
             res.sendStatus(http.INTERNAL_SERVER_ERROR);
@@ -100,7 +100,7 @@ module.exports = function (app) {
   app.get('/auth/idme',
     [
       passport.authenticate('idme', {scope: 'military'}),
-      LogHelper.logApi
+      Log.api
     ]
   );
 
@@ -113,7 +113,7 @@ module.exports = function (app) {
         successRedirect: '/',
         failureRedirect: '/login'
       }),
-      LogHelper.logApi
+      Log.api
     ]
   );
 

@@ -5,7 +5,7 @@ var Constants = require('./utils/constants');
 var documentRenderingConfig = require('./config/documentRendering');
 var express = require('express');
 var fs = require('fs');
-var LogHelper = require('./utils/logHelper');
+var Log = require('./utils/logHelper');
 var path = require('path');
 var session = require('express-session');
 
@@ -24,8 +24,8 @@ var log = bunyan.createLogger({
     path: '../logs/app.js' // todo: these logs need to be moved into the same level
   }]
 });
-app.log = log;                                    // Main logger
-app.logApi = app.log.child({widget_type: 'api'}); // Logger for API request/responses
+app.log = log;                                            // Main logger
+app.logApi = app.log.child({widget_type: 'api'});         // Logger for API request/responses
 app.log.info("New logger created.");
 
 // Initialize Node Modules`
@@ -40,7 +40,7 @@ loadIntoBuild(app, 'utils');
 loadIntoBuild(app, 'middlewares');
 loadIntoBuild(app, 'services');
 loadIntoBuild(app, 'controllers');
-LogHelper.logConsole("Node modules loaded.");
+Log.console("Node modules loaded.");
 
 // Initialize Biscuit
 app.set('secretsFile', require('./config/biscuit')[environment]);
@@ -54,7 +54,7 @@ function setupBiscuitKey(keyName) {
 setupBiscuitKey(Constants.KEY_LOB_API);
 setupBiscuitKey(Constants.KEY_IDME_CLIENT_ID);
 setupBiscuitKey(Constants.KEY_IDME_SECRET_ID);
-LogHelper.logConsole("Biscuit setup.");
+Log.console("Biscuit setup.");
 
 // Serve static files
 app.use(express.static(path.join(__dirname, '/webapp/build')));
@@ -73,4 +73,4 @@ var port = 3999;
 var server = app.listen(process.env.PORT || port);
 server.app = app;
 module.exports = server;
-LogHelper.logConsole("Listening on port " + port + ". Winter is coming!");
+Log.console("Listening on port " + port + ". Winter is coming!");

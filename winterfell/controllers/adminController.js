@@ -3,7 +3,7 @@ var _ = require('lodash');
 var Claim = require('../models/claim');
 var ClaimService = require('./../services/claimService');
 var http = require('http-status-codes');
-var LogHelper = require('./../utils/logHelper');
+var Log = require('./../utils/logHelper');
 var User = require('../models/user');
 var UserService = require('./../services/userService');
 var uuid = require('uuid');
@@ -113,7 +113,7 @@ module.exports = function (app) {
     });
   }
 
-  app.post('/admin/reset-test-users', [LogHelper.logApi], function (req, res) {
+  app.post('/admin/reset-test-users', [Log.api], function (req, res) {
     removeTestUsers(function() {
       _.forEach(allTestUsers, function(userToCreate) {
         createTestUser(userToCreate);
