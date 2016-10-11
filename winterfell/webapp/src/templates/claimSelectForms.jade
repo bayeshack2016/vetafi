@@ -1,6 +1,5 @@
 #select-forms-view
   vfi-breadcrumbs(page="1")
-<<<<<<< HEAD
   #select-forms-wrapper
     h3 Select Forms for Claim
 
@@ -12,11 +11,11 @@
 
       div.form-wrapper(ng-repeat="(formId, form) in forms")
         div.form-content
-          div.state-wrapper(ng-class="{'required': form.state=='required_incomplete', 'complete': form.state=='complete'}")
+          div.state-wrapper(ng-class="{'required': formTemplates[form.key].required, 'complete': form.answered == form.answerable}")
             div.state-icon
           div.form-title-wrapper
-            h5.title(ng-class="{'required': form.state=='required_incomplete'}") {{form.id}}
-            h5.warning.required(ng-if="form.state=='required_incomplete'") &nbsp;(required)
+            h5.title(ng-class="{'required': formTemplates[form.key].required}") {{form.id}}
+            h5.warning.required(ng-if="form.state == formTemplates[form.key].required") &nbsp;(required)
             h5.subtitle {{formTemplates[form.key].unofficialTitle}}
           div.form-summary {{formTemplates[form.key].unofficialDescription}}
         div.form-buttons
