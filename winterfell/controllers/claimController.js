@@ -8,9 +8,6 @@ var Form = require('../models/form');
 var UserValues = require('../models/userValues');
 var auth = require('../middlewares/auth');
 var _ = require('lodash');
-var bulk = require('bulk-require');
-var expressions = require("angular-expressions");
-var formlyFields = bulk(__dirname + '/../forms/', ['*']);
 
 module.exports = function (app) {
 
@@ -69,7 +66,7 @@ module.exports = function (app) {
   });
 
   function handleClaimStateChange(extClaimId, claimState, callback) {
-    Claim.findOne({externalId: extClaimId}).exec(function(err, claim) {
+    Claim.findOne({externalId: extClaimId}, function(err, claim) {
       if (err) {
         callback(err, null);
         return;
@@ -145,44 +142,8 @@ module.exports = function (app) {
     );
   }
 
-  /**
-   * For a given form and set of responses, calculate how many questions
-   * were answered (which is simply then number of keys in the responses),
-   * and more complicatedly, how many questions on the form were answerable,
-   * which requires evaluating the angular hideExpression attribute for
-   * each field against the current responses.
-   *
-   * @param formName
-   * @param data
-   * @returns {{answerable: number, answered: number}}
-   */
-  function calculateProgress(formName, data) {
-    var evaluate, i;
-    var template = formlyFields[formName];
-    var output = {answerable: 0, answered: _.size(data)};
-
-    if (!template) {
-      output.answerable = null;
-      return output;
-    }
-
-    for (i = 0; i < template.fields.length; i++) {
-      var field = template.fields[i];
-      if (field.hasOwnProperty('hideExpression')) {
-        evaluate = expressions.compile(field.hideExpression);
-        if (!evaluate({model: data})) {
-          output.answerable += 1;
-        }
-      } else {
-        output.answerable += 1;
-      }
-    }
-
-    return output;
-  }
-
   app.post('/save/:claim/:form', auth.authenticatedOr404, function (req, res) {
-    var progress = calculateProgress(req.params.form, req.body);
+    var progress = ClaimService.calculateProgress(req.params.form, req.body);
     Form.findOneAndUpdate(
       {
         key: req.params.form,
@@ -218,26 +179,47 @@ module.exports = function (app) {
       });
   });
 
-  app.post('/claim/:claim/form/:form', auth.authenticatedOr404, function (req, res) {
-    Form.findOne({
-        key: req.params.form,
-        user: req.session.userId,
-        claim: req.params.claim
-      },
-      function (error, form) {
-        res.status(http.OK).send({form: form});
+  app.get('/claim/:claim/form/:form', auth.authenticatedOr404, function (req, res) {
+    Claim.findOne({externalId: req.params.claim}, function(error, claim) {
+      if (error) {
+        console.log(error);
+        res.sendStatus(http.INTERNAL_SERVER_ERROR);
+        return;
       }
-    );
+
+      Form.findOne({
+          key: req.params.form,
+          user: req.session.userId,
+          claim: claim._id
+        },
+        function (error, form) {
+          res.status(http.OK).send({form: form});
+        }
+      );
+    });
   });
 
-  app.post('/claim/:claim/forms', auth.authenticatedOr404, function (req, res) {
-    Form.find({
-        user: req.session.userId,
-        claim: req.params.claim
-      },
-      function (error, forms) {
-        res.status(http.OK).send({form: forms});
+  app.get('/claim/:claim/forms', auth.authenticatedOr404, function (req, res) {
+    Claim.findOne({externalId: req.params.claim}, function(error, claim) {
+      if (error) {
+        console.log(error);
+        res.sendStatus(http.INTERNAL_SERVER_ERROR);
+        return;
       }
-    );
+
+      Form.find({
+          user: req.session.userId,
+          claim: claim._id
+        },
+        function (error, forms) {
+          if (error) {
+            console.log(error);
+            res.sendStatus(http.INTERNAL_SERVER_ERROR);
+            return;
+          }
+          res.status(http.OK).send(forms);
+        }
+      );
+    });
   });
 };

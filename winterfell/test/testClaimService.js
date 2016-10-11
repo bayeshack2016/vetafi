@@ -7,26 +7,28 @@ var User = require('../models/user');
 var UserService = require('../services/userService');
 var Form = require('../models/form');
 
-
 describe('ClaimService', function() {
-  var targetUser = undefined;
+  var server, targetUser;
 
-  before(function(done) {
-     // Remove all users and create one user
-     User.remove({}, function() {
-       var user = {
-         firstname: 'User1',
-         lastname: 'McUser',
-         email: 'user1@email.com',
-         password: 'testword',
-         state: User.State.ACTIVE
-       };
-       User.create(user, function(err, user) {
-         targetUser = user;
-         done();
-       });
-     });
-   });
+  before(function (done) {
+    this.timeout(10000);
+    server = require('../app');
+
+    // Remove all users and create one user
+    User.remove({}, function () {
+      var user = {
+        firstname: 'User1',
+        lastname: 'McUser',
+        email: 'user1@email.com',
+        password: 'testword',
+        state: User.State.ACTIVE
+      };
+      User.create(user, function (err, user) {
+        targetUser = user;
+        done();
+      });
+    });
+  });
 
   beforeEach(function(done) {
     Claim.remove({}, done);
@@ -84,6 +86,7 @@ describe('ClaimService', function() {
   it('Create claim with forms', function (done) {
     ClaimService.findIncompleteClaimOrCreate(targetUser._id, ['a', 'b', 'c'], function (err, claim) {
       Form.find({claim: claim._id}, function (err, forms) {
+        Boolean(err).should.equal(false);
         forms.length.should.be.exactly(3);
         done();
       });
