@@ -10,7 +10,6 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     $scope.numRequiredCompleted = _.sum(_.map(forms, function (form) {
       return form.answered == form.answerable ? 1 : 0;
     }));
-
     $scope.numRequiredForms = forms.length;
 
     $scope.onClickCancel = function() {

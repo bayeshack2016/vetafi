@@ -6,7 +6,7 @@
     div.section.required
       div.section-header
         h4 Required Forms:
-        uib-progressbar.progressbar(value="numRequiredCompleted", max="numRequiredForms", type="{{progressBarType}}")
+        uib-progressbar.progressbar(value="numRequiredCompleted", max="numRequiredForms", type="{{numRequiredCompleted == numRequiredForms ? 'success' : 'info'}}")
           span {{numRequiredCompleted}}/{{numRequiredForms}}
 
       div.form-wrapper(ng-repeat="(formId, form) in forms")
