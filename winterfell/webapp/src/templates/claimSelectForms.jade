@@ -6,20 +6,20 @@
     div.section.required
       div.section-header
         h4 Required Forms:
-        uib-progressbar.progressbar(value="numRequiredCompleted", max="requiredForms.length", type="{{progressBarType}}")
-          span {{numRequiredCompleted}}/{{requiredForms.length}}
+        uib-progressbar.progressbar(value="numRequiredCompleted", max="numRequiredForms", type="{{numRequiredCompleted == numRequiredForms ? 'success' : 'info'}}")
+          span {{numRequiredCompleted}}/{{numRequiredForms}}
 
-      div.form-wrapper(ng-repeat="form in requiredForms")
+      div.form-wrapper(ng-repeat="(formId, form) in forms")
         div.form-content
-          div.state-wrapper(ng-class="{'required': form.state=='required_incomplete', 'complete': form.state=='complete'}")
+          div.state-wrapper(ng-class="{'required': formTemplates[form.key].required, 'complete': form.answered == form.answerable}")
             div.state-icon
           div.form-title-wrapper
-            h5.title(ng-class="{'required': form.state=='required_incomplete'}") {{form.id}}
-            h5.warning.required(ng-if="form.state=='required_incomplete'") &nbsp;(required)
-            h5.subtitle {{form.unofficialTitle}}
-          div.form-summary {{form.unofficialDescription}}
+            h5.title(ng-class="{'required': formTemplates[form.key].required}") {{form.id}}
+            h5.warning.required(ng-if="form.state == formTemplates[form.key].required") &nbsp;(required)
+            h5.subtitle {{formTemplates[form.key].unofficialTitle}}
+          div.form-summary {{formTemplates[form.key].unofficialDescription}}
         div.form-buttons
-          button.edit-btn(ui-sref="root.form({claimId: claimId, formId: form.id})")
+          button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
             div.edit-icon
             | Edit
           button.download-btn
@@ -28,7 +28,7 @@
 
     div.button-wrapper
       button.cancel-btn Cancel
-      button.done-btn(ng-class="{'ready':numRequiredCompleted == requiredForms.length}") Done
+      button.done-btn(ng-class="{'ready':numRequiredCompleted == numRequiredForms}") Done
       div.clearer
 
 vfi-footer

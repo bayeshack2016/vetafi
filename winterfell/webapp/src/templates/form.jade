@@ -17,7 +17,7 @@ div#vfi-form-view
                     | Clear Signature
 
         div.row.form-submit-button-group
-            button(type="submit")
+            button(type="submit" ng-class="{'disabled': answered != answerable}")
                 | Submit
             button(ng-click="render()")
                 | Download

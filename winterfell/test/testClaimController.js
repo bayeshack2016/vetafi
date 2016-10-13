@@ -9,6 +9,7 @@ var UserValues = require('../models/userValues');
 var UserService = require('./../services/userService');
 var session = require('supertest-session');
 var uuid = require('uuid');
+var claimController = require('./../controllers/claimController.js');
 
 describe('ClaimController', function() {
   var targetUser;
@@ -205,14 +206,45 @@ describe('SaveClaimController', function () {
 
   it('Should save the claim form after signin', function(done) {
     testSession
-      .post('/save/' + targetClaim._id + '/1')
+      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .send({key1: 'value1', key2: 'value2'})
       .expect(201, function() {
-        Form.findOne({key: '1', user: targetUser._id}, function(error, doc) {
+        Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
+          should.exist(doc);
           doc.responses.should.deepEqual({key1: 'value1', key2: 'value2'});
           done();
         })
       });
+  });
+
+  it('Should correctly calculate progress after save', function(done) {
+    testSession
+      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
+      .send({filing_for_self: false})
+      .expect(201, function() {
+        Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
+          should.not.exist(error);
+          should.exist(doc);
+          doc.answered.should.be.exactly(1);
+          doc.answerable.should.be.exactly(27);
+          done();
+        })
+      })
+  });
+
+  it('Should correctly calculate progress after save with hidden questions', function(done) {
+    testSession
+      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
+      .send({filing_for_self: true})
+      .expect(201, function() {
+        Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
+          should.not.exist(error);
+          should.exist(doc);
+          doc.answered.should.be.exactly(1);
+          doc.answerable.should.be.exactly(22);
+          done();
+        })
+      })
   });
 });

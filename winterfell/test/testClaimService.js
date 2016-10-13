@@ -5,26 +5,29 @@ var Claim = require('../models/claim');
 var ClaimService = require('../services/claimService');
 var User = require('../models/user');
 var UserService = require('../services/userService');
+var Form = require('../models/form');
 
 describe('ClaimService', function() {
-  var targetUser = undefined;
+  var server, targetUser;
 
-  before(function(done) {
-     // Remove all users and create one user
-     User.remove({}, function() {
-       var user = {
-         firstname: 'User1',
-         lastname: 'McUser',
-         email: 'user1@email.com',
-         password: 'testword',
-         state: User.State.ACTIVE
-       };
-       User.create(user, function(err, user) {
-         targetUser = user;
-         done();
-       });
-     });
-   });
+  before(function (done) {
+    server = require('../app');
+
+    // Remove all users and create one user
+    User.remove({}, function () {
+      var user = {
+        firstname: 'User1',
+        lastname: 'McUser',
+        email: 'user1@email.com',
+        password: 'testword',
+        state: User.State.ACTIVE
+      };
+      User.create(user, function (err, user) {
+        targetUser = user;
+        done();
+      });
+    });
+  });
 
   beforeEach(function(done) {
     Claim.remove({}, done);
@@ -36,7 +39,7 @@ describe('ClaimService', function() {
       state: Claim.State.INCOMPLETE
     });
     existingClaim.save(function(err, claim) {
-      ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
+      ClaimService.findIncompleteClaimOrCreate(targetUser._id, [], function(err, claim) {
         Boolean(err).should.equal(false);
         Boolean(claim).should.equal(true);
         done();
@@ -45,7 +48,7 @@ describe('ClaimService', function() {
   });
 
   it('Create new INCOMPLETE Claim - success', function(done) {
-    ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, [], function(err, claim) {
       Boolean(err).should.equal(false);
       claim.userId.should.equal(targetUser._id);
       claim.state.should.equal(Claim.State.INCOMPLETE);
@@ -54,7 +57,7 @@ describe('ClaimService', function() {
   });
 
   it('Set Claim state to SUBMITTED', function(done) {
-    ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, [], function(err, claim) {
       ClaimService.setClaimState(claim._id, Claim.State.SUBMITTED, function(err, update) {
         Boolean(err).should.equal(false);
         update.ok.should.equal(1);
@@ -67,7 +70,7 @@ describe('ClaimService', function() {
   });
 
   it('Set Claim state to DISCARDED', function(done) {
-    ClaimService.findIncompleteClaimOrCreate(targetUser._id, function(err, claim) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, [], function(err, claim) {
       ClaimService.setClaimState(claim._id, Claim.State.DISCARDED, function(err, update) {
         Boolean(err).should.equal(false);
         update.ok.should.equal(1);
@@ -79,8 +82,14 @@ describe('ClaimService', function() {
     });
   });
 
-  xit('Add form to claim', function(done) {
-
+  it('Create claim with forms', function (done) {
+    ClaimService.findIncompleteClaimOrCreate(targetUser._id, ['VBA-21-0966-ARE'], function (err, claim) {
+      Form.find({claim: claim._id}, function (err, forms) {
+        Boolean(err).should.equal(false);
+        forms.length.should.be.exactly(1);
+        done();
+      });
+    });
   });
 
   xit('Remove form from claim', function(done) {
