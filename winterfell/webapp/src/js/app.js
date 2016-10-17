@@ -59,9 +59,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
   });
 
   $stateProvider.state({
-    name: 'root.profile.military',
-    url: '/military',
-    templateUrl: 'templates/profile/military.html'
+    name: 'root.profile.general',
+    url: '/general',
+    templateUrl: 'templates/profile/general.html'
   });
 
   $stateProvider.state({
@@ -96,7 +96,22 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     name: 'root.claimselect',
     url: '/claim/{claimId}/select-forms',
     templateUrl: 'templates/claimSelectForms.html',
-    controller: 'claimSelectFormsCtrl'
+    controller: 'claimSelectFormsCtrl',
+    resolve: {
+      forms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+        var deferred = $q.defer();
+
+        net.getFormsForClaim($stateParams.claimId).then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+
+        return deferred.promise;
+      }]
+    }
   });
 
   $stateProvider.state({

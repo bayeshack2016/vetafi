@@ -50,6 +50,7 @@
       ],
       "templateOptions": {
         "label": "Your Email",
+        "autocomplete": "email"
       }
     },
     {
@@ -157,7 +158,8 @@
       "type": "input",
       "templateOptions": {
         "label": "First Name",
-        "placeholder": "John"
+        "placeholder": "John",
+        "autocomplete": "given-name"
       }
     },
     {
@@ -165,7 +167,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Middle Initial",
-        "placeholder": "C"
+        "placeholder": "C",
+        "autocomplete": "additional-name"
       }
     },
     {
@@ -173,7 +176,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Last Name",
-        "placeholder": "Doe"
+        "placeholder": "Doe",
+        "autocomplete": "family-name"
       }
     },
     {
@@ -181,7 +185,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Claimant's First Name",
-        "placeholder": "John"
+        "placeholder": "John",
+        "autocomplete": "given-name"
       },
       "hideExpression": "model.filing_for_self"
     },
@@ -190,7 +195,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Claimant's Middle Initial",
-        "placeholder": "C"
+        "placeholder": "C",
+        "autocomplete": "additional-name"
       },
       "hideExpression": "model.filing_for_self"
     },
@@ -199,7 +205,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Claimant's Last Name",
-        "placeholder": "Doe"
+        "placeholder": "Doe",
+        "autocomplete": "family-name"
       },
       "hideExpression": "model.filing_for_self"
     },
@@ -208,7 +215,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Veteran Address Line 1",
-        "placeholder": "55 Magnolia St."
+        "placeholder": "55 Magnolia St.",
+        "autocomplete": "address-line1"
       }
     },
     {
@@ -216,7 +224,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Veteran Address Line 2",
-        "placeholder": ""
+        "placeholder": "",
+        "autocomplete": "address-line2"
       }
     },
     {
@@ -224,7 +233,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Veteran Apartment Number",
-        "placeholder": "Name"
+        "placeholder": "Name",
+        "autocomplete": "address-line3"
       }
     },
     {
@@ -232,7 +242,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Veteran City",
-        "placeholder": ""
+        "placeholder": "",
+        "autocomplete": "address-level2"
       }
     },
     {
@@ -243,6 +254,7 @@
       ],
       "templateOptions": {
         "label": "Veteran State",
+        "autocomplete": "address-level1"
       }
     },
     {
@@ -253,6 +265,7 @@
       ],
       "templateOptions": {
         "label": "Veteran Zipcode",
+        "autocomplete": "postal-code"
       }
     },
     {
@@ -260,7 +273,8 @@
       "type": "input",
       "templateOptions": {
         "label": "Veteran Country",
-        "placeholder": "USA"
+        "placeholder": "USA",
+        "autocomplete": "country-name"
       }
     },
     {
@@ -270,7 +284,8 @@
         "phoneNumber"
       ],
       "templateOptions": {
-        "label": "Your Phone Number"
+        "label": "Your Phone Number",
+        "autocomplete": "tel"
       }
     },
     {
@@ -289,7 +304,8 @@
       ],
       "templateOptions": {
         "label": "Veteran Date of Birth",
-        "placeholder": "MM/DD/YYYY"
+        "placeholder": "MM/DD/YYYY",
+        "autocomplete": "bday"
       }
     },
     {

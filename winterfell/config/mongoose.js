@@ -1,5 +1,6 @@
 var Log = require('../utils/logHelper');
 var mongoose = require('mongoose');
+mongoose.Promise = require('q').Promise;
 
 module.exports = function(environment) {
   var address = '0.0.0.0:27017'; // default
