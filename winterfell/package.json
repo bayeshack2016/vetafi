@@ -12,6 +12,7 @@
     "@iamadamjowett/angular-click-outside": "^2.8.3",
     "angular": "^1.5.8",
     "angular-cookies": "^1.5.8",
+    "angular-expressions": "^0.3.0",
     "angular-formly": "^8.3.0",
     "angular-ui-router": "^0.3.1",
     "api-check": "^7.5.5",

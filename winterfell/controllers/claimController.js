@@ -54,10 +54,11 @@ module.exports = function (app) {
       }
     };
 
-
     User.findById(req.session.userId).exec(function (userErr, user) {
       if (user) {
-        ClaimService.findIncompleteClaimOrCreate(user._id, callback);
+        ClaimService.findIncompleteClaimOrCreate(user._id,
+          (req.body.forms || []),
+          callback);
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
       }
@@ -65,7 +66,7 @@ module.exports = function (app) {
   });
 
   function handleClaimStateChange(extClaimId, claimState, callback) {
-    Claim.findOne({externalId: extClaimId}).exec(function(err, claim) {
+    Claim.findOne({externalId: extClaimId}, function(err, claim) {
       if (err) {
         callback(err, null);
         return;
@@ -141,42 +142,84 @@ module.exports = function (app) {
     );
   }
 
-  app.post('/save/:claim/:form', function (req, res) {
-    if (req.session.key) {
-      console.log("/save/:claim/:form authed");
-      Form.findOneAndUpdate(
-        {
-          key: req.params.form,
-          user: req.session.userId,
-          claim: req.params.claim
-        },
-        {
-          key: req.params.form,
-          responses: req.body,
-          user: req.session.userId,
-          claim: req.params.claim
-        },
-        {upsert: true,
-          "new": true},
-        function (error, form) {
-          if (error) {
-            res.sendStatus(http.INTERNAL_SERVER_ERROR);
-          } else {
-            updateUserValuesFromForm(form,
-              function (error, userValues) {
-                if (error) {
-                  res.sendStatus(http.INTERNAL_SERVER_ERROR);
-                  return;
-                }
-                res.sendStatus(http.CREATED);
+  app.post('/save/:claim/:form', auth.authenticatedOr404, function (req, res) {
+    var progress = ClaimService.calculateProgress(req.params.form, req.body);
+    Form.findOneAndUpdate(
+      {
+        key: req.params.form,
+        user: req.session.userId,
+        claim: req.params.claim
+      },
+      {
+        key: req.params.form,
+        responses: req.body,
+        user: req.session.userId,
+        claim: req.params.claim,
+        answered: progress.answered,
+        answerable: progress.answerable
+      },
+      {
+        upsert: true,
+        'new': true
+      },
+      function (error, form) {
+        if (error) {
+          res.sendStatus(http.INTERNAL_SERVER_ERROR);
+        } else {
+          updateUserValuesFromForm(form,
+            function (error, userValues) {
+              if (error) {
+                res.sendStatus(http.INTERNAL_SERVER_ERROR);
+                return;
               }
-            );
+              res.sendStatus(http.CREATED);
+            }
+          );
+        }
+      });
+  });
+
+  app.get('/claim/:claim/form/:form', auth.authenticatedOr404, function (req, res) {
+    Claim.findOne({externalId: req.params.claim}, function(error, claim) {
+      if (error) {
+        console.log(error);
+        res.sendStatus(http.INTERNAL_SERVER_ERROR);
+        return;
+      }
+
+      Form.findOne({
+          key: req.params.form,
+          user: req.session.userId,
+          claim: claim._id
+        },
+        function (error, form) {
+          res.status(http.OK).send({form: form});
+        }
+      );
+    });
+  });
+
+  app.get('/claim/:claim/forms', auth.authenticatedOr404, function (req, res) {
+    Claim.findOne({externalId: req.params.claim}, function(error, claim) {
+      if (error) {
+        console.log(error);
+        res.sendStatus(http.INTERNAL_SERVER_ERROR);
+        return;
+      }
+
+      Form.find({
+          user: req.session.userId,
+          claim: claim._id
+        },
+        function (error, forms) {
+          if (error) {
+            console.log(error);
+            res.sendStatus(http.INTERNAL_SERVER_ERROR);
+            return;
           }
-        });
-    } else {
-      console.log("[/save/:claim:/:form] no credentials");
-      console.log(req.session);
-      res.sendStatus(http.NOT_FOUND);
-    }
+          res.status(http.OK).send(forms);
+        }
+      );
+    });
   });
 };

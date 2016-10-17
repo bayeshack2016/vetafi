@@ -1,54 +1,48 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', 'strings', '$uibModal', '$state',
-  function($scope, $location, $window, Profile, claimService, net, strings, $uibModal, $state) {
-    $scope.ranks = strings.ranks;
-    $scope.branches = strings.branches;
-    $scope.insigniaUrls = {
-      airforce: '../icons/us_insignia_airforce.svg',
-      army: '../icons/us_insignia_army.svg',
-      coastguard: '../icons/us_insignia_coastguard.svg',
-      marine: '../icons/us_insignia_marine.svg',
-      navy: '../icons/us_insignia_navy.svg'
-    };
+app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', '$uibModal', '$state',
+  function($scope, $location, $window, Profile, claimService, net, $uibModal, $state) {
 
-    var tabValues = {
-      military: 'military',
-      fileClaims: 'claims',
-      settings: 'settings'
-    };
-    $scope.currentTab = tabValues.military;
-    $scope.userInfo = {};
-    $scope.claims = [];
-    $scope.militaryInfo = [
-      {
-        rank: 'lieutenant',
-        branch: 'navy',
-        yearStart: '2013',
-        yearEnd: '2015'
-      },
-      {
-        rank: 'captain',
-        branch: 'army',
-        yearStart: '2012',
-        yearEnd: '2013'
+    $scope.user = Profile.user.user;
+    $scope.claims = []; // list of user's claims
+    // Every claim has the following:
+    // * claimId
+    // * date of submission or last modified
+    // * claim state (incomplete, submitted)
+    // * list of formIds
+
+    // $scope.claims = [ // TODO: have server return lastModifiedAt date and list of formIds per claim
+    //   {
+    //     id: '1234',
+    //     date: '3/16/2016',
+    //     state: 'incomplete',
+    //     formIds: ['VBA-21-0966-ARE']
+    //   },
+    //   {
+    //     id: '5678',
+    //     date: '3/17/2015',
+    //     state: 'submitted',
+    //     formIds: ['VBA-21-0966-ARE', 'VBA-21-0967-ARE']
+    //   }
+    // ];
+
+    function createHeaderString(claim) {
+      if (claim.state == 'incomplete') {
+        return 'Started (incomplete)';
+      } else if (claim.state == 'submitted') {
+        return 'Submitted';
       }
-    ];
+    }
 
-    $scope.clickEdit = function() {
+    function init() {
+      for (var i = 0; i < $scope.claims.length; i++) {
+        $scope.claims[i].header = createHeaderString($scope.claims[i]);
+      }
+    }
+    init();
+
+    $scope.clickEditInfo = function() {
       console.log('Edit User Information');
-    };
-
-    $scope.clickChangePic = function() {
-      console.log('Change Profile Picture');
-    };
-
-    $scope.clickAddMilitary = function() {
-      console.log('Edit Military Information');
-    };
-
-    $scope.clickChangeEmail = function() {
-      console.log('Change Email');
     };
 
     $scope.clickChangePassword = function() {
