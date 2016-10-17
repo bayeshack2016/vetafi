@@ -1,27 +1,12 @@
-div#profile-view
+div#vfi-profile-view
 
-  div#profile-banner
-    div#profile-banner-overlay
-    div#profile-header-wrapper
-      div.vfi-profile-pic-wrapper
-        button.vfi-change-picture-overlay(ng-click='clickChangePic()')
-          img(src='../icons/camera.svg')
-          | Change Profile Picture
-        img.vfi-profile-pic(ng-src="{{userInfo.profileSrc || '../icons/default-profile.svg'}}" ng-class="{'vfi-default' : !userInfo.profileSrc}")
-      div.vfi-profile-basic-info
-        h4.vfi-line FirstName Middlename Lastname Suffix
-        h4.vfi-line Email
-        h4.vfi-line Address
-        h4.vfi-line Gender
-        h4.vfi-line Date of Birth
-        button.vfi-edit-info-btn(ng-click='clickEdit()') Edit Information
+  h3 My Profile
+  div.profile-tabs
+    button(ui-sref="root.profile.general", ui-sref-active="active") General
+    button(ui-sref="root.profile.claims", ui-sref-active="active") File Claims
+    button(ui-sref="root.profile.settings", ui-sref-active="active") Settings
 
-  // Profile Body
-  div#profile-container
-
-    div.vfi-tab-row
-      button.vfi-profile-tab(ui-sref="root.profile.military", ui-sref-active="vfi-active") Military Background
-      button.vfi-profile-tab(ui-sref="root.profile.claims", ui-sref-active="vfi-active") File Claims
-      button.vfi-profile-tab(ui-sref="root.profile.settings", ui-sref-active="vfi-active") Settings
-
+  div#vfi-profile-container
     ui-view
+
+vfi-footer

@@ -1,313 +1,212 @@
 @import "standards.styl"
 
-colorBorder = colorPrimaryDarkBlue
-borderType = 2px solid colorBorder
+minWidthTabs = 312px
+claimsIconWrapperSize = 42px
+claimsIconSize = 22px
 
-#profile-view
-  background-color: colorWarmLightGray
-
-//
-// Profile Banner section
-//
-#profile-banner
-  position: relative
-  width: 100%
-  height: (5 * megaSpacing)
-  margin-bottom: largeSpacing
-  background: url('../icons/america-flag-bg.jpg')
-  background-size: cover
-  border-bottom: 2px solid colorWarmDarkGray
-
-#profile-banner-overlay
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background: rgba(0, 0, 0, 0.5)
-
-#profile-header-wrapper
-  position: absolute
-  left: 0
-  right: 0
-  bottom: 0
+#vfi-profile-view
   width: maxLayoutWidthPct
   max-width: maxLayoutWidthPx
+  min-width: minWidthTabs
   margin: 0 auto
-
-.vfi-profile-pic-wrapper
-  position: relative
-  display: inline-block
-  vertical-align: top
-  margin-right: largeSpacing
-
-  &:hover .vfi-change-picture-overlay
-    height: 3em
-    cursor: pointer
-
-.vfi-change-picture-overlay
-  position: absolute
-  bottom: 0
-  left: 0
-  width: 100%
-  height: 0
-  padding: 0 8px
-  box-sizing: border-box
-  overflow: hidden
-  background-color: rgba(0, 0, 0, 0.7)
-  color: colorWhite
-  transition: height 0.1s linear
-
-  & img
-    margin-right: smallSpacing
-    vertical-align: middle
-
-.vfi-profile-pic
-  height: (3 * megaSpacing)
-  margin-bottom: -0.5em
   background-color: colorWarmLightGray
-  border: 2px solid colorWarmDarkGray
 
-  &.vfi-default
-    padding: mediumSpacing
+  & h3
+    height: megaSpacing
+    line-height: megaSpacing
+    color: colorPrimaryDarkBlue
 
-.vfi-profile-basic-info
-  display: inline-block
-  color: colorWhite
+//
+// Profile Tab section
+//
+.profile-tabs
+  min-width: minWidthTabs
 
-  & .vfi-line:first-child
-    margin-bottom: mediumSpacing
+  & button
+    border-top-left-radius: 4px
+    border-top-right-radius: 4px
+    border-bottom-left-radius: 0px
+    border-bottom-right-radius: 0px
+    background-color: colorLightGray
+    color: colorBlack
 
-.vfi-edit-info-btn
-  position: absolute
-  bottom: 0
-  background-color: colorYellow
-  color: colorBlack
+    &.active
+      background-color: colorWhite
+      color: colorPrimaryDarkBlue
+      border-top: 4px solid colorPrimaryDarkBlue
 
 //
 //  Profile Body Section
 //
-#profile-container
-  width: maxLayoutWidthPct
-  max-width: maxLayoutWidthPx
-  margin: 0 auto
+#vfi-profile-container
+  margin-bottom: megaSpacing
 
-  .vfi-tab-row
-    width: 100%
+.profile-section
+  min-height: 400px
+  padding: mediumSpacing largeSpacing
+  background-color: colorWhite
 
-  .vfi-profile-tab
-    width: 33.333%
-    background-color: colorBorder
-    color: colorWhite
-    border-radius: 16px 16px 0px 0px
-
-    &.vfi-active
-      background-color: colorWhite
-      color: colorPrimaryDarkBlue
-      border-top: borderType
-      border-left: borderType
-      border-right: borderType
-      cursor: initial
-
-      &:hover
-        filter: brightness(1.0)
-        -webkit-filter: brightness(1.0)
-        -moz-filter: brightness(1.0)
-        -ms-filter: brightness(1.0)
-
-
-  & .vfi-profile-section
-    width: 100%
-    margin-bottom: mediumSpacing
-    padding: largeSpacing megaSpacing
-    box-sizing: border-box
-    background-color: colorWhite
-    border-left: borderType
-    border-bottom: borderType
-    border-right: borderType
-
-    & .vfi-section-header
-      margin-bottom: mediumSpacing
-
-//
-// Profile Military section
-//
-.vfi-profile-section#military
-
-  & .vfi-section-content
+  & .edit-icon
     position: relative
+    top: 4px
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin-right: miniSpacing
+    background: url('../icons/edit-white.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+  & .docs-icon
+    position: relative
+    top: 4px
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin-right: miniSpacing
+    background: url('../icons/docs-white.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+//
+// Profile General section
+//
+#general
+  position: relative
+
+  & h4
+    color: colorPrimaryDarkBlue
+    margin-bottom: miniSpacing
+
+  & .content
     margin-bottom: largeSpacing
 
-    &.military-bg
-      height: (2 * megaSpacing)
+    &.missing
+      color: colorRed
 
-    &.add-military
-      margin-bottom: 0
+  & .button-wrapper
+    & button
+      position: absolute
+      top: mediumSpacing
+      right: largeSpacing
+
+//
+// Profile File Claims section
+//
+#claims
+  & .claim-card
+    position: relative
+    padding: mediumSpacing 0
+    border-top: 1px solid colorLightGray
+
+    &:last-child
+      border-bottom: 1px solid colorLightGray
+
+    & .claim-content
+      display: inline-block
+
+    & .button-wrapper
+      display: inline-block
+      float: right
+
+      @media screen and (max-width: minWindowWidthPx)
+        display: block
+        float: none
+        margin-bottom: mediumSpacing
 
       & button
-        background-color: colorYellow
-        color: colorBlack
+        width: 10em
 
-  & .vfi-section-divider
-    margin: mediumSpacing 0
-    border-bottom: 1px solid colorWarmLightGray
+        &.edit
+          background-color: colorYellow
+          color: colorBlack
 
-  & .vfi-insignia
-    position: absolute
-    top: 0
-    right: 0
-    width: (2 * megaSpacing)
-    height: (2 * megaSpacing)
+          & .edit-icon
+            background: url('../icons/edit-black.svg')
+            background-size: cover
 
-  & .vfi-add-sign
-    display: inline-block
-    width: largeSpacing
-    height: largeSpacing
-    margin-right: smallSpacing
-    vertical-align: middle
+    &.edit
+      & .icon-wrapper
+        background-color: colorPrimaryDarkBlue
+      & .icon
+        background: url('../icons/edit-white.svg')
+        background-size: cover
 
-//
-// Profile Military section
-//
-.vfi-profile-section#claims
+    &.submitted
+      & .claim-header
+        color: colorLightGreen
+      & .icon-wrapper
+        background-color: colorLightGreen
+      & .icon
+        background: url('../icons/checkmark-white.svg')
+        background-size: cover
 
-  & .vfi-section-content
-    position: relative
-    margin-bottom: largeSpacing
-    padding: mediumSpacing largeSpacing
-    border: 2px solid colorDarkGray
-    border-radius: 6px
-
-    &.vfi-incomplete:hover
-      border-color: colorYellow
-    &.vfi-submitted:hover
-      border-color: colorPrimaryBlue
-    &.vfi-processed:hover
-      border-color: colorLightGreen
-
-  & .vfi-section-head
-    margin-bottom: megaSpacing
-    color: colorBlack
-
-    & .vfi-date
-      float: left
-
-  & .vfi-action-wrapper
-    position: absolute
-    top: mediumSpacing
-    right: largeSpacing
-
-    & button
+    & .icon-wrapper
       position: relative
-      width: 36px
-      height: 36px
-      padding: 0
-      margin-left: smallSpacing
-      background-color: transparent
+      display: inline-block
+      width: claimsIconWrapperSize
+      height: claimsIconWrapperSize
+      margin-right: miniSpacing
+      vertical-align: top
       border-radius: 50%
+      background-color: colorYellow
 
-      &:hover
-        background-color: colorPrimaryBlue
+      & .icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: claimsIconSize
+        height: claimsIconSize
 
-        & .vfi-edit
-          background: url('../icons/edit-white.svg')
-          background-size: cover
-        & .vfi-delete
-          background: url('../icons/delete-white.svg')
-          background-size: cover
-        & .vfi-view
-          background: url('../icons/view-white.svg')
-          background-size: cover
+    & .text-wrapper
+      display: inline-block
+      vertical-align: middle
 
-    & .vfi-icon
-      position: absolute
-      top: 50%
-      left: 50%
-      transform: translate(-50%, -50%)
-      width: 24px
-      height: 24px
+    & .claim-header
+      margin-bottom: smallSpacing
+      color: colorPrimaryDarkBlue
 
-      &.vfi-edit
-        background: url('../icons/edit-black.svg')
-        background-size: cover
+    & .form-content
+      & .form-icon-wrapper
+        position: relative
+        display: inline-block
+        width: claimsIconWrapperSize
+        height: claimsIconWrapperSize
+        vertical-align: middle
+        margin-right: miniSpacing
+        border-radius: 50%
+        background-color: colorDarkGray
 
-      &.vfi-delete
-        background: url('../icons/delete-black.svg')
-        background-size: cover
+        & .docs-icon
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: claimsIconSize
+          height: claimsIconSize
 
-      &.vfi-view
-        background: url('../icons/view-black.svg')
-        background-size: cover
+      & h4
+        display: inline-block
 
-
-  & .vfi-bar
-    position: relative
-    width: calc(100% - 56px)
-    height: mediumSpacing
-    background-color: colorLightGray
-    border-radius: 12px
-    overflow: hidden
-
-  & .vfi-progress
-    position: absolute
-    top: 0px
-    left: 0px
-    height: 100%
-    width: 40%
-    background-color: colorPrimaryBlue
-
-    &.vfi-submitted
-      width: 100%
-
-    &.vfi-processed
-      width: 100%
-      background-color: colorLightGreen
-
-  & .vfi-check-icon
-    float: right
-    width: 36px
-    height: 36px
-    margin-top: -8px
-    background: url('../icons/checkmark-green.svg')
-    background-size: cover
-    background-repeat: no-repeat
-
+      & ul
+        margin-left: megaSpacing
 //
-// Profile Options section
+// Profile Settings section
 //
-.vfi-profile-section#settings
+#settings
+  text-align: center
 
-  & .vfi-section-content
-    height: megaSpacing
+  & .section
+    margin-bottom: largeSpacing
 
-  & .vfi-settings-btn
-    float: right
+  & .summary
+    margin-bottom: miniSpacing
 
-    &#idme
-      width: 96px
-      height: 42px
-      background-color: colorWhite
-      border: 2px solid colorBlack
-      border-radius: 4px
+  button
+    background-color: colorPrimaryDarkBlue
 
-      &.vfi-active
-        background-color: #2D3E51
-        border: 2px solid #2D3E51
-
-        & #logo-icon
-          background: url('../icons/idme-logo-white.png')
-          background-size: cover
-          background-repeat: no-repeat
-
-      & #logo-icon
-        width: 100%
-        height: 100%
-        background: url('../icons/idme-logo-black.png')
-        background-size: cover
-        background-repeat: no-repeat
-
-    &#logout
+    &.logout
       background-color: colorDarkGray
-
-    &#delete-account
+    &.delete
       background-color: colorRed

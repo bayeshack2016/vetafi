@@ -1,18 +1,33 @@
-div.vfi-profile-section#claims
-    div.vfi-section-content(ng-show="claims.length == 0")
-        | You have no pending file claims at the moment.
-        br
-        | Click <a href="#/claim/start">here</a> to start a file claim.
-    div.vfi-section-content(ng-class="{'vfi-incomplete': claim.state=='incomplete', 'vfi-submitted': claim.state=='submitted', 'vfi-processed': claim.state=='processed'}", ng-repeat="claim in claims", ng-show="claims.length > 0")
-        div.vfi-section-head
-            h4.vfi-date {{claim.dateMessage}}
-            div.vfi-action-wrapper
-                button.vfi-edit-btn(ui-sref="root.claimselect({claimId: claim.id})", ng-if="claim.state=='incomplete'")
-                    div.vfi-icon.vfi-edit
-                button.vfi-discard-btn(ng-click="clickClaimDiscard(claim.id)", ng-if="claim.state=='incomplete'")
-                    div.vfi-icon.vfi-delete
-                button.vfi-view-btn(ui-sref="root.claimview({claimId: claim.id})")
-                    div.vfi-icon.vfi-view
-        div.vfi-check-icon(ng-if="claim.state=='submitted' || claim.state=='processed'")
-        div.vfi-bar
-            div.vfi-progress(ng-class="{'vfi-incomplete': claim.state=='incomplete', 'vfi-submitted': claim.state=='submitted', 'vfi-processed': claim.state=='processed'}")
+div.profile-section#claims
+
+  div.no-claims-wrapper(ng-show="claims.length == 0")
+    h4 You have no pending file claims at the moment.
+    br
+    p Click #[a(ui-sref="root.claimstart") here] to start a file claim.
+
+  div.claims-wrapper(ng-show="claims.length > 0")
+    h3 Your claims history
+
+    div.claim-card(ng-repeat="claim in claims", ng-class="{'edit': claim.state=='incomplete', 'submitted': claim.state=='submitted'}")
+      div.button-wrapper
+        button.edit(ui-sref="root.claimselect({claimId: claim.id})", ng-if="claim.state == 'incomplete'")
+          div.edit-icon
+          | Edit Claim
+        button.view(ui-sref="root.claimview({claimId: claim.id})", ng-if="claim.state == 'submitted'")
+          div.docs-icon
+          | View Claim
+
+      div.claim-content
+        div.claim-header
+          div.icon-wrapper
+            div.icon
+          div.text-wrapper
+            h4.status {{claim.header}}
+            div.date {{claim.date}}
+
+        div.form-content(ng-if="claim.formIds.length > 0")
+          div.form-icon-wrapper
+            div.docs-icon
+          h4 Forms:
+          ul
+            li(ng-repeat="formId in claim.formIds") {{formId}}

@@ -59,9 +59,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
   });
 
   $stateProvider.state({
-    name: 'root.profile.military',
-    url: '/military',
-    templateUrl: 'templates/profile/military.html'
+    name: 'root.profile.general',
+    url: '/general',
+    templateUrl: 'templates/profile/general.html'
   });
 
   $stateProvider.state({
