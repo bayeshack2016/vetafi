@@ -4,32 +4,38 @@ app.directive("modalChangePassword", ["net", function(net) {
     return {
         restrict: "A",
         link: function(scope, elem, attrs) {
+            scope.errorMsg = '';
             function displayError(msg) {
-              var errorMsg = $(elem).find('.error-msg');
-              errorMsg.text(msg);
+              scope.errorMsg = msg;
             }
 
             scope.savePassword = function() {
-              var oldPwd = $(elem).find('input.old').val();
-              var newPwd = $(elem).find('input.new').val();
-              var confirmPwd = $(elem).find('input.confirm').val();
+              if (!scope.oldPwd) {
+                displayError("Please enter your old password.");
+                return;
+              }
 
-              if (newPwd.length < 6) {
+              if (!scope.newPwd) {
+                displayError("Please enter a new password.");
+                return;
+              }
+
+              if (scope.newPwd && scope.newPwd.length < 6) {
                 displayError("Your new password is too short.");
                 return;
               }
 
-              if (confirmPwd != newPwd) {
+              if (scope.confirmPwd != scope.newPwd) {
                 displayError("Your new password and confirm password do not match! Please re-type your new password.");
                 return;
               }
 
-              if (newPwd == oldPwd) {
+              if (scope.newPwd == scope.oldPwd) {
                 displayError("Your new password cannot match your old password.");
                 return;
               }
 
-              net.changePassword(oldPwd, newPwd).then(
+              net.changePassword(scope.oldPwd, scope.newPwd).then(
                 function(resp) { // success case
                   scope.$close();
                 }, function(errResp) { // failed case
