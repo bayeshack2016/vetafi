@@ -1,0 +1,20 @@
+div.profile-section#general
+  h4 Name
+  div.content(ng-if="user.firstname") {{user.firstname}} {{user.middlename}} {{user.lastname}}
+  div.content.missing(ng-if="!user.firstname") (Missing)
+
+  h4 Primary Email
+  div.content(ng-if="user.email") ahsu1230@gmail.com
+  div.content.missing(ng-if="!user.email") (Missing)
+
+  h4 Primary Address
+  div.content(ng-if="user.address")
+    div.address-line {{user.address.line1}}
+    div.address-line {{user.address.line2}}
+    div.address-line {{user.address.city}}, {{user.address.state}} {{user.address.country}} {{user.address.zipCode}}
+  div.content.missing(ng-if="!user.address") (Missing)
+
+  div.button-wrapper
+    button(ng-click="clickEditInfo()")
+      div.edit-icon
+      | Edit

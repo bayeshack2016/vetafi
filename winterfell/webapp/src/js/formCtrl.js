@@ -3,10 +3,17 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('formCtrl',
-  ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService', 'formService', '$stateParams', 'userValues',
-    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService, $stateParams, userValues) {
-      $scope.formId = $stateParams.formId;
+
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService',
+    'formService', '$stateParams', '$state', 'userValues',
+    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService,
+              $stateParams, $state, userValues) {
+        $scope.$watch('signature', function (newVal, oldVal) {
+            console.log(newVal, oldVal);
+            if (newVal) {
+                $scope.model['signature'] = newVal.dataUrl;
+            }
+        });
 
       $scope.$watch('dataurl', function (newVal, oldVal) {
         console.log(newVal, oldVal);
@@ -32,11 +39,8 @@ app.controller('formCtrl',
       };
 
       $scope.onSubmit = function () {
-        console.log($scope.fields);
-        console.log($scope.model);
-
-        //$scope.render();
-        console.log($scope);
+          $scope.save();
+          $state.transitionTo('root.claimselect', {claimId: $stateParams.claimId});
       };
 
       $scope.save = function () {
