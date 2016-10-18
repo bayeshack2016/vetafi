@@ -5,16 +5,16 @@ var ClaimService = require('./../services/claimService');
 var Form = require('../models/form');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var Log = require('./../utils/logHelper');
+var Log = require('../middlewares/log');
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 
 module.exports = function (app) {
-  var middlewares = [auth.authenticatedOr404, Log.api];
+  var mw = [auth.authenticatedOr404, Log.api];
 
   // Get all claims for a user
-  app.get('/claims', middlewares, function (req, res) {
+  app.get('/claims', mw, function (req, res) {
     User.findById(req.session.userId).exec(function(err, user) {
       if (err) {
         res.sendStatus(http.INTERNAL_SERVER_ERROR);
@@ -34,7 +34,7 @@ module.exports = function (app) {
   });
 
   // Get a particular claim
-  app.get('/claim/:extClaimId', middlewares, function (req, res) {
+  app.get('/claim/:extClaimId', mw, function (req, res) {
     Claim.findOne({externalId: req.params.extClaimId}).exec(function(err, claim) {
       if (claim) {
         res.status(http.OK).send({claim: claim});
@@ -44,7 +44,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/claims/create', middlewares, function (req, res) {
+  app.post('/claims/create', mw, function (req, res) {
     var callback = function (err, claim) {
       if (claim) {
         res.status(http.CREATED).send({claim: claim});
@@ -93,13 +93,13 @@ module.exports = function (app) {
     }
   }
 
-  app.post('/claim/:extClaimId/submit', middlewares, function (req, res) {
+  app.post('/claim/:extClaimId/submit', mw, function (req, res) {
     handleClaimStateChange(req.params.extClaimId,
       Claim.State.SUBMITTED,
       claimUpdateCallbackFactory(res));
   });
 
-  app.delete('/claim/:extClaimId', middlewares, function (req, res) {
+  app.delete('/claim/:extClaimId', mw, function (req, res) {
     handleClaimStateChange(req.params.extClaimId,
       Claim.State.DISCARDED,
       claimUpdateCallbackFactory(res));
@@ -137,7 +137,7 @@ module.exports = function (app) {
     );
   }
 
-  app.post('/save/:claim/:form', middlewares, function (req, res) {
+  app.post('/save/:claim/:form', mw, function (req, res) {
     var progress = ClaimService.calculateProgress(req.params.form, req.body);
     Form.findOneAndUpdate(
       {
@@ -174,7 +174,7 @@ module.exports = function (app) {
       });
   });
 
-  app.get('/claim/:claim/form/:form', auth.authenticatedOr404, function (req, res) {
+  app.get('/claim/:claim/form/:form', mw, function (req, res) {
     Claim.findOne({externalId: req.params.claim}, function(error, claim) {
       if (error) {
         console.log(error);
@@ -183,7 +183,6 @@ module.exports = function (app) {
       }
 
       Form.findOne({
->>>>>>> 7d717f4adc0917c24e073b46b50ff8e2764c65a4
           key: req.params.form,
           user: req.session.userId,
           claim: claim._id
@@ -195,7 +194,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/claim/:claim/forms', auth.authenticatedOr404, function (req, res) {
+  app.get('/claim/:claim/forms', mw, function (req, res) {
     Claim.findOne({externalId: req.params.claim}, function(error, claim) {
       if (error) {
         console.log(error);

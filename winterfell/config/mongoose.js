@@ -1,4 +1,4 @@
-var Log = require('../utils/logHelper');
+var Log = require('../middlewares/log');
 var mongoose = require('mongoose');
 mongoose.Promise = require('q').Promise;
 

@@ -1,5 +1,5 @@
 var Constants = require('../utils/constants');
-var Log = require('../utils/logHelper');
+var Log = require('./log');
 var session = require('express-session');
 var redisStore = require('connect-redis')(session);
 var RedisService = require('../services/redisService');

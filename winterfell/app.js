@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 var Biscuit = require('./services/biscuit');
-var bunyan = require('bunyan');
 var Constants = require('./utils/constants');
 var documentRenderingConfig = require('./config/documentRendering');
 var express = require('express');
 var fs = require('fs');
-var Log = require('./utils/logHelper');
+var Log = require('./middlewares/log');
 var path = require('path');
 var session = require('express-session');
 
@@ -16,31 +15,7 @@ var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
 var app = express();
 app.environment = environment;
 app.baseUrl = Constants.baseUrl[app.environment];
-
-// Initialize Logger
-var log = bunyan.createLogger({
-  name: 'vetafi_' + environment,
-  streams: [{
-    path: '../logs/app.js' // todo: these logs need to be moved into the same level
-  }]
-});
-app.log = log;                                            // Main logger
-app.logApi = app.log.child({widget_type: 'api'});         // Logger for API request/responses
-app.log.info("New logger created.");
-
-// Initialize Node Modules`
-function loadIntoBuild (app, targetDir) {
-  var normalizedPath = path.join(__dirname, targetDir);
-  fs.readdirSync(normalizedPath).forEach(function (file) {
-    require(normalizedPath + '/' + file)(app);
-  });
-  return app;
-}
-loadIntoBuild(app, 'utils');
-loadIntoBuild(app, 'middlewares');
-loadIntoBuild(app, 'services');
-loadIntoBuild(app, 'controllers');
-Log.console("Node modules loaded.");
+console.log("App created.");
 
 // Initialize Biscuit
 app.set('secretsFile', require('./config/biscuit')[environment]);
@@ -54,7 +29,24 @@ function setupBiscuitKey(keyName) {
 setupBiscuitKey(Constants.KEY_LOB_API);
 setupBiscuitKey(Constants.KEY_IDME_CLIENT_ID);
 setupBiscuitKey(Constants.KEY_IDME_SECRET_ID);
-Log.console("Biscuit setup.");
+console.log("Biscuit keys configured.");
+
+// Initialize Node Modules
+function loadIntoBuild (app, targetDir) {
+  var normalizedPath = path.join(__dirname, targetDir);
+  fs.readdirSync(normalizedPath).forEach(function (file) {
+    require(normalizedPath + '/' + file)(app);
+  });
+  return app;
+}
+loadIntoBuild(app, 'utils');
+loadIntoBuild(app, 'middlewares');
+loadIntoBuild(app, 'services');
+loadIntoBuild(app, 'controllers');
+console.log("Node modules loaded.");
+
+// Logger has been initialized
+Log.console("New logger created.");
 
 // Serve static files
 app.use(express.static(path.join(__dirname, '/webapp/build')));

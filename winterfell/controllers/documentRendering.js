@@ -1,6 +1,6 @@
 var config = require('../config/documentRendering');
 var http = require('http-status-codes');
-var Log = require('../utils/logHelper');
+var Log = require('../middlewares/log');
 var redis = require("redis"),
     client = redis.createClient({'return_buffers': true});
 var request = require('request');

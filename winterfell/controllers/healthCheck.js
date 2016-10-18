@@ -1,5 +1,6 @@
 var http = require('http-status-codes');
-var Log = require('./../utils/logHelper');
+var Log = require('../middlewares/log');
+
 /*
   This endpoint servers to check that the app web server is responding
   to requests as expected.
