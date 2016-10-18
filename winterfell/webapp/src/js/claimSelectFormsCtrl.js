@@ -18,7 +18,7 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     };
 
     $scope.onClickDone = function() {
-      console.log("Verifying things are correct...");
+      $state.transitionTo("root.claimconfirm", {claimId: $stateParams.claimId});
     };
   }
 ]);

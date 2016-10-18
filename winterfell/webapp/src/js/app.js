@@ -132,7 +132,31 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     name: 'root.claimview',
     url: '/claim/{claimId}',
     templateUrl: 'templates/claimView.html',
-    controller: 'claimViewCtrl'
+    controller: 'claimViewCtrl',
+    resolve: {
+      claim: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+        var deferred = $q.defer();
+        net.getClaim($stateParams.claimId).then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+        return deferred.promise;
+      }],
+      claimForms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+        var deferred = $q.defer();
+        net.getFormsForClaim($stateParams.claimId).then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+        return deferred.promise;
+      }]
+    }
   });
 
   $stateProvider.state({

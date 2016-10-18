@@ -3,18 +3,12 @@
     h3 Your Submitted Claim
     div.content.general
       h4.content-header General Info:
-      div.line(ng-show="claim.officialId")
-        span Government Id:
-        span {{claim.officialId}}
       div.line
-        span Claimant Name:
-        span {{claim.claimant.firstname}} {{claim.claimant.lastname}}
-      div.line
-        span Veteran Name:
-        span {{claim.veteran.firstname}} {{claim.veteran.lastname}}
+        span Submitted By:
+        span {{user.firstname}} {{user.lastname}}
       div.line
         span Submitted Date:
-        span {{claim.lastModifiedAt}}
+        span {{claim.stateUpdatedAt}}
 
     div.content.sent-to
       h4.content-header.underline Copies sent to:

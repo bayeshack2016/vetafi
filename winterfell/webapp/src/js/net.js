@@ -68,6 +68,9 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     discardClaim: function(extClaimId) {
       return httpDelete("/claim/" + extClaimId);
     },
+    getClaim: function(extClaimId) {
+      return httpGet("/claim/" + extClaimId);
+    },
     getFormsForClaim: function(extClaimId) {
       return httpGet("/claim/" + extClaimId + "/forms");
     }
