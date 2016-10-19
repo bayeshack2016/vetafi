@@ -1,8 +1,9 @@
 {
-  "unofficialTitle": "Intent to File",
-  "unofficialDescription": "This form is used to notify VA of your intent to file for benefits. Even if your claim fails to process, your benefits effective date will still be the date the VA receives this form.",
-  "required": true,
-
+  "vfi": {
+    "title": "Intent to File",
+    "summary": "This form is used to notify VA of your intent to file for benefits. Even if your claim fails to process, your benefits effective date will still be the date the VA receives this form.",
+    "required": true
+  },
   "name": "INTENT TO FILE A CLAIM FOR COMPENSATION AND/OR PENSION, OR SURVIVORS PENSION AND/OR DIC",
   "description": "This Form Is Used to Notify VA of Your Intent to File for General Benefits",
   "fields": [
