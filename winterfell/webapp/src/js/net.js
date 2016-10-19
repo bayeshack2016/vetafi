@@ -24,6 +24,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
   };
 
   return {
+    // Auth
     login: function (email, password) {
       var data = {
         email: email,
@@ -40,6 +41,16 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     touchSession: function() {
       return httpGet("/session/touch");
     },
+    getAuthIdMeUrl: function() {
+      return '/auth/idme';
+    },
+    changePassword: function(oldPwd, newPwd) {
+      var data = {
+        old: oldPwd,
+        new: newPwd
+      };
+      return httpPost("/auth/password", data);
+    },
 
     // User
     getUserInfo: function() {
@@ -50,9 +61,6 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     },
     deleteUserAccount: function() {
       return httpDelete("/user");
-    },
-    getAuthIdMeUrl: function() {
-      return '/auth/idme';
     },
 
     // Claims

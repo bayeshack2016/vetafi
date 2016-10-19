@@ -1,11 +1,9 @@
 @import "../standards.styl"
 
+// General Modal properties
 .vfi-modal
-  padding: smallSpacing mediumSpacing
-
-#basic-one-button-modal
-#basic-two-button-modal
   position: relative
+  padding: smallSpacing mediumSpacing
 
   & .close-wrapper
     position: absolute
@@ -27,28 +25,3 @@
 
     & h3
       color: colorPrimaryDarkBlue
-
-  & .message
-    margin-top: mediumSpacing
-    margin-bottom: mediumSpacing
-
-    & p
-      width: 90%
-      margin: 0 auto
-      text-align: center
-
-  & .button-wrapper
-    text-align: center
-
-    & button
-      width: 6em
-      margin: 0 mediumSpacing
-
-      &.continue
-        background-color: colorPrimaryDarkBlue
-      &.cancel
-        background-color: colorLightGray
-      &.warning
-        background-color: colorRed
-      &.success
-        background-color: colorLightGreen
