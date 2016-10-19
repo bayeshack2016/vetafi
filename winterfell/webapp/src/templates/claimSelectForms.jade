@@ -11,7 +11,7 @@
 
       div.form-wrapper(ng-repeat="(formId, form) in formTemplates")
         div.form-content
-          div.state-wrapper(ng-class="{'required': form.vfi.required, 'complete': form.answered == form.answerable}")
+          div.state-wrapper(ng-class="{'required': form.vfi.required, 'complete': form.answered > 0 && form.answered == form.answerable}")
             div.state-icon
           div.form-title-wrapper
             h5.title(ng-class="{'required': form.vfi.required}") {{formId}}
