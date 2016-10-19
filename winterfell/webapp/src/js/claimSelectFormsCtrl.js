@@ -2,8 +2,9 @@ var app = angular.module('vetafiApp');
 app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', 'claimForms',
   function($scope, claimService, formTemplateService, $stateParams, claimForms) {
     $scope.claimId = $stateParams.claimId;
-    $scope.formTemplates = formTemplateService;
-    $scope.forms = _.keyBy(claimForms, function(form) {
+
+    $scope.formTemplates = formTemplateService;           // All available forms
+    $scope.claimForms = _.keyBy(claimForms, function(form) {   // Mapping of formId -> claimForm object
       return form.key;
     });
 
