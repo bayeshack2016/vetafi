@@ -1,19 +1,12 @@
 var MailingService = require('../services/mailingService');
 var should = require('should');
 var fs = require('fs');
-
+var Constants = require('./../utils/constants');
+var ENVIRONMENT = Constants.environment;
 var DestinationAddress = require('../models/destinationAddress');
 var User = require('../models/user');
 var Letter = require('../models/letter');
 var Document = require('../models/document');
-
-var mockLob = {
-    letters: {
-        create: function (req, callback) {
-            callback(null, {});
-        }
-    }
-};
 
 var testUser = {
     firstname: "FirstName",
@@ -62,7 +55,6 @@ describe('Mailing', function () {
     before(function (done) {
         server = require('../app');
         service = new MailingService(server.app);
-        service.Lob = mockLob;
 
         User.remove({}, function() {
           User.create(testUser, function(userErr, user) {

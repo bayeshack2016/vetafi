@@ -1,10 +1,11 @@
 var lob = require('Lob');
-var Constants = require('./../utils/constants');
 var Document = require('./../models/document');
 var Letter = require('./../models/letter');
 var User = require('./../models/user');
 var DestinationAddress = require('./../models/destinationAddress');
 var DocumentRenderingService = require('./documentRenderingService');
+var Constants = require('./../utils/constants');
+var ENVIRONMENT = Constants.environment;
 
 /**
  * Abstraction around a mailing api.
@@ -14,9 +15,14 @@ var DocumentRenderingService = require('./documentRenderingService');
  * if we have need to.
  */
 function MailingService(app) {
-    this.Lob = lob(app.get(Constants.KEY_LOB_API), {
-        apiVersion: '2016-06-30'
-    });
+    if (app.environment == ENVIRONMENT.TEST || app.environment == ENVIRONMENT.LOCAL) {
+        this.testMode = true;
+    } else {
+        this.testMode = false;
+        this.Lob = lob(app.get(Constants.KEY_LOB_API), {
+            apiVersion: '2016-06-30'
+        });
+    }
     this.app = app;
 }
 
@@ -31,6 +37,10 @@ module.exports = MailingService;
  * @param callback function
  */
 MailingService.prototype.sendLetter = function (sender, recipient, documents, callback) {
+    if (this.testMode) {
+        callback(null, {});
+        return;
+    }
     var that = this;
     var documentRenderingService = new DocumentRenderingService(this.app);
     documentRenderingService.concatenateDocs(documents, function(documentRenderingError, pdf) {
