@@ -8,7 +8,7 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     });
 
     $scope.numRequiredCompleted = _.sum(_.map(claimForms, function (form) {
-      return form.answered == form.answerable ? 1 : 0;
+      return form.vfi.required && form.answered == form.answerable ? 1 : 0;
     }));
     $scope.numRequiredForms = _.sum(_.map($scope.formTemplates, function (form) {
       return form.vfi.required ? 1 : 0;
