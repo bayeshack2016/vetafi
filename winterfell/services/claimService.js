@@ -51,7 +51,7 @@ function calculateProgress(formId, data) {
   }
 
   return output;
-};
+}
 module.exports.calculateProgress = calculateProgress;
 
 module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
@@ -68,6 +68,7 @@ module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
         // until this is done by using a promise chain.
         var promise = Q();
         forms.forEach(function(form) {
+          console.log("Creating form " + form);
           var progress = calculateProgress(form, {});
           promise = promise.then(function() {
             return Form.create({

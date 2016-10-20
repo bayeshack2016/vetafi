@@ -48,10 +48,15 @@ public class PDFMapping {
         Stream<PDFField> filtered = input.stream().filter(pdfField -> (formElementSet.contains(pdfField.fieldName)));
 
         filtered.forEach(pdfField -> {
+
             values.put(pdfField.getFieldName(), pdfField.getFieldValue());
         });
 
-        imageLocators.forEach(locator -> { output.put(locator.pdfId, values.get(locator.elementId));});
+        imageLocators.forEach(locator -> {
+            if (values.containsKey(locator.elementId)) {
+                output.put(locator.pdfId, values.get(locator.elementId));
+            }
+        });
 
         return output;
     }
@@ -139,12 +144,13 @@ public class PDFMapping {
                                 }
                             }).iterator());
 
-            if (pdfFieldLocators.size() == 1
-                    && Iterables.getOnlyElement(pdfFieldLocators).substringStart != null
-                    && Iterables.getOnlyElement(pdfFieldLocators).substringEnd != null
-                    && valueString.length() >= Iterables.getOnlyElement(pdfFieldLocators).substringEnd) {
-                valueString = valueString.substring(Iterables.getOnlyElement(pdfFieldLocators).substringStart,
-                        Iterables.getOnlyElement(pdfFieldLocators).substringEnd);
+            if (pdfFieldLocators.size() == 1) {
+                PDFFieldLocator pdfFieldLocator = Iterables.getOnlyElement(pdfFieldLocators);
+                if (pdfFieldLocator.substringStart != null && pdfFieldLocator.substringEnd != null) {
+                    valueString = valueString.substring(
+                            pdfFieldLocator.substringStart > valueString.length() ? valueString.length() : pdfFieldLocator.substringStart,
+                            pdfFieldLocator.substringEnd > valueString.length() ? valueString.length() : pdfFieldLocator.substringEnd);
+                }
             }
 
             output.put(key, valueString);

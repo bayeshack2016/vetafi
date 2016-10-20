@@ -1,6 +1,7 @@
 var app = angular.module('vetafiApp');
-app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', 'forms',
-  function($scope, claimService, formTemplateService, $stateParams, forms) {
+app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', 'forms', 'net',
+  '$state',
+  function($scope, claimService, formTemplateService, $stateParams, forms, net, $state) {
     $scope.claimId = $stateParams.claimId;
     $scope.formTemplates = formTemplateService;
     $scope.forms = _.keyBy(forms, function(form) {
@@ -18,7 +19,13 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     };
 
     $scope.onClickDone = function() {
-      console.log("Verifying things are correct...");
+      console.log("onClickDone");
+      $state.go('root.claimconfirm', {claimId: $stateParams.claimId}).then(
+        function success() {},
+        function failure(err) {
+          console.error(err);
+        }
+      );
     };
   }
 ]);

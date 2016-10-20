@@ -27,8 +27,8 @@
             | Download
 
     div.button-wrapper
-      button.cancel-btn Cancel
-      button.done-btn(ng-class="{'ready':numRequiredCompleted == numRequiredForms}") Done
+      button.cancel-btn(ng-click="onClickCancel()") Cancel
+      button.done-btn(ng-class="{'ready':numRequiredCompleted == numRequiredForms}" ng-click="onClickDone()") Done
       div.clearer
 
 vfi-footer

@@ -70,8 +70,8 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     startClaim: function(data) {
       return httpPost("/claims/create", data);
     },
-    submitClaim: function(extClaimId) {
-      return httpPost("/claim/" + extClaimId + "/submit");
+    submitClaim: function(extClaimId, data) {
+      return httpPost("/claim/" + extClaimId + "/submit", data);
     },
     discardClaim: function(extClaimId) {
       return httpDelete("/claim/" + extClaimId);
