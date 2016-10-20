@@ -27,14 +27,10 @@ module.exports = ClaimService;
  */
 function calculateProgress(formId, data) {
   var evaluate, i;
-  if (!(formId in formlyFields)) {
-    throw new Error("Unknown formId: " + formId);
-  }
   var template = formlyFields[formId];
   var output = {answerable: 0, answered: _.size(data)};
 
   if (!template) {
-    output.answerable = null;
     return output;
   }
 
@@ -52,6 +48,7 @@ function calculateProgress(formId, data) {
 
   return output;
 }
+
 module.exports.calculateProgress = calculateProgress;
 
 module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
