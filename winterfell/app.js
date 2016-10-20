@@ -31,6 +31,10 @@ setupBiscuitKey(Constants.KEY_IDME_CLIENT_ID);
 setupBiscuitKey(Constants.KEY_IDME_SECRET_ID);
 console.log("Biscuit keys configured.");
 
+// Set address of document rendering microservice
+app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
+console.log("DocumentRendering microservice assigned.");
+
 // Initialize Node Modules
 function loadIntoBuild (app, targetDir) {
   var normalizedPath = path.join(__dirname, targetDir);
@@ -48,17 +52,14 @@ console.log("Node modules loaded.");
 // Logger has been initialized
 Log.console("New logger created.");
 
+// Connect to a mongodb server using mongoose
+require('./config/mongoose')(environment);
+
 // Serve static files
 app.use(express.static(path.join(__dirname, '/webapp/build')));
 app.get('/', function(req, resp) {
   resp.render('webapp/build/index.html');
 });
-
-// Connect to a mongodb server using mongoose
-require('./config/mongoose')(environment);
-
-// Set address of document rendering microservice
-app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
 
 // Start server
 var port = 3999;
