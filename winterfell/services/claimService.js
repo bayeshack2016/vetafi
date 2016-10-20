@@ -21,13 +21,13 @@ module.exports = ClaimService;
  * which requires evaluating the angular hideExpression attribute for
  * each field against the current responses.
  *
- * @param formName
+ * @param formId
  * @param data
  * @returns {{answerable: number, answered: number}}
  */
-function calculateProgress(formName, data) {
+function calculateProgress(formId, data) {
   var evaluate, i;
-  var template = formlyFields[formName];
+  var template = formlyFields[formId];
   var output = {answerable: 0, answered: _.size(data)};
 
   if (!template) {
