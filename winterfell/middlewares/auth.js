@@ -1,4 +1,5 @@
 var http = require('http-status-codes');
+var User = require('./../models/user');
 
 function Auth(app) {
   this.app = app;

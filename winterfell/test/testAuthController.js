@@ -11,7 +11,7 @@ describe('AuthController', function() {
   var server;
   var testSession;
 
-  before(function() {
+  before(function(done) {
     server = require('../app');
     testSession = session(server);
 
@@ -26,12 +26,14 @@ describe('AuthController', function() {
         state: User.State.ACTIVE
       }, function(err, user) {
         targetUser = user;
+        done();
       });
     });
   });
 
-  after(function () {
+  after(function (done) {
     server.close();
+    done();
   });
 
   it('Log in success', function (done) {

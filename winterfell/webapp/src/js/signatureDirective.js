@@ -37,7 +37,7 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
             $scope.dataurl = undefined;
           };
 
-          $scope.$watch("dataurl", function (dataUrl) {
+          $scope.$watch('dataurl', function (dataUrl) {
             if (dataUrl) {
               $scope.signaturePad.fromDataURL(dataUrl);
             }
@@ -48,19 +48,12 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
         canvas = element.find('canvas')[0];
         scope.signaturePad = new SignaturePad(canvas);
 
-        if (scope.signature && !scope.signature.$isEmpty && scope.signature.dataUrl) {
-          scope.signaturePad.fromDataURL(scope.signature.dataUrl);
-        }
-
         scope.onResize = function() {
           var canvas = element.find('canvas')[0];
           var ratio =  Math.max($window.devicePixelRatio || 1, 1);
           canvas.width = element[0].clientWidth * ratio;
           canvas.height = element[0].clientHeight * ratio;
           canvas.getContext("2d").scale(ratio, ratio);
-
-          // reset dataurl
-          scope.dataurl = null;
         };
 
         scope.onResize();

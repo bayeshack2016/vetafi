@@ -9,7 +9,27 @@ var UserValues = require('../models/userValues');
 var UserService = require('./../services/userService');
 var session = require('supertest-session');
 var uuid = require('uuid');
-var claimController = require('./../controllers/claimController.js');
+var StringDecoder = require('string_decoder').StringDecoder;
+
+var testReturnAddess = {
+  name: "Name",
+  line1: "Address1",
+  line2: "Address2",
+  city: "City",
+  state: "State",
+  zip: "Zip",
+  country: "Country"
+};
+
+var testDestinationAddress = {
+  name: "Name", // Name line
+  line1: "Address1",
+  line2: "Address2",
+  city: "City",
+  state: "State",
+  zip: "Zip",
+  country: "Country"
+};
 
 describe('ClaimController', function() {
   var targetUser;
@@ -124,10 +144,19 @@ describe('ClaimController', function() {
       externalId: uuid.v4(),
       state: Claim.State.INCOMPLETE
     };
-    Claim.create(claim, function() {
+    Claim.create(claim, function () {
       testSession
         .post('/claim/' + claim.externalId + '/submit')
-        .expect(http.OK, done);
+        .send({
+          returnAddress: testReturnAddess,
+          toAddress: testDestinationAddress
+        })
+        .expect(function (res) {
+          res.body.letter.toAddress.should.deepEqual(testToAddress);
+          res.body.letter.fromAddress.should.deepEqual(testFromAddress);
+          res.body.claim.state.should.equal(Claim.State.SUBMITTED);
+        })
+        .expect(http.OK, done());
     });
   });
 
@@ -167,7 +196,13 @@ describe('SaveClaimController', function () {
     testSession = session(server);
 
     // Remove all users and create one user with user values
-    User.remove({}, function () {
+    var promise = User.remove({});
+
+    promise = promise.then(function () {
+      return UserValues.remove({});
+    });
+
+    promise = promise.then(function () {
       var user = {
         firstname: 'User1',
         lastname: 'McUser',
@@ -175,19 +210,25 @@ describe('SaveClaimController', function () {
         password: 'testword',
         state: User.State.ACTIVE
       };
-      User.create(user, function (err, user) {
-        targetUser = user;
-        UserValues.remove({}, function () {
-          UserValues.create(
-            {userId: targetUser._id},
-            function (err, userValues) {
-              Claim.create({user: targetUser._id}, function(err, claim) {
-                targetClaim = claim;
-                done();
-              });
-            });
-        });
-      });
+      return User.create(user);
+    });
+
+    promise = promise.then(function (user) {
+      targetUser = user;
+      return UserValues.create({userId: user._id});
+    });
+
+    promise = promise.then(function (userValues) {
+      return Claim.create({user: userValues.userId, externalId: uuid.v4()});
+    });
+
+    promise.catch(
+      function(err) {
+        throw new Error(err);
+    }).done(
+      function (claim) {
+        targetClaim = claim;
+        done();
     });
   });
 
@@ -206,8 +247,8 @@ describe('SaveClaimController', function () {
 
   it('Should save the claim form after signin', function(done) {
     testSession
-      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
-      .send({key1: 'value1', key2: 'value2'})
+      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .send({key1: 'value1', key2: 'value2'}) // TODO what form do we want this in?
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
@@ -220,14 +261,14 @@ describe('SaveClaimController', function () {
 
   it('Should correctly calculate progress after save', function(done) {
     testSession
-      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
+      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
       .send({filing_for_self: false})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
           should.exist(doc);
           doc.answered.should.be.exactly(1);
-          doc.answerable.should.be.exactly(27);
+          doc.answerable.should.be.exactly(26);
           done();
         })
       })
@@ -235,16 +276,60 @@ describe('SaveClaimController', function () {
 
   it('Should correctly calculate progress after save with hidden questions', function(done) {
     testSession
-      .post('/save/' + targetClaim._id + '/VBA-21-0966-ARE')
+      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
       .send({filing_for_self: true})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
           should.exist(doc);
           doc.answered.should.be.exactly(1);
-          doc.answerable.should.be.exactly(22);
+          doc.answerable.should.be.exactly(21);
           done();
         })
       })
+  });
+
+  it('Should render the form after save', function(done) {
+    testSession
+      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .send({})
+      .expect(201, function() {
+        Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
+          should.not.exist(error);
+          should.exist(doc);
+          var decoder = new StringDecoder('utf8');
+          decoder.end(doc.pdf.slice(0, 4)).should.equal('%PDF');
+          done();
+        })
+      })
+  });
+
+  it('Should update the user after save', function(done) {
+    testSession
+      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .send({
+        claimant_first_name: 'jeff',
+        veteran_first_name: 'joe',
+        veteran_home_city: 'city1'
+      })
+      .expect(201, function () {
+        User.findOne({_id: targetUser._id}, function(error, user) {
+          should.not.exist(error);
+          should.exist(user);
+          user.firstname.should.equal('User1');
+          user.contact.address.city.should.equal('city1');
+          done();
+        })
+      })
+  });
+
+  it('Should retrieve the rendered form after save', function(done) {
+    testSession
+      .get('/claim/' + targetClaim.externalId + '/form/VBA-21-0966-ARE/pdf')
+      .expect(200)
+      .end(function(err, res) {
+        res.text.should.startWith('%PDF');
+        done();
+      });
   });
 });

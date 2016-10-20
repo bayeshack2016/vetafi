@@ -63,8 +63,15 @@ module.exports = function (app) {
       }
 
       if (user) {
-        UserValues.findOne({userId: user._id}).exec(function(err, userValues) {
+        var promise = UserValues.findOne({userId: user._id});
+
+        promise.then(function success(userValues) {
+          console.log("sending vals", userValues);
           res.status(http.OK).send({ values: userValues || {} });
+        });
+
+        promise.catch(function failure() {
+          res.status(http.INTERNAL_SERVER_ERROR).send();
         });
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});

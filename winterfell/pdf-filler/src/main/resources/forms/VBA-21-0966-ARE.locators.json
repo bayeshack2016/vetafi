@@ -1,7 +1,7 @@
 [
   {
     "pdfId": "F[0].Page_1[0].PreferredEmail[0]",
-    "elementId": "veteran_email"
+    "elementId": "contact_email"
   },
   {
     "pdfId": null,
@@ -61,14 +61,14 @@
   {
     "pdfId": "F[0].Page_1[0].ClaimantSSN4[0]",
     "elementId": "claimant_ssn",
-    "substringStart": 3,
-    "substringEnd": 5
+    "substringStart": 4,
+    "substringEnd": 6
   },
   {
     "pdfId": "F[0].Page_1[0].ClaimantSSN6[0]",
     "elementId": "claimant_ssn",
-    "substringStart": 5,
-    "substringEnd": 9
+    "substringStart": 7,
+    "substringEnd": 11
   },
   {
     "pdfId": "F[0].Page_1[0].VeteranSSN1[0]",
@@ -79,25 +79,25 @@
   {
     "pdfId": "F[0].Page_1[0].VeteranSSN4[0]",
     "elementId": "veteran_ssn",
-    "substringStart": 3,
-    "substringEnd": 5
+    "substringStart": 4,
+    "substringEnd": 6
   },
   {
     "pdfId": "F[0].Page_1[0].VeteranSSN6[0]",
     "elementId": "veteran_ssn",
-    "substringStart": 5,
-    "substringEnd": 9
+    "substringStart": 7,
+    "substringEnd": 11
   },
   {
     "pdfId": "F[0].Page_1[0].namefirst1[1]",
     "elementId": "veteran_first_name"
   },
   {
-    "pdfId": "F[0].Page_1[0].namemiddleinitial[1]",
+    "pdfId": "F[0].Page_1[0].namemiddleinitial[0]",
     "elementId": "veteran_middle_initial"
   },
   {
-    "pdfId": "F[0].Page_1[0].namelast1[1]",
+    "pdfId": "F[0].Page_1[0].namelast1[0]",
     "elementId": "veteran_last_name"
   },
   {
@@ -105,11 +105,11 @@
     "elementId": "claimant_first_name"
   },
   {
-    "pdfId": "F[0].Page_1[0].namemiddleinitial[0]",
+    "pdfId": "F[0].Page_1[0].namemiddleinitial[1]",
     "elementId": "claimant_middle_initial"
   },
   {
-    "pdfId": "F[0].Page_1[0].namelast1[0]",
+    "pdfId": "F[0].Page_1[0].namelast1[1]",
     "elementId": "claimant_last_name"
   },
   {
@@ -142,8 +142,7 @@
   },
   {
     "pdfId": "F[0].Page_1[0].PreferredPhoneNumber[0]",
-    "elementId": "veteran_phone_number",
-    "concatOrder": 0
+    "elementId": "contact_phone_number"
   },
   {
     "pdfId": "F[0].Page_1[0].VAFileNo\\._1of9[0]",
@@ -152,20 +151,20 @@
   {
     "pdfId": "F[0].Page_1[0].dateofbirth5[0]",
     "elementId": "veteran_dob",
-    "substringStart": 0,
-    "substringEnd": 4
+    "substringStart": 6,
+    "substringEnd": 10
   },
   {
     "pdfId": "F[0].Page_1[0].dateofbirth1[0]",
     "elementId": "veteran_dob",
-    "substringStart": 5,
-    "substringEnd": 7
+    "substringStart": 0,
+    "substringEnd": 2
   },
   {
     "pdfId": "F[0].Page_1[0].dateofbirth3[0]",
     "elementId": "veteran_dob",
-    "substringStart": 8,
-    "substringEnd": 10
+    "substringStart": 3,
+    "substringEnd": 5
   },
   {
     "pdfId": "F[0].Page_1[0].SignatureOfClaimant_AuthorizedRepresentative[0]",

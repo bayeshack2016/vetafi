@@ -45,11 +45,13 @@ public class PDFStampingTest {
         PDFStamping.stampPdf(pdfTemplate,
                 Lists.newArrayList(
                         new PDFField("first_name", "jeff"),
-                        new PDFField("branch", "Army")
+                        new PDFField("branch", "Army"),
+                        new PDFField("street", "68 Mt. Vernon St.")
                 ),
                 Lists.newArrayList(
                         new PDFFieldLocator("namefirst1[0]", "first_name", 0, null, null, null, false),
-                        new PDFFieldLocator(null, "branch", 0, idMap, null, null, false)
+                        new PDFFieldLocator(null, "branch", 0, idMap, null, null, false),
+                        new PDFFieldLocator("form1[0].Page_3[0].namelast1[14]", "street", 0, null, null, null, false)
                 ),
                 new FileOutputStream(tmpFile));
     }

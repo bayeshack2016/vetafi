@@ -27,7 +27,6 @@
             <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-forms</artifactId>
             <version>${dropwizard.version}</version>
-            <type>pom</type>
         </dependency>
 
         <dependency>

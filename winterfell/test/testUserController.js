@@ -46,6 +46,12 @@ describe('UserController', function() {
       .expect(http.NOT_FOUND, done);
   });
 
+  it('should sign in', function (done) {
+    testSession.post('/auth/login')
+      .send({email: targetUser.email, password: targetUser.password})
+      .expect(200, done);
+  });
+
   it('Get user endpoint - success', function(done) {
     testSession
         .get('/user')
