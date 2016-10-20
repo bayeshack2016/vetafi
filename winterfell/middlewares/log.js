@@ -17,29 +17,22 @@ function Log(app) {
       resp: respSerializer
     }
   });
-
   apiLog = mainLog.child({widget_type: 'api'});
 
   // Api request logging (uses request serializer)
   app.use(function(req, res, next) {
-    req.requestId = uuid.v4(); // this is for keeping track of which requests correspond to which responses
-    if (req.url && req.url.indexOf('/api/') > -1) {
-      apiLog.info({req: req});
-    } else {
-      apiLog.debug({req: req});
-    }
+    // Assigning a requestId gives us a way to
+    // keep track of which requests correspond to which responses
+    req.requestId = uuid.v4();
+    logRequest(req);
     next();
   });
 
   // Api response logging (uses mung + response serializer)
   app.use(mung.json(function(body, req, resp) {
-    apiLog.info({
-      resp: resp,
-      body: body
-    });
+    apiLog.info({ resp: resp, body: body });
     return body;
   }));
-
 }
 module.exports = Log;
 
@@ -49,6 +42,20 @@ module.exports.console = function(msg) {
   console.log(msg);
 };
 
+/*
+ * Helper methods
+ */
+function logRequest(req) {
+  if (req.url && req.url.indexOf('/api/') > -1) {
+    apiLog.info({req: req}); // only api endpoints should be level info
+  } else {
+    apiLog.debug({req: req}); // i.e. static asset requests should be level debug
+  }
+}
+
+/*
+ * Serializers
+ */
 function reqSerializer(req) {
   return {
       method: req.method,
