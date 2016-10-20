@@ -1,12 +1,13 @@
 var _ = require('lodash');
+var bulk = require('bulk-require');
+var Claim = require('./../models/claim');
+var expressions = require("angular-expressions");
+var Form = require('./../models/form');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var Claim = require('./../models/claim');
-var Form = require('./../models/form');
 var Q = require('q');
-var bulk = require('bulk-require');
+
 var formlyFields = bulk(__dirname + '/../forms/', ['*']);
-var expressions = require("angular-expressions");
 
 function ClaimService(app) {
   this.app = app;

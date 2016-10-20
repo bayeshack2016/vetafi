@@ -63,7 +63,7 @@ $(document).ready(function() {
       return;
     }
 
-    var url = "/auth/signup";
+    var url = "/api/auth/signup";
     var data = {
       email: email,
       password: password
@@ -95,7 +95,7 @@ $(document).ready(function() {
       return;
     }
 
-    var url = "/auth/login";
+    var url = "/api/auth/login";
     var data = {"email": email, "password": password};
     var success = function(resp) {
       if (resp.redirect) {

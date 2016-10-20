@@ -4,7 +4,6 @@ var User = require('./../models/user');
 function Auth(app) {
   this.app = app;
 }
-
 module.exports = Auth;
 
 module.exports.authenticatedOr404 = function (req, res, next) {
@@ -12,7 +11,6 @@ module.exports.authenticatedOr404 = function (req, res, next) {
     return next();
   }
 
-  console.log("Not authed");
   res.sendStatus(http.NOT_FOUND);
 };
 

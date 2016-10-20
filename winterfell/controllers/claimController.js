@@ -1,25 +1,24 @@
-var mongoose = require('mongoose');
+var _ = require('lodash');
+var auth = require('../middlewares/auth');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var Claim = require('../models/claim');
 var ClaimService = require('./../services/claimService');
-var User = require('../models/user');
-var Form = require('../models/form');
-var UserValues = require('../models/userValues');
-var auth = require('../middlewares/auth');
-var MailingService = require('./../services/mailingService');
 var DocumentRenderingService = require('./../services/documentRenderingService');
-var _ = require('lodash');
+var Form = require('../models/form');
 var Q = require('q');
+var MailingService = require('./../services/mailingService');
+var mongoose = require('mongoose');
+var User = require('../models/user');
+var UserValues = require('../models/userValues');
 
 module.exports = function (app) {
-
+  var mw = [auth.authenticatedOr404];
   var mailingService = new MailingService(app);
   var documentRenderingService = new DocumentRenderingService(app);
 
   // Get all claims for a user
-  app.get('/claims', auth.authenticatedOr404, function (req, res) {
-    console.log('[getClaimsForUser] request received for ' + req.session.userId);
+  app.get('/api/claims', mw, function (req, res) {
     User.findById(req.session.userId).exec(function(err, user) {
       if (err) {
         res.sendStatus(http.INTERNAL_SERVER_ERROR);
@@ -39,8 +38,7 @@ module.exports = function (app) {
   });
 
   // Get a particular claim
-  app.get('/claim/:extClaimId', auth.authenticatedOr404, function (req, res) {
-    console.log('[getClaim] request received for ' + req.params.extClaimId);
+  app.get('/api/claim/:extClaimId', mw, function (req, res) {
     Claim.findOne({externalId: req.params.extClaimId}).exec(function(err, claim) {
       if (claim) {
         res.status(http.OK).send({claim: claim});
@@ -50,8 +48,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/claims/create', auth.authenticatedOr404, function (req, res) {
-    console.log('[createClaim] request received for ' + req.session.userId);
+  app.post('/api/claims/create', mw, function (req, res) {
     var callback = function (err, claim) {
       if (claim) {
         res.status(http.CREATED).send({claim: claim});
@@ -100,8 +97,7 @@ module.exports = function (app) {
     }
   }
 
-  app.post('/claim/:extClaimId/submit',  auth.authenticatedOr404, function(req, res) {
-    console.log('[submitClaim] request received ' + JSON.stringify(req.body));
+  app.post('/api/claim/:extClaimId/submit', mw, function(req, res) {
     var that = this;
     var currentUser = null;
     var promise = User.findById(req.session.userId);
@@ -148,9 +144,7 @@ module.exports = function (app) {
     });
   });
 
-  app.delete('/claim/:extClaimId', auth.authenticatedOr404, function (req, res) {
-    console.log('[deleteClaim] request received for ' + req.params.extClaimId);
-
+  app.delete('/api/claim/:extClaimId', mw, function (req, res) {
     handleClaimStateChange(req.params.extClaimId,
       Claim.State.DISCARDED,
       claimUpdateCallbackFactory(res));
@@ -242,8 +236,7 @@ module.exports = function (app) {
     return promise;
   }
 
-  app.post('/save/:claim/:form', auth.authenticatedOr404, function (req, res) {
-    console.log("[/save/:claim/:form] posted " + req.body);
+  app.post('/api/save/:claim/:form', mw, function (req, res) {
     var resolvedClaim;
     var progress = ClaimService.calculateProgress(req.params.form, req.body);
 
@@ -302,7 +295,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/claim/:claim/form/:form', auth.authenticatedOr404, function (req, res) {
+  app.get('/api/claim/:claim/form/:form', mw, function (req, res) {
     Claim.findOne({externalId: req.params.claim}, function(error, claim) {
       if (error) {
         console.log(error);
@@ -322,8 +315,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/claim/:claimId/form/:formName/pdf', auth.authenticatedOr404, function (req, res) {
-    console.log('/claim/:claimId/form/:formName/pdf');
+  app.get('/api/claim/:claimId/form/:formName/pdf', mw, function (req, res) {
     var promise = Claim.findOne(
       {externalId: req.params.claimId}
     );
@@ -347,7 +339,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/claim/:claim/forms', auth.authenticatedOr404, function (req, res) {
+  app.get('/api/claim/:claim/forms', mw, function (req, res) {
     Claim.findOne({externalId: req.params.claim}, function(error, claim) {
       if (error) {
         console.log(error);

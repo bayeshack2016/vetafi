@@ -36,31 +36,31 @@ describe('UserController', function() {
 
   it('Get user endpoint - 404 if not authed', function(done) {
     testSession
-        .get('/user')
+        .get('/api/user')
         .expect(http.NOT_FOUND, done);
   });
 
   it('Delete user endpoint - 404 if not authed', function(done) {
     testSession
-      .del('/user')
+      .del('/api/user')
       .expect(http.NOT_FOUND, done);
   });
 
   it('should sign in', function (done) {
-    testSession.post('/auth/login')
+    testSession.post('/api/auth/login')
       .send({email: targetUser.email, password: targetUser.password})
       .expect(200, done);
   });
 
   it('Get user endpoint - success', function(done) {
     testSession
-        .get('/user')
+        .get('/api/user')
         .expect(http.OK, done);
   });
 
   it('Delete user endpoint - success', function(done) {
     testSession
-        .del('/user')
+        .del('/api/user')
         .expect(http.OK, done);
   });
 

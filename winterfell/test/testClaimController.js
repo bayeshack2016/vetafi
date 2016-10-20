@@ -62,28 +62,28 @@ describe('ClaimController', function() {
 
   it('Get claims for user - 404 if not authed', function(done) {
     testSession
-      .get('/claims')
+      .get('/api/claims')
       .expect(http.NOT_FOUND, done);
   });
 
   it('should sign in', function (done) {
-    testSession.post('/auth/login')
+    testSession.post('/api/auth/login')
       .send({email: targetUser.email, password: targetUser.password})
       .expect(200, done);
   });
 
   it('Create claim for user - success', function(done) {
     testSession
-      .post('/claims/create')
+      .post('/api/claims/create')
       .expect(http.CREATED, done);
   });
 
   it('Get claim - claim dne', function(done) {
     testSession
-      .post('/claims/create')
+      .post('/api/claims/create')
       .expect(http.OK, function() {
         testSession
-          .get('/claim/qwer')
+          .get('/api/claim/qwer')
           .expect(http.NOT_FOUND, done);
       });
   });
@@ -96,7 +96,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .get('/claim/' + claim.externalId)
+        .get('/api/claim/' + claim.externalId)
         .expect(http.OK, done);
     });
   });
@@ -116,10 +116,10 @@ describe('ClaimController', function() {
     ];
     Claim.create(claimsArr, function() {
       testSession
-        .get('/claim/' + claimsArr[0].externalId)
+        .get('/api/claim/' + claimsArr[0].externalId)
         .expect(http.OK, function() {
           testSession
-            .get('/claim/' + claimsArr[1].externalId)
+            .get('/api/claim/' + claimsArr[1].externalId)
             .expect(http.OK, done);
         });
     });
@@ -133,7 +133,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .post('/claim/qwer/submit')
+        .post('/api/claim/qwer/submit')
         .expect(http.NOT_FOUND, done);
     });
   });
@@ -146,7 +146,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function () {
       testSession
-        .post('/claim/' + claim.externalId + '/submit')
+        .post('/api/claim/' + claim.externalId + '/submit')
         .send({
           returnAddress: testReturnAddess,
           toAddress: testDestinationAddress
@@ -168,7 +168,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .del('/claim/qwer')
+        .del('/api/claim/qwer')
         .expect(http.NOT_FOUND, done);
     });
   });
@@ -181,7 +181,7 @@ describe('ClaimController', function() {
     };
     Claim.create(claim, function() {
       testSession
-        .del('/claim/' + claim.externalId)
+        .del('/api/claim/' + claim.externalId)
         .expect(http.OK, done);
     });
   });
@@ -234,20 +234,19 @@ describe('SaveClaimController', function () {
 
   it('should 404 before sign in', function (done) {
     testSession
-      .post('/save/1/1')
+      .post('/api/save/1/1')
       .expect(404, done);
   });
 
   it('should sign in', function (done) {
-    testSession.post('/auth/login')
+    testSession.post('/api/auth/login')
       .send({email: targetUser.email, password: targetUser.password})
       .expect(200, done);
   });
 
-
   it('Should save the claim form after signin', function(done) {
     testSession
-      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
       .send({key1: 'value1', key2: 'value2'}) // TODO what form do we want this in?
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
@@ -261,7 +260,7 @@ describe('SaveClaimController', function () {
 
   it('Should correctly calculate progress after save', function(done) {
     testSession
-      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
       .send({filing_for_self: false})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
@@ -276,7 +275,7 @@ describe('SaveClaimController', function () {
 
   it('Should correctly calculate progress after save with hidden questions', function(done) {
     testSession
-      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
       .send({filing_for_self: true})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
@@ -291,7 +290,7 @@ describe('SaveClaimController', function () {
 
   it('Should render the form after save', function(done) {
     testSession
-      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
       .send({})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
@@ -306,7 +305,7 @@ describe('SaveClaimController', function () {
 
   it('Should update the user after save', function(done) {
     testSession
-      .post('/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
       .send({
         claimant_first_name: 'jeff',
         veteran_first_name: 'joe',
@@ -325,7 +324,7 @@ describe('SaveClaimController', function () {
 
   it('Should retrieve the rendered form after save', function(done) {
     testSession
-      .get('/claim/' + targetClaim.externalId + '/form/VBA-21-0966-ARE/pdf')
+      .get('/api/claim/' + targetClaim.externalId + '/form/VBA-21-0966-ARE/pdf')
       .expect(200)
       .end(function(err, res) {
         res.text.should.startWith('%PDF');
