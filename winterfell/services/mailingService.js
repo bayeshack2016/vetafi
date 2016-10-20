@@ -1,11 +1,12 @@
 var lob = require('Lob');
-var Document = require('./../models/document');
+var Constants = require('./../utils/constants');
+var Form = require('./../models/form');
 var Letter = require('./../models/letter');
 var User = require('./../models/user');
-var DestinationAddress = require('./../models/destinationAddress');
 var DocumentRenderingService = require('./documentRenderingService');
 var Constants = require('./../utils/constants');
 var ENVIRONMENT = Constants.environment;
+var Q = require('q');
 
 /**
  * Abstraction around a mailing api.
@@ -31,70 +32,73 @@ module.exports = MailingService;
 /**
  * Send a set of rendered documents to the recipient.
  *
- * @param sender User
- * @param recipient DestinationAddress
- * @param documents Array of Document
- * @param callback function
+ * @param user User sending message
+ * @param fromAddress User's return address
+ * @param toAddress DestinationAddress
+ * @param forms Array of Form
+ * @returns Q promise
  */
-MailingService.prototype.sendLetter = function (sender, recipient, documents, callback) {
+MailingService.prototype.sendLetter = function (user, fromAddress, toAddress, forms) {
+    var deferred = Q.defer();
     if (this.testMode) {
-        callback(null, {});
+        deferred.accept({});
         return;
     }
     var that = this;
     var documentRenderingService = new DocumentRenderingService(this.app);
-    documentRenderingService.concatenateDocs(documents, function(documentRenderingError, pdf) {
+    documentRenderingService.concatenateDocs(forms, function(documentRenderingError, pdf) {
         if (documentRenderingError) {
-            callback(documentRenderingError, null);
+            deferred.reject(documentRenderingError);
             return;
         }
 
-        var senderAddress = sender.contact.address;
-
-        that.Lob.letters.create({description: "Description",
+        that.Lob.letters.create({description: 'Description',
             to: {
-                name: recipient.name,
-                address_line1: recipient.addressLine1,
-                address_line2: recipient.addressLine2,
-                address_city: recipient.addressCity,
-                address_state: recipient.addressState,
-                address_zip: recipient.addressZip,
-                address_country: recipient.addressCountry
+                name: toAddress.name || '',
+                address_line1: toAddress.line1 || '',
+                address_line2: toAddress.line2 || '',
+                address_city: toAddress.city || '',
+                address_state: toAddress.state || '',
+                address_zip: toAddress.zip || '',
+                address_country: toAddress.country || ''
             },
             from: {
-                name: senderAddress.name,
-                address_line1: senderAddress.line1,
-                address_line2: senderAddress.line2,
-                address_city: senderAddress.city,
-                address_state: senderAddress.state,
-                address_zip: senderAddress.zip,
-                address_country: senderAddress.country
+                name: fromAddress.name || '',
+                address_line1: fromAddress.line1 || '',
+                address_line2: fromAddress.line2 || '',
+                address_city: fromAddress.city || '',
+                address_state: fromAddress.state || '',
+                address_zip: fromAddress.zip || '',
+                address_country: fromAddress.country || ''
             },
-            file: pdf,
-            double_sided: true
+            file: new Buffer(pdf),
+            double_sided: true,
+            color: false,
+            address_placement: 'insert_blank_page'
         }, function (lobError, res) {
             if (lobError) {
-                callback(lobError, null);
+                deferred.reject(lobError);
                 return;
             }
-
             Letter.create({
                 vendorId: res.id,
                 expectedDeliveryDate: res.expected_delivery_date,
-                recipient: recipient._id,
-                sender: sender._id,
-                documents: documents.map(function(doc) {
-                    return doc._id;
+                toAddress: fromAddress,
+                fromAddress: toAddress,
+                documents: forms.map(function(form) {
+                    return form.pdf;
                 }),
-                user: sender._id
+                user: user._id
             }, function(databaseError, doc) {
                 if (databaseError) {
-                    callback(databaseError, null);
+                    deferred.reject(databaseError);
                     return;
                 }
 
-                callback(null, doc);
+                deferred.resolve(doc);
             });
         });
     });
+
+    return deferred.promise;
 };

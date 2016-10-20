@@ -9,8 +9,8 @@ var UserValueSchema = new Schema({
     ref: 'User',
     index: {unique: true}
   },
-  values: Schema.Types.Mixed
-}, { timestamps: true });
+  values: { type: Schema.Types.Mixed,  default: {}}
+  }, { timestamps: true, minimize: false });
 
 // Query helpers
 // None yet

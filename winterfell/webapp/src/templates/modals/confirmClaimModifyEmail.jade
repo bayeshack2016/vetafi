@@ -1,0 +1,13 @@
+// For Confirm Claim page
+#vfi-confirm-modify-contact-modal
+    button.close-modal-btn(ng-click="$dismiss()")
+        div.close-icon
+    h3 Change Email
+
+    div.input-wrapper
+        input(placeholder="Email", ng-model="email")
+        input(placeholder="Confirm Email", ng-model="confirmEmail")
+    div.button-wrapper
+        button.cancel-btn(ng-click="dismiss()") Cancel
+        button.save-btn(ng-click="$close(email)", ng-active="email == confirmEmail") Save
+        div.clearer

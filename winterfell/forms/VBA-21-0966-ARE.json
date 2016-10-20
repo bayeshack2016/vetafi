@@ -24,52 +24,7 @@
       },
       "defaultValue": true
     },
-    {
-      "key": "represented_by_surviving_dependent_y_n",
-      "type": "radio",
-      "templateOptions": {
-        "label": "Are you the dependent of a deceased veteran?",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "Yes"
-          },
-          {
-            "name": "No",
-            "value": "No"
-          }
-        ]
-      },
-      "hideExpression": "model.filing_for_self"
-    },
-    {
-      "key": "contact_email",
-      "type": "input",
-      "optionsTypes": [
-        "email"
-      ],
-      "templateOptions": {
-        "label": "Your Email",
-        "autocomplete": "email"
-      }
-    },
-    {
-      "key": "veteran_sex",
-      "type": "radio",
-      "templateOptions": {
-        "label": "Veteran's Gender",
-        "options": [
-          {
-            "name": "Male",
-            "value": "Male"
-          },
-          {
-            "name": "Female",
-            "value": "Female"
-          }
-        ]
-      }
-    },
+
     {
       "key": "veteran_intent_to_file_compensation_y_n",
       "type": "radio",
@@ -105,6 +60,137 @@
       }
     },
     {
+      "key": "represented_by_surviving_dependent_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Are you the dependent of a deceased veteran?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ]
+      },
+      "hideExpression": "model.filing_for_self"
+    },
+
+    {
+      "key": "claimant_first_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your First Name",
+        "placeholder": "John",
+        "autocomplete": "given-name"
+      }
+    },
+    {
+      "key": "claimant_middle_initial",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your Middle Initial",
+        "placeholder": "C",
+        "autocomplete": "additional-name"
+      }
+    },
+    {
+      "key": "claimant_last_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your Last Name",
+        "placeholder": "Doe",
+        "autocomplete": "family-name"
+      }
+    },
+    {
+      "key": "claimant_ssn",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your Social Security Number",
+        "placeholder": "000-00-0000"
+      },
+      "optionsTypes": [
+        "ssn"
+      ]
+    },
+
+    {
+      "key": "veteran_first_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's First Name",
+        "placeholder": "John",
+        "autocomplete": "given-name"
+      },
+      "hideExpression": "model.filing_for_self"
+    },
+    {
+      "key": "veteran_middle_initial",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Middle Initial",
+        "placeholder": "C",
+        "autocomplete": "additional-name"
+      },
+      "hideExpression": "model.filing_for_self"
+    },
+    {
+      "key": "veteran_last_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Last Name",
+        "placeholder": "Doe",
+        "autocomplete": "family-name"
+      },
+      "hideExpression": "model.filing_for_self"
+    },
+    {
+      "key": "veteran_ssn",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Social Security Number",
+        "placeholder": "000-00-0000"
+      },
+      "optionsTypes": [
+        "ssn"
+      ],
+      "hideExpression": "model.filing_for_self"
+    },
+
+    {
+      "key": "veteran_dob",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Veteran's Date of Birth",
+        "placeholder": "MM/DD/YYYY",
+        "autocomplete": "bday"
+      }
+    },
+    {
+      "key": "veteran_sex",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Veteran's Gender",
+        "options": [
+          {
+            "name": "Male",
+            "value": "Male"
+          },
+          {
+            "name": "Female",
+            "value": "Female"
+          }
+        ]
+      }
+    },
+
+    {
       "key": "veteran_previous_claim_with_va_y_n",
       "type": "radio",
       "templateOptions": {
@@ -122,99 +208,20 @@
       }
     },
     {
-      "key": "veteran_attorney_or_vso",
-      "type": "textarea",
-      "templateOptions": {
-        "label": "Name of attorney, agent, or veterans service organization",
-        "rows": 2,
-        "columns": 100
-      }
-    },
-    {
-      "key": "claimant_ssn",
+      "key": "va_file_number",
       "type": "input",
       "templateOptions": {
-        "label": "Claimant's social security number",
-        "placeholder": "000-00-0000"
+        "label": "VA File Number",
+        "placeholder": "000000000"
       },
-      "optionsTypes": [
-        "ssn"
-      ],
-      "hideExpression": "model.filing_for_self"
+      "hideExpression": "model.veteran_previous_claim_with_va_y_n != 'Yes'"
     },
-    {
-      "key": "veteran_ssn",
-      "type": "input",
-      "templateOptions": {
-        "label": "Veteran's social security number",
-        "placeholder": "000-00-0000"
-      },
-      "optionsTypes": [
-        "ssn"
-      ]
-    },
-    {
-      "key": "veteran_first_name",
-      "type": "input",
-      "templateOptions": {
-        "label": "First Name",
-        "placeholder": "John",
-        "autocomplete": "given-name"
-      }
-    },
-    {
-      "key": "veteran_middle_initial",
-      "type": "input",
-      "templateOptions": {
-        "label": "Middle Initial",
-        "placeholder": "C",
-        "autocomplete": "additional-name"
-      }
-    },
-    {
-      "key": "veteran_last_name",
-      "type": "input",
-      "templateOptions": {
-        "label": "Last Name",
-        "placeholder": "Doe",
-        "autocomplete": "family-name"
-      }
-    },
-    {
-      "key": "claimant_first_name",
-      "type": "input",
-      "templateOptions": {
-        "label": "Claimant's First Name",
-        "placeholder": "John",
-        "autocomplete": "given-name"
-      },
-      "hideExpression": "model.filing_for_self"
-    },
-    {
-      "key": "claimant_middle_initial",
-      "type": "input",
-      "templateOptions": {
-        "label": "Claimant's Middle Initial",
-        "placeholder": "C",
-        "autocomplete": "additional-name"
-      },
-      "hideExpression": "model.filing_for_self"
-    },
-    {
-      "key": "claimant_last_name",
-      "type": "input",
-      "templateOptions": {
-        "label": "Claimant's Last Name",
-        "placeholder": "Doe",
-        "autocomplete": "family-name"
-      },
-      "hideExpression": "model.filing_for_self"
-    },
+
     {
       "key": "veteran_home_address_line1",
       "type": "input",
       "templateOptions": {
-        "label": "Veteran Address Line 1",
+        "label": "Address Line 1",
         "placeholder": "55 Magnolia St.",
         "autocomplete": "address-line1"
       }
@@ -223,7 +230,7 @@
       "key": "veteran_home_address_line2",
       "type": "input",
       "templateOptions": {
-        "label": "Veteran Address Line 2",
+        "label": "Address Line 2",
         "placeholder": "",
         "autocomplete": "address-line2"
       }
@@ -232,8 +239,8 @@
       "key": "veteran_home_apartment_number",
       "type": "input",
       "templateOptions": {
-        "label": "Veteran Apartment Number",
-        "placeholder": "Name",
+        "label": "Apartment Number",
+        "placeholder": "Apt. 3",
         "autocomplete": "address-line3"
       }
     },
@@ -241,8 +248,8 @@
       "key": "veteran_home_city",
       "type": "input",
       "templateOptions": {
-        "label": "Veteran City",
-        "placeholder": "",
+        "label": "City",
+        "placeholder": "Kansas City",
         "autocomplete": "address-level2"
       }
     },
@@ -253,7 +260,7 @@
         "state"
       ],
       "templateOptions": {
-        "label": "Veteran State",
+        "label": "State",
         "autocomplete": "address-level1"
       }
     },
@@ -264,7 +271,7 @@
         "zipCode"
       ],
       "templateOptions": {
-        "label": "Veteran Zipcode",
+        "label": "Postal Code",
         "autocomplete": "postal-code"
       }
     },
@@ -272,11 +279,12 @@
       "key": "veteran_home_country",
       "type": "input",
       "templateOptions": {
-        "label": "Veteran Country",
-        "placeholder": "USA",
+        "label": "Country",
+        "placeholder": "US",
         "autocomplete": "country-name"
       }
     },
+
     {
       "key": "contact_phone_number",
       "type": "input",
@@ -284,30 +292,32 @@
         "phoneNumber"
       ],
       "templateOptions": {
-        "label": "Your Phone Number",
+        "label": "Contact Phone Number",
         "autocomplete": "tel"
       }
     },
     {
-      "key": "va_file_number",
-      "type": "input",
-      "templateOptions": {
-        "label": "VA File Number",
-        "placeholder": "000000000"
-      }
-    },
-    {
-      "key": "veteran_dob",
+      "key": "contact_email",
       "type": "input",
       "optionsTypes": [
-        "date"
+        "email"
       ],
       "templateOptions": {
-        "label": "Veteran Date of Birth",
-        "placeholder": "MM/DD/YYYY",
-        "autocomplete": "bday"
+        "label": "Contact Email",
+        "autocomplete": "email"
       }
     },
+
+    {
+      "key": "veteran_attorney_or_vso",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Name of attorney, agent, or veterans service organization",
+        "rows": 2,
+        "columns": 100
+      }
+    },
+
     {
       "key": "veteran_date_signed_0966",
       "type": "input",

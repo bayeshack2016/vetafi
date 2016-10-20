@@ -7,9 +7,25 @@ var Schema = mongoose.Schema;
 var letterSchema = new Schema({
     vendorId: String, // Unique iq lob.com associates with the letter
     expectedDeliveryDate: Date,
-    recipient: Schema.Types.ObjectId,
-    sender: Schema.Types.ObjectId,
-    documents: [Schema.Types.ObjectId],
+    toAddress: {
+        name: String, // Name line
+        line1: String,
+        line2: String,
+        city: String,
+        state: String,
+        zip: String,
+        country: String
+    },
+    fromAddress: {
+        name: String, // Name line
+        line1: String,
+        line2: String,
+        city: String,
+        state: String,
+        zip: String,
+        country: String
+    },
+    documents: [Buffer],
     user: Schema.Types.ObjectId
 }, {
   timestamps: true

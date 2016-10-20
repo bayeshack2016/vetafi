@@ -21,20 +21,16 @@ module.exports = ClaimService;
  * which requires evaluating the angular hideExpression attribute for
  * each field against the current responses.
  *
- * @param formId
+ * @param formName
  * @param data
  * @returns {{answerable: number, answered: number}}
  */
-module.exports.calculateProgress = function calculateProgress(formId, data) {
+function calculateProgress(formName, data) {
   var evaluate, i;
-  if (!(formId in formlyFields)) {
-    throw new Error("Unknown formId: " + formId);
-  }
-  var template = formlyFields[formId];
+  var template = formlyFields[formName];
   var output = {answerable: 0, answered: _.size(data)};
 
   if (!template) {
-    output.answerable = null;
     return output;
   }
 
@@ -51,7 +47,9 @@ module.exports.calculateProgress = function calculateProgress(formId, data) {
   }
 
   return output;
-};
+}
+
+module.exports.calculateProgress = calculateProgress;
 
 module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
   return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, fileClaim) {
@@ -67,6 +65,7 @@ module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
         // until this is done by using a promise chain.
         var promise = Q();
         forms.forEach(function(form) {
+          console.log("Creating form " + form);
           var progress = calculateProgress(form, {});
           promise = promise.then(function() {
             return Form.create({

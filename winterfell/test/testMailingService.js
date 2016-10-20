@@ -3,72 +3,87 @@ var should = require('should');
 var fs = require('fs');
 var Constants = require('./../utils/constants');
 var ENVIRONMENT = Constants.environment;
-var DestinationAddress = require('../models/destinationAddress');
 var User = require('../models/user');
+var Form = require('../models/form');
 var Letter = require('../models/letter');
-var Document = require('../models/document');
 
-var testUser = {
-    firstname: "FirstName",
-    middlename: "MName",
-    lastname: "LastName",
-    email: "test@test.com",
-    externalId: "value",
-    password: "password",
-    state: User.State.ACTIVE,
-    contact: {
-      address: {
-          name: "Name",
-          line1: "Address1",
-          line2: "Address2",
-          city: "City",
-          state: "State",
-          zip: "Zip",
-          country: "Country"
-      }
+var mockLob = {
+    letters: {
+        create: function (req, callback) {
+            callback(null, {});
+        }
     }
 };
 
-var testDestinationAddress = {
-    key: "Office",
-    name: "Name", // Name line
-    addressLine1: "Address1",
-    addressLine2: "Address2",
-    addressCity: "City",
-    addressState: "State",
-    addressZip: "Zip",
-    addressCountry: "Country"
+var testReturnAddess = {
+    name: "Name",
+    line1: "Address1",
+    line2: "Address2",
+    city: "City",
+    state: "State",
+    zip: "Zip",
+    country: "Country"
 };
 
-var testDocument = {
+var testDestinationAddress = {
+    name: "Name", // Name line
+    line1: "Address1",
+    line2: "Address2",
+    city: "City",
+    state: "State",
+    zip: "Zip",
+    country: "Country"
+};
+
+var testForm = {
     key: "documentName",
     pdf: fs.readFileSync('./test/resources/VBA-21-526EZ-ARE.pdf')
 };
 
+var testUser = {
+    firstname: 'Sir',
+    middlename: 'Moose',
+    lastname: 'Alot',
+    email: 'sirmoosealot@test.com',
+    password: 'qwerasdf',
+    externalId: 'extId',
+    state: User.State.ACTIVE
+};
+
 describe('Mailing', function () {
+    this.timeout(10000);
     var server;
     var service;
     var testUserInstance;
-    var testDocumentInstance;
-    var testDestinationAddressInstance;
+    var testFormInstance;
 
     before(function (done) {
         server = require('../app');
         service = new MailingService(server.app);
 
-        User.remove({}, function() {
-          User.create(testUser, function(userErr, user) {
-            testUserInstance = user;
+        var promise = User.remove({});
 
-            DestinationAddress.create(testDestinationAddress, function (destinationErr, destinationAddress) {
-                testDestinationAddressInstance = destinationAddress;
-                testDocument.user = user._id;
-                Document.create(testDocument, function (documentErr, document) {
-                    testDocumentInstance = document;
-                    done();
-                });
-            });
-          });
+        promise = promise.then(function() {
+            return Letter.remove({});
+        });
+
+        promise = promise.then(function() {
+            return Form.remove({});
+        });
+
+        promise = promise.then(function () {
+            return User.create(testUser);
+        });
+
+        promise = promise.then(function (user) {
+            testUserInstance = user;
+            testForm.user = user._id;
+            return Form.create(testForm);
+        });
+
+        promise = promise.done(function (form) {
+            testFormInstance = form;
+            done();
         });
     });
 
@@ -76,20 +91,28 @@ describe('Mailing', function () {
         server.close();
     });
 
-    it('Should send letter without error', function (done) {
-        service.sendLetter(
+    it('Should send letter without error', function (testDone) {
+        var promise = service.sendLetter(
             testUserInstance,
-            testDestinationAddressInstance,
-            [testDocumentInstance],
-            function (sendLetterErr, letter) {
-                should.not.exist(sendLetterErr);
-                Letter.findOne({_id: letter._id}, function(queryErr, letter) {
-                    should.not.exist(queryErr);
-                    letter.user.should.deepEqual(testUserInstance._id);
-                    letter.sender.should.deepEqual(testUserInstance._id);
-                    letter.recipient.should.deepEqual(testDestinationAddressInstance._id);
-                    done();
-                });
-            });
+            testReturnAddess,
+            testDestinationAddress,
+            [testFormInstance]);
+
+        promise.done(function (letter) {
+            var k;
+            letter.user.should.deepEqual(testUserInstance._id);
+            for (k in testDestinationAddress) {
+                if (testDestinationAddress.hasOwnProperty(k)) {
+                    letter.toAddress[k].should.equal(testDestinationAddress[k]);
+                }
+            }
+
+            for (k in testReturnAddess) {
+                if (testReturnAddess.hasOwnProperty(k)) {
+                    letter.fromAddress[k].should.equal(testReturnAddess[k]);
+                }
+            }
+            testDone();
+        });
     })
 });

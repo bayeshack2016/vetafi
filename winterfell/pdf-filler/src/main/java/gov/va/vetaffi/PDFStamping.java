@@ -1,9 +1,7 @@
 package gov.va.vetaffi;
 
 import com.google.common.base.Throwables;
-import com.itextpdf.text.DocumentException;
-import com.itextpdf.text.Image;
-import com.itextpdf.text.Rectangle;
+import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.log4j.Logger;
@@ -73,6 +71,33 @@ public class PDFStamping {
         }
     }
 
+    private static final int MAX_FONT_SIZE = 32;
+
+    private static void stampText(String key, String value, AcroFields form, PdfStamper pdfStamper) {
+        Rectangle rectangle = getRectangleForField(form, key);
+        Integer pageIdx = getPageForField(form, key);
+        PdfContentByte pdfContentByte = pdfStamper.getOverContent(pageIdx);
+        float fontSize = ColumnText.fitText(
+                new Font(Font.FontFamily.COURIER),
+                value,
+                rectangle,
+                MAX_FONT_SIZE,
+                PdfWriter.RUN_DIRECTION_DEFAULT);
+
+        // A litte bit smaller than the exact height of the box is easier to read
+        Font font = new Font(Font.FontFamily.COURIER, fontSize * 0.90f);
+        logger.info("Stamping " + value + " to rectangle " + rectangle + " with size " + fontSize);
+        Chunk text = new Chunk(value, font);
+        text.setBackground(BaseColor.WHITE);
+        Paragraph paragraph = new Paragraph(text);
+        // How text is positioned is unclear, but 25% from bottom of box seems ideal
+        ColumnText.showTextAligned(pdfContentByte, Element.ALIGN_LEFT,
+                paragraph, rectangle.getLeft(),
+                (rectangle.getBottom() + ((rectangle.getTop() - rectangle.getBottom())/4)),
+                0);
+        pdfContentByte.saveState();
+    }
+
     public static void stampPdf(InputStream pdfTemplate,
                                 List<PDFField> fields,
                                 List<PDFFieldLocator> pdfFieldLocators,
@@ -88,7 +113,7 @@ public class PDFStamping {
         try {
             Map<String, String> stringStringMap = PDFMapping.mapStringValues(fields, pdfFieldLocators);
             for (Map.Entry<String, String> entry : stringStringMap.entrySet()) {
-                form.setField(entry.getKey(), entry.getValue());
+                stampText(entry.getKey(), entry.getValue(), form, stamper);
             }
             Map<String, Boolean> stringBoolMap = PDFMapping.mapCheckboxValues(fields, pdfFieldLocators);
             for (Map.Entry<String, Boolean> entry : stringBoolMap.entrySet()) {
@@ -98,6 +123,10 @@ public class PDFStamping {
             for (Map.Entry<String, String> entry : imageMap.entrySet()) {
                 stampSignature(stamper, form, entry.getKey(), entry.getValue());
             }
+            for (int i = 0; i < reader.getNumberOfPages(); i++) {
+                form.removeFieldsFromPage(i+1); // Pages are always 1 indexed
+            }
+            form.removeXfa();
         } catch (DocumentException e) {
             throw Throwables.propagate(e);
         }
