@@ -97,30 +97,23 @@ module.exports = function (app) {
    */
 
   // Id.Me oauth endpoint
-  app.get('/api/auth/idme',
-    [
-      passport.authenticate('idme', {scope: 'military'})
-    ]
-  );
+  app.get('/api/auth/idme', passport.authenticate('idme', {scope: 'military'}));
 
   // Id.Me oauth callback endpoint
   // If authorization was granted, the user will be logged in.
   // Otherwise, authentication has failed.
   app.get('/api/auth/idme/callback',
-    [
       passport.authenticate('idme', {
         successRedirect: '/',
         failureRedirect: '/login'
       })
-    ]
   );
 
 
   /*
    * Other Endpoints
    */
-   app.post('/auth/password', auth.authenticatedOr404, function(req, res) {
-     console.log('[authPassword] request received for ' + JSON.stringify(req.body));
+   app.post('/api/auth/password', auth.authenticatedOr404, function(req, res) {
      var oldPwd = req.body.old;
      User.findById(req.session.userId).exec(function(err, user) {
        if (err) {
