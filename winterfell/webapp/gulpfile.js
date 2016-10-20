@@ -14,6 +14,7 @@ var del = require('del');
 var cache = require('gulp-cache');
 var sourcemaps = require('gulp-sourcemaps');
 var fs = require('fs');
+var eslint = require('gulp-eslint');
 
 var release = args.release ? true : false;
 if (release) {

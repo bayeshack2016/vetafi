@@ -60,5 +60,11 @@
     "underscore": "^1.8.3",
     "uuid": "^2.0.2",
     "yargs": "^4.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-google": "^0.7.0",
+    "eslint-plugin-import": "^2.0.1",
+    "gulp-eslint": "^3.0.1"
   }
 }
