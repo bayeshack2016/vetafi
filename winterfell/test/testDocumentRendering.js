@@ -17,13 +17,13 @@ describe('DocumentRenderingController', function () {
 
     it('GET / should return 404 before signin', function(done) {
         testSession
-            .get('/document/fc0ff125-df4c-4abc-a6e0-f390f0534d5e')
+            .get('/api/document/fc0ff125-df4c-4abc-a6e0-f390f0534d5e')
             .expect(404, done);
     });
 
     it('POST / should return 404 before signin', function(done) {
         testSession
-            .post('/render/form')
+            .post('/api/render/form')
             .expect(404, done);
     });
 
@@ -35,7 +35,7 @@ describe('DocumentRenderingController', function () {
                   return;
               }
 
-              testSession.post('/auth/login')
+              testSession.post('/api/auth/login')
                 .send({email: 'test@test.com', password: '1234abcd!'})
                 .expect(200, done);
           });
@@ -43,14 +43,14 @@ describe('DocumentRenderingController', function () {
 
     it('POST / should return 404 if form doesnt exist', function (done) {
         testSession
-            .post('/render/nowayiexist')
+            .post('/api/render/nowayiexist')
             .send([])
             .expect(404, done);
     });
 
     it('POST / should return 200 with redirect url', function (done) {
         testSession
-            .post('/render/VBA-21-0781-ARE')
+            .post('/api/render/VBA-21-0781-ARE')
             .send([])
             .expect(200)
             .expect(/\/document\/.*/, done);
@@ -58,7 +58,7 @@ describe('DocumentRenderingController', function () {
 
     it('POST / redirect url should work', function (done) {
         testSession
-            .post('/render/VBA-21-0781-ARE')
+            .post('/api/render/VBA-21-0781-ARE')
             .send([])
             .expect(200)
             .expect(/\/document\/.*/)

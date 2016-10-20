@@ -1,6 +1,5 @@
 var config = require('../config/documentRendering');
 var http = require('http-status-codes');
-var Log = require('../middlewares/log');
 var redis = require("redis"),
     client = redis.createClient({'return_buffers': true});
 var request = require('request');
@@ -18,7 +17,7 @@ var uuid = require('uuid');
  */
 module.exports = function (app) {
 
-    app.post('/render/:form', [Log.api], function (req, res) {
+    app.post('/api/render/:form', function (req, res) {
         if (req.session.key) {
             request({
                 url: config.address + 'create/' + req.params.form,
@@ -40,7 +39,7 @@ module.exports = function (app) {
 
                 var renderedDocumentId = uuid.v4();
                 client.hset(req.session.key, renderedDocumentId, body);
-                res.status(http.OK).send('/document/' + renderedDocumentId);
+                res.status(http.OK).send('/api/document/' + renderedDocumentId);
             });
         } else {
             console.log("[/render/:form] no credentials");
@@ -49,7 +48,7 @@ module.exports = function (app) {
         }
     });
 
-    app.get('/document/:id', [Log.api], function (req, res) {
+    app.get('/api/document/:id', function (req, res) {
         if (req.session.key) {
             client.hget(
                 req.session.key,

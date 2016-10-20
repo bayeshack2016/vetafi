@@ -1,17 +1,16 @@
 var auth = require('../middlewares/auth');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var Log = require('../middlewares/log');
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var UserService = require('./../services/userService');
 
 module.exports = function (app) {
-  var mw = [auth.authenticatedOr404, Log.api];
+  var mw = [auth.authenticatedOr404];
 
   // Get a user's information based on externalId
-  app.get('/user', mw, function (req, res) {
+  app.get('/api/user', mw, function (req, res) {
     User.findById(req.session.userId).exec(function(err, user) {
       if (user) {
         res.status(http.OK).send({user: User.externalize(user)});
@@ -22,12 +21,12 @@ module.exports = function (app) {
   });
 
   // Modify a user's information - find by externalId
-  app.post('/user/:extUserId/modify', mw, function (req, res) {
+  app.post('/api/user/:extUserId/modify', mw, function (req, res) {
     res.sendStatus(http.OK);
   });
 
   // Set a user account to INACTIVE - find by externalId
-  app.delete('/user', mw, function (req, res) {
+  app.delete('/api/user', mw, function (req, res) {
     var callback = function (dbErr) {
       if (dbErr) {
         console.log('[deleteUser] Not found!');
@@ -53,7 +52,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/user/values', mw, function(req, res) {
+  app.get('/api/user/values', mw, function(req, res) {
     User.findById(req.session.userId).exec(function(err, user) {
       if (err) {
         res.status(http.INTERNAL_SERVER_ERROR).send();
@@ -70,7 +69,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/user/values', mw, function(req, res) {
+  app.post('/api/user/values', mw, function(req, res) {
     var valuesToUpdate = req.body.values;
     if (valuesToUpdate && valuesToUpdate.key && valuesToUpdate.value) {
       User.findById(req.session.userId).exec(function(err, user) {

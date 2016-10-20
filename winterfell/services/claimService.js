@@ -25,7 +25,7 @@ module.exports = ClaimService;
  * @param data
  * @returns {{answerable: number, answered: number}}
  */
-module.exports.calculateProgress = function calculateProgress(formId, data) {
+function calculateProgress(formId, data) {
   var evaluate, i;
   if (!(formId in formlyFields)) {
     throw new Error("Unknown formId: " + formId);
@@ -52,6 +52,7 @@ module.exports.calculateProgress = function calculateProgress(formId, data) {
 
   return output;
 };
+module.exports.calculateProgress = calculateProgress;
 
 module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
   return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, fileClaim) {

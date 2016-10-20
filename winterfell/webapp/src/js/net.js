@@ -4,7 +4,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var httpGet = function (url, data) {
     return $http({
-      url: url,
+      url: "/api" + url,
       method: "GET",
       headers: { 'Content-Type': 'application/json' }
     });
@@ -12,7 +12,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var httpPost = function(url, data) {
     return $http({
-      url: url,
+      url: "/api" + url,
       method: "POST",
       data: data || {},
       headers: { 'Content-Type': 'application/json' }
