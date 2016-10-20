@@ -222,9 +222,13 @@ describe('SaveClaimController', function () {
       return Claim.create({user: userValues.userId, externalId: uuid.v4()});
     });
 
-    promise.done(function (claim) {
-      targetClaim = claim;
-      done();
+    promise.catch(
+      function(err) {
+        throw new Error(err);
+    }).done(
+      function (claim) {
+        targetClaim = claim;
+        done();
     });
   });
 
@@ -264,7 +268,7 @@ describe('SaveClaimController', function () {
           should.not.exist(error);
           should.exist(doc);
           doc.answered.should.be.exactly(1);
-          doc.answerable.should.be.exactly(27);
+          doc.answerable.should.be.exactly(26);
           done();
         })
       })
@@ -279,7 +283,7 @@ describe('SaveClaimController', function () {
           should.not.exist(error);
           should.exist(doc);
           doc.answered.should.be.exactly(1);
-          doc.answerable.should.be.exactly(22);
+          doc.answerable.should.be.exactly(21);
           done();
         })
       })

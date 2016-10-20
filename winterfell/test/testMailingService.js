@@ -81,7 +81,7 @@ describe('Mailing', function () {
             return Form.create(testForm);
         });
 
-        promise = promise.done(function (form) {
+        promise.then(function (form) {
             testFormInstance = form;
             done();
         });
@@ -98,7 +98,7 @@ describe('Mailing', function () {
             testDestinationAddress,
             [testFormInstance]);
 
-        promise.done(function (letter) {
+        promise = promise.then(function (letter) {
             var k;
             letter.user.should.deepEqual(testUserInstance._id);
             for (k in testDestinationAddress) {
@@ -114,5 +114,9 @@ describe('Mailing', function () {
             }
             testDone();
         });
+
+        promise.catch(function (err) {
+            throw new Error(err);
+        }).done();
     })
 });

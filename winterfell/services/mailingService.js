@@ -4,7 +4,6 @@ var Form = require('./../models/form');
 var Letter = require('./../models/letter');
 var User = require('./../models/user');
 var DocumentRenderingService = require('./documentRenderingService');
-var Constants = require('./../utils/constants');
 var ENVIRONMENT = Constants.environment;
 var Q = require('q');
 
@@ -18,6 +17,7 @@ var Q = require('q');
 function MailingService(app) {
     if (app.environment == ENVIRONMENT.TEST || app.environment == ENVIRONMENT.LOCAL) {
         this.testMode = true;
+        this.Lob = {letters: {create: function(x, cb) { cb(null, {});}}}; // mock
     } else {
         this.testMode = false;
         this.Lob = lob(app.get(Constants.KEY_LOB_API), {
@@ -40,10 +40,6 @@ module.exports = MailingService;
  */
 MailingService.prototype.sendLetter = function (user, fromAddress, toAddress, forms) {
     var deferred = Q.defer();
-    if (this.testMode) {
-        deferred.accept({});
-        return;
-    }
     var that = this;
     var documentRenderingService = new DocumentRenderingService(this.app);
     documentRenderingService.concatenateDocs(forms, function(documentRenderingError, pdf) {
