@@ -97,6 +97,14 @@ gulp.task('js', ['xhrEnv'], function () {
     .pipe(sourcemaps.write());
 });
 
+gulp.task('lint', ['xhrEnv'], function () {
+  return gulp.src('src/js/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    //.pipe(eslint.failAfterError()) -- enable this when all code is correctly formatter 
+    ;
+});
+
 gulp.task('browserify', ['js'], function () {
   return browserify(['src/formly-fields.js'], {
       transform: [bulkify],
@@ -130,6 +138,6 @@ gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/**/*.pug', ['pug']);
 });
 
-gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'pug', 'browserify']);
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'pug', 'browserify', 'lint']);
 
 gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);
