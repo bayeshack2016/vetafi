@@ -69,7 +69,7 @@ module.exports = function (app) {
   });
 
   // Endpoint to authenticate logins and begin session
-  app.post('/api/auth/login', [passport.authenticate('local')], function(req, res) {
+  app.post('/api/auth/login', passport.authenticate('local'), function(req, res) {
     if (req.user) {
       req.session.key = req.body.email;
       req.session.userId = req.user._id;
@@ -84,6 +84,7 @@ module.exports = function (app) {
   app.get('/api/auth/logout', function(req, res) {
     req.session.destroy(function (err) {
         if(err) {
+            console.log(err);
             res.sendStatus(http.INTERNAL_SERVER_ERROR);
         } else {
             res.redirect('/');
@@ -97,17 +98,19 @@ module.exports = function (app) {
    */
 
   // Id.Me oauth endpoint
-  app.get('/api/auth/idme', passport.authenticate('idme', {scope: 'military'}));
+  app.get('/api/auth/idme',
+    passport.authenticate('idme', {scope: 'military'})
+  );
 
   // Id.Me oauth callback endpoint
   // If authorization was granted, the user will be logged in.
   // Otherwise, authentication has failed.
   app.get('/api/auth/idme/callback',
-      passport.authenticate('idme', {
-        successRedirect: '/',
-        failureRedirect: '/login'
-      })
-  );
+    passport.authenticate('idme', {
+      successRedirect: '/',
+      failureRedirect: '/login'
+    }
+  ));
 
 
   /*

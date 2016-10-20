@@ -1,20 +1,19 @@
 var _ = require('lodash');
 var auth = require('../middlewares/auth');
+var http = require('http-status-codes');
+var httpErrors = require('./../utils/httpErrors');
 var Claim = require('../models/claim');
 var ClaimService = require('./../services/claimService');
 var DocumentRenderingService = require('./../services/documentRenderingService');
 var Form = require('../models/form');
-var http = require('http-status-codes');
-var httpErrors = require('./../utils/httpErrors');
+var Q = require('q');
 var MailingService = require('./../services/mailingService');
 var mongoose = require('mongoose');
-var Q = require('q');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 
 module.exports = function (app) {
   var mw = [auth.authenticatedOr404];
-
   var mailingService = new MailingService(app);
   var documentRenderingService = new DocumentRenderingService(app);
 
