@@ -1,5 +1,3 @@
 node_modules
 pdf-filler
 forms
-webapp/src/libs/**
-webapp/build/**
