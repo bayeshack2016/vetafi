@@ -9,7 +9,7 @@ function Log(app) {
   mainLog = bunyan.createLogger({
     name: 'vetafi_' + app.environment,
     streams: [{
-      path: '../logs/app.js', // todo: these logs need to be moved into the same level
+      stream: process.stdout,
       level: 'debug'
     }],
     serializers: {
