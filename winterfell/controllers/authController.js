@@ -15,7 +15,7 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      return res.render('signup', {csrf: req.csrfToken()});
+      return res.render('signup', {csrf: ''}); // todo fill in later
     }
   });
 
@@ -24,7 +24,7 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      return res.render('login', {csrf: req.csrfToken()});
+      return res.render('login', {csrf: ''}); // todo fill in later
     }
   });
 
