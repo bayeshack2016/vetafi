@@ -15,7 +15,7 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('signup.html', {root: './webapp/build/templates/noangular'});
+      return res.render('signup', {csrf: req.csrfToken()});
     }
   });
 
@@ -24,7 +24,7 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('login.html', {root: './webapp/build/templates/noangular'});
+      return res.render('login', {csrf: req.csrfToken()});
     }
   });
 
@@ -57,13 +57,13 @@ module.exports = function (app) {
                 if (err) { return next(err); }
                 req.session.key = req.body.email;
                 req.session.userId = req.user._id;
-                return res.status(http.OK).send({redirect: '/'});
+                return res.redirect('/');
               });
             }
           );
         });
       } else { // User does exist!
-          res.status(http.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
+          res.redirect('/signup?error=EUSERNAMETAKEN');
       }
     });
   });
@@ -76,7 +76,7 @@ module.exports = function (app) {
       var extUserId = req.user.externalId;
       res.status(http.OK).send({userId: extUserId, redirect: '/'});
     } else {
-      res.status(http.UNAUTHORIZED);
+      res.redirect('/login?error=EAUTHFAILED');
     }
   });
 

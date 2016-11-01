@@ -55,6 +55,9 @@ Log.console("New logger created.");
 // Connect to a mongodb server using mongoose
 require('./config/mongoose')(environment);
 
+// Set templating engine
+app.set('view engine', 'pug');
+
 // Serve static files
 app.use(express.static(path.join(__dirname, '/webapp/build')));
 app.get('/', function(req, resp) {

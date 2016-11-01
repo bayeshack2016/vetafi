@@ -1,4 +1,4 @@
-extends signinLayout.pug
+extends signinLayout.jade
 
 block fbText
   div.txt-container Signup with Facebook
@@ -8,9 +8,10 @@ block emailText
   div.txt-container Signup with your email
 
 block inputs
-  form
+  form(action='/api/auth/signup' onsubmit='return validateForm()' method='post')
     input.email(placeholder='Email Address', type='text')
     input.pwd(placeholder='Password', type='password')
     input.confirm-pwd(placeholder='Confirm Password', type='password')
+    input(type='hidden' name='_csrf' value=csrf)
     input.submit(value='SIGN UP', type='submit')
   a(href="/login") Already have an account?
