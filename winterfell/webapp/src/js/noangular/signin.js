@@ -35,6 +35,12 @@ function displayError(msg) {
   $('.error-msg').text(msg);
 }
 
-$(document).ready(function() {
+function revealEmailLogin() {
+  $('.options').addClass('vfi-hide');
+  $('.inputs').addClass('vfi-show');
+}
 
-});
+function onBackButton() {
+  $('.options').removeClass('vfi-hide');
+  $('.inputs').removeClass('vfi-show');
+}
