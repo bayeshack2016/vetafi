@@ -9,13 +9,13 @@
         uib-progressbar.progressbar(value="numRequiredCompleted", max="numRequiredForms", type="{{numRequiredCompleted == numRequiredForms ? 'success' : 'info'}}")
           span {{numRequiredCompleted}}/{{numRequiredForms}}
 
-      div.form-wrapper(ng-repeat="(formId, form) in formTemplates")
+      div.form-wrapper(ng-repeat="(formId, form) in allForms")
         div.form-content
-          div.state-wrapper(ng-class="{'required': form.vfi.required, 'complete': claimForms[formId] && claimForms[formId].answered > 0 && claimForms[formId].answered == claimForms[formId].answerable}")
+          div.state-wrapper(ng-class="{'required': form.vfi.required, 'complete': myForms[formId] && myForms[formId].answered > 0 && myForms[formId].answered == myForms[formId].answerable}")
             div.state-icon
           div.form-title-wrapper
             h5.title(ng-class="{'required': form.vfi.required}") {{formId}}
-            h5.warning.required(ng-if="form.vfi.required && !(claimForms[formId] && claimForms[formId].answered > 0 && claimForms[formId].answered == claimForms[formId].answerable)") &nbsp;(required)
+            h5.warning.required(ng-if="form.vfi.required && !(myForms[formId] && myForms[formId].answered > 0 && myForms[formId].answered == myForms[formId].answerable)") &nbsp;(required)
             h5.subtitle {{form.vfi.title}}
           div.form-summary {{form.vfi.summary}}
         div.form-buttons

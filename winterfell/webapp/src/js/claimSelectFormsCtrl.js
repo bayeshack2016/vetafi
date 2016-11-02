@@ -3,16 +3,19 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
   function($scope, claimService, formTemplateService, $stateParams, $state, claimForms) {
     $scope.claimId = $stateParams.claimId;
 
-    $scope.formTemplates = formTemplateService;           // All available forms
-    $scope.claimForms = _.keyBy(claimForms, function(form) {   // Mapping of formId -> claimForm object
+    // claimForms is an array of form objects associated with claim
+    // myForms is a mapping of formId -> claimForm object
+    $scope.myForms = _.keyBy(claimForms, function(form) {
       return form.key;
     });
+    // All available forms
+    $scope.allForms = formTemplateService;
 
     $scope.numRequiredCompleted = _.sum(_.map(claimForms, function (form) {
-      return form.vfi.required && form.answered == form.answerable ? 1 : 0;
+      return form && form.answered == form.answerable ? 1 : 0;
     }));
-    $scope.numRequiredForms = _.sum(_.map($scope.formTemplates, function (form) {
-      return form.vfi.required ? 1 : 0;
+    $scope.numRequiredForms = _.sum(_.map($scope.allForms, function (form) {
+      return form.vfi && form.vfi.required ? 1 : 0;
     }));
 
     $scope.onClickCancel = function() {
