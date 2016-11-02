@@ -1,7 +1,8 @@
+var Constants = require('../utils/constants');
+var Log = require('./log');
 var session = require('express-session');
 var redisStore = require('connect-redis')(session);
 var RedisService = require('../services/redisService');
-var Constants = require('../utils/constants');
 
 module.exports = function (app) {
   var port = 6379;
@@ -9,10 +10,10 @@ module.exports = function (app) {
 
   var redisClient = RedisService.getClient();
   redisClient.on('connect', function() {
-      console.log('Redis connected at ' + host + ':' + port);
+    Log.console('Redis connected at ' + host + ':' + port);
   });
   redisClient.on('error', function(err) {
-      console.log('Redis error: ' + err);
+    Log.console('Redis error: ' + err);
   });
   redisClient.set('project', 'Vetafi');
 
@@ -22,7 +23,7 @@ module.exports = function (app) {
       store: new redisStore({
         host: host,
         port: port,
-        client: redisClient}), 
+        client: redisClient}),
       cookie: {maxAge: Constants.SESSION_EXPIRE_TIME}, // expires after 20 minutes
       saveUninitialized: false,
       resave: false

@@ -27,39 +27,38 @@
 
     div.section.mailing-list
       div.section-header
-        h4 Mail physical copies to:
+        h4 Mail form to:
       div.container-fluid
-        div.row-wrapper.row(ng-repeat="mailingInfo in mailingList")
+        div.row-wrapper.row
           h5.title.col-sm-5
-            b {{mailingInfo.title}}
+            b {{vaAddress.name}}
           div.address.col-sm-5
-            div.address-line {{mailingInfo.address.sendTo}}
-            div.address-line {{mailingInfo.address.line1}} {{mailingInfo.address.line2}}
-            div.address-line {{mailingInfo.address.city}}, {{mailingInfo.address.state}}, {{mailingInfo.address.country}} {{mailingInfo.address.zip}}
-          button.col-sm-2(ng-click="onClickEditAddress($index)", ng-if="$index > 0")
+            div.address-line {{vaAddress.line1}} {{vaAddress.line2}}
+            div.address-line {{vaAddress.city}}, {{vaAddress.state}}, {{vaAddress.country}} {{vaAddress.zip}}
+
+    div.section.mailing-list
+      div.section-header
+        h4 Mail copy of form to me at:
+      div.container-fluid
+        div.row-wrapper.row
+          h5.title.col-sm-5
+            b {{userAddress.name}}
+          div.address.col-sm-5
+            div.address-line {{userAddress.line1}} {{userAddress.line2}}
+            div.address-line {{userAddress.city}}, {{userAddress.state}}, {{userAddress.country}} {{userAddress.zip}}
+          button.col-sm-2(ng-click="onClickEditAddress()")
             div.edit-icon
             | Edit
-        div.row-wrapper.add-row.row
-          button.add-btn.col-sm-12(ng-click="onClickAddAddress()")
-            div.add-icon
-            | Add Address
-
 
     div.section.email-list
       div.section-header
         h4 E-mail electronic copies to:
       div.container-fluid
-        div.row-wrapper.row(ng-repeat="emailInfo in emailList")
-          h5.title.col-sm-5
-            b {{emailInfo.name}}
-          div.title.col-sm-5 {{emailInfo.email}}
-          button.col-sm-2(ng-click="onClickEditEmail($index)")
+        div.row-wrapper.row
+          div.title.col-sm-5 {{userEmail}}
+          button.col-sm-2(ng-click="onClickEditEmail()")
             div.edit-icon
             | Edit
-        div.row-wrapper.add-row.row
-          button.add-btn.col-sm-12(ng-click="onClickAddEmail()")
-            div.add-icon
-            | Add Email
 
     div.section.forms-list
       div.section-header
@@ -70,8 +69,8 @@
       div.container-fluid
         div.row-wrapper.row(ng-repeat="form in formsList")
           h5.title.col-sm-5
-            b {{form.title}}
-          div.form-description.col-sm-7 {{form.summary}}
+            b {{formsInfo[form.key].unofficialTitle}}
+          div.form-description.col-sm-7 {{formsInfo[form.key].unofficialDescription}}
 
     div.button-wrapper
       button.back-btn(ui-sref="root.claimselect({claimId: claimId})") Back

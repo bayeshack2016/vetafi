@@ -118,7 +118,35 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     name: 'root.claimconfirm',
     url: '/claim/{claimId}/confirm',
     templateUrl: 'templates/claimConfirm.html',
-    controller: 'claimConfirmCtrl'
+    controller: 'claimConfirmCtrl',
+    resolve: {
+      userValues: ['net', '$q', function(net, $q) {
+        var deferred = $q.defer();
+
+        net.getUserValues().then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+
+        return deferred.promise;
+      }],
+      forms: ['net', '$q', '$stateParams', function (net, $q, $stateParams) {
+        var deferred = $q.defer();
+
+        net.getFormsForClaim($stateParams.claimId).then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+
+        return deferred.promise;
+      }]
+    }
   });
 
   $stateProvider.state({

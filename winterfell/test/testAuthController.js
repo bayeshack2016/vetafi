@@ -11,7 +11,7 @@ describe('AuthController', function() {
   var server;
   var testSession;
 
-  before(function() {
+  before(function(done) {
     server = require('../app');
     testSession = session(server);
 
@@ -26,28 +26,30 @@ describe('AuthController', function() {
         state: User.State.ACTIVE
       }, function(err, user) {
         targetUser = user;
+        done();
       });
     });
   });
 
-  after(function () {
+  after(function (done) {
     server.close();
+    done();
   });
 
   it('Log in success', function (done) {
-    testSession.post('/auth/login')
+    testSession.post('/api/auth/login')
       .send({email: targetUser.email, password: targetUser.password})
       .expect(http.OK, done);
   });
 
   it('Change password - old password mismatch', function(done) {
-    testSession.post('/auth/password')
+    testSession.post('/api/auth/password')
       .send({old: 'wrong-pwd', new: 'new-pwd'})
       .expect(http.BAD_REQUEST, done);
   });
 
   it('Change password - success', function(done) {
-    testSession.post('/auth/password')
+    testSession.post('/api/auth/password')
       .send({old: 'qwerasdf', new: 'new-pwd'})
       .expect(http.NO_CONTENT, done);
   });

@@ -8,6 +8,6 @@ winterfell/webapp/node_modules
 winterfell/webapp/build
 winterfell/dump.rdb
 winterfell/npm-debug.log
-winterfell/my-tools
+logs
 
 .vagrant

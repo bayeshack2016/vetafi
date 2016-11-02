@@ -1,11 +1,11 @@
 'use strict';
 var _ = require('lodash');
-var http = require('http-status-codes');
-var uuid = require('uuid');
-var User = require('../models/user');
-var UserService = require('./../services/userService');
 var Claim = require('../models/claim');
 var ClaimService = require('./../services/claimService');
+var http = require('http-status-codes');
+var User = require('../models/user');
+var UserService = require('./../services/userService');
+var uuid = require('uuid');
 
 module.exports = function (app) {
 
@@ -112,8 +112,7 @@ module.exports = function (app) {
     });
   }
 
-  app.post('/admin/reset-test-users', function (req, res) {
-    console.log('Reset test users requested...');
+  app.post('/api/admin/reset-test-users', function (req, res) {
     removeTestUsers(function() {
       _.forEach(allTestUsers, function(userToCreate) {
         createTestUser(userToCreate);

@@ -12,6 +12,21 @@ var socialUserSchema = new Schema({
   createdAt: Date                 // When social was linked to this user
 });
 
+var addressSchema = new Schema({
+  name: String,                   // Name of Address (Home) (optional)
+  line1: String,                  // Street name & number
+  line2: String,                  // Secondary Address (Suite, Apt, Room, P.O.)
+  city: String,                   // City
+  state: String,                  // U.S. State
+  zip: String,                    // U.S. ZipCode
+  country: String                 // Country
+}, {minimize: false, timestamps: false});
+
+var contactSchema = new Schema({
+  phoneNumber: String,
+  address: {type: addressSchema, default: {}}
+}, {minimize: false, timestamps: true});
+
 var UserSchema = new Schema({
   firstname: String,                  // First name
   middlename: String,                 // Middle name
@@ -24,24 +39,12 @@ var UserSchema = new Schema({
   socialUsers: [socialUserSchema],
   admin: Boolean,                     // Is user an admin?
   test: Boolean,                       // Is user a test account?
-
   dateOfBirth: Date,                  // Date of Birth
   ssn: String,                        // Social Security Number
-  contact: {                          // Anything related to contact information
-    phoneNumber: String,              // Phone Number
-    address: {                        // Anything related to address
-      name: String,                   // Name of Address (Home) (optional)
-      line1: String,                  // Street name & number
-      line2: String,                  // Secondary Address (Suite, Apt, Room, P.O.)
-      city: String,                   // City
-      state: String,                  // U.S. State
-      zip: String,                    // U.S. ZipCode
-      country: String                 // Country
-    }
-  }
-
+  contact: {type: contactSchema, default: {}}
 }, {
-  timestamps: true
+  timestamps: true,
+  minimize: false
 });
 
 var State = {
@@ -66,12 +69,13 @@ UserSchema.statics.quickCreate = function(user, callback) {
     stateUpdatedAt: now,
     socialUsers: [],
     admin: user.admin || false,
-    test: user.test || false
+    test: user.test || false,
+    contact: {address: {}}
   }, callback);
 };
 
 UserSchema.statics.externalize = function(user) {
-  return _.pick(user, ['firstname', 'middlename', 'lastname', 'email', 'externalId']);
+  return _.pick(user, ['firstname', 'middlename', 'lastname', 'email', 'externalId', 'contact']);
 };
 
 // Instance methods

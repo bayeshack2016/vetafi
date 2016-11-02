@@ -1,6 +1,6 @@
-var app = angular.module('vetafiApp');
-app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', 'claimForms',
-  function($scope, claimService, formTemplateService, $stateParams, claimForms) {
+var app = angular.module('vetafiApp');``
+app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms',
+  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms) {
     $scope.claimId = $stateParams.claimId;
 
     $scope.formTemplates = formTemplateService;           // All available forms
@@ -21,7 +21,12 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     };
 
     $scope.onClickDone = function() {
-      $state.transitionTo("root.claimconfirm", {claimId: $stateParams.claimId});
+      $state.go('root.claimconfirm', {claimId: $stateParams.claimId}).then(
+        function success() {},
+        function failure(err) {
+          console.error(err);
+        }
+      );
     };
   }
 ]);

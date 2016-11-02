@@ -1,3 +1,4 @@
+var Log = require('../middlewares/log');
 var mongoose = require('mongoose');
 mongoose.Promise = require('q').Promise;
 
@@ -10,12 +11,12 @@ module.exports = function(environment) {
 
   var db = mongoose.connection;
   db.on('error', function (err) {
-      console.log('Error connecting to database ', err);
+    Log.console('Error connecting to database ' + err);
   });
   db.on('open', function () {
-      console.log('Database connection opened at ' + address);
+    Log.console('Database connection opened at ' + address);
   });
   db.on('disconnected', function (err) {
-      console.log('Database disconnected.');
+    Log.console('Database disconnected.');
   });
 };

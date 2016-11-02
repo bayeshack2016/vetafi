@@ -4,7 +4,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var httpGet = function (url, data) {
     return $http({
-      url: url,
+      url: "/api" + url,
       method: "GET",
       headers: { 'Content-Type': 'application/json' }
     });
@@ -12,7 +12,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var httpPost = function(url, data) {
     return $http({
-      url: url,
+      url: "/api" + url,
       method: "POST",
       data: data || {},
       headers: { 'Content-Type': 'application/json' }
@@ -70,8 +70,8 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     startClaim: function(data) {
       return httpPost("/claims/create", data);
     },
-    submitClaim: function(extClaimId) {
-      return httpPost("/claim/" + extClaimId + "/submit");
+    submitClaim: function(extClaimId, data) {
+      return httpPost("/claim/" + extClaimId + "/submit", data);
     },
     discardClaim: function(extClaimId) {
       return httpDelete("/claim/" + extClaimId);
