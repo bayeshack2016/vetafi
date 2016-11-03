@@ -17,10 +17,10 @@ module.exports = function (app) {
     } else {
       return res.render('signup',
         {
-          csrf: '',
+          csrf: req.csrfToken(),
           viewId: 'signup-view',
           errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
-        }); // todo fill in later with req.csrfToken()
+        });
     }
   });
 
@@ -31,10 +31,10 @@ module.exports = function (app) {
     } else {
       return res.render('login',
         {
-          csrf: '',
+          csrf: req.csrfToken(),
           viewId: 'login-view',
           errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
-        }); // todo fill in later with req.csrfToken()
+        });
     }
   });
 

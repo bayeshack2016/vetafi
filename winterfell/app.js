@@ -10,7 +10,6 @@ var session = require('express-session');
 var helmet = require('helmet');
 var ENVIRONMENT = Constants.environment;
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
-var csurf = require('./middlewares/csurf');
 
 // Initialize App
 var app = express();
