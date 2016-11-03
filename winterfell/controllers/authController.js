@@ -28,6 +28,18 @@ module.exports = function (app) {
     }
   });
 
+  // Endpoint to logout and remove session
+  app.get('/logout', function(req, res) {
+    req.session.destroy(function (err) {
+      if(err) {
+        console.log(err);
+        res.sendStatus(http.INTERNAL_SERVER_ERROR);
+      } else {
+        res.redirect('/');
+      }
+    });
+  });
+
   // Endpoint to authenticate sign-ups and begin session
   app.post('/api/auth/signup', function(req, res) {
     var data = {
@@ -79,19 +91,6 @@ module.exports = function (app) {
       res.redirect('/login?error=EAUTHFAILED');
     }
   });
-
-  // Endpoint to logout and remove session
-  app.get('/api/auth/logout', function(req, res) {
-    req.session.destroy(function (err) {
-        if(err) {
-            console.log(err);
-            res.sendStatus(http.INTERNAL_SERVER_ERROR);
-        } else {
-            res.redirect('/');
-        }
-    });
-  });
-
 
   /*
    * OAuth Endpoints
