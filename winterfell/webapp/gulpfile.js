@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var browserify = require('browserify');
 var bulkify = require('bulkify');
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
 var args = require('yargs').argv;
 var gulpif = require('gulp-if');
@@ -41,9 +41,9 @@ gulp.task('stylus', function () {
     .pipe(sourcemaps.write());
 });
 
-gulp.task('jade', function () {
-  return gulp.src('src/**/*.jade')
-    .pipe(jade())
+gulp.task('pug', function () {
+  return gulp.src('src/**/*.pug')
+    .pipe(pug())
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
@@ -126,9 +126,9 @@ gulp.task('initBrowserSync', ['build'], function () {
 gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/js/*.js', ['js', 'other-js']);
   gulp.watch('src/styles/**/*.styl', ['stylus']);
-  gulp.watch('src/**/*.jade', ['jade']);
+  gulp.watch('src/**/*.pug', ['pug']);
 });
 
-gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'jade', 'browserify']);
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'pug', 'browserify']);
 
 gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);
