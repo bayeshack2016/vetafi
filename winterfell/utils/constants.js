@@ -17,10 +17,12 @@ module.exports.baseUrl = {
 module.exports.KEY_LOB_API = 'lobApiKey';
 module.exports.KEY_IDME_CLIENT_ID = 'idmeClientId';
 module.exports.KEY_IDME_SECRET_ID = 'idmeSecretId';
+module.exports.SESSION_SECRET_ID = 'sessionSecretId';
 module.exports.biscuitKeys = {
   lobApiKey: 'lob-api-key',
   idmeClientId: 'id-me-client-id',
-  idmeSecretId: 'id-me-client-secret'
+  idmeSecretId: 'id-me-client-secret',
+  sessionSecretId: 'session-secret'
 };
 
 module.exports.ERROR_CODES = {

@@ -17,8 +17,21 @@ module.exports = function (app) {
   });
   redisClient.set('project', 'Vetafi');
 
+
+  var cookieConfig = {
+    maxAge: Constants.SESSION_EXPIRE_TIME,
+    path: '/'
+  };
+
+  if (app.environment === Constants.environment.PROD) {
+    cookieConfig.secure = true;
+    cookieConfig.httpOnly = true;
+    cookieConfig.domain = app.baseUrl;
+  }
+
   app.use(session({
-      secret: 'ssshhhhh',
+      secret: app.get(Constants.SESSION_SECRET_ID),
+      name: 'sessionId',
       // create new redis store.
       store: new redisStore({
         host: host,
