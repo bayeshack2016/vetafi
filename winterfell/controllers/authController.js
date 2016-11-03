@@ -85,7 +85,7 @@ module.exports = function (app) {
           );
         });
       } else { // User does exist!
-          res.redirect('/signup?error=EUSERNAMETAKEN');
+          res.redirect('/signup?error=EUSERNAMETAKEN'); // TODO render client side
       }
     });
   });
