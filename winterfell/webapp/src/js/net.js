@@ -56,8 +56,8 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     getUserInfo: function() {
       return httpGet("/user");
     },
-    getUserValues: function() {
-      return httpGet("/user/values");
+    editUserInfo: function(data) {
+      return httpPost("/user", data);
     },
     deleteUserAccount: function() {
       return httpDelete("/user");

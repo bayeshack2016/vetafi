@@ -42,7 +42,14 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     init();
 
     $scope.clickEditInfo = function() {
-      console.log('Edit User Information');
+      var newScope = $scope.$new(true);
+      newScope.headline = "Edit General Information";
+      newScope.user = $scope.user;
+      $uibModal.open({
+        scope: newScope,
+        templateUrl: 'templates/modals/editProfile.html',
+        windowClass: 'ngdialog-theme-default'
+      });
     };
 
     $scope.clickChangePassword = function() {

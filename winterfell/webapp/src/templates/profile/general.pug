@@ -9,9 +9,9 @@ div.profile-section#general
 
   h4 Primary Address
   div.content(ng-if="user.address")
-    div.address-line {{user.address.line1}}
-    div.address-line {{user.address.line2}}
-    div.address-line {{user.address.city}}, {{user.address.state}} {{user.address.country}} {{user.address.zipCode}}
+    div.address-line {{user.address.street1}}
+    div.address-line {{user.address.street2}}
+    div.address-line {{user.address.city}}, {{user.address.province}} {{user.address.country}} {{user.address.postal}}
   div.content.missing(ng-if="!user.address") (Missing)
 
   div.button-wrapper

@@ -1,0 +1,45 @@
+@import "../standards.styl"
+
+elementSpacing = mediumSpacing
+sidebarTopSpacing = 10px
+sidebarLeftSpacing = 40px
+
+#vfi-modal-edit-profile
+  position: relative
+  top: sidebarTopSpacing
+  width: 'calc(100% + %s)' % sidebarLeftSpacing
+  height: 480px
+  overflow-y: scroll
+  padding-bottom: sidebarTopSpacing
+  padding-right: sidebarLeftSpacing
+
+  & .form-section
+    margin: smallSpacing 0 mediumSpacing
+
+  & h4
+    margin-bottom: smallSpacing
+    color: colorDarkGray
+
+  & input
+    &#firstName
+    &#middleName
+    &#email
+    &#street1
+      margin-bottom: miniSpacing
+
+  & .button-wrapper
+    margin-top: smallSpacing
+
+    & button.cancel
+      float: left
+      background-color: colorLightGray
+      color: colorBlack
+
+    & button.save
+      float: right
+
+      &.faded
+        background-color: colorDarkGray
+
+    & .clearer
+      clear: both

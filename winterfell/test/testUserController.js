@@ -58,12 +58,16 @@ describe('UserController', function() {
         .expect(http.OK, done);
   });
 
+  it('Post user endpoint - success', function(done) {
+    testSession
+        .post('/api/user')
+        .send({firstname: 'Mister'})
+        .expect(http.OK, done);
+  });
+
   it('Delete user endpoint - success', function(done) {
     testSession
         .del('/api/user')
         .expect(http.OK, done);
-  });
-
-  xit('Modify user endpoint', function(done) {
   });
 });

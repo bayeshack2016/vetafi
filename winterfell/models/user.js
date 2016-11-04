@@ -14,11 +14,11 @@ var socialUserSchema = new Schema({
 
 var addressSchema = new Schema({
   name: String,                   // Name of Address (Home) (optional)
-  line1: String,                  // Street name & number
-  line2: String,                  // Secondary Address (Suite, Apt, Room, P.O.)
+  street1: String,                // Street name & number
+  street2: String,                // Secondary Address (Suite, Apt, Room, P.O.)
   city: String,                   // City
-  state: String,                  // U.S. State
-  zip: String,                    // U.S. ZipCode
+  province: String,               // Province or U.S. State
+  postal: String,                 // PostalCode or U.S. ZipCode
   country: String                 // Country
 }, {minimize: false, timestamps: false});
 
