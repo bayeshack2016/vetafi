@@ -1,4 +1,4 @@
-var app = angular.module('vetafiApp');``
+var app = angular.module('vetafiApp');
 app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms',
   function($scope, claimService, formTemplateService, $stateParams, $state, claimForms) {
     $scope.claimId = $stateParams.claimId;
