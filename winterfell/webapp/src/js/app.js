@@ -98,7 +98,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     templateUrl: 'templates/claimSelectForms.html',
     controller: 'claimSelectFormsCtrl',
     resolve: {
-      forms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+      claimForms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
         var deferred = $q.defer();
 
         net.getFormsForClaim($stateParams.claimId).then(
