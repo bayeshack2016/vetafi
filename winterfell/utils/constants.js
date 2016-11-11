@@ -22,3 +22,12 @@ module.exports.biscuitKeys = {
   idmeClientId: 'id-me-client-id',
   idmeSecretId: 'id-me-client-secret'
 };
+
+module.exports.ERROR_CODES = {
+  EUSERNAMETAKEN: {
+    message: "This email already being used. Try logging in with this email or try another email."
+  },
+  EAUTHFAILED: {
+    message: "Unknown server issues. Please try again later."
+  }
+};

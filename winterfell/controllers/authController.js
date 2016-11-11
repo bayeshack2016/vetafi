@@ -15,7 +15,12 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('signup.html', {root: './webapp/build/templates/noangular'});
+      return res.render('signup',
+        {
+          csrf: '',
+          viewId: 'signup-view',
+          errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
+        }); // todo fill in later with req.csrfToken()
     }
   });
 
@@ -24,8 +29,25 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      res.sendFile('login.html', {root: './webapp/build/templates/noangular'});
+      return res.render('login',
+        {
+          csrf: '',
+          viewId: 'login-view',
+          errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
+        }); // todo fill in later with req.csrfToken()
     }
+  });
+
+  // Endpoint to logout and remove session
+  app.get('/logout', function(req, res) {
+    req.session.destroy(function (err) {
+      if(err) {
+        console.log(err);
+        res.sendStatus(http.INTERNAL_SERVER_ERROR);
+      } else {
+        res.redirect('/');
+      }
+    });
   });
 
   // Endpoint to authenticate sign-ups and begin session
@@ -57,41 +79,31 @@ module.exports = function (app) {
                 if (err) { return next(err); }
                 req.session.key = req.body.email;
                 req.session.userId = req.user._id;
-                return res.status(http.OK).send({redirect: '/'});
+                return res.redirect('/');
               });
             }
           );
         });
       } else { // User does exist!
-          res.status(http.BAD_REQUEST).send({error: httpErrors.USER_EXISTS});
+          res.redirect('/signup?error=EUSERNAMETAKEN');
       }
     });
   });
 
   // Endpoint to authenticate logins and begin session
-  app.post('/api/auth/login', passport.authenticate('local'), function(req, res) {
+  app.post('/api/auth/login',
+    passport.authenticate('local', {
+      successRedirect: '/',
+      failureRedirect: '/login?error=EAUTHFAILED'
+      }),
+    function(req, res) {
     if (req.user) {
       req.session.key = req.body.email;
       req.session.userId = req.user._id;
       var extUserId = req.user.externalId;
       res.status(http.OK).send({userId: extUserId, redirect: '/'});
-    } else {
-      res.status(http.UNAUTHORIZED);
     }
   });
-
-  // Endpoint to logout and remove session
-  app.get('/api/auth/logout', function(req, res) {
-    req.session.destroy(function (err) {
-        if(err) {
-            console.log(err);
-            res.sendStatus(http.INTERNAL_SERVER_ERROR);
-        } else {
-            res.redirect('/');
-        }
-    });
-  });
-
 
   /*
    * OAuth Endpoints
@@ -108,7 +120,7 @@ module.exports = function (app) {
   app.get('/api/auth/idme/callback',
     passport.authenticate('idme', {
       successRedirect: '/',
-      failureRedirect: '/login'
+      failureRedirect: '/login?error=EAUTHFAILED'
     }
   ));
 
