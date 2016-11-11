@@ -78,6 +78,9 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     },
     getFormsForClaim: function(extClaimId) {
       return httpGet("/claim/" + extClaimId + "/forms");
+    },
+    saveForm: function(claimId, formId, data) {
+      return httpPost('/save/' + claimId + '/' + formId, data);
     }
   };
 }]);
