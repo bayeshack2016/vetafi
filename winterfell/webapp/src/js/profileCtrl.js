@@ -44,11 +44,21 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     $scope.clickEditInfo = function() {
       var newScope = $scope.$new(true);
       newScope.headline = "Edit General Information";
-      newScope.user = $scope.user;
-      $uibModal.open({
+      var modalInstance = $uibModal.open({
         scope: newScope,
         templateUrl: 'templates/modals/editProfile.html',
-        windowClass: 'ngdialog-theme-default'
+        windowClass: 'ngdialog-theme-default',
+        controller: 'editProfileCtrl',
+        resolve: {
+          user: function () {
+            return $scope.user;
+          }
+        }
+      });
+      modalInstance.result.then(function (user) {
+        $scope.user = user;
+      }, function () {
+        console.log('modal dismissed');
       });
     };
 

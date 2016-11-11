@@ -1,68 +1,68 @@
 extends modalLayout.pug
 
 block modalContent
-  div#vfi-modal-edit-profile(modal-edit-profile)
+  div#vfi-modal-edit-profile
     form.form-horizontal
 
       div.form-section
         h4 Your Name
-        div.form-group.has-feedback(ng-class="firstname && lastname ? 'has-success' : 'has-error'")
+        div.form-group.has-feedback(ng-class="user.firstname && user.lastname ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="firstName") First name
           div.col-sm-9
-            input#firstName.form-control(ng-model="firstname", placeholder="Enter your first name")
+            input#firstName.form-control(ng-model="user.firstname", placeholder="Enter your first name")
 
           label.control-label.col-sm-3(for="middleName") Middle name
           div.col-sm-9
-            input#middleName.form-control(ng-model="middlename", placeholder="Enter your middle name (if any)")
+            input#middleName.form-control(ng-model="user.middlename", placeholder="Enter your middle name (if any)")
 
           label.control-label.col-sm-3(for="lastName") Last name
           div.col-sm-9
-            input#lastName.form-control(ng-model="lastname", placeholder="Enter your last name")
+            input#lastName.form-control(ng-model="user.lastname", placeholder="Enter your last name")
 
       div.form-section
         h4 Email
         div.form-group.has-feedback(ng-class="validateEmails() ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="email") Primary email
           div.col-sm-9
-            input#email.form-control(ng-model="email", placeholder="Enter your email address")
+            input#email.form-control(ng-model="user.email", placeholder="Enter your email address")
           label.control-label.col-sm-3(for="confirmEmail") Confirm email
           div.col-sm-9
             input#confirmEmail.form-control(ng-model="confirmEmail", placeholder="Re-enter your email address")
 
       div.form-section
         h4 Primary Address
-        div.form-group.has-feedback(ng-class="addressName ? 'has-success' : 'has-error'")
+        div.form-group.has-feedback(ng-class="user.contact.address.name ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="addressName") Address Name
           div.col-sm-9
-            input#addressName.form-control(ng-model="addressName", placeholder="Name of address i.e. Home, Work, etc.")
+            input#addressName.form-control(ng-model="user.contact.address.name", placeholder="Name of address i.e. Home, Work, etc.")
 
-        div.form-group.has-feedback(ng-class="street1 ? 'has-success' : 'has-error'")
+        div.form-group.has-feedback(ng-class="user.contact.address.street1 ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="street1") Street address
           div.col-sm-9
-            input#street1.form-control(ng-model="street1", placeholder="i.e. 1234 Washington St.")
+            input#street1.form-control(ng-model="user.contact.address.street1", placeholder="i.e. 1234 Washington St.")
           label.control-label.col-sm-3(for="street2")
           div.col-sm-9
-            input#street2.form-control(ng-model="street2", placeholder="i.e. Room, Apartment, Suite No.")
+            input#street2.form-control(ng-model="user.contact.address.street2", placeholder="i.e. Room, Apartment, Suite No.")
 
-        div.form-group.has-feedback(ng-class="country ? 'has-success' : 'has-error'")
+        div.form-group.has-feedback(ng-class="user.contact.address.country ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="country") Country
           div.col-sm-9
-            input#country.form-control(ng-model="country", placeholder="Country of residence")
+            input#country.form-control(ng-model="user.contact.address.country", placeholder="Country of residence")
 
-        div.form-group.has-feedback(ng-class="city ? 'has-success' : 'has-error'")
+        div.form-group.has-feedback(ng-class="user.contact.address.city ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="city") City
           div.col-sm-9
-            input#city.form-control(ng-model="city", placeholder="City of residence")
+            input#city.form-control(ng-model="user.contact.address.city", placeholder="City of residence")
 
-        div.form-group.has-feedback(ng-class="province ? 'has-success' : 'has-error'")
+        div.form-group.has-feedback(ng-class="user.contact.address.province ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="province") State / Province
           div.col-sm-9
-            input#province.form-control(ng-model="province", placeholder="State or province")
+            input#province.form-control(ng-model="user.contact.address.province", placeholder="State or province")
 
-        div.form-group.has-feedback(ng-class="postal ? 'has-success' : 'has-error'")
+        div.form-group.has-feedback(ng-class="user.contact.address.postal ? 'has-success' : 'has-error'")
           label.control-label.col-sm-3(for="postal") Zip / Postal
           div.col-sm-9
-            input#postal.form-control(ng-model="postal", placeholder="Zip or Postal code")
+            input#postal.form-control(ng-model="user.contact.address.postal", placeholder="Zip or Postal code")
 
     div.button-wrapper
       button.cancel(ng-click="$dismiss()") Cancel
