@@ -89,10 +89,10 @@ describe('UserService', function() {
           updatedUser.email.should.equal('moosey@test.com');
           updatedUser.firstname.should.equal('Moose');
           updatedUser.lastname.should.equal('Hsu');
-          // updatedUser.contact.phoneNumber.should.equal('222-444-5432');
-          // updatedUser.contact.address.name.should.equal('New Home');
-          // updatedUser.contact.address.street1.should.equal('123 Street');
-          // updatedUser.contact.address.street2.should.equal('');
+          updatedUser.contact.phoneNumber.should.equal('222-444-5432');
+          updatedUser.contact.address.name.should.equal('New Home');
+          updatedUser.contact.address.street1.should.equal('123 Street');
+          updatedUser.contact.address.street2.should.equal('');
           done();
         });
       });
