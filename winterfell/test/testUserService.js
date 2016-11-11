@@ -74,11 +74,13 @@ describe('UserService', function() {
       email: 'moosey@test.com',
       firstname: 'Moose',
       lastname: 'Hsu',
-      phoneNumber: '222-444-5432',
-      address: {
-        name: 'New Home',
-        street1: '123 Street',
-        street2: ''
+      contact: {
+        phoneNumber: '222-444-5432',
+        address: {
+          name: 'New Home',
+          street1: '123 Street',
+          street2: ''
+        }
       }
     };
 
