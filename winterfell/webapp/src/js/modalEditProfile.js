@@ -65,18 +65,3 @@ app.controller('editProfileCtrl', ['$scope', 'user', 'net', 'Profile',
 
   }
 ]);
-
-
-// app.directive("modalEditProfile", ["net", function(net) {
-//     return {
-//         restrict: "A",
-//         scope: {
-//           user: '=',
-//           closeModal: '&'
-//         },
-//         link: function(scope, elem, attrs) {
-//           debugger;
-//
-//         }
-//     }
-// }]);
