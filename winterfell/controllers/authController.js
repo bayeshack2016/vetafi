@@ -15,7 +15,12 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      return res.render('signup', {csrf: '', viewId: 'signup-view'}); // todo fill in later with req.csrfToken()
+      return res.render('signup',
+        {
+          csrf: '',
+          viewId: 'signup-view',
+          errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
+        }); // todo fill in later with req.csrfToken()
     }
   });
 
@@ -24,7 +29,12 @@ module.exports = function (app) {
     if (req.session.key) {
       res.redirect('/');
     } else {
-      return res.render('login', {csrf: '', viewId: 'login-view'}); // todo fill in later with req.csrfToken()
+      return res.render('login',
+        {
+          csrf: '',
+          viewId: 'login-view',
+          errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
+        }); // todo fill in later with req.csrfToken()
     }
   });
 
@@ -81,14 +91,17 @@ module.exports = function (app) {
   });
 
   // Endpoint to authenticate logins and begin session
-  app.post('/api/auth/login', passport.authenticate('local'), function(req, res) {
+  app.post('/api/auth/login',
+    passport.authenticate('local', {
+      successRedirect: '/',
+      failureRedirect: '/login?error=EAUTHFAILED'
+      }),
+    function(req, res) {
     if (req.user) {
       req.session.key = req.body.email;
       req.session.userId = req.user._id;
       var extUserId = req.user.externalId;
       res.status(http.OK).send({userId: extUserId, redirect: '/'});
-    } else {
-      res.redirect('/login?error=EAUTHFAILED');
     }
   });
 
@@ -107,7 +120,7 @@ module.exports = function (app) {
   app.get('/api/auth/idme/callback',
     passport.authenticate('idme', {
       successRedirect: '/',
-      failureRedirect: '/login'
+      failureRedirect: '/login?error=EAUTHFAILED'
     }
   ));
 
