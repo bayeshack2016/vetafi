@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 
 # Bail if we are not running inside VMWare.
 if [[ `facter virtual` != "vmware" ]]; then

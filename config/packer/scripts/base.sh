@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 
 perl -p -i -e 's#http://us.archive.ubuntu.com/ubuntu#http://mirror.rackspace.com/ubuntu#gi' /etc/apt/sources.list
 
