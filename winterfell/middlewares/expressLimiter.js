@@ -18,7 +18,7 @@ function addLimiter(app) {
       method: 'all',
       lookup: ['connection.remoteAddress'],
       // 360 request per hour per address for all pages
-      total: 1,
+      total: 360,
       expire: 1000 * 60 * 60,
       onRateLimited: function (req, res, next) {
         Log.warn("remoteAddress " + req.connection.remoteAddress + " limited");
@@ -31,7 +31,7 @@ function addLimiter(app) {
       method: 'all',
       lookup: ['user._id'],
       // 360 request per hour per user for all pages
-      total: 1,
+      total: 360,
       expire: 1000 * 60 * 60,
       whitelist: function (req) {
         return typeof req.user === 'undefined';
