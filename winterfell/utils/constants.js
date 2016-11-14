@@ -7,7 +7,7 @@ module.exports.SESSION_EXPIRE_TIME = 24 * 60 * 60 * 1000; // in millis
 module.exports.environment = {
     TEST: 'test',
     LOCAL: 'local',
-    PROD: 'production'
+    PROD: 'prod'
 };
 module.exports.baseUrl = {
     LOCAL: 'http://localhost:3999',
