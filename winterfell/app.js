@@ -87,7 +87,9 @@ if (environment === Constants.environment.PROD) {
     key: biscuit.get(environment + '::' + 'ssl-key')
   }, app);
 
+  app.use(express.bodyParser());
   app.use(forceSSL);
+  app.use(app.router);
 
   server.listen(443);
   redirectServer.listen(80);
