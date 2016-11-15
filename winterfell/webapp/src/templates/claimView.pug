@@ -8,7 +8,7 @@
         span {{user.firstname}} {{user.lastname}}
       div.line
         span Submitted Date:
-        span {{claim.stateUpdatedAt}}
+        span {{claim.date}}
 
     div.content.sent-to
       h4.content-header.underline Copies sent to:
@@ -40,9 +40,10 @@
         div.icon-wrapper
           div.form-icon
         div.form-header
-          div.form-id {{form.id}}
+          div.form-id {{form.key}}
           div.form-title {{form.name}}
-        button(ng-click="downloadForm(form)")
-          div.download-icon
-          | Download
+        a(ng-href="/api/claim/{{claimId}}/form/{{form.key}}/pdf")
+          button
+            div.download-icon
+            | Download
 vfi-footer

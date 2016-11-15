@@ -55,7 +55,20 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     url: '/profile',
     templateUrl: 'templates/profile.html',
     controller: 'profileCtrl',
-    abstract: true
+    abstract: true,
+    resolve: {
+      userClaims: ['net', '$q', function(net, $q) {
+        var deferred = $q.defer();
+        net.getClaimsForUser().then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+        return deferred.promise;
+      }]
+    }
   });
 
   $stateProvider.state({

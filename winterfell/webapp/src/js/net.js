@@ -84,6 +84,9 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     },
     saveForm: function(claimId, formId, data) {
       return httpPost('/save/' + claimId + '/' + formId, data);
+    },
+    downloadForm: function(claimId, formId) {
+      return httpGet("/claim/" + claimId + "/form/" + formId + "/pdf");
     }
   };
 }]);
