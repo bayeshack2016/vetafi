@@ -31,6 +31,7 @@
     "express-limiter": "^1.6.0",
     "express-mung": "^0.4.4",
     "express-session": "1.14.0",
+    "express-sslify": "^1.1.0",
     "gulp": "^3.9.1",
     "gulp-cache": "^0.4.4",
     "gulp-concat": "^2.6.0",
