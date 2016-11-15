@@ -25,21 +25,25 @@ module.exports = function (app) {
   // firstname, middlename, lastname, email
   // contact.address, contact.phoneNumber
   app.post('/api/user/', mw, function (req, res) {
+    var body = req.body || {};
+    var contact = body.contact || {};
+    var address = contact.address || {};
+
     var updateUserInfo = {
-      firstname: req.body.firstname || '',
-      middlename: req.body.middlename || '',
-      lastname: req.body.lastname || '',
-      email: req.body.email || '',
+      firstname: body.firstname || '',
+      middlename: body.middlename || '',
+      lastname: body.lastname || '',
+      email: body.email || '',
       contact: {
-        phoneNumber: req.body.phoneNumber || '',
+        phoneNumber: contact.phoneNumber || '',
         address: {
-          name: req.body.address ? req.body.address.name || '' : '',
-          street1: req.body.address ? req.body.address.street1 || '' : '',
-          street2: req.body.address ? req.body.address.street2 || '' : '',
-          city: req.body.address ? req.body.address.city || '' : '',
-          province: req.body.address ? req.body.address.province || '' : '',
-          country: req.body.address ? req.body.address.country || '' : '',
-          postal: req.body.address ? req.body.address.postal || '' : '',
+          name: address.name || '',
+          street1: address.street1 || '',
+          street2: address.street2 || '',
+          city: address.city || '',
+          province: address.province || '',
+          country: address.country || '',
+          postal: address.postal || ''
         }
       }
     };

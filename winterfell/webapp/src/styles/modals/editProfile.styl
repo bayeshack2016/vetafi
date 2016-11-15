@@ -1,17 +1,19 @@
 @import "../standards.styl"
 
 elementSpacing = mediumSpacing
-sidebarTopSpacing = 10px
-sidebarLeftSpacing = 40px
+sidebarVertSpacing = 10px
+sidebarHorizSpacing = 15px
 
 #vfi-modal-edit-profile
   position: relative
-  top: sidebarTopSpacing
-  width: 'calc(100% + %s)' % sidebarLeftSpacing
+  top: sidebarVertSpacing
+  left: '-%s' % sidebarHorizSpacing
+  width: calc(100% + 40px)
   height: 480px
   overflow-y: scroll
-  padding-bottom: sidebarTopSpacing
-  padding-right: sidebarLeftSpacing
+  padding-left: sidebarHorizSpacing
+  padding-right: sidebarHorizSpacing
+  padding-bottom: sidebarVertSpacing
 
   & .form-section
     margin: smallSpacing 0 mediumSpacing
@@ -21,8 +23,8 @@ sidebarLeftSpacing = 40px
     color: colorDarkGray
 
   & input
-    &#firstName
-    &#middleName
+    &#firstname
+    &#middlename
     &#email
     &#street1
       margin-bottom: miniSpacing
@@ -41,6 +43,7 @@ sidebarLeftSpacing = 40px
       &.faded
         background-color: colorDarkGray
         color: colorLightGray
+        cursor: initial
 
     & .clearer
       clear: both

@@ -61,7 +61,7 @@ describe('UserController', function() {
   it('Post user endpoint - success', function(done) {
     testSession
         .post('/api/user')
-        .send({firstname: 'Mister'})
+        .send({firstname: 'Mister', lastname: 'Moose'})
         .expect(http.OK, done);
   });
 
