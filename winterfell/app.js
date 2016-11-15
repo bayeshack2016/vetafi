@@ -76,10 +76,12 @@ if (environment === Constants.environment.PROD) {
     cert: biscuit.get(environment + '::' + 'ssl-cert'),
     key: biscuit.get(environment + '::' + 'ssl-key')
   }, app).listen(443);
+  Log.console("Listening on port 443. Winter is coming!");
 } else {
   server = app.listen(process.env.PORT || devPort);
+  Log.console("Listening on port " + (process.env.PORT || devPort) + ". Winter is coming!");
 }
 
 server.app = app;
 module.exports = server;
-Log.console("Listening on port " + devPort + ". Winter is coming!");
+
