@@ -10,6 +10,7 @@ var session = require('express-session');
 var helmet = require('helmet');
 var ENVIRONMENT = Constants.environment;
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
+var http = require('http');
 var https = require('https');
 var forceSSL = require('express-force-ssl');
 
@@ -79,11 +80,18 @@ if (environment === Constants.environment.PROD) {
     httpsPort: 443,
     sslRequiredMessage: 'SSL Required.'
   });
-  app.use(forceSSL);
+
+  var redirectServer = http.createServer(app);
   server = https.createServer({
     cert: biscuit.get(environment + '::' + 'ssl-cert'),
     key: biscuit.get(environment + '::' + 'ssl-key')
-  }, app).listen(443);
+  }, app);
+
+  app.use(forceSSL);
+
+  server.listen(443);
+  redirectServer.listen(80);
+
   Log.console("Listening on port 443. Winter is coming!");
 } else {
   server = app.listen(process.env.PORT || devPort);
