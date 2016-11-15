@@ -1,9 +1,10 @@
 'use strict';
-var uuid = require('uuid');
 var _ = require('lodash');
+var AddressSchema = require('./addressSchema');
 var mongoose = require('mongoose');
-var User = require('./user');
 var Schema = mongoose.Schema;
+var User = require('./user');
+var uuid = require('uuid');
 
 var ClaimSchema = new Schema({
   externalId: String,
@@ -13,6 +14,10 @@ var ClaimSchema = new Schema({
   },
   state: String,         // Claim.State
   stateUpdatedAt: Date,  // Date of last state modification
+  sentTo: {
+    emails: [String],
+    addresses: [AddressSchema]
+  }
 }, {
   timestamps: true
 });
@@ -38,7 +43,7 @@ ClaimSchema.statics.quickCreate = function(userId, callback) {
 };
 
 ClaimSchema.statics.externalize = function(claim) {
-  return _.pick(claim, ['externalId', 'state', 'updatedAt']);
+  return _.pick(claim, ['externalId', 'state', 'updatedAt', 'sentTo']);
 };
 
 // Instance methods

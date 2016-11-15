@@ -9,7 +9,7 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
     $scope.emailList = [
       {
         name: 'Me',
-        email: user.email
+        email: $scope.userEmail
       }
     ];
 
@@ -65,12 +65,13 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
     }
 
     $scope.onClickConfirm = function () {
-      net.submitClaim($stateParams.claimId,
-        {
-          toAddress: $scope.vaAddress,
-          fromAddress: $scope.userAddress
-        }
-      )
+      var data = {
+        toAddress: $scope.vaAddress,
+        fromAddress: $scope.userAddress,
+        emails: [$scope.userEmail],
+        addresses: [$scope.vaAddress, $scope.userAddress]
+      };
+      net.submitClaim($stateParams.claimId, data)
         .then(function (resp) {
           // todo: set claim state or re-fetch all user claims?
           if (resp) {

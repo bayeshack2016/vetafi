@@ -17,21 +17,21 @@ var mockLob = {
 
 var testReturnAddess = {
     name: "Name",
-    line1: "Address1",
-    line2: "Address2",
+    street1: "Address1",
+    street2: "Address2",
     city: "City",
-    state: "State",
-    zip: "Zip",
+    province: "State",
+    postal: "Zip",
     country: "Country"
 };
 
 var testDestinationAddress = {
     name: "Name", // Name line
-    line1: "Address1",
-    line2: "Address2",
+    street1: "Address1",
+    street2: "Address2",
     city: "City",
-    state: "State",
-    zip: "Zip",
+    province: "State",
+    postal: "Zip",
     country: "Country"
 };
 

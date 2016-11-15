@@ -13,21 +13,21 @@ var StringDecoder = require('string_decoder').StringDecoder;
 
 var testReturnAddess = {
   name: "Name",
-  line1: "Address1",
-  line2: "Address2",
+  street1: "Address1",
+  street2: "Address2",
   city: "City",
-  state: "State",
-  zip: "Zip",
+  province: "State",
+  postal: "Zip",
   country: "Country"
 };
 
 var testDestinationAddress = {
   name: "Name", // Name line
-  line1: "Address1",
-  line2: "Address2",
+  street1: "Address1",
+  street2: "Address2",
   city: "City",
-  state: "State",
-  zip: "Zip",
+  province: "State",
+  postal: "Zip",
   country: "Country"
 };
 
@@ -149,12 +149,16 @@ describe('ClaimController', function() {
         .post('/api/claim/' + claim.externalId + '/submit')
         .send({
           returnAddress: testReturnAddess,
-          toAddress: testDestinationAddress
+          toAddress: testDestinationAddress,
+          emails: ['some-email@gmail.com'],
+          addresses: [testDestinationAddress]
         })
         .expect(function (res) {
           res.body.letter.toAddress.should.deepEqual(testToAddress);
           res.body.letter.fromAddress.should.deepEqual(testFromAddress);
           res.body.claim.state.should.equal(Claim.State.SUBMITTED);
+          res.body.claim.emails[0].should.equal('some-email@gmail.com');
+          res.body.claim.addresses[0].street1.should.equal(testDestinationAddress.street1);
         })
         .expect(http.OK, done());
     });

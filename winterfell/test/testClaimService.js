@@ -92,12 +92,4 @@ describe('ClaimService', function() {
     });
   });
 
-  xit('Remove form from claim', function(done) {
-
-  });
-
-  xit('Get forms for claim', function(done) {
-
-  });
-
 });
