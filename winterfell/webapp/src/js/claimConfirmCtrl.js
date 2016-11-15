@@ -4,8 +4,9 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
   function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formTemplateService, user, vaService) {
     $scope.claimId = $stateParams.claimId;
     $scope.vaAddress = vaService.getAddress();
-    $scope.userAddress = user.user.contact.address;
-    $scope.userEmail = user.user.email;
+    $scope.user = user.user || {};
+    $scope.userEmail = $scope.user.email;
+    $scope.userAddress = $scope.user.contact.address;
     $scope.emailList = [
       {
         name: 'Me',
@@ -57,7 +58,6 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
       });
 
       modalInstance.result.then(function (email) {
-        console.log("new email", email);
         $scope.userEmail = email;
       }, function () {
         console.log('modal-component dismissed at: ' + new Date());
@@ -68,8 +68,8 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
       var data = {
         toAddress: $scope.vaAddress,
         fromAddress: $scope.userAddress,
-        emails: [$scope.userEmail],
-        addresses: [$scope.vaAddress, $scope.userAddress]
+        emails: [$scope.userEmail],                       // copies sent to which emails
+        addresses: [$scope.vaAddress, $scope.userAddress] // copies sent to which addresses
       };
       net.submitClaim($stateParams.claimId, data)
         .then(function (resp) {

@@ -2,11 +2,11 @@
 var app = angular.module('vetafiApp');
 app.service('vaService', function () {
   this.vaAddress = {
-    line1: 'Somewhere Street',
+    street1: 'Somewhere Street',
     city: 'Washington',
-    state: 'DC',
+    province: 'DC',
     country: 'US',
-    zip: '20854',
+    postal: '20854',
     name: 'Department of Veteran Affairs'
   };
 
