@@ -11,6 +11,7 @@ var helmet = require('helmet');
 var ENVIRONMENT = Constants.environment;
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
 var https = require('https');
+var forceSSL = require('express-force-ssl');
 
 // Initialize App
 var app = express();
@@ -72,6 +73,13 @@ app.get('/', function(req, resp) {
 // Start server
 var devPort = 3999, server;
 if (environment === Constants.environment.PROD) {
+  app.set('forceSSLOptions', {
+    enable301Redirects: true,
+    trustXFPHeader: false,
+    httpsPort: 443,
+    sslRequiredMessage: 'SSL Required.'
+  });
+  app.use(forceSSL);
   server = https.createServer({
     cert: biscuit.get(environment + '::' + 'ssl-cert'),
     key: biscuit.get(environment + '::' + 'ssl-key')
