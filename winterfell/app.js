@@ -12,7 +12,7 @@ var ENVIRONMENT = Constants.environment;
 var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
 var http = require('http');
 var https = require('https');
-var forceSSL = require('express-force-ssl');
+var enforce = require('express-sslify');
 
 // Initialize App
 var app = express();
@@ -74,22 +74,13 @@ app.get('/', function(req, resp) {
 // Start server
 var devPort = 3999, server;
 if (environment === Constants.environment.PROD) {
-  app.set('forceSSLOptions', {
-    enable301Redirects: true,
-    trustXFPHeader: false,
-    httpsPort: 443,
-    sslRequiredMessage: 'SSL Required.'
-  });
-
-  var redirectServer = http.createServer(app);
   server = https.createServer({
     cert: biscuit.get(environment + '::' + 'ssl-cert'),
     key: biscuit.get(environment + '::' + 'ssl-key')
   }, app);
 
-  app.use(forceSSL);
-  app.use(app.router);
-
+  var redirectServer = http.createServer(app);
+  app.use(enforce.HTTPS());
   server.listen(443);
   redirectServer.listen(80);
 
