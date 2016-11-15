@@ -7,7 +7,7 @@ module.exports.SESSION_EXPIRE_TIME = 24 * 60 * 60 * 1000; // in millis
 module.exports.environment = {
     TEST: 'test',
     LOCAL: 'local',
-    PROD: 'production'
+    PROD: 'prod'
 };
 module.exports.baseUrl = {
     LOCAL: 'http://localhost:3999',
@@ -17,10 +17,12 @@ module.exports.baseUrl = {
 module.exports.KEY_LOB_API = 'lobApiKey';
 module.exports.KEY_IDME_CLIENT_ID = 'idmeClientId';
 module.exports.KEY_IDME_SECRET_ID = 'idmeSecretId';
+module.exports.SESSION_SECRET_ID = 'sessionSecretId';
 module.exports.biscuitKeys = {
   lobApiKey: 'lob-api-key',
   idmeClientId: 'id-me-client-id',
-  idmeSecretId: 'id-me-client-secret'
+  idmeSecretId: 'id-me-client-secret',
+  sessionSecretId: 'session-secret'
 };
 
 module.exports.ERROR_CODES = {
