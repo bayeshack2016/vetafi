@@ -1,6 +1,7 @@
 package gov.va.vetaffi;
 
 import io.dropwizard.Application;
+import io.dropwizard.forms.MultiPartBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 
@@ -15,6 +16,7 @@ public class PDFFillerApplication extends Application<PDFFillerConfiguration> {
                 pdfFillerConfiguration.getFormDir()
         ));
         environment.jersey().register(new PDFConcatResource());
+
         final PDFHealthCheck healthCheck =
                 new PDFHealthCheck(pdfFillerConfiguration.getFormDir());
         environment.healthChecks().register("pdfForms", healthCheck);
@@ -23,5 +25,6 @@ public class PDFFillerApplication extends Application<PDFFillerConfiguration> {
 
     @Override
     public void initialize(Bootstrap<PDFFillerConfiguration> myConfigurationBootstrap) {
+        myConfigurationBootstrap.addBundle(new MultiPartBundle());
     }
 }

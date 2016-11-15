@@ -1,4 +1,4 @@
-extends signinLayout.jade
+extends signinLayout.pug
 
 block fbText
   div.txt-container Login with Facebook
@@ -8,9 +8,10 @@ block emailText
   div.txt-container Login with your email
 
 block inputs
-  form
-    input.email(placeholder='Email Address', type='text')
-    input.pwd(placeholder='Password', type='password')
+  form(action='/api/auth/login' method='post')
+    input.email(placeholder='Email Address', type='text' name='email')
+    input.pwd(placeholder='Password', type='password' name='password')
+    input(type='hidden' name='_csrf' value=csrf)
     input.submit(value='LOG IN', type='submit')
   a Forgot password?
   a Forgot email?

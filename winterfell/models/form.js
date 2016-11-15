@@ -10,7 +10,8 @@ var formSchema = new Schema({
   user: Schema.Types.ObjectId,
   claim: Schema.Types.ObjectId,
   answered: Number,
-  answerable: Number
+  answerable: Number,
+  pdf: Buffer
 }, {
   timestamps: true
 });

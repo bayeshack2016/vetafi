@@ -4,7 +4,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var httpGet = function (url, data) {
     return $http({
-      url: url,
+      url: "/api" + url,
       method: "GET",
       headers: { 'Content-Type': 'application/json' }
     });
@@ -12,7 +12,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
   var httpPost = function(url, data) {
     return $http({
-      url: url,
+      url: "/api" + url,
       method: "POST",
       data: data || {},
       headers: { 'Content-Type': 'application/json' }
@@ -24,6 +24,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
   };
 
   return {
+    // Auth
     login: function (email, password) {
       var data = {
         email: email,
@@ -40,6 +41,16 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     touchSession: function() {
       return httpGet("/session/touch");
     },
+    getAuthIdMeUrl: function() {
+      return '/auth/idme';
+    },
+    changePassword: function(oldPwd, newPwd) {
+      var data = {
+        old: oldPwd,
+        new: newPwd
+      };
+      return httpPost("/auth/password", data);
+    },
 
     // User
     getUserInfo: function() {
@@ -51,9 +62,6 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     deleteUserAccount: function() {
       return httpDelete("/user");
     },
-    getAuthIdMeUrl: function() {
-      return '/auth/idme';
-    },
 
     // Claims
     getClaimsForUser: function() {
@@ -62,8 +70,8 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     startClaim: function(data) {
       return httpPost("/claims/create", data);
     },
-    submitClaim: function(extClaimId) {
-      return httpPost("/claim/" + extClaimId + "/submit");
+    submitClaim: function(extClaimId, data) {
+      return httpPost("/claim/" + extClaimId + "/submit", data);
     },
     discardClaim: function(extClaimId) {
       return httpDelete("/claim/" + extClaimId);
@@ -73,6 +81,9 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     },
     getFormsForClaim: function(extClaimId) {
       return httpGet("/claim/" + extClaimId + "/forms");
+    },
+    saveForm: function(claimId, formId, data) {
+      return httpPost('/save/' + claimId + '/' + formId, data);
     }
   };
 }]);

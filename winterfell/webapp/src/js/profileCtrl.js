@@ -46,7 +46,10 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     };
 
     $scope.clickChangePassword = function() {
+      var newScope = $scope.$new(true);
+      newScope.headline = "Change Password";
       $uibModal.open({
+        scope: newScope,
         templateUrl: 'templates/modals/changePassword.html',
         windowClass: 'ngdialog-theme-default'
       });

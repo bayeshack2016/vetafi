@@ -28,6 +28,7 @@ public class PDFConcatResource {
     @Consumes(MediaType.MULTIPART_FORM_DATA)
     public Response createPDF(FormDataMultiPart multiPart) {
         ArrayList<InputStream> pdfs = Lists.newArrayList();
+        logger.info("Received multipart:" + multiPart.getFields().toString());
 
         for (FormDataBodyPart part : multiPart.getFields("attachments")) {
             pdfs.add(part.getValueAs(InputStream.class));

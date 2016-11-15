@@ -3,7 +3,7 @@ var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var browserify = require('browserify');
 var bulkify = require('bulkify');
-var jade = require('gulp-jade');
+var pug = require('gulp-pug');
 var stylus = require('gulp-stylus');
 var args = require('yargs').argv;
 var gulpif = require('gulp-if');
@@ -14,6 +14,7 @@ var del = require('del');
 var cache = require('gulp-cache');
 var sourcemaps = require('gulp-sourcemaps');
 var fs = require('fs');
+var eslint = require('gulp-eslint');
 
 var release = args.release ? true : false;
 if (release) {
@@ -41,9 +42,9 @@ gulp.task('stylus', function () {
     .pipe(sourcemaps.write());
 });
 
-gulp.task('jade', function () {
-  return gulp.src('src/**/*.jade')
-    .pipe(jade())
+gulp.task('pug', function () {
+  return gulp.src('src/**/*.pug')
+    .pipe(pug())
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
@@ -96,6 +97,14 @@ gulp.task('js', ['xhrEnv'], function () {
     .pipe(sourcemaps.write());
 });
 
+gulp.task('lint', ['xhrEnv'], function () {
+  return gulp.src('src/js/*.js')
+    .pipe(eslint())
+    .pipe(eslint.format())
+    //.pipe(eslint.failAfterError()) -- enable this when all code is correctly formatter 
+    ;
+});
+
 gulp.task('browserify', ['js'], function () {
   return browserify(['src/formly-fields.js'], {
       transform: [bulkify],
@@ -126,9 +135,9 @@ gulp.task('initBrowserSync', ['build'], function () {
 gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/js/*.js', ['js', 'other-js']);
   gulp.watch('src/styles/**/*.styl', ['stylus']);
-  gulp.watch('src/**/*.jade', ['jade']);
+  gulp.watch('src/**/*.pug', ['pug']);
 });
 
-gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'jade', 'browserify']);
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'pug', 'browserify', 'lint']);
 
 gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);

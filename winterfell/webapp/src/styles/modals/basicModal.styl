@@ -1,0 +1,30 @@
+@import "../standards.styl"
+
+#basic-one-button-modal
+#basic-two-button-modal
+  & .message
+    margin-top: mediumSpacing
+    margin-bottom: mediumSpacing
+
+    & p
+      width: 90%
+      margin: 0 auto
+      text-align: center
+
+  & .button-wrapper
+    text-align: center
+
+    & button
+      width: 6em
+      margin: 0 mediumSpacing
+      color: colorWhite
+
+      &.continue
+        background-color: colorPrimaryDarkBlue
+      &.cancel
+        background-color: colorLightGray
+        color: colorBlack
+      &.warning
+        background-color: colorRed
+      &.success
+        background-color: colorLightGreen

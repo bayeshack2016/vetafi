@@ -1,19 +1,24 @@
-var mongoose = require('mongoose');
+var _ = require('lodash');
+var auth = require('../middlewares/auth');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var Claim = require('../models/claim');
 var ClaimService = require('./../services/claimService');
-var User = require('../models/user');
+var DocumentRenderingService = require('./../services/documentRenderingService');
 var Form = require('../models/form');
+var Q = require('q');
+var MailingService = require('./../services/mailingService');
+var mongoose = require('mongoose');
+var User = require('../models/user');
 var UserValues = require('../models/userValues');
-var auth = require('../middlewares/auth');
-var _ = require('lodash');
 
 module.exports = function (app) {
+  var mw = [auth.authenticatedOr404];
+  var mailingService = new MailingService(app);
+  var documentRenderingService = new DocumentRenderingService(app);
 
   // Get all claims for a user
-  app.get('/claims', auth.authenticatedOr404, function (req, res) {
-    console.log('[getClaimsForUser] request received for ' + req.session.userId);
+  app.get('/api/claims', mw, function (req, res) {
     User.findById(req.session.userId).exec(function(err, user) {
       if (err) {
         res.sendStatus(http.INTERNAL_SERVER_ERROR);
@@ -33,8 +38,7 @@ module.exports = function (app) {
   });
 
   // Get a particular claim
-  app.get('/claim/:extClaimId', auth.authenticatedOr404, function (req, res) {
-    console.log('[getClaim] request received for ' + req.params.extClaimId);
+  app.get('/api/claim/:extClaimId', mw, function (req, res) {
     Claim.findOne({externalId: req.params.extClaimId}).exec(function(err, claim) {
       if (claim) {
         res.status(http.OK).send({claim: claim});
@@ -44,8 +48,7 @@ module.exports = function (app) {
     });
   });
 
-  app.post('/claims/create', auth.authenticatedOr404, function (req, res) {
-    console.log('[createClaim] request received for ' + req.session.userId);
+  app.post('/api/claims/create', mw, function (req, res) {
     var callback = function (err, claim) {
       if (claim) {
         res.status(http.CREATED).send({claim: claim});
@@ -94,17 +97,54 @@ module.exports = function (app) {
     }
   }
 
-  app.post('/claim/:extClaimId/submit', function(req, res) {
-    console.log('[submitClaim] request received ' + JSON.stringify(req.body));
+  app.post('/api/claim/:extClaimId/submit', mw, function(req, res) {
+    var that = this;
+    var currentUser = null;
+    var promise = User.findById(req.session.userId);
 
-    handleClaimStateChange(req.params.extClaimId,
-      Claim.State.SUBMITTED,
-      claimUpdateCallbackFactory(res));
+    promise = promise.then(function(user) {
+      currentUser = user;
+      return Claim.findOne({externalId: req.params.extClaimId});
+    });
+
+    promise = promise.then(function(claim) {
+      if (!claim) {
+        res.sendStatus(http.NOT_FOUND);
+        return Q.defer().promise; // short circuit promise chain
+      } else {
+        that.claim = claim;
+        return Form.find({claim: claim._id});
+      }
+    });
+
+    promise = promise.then(function(documents) {
+      return mailingService.sendLetter(
+        currentUser,
+        req.body.fromAddress,
+        req.body.toAddress,
+        documents
+      );
+    });
+
+    promise = promise.then(function(letter) {
+      that.letter = letter;
+      return Claim.update({_id: that.claim._id}, {state: Claim.State.SUBMITTED})
+    });
+
+    promise.done(function success(claim) {
+      res.status(http.OK).send({
+        letter: that.letter,
+        claim: claim
+      });
+    });
+
+    promise.catch(function(err) {
+      //console.log(err);
+      res.sendStatus(http.INTERNAL_SERVER_ERROR);
+    });
   });
 
-  app.delete('/claim/:extClaimId', function (req, res) {
-    console.log('[deleteClaim] request received for ' + req.params.extClaimId);
-
+  app.delete('/api/claim/:extClaimId', mw, function (req, res) {
     handleClaimStateChange(req.params.extClaimId,
       Claim.State.DISCARDED,
       claimUpdateCallbackFactory(res));
@@ -113,73 +153,149 @@ module.exports = function (app) {
   /**
    * Update UserValues document given the answers contained inside the form.
    */
-  function updateUserValuesFromForm(form, cb) {
-    UserValues.findOne({
-        userId: form.user
-      },
-      function (error, currentUserValues) {
-        if (error) {
-          cb(error, null);
-          return;
-        }
+  function updateUserValuesFromForm(form) {
+    var promise = UserValues.findOne({
+      userId: form.user
+    });
+
+    return promise.then(
+      function (currentUserValues) {
         var newValues = _.merge(currentUserValues.values, form.responses);
-        UserValues.update(
-          {
-            userId: form.user
-          },
-          {
-            values: newValues
-          },
-          {},
-          function (error, userValues) {
-            if (error) {
-              cb(error, null);
-            } else {
-              cb(null, userValues);
-            }
-          });
-      }
-    );
+        return UserValues.findOneAndUpdate(
+          {userId: form.user},
+          {values: newValues},
+          {'new': true});
+      });
   }
 
-  app.post('/save/:claim/:form', auth.authenticatedOr404, function (req, res) {
-    var progress = ClaimService.calculateProgress(req.params.form, req.body);
-    Form.findOneAndUpdate(
-      {
-        key: req.params.form,
-        user: req.session.userId,
-        claim: req.params.claim
-      },
-      {
-        key: req.params.form,
-        responses: req.body,
-        user: req.session.userId,
-        claim: req.params.claim,
-        answered: progress.answered,
-        answerable: progress.answerable
-      },
-      {
-        upsert: true,
-        'new': true
-      },
-      function (error, form) {
-        if (error) {
-          res.sendStatus(http.INTERNAL_SERVER_ERROR);
+  // This is a mapping of user value keys to User object properties
+  // The keys and values are interpreted as JSON path strings
+  var USER_VALUES_TO_USER_PROPERTIES_MAPPING = {
+    'contact.address.name': [['values.veteran_first_name', 'values.veteran_middle_initial', 'values.veteran_last_name'],
+      ['values.claimant_first_name', 'values.claimant_middle_initial', 'values.claimant_last_name']],
+    'contact.address.line1': [['values.veteran_home_address_line1']],
+    'contact.address.line2': [['values.veteran_home_address_line2']],
+    'contact.address.city': [['values.veteran_home_city']],
+    'contact.address.state': [['values.veteran_home_state']],
+    'contact.address.zip': [['values.veteran_home_zip_code']],
+    'contact.address.country': [['values.veteran_home_country']],
+    'contact.phoneNumber': [['values.contact_phone_number']],
+    'firstname': [['values.veteran_first_name'], ['values.claimant_first_name']],
+    'middlename': [['values.veteran_middle_name'], ['values.claimant_middle_name']],
+    'lastname': [['values.veteran_last_name'], ['values.claimant_last_name']]
+  };
+
+  /**
+   * Given a list of UserValues key names, resolve and concatenate the string values
+   * and return it if they all exist, otherwise return undefined.
+   */
+  function resolveUserValuesOption(option, userValues) {
+    var values = _.map(option, function(path) {
+      return _.get(userValues, path);
+    });
+
+    if (_.reduce(values, function bothTrue(a, b) {return a && b;})) {
+      var output = _.join(values, ' ');
+      return output;
+    } else {
+      return undefined;
+    }
+  }
+
+  /**
+   * Update the user object with any information from the form that can be interpreted as user information.
+   * For example address info, etc.
+   */
+  function updateUserFromForm(userValues) {
+    var promise = User.findOne({
+      _id: userValues.userId
+    });
+
+    promise = promise.then(function success(user) {
+      _.map(USER_VALUES_TO_USER_PROPERTIES_MAPPING, function(userValuesOptions, userPath) {
+        var val = _.get(user, userPath);
+        if (!val) {
+          var userValuesDerivedValues = _.filter(_.map(userValuesOptions, function(option) {
+            return resolveUserValuesOption(option, userValues);
+          }));
+
+          if (!_.isEmpty(userValuesDerivedValues)) {
+            console.log("Setting " + userPath + " to " + userValuesDerivedValues[0]);
+            _.set(user, userPath, userValuesDerivedValues[0]);
+          }
         } else {
-          updateUserValuesFromForm(form,
-            function (error, userValues) {
-              if (error) {
-                res.sendStatus(http.INTERNAL_SERVER_ERROR);
-                return;
-              }
-              res.sendStatus(http.CREATED);
-            }
-          );
+          console.log("Refuse to overwrite existing value for " + userPath);
         }
       });
+
+      return User.findByIdAndUpdate(
+        user._id, user, {'new': true}
+      );
+    });
+
+    return promise;
+  }
+
+  app.post('/api/save/:claim/:form', mw, function (req, res) {
+    var resolvedClaim;
+    var progress = ClaimService.calculateProgress(req.params.form, req.body);
+
+    // Resolve the claim
+    var promise = Claim.findOne({externalId: req.params.claim});
+
+    // Render the new form values into the pdf
+    promise = promise.then(
+      function(claim) {
+        resolvedClaim = claim;
+        return documentRenderingService.renderDoc(req.params.form, req.body);
+      }
+    );
+
+    // Save the pdf binary data and new form values into the Form document
+    promise = promise.then(function(pdf) {
+      return Form.findOneAndUpdate(
+        {
+          key: req.params.form,
+          user: req.session.userId,
+          claim: resolvedClaim._id
+        },
+        {
+          key: req.params.form,
+          responses: req.body,
+          user: req.session.userId,
+          claim: resolvedClaim._id,
+          answered: progress.answered,
+          answerable: progress.answerable,
+          pdf: pdf
+        },
+        {
+          upsert: true,
+          'new': true
+        });
+    });
+
+    // Update the UserValues document for the user with the new form responses
+    promise = promise.then(function (form) {
+      return updateUserValuesFromForm(form);
+    });
+
+    // Update the User document with form responses that might be critical user
+    // info such as address or contact info.
+    promise = promise.then(function (userValues) {
+      return updateUserFromForm(userValues);
+    });
+
+    // Send 201 response (not sure if should be 200, but this endpoint creates multiple resources)
+    promise.done(function success(user) {
+      console.log("updated user:", user);
+      res.sendStatus(http.CREATED);
+    }, function failure(err) {
+      console.log(err);
+      res.sendStatus(http.INTERNAL_SERVER_ERROR);
+    });
   });
 
-  app.get('/claim/:claim/form/:form', auth.authenticatedOr404, function (req, res) {
+  app.get('/api/claim/:claim/form/:form', mw, function (req, res) {
     Claim.findOne({externalId: req.params.claim}, function(error, claim) {
       if (error) {
         console.log(error);
@@ -199,7 +315,31 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/claim/:claim/forms', auth.authenticatedOr404, function (req, res) {
+  app.get('/api/claim/:claimId/form/:formName/pdf', mw, function (req, res) {
+    var promise = Claim.findOne(
+      {externalId: req.params.claimId}
+    );
+
+    promise = promise.then(function (claim) {
+      return Form.findOne({
+        key: req.params.formName,
+        user: req.session.userId,
+        claim: claim._id
+      });
+    });
+
+    promise.done(function success(form) {
+      res
+        .status(http.OK)
+        .set('Content-Type', 'application/pdf')
+        .send(form.pdf);
+    }, function failure(err) {
+      console.log(err);
+      res.sendStatus(http.INTERNAL_SERVER_ERROR);
+    });
+  });
+
+  app.get('/api/claim/:claim/forms', mw, function (req, res) {
     Claim.findOne({externalId: req.params.claim}, function(error, claim) {
       if (error) {
         console.log(error);

@@ -49,15 +49,6 @@
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-    <dependency>
-      <groupId>io.dropwizard</groupId>
-      <artifactId>dropwizard-forms</artifactId>
-      <version>1.0.0-rc2</version>
-      <type>pom</type>
-      <scope>compile</scope>
-    </dependency>
-  </dependencies>
   <properties>
     <dropwizard.version>1.0.0-rc2</dropwizard.version>
   </properties>

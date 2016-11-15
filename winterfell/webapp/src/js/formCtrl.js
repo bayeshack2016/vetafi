@@ -4,19 +4,14 @@
 'use strict';
 var app = angular.module('vetafiApp');
 
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingService', 'formTemplateService',
-    'formService', '$stateParams', '$state', 'userValues',
-    function ($scope, $filter, $rootScope, formRenderingService, formTemplateService, formService,
-              $stateParams, $state, userValues) {
-        $scope.$watch('signature', function (newVal, oldVal) {
-            console.log(newVal, oldVal);
-            if (newVal) {
-                $scope.model['signature'] = newVal.dataUrl;
-            }
-        });
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService', '$stateParams', '$state', 'userValues', '$window', 'net',
+    function ($scope, $filter, $rootScope, formTemplateService,
+              $stateParams, $state, userValues, $window, net) {
 
-      $scope.$watch('dataurl', function (newVal, oldVal) {
-        console.log(newVal, oldVal);
+      $scope.title = formTemplateService[$stateParams.formId].unofficialTitle;
+      $scope.description = formTemplateService[$stateParams.formId].unofficialDescription;
+
+      $scope.$watch('signature', function (newVal, oldVal) {
         if (newVal) {
           $scope.model.signature = newVal;
         } else {
@@ -28,28 +23,41 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingSer
         return $filter('date')(new Date(), 'MM/dd/yyyy');
       }
 
-      $scope.render = function () {
-        var out = [];
-        for (var k in $scope.model) {
-          if ($scope.model.hasOwnProperty(k)) {
-            out.push({fieldName: k, fieldValue: $scope.model[k]})
+      $scope.onRender = function () {
+        save().then(
+          function(response) {
+            $window.open('/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf');
           }
-        }
-        formRenderingService.render($stateParams.formId, out);
+        );
       };
 
       $scope.onSubmit = function () {
-          $scope.save();
-          $state.transitionTo('root.claimselect', {claimId: $stateParams.claimId});
+        console.log('onSubmit');
+        save().then(
+          function (response) {
+            $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
+              function success() {
+              },
+              function failure(err) {
+                console.error(err);
+              }
+            );
+          });
       };
 
-      $scope.save = function () {
-        formService.save($stateParams.claimId, $stateParams.formId, $scope.model, function (err, response) {
-          console.log(err, response);
-        })
+      $scope.onSave = function () {
+        save().then(function (response) {
+          console.log(response);
+        });
       };
 
-      $scope.model = userValues;
+      function save() {
+        return net.saveForm($stateParams.claimId, $stateParams.formId, $scope.model);
+      }
+
+      $scope.model = userValues.values.values; // TODO(jeff) fix extra attributes messing up completion percentage
+      $scope.signature = $scope.model.signature;
+      console.log($scope);
       $scope.fields = formTemplateService[$stateParams.formId].fields;
 
 
@@ -58,7 +66,6 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingSer
           $scope.model[$scope.fields[i].key] = currentDate();
         }
       }
-
 
       function countAnswerable(model) {
         var total = 0;
@@ -71,10 +78,11 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formRenderingSer
             total += 1;
           }
         }
-        return total;
+        return total + 1; // Plus one for signature.
       }
 
       function countAnswered(model) {
+        console.log(model);
         var k, count = 0;
         for (k in model) {
           if (model.hasOwnProperty(k)) {
