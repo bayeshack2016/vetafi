@@ -31,8 +31,8 @@
           li(ng-repeat="address in claim.addresses")
             div
               b {{address.name}}
-            div {{address.line1}} {{address.line2}}
-            div {{address.city}}, {{address.state}}, {{address.country}}, {{address.zip}}
+            div {{address.street1}} {{address.street2}}
+            div {{address.city}}, {{address.province}}, {{address.country}}, {{address.postal}}
 
     div.content.forms
       h4.content-header.underline Forms:
