@@ -11,6 +11,7 @@ describe('UserController', function() {
   var targetUser;
   var server;
   var testSession;
+  var csrfToken;
 
   before(function () {
     server = require('../app');
@@ -51,7 +52,7 @@ describe('UserController', function() {
     testSession.get('/')
       .expect(200)
       .end(function(err, res) {
-        var csrfToken = csrfTestUtils.getCsrf(res);
+        csrfToken = csrfTestUtils.getCsrf(res);
         testSession.post('/api/auth/login')
           .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
           .expect(http.MOVED_TEMPORARILY, done);
@@ -65,15 +66,10 @@ describe('UserController', function() {
   });
 
   it('Delete user endpoint - success', function (done) {
-    testSession.get('/')
-      .expect(200)
-      .end(function(err, res) {
-        var csrfToken = csrfTestUtils.getCsrf(res);
-        testSession
-          .del('/api/user')
-          .set('X-XSRF-TOKEN', csrfToken)
-          .expect(http.OK, done);
-      });
+    testSession
+      .del('/api/user')
+      .set('X-XSRF-TOKEN', csrfToken)
+      .expect(http.OK, done);
   });
 
   xit('Modify user endpoint', function(done) {
