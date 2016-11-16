@@ -15,6 +15,7 @@ var cache = require('gulp-cache');
 var sourcemaps = require('gulp-sourcemaps');
 var fs = require('fs');
 var eslint = require('gulp-eslint');
+var bannerConfig = require('../config/bannerConfig');
 
 var release = args.release ? true : false;
 if (release) {
@@ -44,7 +45,12 @@ gulp.task('stylus', function () {
 
 gulp.task('pug', function () {
   return gulp.src('src/**/*.pug')
-    .pipe(pug())
+    .pipe(pug({
+      data: {
+        showBanner: bannerConfig.showBanner,
+        bannerMessage: bannerConfig.bannerMessage
+      }
+    }))
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
