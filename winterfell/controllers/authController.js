@@ -93,16 +93,15 @@ module.exports = function (app) {
   // Endpoint to authenticate logins and begin session
   app.post('/api/auth/login',
     passport.authenticate('local', {
-      successRedirect: '/',
       failureRedirect: '/login?error=EAUTHFAILED'
       }),
     function(req, res) {
-    if (req.user) {
-      req.session.key = req.body.email;
-      req.session.userId = req.user._id;
-      var extUserId = req.user.externalId;
-      res.status(http.OK).send({userId: extUserId, redirect: '/'});
-    }
+      if (req.user) {
+        req.session.key = req.body.email;
+        req.session.userId = req.user._id;
+        var extUserId = req.user.externalId;
+        res.status(http.MOVED_TEMPORARILY).send({userId: extUserId, redirect: '/'});
+      }
   });
 
   /*

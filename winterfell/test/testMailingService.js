@@ -51,7 +51,6 @@ var testUser = {
 };
 
 describe('Mailing', function () {
-    this.timeout(10000);
     var server;
     var service;
     var testUserInstance;
