@@ -26,10 +26,14 @@ module.exports = function (app) {
       }
       if (user) {
         Claim.find({userId: user._id}).exec(function(err, claims) {
-          var extClaims = _.map(claims, function(c) {
-            return c;
+          var claimIds = _.map(claims, function(c) {
+            return c._id;
           });
-          res.status(http.OK).send({claims: extClaims});
+          Form.find({
+            claim: { $in: claimIds }
+          }, function(err, formsMap) {
+            res.status(http.OK).send({claims: claims, formsMap: formsMap});
+          });
         });
       } else {
         res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});

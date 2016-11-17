@@ -101,12 +101,22 @@ describe('ClaimController', function() {
     });
   });
 
+  it('Get claims for user (no claims) - success', function(done) {
+    testSession
+      .get('/api/claims/')
+      .expect(http.OK)
+      .end(function (err, res) {
+        res.body.claims.length.should.equal(0);
+        done();
+      });
+  });
+
   it('Get claims for user - success', function(done) {
     var claimsArr = [
       {
         userId: targetUser._id,
         externalId: uuid.v4(),
-        state: Claim.State.INCOMPLETE
+        state: Claim.State.SUBMITTED
       },
       {
         userId: targetUser._id,
@@ -116,11 +126,11 @@ describe('ClaimController', function() {
     ];
     Claim.create(claimsArr, function() {
       testSession
-        .get('/api/claim/' + claimsArr[0].externalId)
-        .expect(http.OK, function() {
-          testSession
-            .get('/api/claim/' + claimsArr[1].externalId)
-            .expect(http.OK, done);
+        .get('/api/claims/')
+        .expect(http.OK)
+        .end(function (err, res) {
+          res.body.claims.length.should.equal(2);
+          done();
         });
     });
   });
