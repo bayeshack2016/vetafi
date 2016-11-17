@@ -76,11 +76,17 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     discardClaim: function(extClaimId) {
       return httpDelete("/claim/" + extClaimId);
     },
+    getClaim: function(extClaimId) {
+      return httpGet("/claim/" + extClaimId);
+    },
     getFormsForClaim: function(extClaimId) {
       return httpGet("/claim/" + extClaimId + "/forms");
     },
     saveForm: function(claimId, formId, data) {
       return httpPost('/save/' + claimId + '/' + formId, data);
+    },
+    downloadForm: function(claimId, formId) {
+      return httpGet("/claim/" + claimId + "/form/" + formId + "/pdf");
     }
   };
 }]);
