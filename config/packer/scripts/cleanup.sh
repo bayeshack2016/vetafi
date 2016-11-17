@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 
 # Removing leftover leases and persistent rules
 echo "cleaning up dhcp leases"
