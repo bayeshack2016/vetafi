@@ -6,6 +6,8 @@ block idmeText
   div.txt-container Signup with Id.Me
 block emailText
   div.txt-container Signup with your email
+block linkToOtherPage
+  a(href="/login") Already have an account?
 
 block inputs
   form(action='/api/auth/signup' onsubmit='return validateForm()' method='post')
@@ -14,4 +16,3 @@ block inputs
     input.confirm-pwd(placeholder='Confirm Password', type='password')
     input(type='hidden' name='_csrf' value=csrf)
     input.submit(value='SIGN UP', type='submit')
-  a(href="/login") Already have an account?

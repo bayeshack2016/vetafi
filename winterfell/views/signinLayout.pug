@@ -26,10 +26,12 @@ html(lang="en")
               div.icon-container
                 div.fb-icon
               block fbText
-            button.idme-btn
-              div.icon-container
-                div.idme-icon
-              block idmeText
+
+            a(href=idmeUrl)
+              button.idme-btn
+                div.icon-container
+                  div.idme-icon
+                block idmeText
 
             p.divider - OR -
 
@@ -37,6 +39,8 @@ html(lang="en")
               div.icon-container
                 div.email-icon
               block emailText
+
+            block linkToOtherPage
 
           div.screen.inputs
             block inputs
