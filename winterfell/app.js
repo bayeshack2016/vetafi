@@ -23,7 +23,8 @@ var biscuit = new Biscuit(app);
 
 function setupBiscuitKey(keyName) {
   var yamlKey = Constants.biscuitKeys[keyName];
-  var secret = biscuit.get(environment + '::' + yamlKey);
+  // var secret = biscuit.get(environment + '::' + yamlKey);
+  var secret = 'asdf::' + yamlKey;
   app.set(keyName, secret);
 }
 setupBiscuitKey(Constants.KEY_LOB_API);

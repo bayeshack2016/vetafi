@@ -1,9 +1,9 @@
 'use strict';
-var should = require('should');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var User = require('../models/user');
 var session = require('supertest-session');
+var should = require('should');
+var User = require('../models/user');
 var uuid = require('uuid');
 
 describe('UserController', function() {
@@ -46,7 +46,7 @@ describe('UserController', function() {
       .expect(http.NOT_FOUND, done);
   });
 
-  it('should sign in', function (done) {
+  it('Should sign in', function (done) {
     testSession.post('/api/auth/login')
       .send({email: targetUser.email, password: targetUser.password})
       .expect(200, done);
@@ -61,8 +61,25 @@ describe('UserController', function() {
   it('Post user endpoint - success', function(done) {
     testSession
         .post('/api/user')
-        .send({firstname: 'Mister', lastname: 'Moose'})
-        .expect(http.OK, done);
+        .send({
+          firstname: 'Mister',
+          lastname: 'Moosey',
+          email: 'sirmoosealot@test.com',
+          contact: {
+            phoneNumber: '123-432-5432',
+            address: { street1: 'Some Street' }
+          }
+        })
+        .expect(http.OK, function() {
+          User.findOne({email: 'sirmoosealot@test.com'}, function(err, user) {
+            user.firstname.should.equal('Mister');
+            user.lastname.should.equal('Moosey');
+            user.contact.phoneNumber.should.equal('123-432-5432');
+            user.contact.address.street1.should.equal('Some Street');
+            user.contact.address.street2.should.equal('');
+            done();
+          })
+        });
   });
 
   it('Delete user endpoint - success', function(done) {
