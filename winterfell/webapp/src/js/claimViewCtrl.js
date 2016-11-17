@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('claimViewCtrl', ['$scope', '$stateParams', 'net', 'claimService', 'Profile', 'formTemplateService', 'claim', 'claimForms', 'utils',
-  function($scope, $stateParams, net, claimService, Profile, formTemplateService, claim, claimForms, utils) {
+app.controller('claimViewCtrl', ['$scope', '$stateParams', 'net', 'claimService', 'Profile', 'formTemplateService', 'claim', 'claimForms', '$filter',
+  function($scope, $stateParams, net, claimService, Profile, formTemplateService, claim, claimForms, $filter) {
     $scope.user = Profile.user.user;
     $scope.claim = claim.claim;
     $scope.claim.forms = claimForms;
@@ -15,7 +15,7 @@ app.controller('claimViewCtrl', ['$scope', '$stateParams', 'net', 'claimService'
         form.name = formTemplateService[form.key].vfi.title;
       });
 
-      $scope.claim.date = utils.formatServerDate($scope.claim.stateUpdatedAt);
+      $scope.claim.date = $filter('date')(new Date($scope.claim.stateUpdatedAt), 'MM/dd/yyyy');
     }
 
     init();

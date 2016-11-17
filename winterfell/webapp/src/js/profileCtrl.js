@@ -1,7 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', '$uibModal', '$state', 'userClaims', 'utils',
-  function($scope, $location, $window, Profile, claimService, net, $uibModal, $state, userClaims, utils) {
+app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', '$uibModal', '$state', 'userClaims', '$filter',
+  function($scope, $location, $window, Profile, claimService, net, $uibModal, $state, userClaims, $filter) {
     $scope.user = Profile.user.user;
     $scope.claims = userClaims.claims;
 
@@ -17,7 +17,7 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
       for (var i = 0; i < $scope.claims.length; i++) {
         $scope.claims[i].id = $scope.claims[i].externalId; // todo, server shouldn't be sending rowId and externalId. We only reference claims through claim.id
         $scope.claims[i].header = createHeaderString($scope.claims[i]);
-        $scope.claims[i].date = utils.formatServerDate($scope.claims[i].stateUpdatedAt);
+        $scope.claims[i].date = $filter('date')(new Date($scope.claims[i].stateUpdatedAt), 'MM/dd/yyyy');
       }
     }
     init();
