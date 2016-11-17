@@ -10,6 +10,7 @@ var UserService = require('./../services/userService');
 var session = require('supertest-session');
 var uuid = require('uuid');
 var StringDecoder = require('string_decoder').StringDecoder;
+var csrfTestUtils = require('./csrfTestUtils');
 
 var testReturnAddess = {
   name: "Name",
@@ -35,6 +36,7 @@ describe('ClaimController', function() {
   var targetUser;
   var server;
   var testSession;
+  var csrfToken;
 
   before(function(done) {
     server = require('../app');
@@ -67,20 +69,27 @@ describe('ClaimController', function() {
   });
 
   it('should sign in', function (done) {
-    testSession.post('/api/auth/login')
-      .send({email: targetUser.email, password: targetUser.password})
-      .expect(200, done);
+    testSession.get('/')
+      .expect(200)
+      .end(function(err, res) {
+        csrfToken = csrfTestUtils.getCsrf(res);
+        testSession.post('/api/auth/login')
+          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
+          .expect(http.MOVED_TEMPORARILY, done);
+      });
   });
 
   it('Create claim for user - success', function(done) {
     testSession
       .post('/api/claims/create')
+      .set('X-XSRF-TOKEN', csrfToken)
       .expect(http.CREATED, done);
   });
 
   it('Get claim - claim dne', function(done) {
     testSession
       .post('/api/claims/create')
+      .set('X-XSRF-TOKEN', csrfToken)
       .expect(http.OK, function() {
         testSession
           .get('/api/claim/qwer')
@@ -134,6 +143,7 @@ describe('ClaimController', function() {
     Claim.create(claim, function() {
       testSession
         .post('/api/claim/qwer/submit')
+        .set('X-XSRF-TOKEN', csrfToken)
         .expect(http.NOT_FOUND, done);
     });
   });
@@ -147,6 +157,7 @@ describe('ClaimController', function() {
     Claim.create(claim, function () {
       testSession
         .post('/api/claim/' + claim.externalId + '/submit')
+        .set('X-XSRF-TOKEN', csrfToken)
         .send({
           returnAddress: testReturnAddess,
           toAddress: testDestinationAddress
@@ -169,6 +180,7 @@ describe('ClaimController', function() {
     Claim.create(claim, function() {
       testSession
         .del('/api/claim/qwer')
+        .set('X-XSRF-TOKEN', csrfToken)
         .expect(http.NOT_FOUND, done);
     });
   });
@@ -182,13 +194,14 @@ describe('ClaimController', function() {
     Claim.create(claim, function() {
       testSession
         .del('/api/claim/' + claim.externalId)
+        .set('X-XSRF-TOKEN', csrfToken)
         .expect(http.OK, done);
     });
   });
 });
 
 describe('SaveClaimController', function () {
-  var testSession, server, targetUser, targetClaim;
+  var testSession, server, targetUser, targetClaim, csrfToken;
 
   before(function (done) {
     this.timeout(20000);
@@ -232,21 +245,27 @@ describe('SaveClaimController', function () {
     });
   });
 
-  it('should 404 before sign in', function (done) {
+  it('should 403 before sign in', function (done) {
     testSession
       .post('/api/save/1/1')
-      .expect(404, done);
+      .expect(http.FORBIDDEN, done);
   });
 
   it('should sign in', function (done) {
-    testSession.post('/api/auth/login')
-      .send({email: targetUser.email, password: targetUser.password})
-      .expect(200, done);
+    testSession.get('/')
+      .expect(200)
+      .end(function(err, res) {
+        csrfToken = csrfTestUtils.getCsrf(res);
+        testSession.post('/api/auth/login')
+          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
+          .expect(http.MOVED_TEMPORARILY, done);
+      });
   });
 
   it('Should save the claim form after signin', function(done) {
     testSession
       .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .set('X-XSRF-TOKEN', csrfToken)
       .send({key1: 'value1', key2: 'value2'}) // TODO what form do we want this in?
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
@@ -261,13 +280,14 @@ describe('SaveClaimController', function () {
   it('Should correctly calculate progress after save', function(done) {
     testSession
       .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .set('X-XSRF-TOKEN', csrfToken)
       .send({filing_for_self: false})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
           should.exist(doc);
           doc.answered.should.be.exactly(1);
-          doc.answerable.should.be.exactly(26);
+          doc.answerable.should.be.exactly(27);
           done();
         })
       })
@@ -276,13 +296,14 @@ describe('SaveClaimController', function () {
   it('Should correctly calculate progress after save with hidden questions', function(done) {
     testSession
       .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .set('X-XSRF-TOKEN', csrfToken)
       .send({filing_for_self: true})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
           should.exist(doc);
           doc.answered.should.be.exactly(1);
-          doc.answerable.should.be.exactly(21);
+          doc.answerable.should.be.exactly(22);
           done();
         })
       })
@@ -291,6 +312,7 @@ describe('SaveClaimController', function () {
   it('Should render the form after save', function(done) {
     testSession
       .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .set('X-XSRF-TOKEN', csrfToken)
       .send({})
       .expect(201, function() {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
@@ -306,6 +328,7 @@ describe('SaveClaimController', function () {
   it('Should update the user after save', function(done) {
     testSession
       .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .set('X-XSRF-TOKEN', csrfToken)
       .send({
         claimant_first_name: 'jeff',
         veteran_first_name: 'joe',
