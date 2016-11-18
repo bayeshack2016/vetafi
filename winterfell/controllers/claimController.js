@@ -315,7 +315,7 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/api/claim/:claimId/form/:formName/pdf', mw, function (req, res) {
+  app.get('/claim/:claimId/form/:formName/pdf', mw, function (req, res) {
     var promise = Claim.findOne(
       {externalId: req.params.claimId}
     );
