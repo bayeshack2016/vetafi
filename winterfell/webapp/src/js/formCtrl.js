@@ -27,9 +27,6 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         save().then(
           function success(response) {
             $window.location.href = '/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf';
-          },
-          function failure(response) {
-            console.error(response);
           }
         );
       };
