@@ -21,8 +21,46 @@ module.exports = function (app) {
   });
 
   // Modify a user's information - find by externalId
-  app.post('/api/user/:extUserId/modify', mw, function (req, res) {
-    res.sendStatus(http.OK);
+  // Can edit the following:
+  // firstname, middlename, lastname, email
+  // contact.address, contact.phoneNumber
+  app.post('/api/user/', mw, function (req, res) {
+    var body = req.body || {};
+    var contact = body.contact || {};
+    var address = contact.address || {};
+
+    var updateUserInfo = {
+      firstname: body.firstname || '',
+      middlename: body.middlename || '',
+      lastname: body.lastname || '',
+      email: body.email || '',
+      contact: {
+        phoneNumber: contact.phoneNumber || '',
+        address: {
+          name: address.name || '',
+          street1: address.street1 || '',
+          street2: address.street2 || '',
+          city: address.city || '',
+          province: address.province || '',
+          country: address.country || '',
+          postal: address.postal || ''
+        }
+      }
+    };
+
+    User.findById(req.session.userId).exec(function(err, user) {
+      if (user) {
+        UserService.editUser(user._id, updateUserInfo, function(err, user) {
+          if (user) {
+            res.status(http.OK).send({user: User.externalize(user)});
+          } else {
+            res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
+          }
+        });
+      } else {
+        res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
+      }
+    });
   });
 
   // Set a user account to INACTIVE - find by externalId

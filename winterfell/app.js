@@ -92,4 +92,3 @@ if (environment === Constants.environment.PROD) {
 
 server.app = app;
 module.exports = server;
-

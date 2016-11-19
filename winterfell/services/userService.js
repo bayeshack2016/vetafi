@@ -54,6 +54,13 @@ module.exports.createNewUser = function(user, callback) {
   return null;
 };
 
+module.exports.editUser = function(userId, editInfo, callback) {
+  var query = { _id: userId };
+  User.update(query, editInfo, { multi: true, upsert:true }, function() {
+    User.findById(userId).exec(callback);
+  });
+};
+
 module.exports.setUserState = function(userId, state, callback) {
   var query = { _id: userId };
   var update = { state: state };

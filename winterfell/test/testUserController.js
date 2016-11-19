@@ -1,9 +1,9 @@
 'use strict';
-var should = require('should');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
-var User = require('../models/user');
 var session = require('supertest-session');
+var should = require('should');
+var User = require('../models/user');
 var uuid = require('uuid');
 var csrfTestUtils = require('./csrfTestUtils');
 
@@ -48,7 +48,7 @@ describe('UserController', function() {
       .expect(http.FORBIDDEN, done);
   });
 
-  it('should sign in', function (done) {
+  it('Should sign in', function (done) {
     testSession.get('/')
       .expect(200)
       .end(function(err, res) {
@@ -65,13 +65,35 @@ describe('UserController', function() {
       .expect(http.OK, done);
   });
 
-  it('Delete user endpoint - success', function (done) {
+  it('Post user endpoint - success', function(done) {
+    testSession
+        .post('/api/user')
+        .set('X-XSRF-TOKEN', csrfToken)
+        .send({
+          firstname: 'Mister',
+          lastname: 'Moosey',
+          email: 'sirmoosealot@test.com',
+          contact: {
+            phoneNumber: '123-432-5432',
+            address: { street1: 'Some Street' }
+          }
+        })
+        .expect(http.OK, function() {
+          User.findOne({email: 'sirmoosealot@test.com'}, function(err, user) {
+            user.firstname.should.equal('Mister');
+            user.lastname.should.equal('Moosey');
+            user.contact.phoneNumber.should.equal('123-432-5432');
+            user.contact.address.street1.should.equal('Some Street');
+            user.contact.address.street2.should.equal('');
+            done();
+          })
+        });
+  });
+
+  it('Delete user endpoint - success', function(done) {
     testSession
       .del('/api/user')
       .set('X-XSRF-TOKEN', csrfToken)
       .expect(http.OK, done);
-  });
-
-  xit('Modify user endpoint', function(done) {
   });
 });

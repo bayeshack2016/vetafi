@@ -57,6 +57,62 @@ describe('UserService', function() {
     });
   });
 
+  it('Edit existing user (email to something else)', function(done) {
+    UserService.createNewUser(userInput, function() {
+      User.findOne({email: 'moose@test.com'}).exec(function(err, user) {
+        user.email.should.equal('moose@test.com');
+        UserService.editUser(user._id, {email: 'moosey@test.com'}, function(err, updatedUser) {
+          updatedUser.email.should.equal('moosey@test.com');
+          done();
+        });
+      });
+    });
+  });
+
+  it('Edit existing user (multiple values)', function(done) {
+    var editInfo = {
+      email: 'moosey@test.com',
+      firstname: 'Moose',
+      lastname: 'Hsu',
+      contact: {
+        phoneNumber: '222-444-5432',
+        address: {
+          name: 'New Home',
+          street1: '123 Street',
+          street2: ''
+        }
+      }
+    };
+
+    UserService.createNewUser(userInput, function() {
+      User.findOne({email: 'moose@test.com'}).exec(function(err, user) {
+        user.email.should.equal('moose@test.com');
+        UserService.editUser(user._id, editInfo, function(err, updatedUser) {
+          updatedUser.email.should.equal('moosey@test.com');
+          updatedUser.firstname.should.equal('Moose');
+          updatedUser.lastname.should.equal('Hsu');
+          updatedUser.contact.phoneNumber.should.equal('222-444-5432');
+          updatedUser.contact.address.name.should.equal('New Home');
+          updatedUser.contact.address.street1.should.equal('123 Street');
+          updatedUser.contact.address.street2.should.equal('');
+          done();
+        });
+      });
+    });
+  });
+
+  it('Edit existing user (remove user)', function(done) {
+    UserService.createNewUser(userInput, function() {
+      User.findOne({email: 'moose@test.com'}).exec(function(err, user) {
+        user.email.should.equal('moose@test.com');
+        UserService.editUser(user._id, {email: ''}, function(err, updatedUser) {
+          updatedUser.email.should.equal('');
+          done();
+        });
+      });
+    });
+  });
+
   it('Set user state', function(done) {
     UserService.createNewUser(userInput, function() {
       User.findOne({email: 'moose@test.com'}).exec(function(err, user) {
