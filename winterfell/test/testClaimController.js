@@ -351,7 +351,7 @@ describe('SaveClaimController', function () {
 
   it('Should retrieve the rendered form after save', function(done) {
     testSession
-      .get('/api/claim/' + targetClaim.externalId + '/form/VBA-21-0966-ARE/pdf')
+      .get('/claim/' + targetClaim.externalId + '/form/VBA-21-0966-ARE/pdf')
       .expect(200)
       .end(function(err, res) {
         res.text.should.startWith('%PDF');
