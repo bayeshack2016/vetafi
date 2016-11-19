@@ -4,10 +4,9 @@
 'use strict';
 var app = angular.module('vetafiApp');
 
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService',
-    'formService', '$stateParams', '$state', 'userValues', '$window',
-    function ($scope, $filter, $rootScope, formTemplateService, formService,
-              $stateParams, $state, userValues, $window) {
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService', '$stateParams', '$state', 'userValues', '$window', 'net',
+    function ($scope, $filter, $rootScope, formTemplateService,
+              $stateParams, $state, userValues, $window, net) {
 
       $scope.title = formTemplateService[$stateParams.formId].unofficialTitle;
       $scope.description = formTemplateService[$stateParams.formId].unofficialDescription;
@@ -25,13 +24,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       }
 
       $scope.onRender = function () {
-        save(
-          function(err, response) {
-            if (err) {
-              console.error(err);
-              return;
-            }
-
+        save().then(
+          function(response) {
             $window.open('/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf');
           }
         );
@@ -39,11 +33,11 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
 
       $scope.onSubmit = function () {
         console.log('onSubmit');
-          save(function (err, response) {
-            console.log(err, response);
-            console.log('onSubmit transition');
+        save().then(
+          function (response) {
             $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
-              function success() {},
+              function success() {
+              },
               function failure(err) {
                 console.error(err);
               }
@@ -52,13 +46,13 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       };
 
       $scope.onSave = function () {
-        save(function (err, response) {
-          console.log(err, response);
+        save().then(function (response) {
+          console.log(response);
         });
       };
 
-      function save(callback) {
-        formService.save($stateParams.claimId, $stateParams.formId, $scope.model, callback);
+      function save() {
+        return net.saveForm($stateParams.claimId, $stateParams.formId, $scope.model);
       }
 
       $scope.model = userValues.values.values; // TODO(jeff) fix extra attributes messing up completion percentage
@@ -84,10 +78,11 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
             total += 1;
           }
         }
-        return total;
+        return total + 1; // Plus one for signature.
       }
 
       function countAnswered(model) {
+        console.log(model);
         var k, count = 0;
         for (k in model) {
           if (model.hasOwnProperty(k)) {

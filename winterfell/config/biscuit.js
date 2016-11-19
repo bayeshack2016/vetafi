@@ -7,6 +7,6 @@ var yamlFileLocations = {};
 
 yamlFileLocations[environment.TEST] = '/vagrant/config/biscuit/test_secrets.yaml';
 yamlFileLocations[environment.LOCAL] = '/vagrant/config/biscuit/secrets.yaml';
-yamlFileLocations[environment.PROD] = '/vagrant/config/biscuit/secrets.yaml';
+yamlFileLocations[environment.PROD] = '../config/biscuit/secrets.yaml';
 
 module.exports = yamlFileLocations;

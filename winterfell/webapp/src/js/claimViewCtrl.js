@@ -1,36 +1,23 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('claimViewCtrl', ['$scope', '$stateParams', 'claimService', 'net', 'ngDialog',
-  function($scope, $stateParams, claimService, net) {
+app.controller('claimViewCtrl', ['$scope', '$stateParams', 'net', 'claimService', 'Profile', 'formTemplateService', 'claim', 'claimForms', '$filter',
+  function($scope, $stateParams, net, claimService, Profile, formTemplateService, claim, claimForms, $filter) {
+    $scope.user = Profile.user.user;
+    $scope.claim = claim.claim;
+    $scope.claim.forms = claimForms;
     $scope.claimId = $stateParams.claimId;
-    $scope.claim = {};
+    $scope.isEmailCollapsed = false;
+    $scope.isAddressCollapsed = false;
 
-    function updateClaim(claim) {
-      if (!claim) {
-        console.log('claim undefined ' + claim);
-        return;
-      }
-      if (claim.state == 'incomplete') {
-        claim.title = 'Last modified on ' + claim.updatedAt;
-        claim.subtitle = 'This claim has not been submitted yet.';
-      } else if (claim.state == 'submitted') {
-        claim.title = 'Submitted on ' + claim.updatedAt;
-        claim.subtitle = 'This claim is still being processed by Veteran Affairs.';
-      } else if (claim.state == 'processed') {
-        claim.title = 'Processed on ' + claim.updatedAt;
-        claim.subtitle = 'The Veteran Affairs have finished processing this claim.';
-      }
+    function init() {
+      // Initialiaze form array
+      _.forEach($scope.claim.forms, function(form) {
+        form.name = formTemplateService[form.key].vfi.title;
+      });
+
+      $scope.claim.date = $filter('date')(new Date($scope.claim.stateUpdatedAt), 'MM/dd/yyyy');
     }
 
-    //
-    // Watchers
-    //
-    $scope.$watch(function () {
-      return claimService.userClaims;
-    }, function (newVal) {
-      $scope.claim = _.find(claimService.userClaims, {id: $scope.claimId});
-      updateClaim($scope.claim);
-    });
-
+    init();
   }
 ]);

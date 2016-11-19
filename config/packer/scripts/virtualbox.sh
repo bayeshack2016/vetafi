@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euxo pipefail
 
 # Bail if we are not running inside VirtualBox.
 if [[ `facter virtual` != "virtualbox" ]]; then

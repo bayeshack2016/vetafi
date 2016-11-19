@@ -1,8 +1,9 @@
 'use strict';
 var _ = require('lodash');
-var uuid = require('uuid');
+var addressSchema = require('./addressSchema');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var uuid = require('uuid');
 
 var socialUserSchema = new Schema({
   type: String,                   // SocialUser.Type
@@ -11,16 +12,6 @@ var socialUserSchema = new Schema({
   stateUpdatedAt: Date,
   createdAt: Date                 // When social was linked to this user
 });
-
-var addressSchema = new Schema({
-  name: String,                   // Name of Address (Home) (optional)
-  street1: String,                // Street name & number
-  street2: String,                // Secondary Address (Suite, Apt, Room, P.O.)
-  city: String,                   // City
-  province: String,               // Province or U.S. State
-  postal: String,                 // PostalCode or U.S. ZipCode
-  country: String                 // Country
-}, {minimize: false, timestamps: false});
 
 var contactSchema = new Schema({
   phoneNumber: String,
@@ -83,5 +74,5 @@ UserSchema.statics.externalize = function(user) {
 
 var User = mongoose.model('User', UserSchema);
 module.exports = User;
-module.exports.Scema = UserSchema;
+module.exports.Schema = UserSchema;
 module.exports.State = State;

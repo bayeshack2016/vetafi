@@ -128,7 +128,15 @@ module.exports = function (app) {
 
     promise = promise.then(function(letter) {
       that.letter = letter;
-      return Claim.update({_id: that.claim._id}, {state: Claim.State.SUBMITTED})
+      var query = { _id: that.claim._id };
+      var update = {
+        state: Claim.State.SUBMITTED,
+        sentTo: {
+          emails: req.body.emails || [],
+          addresses: req.body.addresses || []
+        }
+      };
+      return Claim.update(query, update, {upsert: true});
     });
 
     promise.done(function success(claim) {

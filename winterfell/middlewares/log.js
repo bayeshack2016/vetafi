@@ -42,6 +42,22 @@ module.exports.console = function(msg) {
   console.log(msg);
 };
 
+module.exports.info = function(msg) {
+  mainLog.info(msg);
+};
+
+module.exports.debug = function(msg) {
+  mainLog.debug(msg);
+};
+
+module.exports.warn = function(msg) {
+  mainLog.warn(msg);
+};
+
+module.exports.error = function(msg) {
+  mainLog.error(msg);
+};
+
 /*
  * Helper methods
  */

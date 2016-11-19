@@ -5,11 +5,13 @@ var should = require('should');
 var session = require('supertest-session');
 var uuid = require('uuid');
 var User = require('../models/user');
+var csrfTestUtils = require('./csrfTestUtils');
 
 describe('AuthController', function() {
   var targetUser;
   var server;
   var testSession;
+  var csrfToken;
 
   before(function(done) {
     server = require('../app');
@@ -37,19 +39,26 @@ describe('AuthController', function() {
   });
 
   it('Log in success', function (done) {
-    testSession.post('/api/auth/login')
-      .send({email: targetUser.email, password: targetUser.password})
-      .expect(http.OK, done);
+    testSession.get('/')
+      .expect(200)
+      .end(function(err, res) {
+        csrfToken = csrfTestUtils.getCsrf(res);
+        testSession.post('/api/auth/login')
+          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
+          .expect(http.MOVED_TEMPORARILY, done);
+      });
   });
 
   it('Change password - old password mismatch', function(done) {
     testSession.post('/api/auth/password')
+      .set('X-XSRF-TOKEN', csrfToken)
       .send({old: 'wrong-pwd', new: 'new-pwd'})
       .expect(http.BAD_REQUEST, done);
   });
 
   it('Change password - success', function(done) {
     testSession.post('/api/auth/password')
+      .set('X-XSRF-TOKEN', csrfToken)
       .send({old: 'qwerasdf', new: 'new-pwd'})
       .expect(http.NO_CONTENT, done);
   });

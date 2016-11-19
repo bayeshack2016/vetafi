@@ -55,7 +55,20 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     url: '/profile',
     templateUrl: 'templates/profile.html',
     controller: 'profileCtrl',
-    abstract: true
+    abstract: true,
+    resolve: {
+      userClaims: ['net', '$q', function(net, $q) {
+        var deferred = $q.defer();
+        net.getClaimsForUser().then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+        return deferred.promise;
+      }]
+    }
   });
 
   $stateProvider.state({
@@ -98,7 +111,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     templateUrl: 'templates/claimSelectForms.html',
     controller: 'claimSelectFormsCtrl',
     resolve: {
-      forms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+      claimForms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
         var deferred = $q.defer();
 
         net.getFormsForClaim($stateParams.claimId).then(
@@ -160,7 +173,31 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     name: 'root.claimview',
     url: '/claim/{claimId}',
     templateUrl: 'templates/claimView.html',
-    controller: 'claimViewCtrl'
+    controller: 'claimViewCtrl',
+    resolve: {
+      claim: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+        var deferred = $q.defer();
+        net.getClaim($stateParams.claimId).then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+        return deferred.promise;
+      }],
+      claimForms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+        var deferred = $q.defer();
+        net.getFormsForClaim($stateParams.claimId).then(
+          function success(res) {
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+        return deferred.promise;
+      }]
+    }
   });
 
   $stateProvider.state({

@@ -29,7 +29,10 @@ module.exports = ClaimService;
 function calculateProgress(formId, data) {
   var evaluate, i;
   var template = formlyFields[formId];
-  var output = {answerable: 0, answered: _.size(data)};
+  var output = {
+    answerable: 1, // Signature always answerable
+    answered: _.size(data)
+  };
 
   if (!template) {
     return output;
@@ -52,8 +55,8 @@ function calculateProgress(formId, data) {
 
 module.exports.calculateProgress = calculateProgress;
 
-module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
-  return Claim.findOne({ userId: userId, state: Claim.State.INCOMPLETE }).exec(function(err, fileClaim) {
+module.exports.findIncompleteClaimOrCreate = function (userId, forms, callback) {
+  return Claim.findOne({userId: userId, state: Claim.State.INCOMPLETE}).exec(function (err, fileClaim) {
     if (err) {
       callback(err, null);
     } else if (_.isEmpty(fileClaim)) {
@@ -65,10 +68,10 @@ module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
         // Create all the forms and don't call the callback
         // until this is done by using a promise chain.
         var promise = Q();
-        forms.forEach(function(form) {
+        forms.forEach(function (form) {
           console.log("Creating form " + form);
           var progress = calculateProgress(form, {});
-          promise = promise.then(function() {
+          promise = promise.then(function () {
             return Form.create({
               key: form,
               user: userId,
@@ -79,10 +82,10 @@ module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
             });
           })
         });
-        promise.then(function() {
+        promise.then(function () {
           callback(null, claim);
         });
-        promise.catch(function() {
+        promise.catch(function () {
           callback(err, null);
         });
       })
@@ -92,16 +95,8 @@ module.exports.findIncompleteClaimOrCreate = function(userId, forms, callback) {
   });
 };
 
-module.exports.addForm = function(claimId, file, callbacks) {
-  console.log('[addFileToClaim] not implemented');
-};
-
-module.exports.removeForm = function(claimId, file, callbacks) {
-  console.log('[removeFormFromClaim] not implemented');
-};
-
-module.exports.setClaimState = function(claimId, state, callback) {
-  var query = { _id: claimId };
-  var update = { state: state };
+module.exports.setClaimState = function (claimId, state, callback) {
+  var query = {_id: claimId};
+  var update = {state: state};
   return Claim.update(query, update, callback);
 };

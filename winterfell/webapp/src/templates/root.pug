@@ -1,3 +1,6 @@
+if showBanner
+    div#banner
+        h5 #{bannerMessage}
 div#header
     div#header-content
         a.vfi-header-logo-wrapper(ui-sref="root.home")
@@ -19,7 +22,7 @@ div#header
                 outside-if-not="menu-btn"
                 ng-click="onToggleMenu()")
                     li(ui-sref="root.profile.general") My Profile
-                    a(href="/auth/logout")
+                    a(href="/logout")
                         li Log out
 div.main-view-wrapper
    ui-view

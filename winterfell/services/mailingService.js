@@ -1,4 +1,4 @@
-var lob = require('Lob');
+var lob = require('lob');
 var Constants = require('./../utils/constants');
 var Form = require('./../models/form');
 var Letter = require('./../models/letter');

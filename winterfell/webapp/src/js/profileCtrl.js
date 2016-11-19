@@ -1,30 +1,9 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', '$uibModal', '$state',
-  function($scope, $location, $window, Profile, claimService, net, $uibModal, $state) {
-
+app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', '$uibModal', '$state', 'userClaims', '$filter',
+  function($scope, $location, $window, Profile, claimService, net, $uibModal, $state, userClaims, $filter) {
     $scope.user = Profile.user.user;
-    $scope.claims = []; // list of user's claims
-    // Every claim has the following:
-    // * claimId
-    // * date of submission or last modified
-    // * claim state (incomplete, submitted)
-    // * list of formIds
-
-    // $scope.claims = [ // TODO: have server return lastModifiedAt date and list of formIds per claim
-    //   {
-    //     id: '1234',
-    //     date: '3/16/2016',
-    //     state: 'incomplete',
-    //     formIds: ['VBA-21-0966-ARE']
-    //   },
-    //   {
-    //     id: '5678',
-    //     date: '3/17/2015',
-    //     state: 'submitted',
-    //     formIds: ['VBA-21-0966-ARE', 'VBA-21-0967-ARE']
-    //   }
-    // ];
+    $scope.claims = userClaims.claims;
 
     function createHeaderString(claim) {
       if (claim.state == 'incomplete') {
@@ -36,7 +15,9 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
 
     function init() {
       for (var i = 0; i < $scope.claims.length; i++) {
+        $scope.claims[i].id = $scope.claims[i].externalId; // todo, server shouldn't be sending rowId and externalId. We only reference claims through claim.id
         $scope.claims[i].header = createHeaderString($scope.claims[i]);
+        $scope.claims[i].date = $filter('date')(new Date($scope.claims[i].stateUpdatedAt), 'MM/dd/yyyy');
       }
     }
     init();

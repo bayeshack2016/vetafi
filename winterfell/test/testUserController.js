@@ -5,11 +5,13 @@ var session = require('supertest-session');
 var should = require('should');
 var User = require('../models/user');
 var uuid = require('uuid');
+var csrfTestUtils = require('./csrfTestUtils');
 
 describe('UserController', function() {
   var targetUser;
   var server;
   var testSession;
+  var csrfToken;
 
   before(function () {
     server = require('../app');
@@ -43,24 +45,30 @@ describe('UserController', function() {
   it('Delete user endpoint - 404 if not authed', function(done) {
     testSession
       .del('/api/user')
-      .expect(http.NOT_FOUND, done);
+      .expect(http.FORBIDDEN, done);
   });
 
   it('Should sign in', function (done) {
-    testSession.post('/api/auth/login')
-      .send({email: targetUser.email, password: targetUser.password})
-      .expect(200, done);
+    testSession.get('/')
+      .expect(200)
+      .end(function(err, res) {
+        csrfToken = csrfTestUtils.getCsrf(res);
+        testSession.post('/api/auth/login')
+          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
+          .expect(http.MOVED_TEMPORARILY, done);
+      });
   });
 
-  it('Get user endpoint - success', function(done) {
+  it('Get user endpoint - success', function (done) {
     testSession
-        .get('/api/user')
-        .expect(http.OK, done);
+      .get('/api/user')
+      .expect(http.OK, done);
   });
 
   it('Post user endpoint - success', function(done) {
     testSession
         .post('/api/user')
+        .set('X-XSRF-TOKEN', csrfToken)
         .send({
           firstname: 'Mister',
           lastname: 'Moosey',
@@ -84,7 +92,8 @@ describe('UserController', function() {
 
   it('Delete user endpoint - success', function(done) {
     testSession
-        .del('/api/user')
-        .expect(http.OK, done);
+      .del('/api/user')
+      .set('X-XSRF-TOKEN', csrfToken)
+      .expect(http.OK, done);
   });
 });
