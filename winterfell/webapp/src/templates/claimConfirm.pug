@@ -33,8 +33,8 @@
           h5.title.col-sm-5
             b {{vaAddress.name}}
           div.address.col-sm-5
-            div.address-line {{vaAddress.line1}} {{vaAddress.line2}}
-            div.address-line {{vaAddress.city}}, {{vaAddress.state}}, {{vaAddress.country}} {{vaAddress.zip}}
+            div.address-line {{vaAddress.street1}} {{vaAddress.street2}}
+            div.address-line {{vaAddress.city}}, {{vaAddress.province}}, {{vaAddress.country}} {{vaAddress.postal}}
 
     div.section.mailing-list
       div.section-header
@@ -44,8 +44,8 @@
           h5.title.col-sm-5
             b {{userAddress.name}}
           div.address.col-sm-5
-            div.address-line {{userAddress.line1}} {{userAddress.line2}}
-            div.address-line {{userAddress.city}}, {{userAddress.state}}, {{userAddress.country}} {{userAddress.zip}}
+            div.address-line {{userAddress.street1}} {{userAddress.street2}}
+            div.address-line {{userAddress.city}}, {{userAddress.province}}, {{userAddress.country}} {{userAddress.postal}}
           button.col-sm-2(ng-click="onClickEditAddress()")
             div.edit-icon
             | Edit

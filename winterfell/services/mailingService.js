@@ -51,20 +51,20 @@ MailingService.prototype.sendLetter = function (user, fromAddress, toAddress, fo
         that.Lob.letters.create({description: 'Description',
             to: {
                 name: toAddress.name || '',
-                address_line1: toAddress.line1 || '',
-                address_line2: toAddress.line2 || '',
+                address_line1: toAddress.street1 || '',
+                address_line2: toAddress.street2 || '',
                 address_city: toAddress.city || '',
-                address_state: toAddress.state || '',
-                address_zip: toAddress.zip || '',
+                address_state: toAddress.province || '',
+                address_zip: toAddress.postal || '',
                 address_country: toAddress.country || ''
             },
             from: {
                 name: fromAddress.name || '',
-                address_line1: fromAddress.line1 || '',
-                address_line2: fromAddress.line2 || '',
+                address_line1: fromAddress.street1 || '',
+                address_line2: fromAddress.street2 || '',
                 address_city: fromAddress.city || '',
-                address_state: fromAddress.state || '',
-                address_zip: fromAddress.zip || '',
+                address_state: fromAddress.province || '',
+                address_zip: fromAddress.postal || '',
                 address_country: fromAddress.country || ''
             },
             file: new Buffer(pdf),

@@ -128,7 +128,15 @@ module.exports = function (app) {
 
     promise = promise.then(function(letter) {
       that.letter = letter;
-      return Claim.update({_id: that.claim._id}, {state: Claim.State.SUBMITTED})
+      var query = { _id: that.claim._id };
+      var update = {
+        state: Claim.State.SUBMITTED,
+        sentTo: {
+          emails: req.body.emails || [],
+          addresses: req.body.addresses || []
+        }
+      };
+      return Claim.update(query, update, {upsert: true});
     });
 
     promise.done(function success(claim) {
@@ -173,11 +181,11 @@ module.exports = function (app) {
   var USER_VALUES_TO_USER_PROPERTIES_MAPPING = {
     'contact.address.name': [['values.veteran_first_name', 'values.veteran_middle_initial', 'values.veteran_last_name'],
       ['values.claimant_first_name', 'values.claimant_middle_initial', 'values.claimant_last_name']],
-    'contact.address.line1': [['values.veteran_home_address_line1']],
-    'contact.address.line2': [['values.veteran_home_address_line2']],
+    'contact.address.street1': [['values.veteran_home_address_line1']],
+    'contact.address.street2': [['values.veteran_home_address_line2']],
     'contact.address.city': [['values.veteran_home_city']],
-    'contact.address.state': [['values.veteran_home_state']],
-    'contact.address.zip': [['values.veteran_home_zip_code']],
+    'contact.address.province': [['values.veteran_home_state']],
+    'contact.address.postal': [['values.veteran_home_zip_code']],
     'contact.address.country': [['values.veteran_home_country']],
     'contact.phoneNumber': [['values.contact_phone_number']],
     'firstname': [['values.veteran_first_name'], ['values.claimant_first_name']],

@@ -33,7 +33,7 @@ function calculateProgress(formId, data) {
     answerable: 1, // Signature always answerable
     answered: _.size(data)
   };
-  
+
   if (!template) {
     return output;
   }
@@ -93,14 +93,6 @@ module.exports.findIncompleteClaimOrCreate = function (userId, forms, callback) 
       callback(null, fileClaim)
     }
   });
-};
-
-module.exports.addForm = function (claimId, file, callbacks) {
-  console.log('[addFileToClaim] not implemented');
-};
-
-module.exports.removeForm = function (claimId, file, callbacks) {
-  console.log('[removeFormFromClaim] not implemented');
 };
 
 module.exports.setClaimState = function (claimId, state, callback) {
