@@ -104,7 +104,6 @@ module.exports = function (app) {
     var now = Date.now();
     _.forEach(claimInfos, function(claimState) {
       Claim.create({
-        externalId: uuid.v4(),
         userId: user._id,
         state: claimState,
         stateUpdatedAt: now

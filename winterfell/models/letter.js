@@ -9,20 +9,20 @@ var letterSchema = new Schema({
     expectedDeliveryDate: Date,
     toAddress: {
         name: String, // Name line
-        line1: String,
-        line2: String,
+        street1: String,
+        street2: String,
         city: String,
-        state: String,
-        zip: String,
+        province: String,
+        postal: String,
         country: String
     },
     fromAddress: {
         name: String, // Name line
-        line1: String,
-        line2: String,
+        street1: String,
+        street2: String,
         city: String,
-        state: String,
-        zip: String,
+        province: String,
+        postal: String,
         country: String
     },
     documents: [Buffer],

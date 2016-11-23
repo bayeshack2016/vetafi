@@ -7,7 +7,6 @@ var User = require('./user');
 var uuid = require('uuid');
 
 var ClaimSchema = new Schema({
-  externalId: String,
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User'
@@ -35,7 +34,6 @@ var State = {
 // Static methods
 ClaimSchema.statics.quickCreate = function(userId, callback) {
   return Claim.create({
-    externalId: uuid.v4(),
     userId: userId,
     state: Claim.State.INCOMPLETE,
     stateUpdatedAt: Date.now()
@@ -43,7 +41,7 @@ ClaimSchema.statics.quickCreate = function(userId, callback) {
 };
 
 ClaimSchema.statics.externalize = function(claim) {
-  return _.pick(claim, ['externalId', 'state', 'updatedAt', 'sentTo']);
+  return _.pick(claim, ['state', 'updatedAt', 'sentTo']);
 };
 
 // Instance methods
