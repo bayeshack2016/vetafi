@@ -19,8 +19,7 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     }));
 
     $scope.onClickCancel = function() {
-      console.log("Are you sure you want to cancel? You will have to start over if you do. Y/N?");
-      claimService.removeClaim($stateParams.claimId);
+      $state.go('root.home');
     };
 
     $scope.onClickDone = function() {

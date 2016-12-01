@@ -4,7 +4,7 @@ app.service('Profile', ['claimService', '$q', 'net', function(claimService, $q, 
     this.user = null;
 
     this.logout = function() {
-      claimService.clearClaims();
+      claimService.clearClaim();
       this.unsetUser();
     };
 

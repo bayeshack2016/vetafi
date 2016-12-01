@@ -27,6 +27,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     resolve: {
       user: ['Profile', function(Profile) {
         return Profile.resolveUser();
+      }],
+      userClaims: ['net', '$q', 'claimService', function(net, $q, claimService) {
+        var deferred = $q.defer();
+        net.getClaimsForUser().then(
+          function success(res) {
+            var existingClaim = _.find(res.data.claims, {'state': 'incomplete'});
+            if (!_.isEmpty(existingClaim)) {
+              claimService.setClaim(existingClaim);
+            }
+            deferred.resolve(res.data);
+          }, function failure(res) {
+            deferred.reject();
+          }
+        );
+        return deferred.promise;
       }]
     }
   });

@@ -1,38 +1,43 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.factory('claimService', ['net',
-  function(net) {
-    var tosAccepted = false;
+app.factory('claimService', [
+  function() {
+    var defaultClaim = {
+      state: undefined,
+      tosAccepted: false
+    };
     return {
       /*
-       * Claim objects contains:
-       * id
-       * state
-       * updatedAt
-       * files
+       * This is used to track front-end properties
+       * of current claim
        */
-      userClaims: [],
-      clearClaims: function() {
-        this.userClaims = [];
+      currentClaim: defaultClaim,
+      clearClaim: function() {
+        this.currentClaim = defaultClaim;
       },
-      acceptedTos: function() {
-        return this.tosAccepted;
+      setClaim: function(claim) {
+        this.currentClaim = claim;
+        this.currentClaim.tosAccepted = true;
       },
-      acceptTos: function(accepted) {
-        this.tosAccepted = accepted;
+      createNewClaim: function() {
+        this.currentClaim.state = 'incomplete';
       },
       hasIncompleteClaim: function() {
-        return _.some(this.userClaims, {'state': 'incomplete'});
+        return this.currentClaim ? this.currentClaim.state == 'incomplete' : false;
       },
-      getIncompleteClaim: function() {
-        return _.find(this.userClaims, {'state': 'incomplete'});
+      submitCurrentClaim: function() {
+        this.currentClaim.state = 'submitted';
       },
-      createNewClaim: function(newClaim) {
-        this.userClaims = _.concat(this.userClaims, newClaim);
+      discardCurrentClaim: function() {
+        this.currentClaim.state = 'discarded';
+        this.currentClaim.tosAccepted = false;
       },
-      removeClaim: function(claimId) {
-        _.remove(this.userClaims, {'id': claimId});
-      }
+      acceptedTos: function() {
+        return this.currentClaim.tosAccepted;
+      },
+      acceptTos: function(accepted) {
+        this.currentClaim.tosAccepted = accepted;
+      },
     };
   }
 ]);

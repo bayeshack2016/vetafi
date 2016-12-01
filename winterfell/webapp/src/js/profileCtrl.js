@@ -87,9 +87,5 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
         });
       });
     };
-
-    $scope.clickClaimDiscard = function(claimId) {
-      claimService.removeClaim(claimId);
-    };
   }
 ]);

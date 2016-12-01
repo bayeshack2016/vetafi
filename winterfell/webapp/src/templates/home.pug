@@ -12,7 +12,8 @@
           button.col-sm-3 Start a claim
 
   a.home-link.claim(ui-sref="root.claimstart")
-    h4.title File a claim
+    h4.title(ng-show="!hasIncompleteClaim") File a claim
+    h4.title(ng-show="hasIncompleteClaim") Continue current claim
     div.content.row
       div.col-sm-1
         .icon
