@@ -1,9 +1,8 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.controller("headerCtrl",
-  ['$scope', 'Profile', 'claimService', 'net', '$window', '$interval', '$uibModal', 'user',
-    function ($scope, Profile, claimService, net, $window, $interval, $uibModal, user) {
-      $scope.user = Profile.getUser();
+  ['$scope', 'Profile', 'claimService', 'net', '$window', '$interval', '$uibModal',
+    function ($scope, Profile, claimService, net, $window, $interval, $uibModal) {
       $scope.isSignedIn = Profile.isSetUser();
 
       //
@@ -28,9 +27,8 @@ app.controller("headerCtrl",
         }
 
         var that = this;
-        net.touchSession().then(function success(res) {
-
-        }, function failure(res) {
+        net.touchSession().then(function success() {
+        }, function failure() {
           that.active = true;
           var newScope = $scope.$new(true);
           newScope.headline = "Session Expired";

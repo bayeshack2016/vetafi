@@ -17,11 +17,11 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
     $scope.formsList = forms;
     $scope.formsInfo = formTemplateService;
 
-    $scope.onClickEditAddress = function (index) {
+    $scope.onClickEditAddress = function () {
       openModifyContactModal();
     };
 
-    $scope.onClickEditEmail = function (index) {
+    $scope.onClickEditEmail = function () {
       openModifyEmailModal();
     };
 

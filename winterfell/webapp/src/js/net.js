@@ -2,7 +2,7 @@
 var app = angular.module('vetafiApp');
 app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
 
-  var httpGet = function (url, data) {
+  var httpGet = function (url) {
     return $http({
       url: "/api" + url,
       method: "GET",

@@ -107,7 +107,7 @@ gulp.task('lint', ['xhrEnv'], function () {
   return gulp.src('src/js/*.js')
     .pipe(eslint())
     .pipe(eslint.format())
-    //.pipe(eslint.failAfterError()) -- enable this when all code is correctly formatter 
+    //.pipe(eslint.failAfterError()) -- enable this when all code is correctly formatted
     ;
 });
 
