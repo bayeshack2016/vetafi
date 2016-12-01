@@ -49,7 +49,6 @@ describe('ClaimController', function() {
         lastname: 'Alot',
         email: 'sirmoosealot@test.com',
         password: 'qwerasdf',
-        externalId: uuid.v4(),
         state: User.State.ACTIVE
       }, function(err, user) {
         targetUser = user;
@@ -100,12 +99,12 @@ describe('ClaimController', function() {
   it('Get claim - success', function(done) {
     var claim = {
       userId: targetUser._id,
-      externalId: uuid.v4(),
       state: Claim.State.INCOMPLETE
     };
-    Claim.create(claim, function() {
+    Claim.create(claim).then(function(createdClaim) {
+      console.log(createdClaim);
       testSession
-        .get('/api/claim/' + claim.externalId)
+        .get('/api/claim/' + createdClaim._id)
         .expect(http.OK, done);
     });
   });
@@ -114,21 +113,19 @@ describe('ClaimController', function() {
     var claimsArr = [
       {
         userId: targetUser._id,
-        externalId: uuid.v4(),
         state: Claim.State.INCOMPLETE
       },
       {
         userId: targetUser._id,
-        externalId: uuid.v4(),
         state: Claim.State.INCOMPLETE
       }
     ];
-    Claim.create(claimsArr, function() {
+    Claim.create(claimsArr).then(function(createdClaims) {
       testSession
-        .get('/api/claim/' + claimsArr[0].externalId)
+        .get('/api/claim/' + createdClaims[0]._id)
         .expect(http.OK, function() {
           testSession
-            .get('/api/claim/' + claimsArr[1].externalId)
+            .get('/api/claim/' + createdClaims[1]._id)
             .expect(http.OK, done);
         });
     });
@@ -137,10 +134,9 @@ describe('ClaimController', function() {
   it('Submit claim - claim dne', function(done) {
     var claim = {
       userId: targetUser._id,
-      externalId: uuid.v4(),
       state: Claim.State.INCOMPLETE
     };
-    Claim.create(claim, function() {
+    Claim.create(claim).then(function(createdClaim) {
       testSession
         .post('/api/claim/qwer/submit')
         .set('X-XSRF-TOKEN', csrfToken)
@@ -151,12 +147,11 @@ describe('ClaimController', function() {
   it('Submit claim - success', function(done) {
     var claim = {
       userId: targetUser._id,
-      externalId: uuid.v4(),
       state: Claim.State.INCOMPLETE
     };
-    Claim.create(claim, function () {
+    Claim.create(claim).then(function (createdClaim) {
       testSession
-        .post('/api/claim/' + claim.externalId + '/submit')
+        .post('/api/claim/' + createdClaim._id + '/submit')
         .set('X-XSRF-TOKEN', csrfToken)
         .send({
           returnAddress: testReturnAddess,
@@ -178,10 +173,9 @@ describe('ClaimController', function() {
   it('Delete claim - claim dne', function(done) {
     var claim = {
       userId: targetUser._id,
-      externalId: uuid.v4(),
       state: Claim.State.INCOMPLETE
     };
-    Claim.create(claim, function() {
+    Claim.create(claim).then(function(createdClaim) {
       testSession
         .del('/api/claim/qwer')
         .set('X-XSRF-TOKEN', csrfToken)
@@ -192,12 +186,11 @@ describe('ClaimController', function() {
   it('Delete claim - success', function(done) {
     var claim = {
       userId: targetUser._id,
-      externalId: uuid.v4(),
       state: Claim.State.INCOMPLETE
     };
-    Claim.create(claim, function() {
+    Claim.create(claim).then(function(createdClaim) {
       testSession
-        .del('/api/claim/' + claim.externalId)
+        .del('/api/claim/' + createdClaim._id)
         .set('X-XSRF-TOKEN', csrfToken)
         .expect(http.OK, done);
     });
@@ -236,17 +229,23 @@ describe('SaveClaimController', function () {
     });
 
     promise = promise.then(function (userValues) {
-      return Claim.create({user: userValues.userId, externalId: uuid.v4()});
+      return Claim.create({user: userValues.userId});
     });
 
+
     promise.catch(
-      function(err) {
+      function (err) {
         throw new Error(err);
-    }).done(
+      }
+    ).done(
       function (claim) {
         targetClaim = claim;
         done();
-    });
+      },
+      function (err) {
+        throw new Error(err);
+      }
+    );
   });
 
   it('should 403 before sign in', function (done) {
@@ -267,8 +266,9 @@ describe('SaveClaimController', function () {
   });
 
   it('Should save the claim form after signin', function(done) {
+    console.log(targetClaim);
     testSession
-      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .set('X-XSRF-TOKEN', csrfToken)
       .send({key1: 'value1', key2: 'value2'}) // TODO what form do we want this in?
       .expect(201, function() {
@@ -283,7 +283,7 @@ describe('SaveClaimController', function () {
 
   it('Should correctly calculate progress after save', function(done) {
     testSession
-      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .set('X-XSRF-TOKEN', csrfToken)
       .send({filing_for_self: false})
       .expect(201, function() {
@@ -299,7 +299,7 @@ describe('SaveClaimController', function () {
 
   it('Should correctly calculate progress after save with hidden questions', function(done) {
     testSession
-      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .set('X-XSRF-TOKEN', csrfToken)
       .send({filing_for_self: true})
       .expect(201, function() {
@@ -315,7 +315,7 @@ describe('SaveClaimController', function () {
 
   it('Should render the form after save', function(done) {
     testSession
-      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .set('X-XSRF-TOKEN', csrfToken)
       .send({})
       .expect(201, function() {
@@ -331,7 +331,7 @@ describe('SaveClaimController', function () {
 
   it('Should update the user after save', function(done) {
     testSession
-      .post('/api/save/' + targetClaim.externalId + '/VBA-21-0966-ARE')
+      .post('/api/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .set('X-XSRF-TOKEN', csrfToken)
       .send({
         claimant_first_name: 'jeff',
@@ -351,7 +351,7 @@ describe('SaveClaimController', function () {
 
   it('Should retrieve the rendered form after save', function(done) {
     testSession
-      .get('/claim/' + targetClaim.externalId + '/form/VBA-21-0966-ARE/pdf')
+      .get('/claim/' + targetClaim._id + '/form/VBA-21-0966-ARE/pdf')
       .expect(200)
       .end(function(err, res) {
         res.text.should.startWith('%PDF');

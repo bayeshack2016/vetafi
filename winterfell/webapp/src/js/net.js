@@ -56,6 +56,9 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     getUserInfo: function() {
       return httpGet("/user");
     },
+    getUserValues: function() {
+      return httpGet("/user/values");
+    },
     editUserInfo: function(data) {
       return httpPost("/user", data);
     },
@@ -70,17 +73,17 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
     startClaim: function(data) {
       return httpPost("/claims/create", data);
     },
-    submitClaim: function(extClaimId, data) {
-      return httpPost("/claim/" + extClaimId + "/submit", data);
+    submitClaim: function(claimId, data) {
+      return httpPost("/claim/" + claimId + "/submit", data);
     },
-    discardClaim: function(extClaimId) {
-      return httpDelete("/claim/" + extClaimId);
+    discardClaim: function(claimId) {
+      return httpDelete("/claim/" + claimId);
     },
-    getClaim: function(extClaimId) {
-      return httpGet("/claim/" + extClaimId);
+    getClaim: function(claimId) {
+      return httpGet("/claim/" + claimId);
     },
-    getFormsForClaim: function(extClaimId) {
-      return httpGet("/claim/" + extClaimId + "/forms");
+    getFormsForClaim: function(claimId) {
+      return httpGet("/claim/" + claimId + "/forms");
     },
     saveForm: function(claimId, formId, data) {
       return httpPost('/save/' + claimId + '/' + formId, data);

@@ -15,7 +15,7 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
 
     function init() {
       for (var i = 0; i < $scope.claims.length; i++) {
-        $scope.claims[i].id = $scope.claims[i].externalId; // todo, server shouldn't be sending rowId and externalId. We only reference claims through claim.id
+        $scope.claims[i].id = $scope.claims[i]._id;
         $scope.claims[i].header = createHeaderString($scope.claims[i]);
         $scope.claims[i].date = $filter('date')(new Date($scope.claims[i].stateUpdatedAt), 'MM/dd/yyyy');
       }

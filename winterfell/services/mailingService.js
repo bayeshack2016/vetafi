@@ -6,6 +6,7 @@ var User = require('./../models/user');
 var DocumentRenderingService = require('./documentRenderingService');
 var ENVIRONMENT = Constants.environment;
 var Q = require('q');
+var log = require('../middlewares/log');
 
 /**
  * Abstraction around a mailing api.
@@ -39,11 +40,13 @@ module.exports = MailingService;
  * @returns Q promise
  */
 MailingService.prototype.sendLetter = function (user, fromAddress, toAddress, forms) {
+    log.info('sendLetter called by ' + user._id + ' (' + user.email + ')');
     var deferred = Q.defer();
     var that = this;
     var documentRenderingService = new DocumentRenderingService(this.app);
     documentRenderingService.concatenateDocs(forms, function(documentRenderingError, pdf) {
         if (documentRenderingError) {
+            log.error('Document rendering returned error: ' + documentRenderingError);
             deferred.reject(documentRenderingError);
             return;
         }
@@ -74,6 +77,7 @@ MailingService.prototype.sendLetter = function (user, fromAddress, toAddress, fo
         }, function (lobError, res) {
             if (lobError) {
                 deferred.reject(lobError);
+                log.error('Lob API returned error: ' + lobError);
                 return;
             }
             Letter.create({
@@ -88,6 +92,7 @@ MailingService.prototype.sendLetter = function (user, fromAddress, toAddress, fo
             }, function(databaseError, doc) {
                 if (databaseError) {
                     deferred.reject(databaseError);
+                    log.error('Letter.create returned error: ' + databaseError);
                     return;
                 }
 

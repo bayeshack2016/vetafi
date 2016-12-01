@@ -212,7 +212,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getUserValues().then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(res) {
+          }, function failure(err) {
             deferred.reject();
           }
         );

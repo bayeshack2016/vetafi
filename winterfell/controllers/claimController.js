@@ -11,6 +11,8 @@ var MailingService = require('./../services/mailingService');
 var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
+var log = require('../middlewares/log');
+var validObjectID = require('../middlewares/valid-objectid');
 
 module.exports = function (app) {
   var mw = [auth.authenticatedOr404];
@@ -38,8 +40,8 @@ module.exports = function (app) {
   });
 
   // Get a particular claim
-  app.get('/api/claim/:extClaimId', mw, function (req, res) {
-    Claim.findOne({externalId: req.params.extClaimId}).exec(function(err, claim) {
+  app.get('/api/claim/:claim', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+    Claim.findOne({_id: req.params.claim}).exec(function(err, claim) {
       if (claim) {
         res.status(http.OK).send({claim: claim});
       } else {
@@ -68,8 +70,8 @@ module.exports = function (app) {
     });
   });
 
-  function handleClaimStateChange(extClaimId, claimState, callback) {
-    Claim.findOne({externalId: extClaimId}, function(err, claim) {
+  function handleClaimStateChange(claimId, claimState, callback) {
+    Claim.findOne({_id: claimId}, function(err, claim) {
       if (err) {
         callback(err, null);
         return;
@@ -97,14 +99,14 @@ module.exports = function (app) {
     }
   }
 
-  app.post('/api/claim/:extClaimId/submit', mw, function(req, res) {
+  app.post('/api/claim/:claim/submit', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function(req, res) {
     var that = this;
     var currentUser = null;
     var promise = User.findById(req.session.userId);
 
     promise = promise.then(function(user) {
       currentUser = user;
-      return Claim.findOne({externalId: req.params.extClaimId});
+      return Claim.findOne({_id: req.params.claim});
     });
 
     promise = promise.then(function(claim) {
@@ -146,14 +148,14 @@ module.exports = function (app) {
       });
     });
 
-    promise.catch(function(err) {
-      //console.log(err);
+    promise.catch( function(err) {
+      log.error('Error in claim submit: ' + err);
       res.sendStatus(http.INTERNAL_SERVER_ERROR);
     });
   });
 
-  app.delete('/api/claim/:extClaimId', mw, function (req, res) {
-    handleClaimStateChange(req.params.extClaimId,
+  app.delete('/api/claim/:claim', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+    handleClaimStateChange(req.params.claim,
       Claim.State.DISCARDED,
       claimUpdateCallbackFactory(res));
   });
@@ -244,12 +246,12 @@ module.exports = function (app) {
     return promise;
   }
 
-  app.post('/api/save/:claim/:form', mw, function (req, res) {
+  app.post('/api/save/:claim/:form', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
     var resolvedClaim;
     var progress = ClaimService.calculateProgress(req.params.form, req.body);
 
     // Resolve the claim
-    var promise = Claim.findOne({externalId: req.params.claim});
+    var promise = Claim.findOne({_id: req.params.claim});
 
     // Render the new form values into the pdf
     promise = promise.then(
@@ -295,18 +297,19 @@ module.exports = function (app) {
 
     // Send 201 response (not sure if should be 200, but this endpoint creates multiple resources)
     promise.done(function success(user) {
-      console.log("updated user:", user);
+      log.info("updated user:", user);
       res.sendStatus(http.CREATED);
     }, function failure(err) {
-      console.log(err);
+      console.error(err.stack);
+      log.error('Error saving claim: ' + err);
       res.sendStatus(http.INTERNAL_SERVER_ERROR);
     });
   });
 
-  app.get('/api/claim/:claim/form/:form', mw, function (req, res) {
-    Claim.findOne({externalId: req.params.claim}, function(error, claim) {
+  app.get('/api/claim/:claim/form/:form', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+    Claim.findOne({_id: req.params.claim}, function(error, claim) {
       if (error) {
-        console.log(error);
+        console.error(error.stack);
         res.sendStatus(http.INTERNAL_SERVER_ERROR);
         return;
       }
@@ -323,9 +326,9 @@ module.exports = function (app) {
     });
   });
 
-  app.get('/claim/:claimId/form/:formName/pdf', mw, function (req, res) {
+  app.get('/claim/:claim/form/:formName/pdf', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
     var promise = Claim.findOne(
-      {externalId: req.params.claimId}
+      {_id: req.params.claim}
     );
 
     promise = promise.then(function (claim) {
@@ -342,13 +345,13 @@ module.exports = function (app) {
         .set('Content-Type', 'application/pdf')
         .send(form.pdf);
     }, function failure(err) {
-      console.log(err);
+      console.error(err.stack);
       res.sendStatus(http.INTERNAL_SERVER_ERROR);
     });
   });
 
-  app.get('/api/claim/:claim/forms', mw, function (req, res) {
-    Claim.findOne({externalId: req.params.claim}, function(error, claim) {
+  app.get('/api/claim/:claim/forms', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+    Claim.findOne({_id: req.params.claim}, function(error, claim) {
       if (error) {
         console.log(error);
         res.sendStatus(http.INTERNAL_SERVER_ERROR);
@@ -361,7 +364,7 @@ module.exports = function (app) {
         },
         function (error, forms) {
           if (error) {
-            console.log(error);
+            log.error('Error finding form: ' + error);
             res.sendStatus(http.INTERNAL_SERVER_ERROR);
             return;
           }
