@@ -123,6 +123,20 @@ textContainerWidthPx = 165px
       @media screen and (max-width: changeLayoutWidth)
         color: colorWhite
 
+    & a
+      display: block
+      margin-bottom: smallSpacing
+      text-align: left
+      color: colorPrimaryBlue
+
+      &:hover
+        cursor: pointer
+
+      @media screen and (max-width: removePicWidth)
+        text-align: center
+      @media screen and (max-width: changeLayoutWidth)
+        color: colorWhite
+
     & button
       width: 100%
       margin-bottom: mediumSpacing
@@ -201,19 +215,5 @@ textContainerWidthPx = 165px
       background-color: transparent
       color: colorDarkGray
 
-      @media screen and (max-width: changeLayoutWidth)
-        color: colorWhite
-
-    & a
-      display: block
-      margin-bottom: smallSpacing
-      text-align: left
-      color: colorPrimaryBlue
-
-      &:hover
-        cursor: pointer
-
-      @media screen and (max-width: removePicWidth)
-        text-align: center
       @media screen and (max-width: changeLayoutWidth)
         color: colorWhite

@@ -9,6 +9,9 @@ var UserValues = require('./../models/userValues');
 var UserService = require('./../services/userService');
 
 module.exports = function (app) {
+  var idmeUrlLocal = "https://api.id.me/oauth/authorize?client_id=684c7204feed7758b25527eae2d66e28&redirect_uri=http://localhost:3999/auth/idme/callback&response_type=code&scope=military";
+  var idmeUrlProd = "https://api.id.me/oauth/authorize?client_id=71ffbd3f04241a56e63fa6a960fbb15e&redirect_uri=https://www.vetafi.org/auth/idme/callback&response_type=code&scope=military";
+  var idmeUrl = app.environment == constants.environment.LOCAL ? idmeUrlLocal : idmeUrlProd;
 
   // Endpoint for routing sign-up
   app.get('/signup', function(req, res) {
@@ -19,6 +22,7 @@ module.exports = function (app) {
         {
           csrf: req.csrfToken(),
           viewId: 'signup-view',
+          idmeUrl: idmeUrl,
           errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
         });
     }
@@ -33,6 +37,7 @@ module.exports = function (app) {
         {
           csrf: req.csrfToken(),
           viewId: 'login-view',
+          idmeUrl: idmeUrl,
           errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
         });
     }
