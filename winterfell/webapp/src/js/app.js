@@ -23,12 +23,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     url: '/app',
     abstract: true,
     templateUrl: 'templates/root.html',
-    controller: 'headerCtrl',
-    resolve: {
-      user: ['Profile', function(Profile) {
-        return Profile.resolveUser();
-      }]
-    }
+    controller: 'headerCtrl'
   });
 
   $urlRouterProvider.otherwise('/app');
@@ -62,7 +57,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getClaimsForUser().then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(res) {
+          }, function failure() {
             deferred.reject();
           }
         );
@@ -117,7 +112,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getFormsForClaim($stateParams.claimId).then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(res) {
+          }, function failure() {
             deferred.reject();
           }
         );
@@ -139,7 +134,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getUserValues().then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(res) {
+          }, function failure() {
             deferred.reject();
           }
         );
@@ -152,7 +147,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getFormsForClaim($stateParams.claimId).then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(res) {
+          }, function failure() {
             deferred.reject();
           }
         );
@@ -180,7 +175,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getClaim($stateParams.claimId).then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(res) {
+          }, function failure() {
             deferred.reject();
           }
         );
@@ -191,7 +186,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getFormsForClaim($stateParams.claimId).then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(res) {
+          }, function failure() {
             deferred.reject();
           }
         );
@@ -212,7 +207,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         net.getUserValues().then(
           function success(res) {
             deferred.resolve(res.data);
-          }, function failure(err) {
+          }, function failure() {
             deferred.reject();
           }
         );

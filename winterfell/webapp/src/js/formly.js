@@ -21,7 +21,7 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
       },
       link: updateViewWithParsed,
       validators: {
-        phoneNumber: function (viewValue, modelValue) {
+        phoneNumber: function (viewValue) {
           if (!viewValue) {
             return true;
           }
@@ -61,7 +61,7 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
       },
       link: updateViewWithParsed,
       validators: {
-        ssn: function (viewValue, modelValue) {
+        ssn: function (viewValue) {
           if (!viewValue) {
             return true;
           }
@@ -105,7 +105,7 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
       },
       link: updateViewWithParsed,
       validators: {
-        zipCode: function (viewValue, modelValue) {
+        zipCode: function (viewValue) {
           if (!viewValue) {
             return true;
           }
@@ -129,7 +129,7 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
       },
       link: updateViewWithParsed,
       validators: {
-        state: function (viewValue, modelValue) {
+        state: function (viewValue) {
           if (!viewValue) {
             return true;
           }
@@ -153,7 +153,7 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
       },
       link: updateViewWithParsed,
       validators: {
-        zipCode: function (viewValue, modelValue) {
+        zipCode: function (viewValue) {
           if (!viewValue) {
             return true;
           }
@@ -193,7 +193,7 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
         placeholder: 'yourname@website.com'
       },
       validators: {
-        zipCode: function (viewValue, modelValue) {
+        zipCode: function (viewValue) {
           if (!viewValue) {
             return true;
           }

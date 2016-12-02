@@ -1,3 +1,4 @@
+'use script';
 var app = angular.module('vetafiApp');
 app.directive('vfiBreadcrumbs', function () {
   return {

@@ -11,7 +11,7 @@ app.controller('editProfileCtrl', ['$scope', 'user', 'net', 'Profile',
       var atInd = email.indexOf('@');
       var dotInd = email.indexOf('.');
       return atInd > -1 && dotInd > atInd;
-    };
+    }
 
     function validateEmails() {
       return $scope.userDraft.email == user.email ||
@@ -20,7 +20,7 @@ app.controller('editProfileCtrl', ['$scope', 'user', 'net', 'Profile',
             && validateEmail($scope.userDraft.confirmEmail)
             && $scope.userDraft.email == $scope.userDraft.confirmEmail
           );
-    };
+    }
 
     $scope.allFilled = function() {
       return $scope.userDraft.firstname && $scope.userDraft.lastname

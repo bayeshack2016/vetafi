@@ -9,7 +9,7 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
   function ($window, $timeout) {
     'use strict';
 
-    var signaturePad, canvas, element, EMPTY_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=';
+    var signaturePad, canvas, element, EMPTY_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA='; // eslint-disable-line
     return {
       restrict: 'EA',
       replace: true,
@@ -46,7 +46,7 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
       ],
       link: function (scope, element) {
         canvas = element.find('canvas')[0];
-        scope.signaturePad = new SignaturePad(canvas);
+        scope.signaturePad = new SignaturePad(canvas); // eslint-disable-line
 
         scope.onResize = function() {
           var canvas = element.find('canvas')[0];

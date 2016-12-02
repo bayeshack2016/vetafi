@@ -1,8 +1,7 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.factory('claimService', ['net',
-  function(net) {
-    var tosAccepted = false;
+app.factory('claimService', [
+  function() {
     return {
       /*
        * Claim objects contains:
@@ -11,6 +10,7 @@ app.factory('claimService', ['net',
        * updatedAt
        * files
        */
+      tosAccepted: false,
       userClaims: [],
       clearClaims: function() {
         this.userClaims = [];
