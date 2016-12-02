@@ -3,13 +3,12 @@ div#vfi-footer-view
 
     div.footer-layout.links.row
       div.footer-section.col-sm-6
-        a(href="#/") Home
+        a(ui-sref="root.home") Home
         a(href="") About Us
-        a(href="#/faq") FAQ
+        a(ui-sref="root.faq") FAQ
       div.footer-section.col-sm-6
-        a(href="#/profile", ng-if="isLoggedIn") My Profile
-        a(href="") Stories
-        a(href="") Terms of Service
+        a(ui-sref="root.profile", ng-if="isLoggedIn") My Profile
+        a(ui-sref="root.tos") Terms of Service
         a(href="") Support
 
     div.footer-layout.disclaimer.row
