@@ -43,7 +43,7 @@ app.controller('faqCtrl', ['$scope', function($scope) {
     },
     {
       title: "How do I start filing for a claim?",
-      html: "Vetafi can help you start filing a claim <a ui-sref='root.claimstart'>here</a>. It will be easy!",
+      html: "Vetafi can help you start filing a claim <a href='#/app/claim/start'>here</a>. It will be easy!",
       tags: []
     },
     {
@@ -53,12 +53,12 @@ app.controller('faqCtrl', ['$scope', function($scope) {
     },
     {
       title: "Does Vetafi save my information? Is it safe?",
-      html: "Vetafi saves information that you enter so you don't have to enter that information again. Even if you leave this website, you can always come back to finish your uncompleted claim right where you left off! Vetafi will not release or share your personal information to any individual, third-parties, organizations or companies. All information collected is strictly to serve Vetafi's objectives and enhance your experience. You can view our Terms of Service <a ui-sref='root.tos'>here</a>.",
+      html: "Vetafi saves information that you enter so you don't have to enter that information again. Even if you leave this website, you can always come back to finish your uncompleted claim right where you left off! Vetafi will not release or share your personal information to any individual, third-parties, organizations or companies. All information collected is strictly to serve Vetafi's objectives and enhance your experience. You can view our Terms of Service <a href='#/app/tos'>here</a>.",
       tags: []
     },
     {
       title: "I've submitted a claim, now what?",
-      html: "From here, all you have to do is wait and check the mail! Once the U.S. Department of Veteran Affairs is finished processing your claim, they will send you a benefit package in the mail. In the mean time, you may view your submitted claims on Vetafi <a ui-sref='root.profile.claims'>here</a>.",
+      html: "From here, all you have to do is wait and check the mail! Once the U.S. Department of Veteran Affairs is finished processing your claim, they will send you a benefit package in the mail. In the mean time, you may view your submitted claims on Vetafi <a href='#/app/profile/claims'>here</a>.",
       tags: ['process', 'wait', 'long']
     },
     {
