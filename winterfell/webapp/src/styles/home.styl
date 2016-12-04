@@ -1,12 +1,15 @@
 @import "standards.styl"
 
-linkIconWidthPx = 48px
-linkIconHeightPx = 48px
+mainWrapperSize = 250px
+innerWrapperSize = 80px
 
 #vfi-home-view
+  background-color: colorWhite
+
   & .banner-wrapper
     position: relative
     height: 360px
+    margin-bottom: megaSpacing
     background: colorPrimaryDarkBlue
     background-image: url('../icons/banner-child.jpg')
     background-size: cover
@@ -33,86 +36,114 @@ linkIconHeightPx = 48px
     padding: smallSpacing
     color: colorWhite
 
-    h3
+    & .header
+    & .subheader
       text-align: left
-      line-height: 40px
 
       @media screen and (max-width: maxWindowWidthPx)
         text-align: center
 
-      @media screen and (max-width: minWindowWidthPx)
-        text-align: center
-        line-height: h3_lineHeight
-        font-size: h3_size
-        margin-bottom: smallSpacing
+    & .header
+      color: colorWhite
+    & .subheader
+      color: colorDarkWhite
 
     button
       display: inline-block
+      margin-top: 8px
       background-color: colorYellow
       color: colorBlack
 
       @media screen and (max-width: maxWindowWidthPx)
         display: block
-        margin: 0 auto
+        margin: smallSpacing auto 0
 
-      @media screen and (max-width: minWindowWidthPx)
-        display: block
-        margin: 0 auto
 
-  & .home-link
-    display: block
-    width: maxLayoutWidthPct
-    max-width: maxLayoutWidthPx
-    margin: largeSpacing auto
-    color: colorWhite
-    border: 2px solid colorPrimaryBlue
-
-    &:hover
-      filter: brightness(1.2)
-      -webkit-filter: brightness(1.2)
-      -moz-filter: brightness(1.2)
-      -ms-filter: brightness(1.2)
-      color: colorWhite
-      text-decoration: none
-      cursor: pointer
-
-    & .title
-      padding-left: largeSpacing
-      line-height: 200%
-      background-color: colorPrimaryBlue
-      color: colorWhite
-      text-align: left
-
-      @media screen and (max-width: minWindowWidthPx)
-        padding-left: 0
-        text-align: center
+  & .action-wrapper
+    width: 80%
+    max-width: 800px
+    margin: 0 auto megaSpacing
 
     & .content
-      background-color: colorWhite
-      color: colorPrimaryBlue
-      margin-left: 0px
-      margin-right: 0px
-      padding: largeSpacing mediumSpacing
+      text-align: left
 
-      & p
-        padding-left: smallSpacing
+      @media screen and (max-width: maxWindowWidthPx)
+        text-align: center
 
-        @media screen and (max-width: minWindowWidthPx)
-          margin-top: mediumSpacing
-          padding-left: 0
+      & h4
+        color: colorPrimaryDarkBlue
 
-    &.claim .icon
-      width: linkIconWidthPx
-      height: linkIconHeightPx
-      margin: 0 auto
-      background: url('../icons/docs-blue.svg')
-      background-size: cover
-      background-repeat: no-repeat
+  & .icons-wrapper
 
-    &.faq .icon
-      width: linkIconWidthPx
-      height: linkIconHeightPx
-      margin: 0 auto
-      background: url('../icons/health-blue.svg')
-      background-size: cover
-      background-repeat: no-repeat
+    & .main-wrapper
+      position: relative
+      width: mainWrapperSize
+      height: mainWrapperSize
+      background-color: colorDarkGray
+      border-radius: 10px
+
+      &.right-align
+        float: right
+      &.left-align
+        float: left
+
+      @media screen and (max-width: maxWindowWidthPx)
+        margin: largeSpacing auto
+        float: initial !important
+
+    & .main-icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+      &.folder
+        width: 180px
+        height: 180px
+        background: url('../icons/folder.svg')
+        background-size: cover
+        background-repeat: no-repeat
+      &.health
+        width: 110px
+        height: 110px
+        background: url('../icons/health-white.svg')
+        background-size: cover
+        background-repeat: no-repeat
+
+    & .inner-wrapper
+      position: absolute
+      width: innerWrapperSize
+      height: innerWrapperSize
+      border-radius: 50%
+      border: 6px solid colorWhite
+
+      &.checkmark
+        background-color: colorGreen
+      &.question
+        background-color: colorPurple
+
+      &.left-align
+        bottom: -(innerWrapperSize / 2)
+        left: -(innerWrapperSize / 2)
+      &.right-align
+        bottom: -(innerWrapperSize / 2)
+        right: -(innerWrapperSize / 2)
+
+      & .inner-icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        &.checkmark
+          width: 30px
+          height: 30px
+          background: url('../icons/checkmark-white.svg')
+          background-size: cover
+          background-repeat: no-repeat
+        &.question
+          width: 10px
+          height: 30px
+          background: url('../icons/info-white.svg')
+          background-size: cover
+          background-repeat: no-repeat

@@ -3,28 +3,45 @@
   div.banner-wrapper
     div.banner-overlay
       div.headline-wrapper.row(ng-show="hasIncompleteClaim")
-        h3.col-sm-9 Continue your previous claim
+        div.col-sm-9
+          h3.header Filing health claims for U.S. Veterans
+          h5.subheader Done easily and safely.
+          h5.subheader Continue your previous claim now.
         a(ui-sref="root.claimselect")
-          button.col-sm-3 Continue claim
+          button.col-sm-3 Continue Claim
       div.headline-wrapper.row(ng-show="!hasIncompleteClaim")
-        h3.col-sm-9 Get the benefits that you deserve
+        div.col-sm-9
+          h3.header Filing health claims for U.S. Veterans
+          h5.subheader Done easily and safely.
+          h5.subheader Get the benefits that you deserve now.
         a(ui-sref="root.claimstart")
-          button.col-sm-3 Start a claim
+          button.col-sm-3 Start for Free
 
-  a.home-link.claim(ui-sref="root.claimstart")
-    h4.title File a claim
-    div.content.row
-      div.col-sm-1
-        .icon
-      div.col-sm-11
-        p We can help you file a Fully Developed Claim. Completely submit your information once and avoid having to tediously go back and forth with the VA.
+  div.action-wrapper.container
+    div.action.row
+      div.content.col-sm-7.col-sm-push-5
+        h4 Submit an Intent to File Claim.
+        p Secure your Effective Date for your benefit claim today. Fill in your information once and avoid having to tediously go back and forth with the VA.
+        a(ui-sref="root.claimstart")
+          button Start for Free
+      div.icons-wrapper.col-sm-5.col-sm-pull-7
+        div.main-wrapper.folder.left-align
+          div.main-icon.folder
+          div.inner-wrapper.checkmark.right-align
+            div.inner-icon.checkmark
 
-  a.home-link.faq(ui-sref="root.faq")
-    h4.title Resources
-    div.content.row
-      div.col-sm-1
-        .icon
-      div.col-sm-11
-        p Got questions about what benefits and entitlements you are eligible for? Click here to learn about what you can do.
+
+  div.action-wrapper.container
+    div.action.row
+      div.content.col-sm-7
+        h4 How does Vetafi work?
+        p Have any questions about Vetafi and what services we provide? Want more information about the V.A. health benefits claims process? Visit our FAQ page to get your questions answered.
+        a(ui-sref="root.faq")
+          button Frequently Asked Questions
+      div.icons-wrapper.col-sm-5
+        div.main-wrapper.health.right-align
+          div.main-icon.health
+          div.inner-wrapper.question.left-align
+            div.inner-icon.question
 
   vfi-footer
