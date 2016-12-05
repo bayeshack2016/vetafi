@@ -3,7 +3,7 @@ var app = angular.module('vetafiApp');
 app.directive("modalChangePassword", ["net", function(net) {
     return {
         restrict: "A",
-        link: function(scope, elem, attrs) {
+        link: function(scope) {
             scope.errorMsg = '';
             function displayError(msg) {
               scope.errorMsg = msg;
@@ -36,7 +36,7 @@ app.directive("modalChangePassword", ["net", function(net) {
               }
 
               net.changePassword(scope.oldPwd, scope.newPwd).then(
-                function(resp) { // success case
+                function() { // success case
                   scope.$close();
                 }, function(errResp) { // failed case
                   if ('auth_mismatch' == errResp.data) {

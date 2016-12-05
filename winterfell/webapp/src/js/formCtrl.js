@@ -3,7 +3,6 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-
 app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService', '$stateParams', '$state', 'userValues', '$window', 'net',
     function ($scope, $filter, $rootScope, formTemplateService,
               $stateParams, $state, userValues, $window, net) {
@@ -11,7 +10,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.title = formTemplateService[$stateParams.formId].unofficialTitle;
       $scope.description = formTemplateService[$stateParams.formId].unofficialDescription;
 
-      $scope.$watch('signature', function (newVal, oldVal) {
+      $scope.$watch('signature', function (newVal) {
         if (newVal) {
           $scope.model.signature = newVal;
         } else {
@@ -25,7 +24,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
 
       $scope.onRender = function () {
         save().then(
-          function success(response) {
+          function success() {
             $window.location.href = '/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf';
           }
         );
@@ -34,7 +33,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.onSubmit = function () {
         console.log('onSubmit');
         save().then(
-          function (response) {
+          function () {
             $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
               function success() {
               },
@@ -67,7 +66,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         }
       }
 
-      function countAnswerable(model) {
+      function countAnswerable() {
         var total = 0;
         for (var i = 0; i < $scope.fields.length; i++) {
           if ($scope.fields[i].hasOwnProperty('hideExpression')) {
@@ -99,9 +98,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         return ($scope.answered / $scope.answerable) * 100.0;
       };
 
-      $scope.$watch('model', function (newVal, oldVal) {
+      $scope.$watch('model', function (newVal) {
         $scope.answered = countAnswered(newVal);
         $scope.answerable = countAnswerable(newVal);
       }, true)
     }]);
-
