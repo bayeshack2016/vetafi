@@ -25,9 +25,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     templateUrl: 'templates/root.html',
     controller: 'headerCtrl',
     resolve: {
-      user: ['Profile', function(Profile) {
-        return Profile.resolveUser();
-      }],
       userClaims: ['net', '$q', 'claimService', function(net, $q, claimService) {
         var deferred = $q.defer();
         net.getClaimsForUser().then(
