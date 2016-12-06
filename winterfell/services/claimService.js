@@ -42,11 +42,13 @@ function calculateProgress(formId, data) {
     var field = template.fields[i];
     if (field.hasOwnProperty('hideExpression')) {
       evaluate = expressions.compile(field.hideExpression);
-      if (!evaluate({model: data})) {
+      if (!evaluate({model: data}) || !field.templateOptions.optional) {
         output.answerable += 1;
       }
     } else {
-      output.answerable += 1;
+      if (!field.templateOptions.optional) {
+        output.answerable += 1;
+      }
     }
   }
 
