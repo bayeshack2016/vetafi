@@ -36,14 +36,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     controller: 'homeCtrl'
   });
 
-  // FAQ
-  $stateProvider.state({
-    name: 'root.faq',
-    url: '/faq',
-    templateUrl: 'templates/faq.html',
-    controller: 'faqCtrl'
-  });
-
   // Settings
   $stateProvider.state({
     name: 'root.profile',
@@ -216,4 +208,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
       }]
     }
   });
+
+  // Misc. Pages
+  $stateProvider.state({
+    name: 'root.faq',
+    url: '/faq',
+    templateUrl: 'templates/faq.html',
+    controller: 'faqCtrl'
+  });
+
+  $stateProvider.state({
+    name: 'root.aboutus',
+    url: '/about-us',
+    templateUrl: 'templates/aboutus.html'
+  });
+
 }]);
