@@ -1,21 +1,23 @@
 var _ = require('lodash');
+var bcrypt = require('bcryptjs');
 var SocialUser = require('../utils/socialUser');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var UserService = require('../services/userService');
+
+var salt = bcrypt.genSaltSync(10);
 
 function AuthService (app) {
     this.app = app;
 };
 
 module.exports = AuthService;
+module.exports.generatePassword = function(pwd) {
+  return bcrypt.hashSync(pwd, salt);
+};
+
 module.exports.isPasswordCorrect = function (expectedPwd, candidatePwd) {
-  console.log('[AuthService] compare passwords: ' + expectedPwd + ' vs. ' + candidatePwd);
-  if (_.isEqual(expectedPwd, candidatePwd)) {
-    return true;
-  } else {
-    return false;
-  }
+  return bcrypt.compareSync(candidatePwd, expectedPwd);
 };
 
 /**
