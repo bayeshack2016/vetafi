@@ -23,7 +23,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     url: '/app',
     abstract: true,
     templateUrl: 'templates/root.html',
-    controller: 'headerCtrl'
+    controller: 'headerCtrl',
+    resolve: {
+      user: ['Profile', function (Profile) {
+        return Profile.resolveUser();
+      }]
+    }
   });
 
   $urlRouterProvider.otherwise('/app');

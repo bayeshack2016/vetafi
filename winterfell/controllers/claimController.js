@@ -239,7 +239,7 @@ module.exports = function (app) {
       });
 
       return User.findByIdAndUpdate(
-        user._id, user, {'new': true}
+        user._id, user
       );
     });
 

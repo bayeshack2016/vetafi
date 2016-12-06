@@ -27,11 +27,6 @@ app.service('Profile', ['claimService', '$q', 'net', function(claimService, $q, 
     this.resolveUser = function() {
       var deferred = $q.defer();
 
-      if (this.isSetUser()) {
-        deferred.resolve(this.getUser());
-        return deferred.promise;
-      }
-
       var that = this;
       net.getUserInfo().then(function success(res) {
         that.setUser(res.data);

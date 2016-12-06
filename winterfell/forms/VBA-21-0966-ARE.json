@@ -233,7 +233,8 @@
       "templateOptions": {
         "label": "Address Line 2",
         "placeholder": "",
-        "autocomplete": "address-line2"
+        "autocomplete": "address-line2",
+        "optional": true
       }
     },
     {
@@ -242,7 +243,8 @@
       "templateOptions": {
         "label": "Apartment Number",
         "placeholder": "Apt. 3",
-        "autocomplete": "address-line3"
+        "autocomplete": "address-line3",
+        "optional": true
       }
     },
     {
@@ -315,7 +317,8 @@
       "templateOptions": {
         "label": "Name of attorney, agent, or veterans service organization",
         "rows": 2,
-        "columns": 100
+        "columns": 100,
+        "optional": true
       }
     },
 

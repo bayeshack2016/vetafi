@@ -3,6 +3,7 @@ var app = angular.module('vetafiApp');
 app.controller("headerCtrl",
   ['$scope', 'Profile', 'claimService', 'net', '$window', '$interval', '$uibModal',
     function ($scope, Profile, claimService, net, $window, $interval, $uibModal) {
+      console.log(Profile);
       $scope.isSignedIn = Profile.isSetUser();
 
       //

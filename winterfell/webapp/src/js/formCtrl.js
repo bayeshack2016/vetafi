@@ -6,7 +6,6 @@ var app = angular.module('vetafiApp');
 app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService', '$stateParams', '$state', 'userValues', '$window', 'net',
     function ($scope, $filter, $rootScope, formTemplateService,
               $stateParams, $state, userValues, $window, net) {
-
       $scope.title = formTemplateService[$stateParams.formId].unofficialTitle;
       $scope.description = formTemplateService[$stateParams.formId].unofficialDescription;
 
@@ -56,9 +55,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
 
       $scope.model = userValues.values.values; // TODO(jeff) fix extra attributes messing up completion percentage
       $scope.signature = $scope.model.signature;
-      console.log($scope);
       $scope.fields = formTemplateService[$stateParams.formId].fields;
-
+      $scope.fieldsByKey = _.keyBy(formTemplateService[$stateParams.formId].fields, 'key');
 
       for (var i = 0; i < $scope.fields.length; i++) {
         if ($scope.fields[i].key.indexOf('date_signed') !== -1) {
@@ -81,12 +79,17 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       }
 
       function countAnswered(model) {
-        console.log(model);
         var k, count = 0;
-        for (k in model) {
-          if (model.hasOwnProperty(k)) {
-            count++;
+        for (k in $scope.fieldsByKey) {
+          if ($scope.fieldsByKey.hasOwnProperty(k)) {
+            if ((model.hasOwnProperty(k) && model[k] !== '') || $scope.fieldsByKey[k].templateOptions.optional) {
+              count++;
+            }
           }
+        }
+
+        if (model.signature) {
+          count++;
         }
         return count;
       }
