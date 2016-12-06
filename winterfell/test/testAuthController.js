@@ -5,7 +5,6 @@ var should = require('should');
 var session = require('supertest-session');
 var uuid = require('uuid');
 var User = require('../models/user');
-var UserService = require('../services/userService');
 var csrfTestUtils = require('./csrfTestUtils');
 
 describe('AuthController', function() {
@@ -13,21 +12,21 @@ describe('AuthController', function() {
   var server;
   var testSession;
   var csrfToken;
-  var originalPwd = 'qwerasdf';
 
   before(function(done) {
     server = require('../app');
     testSession = session(server);
-    var userInput = {
-      firstname: 'Sir',
-      middlename: 'Moose',
-      lastname: 'Alot',
-      email: 'sirmoosealot@test.com',
-      password: originalPwd
-    };
 
     User.remove({}, function() {
-      UserService.createNewUser(userInput, function(err, user) {
+      User.create({
+        firstname: 'Sir',
+        middlename: 'Moose',
+        lastname: 'Alot',
+        email: 'sirmoosealot@test.com',
+        password: 'qwerasdf',
+        externalId: uuid.v4(),
+        state: User.State.ACTIVE
+      }, function(err, user) {
         targetUser = user;
         done();
       });
@@ -41,11 +40,11 @@ describe('AuthController', function() {
 
   it('Log in success', function (done) {
     testSession.get('/')
-      .expect(http.OK)
+      .expect(200)
       .end(function(err, res) {
         csrfToken = csrfTestUtils.getCsrf(res);
         testSession.post('/api/auth/login')
-          .send({email: targetUser.email, password: originalPwd, _csrf: csrfToken})
+          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
           .expect(http.MOVED_TEMPORARILY, done);
       });
   });
@@ -60,7 +59,7 @@ describe('AuthController', function() {
   it('Change password - success', function(done) {
     testSession.post('/api/auth/password')
       .set('X-XSRF-TOKEN', csrfToken)
-      .send({old: originalPwd, new: 'new-pwd'})
+      .send({old: 'qwerasdf', new: 'new-pwd'})
       .expect(http.NO_CONTENT, done);
   });
 });

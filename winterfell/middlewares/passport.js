@@ -7,7 +7,6 @@ var OAuth2Strategy = require('passport-oauth').OAuth2Strategy;
 var httpErrors = require('./../utils/httpErrors');
 var Constants = require('./../utils/constants');
 var User = require('../models/user');
-var Log = require('../middlewares/log');
 var SocialUser = require('../utils/socialUser');
 var AuthService = require('../services/authService');
 
@@ -36,7 +35,8 @@ module.exports = function (app) {
     });
 
     function localStrategyHandler (req, email, password, next) {
-        Log.console('Evaluating account: ' + email);
+      console.log('evaluating email ' + email);
+      console.log('evaluating password ' + password);
         var normalizedEmail = _.isString(email) ? email.toLowerCase() : email;
 
         User.findOne({ email: normalizedEmail, state: User.State.ACTIVE }, function (err, user) {

@@ -1,6 +1,5 @@
 var _ = require('lodash');
 var auth = require('../middlewares/auth');
-var AuthService = require('./../services/authService');
 var constants = require('./../utils/constants');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
@@ -141,18 +140,17 @@ module.exports = function (app) {
          return;
        }
        if (user) {
-         if (AuthService.isPasswordCorrect(user.password, oldPwd)) {
+         if (oldPwd != user.password) {
+           res.status(http.BAD_REQUEST).send(httpErrors.AUTH_MISMATCH);
+         } else {
            // save new password
-           var hashedPwd = AuthService.generatePassword(req.body.new);
            User.update(
              { _id: req.session.userId }, // query
-             { password: hashedPwd }, // new password
+             { password: req.body.new }, // new password
              function() {
                 res.sendStatus(http.NO_CONTENT);
              }
            );
-         } else {
-           res.status(http.BAD_REQUEST).send(httpErrors.AUTH_MISMATCH);
          }
        } else {
          res.status(http.NOT_FOUND).send({error: httpErrors.USER_NOT_FOUND});
