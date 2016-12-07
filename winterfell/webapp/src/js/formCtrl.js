@@ -67,12 +67,14 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       function countAnswerable() {
         var total = 0;
         for (var i = 0; i < $scope.fields.length; i++) {
-          if ($scope.fields[i].hasOwnProperty('hideExpression')) {
-            if (!$scope.$eval($scope.fields[i].hideExpression)) {
+          if (!$scope.fields[i].templateOptions.optional) {
+            if ($scope.fields[i].hasOwnProperty('hideExpression')) {
+              if (!$scope.$eval($scope.fields[i].hideExpression)) {
+                total += 1;
+              }
+            } else {
               total += 1;
             }
-          } else {
-            total += 1;
           }
         }
         return total + 1; // Plus one for signature.
@@ -82,7 +84,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         var k, count = 0;
         for (k in $scope.fieldsByKey) {
           if ($scope.fieldsByKey.hasOwnProperty(k)) {
-            if ((model.hasOwnProperty(k) && model[k] !== '') || $scope.fieldsByKey[k].templateOptions.optional) {
+            if (model.hasOwnProperty(k) && model[k] !== '' && !$scope.fieldsByKey[k].templateOptions.optional) {
               count++;
             }
           }
@@ -91,6 +93,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         if (model.signature) {
           count++;
         }
+
         return count;
       }
 

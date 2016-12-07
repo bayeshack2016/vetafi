@@ -13,6 +13,8 @@ var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var log = require('../middlewares/log');
 var validObjectID = require('../middlewares/valid-objectid');
+var bulk = require('bulk-require');
+var formlyFields = bulk(__dirname + '/../forms/', ['*']);
 
 module.exports = function (app) {
   var mw = [auth.authenticatedOr404];
@@ -248,7 +250,7 @@ module.exports = function (app) {
 
   app.post('/api/save/:claim/:form', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
     var resolvedClaim;
-    var progress = ClaimService.calculateProgress(req.params.form, req.body);
+    var progress = ClaimService.calculateProgress(formlyFields[req.params.form], req.body);
 
     // Resolve the claim
     var promise = Claim.findOne({_id: req.params.claim});
@@ -274,8 +276,10 @@ module.exports = function (app) {
           responses: req.body,
           user: req.session.userId,
           claim: resolvedClaim._id,
-          answered: progress.answered,
-          answerable: progress.answerable,
+          optionalQuestions: progress.optionalQuestions,
+          requiredQuestions: progress.requiredQuestions,
+          answeredRequired: progress.answeredRequired,
+          answeredOptional: progress.answeredOptional,
           pdf: pdf
         },
         {
@@ -287,6 +291,10 @@ module.exports = function (app) {
     // Update the UserValues document for the user with the new form responses
     promise = promise.then(function (form) {
       return updateUserValuesFromForm(form);
+    }, function error(err) {
+      console.error(err.stack);
+      log.error('Error saving claim: ' + err);
+      res.sendStatus(http.INTERNAL_SERVER_ERROR);
     });
 
     // Update the User document with form responses that might be critical user
@@ -297,7 +305,7 @@ module.exports = function (app) {
 
     // Send 201 response (not sure if should be 200, but this endpoint creates multiple resources)
     promise.done(function success(user) {
-      log.info("updated user:", user);
+      log.info("Updated user:", user);
       res.sendStatus(http.CREATED);
     }, function failure(err) {
       console.error(err.stack);

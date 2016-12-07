@@ -6,6 +6,7 @@ var Form = require('./../models/form');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var Q = require('q');
+var log = require('../middlewares/log');
 
 var formlyFields = bulk(__dirname + '/../forms/', ['*']);
 
@@ -22,16 +23,20 @@ module.exports = ClaimService;
  * which requires evaluating the angular hideExpression attribute for
  * each field against the current responses.
  *
- * @param formId
- * @param data
- * @returns {{answerable: number, answered: number}}
+ * @param template Formly template from winterfell/forms
+ * @param data Object with form responses.
+ * @returns {requiredQuestions: number,
+ *           optionalQuestions: number,
+ *           answeredRequired: number,
+ *           answeredOptional: number}
  */
-function calculateProgress(formId, data) {
+function calculateProgress(template, data) {
   var evaluate, i;
-  var template = formlyFields[formId];
   var output = {
-    answerable: 1, // Signature always answerable
-    answered: _.size(data)
+    requiredQuestions: 1, // Signature always answerable
+    answeredRequired: 0,
+    optionalQuestions: 0,
+    answeredOptional: 0
   };
 
   if (!template) {
@@ -40,17 +45,38 @@ function calculateProgress(formId, data) {
 
   for (i = 0; i < template.fields.length; i++) {
     var field = template.fields[i];
+
+
     if (field.hasOwnProperty('hideExpression')) {
       evaluate = expressions.compile(field.hideExpression);
-      if (!evaluate({model: data}) || !field.templateOptions.optional) {
-        output.answerable += 1;
+      if (!evaluate({model: data})) {
+        if (field.templateOptions.optional) {
+          output.optionalQuestions += 1;
+        } else {
+          output.requiredQuestions += 1;
+        }
       }
     } else {
-      if (!field.templateOptions.optional) {
-        output.answerable += 1;
+      if (field.templateOptions.optional) {
+        output.optionalQuestions += 1;
+      } else {
+        output.requiredQuestions += 1;
+      }
+    }
+
+    if (data.hasOwnProperty(field.key) && data[field.key] !== '') {
+      if (field.templateOptions.optional) {
+        output.answeredOptional += 1;
+      } else {
+        output.answeredRequired += 1;
       }
     }
   }
+
+  log.info('Calculated progress: optionalQuestions=' + output.optionalQuestions +
+  ' requiredQuestions=' + output.requiredQuestions +
+  ' answeredOptional=' + output.answeredOptional +
+  ' answeredRequired=' + output.answeredRequired);
 
   return output;
 }
@@ -72,15 +98,17 @@ module.exports.findIncompleteClaimOrCreate = function (userId, forms, callback) 
         var promise = Q();
         forms.forEach(function (form) {
           console.log("Creating form " + form);
-          var progress = calculateProgress(form, {});
+          var progress = calculateProgress(formlyFields[form], {});
           promise = promise.then(function () {
             return Form.create({
               key: form,
               user: userId,
               responses: {},
               claim: claim._id,
-              answered: progress.answered,
-              answerable: progress.answerable
+              optionalQuestions: progress.optionalQuestions,
+              requiredQuestions: progress.requiredQuestions,
+              answeredRequired: progress.answeredRequired,
+              answeredOptional: progress.answeredOptional
             });
           })
         });
