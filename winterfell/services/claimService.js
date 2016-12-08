@@ -73,6 +73,10 @@ function calculateProgress(template, data) {
     }
   }
 
+  if (data.signature) {
+    output.answeredRequired += 1;
+  }
+
   log.info('Calculated progress: optionalQuestions=' + output.optionalQuestions +
   ' requiredQuestions=' + output.requiredQuestions +
   ' answeredOptional=' + output.answeredOptional +

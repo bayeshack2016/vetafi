@@ -54,37 +54,37 @@
   },
   {
     "pdfId": "F[0].Page_1[0].ClaimantSSN1[0]",
-    "elementId": "claimant_ssn",
+    "elementId": "veteran_ssn",
     "substringStart": 0,
     "substringEnd": 3
   },
   {
     "pdfId": "F[0].Page_1[0].ClaimantSSN4[0]",
-    "elementId": "claimant_ssn",
+    "elementId": "veteran_ssn",
     "substringStart": 4,
     "substringEnd": 6
   },
   {
     "pdfId": "F[0].Page_1[0].ClaimantSSN6[0]",
-    "elementId": "claimant_ssn",
+    "elementId": "veteran_ssn",
     "substringStart": 7,
     "substringEnd": 11
   },
   {
     "pdfId": "F[0].Page_1[0].VeteranSSN1[0]",
-    "elementId": "veteran_ssn",
+    "elementId": "claimant_ssn",
     "substringStart": 0,
     "substringEnd": 3
   },
   {
     "pdfId": "F[0].Page_1[0].VeteranSSN4[0]",
-    "elementId": "veteran_ssn",
+    "elementId": "claimant_ssn",
     "substringStart": 4,
     "substringEnd": 6
   },
   {
     "pdfId": "F[0].Page_1[0].VeteranSSN6[0]",
-    "elementId": "veteran_ssn",
+    "elementId": "claimant_ssn",
     "substringStart": 7,
     "substringEnd": 11
   },

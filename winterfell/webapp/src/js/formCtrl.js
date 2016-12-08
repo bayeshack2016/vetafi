@@ -3,11 +3,12 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService', '$stateParams', '$state', 'userValues', '$window', 'net',
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService',
+  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval',
     function ($scope, $filter, $rootScope, formTemplateService,
-              $stateParams, $state, userValues, $window, net) {
-      $scope.title = formTemplateService[$stateParams.formId].unofficialTitle;
-      $scope.description = formTemplateService[$stateParams.formId].unofficialDescription;
+              $stateParams, $state, userValues, $window, net, $interval) {
+      $scope.title = formTemplateService[$stateParams.formId].vfi.title;
+      $scope.description = formTemplateService[$stateParams.formId].vfi.description;
 
       $scope.$watch('signature', function (newVal) {
         if (newVal) {
@@ -30,7 +31,6 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       };
 
       $scope.onSubmit = function () {
-        console.log('onSubmit');
         save().then(
           function () {
             $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
@@ -52,6 +52,12 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       function save() {
         return net.saveForm($stateParams.claimId, $stateParams.formId, $scope.model);
       }
+
+      var saveIntervalPromise = $interval(save, 1000);
+      $scope.$on('$destroy', function() {
+        // Make sure that the interval is destroyed too
+        $interval.cancel(saveIntervalPromise)
+      });
 
       $scope.model = userValues.values.values; // TODO(jeff) fix extra attributes messing up completion percentage
       $scope.signature = $scope.model.signature;
@@ -104,8 +110,12 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         return ($scope.answered / $scope.answerable) * 100.0;
       };
 
-      $scope.$watch('model', function (newVal) {
-        $scope.answered = countAnswered(newVal);
-        $scope.answerable = countAnswerable(newVal);
+      $scope.updateProgress = function() {
+        $scope.answered = countAnswered($scope.model);
+        $scope.answerable = countAnswerable($scope.model);
+      };
+
+      $scope.$watch('model', function () {
+        $scope.updateProgress();
       }, true)
     }]);

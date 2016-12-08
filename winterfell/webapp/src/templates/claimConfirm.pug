@@ -69,8 +69,8 @@
       div.container-fluid
         div.row-wrapper.row(ng-repeat="form in formsList")
           h5.title.col-sm-5
-            b {{formsInfo[form.key].unofficialTitle}}
-          div.form-description.col-sm-7 {{formsInfo[form.key].unofficialDescription}}
+            b {{formsInfo[form.key].vfi.title}}
+          div.form-description.col-sm-7 {{formsInfo[form.key].vfi.summary}}
 
     div.button-wrapper
       button.back-btn(ui-sref="root.claimselect({claimId: claimId})") Back
