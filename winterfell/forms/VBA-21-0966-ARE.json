@@ -284,7 +284,7 @@
       "templateOptions": {
         "label": "Country",
         "placeholder": "US",
-        "autocomplete": "country-name"
+        "autocomplete": "country"
       }
     },
 
