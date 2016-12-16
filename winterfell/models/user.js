@@ -24,8 +24,8 @@ var UserSchema = new Schema({
   lastname: String,                   // Last name
   email: String,                      // Email address
   externalId: String,                 // External User Id
-  password: {type: String, select: false},      // Encrypted password
-  passwordSalt: {type: String, select: false},  // Password Salt for encrypting passwords
+  password: {type: String, select: false},      // Encrypted password, hide from app
+  passwordSalt: {type: String, select: false},  // Password Salt for encrypting passwords, hide from app
   state: String,                      // User.State
   stateUpdatedAt: Date,               // Date of last state modification
   socialUsers: [socialUserSchema],
