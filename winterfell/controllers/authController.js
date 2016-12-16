@@ -142,11 +142,12 @@ module.exports = function (app) {
        }
        if (user) {
          if (AuthService.isPasswordCorrect(user.password, oldPwd)) {
-           // save new password
-           var hashedPwd = AuthService.generatePassword(req.body.new);
+           // save new password, and save a new salt
+           var salt = AuthService.generatePasswordSalt();
+           var hashedPwd = AuthService.generatePassword(req.body.new, salt);
            User.update(
              { _id: req.session.userId }, // query
-             { password: hashedPwd }, // new password
+             { password: hashedPwd, passwordSalt: hashedPwd }, // new password
              function() {
                 res.sendStatus(http.NO_CONTENT);
              }

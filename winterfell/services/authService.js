@@ -5,14 +5,18 @@ var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var UserService = require('../services/userService');
 
-var salt = bcrypt.genSaltSync(10);
+var DEFAULT_SALT_ROUNDS = 10;
 
 function AuthService (app) {
     this.app = app;
 };
 
 module.exports = AuthService;
-module.exports.generatePassword = function(pwd) {
+module.exports.generatePasswordSalt = function() {
+  return bcrypt.genSaltSync(DEFAULT_SALT_ROUNDS);
+};
+
+module.exports.generatePassword = function(pwd, salt) {
   return bcrypt.hashSync(pwd, salt);
 };
 

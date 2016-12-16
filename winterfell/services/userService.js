@@ -38,7 +38,8 @@ module.exports.createNewUser = function(user, callback) {
     errorObj.msg = httpErrors.INVALID_PASSWORD;
   }
 
-  var hashedPwd = AuthService.generatePassword(password);
+  var salt = AuthService.generatePasswordSalt();
+  var hashedPwd = AuthService.generatePassword(password, salt);
   if (errorObj.code == 0) {
     var newUser = {
       firstname: null,
@@ -46,6 +47,7 @@ module.exports.createNewUser = function(user, callback) {
       lastname: null,
       email: email,
       password: hashedPwd,
+      passwordSalt: salt,
       admin: user.admin,
       test: user.test
     };

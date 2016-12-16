@@ -25,6 +25,7 @@ var UserSchema = new Schema({
   email: String,                      // Email address
   externalId: String,                 // External User Id
   password: String,                   // Encrypted password
+  passwordSalt: String,               // Password Salt for encrypting passwords
   state: String,                      // User.State
   stateUpdatedAt: Date,               // Date of last state modification
   socialUsers: [socialUserSchema],
@@ -55,6 +56,7 @@ UserSchema.statics.quickCreate = function(user, callback) {
     lastname: user.lastname,
     email: user.email,
     password: user.password,
+    passwordSalt: user.passwordSalt,
     externalId: uuid.v4(),
     state: User.State.ACTIVE,
     stateUpdatedAt: now,
