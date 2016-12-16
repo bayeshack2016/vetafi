@@ -135,7 +135,7 @@ module.exports = function (app) {
    */
    app.post('/api/auth/password', auth.authenticatedOr404, function(req, res) {
      var oldPwd = req.body.old;
-     User.findById(req.session.userId).exec(function(err, user) {
+     User.findOneWithPassword({_id: req.session.userId}).exec(function(err, user) {
        if (err) {
          res.sendStatus(http.INTERNAL_SERVER_ERROR);
          return;

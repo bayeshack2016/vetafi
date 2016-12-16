@@ -39,7 +39,8 @@ module.exports = function (app) {
         Log.console('Evaluating account: ' + email);
         var normalizedEmail = _.isString(email) ? email.toLowerCase() : email;
 
-        User.findOne({ email: normalizedEmail, state: User.State.ACTIVE }, function (err, user) {
+        var query = { email: normalizedEmail, state: User.State.ACTIVE };
+        User.findOneWithPassword(query).exec(function(err, user) {
             if (err) {
               return next(err);
             }
