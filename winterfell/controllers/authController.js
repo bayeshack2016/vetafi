@@ -1,6 +1,6 @@
 var _ = require('lodash');
 var auth = require('../middlewares/auth');
-var AuthService = require('./../services/authService');
+var AuthUtil = require('../utils/authUtil');
 var constants = require('./../utils/constants');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
@@ -141,10 +141,10 @@ module.exports = function (app) {
          return;
        }
        if (user) {
-         if (AuthService.isPasswordCorrect(user.password, oldPwd)) {
+         if (AuthUtil.isPasswordCorrect(user.password, oldPwd)) {
            // save new password, and save a new salt
-           var salt = AuthService.generatePasswordSalt();
-           var hashedPwd = AuthService.generatePassword(req.body.new, salt);
+           var salt = AuthUtil.generatePasswordSalt();
+           var hashedPwd = AuthUtil.generatePassword(req.body.new, salt);
            User.update(
              { _id: req.session.userId }, // query
              { password: hashedPwd, passwordSalt: hashedPwd }, // new password

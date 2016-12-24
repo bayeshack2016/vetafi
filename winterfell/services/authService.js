@@ -1,28 +1,14 @@
 var _ = require('lodash');
-var bcrypt = require('bcryptjs');
 var SocialUser = require('../utils/socialUser');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var UserService = require('../services/userService');
-
-var DEFAULT_SALT_ROUNDS = 10;
 
 function AuthService (app) {
     this.app = app;
 };
 
 module.exports = AuthService;
-module.exports.generatePasswordSalt = function() {
-  return bcrypt.genSaltSync(DEFAULT_SALT_ROUNDS);
-};
-
-module.exports.generatePassword = function(pwd, salt) {
-  return bcrypt.hashSync(pwd, salt);
-};
-
-module.exports.isPasswordCorrect = function (expectedPwd, candidatePwd) {
-  return bcrypt.compareSync(candidatePwd, expectedPwd);
-};
 
 /**
  * Helper method to handle any social logic.
