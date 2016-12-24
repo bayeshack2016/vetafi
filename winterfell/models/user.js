@@ -24,7 +24,8 @@ var UserSchema = new Schema({
   lastname: String,                   // Last name
   email: String,                      // Email address
   externalId: String,                 // External User Id
-  password: String,                   // Encrypted password
+  password: {type: String, select: false},      // Encrypted password, hide from app
+  passwordSalt: {type: String, select: false},  // Password Salt for encrypting passwords, hide from app
   state: String,                      // User.State
   stateUpdatedAt: Date,               // Date of last state modification
   socialUsers: [socialUserSchema],
@@ -55,6 +56,7 @@ UserSchema.statics.quickCreate = function(user, callback) {
     lastname: user.lastname,
     email: user.email,
     password: user.password,
+    passwordSalt: user.passwordSalt,
     externalId: uuid.v4(),
     state: User.State.ACTIVE,
     stateUpdatedAt: now,
@@ -76,3 +78,10 @@ var User = mongoose.model('User', UserSchema);
 module.exports = User;
 module.exports.Schema = UserSchema;
 module.exports.State = State;
+
+// By default, password and passwordSalt should not be revealed to the rest of the app.
+// However, for several authentication purposes, we'll need to compare passwords
+// in which case, the password needs to be selected from db
+module.exports.findOneWithPassword = function(query) {
+  return User.findOne(query).select('+password +passwordSalt');
+};

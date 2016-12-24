@@ -1,31 +1,31 @@
 'use strict';
+var csrfTestUtils = require('./csrfTestUtils');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var session = require('supertest-session');
 var should = require('should');
 var User = require('../models/user');
+var UserService = require('./../services/userService');
 var uuid = require('uuid');
-var csrfTestUtils = require('./csrfTestUtils');
 
 describe('UserController', function() {
   var targetUser;
   var server;
   var testSession;
   var csrfToken;
+  var originalPwd = 'qwerasdf';
 
   before(function () {
     server = require('../app');
     testSession = session(server);
 
     User.remove({}, function() {
-      User.create({
+      UserService.createNewUser({
         firstname: 'Sir',
         middlename: 'Moose',
         lastname: 'Alot',
         email: 'sirmoosealot@test.com',
-        password: 'qwerasdf',
-        externalId: uuid.v4(),
-        state: User.State.ACTIVE
+        password: originalPwd
       }, function(err, user) {
         targetUser = user;
       });
@@ -54,7 +54,7 @@ describe('UserController', function() {
       .end(function(err, res) {
         csrfToken = csrfTestUtils.getCsrf(res);
         testSession.post('/api/auth/login')
-          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
+          .send({email: targetUser.email, password: originalPwd, _csrf: csrfToken})
           .expect(http.MOVED_TEMPORARILY, done);
       });
   });

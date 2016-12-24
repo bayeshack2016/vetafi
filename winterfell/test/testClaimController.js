@@ -37,20 +37,22 @@ describe('ClaimController', function() {
   var server;
   var testSession;
   var csrfToken;
+  var originalPwd = 'qwerasdf';
+
+  var userInput = {
+    firstname: 'Sir',
+    middlename: 'Moose',
+    lastname: 'Alot',
+    email: 'sirmoosealot@test.com',
+    password: originalPwd
+  };
 
   before(function(done) {
     server = require('../app');
     testSession = session(server);
 
     User.remove({}, function() {
-      User.create({
-        firstname: 'Sir',
-        middlename: 'Moose',
-        lastname: 'Alot',
-        email: 'sirmoosealot@test.com',
-        password: 'qwerasdf',
-        state: User.State.ACTIVE
-      }, function(err, user) {
+      UserService.createNewUser(userInput, function(err, user) {
         targetUser = user;
         done();
       });
@@ -73,7 +75,7 @@ describe('ClaimController', function() {
       .end(function(err, res) {
         csrfToken = csrfTestUtils.getCsrf(res);
         testSession.post('/api/auth/login')
-          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
+          .send({email: targetUser.email, password: originalPwd, _csrf: csrfToken})
           .expect(http.MOVED_TEMPORARILY, done);
       });
   });
@@ -199,6 +201,7 @@ describe('ClaimController', function() {
 
 describe('SaveClaimController', function () {
   var testSession, server, targetUser, targetClaim, csrfToken;
+  var originalPwd = 'qwerasdf';
 
   before(function (done) {
     this.timeout(20000);
@@ -221,10 +224,9 @@ describe('SaveClaimController', function () {
         firstname: 'User1',
         lastname: 'McUser',
         email: 'user1@email.com',
-        password: 'testword',
-        state: User.State.ACTIVE
+        password: originalPwd
       };
-      return User.create(user);
+      return UserService.createNewUser(user);
     });
 
     promise = promise.then(function (user) {
@@ -264,13 +266,12 @@ describe('SaveClaimController', function () {
       .end(function(err, res) {
         csrfToken = csrfTestUtils.getCsrf(res);
         testSession.post('/api/auth/login')
-          .send({email: targetUser.email, password: targetUser.password, _csrf: csrfToken})
+          .send({email: targetUser.email, password: originalPwd, _csrf: csrfToken})
           .expect(http.MOVED_TEMPORARILY, done);
       });
   });
 
   it('Should save the claim form after signin', function(done) {
-    console.log(targetClaim);
     testSession
       .post('/api/save/' + targetClaim._id + '/VBA-21-0966-ARE')
       .set('X-XSRF-TOKEN', csrfToken)
@@ -350,11 +351,11 @@ describe('SaveClaimController', function () {
         User.findOne({_id: targetUser._id}, function(error, user) {
           should.not.exist(error);
           should.exist(user);
-          user.firstname.should.equal('User1');
+          user.firstname.should.equal('joe');
           user.contact.address.city.should.equal('city1');
           done();
         })
-      })
+      });
   });
 
   it('Should retrieve the rendered form after save', function(done) {
