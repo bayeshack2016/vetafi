@@ -25,6 +25,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     templateUrl: 'templates/root.html',
     controller: 'headerCtrl',
     resolve: {
+      user: ['Profile', function (Profile) {
+        return Profile.resolveUser();
+      }],
       userClaims: ['net', '$q', 'claimService', function(net, $q, claimService) {
         var deferred = $q.defer();
         net.getClaimsForUser().then(
@@ -51,14 +54,6 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     url: '',
     templateUrl: 'templates/home.html',
     controller: 'homeCtrl'
-  });
-
-  // FAQ
-  $stateProvider.state({
-    name: 'root.faq',
-    url: '/faq',
-    templateUrl: 'templates/faq.html',
-    controller: 'faqCtrl'
   });
 
   // Settings
@@ -233,4 +228,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
       }]
     }
   });
+
+  // Misc. Pages
+  $stateProvider.state({
+    name: 'root.faq',
+    url: '/faq',
+    templateUrl: 'templates/faq.html',
+    controller: 'faqCtrl'
+  });
+
+  $stateProvider.state({
+    name: 'root.aboutus',
+    url: '/about-us',
+    templateUrl: 'templates/aboutus.html'
+  });
+
 }]);

@@ -17,6 +17,13 @@ var enforce = require('express-sslify');
 // Initialize App
 var app = express();
 app.use(helmet());
+
+// Log errors
+app.use(function (err, req, res, next) {
+  console.error(err.stack);
+  next(err);
+});
+
 app.environment = environment;
 app.baseUrl = Constants.baseUrl[app.environment];
 console.log("App created.");

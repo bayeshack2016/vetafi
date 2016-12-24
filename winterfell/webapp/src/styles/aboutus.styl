@@ -1,0 +1,53 @@
+@import "standards.styl"
+
+profileWrapperSize = 160px
+
+#vfi-aboutus-view
+  padding: megaSpacing 0
+  background-color: colorWhite
+
+  & .aboutus-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+
+  & .intro-wrapper
+  & .team-wrapper
+    margin-bottom: megaSpacing
+
+    & h3
+      margin-bottom: smallSpacing
+      color: colorPrimaryBlue
+
+  & .card-wrapper
+    margin-bottom: mediumSpacing
+
+    & .content-wrapper
+      @media screen and (max-width: maxWindowWidthPx)
+        margin-top: smallSpacing
+
+  & .profile-back
+    position: relative
+    width: profileWrapperSize
+    height: profileWrapperSize
+    border-radius: 50%
+    background: colorPrimaryDarkBlue
+
+  & .profile-pic
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: calc(100% - 6px)
+    height: calc(100% - 6px)
+    border-radius: 50%
+
+    &.aaron
+      background-image: url('../icons/portraits/aaron.jpg')
+      background-size: cover
+      background-repeat: no-repeat
+
+    &.jeff
+      background-image: url('../icons/portraits/jeff.jpg')
+      background-size: cover
+      background-repeat: no-repeat

@@ -3,12 +3,12 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService', '$stateParams', '$state', 'userValues', '$window', 'net',
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService',
+  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval',
     function ($scope, $filter, $rootScope, formTemplateService,
-              $stateParams, $state, userValues, $window, net) {
-
-      $scope.title = formTemplateService[$stateParams.formId].unofficialTitle;
-      $scope.description = formTemplateService[$stateParams.formId].unofficialDescription;
+              $stateParams, $state, userValues, $window, net, $interval) {
+      $scope.title = formTemplateService[$stateParams.formId].vfi.title;
+      $scope.description = formTemplateService[$stateParams.formId].vfi.description;
 
       $scope.$watch('signature', function (newVal) {
         if (newVal) {
@@ -31,7 +31,6 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       };
 
       $scope.onSubmit = function () {
-        console.log('onSubmit');
         save().then(
           function () {
             $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
@@ -54,11 +53,16 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         return net.saveForm($stateParams.claimId, $stateParams.formId, $scope.model);
       }
 
+      var saveIntervalPromise = $interval(save, 1000);
+      $scope.$on('$destroy', function() {
+        // Make sure that the interval is destroyed too
+        $interval.cancel(saveIntervalPromise)
+      });
+
       $scope.model = userValues.values.values; // TODO(jeff) fix extra attributes messing up completion percentage
       $scope.signature = $scope.model.signature;
-      console.log($scope);
       $scope.fields = formTemplateService[$stateParams.formId].fields;
-
+      $scope.fieldsByKey = _.keyBy(formTemplateService[$stateParams.formId].fields, 'key');
 
       for (var i = 0; i < $scope.fields.length; i++) {
         if ($scope.fields[i].key.indexOf('date_signed') !== -1) {
@@ -69,25 +73,33 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       function countAnswerable() {
         var total = 0;
         for (var i = 0; i < $scope.fields.length; i++) {
-          if ($scope.fields[i].hasOwnProperty('hideExpression')) {
-            if (!$scope.$eval($scope.fields[i].hideExpression)) {
+          if (!$scope.fields[i].templateOptions.optional) {
+            if ($scope.fields[i].hasOwnProperty('hideExpression')) {
+              if (!$scope.$eval($scope.fields[i].hideExpression)) {
+                total += 1;
+              }
+            } else {
               total += 1;
             }
-          } else {
-            total += 1;
           }
         }
         return total + 1; // Plus one for signature.
       }
 
       function countAnswered(model) {
-        console.log(model);
         var k, count = 0;
-        for (k in model) {
-          if (model.hasOwnProperty(k)) {
-            count++;
+        for (k in $scope.fieldsByKey) {
+          if ($scope.fieldsByKey.hasOwnProperty(k)) {
+            if (model.hasOwnProperty(k) && model[k] !== '' && !$scope.fieldsByKey[k].templateOptions.optional) {
+              count++;
+            }
           }
         }
+
+        if (model.signature) {
+          count++;
+        }
+
         return count;
       }
 
@@ -98,8 +110,12 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         return ($scope.answered / $scope.answerable) * 100.0;
       };
 
-      $scope.$watch('model', function (newVal) {
-        $scope.answered = countAnswered(newVal);
-        $scope.answerable = countAnswerable(newVal);
+      $scope.updateProgress = function() {
+        $scope.answered = countAnswered($scope.model);
+        $scope.answerable = countAnswerable($scope.model);
+      };
+
+      $scope.$watch('model', function () {
+        $scope.updateProgress();
       }, true)
     }]);
