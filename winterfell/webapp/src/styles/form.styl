@@ -34,8 +34,9 @@
     right: 0;
 
 #vfi-form-view
-  margin-left: 10%
-  margin-right: 10%
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto 8em
 
   & .form-submit-button-group
     margin-top: 3vh
@@ -46,6 +47,25 @@
   & .form-name
     white-space: nowrap
     margin-right: 20px
+
+  & button
+    &.clear-signature
+      background-color: colorPurple
+      color: colorWhite
+
+    &.submit
+      float: right
+      background-color: colorGreen
+      color: colorWhite
+
+      &.disabled
+        background-color: colorLightGray
+        color: colorBlack
+
+    &.download
+    &.save
+      float: left
+      margin: 0 miniSpacing
 
 .floating-progress
   position: fixed
@@ -80,4 +100,3 @@ div.has-success::before
   right: 35px
   top: 60px
   margin-top: -25px
-

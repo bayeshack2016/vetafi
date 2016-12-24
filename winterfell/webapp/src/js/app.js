@@ -38,7 +38,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
             }
             deferred.resolve(res.data);
           }, function failure(res) {
-            deferred.reject();
+            deferred.resolve(null);
           }
         );
         return deferred.promise;
