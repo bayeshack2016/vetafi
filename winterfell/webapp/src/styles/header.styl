@@ -108,12 +108,17 @@
       cursor: pointer
 
 #banner
-  background: colorDarkGray
   width: 100%
   height: 5vh
+  background: colorDarkGray
   color: colorWhite
   overflow-x: hidden
 
+  & .banner-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+
   & h5
-    text-align: center
+    text-align: left
     line-height: 5vh
