@@ -4,7 +4,7 @@ app.service('vaService', function () {
   this.vaAddress = {
     street1: 'Somewhere Street',
     city: 'Washington',
-    province: 'D.C.',
+    province: 'DC',
     country: 'US',
     postal: '20854',
     name: 'Department of Veteran Affairs'

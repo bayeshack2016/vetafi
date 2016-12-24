@@ -6,9 +6,9 @@
         h5 {{section.header}}
         p(ng-repeat = "paragraph in section.paragraphs") {{paragraph}}
 
-    div(ng-if="!atTosPage")
+    div(ng-show="!atTosPage")
       div.vfi-checkbox
-        input(type="checkbox", name="accept", ng-model="accept")
+        input(type="checkbox" name="accept" ng-model="accept")
         | I have read this Agreement and agree to the terms and conditions.
       div.vfi-error-msg
 
