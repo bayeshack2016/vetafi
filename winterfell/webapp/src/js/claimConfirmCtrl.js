@@ -1,7 +1,7 @@
 var app = angular.module('vetafiApp');
 app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '$uibModal', 'userValues', 'forms', 'formTemplateService',
-  'user', 'vaService',
-  function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formTemplateService, user, vaService) {
+  'user', 'vaService', 'claimService',
+  function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formTemplateService, user, vaService, claimService) {
     $scope.claimId = $stateParams.claimId;
     $scope.vaAddress = vaService.getAddress();
     $scope.user = user.user || {};
@@ -75,6 +75,7 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
         .then(function (resp) {
           // todo: set claim state or re-fetch all user claims?
           if (resp) {
+            claimService.submitCurrentClaim();
             $state.go("root.claimsubmit", {claimId: $stateParams.claimId});
           } else {
             $state.go("root.claimsubmit", {claimId: $stateParams.claimId, error: 'missing'});
