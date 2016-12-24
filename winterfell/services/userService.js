@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var AuthService = require('./authService');
+var AuthUtil = require('../utils/authUtil');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
 var SocialUser = require('./../utils/socialUser');
@@ -38,8 +38,8 @@ module.exports.createNewUser = function(user, callback) {
     errorObj.msg = httpErrors.INVALID_PASSWORD;
   }
 
-  var salt = AuthService.generatePasswordSalt();
-  var hashedPwd = AuthService.generatePassword(password, salt);
+  var salt = AuthUtil.generatePasswordSalt();
+  var hashedPwd = AuthUtil.generatePassword(password, salt);
   if (errorObj.code == 0) {
     var newUser = {
       firstname: null,

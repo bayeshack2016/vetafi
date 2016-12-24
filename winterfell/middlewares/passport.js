@@ -10,6 +10,7 @@ var User = require('../models/user');
 var Log = require('../middlewares/log');
 var SocialUser = require('../utils/socialUser');
 var AuthService = require('../services/authService');
+var AuthUtil = require('../utils/authUtil');
 
 module.exports = function (app) {
     app.use(passport.initialize());
@@ -49,7 +50,7 @@ module.exports = function (app) {
               return next(null, false, httpErrors.AUTH_MISMATCH); // email does not match
             }
 
-            if (AuthService.isPasswordCorrect(user.password, password)) {
+            if (AuthUtil.isPasswordCorrect(user.password, password)) {
               return next(null, user);
             } else {
               return next(null, false, httpErrors.AUTH_MISMATCH); // password does not match
