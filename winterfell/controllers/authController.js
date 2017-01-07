@@ -105,8 +105,7 @@ module.exports = function (app) {
       if (req.user) {
         req.session.key = req.body.email;
         req.session.userId = req.user._id;
-        var extUserId = req.user.externalId;
-        res.status(http.MOVED_TEMPORARILY).send({userId: extUserId, redirect: '/'});
+        res.redirect('/');
       }
   });
 
