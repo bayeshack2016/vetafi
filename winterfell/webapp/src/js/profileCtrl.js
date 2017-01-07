@@ -58,15 +58,6 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
       $window.location.href = net.getAuthIdMeUrl();
     };
 
-    $scope.clickLogout = function() {
-      net.logout().then(function(resp) {
-        Profile.logout();
-        if (resp.status == 200) {
-          $location.path('/');
-        }
-      });
-    };
-
     $scope.clickDeleteAccount = function() {
       var newScope = $scope.$new(true);
       newScope.headline = "Delete Account";
