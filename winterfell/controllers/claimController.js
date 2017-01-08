@@ -225,18 +225,13 @@ module.exports = function (app) {
 
     promise = promise.then(function success(user) {
       _.map(USER_VALUES_TO_USER_PROPERTIES_MAPPING, function(userValuesOptions, userPath) {
-        var val = _.get(user, userPath);
-        if (!val) {
-          var userValuesDerivedValues = _.filter(_.map(userValuesOptions, function(option) {
-            return resolveUserValuesOption(option, userValues);
-          }));
+        var userValuesDerivedValues = _.filter(_.map(userValuesOptions, function(option) {
+          return resolveUserValuesOption(option, userValues);
+        }));
 
-          if (!_.isEmpty(userValuesDerivedValues)) {
-            console.log("Setting " + userPath + " to " + userValuesDerivedValues[0]);
-            _.set(user, userPath, userValuesDerivedValues[0]);
-          }
-        } else {
-          console.log("Refuse to overwrite existing value for " + userPath);
+        if (!_.isEmpty(userValuesDerivedValues)) {
+          console.log("Setting " + userPath + " to " + userValuesDerivedValues[0]);
+          _.set(user, userPath, userValuesDerivedValues[0]);
         }
       });
 
