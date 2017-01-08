@@ -18,6 +18,10 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
       return form.vfi && form.vfi.required ? 1 : 0;
     }));
 
+    $scope.isCompletedForm = function(myForm) {
+      return myForm && myForm.answeredRequired > 0 && myForm.answeredRequired >= myForm.requiredQuestions;
+    };
+
     $scope.onClickCancel = function() {
       $state.go('root.home');
     };

@@ -6,6 +6,11 @@ app.factory('claimService', [
       state: undefined,
       tosAccepted: false
     };
+    var state = {
+      INCOMPLETE: 'incomplete',
+      SUBMITTED: 'submitted',
+      DISCARDED: 'discarded'
+    };
     return {
       /*
        * This is used to track front-end properties
@@ -20,16 +25,16 @@ app.factory('claimService', [
         this.currentClaim.tosAccepted = true;
       },
       createNewClaim: function() {
-        this.currentClaim.state = 'incomplete';
+        this.currentClaim.state = state.INCOMPLETE;
       },
       hasIncompleteClaim: function() {
-        return this.currentClaim ? this.currentClaim.state == 'incomplete' : false;
+        return this.currentClaim ? this.currentClaim.state == state.INCOMPLETE : false;
       },
       submitCurrentClaim: function() {
-        this.currentClaim.state = 'submitted';
+        this.currentClaim.state = state.SUBMITTED;
       },
       discardCurrentClaim: function() {
-        this.currentClaim.state = 'discarded';
+        this.currentClaim.state = state.DISCARDED;
         this.currentClaim.tosAccepted = false;
       },
       acceptedTos: function() {

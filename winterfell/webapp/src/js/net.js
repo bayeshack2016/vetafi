@@ -24,20 +24,6 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
   };
 
   return {
-    // Auth
-    login: function (email, password) {
-      var data = {
-        email: email,
-        password: password
-      };
-      return httpPost("/auth/login", data);
-    },
-    logout: function() {
-      return httpGet("/auth/logout");
-    },
-    signup: function(userData) {
-      return httpPost("/auth/signup", userData);
-    },
     touchSession: function() {
       return httpGet("/session/touch");
     },

@@ -19,7 +19,7 @@
         div.down-arrow-icon
       div.collapse-wrapper.email(uib-collapse="!isEmailCollapsed")
         ul
-          li(ng-repeat="email in claim.emails") {{email}}
+          li(ng-repeat="email in claim.sentTo.emails") {{email}}
 
       div.line(ng-click="isAddressCollapsed = !isAddressCollapsed", ng-class="{'collapsed': isAddressCollapsed}")
         div.icon-wrapper
@@ -28,7 +28,7 @@
         div.down-arrow-icon
       div.collapse-wrapper.address(uib-collapse="!isAddressCollapsed")
         ul
-          li(ng-repeat="address in claim.addresses")
+          li(ng-repeat="address in claim.sentTo.addresses")
             div
               b {{address.name}}
             div {{address.street1}} {{address.street2}}
@@ -42,7 +42,7 @@
         div.form-header
           div.form-id {{form.key}}
           div.form-title {{form.name}}
-        a(ng-href="/api/claim/{{claimId}}/form/{{form.key}}/pdf")
+        a(ng-href="/claim/{{claimId}}/form/{{form.key}}/pdf")
           button
             div.download-icon
             | Download
