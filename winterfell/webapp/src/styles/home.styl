@@ -1,7 +1,8 @@
 @import "standards.styl"
 
-mainWrapperSize = 250px
-innerWrapperSize = 80px
+mainWrapperSize = 200px
+innerWrapperSize = 60px
+actionWindowMaxPx = 767px // Hack for media screen. Minor conflicts between media screening and bootstrap columns
 
 #vfi-home-view
   background-color: colorWhite
@@ -68,7 +69,7 @@ innerWrapperSize = 80px
       padding-left: 30px
       text-align: left
 
-      @media screen and (max-width: maxWindowWidthPx)
+      @media screen and (max-width: actionWindowMaxPx)
         text-align: center
 
       & h4
@@ -88,7 +89,7 @@ innerWrapperSize = 80px
       &.left-align
         float: left
 
-      @media screen and (max-width: maxWindowWidthPx)
+      @media screen and (max-width: actionWindowMaxPx)
         margin: largeSpacing auto
         float: initial !important
 
@@ -99,14 +100,14 @@ innerWrapperSize = 80px
       transform: translate(-50%, -50%)
 
       &.folder
-        width: 180px
-        height: 180px
+        width: 140px
+        height: 140px
         background: url('../icons/folder.svg')
         background-size: cover
         background-repeat: no-repeat
       &.health
-        width: 110px
-        height: 110px
+        width: 90px
+        height: 90px
         background: url('../icons/health-white.svg')
         background-size: cover
         background-repeat: no-repeat
@@ -137,14 +138,14 @@ innerWrapperSize = 80px
         transform: translate(-50%, -50%)
 
         &.checkmark
-          width: 30px
-          height: 30px
+          width: 25px
+          height: 25px
           background: url('../icons/checkmark-white.svg')
           background-size: cover
           background-repeat: no-repeat
         &.question
-          width: 10px
-          height: 30px
+          width: 7px
+          height: 22px
           background: url('../icons/info-white.svg')
           background-size: cover
           background-repeat: no-repeat

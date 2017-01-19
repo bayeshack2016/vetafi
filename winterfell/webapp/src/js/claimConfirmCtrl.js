@@ -73,13 +73,12 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
       };
       net.submitClaim($stateParams.claimId, data)
         .then(function (resp) {
-          // todo: set claim state or re-fetch all user claims?
           if (resp) {
             claimService.submitCurrentClaim();
             $state.go("root.claimsubmit", {claimId: $stateParams.claimId});
-          } else {
-            $state.go("root.claimsubmit", {claimId: $stateParams.claimId, error: 'missing'});
           }
+        }).catch(function (data) {
+          $state.go("root.claimsubmit", {claimId: $stateParams.claimId, error: 'unknown'});
         });
     };
   }
