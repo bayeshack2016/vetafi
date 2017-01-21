@@ -1,7 +1,7 @@
 var app = angular.module('vetafiApp');
 app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '$uibModal', 'userValues', 'forms', 'formTemplateService',
-  'user', 'vaService', 'claimService',
-  function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formTemplateService, user, vaService, claimService) {
+  'user', 'vaService', 'claimService', '$filter',
+  function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formTemplateService, user, vaService, claimService, $filter) {
     $scope.claimId = $stateParams.claimId;
     $scope.vaAddress = vaService.getAddress();
     $scope.user = user.user || {};
