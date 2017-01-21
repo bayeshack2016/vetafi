@@ -243,4 +243,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     templateUrl: 'templates/aboutus.html'
   });
 
+  $stateProvider.state({
+    name: 'root.support',
+    url: '/support',
+    templateUrl: 'templates/support.html',
+    controller: 'supportCtrl'
+  });
+
 }]);
