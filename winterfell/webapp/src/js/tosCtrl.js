@@ -5,7 +5,6 @@ app.controller('tosCtrl', ['$scope', '$location', 'claimService',
     $scope.accept = false;
 
     $scope.onAccept = function() {
-      console.log($scope);
       if ($scope.accept) {
         claimService.acceptTos(true);
         if (typeof $scope.$close !== 'undefined') {
@@ -17,7 +16,6 @@ app.controller('tosCtrl', ['$scope', '$location', 'claimService',
     };
 
     $scope.onDecline = function() {
-      console.log($scope);
       $scope.$close();
       $location.path('/');
     };
