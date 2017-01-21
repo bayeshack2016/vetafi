@@ -23,7 +23,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       }
 
       $scope.onRender = function () {
-        save().then(
+        save(true).then(
           function success() {
             $window.location.href = '/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf';
           }
