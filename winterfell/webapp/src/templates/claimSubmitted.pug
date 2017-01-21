@@ -10,6 +10,7 @@
     div.message.error(ng-show="rejected")
       p Sorry, but it seems like your claim was rejected. You may either:
       ul
+        li Click #[a(ui-sref="root.claimconfirm({claimId: claimId})") here] to double-check that your information is correct.
         li #[a(href="#/contact") Contact us] for additional help.
         li Download your claim #[a(ui-sref="root.profile.claims") here] to bring to your nearest Veterans Affairs branch.
 

@@ -171,7 +171,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
   $stateProvider.state({
     name: 'root.claimsubmit',
-    url: '/claim/{claimId}/submit',
+    url: '/claim/{claimId}/submit?error',
     templateUrl: 'templates/claimSubmitted.html',
     controller: 'claimSubmittedCtrl'
   });
