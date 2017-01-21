@@ -1,7 +1,7 @@
 var app = angular.module('vetafiApp');
 app.controller('claimStartCtrl', ['$scope', '$state', 'net', 'claimService', '$uibModal', 'Profile',
   function ($scope, $state, net, claimService, $uibModal, Profile) {
-    $scope.isLoggedIn = Profile.isSetUser();
+    $scope.isSignedIn = Profile.isSetUser();
 
     function getTosAgreement() {
       return $uibModal.open({

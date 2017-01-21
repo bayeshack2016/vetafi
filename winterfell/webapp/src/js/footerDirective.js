@@ -4,7 +4,7 @@ app.directive('vfiFooter', ['Profile', function (Profile) {
     restrict: 'E',
     templateUrl: '../templates/footer.html',
     link: function(scope) {
-      scope.isLoggedIn = Profile.isSetUser();
+      scope.isSignedIn = Profile.isSetUser();
     }
   };
 }]);
