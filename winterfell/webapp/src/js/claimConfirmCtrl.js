@@ -13,6 +13,7 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
         email: $scope.userEmail
       }
     ];
+    $scope.dateToday = $filter('date')(new Date(), 'MM/dd/yyyy');
 
     $scope.formsList = forms;
     $scope.formsInfo = formTemplateService;
@@ -76,6 +77,8 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
           if (resp) {
             claimService.submitCurrentClaim();
             $state.go("root.claimsubmit", {claimId: $stateParams.claimId});
+          } else {
+            $state.go("root.claimsubmit", {claimId: $stateParams.claimId, error: 'unknown'});
           }
         }).catch(function (data) {
           $state.go("root.claimsubmit", {claimId: $stateParams.claimId, error: 'unknown'});
