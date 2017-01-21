@@ -31,7 +31,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       };
 
       $scope.onSubmit = function () {
-        save().then(
+        save(true).then(
           function () {
             $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
               function success() {
@@ -44,13 +44,15 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       };
 
       $scope.onSave = function () {
-        save().then(function (response) {
-          console.log(response);
-        });
+        save(true)
       };
 
-      function save() {
-        return net.saveForm($stateParams.claimId, $stateParams.formId, $scope.model);
+      var lastParams = null;
+      function save(force) {
+        if (lastParams == null || !_.isEqual(lastParams, $scope.model) || force === true) {
+          lastParams = _.clone($scope.model);
+          return net.saveForm($stateParams.claimId, $stateParams.formId, $scope.model);
+        }
       }
 
       var saveIntervalPromise = $interval(save, 1000);

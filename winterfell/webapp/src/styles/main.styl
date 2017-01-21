@@ -101,3 +101,23 @@ body
 		font-weight: lead_weight
 		font-size: lead_size
 		line-height: lead_lineHeight
+
+#busy-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: grey;
+  opacity: .8;
+}
+
+.busy-spinner {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  display: block;
+}

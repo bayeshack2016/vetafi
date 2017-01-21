@@ -31,12 +31,12 @@
             | No need to start over!
 
     div.proceed-wrapper
-      div(ng-show="isLoggedIn")
+      div(ng-show="isSignedIn")
         h4.proceed Are you ready to proceed?
         button.proceed-btn(ng-click="onClickNext()")
           | Proceed
           div.next-icon
-      div(ng-show="!isLoggedIn")
+      div(ng-show="!isSignedIn")
         h4.signup You must sign into an account to continue
         a(href='/signup')
           button.signup-btn

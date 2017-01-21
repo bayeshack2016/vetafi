@@ -29,8 +29,12 @@ app.service('Profile', ['claimService', '$q', 'net', function(claimService, $q, 
 
       var that = this;
       net.getUserInfo().then(function success(res) {
-        that.setUser(res.data);
-        deferred.resolve(res.data);
+        if (res.status === 200) {
+          that.setUser(res.data);
+          deferred.resolve(res.data);
+        } else {
+          deferred.resolve(null);
+        }
       }, function failure() {
         // Eventually this should be failure
         // and we should handle a redirect to the login page
