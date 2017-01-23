@@ -140,6 +140,9 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     templateUrl: 'templates/claimConfirm.html',
     controller: 'claimConfirmCtrl',
     resolve: {
+      user: ['Profile', function (Profile) {
+        return Profile.resolveUser();
+      }],
       userValues: ['net', '$q', function(net, $q) {
         var deferred = $q.defer();
 
