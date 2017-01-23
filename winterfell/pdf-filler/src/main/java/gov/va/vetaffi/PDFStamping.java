@@ -34,6 +34,14 @@ public class PDFStamping {
                 (float) rectVals[3]);
     }
 
+    private static Rectangle get2xRectangleForField(AcroFields fields, String key) {
+        double[] rectVals = fields.getFieldItem(key).getValue(0).getAsArray(PdfName.RECT).asDoubleArray();
+        return new Rectangle((float) rectVals[0],
+                (float) (rectVals[1] - ((rectVals[3] - rectVals[1]) / 2)),
+                (float) rectVals[2],
+                (float) (rectVals[3] + ((rectVals[3] - rectVals[1]) / 2)));
+    }
+
     private static void placeImageInRectangle(Image image, Rectangle rectangle) {
         float x = rectangle.getLeft();
         float y = rectangle.getBottom();
@@ -144,7 +152,7 @@ public class PDFStamping {
                                       String key,
                                       String base64Image) throws DocumentException, IOException {
         Image image = Image.getInstance(Base64.getDecoder().decode(base64Image.split(",")[1]));
-        Rectangle rectangle = getRectangleForField(acroFields, key);
+        Rectangle rectangle = get2xRectangleForField(acroFields, key);
         placeImageInRectangle(image, rectangle);
         stamper.getOverContent(getPageForField(acroFields, key)).addImage(image);
     }
