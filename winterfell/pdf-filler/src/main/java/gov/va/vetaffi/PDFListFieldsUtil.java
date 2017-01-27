@@ -9,9 +9,12 @@ import com.itextpdf.text.pdf.AcroFields;
 import com.itextpdf.text.pdf.PdfName;
 import com.itextpdf.text.pdf.PdfReader;
 import com.itextpdf.text.pdf.PdfStamper;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.output.NullOutputStream;
 import org.json.simple.JSONObject;
 
+import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +45,7 @@ public class PDFListFieldsUtil {
     };
 
     public static void main(String args[]) throws Exception {
-        InputStream pdfTemplate =
-                PDFStreamingOutput.class.getClassLoader().getResourceAsStream(args[0]);
+        InputStream pdfTemplate = FileUtils.openInputStream(new File(args[0]));
         PdfReader reader = new PdfReader(pdfTemplate);
         PdfStamper stamper;
         try {

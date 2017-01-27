@@ -121,10 +121,12 @@ public class PDFStamping {
         try {
             Map<String, String> stringStringMap = PDFMapping.mapStringValues(fields, pdfFieldLocators);
             for (Map.Entry<String, String> entry : stringStringMap.entrySet()) {
+                logger.info("Stamping text: " + entry.getKey() + " with " + entry.getValue());
                 stampText(entry.getKey(), entry.getValue(), form, stamper);
             }
             Map<String, Boolean> stringBoolMap = PDFMapping.mapCheckboxValues(fields, pdfFieldLocators);
             for (Map.Entry<String, Boolean> entry : stringBoolMap.entrySet()) {
+                logger.info("Stamping checkbox: " + entry.getKey() + " with " + entry.getValue());
                 stampCheckbox(entry.getKey(), entry.getValue(), form, stamper, reader);
             }
             Map<String, String> imageMap = PDFMapping.mapBase64ImageBlogValues(fields, pdfFieldLocators);

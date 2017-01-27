@@ -69,7 +69,7 @@ public class PDFStampingTest {
                         new PDFField("signature", SIGNATURE)
                 ),
                 Lists.newArrayList(
-                        new PDFFieldLocator("F[0].Page_1[0].SignatureOfClaimant_AuthorizedRepresentative[0]",
+                        new PDFFieldLocator("F[0].Page_1[0].SignatureField1[0]",
                                 "signature", 0, null, null, null, true)
                 ),
                 new FileOutputStream(tmpFile));
