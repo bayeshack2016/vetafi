@@ -24,14 +24,6 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         return $filter('date')(new Date(), 'MM/dd/yyyy');
       }
 
-      $scope.onRender = function () {
-        save(true).then(
-          function success() {
-            $window.location = '/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf';
-          }
-        );
-      };
-
       $scope.onSubmit = function () {
         save(true).then(
           function () {
