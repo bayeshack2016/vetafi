@@ -17,7 +17,7 @@ body
 			color: colorRed
 			text-decoration: underline
 
-	& button
+	& button, & a.btn
 		padding: 10px 20px
 		background-color: colorPrimaryDarkBlue
 		border-radius: 3px
@@ -25,8 +25,10 @@ body
 		outline: none
 		color: white
 		font-size: bodyFont_size
+		line-height: bodyFont_lineHeight
 
-		&:hover
+		&:hover, &:focus
+			color: white
 			filter: brightness(1.2)
 			-webkit-filter: brightness(1.2)
 			-moz-filter: brightness(1.2)

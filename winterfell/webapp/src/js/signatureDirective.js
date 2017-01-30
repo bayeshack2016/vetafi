@@ -13,7 +13,7 @@ angular.module('signature').directive('signaturePad', ['$window', '$timeout',
     return {
       restrict: 'EA',
       replace: true,
-      template: '<div class="signature"><canvas ng-mouseup="updateModel()"></canvas></div>',
+      template: '<div class="signature"><canvas class="signature-canvas" ng-mouseup="updateModel()"></canvas></div>',
       scope: {
         clear: '=',
         dataurl: '='

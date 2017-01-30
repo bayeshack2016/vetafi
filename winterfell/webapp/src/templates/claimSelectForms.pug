@@ -22,10 +22,9 @@
           button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
             div.edit-icon
             | Edit
-          a(href="{{'claim/' + claimId + '/form/' + formId + '/pdf'}}")
-            button.download-btn
-              div.download-icon
-              | Download
+          a(class="btn download-btn" href="/claim/{{claimId}}/form/{{formId}}/pdf" download="{{formId}}.pdf")
+            div.download-icon
+            | Download
 
     div.button-wrapper
       button.cancel-btn(ng-click="onClickCancel()") Cancel

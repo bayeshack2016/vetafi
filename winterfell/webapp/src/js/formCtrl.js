@@ -9,6 +9,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
               $stateParams, $state, userValues, $window, net, $interval) {
       $scope.title = formTemplateService[$stateParams.formId].vfi.title;
       $scope.description = formTemplateService[$stateParams.formId].vfi.description;
+      $scope.claimId = $stateParams.claimId;
+      $scope.formId = $stateParams.formId;
 
       $scope.$watch('signature', function (newVal) {
         if (newVal) {
@@ -25,7 +27,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.onRender = function () {
         save(true).then(
           function success() {
-            $window.location.href = '/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf';
+            $window.location = '/claim/' + $stateParams.claimId + '/form/' + $stateParams.formId + '/pdf';
           }
         );
       };

@@ -346,6 +346,7 @@ module.exports = function (app) {
       res
         .status(http.OK)
         .set('Content-Type', 'application/pdf')
+        .set('Content-Length', form.pdf.length)
         .send(form.pdf);
     }, function failure(err) {
       console.error(err.stack);
