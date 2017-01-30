@@ -61,10 +61,10 @@
       }
     },
     {
-      "key": "represented_by_surviving_dependent_y_n",
+      "key": "dependency_indemnity_compensation_y_n",
       "type": "radio",
       "templateOptions": {
-        "label": "Are you the dependent of a deceased veteran?",
+        "label": "Do you intend to file for survivors pension and/or dependency and indemnity compensation?",
         "options": [
           {
             "name": "Yes",
@@ -75,10 +75,8 @@
             "value": "No"
           }
         ]
-      },
-      "hideExpression": "model.filing_for_self"
+      }
     },
-
     {
       "key": "claimant_first_name",
       "type": "input",
@@ -190,6 +188,13 @@
         ]
       }
     },
+    {
+      "key": "veterans_service_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Service Number (If applicable)"
+      }
+    },
 
     {
       "key": "veteran_previous_claim_with_va_y_n",
@@ -225,16 +230,6 @@
         "label": "Address Line 1",
         "placeholder": "55 Magnolia St.",
         "autocomplete": "address-line1"
-      }
-    },
-    {
-      "key": "veteran_home_address_line2",
-      "type": "input",
-      "templateOptions": {
-        "label": "Address Line 2",
-        "placeholder": "",
-        "autocomplete": "address-line2",
-        "optional": true
       }
     },
     {
@@ -281,9 +276,11 @@
     {
       "key": "veteran_home_country",
       "type": "input",
+      "optionsTypes": [
+        "country"
+      ],
       "templateOptions": {
         "label": "Country",
-        "placeholder": "US",
         "autocomplete": "country"
       }
     },

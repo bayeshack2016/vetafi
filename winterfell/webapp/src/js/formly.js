@@ -146,6 +146,30 @@ app.run(['formlyConfig', 'MomentJS', function (formlyConfig, moment) {
   });
 
   formlyConfig.setType({
+    name: 'country',
+    defaultOptions: {
+      "templateOptions": {
+        placeholder: 'US'
+      },
+      link: updateViewWithParsed,
+      validators: {
+        state: function (viewValue) {
+          if (!viewValue) {
+            return true;
+          }
+          return /^[A-Z]{2}$/.test(viewValue);
+        }
+      },
+      parsers: [function (value) {
+        if (!value) {
+          return '';
+        }
+        return value.toUpperCase().replace(new RegExp('[^A-Z]', 'g'), '').substring(0, 2);
+      }]
+    }
+  });
+
+  formlyConfig.setType({
     name: 'date',
     defaultOptions: {
       "templateOptions": {
