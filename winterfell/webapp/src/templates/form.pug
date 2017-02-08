@@ -23,7 +23,7 @@ div#vfi-form-view
                         | Submit
                     button.save(type="button" ng-click="onSave()")
                         | Save Information
-                    button.download(type="button" ng-click="onRender()")
+                    a(class="download btn" href="/claim/{{claimId}}/form/{{formId}}/pdf" download="{{formId}}.pdf")
                         | Download
 
 
