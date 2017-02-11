@@ -59,7 +59,14 @@ function loadIntoBuild (app, targetDir) {
 loadIntoBuild(app, 'utils');
 loadIntoBuild(app, 'middlewares');
 loadIntoBuild(app, 'services');
-loadIntoBuild(app, 'controllers');
+
+app.use(require('./controllers/adminController'));
+app.use(require('./controllers/authController'));
+app.use(require('./controllers/claimController'));
+app.use(require('./controllers/healthCheck'));
+app.use(require('./controllers/sessionController'));
+app.use(require('./controllers/userController'));
+
 console.log("Node modules loaded.");
 
 // Logger has been initialized

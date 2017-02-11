@@ -295,9 +295,9 @@ describe('SaveClaimController', function () {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
           should.exist(doc);
-          doc.requiredQuestions.should.be.exactly(24);
+          doc.requiredQuestions.should.be.exactly(25);
           doc.answeredRequired.should.be.exactly(1);
-          doc.optionalQuestions.should.be.exactly(3);
+          doc.optionalQuestions.should.be.exactly(2);
           doc.answeredOptional.should.be.exactly(0);
           done();
         })
@@ -313,9 +313,9 @@ describe('SaveClaimController', function () {
         Form.findOne({key: 'VBA-21-0966-ARE', user: targetUser._id}, function(error, doc) {
           should.not.exist(error);
           should.exist(doc);
-          doc.requiredQuestions.should.be.exactly(19);
+          doc.requiredQuestions.should.be.exactly(21);
           doc.answeredRequired.should.be.exactly(1);
-          doc.optionalQuestions.should.be.exactly(3);
+          doc.optionalQuestions.should.be.exactly(2);
           doc.answeredOptional.should.be.exactly(0);
           done();
         })
