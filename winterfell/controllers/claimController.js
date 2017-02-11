@@ -20,8 +20,6 @@ var formlyFields = bulk(__dirname + '/../forms/', ['*']);
 var router = express.Router();
 
 var mw = [auth.authenticatedOr404];
-var mailingService = new MailingService(app);
-var documentRenderingService = new DocumentRenderingService(app);
 
 // Get all claims for a user
 router.get('/api/claims', mw, function (req, res) {
@@ -107,6 +105,7 @@ router.post('/api/claim/:claim/submit', mw.concat(validObjectID.validateObjectId
   var that = this;
   var currentUser = null;
   var promise = User.findById(req.session.userId);
+  var mailingService = new MailingService(req.app);
 
   promise = promise.then(function (user) {
     currentUser = user;
@@ -250,6 +249,7 @@ function updateUserFromForm(userValues) {
 router.post('/api/save/:claim/:form', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
   var resolvedClaim;
   var progress = ClaimService.calculateProgress(formlyFields[req.params.form], req.body);
+  var documentRenderingService = new DocumentRenderingService(req.app);
 
   // Resolve the claim
   var promise = Claim.findOne({_id: req.params.claim});

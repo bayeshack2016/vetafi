@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 var Biscuit = require('./services/biscuit');
+var bodyParser = require('body-parser');
 var Constants = require('./utils/constants');
+var cookieParser = require('cookie-parser');
+var csurf = require('csurf');
 var documentRenderingConfig = require('./config/documentRendering');
 var express = require('express');
 var fs = require('fs');
@@ -47,18 +50,24 @@ console.log("Biscuit keys configured.");
 app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
 console.log("DocumentRendering microservice assigned.");
 
-// Initialize Node Modules
-function loadIntoBuild (app, targetDir) {
-  var normalizedPath = path.join(__dirname, targetDir);
-  fs.readdirSync(normalizedPath).forEach(function (file) {
-    console.log('loading', normalizedPath + '/' + file);
-    require(normalizedPath + '/' + file)(app);
-  });
-  return app;
+/**
+ * Setup the body-parser middleware, which parses POSTed JSON.
+ */
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(cookieParser());
+// CSRF protection
+app.use(csurf({cookie: true}));
+app.use(require('./middlewares/setXrsfToken.js'));
+
+if (app.environment === Constants.environment.PROD) {
+  require('./middlewares/expressLimiter')(app);
 }
-loadIntoBuild(app, 'utils');
-loadIntoBuild(app, 'middlewares');
-loadIntoBuild(app, 'services');
+
+require('./middlewares/passport')(app);
+require('./middlewares/redis-session')(app);
+require('./middlewares/log')(app);
 
 app.use(require('./controllers/adminController'));
 app.use(require('./controllers/authController'));
