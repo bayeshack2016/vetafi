@@ -1,18 +1,19 @@
 #!/usr/bin/env node
-var Biscuit = require('./services/biscuit');
-var Constants = require('./utils/constants');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var csurf = require('csurf');
 var documentRenderingConfig = require('./config/documentRendering');
+var enforce = require('express-sslify');
 var express = require('express');
-var fs = require('fs');
-var Log = require('./middlewares/log');
-var path = require('path');
-var session = require('express-session');
 var helmet = require('helmet');
-var ENVIRONMENT = Constants.environment;
-var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
 var http = require('http');
 var https = require('https');
-var enforce = require('express-sslify');
+var path = require('path');
+var Biscuit = require('./services/biscuit');
+var Constants = require('./utils/constants');
+var ENVIRONMENT = Constants.environment;
+var Log = require('./middlewares/log');
+
 
 // Initialize App
 var app = express();
@@ -24,6 +25,7 @@ app.use(function (err, req, res, next) {
   next(err);
 });
 
+var environment = process.env.NODE_ENV || ENVIRONMENT.LOCAL;
 app.environment = environment;
 app.baseUrl = Constants.baseUrl[app.environment];
 console.log("App created.");
@@ -47,19 +49,40 @@ console.log("Biscuit keys configured.");
 app.set('documentRenderingServiceAddress', documentRenderingConfig.address);
 console.log("DocumentRendering microservice assigned.");
 
-// Initialize Node Modules
-function loadIntoBuild (app, targetDir) {
-  var normalizedPath = path.join(__dirname, targetDir);
-  fs.readdirSync(normalizedPath).forEach(function (file) {
-    console.log('loading', normalizedPath + '/' + file);
-    require(normalizedPath + '/' + file)(app);
-  });
-  return app;
+
+// Set oAuth URL
+var idmeUrlLocal = "https://api.id.me/oauth/authorize?client_id=684c7204feed7758b25527eae2d66e28&redirect_uri=http://localhost:3999/auth/idme/callback&response_type=code&scope=military";
+var idmeUrlProd = "https://api.id.me/oauth/authorize?client_id=71ffbd3f04241a56e63fa6a960fbb15e&redirect_uri=https://www.vetafi.org/auth/idme/callback&response_type=code&scope=military";
+var idmeUrl = app.environment == Constants.environment.LOCAL ? idmeUrlLocal : idmeUrlProd;
+
+app.set('idMeOAuthUrl', idmeUrl);
+
+/**
+ * Setup the body-parser middleware, which parses POSTed JSON.
+ */
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
+app.use(cookieParser());
+// CSRF protection
+app.use(csurf({cookie: true}));
+app.use(require('./middlewares/setXrsfToken.js'));
+
+if (app.environment === Constants.environment.PROD) {
+  require('./middlewares/expressLimiter')(app);
 }
-loadIntoBuild(app, 'utils');
-loadIntoBuild(app, 'middlewares');
-loadIntoBuild(app, 'services');
-loadIntoBuild(app, 'controllers');
+
+require('./middlewares/passport')(app);
+require('./middlewares/redis-session')(app);
+require('./middlewares/log')(app);
+
+app.use(require('./controllers/adminController'));
+app.use(require('./controllers/authController'));
+app.use(require('./controllers/claimController'));
+app.use(require('./controllers/healthCheck'));
+app.use(require('./controllers/sessionController'));
+app.use(require('./controllers/userController'));
+
 console.log("Node modules loaded.");
 
 // Logger has been initialized

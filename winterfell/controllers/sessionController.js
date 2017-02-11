@@ -1,13 +1,15 @@
-var auth = require('../middlewares/auth');
+var authenticatedOr404 = require('../middlewares/authenticatedOr404');
+var express = require('express');
 var Constants = require('../utils/constants');
 var http = require('http-status-codes');
-var RedisService = require('../services/redisService');
 
-module.exports = function (app) {
-  var mw = [auth.authenticatedOr404];
+var router = express.Router();
 
-  // Endpoint for updating the session TTL
-  app.get('/api/session/touch', mw, function(req, res) {
-    // do nothing
-  });
-};
+var mw = [authenticatedOr404];
+
+// Endpoint for updating the session TTL
+router.get('/api/session/touch', mw, function (req, res) {
+  // do nothing
+});
+
+module.exports = router;

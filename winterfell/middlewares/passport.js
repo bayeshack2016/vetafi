@@ -1,4 +1,6 @@
 var _ = require('lodash');
+var AuthService = require('../services/authService');
+var AuthUtil = require('../utils/authUtil');
 var http = require('http-status-codes');
 var request = require('request');
 var passport = require('passport');
@@ -9,8 +11,7 @@ var Constants = require('./../utils/constants');
 var User = require('../models/user');
 var Log = require('../middlewares/log');
 var SocialUser = require('../utils/socialUser');
-var AuthService = require('../services/authService');
-var AuthUtil = require('../utils/authUtil');
+
 
 module.exports = function (app) {
     app.use(passport.initialize());

@@ -1,16 +1,13 @@
 var client = require('redis').createClient();
 var expressLimiter = require('express-limiter');
-var Constants = require('../utils/constants');
 var Log = require('./log');
 
 /**
- * Adds a limiter if we are running in prod which globally
- * limits requests to 360 per hour.
+ * Adds a limiter which globally limits requests to 360 per hour.
  *
  * @param app Express app.
  */
 function addLimiter(app) {
-  if (app.environment === Constants.environment.PROD) {
     var limiter = expressLimiter(app, client);
 
     limiter({
@@ -41,7 +38,6 @@ function addLimiter(app) {
         res.status(429).send('Rate limit exceeded');
       }
     });
-  }
 }
 
 module.exports = addLimiter;

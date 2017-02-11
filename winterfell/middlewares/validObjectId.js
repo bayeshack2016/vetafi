@@ -3,12 +3,7 @@ var http = require('http-status-codes');
 var log = require('./log');
 var objectid = mongodb.ObjectId;
 
-function ValidObjectId(app) {
-  this.app = app;
-}
-module.exports = ValidObjectId;
-
-module.exports.validateObjectIdParams = function (parameterNames) {
+module.exports = function (parameterNames) {
 
   function validateObjectIdMiddleware(req, res, next) {
 
