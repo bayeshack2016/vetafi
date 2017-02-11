@@ -1,4 +1,4 @@
-var auth = require('../middlewares/auth');
+var authenticatedOr404 = require('../middlewares/authenticatedOr404');
 var express = require('express');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
@@ -9,7 +9,7 @@ var UserService = require('./../services/userService');
 
 var router = express.Router();
 
-var mw = [auth.authenticatedOr404];
+var mw = [authenticatedOr404];
 
 // Get a user's information based on externalId
 router.get('/api/user', mw, function (req, res) {

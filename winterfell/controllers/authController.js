@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var auth = require('../middlewares/auth');
+var authenticatedOr404 = require('../middlewares/authenticatedOr404');
 var AuthUtil = require('../utils/authUtil');
 var constants = require('./../utils/constants');
 var express = require('express');
@@ -12,10 +12,6 @@ var UserService = require('./../services/userService');
 
 var router = express.Router();
 
-var idmeUrlLocal = "https://api.id.me/oauth/authorize?client_id=684c7204feed7758b25527eae2d66e28&redirect_uri=http://localhost:3999/auth/idme/callback&response_type=code&scope=military";
-var idmeUrlProd = "https://api.id.me/oauth/authorize?client_id=71ffbd3f04241a56e63fa6a960fbb15e&redirect_uri=https://www.vetafi.org/auth/idme/callback&response_type=code&scope=military";
-var idmeUrl = app.environment == constants.environment.LOCAL ? idmeUrlLocal : idmeUrlProd;
-
 // Endpoint for routing sign-up
 router.get('/signup', function (req, res) {
   if (req.session.key) {
@@ -25,7 +21,7 @@ router.get('/signup', function (req, res) {
       {
         csrf: req.csrfToken(),
         viewId: 'signup-view',
-        idmeUrl: idmeUrl,
+        idmeUrl: req.app.get('idmeUrl'),
         errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
       });
   }
@@ -40,7 +36,7 @@ router.get('/login', function (req, res) {
       {
         csrf: req.csrfToken(),
         viewId: 'login-view',
-        idmeUrl: idmeUrl,
+        idmeUrl: req.app.get('idmeUrl'),
         errorMessage: req.query.error ? constants.ERROR_CODES[req.query.error].message : undefined
       });
   }
@@ -136,7 +132,7 @@ router.get('/api/auth/idme/callback',
 /*
  * Other Endpoints
  */
-router.post('/api/auth/password', auth.authenticatedOr404, function (req, res) {
+router.post('/api/auth/password', authenticatedOr404, function (req, res) {
   var oldPwd = req.body.old;
   User.findOneWithPassword({_id: req.session.userId}).exec(function (err, user) {
     if (err) {

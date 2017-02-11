@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var auth = require('../middlewares/auth');
+var authenticatedOr404 = require('../middlewares/authenticatedOr404');
 var express = require('express');
 var http = require('http-status-codes');
 var httpErrors = require('./../utils/httpErrors');
@@ -13,13 +13,13 @@ var mongoose = require('mongoose');
 var User = require('../models/user');
 var UserValues = require('../models/userValues');
 var log = require('../middlewares/log');
-var validObjectID = require('../middlewares/valid-objectid');
+var validObjectID = require('../middlewares/validObjectId');
 var bulk = require('bulk-require');
 var formlyFields = bulk(__dirname + '/../forms/', ['*']);
 
 var router = express.Router();
 
-var mw = [auth.authenticatedOr404];
+var mw = [authenticatedOr404];
 
 // Get all claims for a user
 router.get('/api/claims', mw, function (req, res) {
@@ -42,7 +42,7 @@ router.get('/api/claims', mw, function (req, res) {
 });
 
 // Get a particular claim
-router.get('/api/claim/:claim', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+router.get('/api/claim/:claim', mw.concat(validObjectID(['claim'])), function (req, res) {
   Claim.findOne({_id: req.params.claim}).exec(function (err, claim) {
     if (claim) {
       res.status(http.OK).send({claim: claim});
@@ -101,7 +101,7 @@ function claimUpdateCallbackFactory(res) {
   }
 }
 
-router.post('/api/claim/:claim/submit', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+router.post('/api/claim/:claim/submit', mw.concat(validObjectID(['claim'])), function (req, res) {
   var that = this;
   var currentUser = null;
   var promise = User.findById(req.session.userId);
@@ -157,7 +157,7 @@ router.post('/api/claim/:claim/submit', mw.concat(validObjectID.validateObjectId
   });
 });
 
-router.delete('/api/claim/:claim', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+router.delete('/api/claim/:claim', mw.concat(validObjectID(['claim'])), function (req, res) {
   handleClaimStateChange(req.params.claim,
     Claim.State.DISCARDED,
     claimUpdateCallbackFactory(res));
@@ -246,7 +246,7 @@ function updateUserFromForm(userValues) {
   return promise;
 }
 
-router.post('/api/save/:claim/:form', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+router.post('/api/save/:claim/:form', mw.concat(validObjectID(['claim'])), function (req, res) {
   var resolvedClaim;
   var progress = ClaimService.calculateProgress(formlyFields[req.params.form], req.body);
   var documentRenderingService = new DocumentRenderingService(req.app);
@@ -313,7 +313,7 @@ router.post('/api/save/:claim/:form', mw.concat(validObjectID.validateObjectIdPa
   });
 });
 
-router.get('/api/claim/:claim/form/:form', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+router.get('/api/claim/:claim/form/:form', mw.concat(validObjectID(['claim'])), function (req, res) {
   Claim.findOne({_id: req.params.claim}, function (error, claim) {
     if (error) {
       console.error(error.stack);
@@ -333,7 +333,7 @@ router.get('/api/claim/:claim/form/:form', mw.concat(validObjectID.validateObjec
   });
 });
 
-router.get('/claim/:claim/form/:formName/pdf', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+router.get('/claim/:claim/form/:formName/pdf', mw.concat(validObjectID(['claim'])), function (req, res) {
   var promise = Claim.findOne(
     {_id: req.params.claim}
   );
@@ -358,7 +358,7 @@ router.get('/claim/:claim/form/:formName/pdf', mw.concat(validObjectID.validateO
   });
 });
 
-router.get('/api/claim/:claim/forms', mw.concat(validObjectID.validateObjectIdParams(['claim'])), function (req, res) {
+router.get('/api/claim/:claim/forms', mw.concat(validObjectID(['claim'])), function (req, res) {
   Claim.findOne({_id: req.params.claim}, function (error, claim) {
     if (error) {
       console.log(error);
