@@ -1,0 +1,37 @@
+@(signInForm: Form[forms.SignInForm.Data], socialProviders: com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry)(implicit request: RequestHeader, messages: Messages)
+
+@main(Messages("sign.in.title")) {
+    <fieldset class="col-md-6 col-md-offset-3">
+        <legend>@Messages("sign.in.credentials")</legend>
+        @helper.form(action = routes.SignInController.submit()) {
+            @helper.CSRF.formField
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <label for="rememberMe">Remember Me?</label>
+            <input type="checkbox" name="rememberMe" id="rememberMe">
+            <div class="form-group">
+                <div>
+                    <button id="submit" type="submit" value="submit" class="btn btn-lg btn-primary btn-block">@Messages("sign.in")</button>
+                </div>
+            </div>
+        }
+
+        <div>
+            <p class="not-a-member">@Messages("not.a.member") <a href="@routes.SignUpController.view">@Messages("sign.up.now")</a> | <a href="@routes.ForgotPasswordController.view()" title="@Messages("forgot.your.password")">@Messages("forgot.your.password")</a></p>
+        </div>
+
+        @if(socialProviders.providers.nonEmpty) {
+            <div class="social-providers">
+                <p>@Messages("or.use.social")</p>
+                <div>
+                @for(p <- socialProviders.providers) {
+                    <a href="@routes.SocialAuthController.authenticate(p.id)" class="provider @p.id" title="@Messages(p.id)">@Messages(p.id)</a>
+                }
+                </div>
+            </div>
+        }
+
+    </fieldset>
+}
