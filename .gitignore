@@ -10,4 +10,9 @@ winterfell/dump.rdb
 winterfell/npm-debug.log
 logs
 
+hardhome/.java-version
+hardhome/.sbtserver/
+hardhome/project/
+hardhome/target/
+
 .vagrant
