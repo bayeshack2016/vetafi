@@ -5,7 +5,7 @@ import javax.inject.Inject
 import com.mohiva.play.silhouette.api.Silhouette
 import models.UserValues
 import models.daos.UserValuesDAO
-import play.api.libs.json.{JsError, JsValue, Json}
+import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc._
 import play.modules.reactivemongo.ReactiveMongoApi
 import utils.auth.DefaultEnv
@@ -16,7 +16,8 @@ import scala.concurrent.Future
 class UserValuesController @Inject() (
   val reactiveMongoApi: ReactiveMongoApi,
   val userValuesDAO: UserValuesDAO,
-  silhouette: Silhouette[DefaultEnv]) extends Controller {
+  silhouette: Silhouette[DefaultEnv]
+) extends Controller {
 
   def getUserValues: Action[AnyContent] = silhouette.SecuredAction.async {
     request =>

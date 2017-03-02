@@ -4,20 +4,6 @@ import java.util.UUID
 import play.api.libs.json._
 import com.mohiva.play.silhouette.api.{ Identity, LoginInfo }
 
-case class Address(
-  name: String,
-  street1: String,
-  street2: String,
-  city: String,
-  province: String,
-  country: String,
-  postal: String
-)
-
-object Address {
-  implicit val jsonFormat = Json.format[Address]
-}
-
 case class Contact(
   phoneNumber: String,
   address: Address

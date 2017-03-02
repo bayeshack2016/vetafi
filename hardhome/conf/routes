@@ -33,3 +33,5 @@ DELETE      /api/user                        controllers.api.UserController.dele
 
 GET         /api/user/values                 controllers.api.UserValuesController.getUserValues
 POST        /api/user/values                 controllers.api.UserValuesController.updateUserValues
+
+POST        /api/claim/create                controllers.api.ClaimController.create

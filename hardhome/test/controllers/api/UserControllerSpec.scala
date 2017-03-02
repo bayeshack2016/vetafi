@@ -6,8 +6,8 @@ import controllers.SilhouetteTestContext
 import models.User
 import org.specs2.mock.Mockito
 import play.api.libs.json.JsResult
-import play.api.mvc.{AnyContentAsEmpty, Result}
-import play.api.test.{FakeRequest, PlaySpecification, WithApplication}
+import play.api.mvc.{ AnyContentAsEmpty, Result }
+import play.api.test.{ FakeRequest, PlaySpecification, WithApplication }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future

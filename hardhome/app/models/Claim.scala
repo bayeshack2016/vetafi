@@ -3,7 +3,7 @@ package models
 import java.util.UUID
 
 import org.joda.time.DateTime
-import play.api.libs.json.{Json, OFormat}
+import play.api.libs.json.{ Json, OFormat }
 
 /*var ClaimSchema = new Schema({
 userId: {
@@ -39,40 +39,34 @@ var addressSchema = new Schema({
 
 */
 
-
-case class Address(name: String,
-                   street1: String,
-                   street2: String,
-                   city: String,
-                   province: String,
-                   postal: String,
-                   country: String) {
-}
-
-object Address {
-  implicit val jsonFormat: OFormat[Address] = Json.format[Address]
-}
-
-
-case class Recipients(emails: Seq[String],
-                      addresses: Seq[Address]) {
+case class Recipients(
+  emails: Seq[String],
+  addresses: Seq[Address]
+) {
 }
 
 object Recipients {
   implicit val jsonFormat: OFormat[Recipients] = Json.format[Recipients]
 }
 
-
 /**
-  * A claim represents 1 or more Forms grouped together for submission.
-  */
-case class Claim(userID: UUID,
-                 state: String,
-                 stateUpdatedAt: DateTime,
-                 sentTo: Recipients) {
+ * A claim represents 1 or more Forms grouped together for submission.
+ */
+case class Claim(
+  userID: UUID,
+  claimID: UUID,
+  state: Claim.State.Value,
+  sentTo: Recipients
+) {
 
 }
 
 object Claim {
+
+  object State extends Enumeration {
+    type State = Value
+    val INCOMPLETE, DISCARDED, SUBMITTED, PROCESSED = Value
+  }
+
   implicit val jsonFormat: OFormat[Claim] = Json.format[Claim]
 }
