@@ -18,4 +18,6 @@ trait FormDAO {
    * @return The found user values or None if no user for the given ID combo could be found.
    */
   def find(userID: UUID, claimID: UUID, key: String): Future[Option[ClaimForm]]
+
+  def find(userID: UUID, claimID: UUID): Future[Seq[ClaimForm]]
 }

@@ -49,12 +49,10 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
 
   override def findIncompleteClaim(userID: UUID): Future[Option[Claim]] = {
     val query = Json.obj(
-      "userID" -> userID
-    //  "state" -> Claim.State.INCOMPLETE.toString
+      "userID" -> userID,
+      "state" -> Claim.State.INCOMPLETE.toString
     )
-    println(userID)
     collection.flatMap({
-
       _.find(query).one[Claim]
     })
   }

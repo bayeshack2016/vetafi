@@ -16,8 +16,7 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
   sequential
 
   "The `create` action" should {
-
-    /*"return 201 if created" in new SilhouetteTestContext {
+    "return 201 if created" in new SilhouetteTestContext {
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
           .withJsonBody(Json.toJson(Seq("form1", "form2")))
@@ -29,7 +28,7 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
         status(result) must be equalTo CREATED
       }
-    }*/
+    }
 
     "return 200 if already created" in new SilhouetteTestContext {
       new WithApplication(application) {
@@ -41,6 +40,8 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
         val result: Future[Result] = route(app, csrfReq).get
 
+        status(result) must be equalTo CREATED
+
         val req2 = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
           .withJsonBody(Json.toJson(Seq("form1", "form2")))
           .withAuthenticator[DefaultEnv](identity.loginInfo)
@@ -49,10 +50,6 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
         val result2: Future[Result] = route(app, csrfReq2).get
 
-        println(contentAsJson(result))
-        println(contentAsJson(result2))
-
-        status(result) must be equalTo CREATED
         status(result2) must be equalTo OK
       }
     }
