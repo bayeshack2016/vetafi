@@ -9,6 +9,8 @@ import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc.{ Action, AnyContent, BodyParsers, Controller }
 import play.modules.reactivemongo.ReactiveMongoApi
 import utils.auth.DefaultEnv
+import scala.concurrent.ExecutionContext.Implicits.global
+import play.api.libs.json._
 
 import scala.concurrent.Future
 
@@ -42,7 +44,7 @@ class ClaimController @Inject() (
                 ))
                 case fail => InternalServerError(Json.obj(
                   "status" -> "error",
-                  "message" -> fail.errmsg.getOrElse("Unknown database error.")
+                  "message" -> fail.errmsg.getOrElse("Unknown database error.").toString
                 ))
               }
             }

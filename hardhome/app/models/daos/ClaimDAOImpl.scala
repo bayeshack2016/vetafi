@@ -9,7 +9,11 @@ import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.Cursor
 import reactivemongo.api.commands.{ MultiBulkWriteResult, WriteResult }
 import reactivemongo.play.json.collection.JSONCollection
+import play.api.libs.json._
 
+import reactivemongo.api._
+import play.modules.reactivemongo.json._
+import play.modules.reactivemongo._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
@@ -44,15 +48,23 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
   }
 
   override def findIncompleteClaim(userID: UUID): Future[Option[Claim]] = {
-    val query = Json.obj("userID" -> userID, "state" -> Claim.State.INCOMPLETE)
-    collection.flatMap(_.find(query).one[Claim])
+    val query = Json.obj(
+      "userID" -> userID
+    //  "state" -> Claim.State.INCOMPLETE.toString
+    )
+    println(userID)
+    collection.flatMap({
+
+      _.find(query).one[Claim]
+    })
   }
 
   override def create(userID: UUID, forms: Seq[String]): Future[MultiBulkWriteResult] = {
     val claim = Claim(
-      userID,
-      UUID.randomUUID(),
-      Claim.State.INCOMPLETE, Recipients(Seq.empty[String], Seq.empty[Address])
+      userID = userID,
+      claimID = UUID.randomUUID(),
+      Claim.State.INCOMPLETE,
+      Recipients(Seq.empty[String], Seq.empty[Address])
     )
 
     createForms(userID, claim.claimID, forms).flatMap {

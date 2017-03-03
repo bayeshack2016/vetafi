@@ -3,7 +3,8 @@ package models
 import java.util.UUID
 
 import org.joda.time.DateTime
-import play.api.libs.json.{ Json, OFormat }
+import play.api.libs.json.{ Format, Json, OFormat }
+import utils.EnumUtils
 
 /*var ClaimSchema = new Schema({
 userId: {
@@ -67,6 +68,8 @@ object Claim {
     type State = Value
     val INCOMPLETE, DISCARDED, SUBMITTED, PROCESSED = Value
   }
+
+  implicit val enumFormat: Format[Claim.State.Value] = EnumUtils.enumFormat(Claim.State)
 
   implicit val jsonFormat: OFormat[Claim] = Json.format[Claim]
 }

@@ -7,6 +7,9 @@ import models.{ ClaimForm, User }
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.play.json.collection.JSONCollection
+import reactivemongo.api._
+import play.modules.reactivemongo.json._
+import play.modules.reactivemongo._
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
