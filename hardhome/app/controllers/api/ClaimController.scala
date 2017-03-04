@@ -15,7 +15,7 @@ import play.api.libs.json._
 import scala.concurrent.Future
 
 /**
- * Created by jeffquinn on 3/2/17.
+ * API endpoint for CRUD operations on claims.
  */
 class ClaimController @Inject() (
   val reactiveMongoApi: ReactiveMongoApi,
