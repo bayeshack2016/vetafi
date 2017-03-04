@@ -77,7 +77,7 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
     val formObjects: Seq[ClaimForm] = forms.map((key: String) =>
       ClaimForm(
         key,
-        Map.empty[String, String],
+        Map.empty[String, JsValue],
         userID,
         claimID,
         0,

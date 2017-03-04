@@ -9,6 +9,7 @@ import utils.EnumUtils
 case class FormConfig(
                        name: String,
                        description: String,
+                       vfi: VetafiInfo,
                        fields: Seq[Field]
                      ) {
 
@@ -30,7 +31,9 @@ object VetafiInfo {
 case class Field(key: String,
                  `type`: Field.TemplateType.Value,
                  templateOptions: TemplateOptions,
-                 optionsTypes: Option[Seq[Field.ValidationType.Value]]) {
+                 optionsTypes: Option[Seq[Field.ValidationType.Value]],
+                 hideExpression: Option[String],
+                 optional: Boolean = false) {
 
 
 }
@@ -57,8 +60,7 @@ case class TemplateOptions(label: String,
                            autocomplete: Option[TemplateOptions.AutocompleteType.Value],
                            placeHolder: Option[String],
                            rows: Option[Int],
-                           columns: Option[Int],
-                           optional: Option[Boolean]) {
+                           columns: Option[Int]) {
 
 
 }
@@ -67,57 +69,57 @@ object TemplateOptions {
 
   object AutocompleteType extends Enumeration {
     type AutocompleteType = Value
-    val `name`,
-    `honorific-prefix`,
-    `given-name`,
-    `additional-name`,
-    `family-name`,
-    `honorific-suffix`,
-    `nickname`,
-    `username`,
-    `new-password`,
-    `current-password`,
-    `organization-title`,
-    `organization`,
-    `street-address`,
-    `address-line1`,
-    `address-line2`,
-    `address-line3`,
-    `address-level4`,
-    `address-level3`,
-    `address-level2`,
-    `address-level1`,
-    `country`,
-    `country-name`,
-    `postal-code`,
-    `cc-name`,
-    `cc-given-name`,
-    `cc-additional-name`,
-    `cc-family-name`,
-    `cc-number`,
-    `cc-exp`,
-    `cc-exp-month`,
-    `cc-exp-year`,
-    `cc-csc`,
-    `cc-type`,
-    `language`,
-    `bday`,
-    `bday-day`,
-    `bday-month`,
-    `bday-year`,
-    `sex`,
-    `url`,
-    `photo`,
-    `tel`,
-    `tel-country-code`,
-    `tel-national`,
-    `tel-area-code`,
-    `tel-local`,
-    `tel-local-prefix`,
-    `tel-local-suffix`,
-    `tel-extension`,
-    `email`,
-    `impp` = Value
+    val name = Value("name")
+    val HONORIFIC_PREFIX = Value("honorific-prefix")
+    val GIVEN_NAME = Value("given-name")
+    val ADDITIONAL_NAME = Value("additional-name")
+    val FAMILY_NAME = Value("family-name")
+    val HONORIFIC_SUFFIX = Value("honorific-suffix")
+    val NICKNAME = Value("nickname")
+    val USERNAME = Value("username")
+    val NEW_PASSWORD = Value("new-password")
+    val CURRENT_PASSWORD = Value("current-password")
+    val ORGANIZATION_TITLE = Value("organization-title")
+    val ORGANIZATION = Value("organization")
+    val STREET_ADDRESS = Value("street-address")
+    val ADDRESS_LINE1 = Value("address-line1")
+    val ADDRESS_LINE2 = Value("address-line2")
+    val ADDRESS_LINE3 = Value("address-line3")
+    val ADDRESS_LEVEL4 = Value("address-level4")
+    val ADDRESS_LEVEL3 = Value("address-level3")
+    val ADDRESS_LEVEL2 = Value("address-level2")
+    val ADDRESS_LEVEL1 = Value("address-level1")
+    val COUNTRY = Value("country")
+    val COUNTRY_NAME = Value("country-name")
+    val POSTAL_CODE = Value("postal-code")
+    val CC_NAME = Value("cc-name")
+    val CC_GIVEN_NAME = Value("cc-given-name")
+    val CC_ADDITIONAL_NAME = Value("cc-additional-name")
+    val CC_FAMILY_NAME = Value("cc-family-name")
+    val CC_NUMBER = Value("cc-number")
+    val CC_EXP = Value("cc-exp")
+    val CC_EXP_MONTH = Value("cc-exp-month")
+    val CC_EXP_YEAR = Value("cc-exp-year")
+    val CC_CSC = Value("cc-csc")
+    val CC_TYPE = Value("cc-type")
+    val LANGUAGE = Value("language")
+    val BDAY = Value("bday")
+    val BDAY_DAY = Value("bday-day")
+    val BDAY_MONTH = Value("bday-month")
+    val BDAY_YEAR = Value("bday-year")
+    val SEX = Value("sex")
+    val URL = Value("url")
+    val PHOTO = Value("photo")
+    val TEL = Value("tel")
+    val TEL_COUNTRY_CODE = Value("tel-country-code")
+    val TEL_NATIONAL = Value("tel-national")
+    val TEL_AREA_CODE = Value("tel-area-code")
+    val TEL_LOCAL = Value("tel-local")
+    val TEL_LOCAL_PREFIX = Value("tel-local-prefix")
+    val TEL_LOCAL_SUFFIX = Value("tel-local-suffix")
+    val TEL_EXTENSION = Value("tel-extension")
+    val EMAIL = Value("email")
+    val IMPP = Value("impp")
   }
 
   implicit val validationTypeFormat: Format[TemplateOptions.AutocompleteType.Value] = EnumUtils.enumFormat(TemplateOptions.AutocompleteType)

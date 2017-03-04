@@ -1,15 +1,11 @@
 package utils.forms
-import java.io.InputStreamReader
-import java.net.URL
-import java.nio.file.{Files, Path, Paths}
-import java.util
 
 import com.google.inject.Inject
 import models.FormConfig
 import play.Configuration
 import play.api.Logger
-import play.api.libs.json.{JsResult, Json}
 import scala.collection.JavaConversions._
+import play.api.libs.json._
 
 /**
   * FormConfigManager backed by JSON files in the project resources.
@@ -18,12 +14,12 @@ class JsonResourceFormConfigManager @Inject() (configuration: Configuration) ext
 
   def loadFormConfigFromResource(formKey: String): FormConfig = {
     val inputStream = getClass.getClassLoader.getResource(
-      s"${configuration.getString("formsDir")}/$formKey").openStream()
+      s"${configuration.getString("forms.dir")}/${formKey}.json").openStream()
     val result: JsResult[FormConfig] = Json.parse(inputStream).validate[FormConfig]
 
     result.fold(
       errors => {
-        val msg = s"Errors while parsing form config JSON at ${configuration.getString("formsDir")}/$formKey: ${errors.toString}"
+        val msg = s"Errors while parsing form config JSON at ${configuration.getString("forms.dir")}/$formKey: ${errors.toString}"
         Logger.error(msg)
         throw new RuntimeException(msg)
       },
@@ -33,12 +29,14 @@ class JsonResourceFormConfigManager @Inject() (configuration: Configuration) ext
     )
   }
 
-  override def getFormConfigs: Map[String, FormConfig] = {
-    val enabledForms = configuration.getStringList("enabledForms")
+  lazy val formConfigs: Map[String, FormConfig] = {
+    val enabledForms = configuration.getStringList("forms.enabled")
     enabledForms.map(
       (formKey: String) => {
         (formKey, loadFormConfigFromResource(formKey))
       }
     ).toMap
   }
+
+  override def getFormConfigs: Map[String, FormConfig] = formConfigs
 }

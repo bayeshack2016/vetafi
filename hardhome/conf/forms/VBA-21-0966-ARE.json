@@ -1,0 +1,359 @@
+{
+  "vfi": {
+    "title": "Intent to File",
+    "summary": "This form is used to notify VA of your intent to file for benefits. Even if your claim fails to process, your benefits effective date will still be the date the VA receives this form.",
+    "required": true
+  },
+  "name": "INTENT TO FILE A CLAIM FOR COMPENSATION AND/OR PENSION, OR SURVIVORS PENSION AND/OR DIC",
+  "description": "This Form Is Used to Notify VA of Your Intent to File for General Benefits",
+  "fields": [
+    {
+      "key": "filing_for_self",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Are you filing for yourself, or for someone else?",
+        "options": [
+          {
+            "name": "For myself",
+            "value": true
+          },
+          {
+            "name": "For someone else",
+            "value": false
+          }
+        ]
+      },
+      "defaultValue": true,
+      "optional": false
+    },
+
+    {
+      "key": "veteran_intent_to_file_compensation_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Do you intend to file for compensation related benefits?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ]
+      },
+      "optional": false
+    },
+    {
+      "key": "veteran_intent_to_file_pension_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Do you intend to file for pension related benefits?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ]
+      },
+      "optional": false
+    },
+    {
+      "key": "dependency_indemnity_compensation_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Do you intend to file for survivors pension and/or dependency and indemnity compensation?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ]
+      },
+      "optional": false
+    },
+    {
+      "key": "claimant_first_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your First Name",
+        "placeholder": "John",
+        "autocomplete": "given-name"
+      },
+      "optional": false
+    },
+    {
+      "key": "claimant_middle_initial",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your Middle Initial",
+        "placeholder": "C",
+        "autocomplete": "additional-name"
+      },
+      "optional": false
+    },
+    {
+      "key": "claimant_last_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your Last Name",
+        "placeholder": "Doe",
+        "autocomplete": "family-name"
+      },
+      "optional": false
+    },
+    {
+      "key": "claimant_ssn",
+      "type": "input",
+      "templateOptions": {
+        "label": "Your Social Security Number",
+        "placeholder": "000-00-0000"
+      },
+      "optionsTypes": [
+        "ssn"
+      ],
+      "optional": false
+    },
+
+    {
+      "key": "veteran_first_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's First Name",
+        "placeholder": "John",
+        "autocomplete": "given-name"
+      },
+      "hideExpression": "model.filing_for_self",
+      "optional": false
+    },
+    {
+      "key": "veteran_middle_initial",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Middle Initial",
+        "placeholder": "C",
+        "autocomplete": "additional-name"
+      },
+      "hideExpression": "model.filing_for_self",
+      "optional": false
+    },
+    {
+      "key": "veteran_last_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Last Name",
+        "placeholder": "Doe",
+        "autocomplete": "family-name"
+      },
+      "hideExpression": "model.filing_for_self",
+      "optional": false
+    },
+    {
+      "key": "veteran_ssn",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Social Security Number",
+        "placeholder": "000-00-0000"
+      },
+      "optionsTypes": [
+        "ssn"
+      ],
+      "hideExpression": "model.filing_for_self",
+      "optional": false
+    },
+
+    {
+      "key": "veteran_dob",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Veteran's Date of Birth",
+        "placeholder": "MM/DD/YYYY",
+        "autocomplete": "bday"
+      },
+      "optional": false
+    },
+    {
+      "key": "veteran_sex",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Veteran's Gender",
+        "options": [
+          {
+            "name": "Male",
+            "value": "Male"
+          },
+          {
+            "name": "Female",
+            "value": "Female"
+          }
+        ]
+      },
+      "optional": false
+    },
+    {
+      "key": "veterans_service_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Service Number (If applicable)"
+      },
+      "optional": false
+    },
+
+    {
+      "key": "veteran_previous_claim_with_va_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Have you, or the veteran you represent, ever previously filed a claim with the VA?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ]
+      },
+      "optional": false
+    },
+    {
+      "key": "va_file_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "VA File Number",
+        "placeholder": "000000000"
+      },
+      "hideExpression": "model.veteran_previous_claim_with_va_y_n != 'Yes'",
+      "optional": false
+    },
+
+    {
+      "key": "veteran_home_address_line1",
+      "type": "input",
+      "templateOptions": {
+        "label": "Address Line 1",
+        "placeholder": "55 Magnolia St.",
+        "autocomplete": "address-line1"
+      },
+      "optional": false
+    },
+    {
+      "key": "veteran_home_apartment_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Apartment Number",
+        "placeholder": "Apt. 3",
+        "autocomplete": "address-line3"
+      },
+      "optional": true
+    },
+    {
+      "key": "veteran_home_city",
+      "type": "input",
+      "templateOptions": {
+        "label": "City",
+        "placeholder": "Kansas City",
+        "autocomplete": "address-level2"
+      },
+      "optional": false
+    },
+    {
+      "key": "veteran_home_state",
+      "type": "input",
+      "optionsTypes": [
+        "state"
+      ],
+      "templateOptions": {
+        "label": "State",
+        "autocomplete": "address-level1"
+      },
+      "optional": false
+    },
+    {
+      "key": "veteran_home_zip_code",
+      "type": "input",
+      "optionsTypes": [
+        "zipCode"
+      ],
+      "templateOptions": {
+        "label": "Postal Code",
+        "autocomplete": "postal-code"
+      },
+      "optional": false
+    },
+    {
+      "key": "veteran_home_country",
+      "type": "input",
+      "optionsTypes": [
+        "country"
+      ],
+      "templateOptions": {
+        "label": "Country",
+        "autocomplete": "country"
+      },
+      "optional": false
+    },
+
+    {
+      "key": "contact_phone_number",
+      "type": "input",
+      "optionsTypes": [
+        "phoneNumber"
+      ],
+      "templateOptions": {
+        "label": "Contact Phone Number",
+        "autocomplete": "tel"
+      },
+      "optional": false
+    },
+    {
+      "key": "contact_email",
+      "type": "input",
+      "optionsTypes": [
+        "email"
+      ],
+      "templateOptions": {
+        "label": "Contact Email",
+        "autocomplete": "email"
+      },
+      "optional": false
+    },
+
+    {
+      "key": "veteran_attorney_or_vso",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Name of attorney, agent, or veterans service organization",
+        "rows": 2,
+        "columns": 100
+      },
+      "optional": true
+    },
+
+    {
+      "key": "veteran_date_signed_0966",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Date Signed",
+        "placeholder": "MM/DD/YYYY"
+      },
+      "optional": false
+    }
+  ]
+}
