@@ -2,12 +2,12 @@ package controllers.api
 
 import com.mohiva.play.silhouette.api.LoginInfo
 import com.mohiva.play.silhouette.test._
-import controllers.{CSRFTest, SilhouetteTestContext}
+import controllers.{ CSRFTest, SilhouetteTestContext }
 import models.UserValues
 import org.specs2.mock.Mockito
-import play.api.libs.json.{JsResult, Json}
-import play.api.mvc.{AnyContentAsEmpty, Result}
-import play.api.test.{FakeRequest, PlaySpecification, WithApplication}
+import play.api.libs.json.{ JsResult, Json }
+import play.api.mvc.{ AnyContentAsEmpty, Result }
+import play.api.test.{ FakeRequest, PlaySpecification, WithApplication }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -77,18 +77,23 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
       new WithApplication(application) {
         val values1 = UserValues(userID, Map("key" -> "value"))
         val values2 = UserValues(userID, Map("key" -> "value2", "newKey" -> "x"))
+        val getRequest: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
 
         val req1 = addToken(FakeRequest(POST, controllers.api.routes.UserValuesController.updateUserValues().url)
           .withJsonBody(Json.toJson(values1))
           .withAuthenticator[DefaultEnv](identity.loginInfo))
+
+        val result1: Future[Result] = route(app, req1).get
+
+        status(result1) must be equalTo CREATED
+
         val req2 = addToken(FakeRequest(POST, controllers.api.routes.UserValuesController.updateUserValues().url)
           .withJsonBody(Json.toJson(values2))
           .withAuthenticator[DefaultEnv](identity.loginInfo))
 
-        val result1: Future[Result] = route(app, req1).get
-        val result2: Future[Result] = route(app, req2).get
+        val result2 = route(app, req2).get
 
-        val getRequest: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
+        status(result2) must be equalTo CREATED
 
         val getResult: Future[Result] = route(app, FakeRequest(controllers.api.routes.UserValuesController.getUserValues())
           .withAuthenticator[DefaultEnv](identity.loginInfo)).get

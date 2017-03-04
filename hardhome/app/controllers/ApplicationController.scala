@@ -3,11 +3,11 @@ package controllers
 import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.actions.SecuredErrorHandler
-import com.mohiva.play.silhouette.api.{LogoutEvent, Silhouette}
+import com.mohiva.play.silhouette.api.{ LogoutEvent, Silhouette }
 import com.mohiva.play.silhouette.impl.providers.SocialProviderRegistry
-import play.api.i18n.{I18nSupport, MessagesApi}
-import play.api.mvc.{Action, AnyContent, Controller}
-import utils.auth.{DefaultEnv, RedirectSecuredErrorHandler}
+import play.api.i18n.{ I18nSupport, MessagesApi }
+import play.api.mvc.{ Action, AnyContent, Controller }
+import utils.auth.{ DefaultEnv, RedirectSecuredErrorHandler }
 
 import scala.concurrent.Future
 
