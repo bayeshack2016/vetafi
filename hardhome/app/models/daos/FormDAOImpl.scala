@@ -3,7 +3,7 @@ package models.daos
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{Claim, ClaimForm, User}
+import models.{ Claim, ClaimForm, User }
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.play.json.collection.JSONCollection
@@ -35,12 +35,12 @@ class FormDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends For
   }
 
   /**
-    * Finds all forms for a given user's claim
-    *
-    * @param userID  The ID of the user.
-    * @param claimID The ID of the claim.
-    * @return The found user values or None if no user for the given ID combo could be found.
-    */
+   * Finds all forms for a given user's claim
+   *
+   * @param userID  The ID of the user.
+   * @param claimID The ID of the claim.
+   * @return The found user values or None if no user for the given ID combo could be found.
+   */
   override def find(userID: UUID, claimID: UUID): Future[Seq[ClaimForm]] = {
     val query = Json.obj("userID" -> userID, "claimID" -> claimID)
     collection.flatMap(_.find(query).cursor[ClaimForm]().foldWhile(Seq.empty[ClaimForm])(

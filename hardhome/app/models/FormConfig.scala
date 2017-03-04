@@ -1,24 +1,23 @@
 package models
 
-import play.api.libs.json.{Format, Json, OFormat}
+import play.api.libs.json.{ Format, Json, OFormat }
 import utils.EnumUtils
 
 /**
-  * Case class mapping for json form configuration.
-  */
+ * Case class mapping for json form configuration.
+ */
 case class FormConfig(
-                       name: String,
-                       description: String,
-                       vfi: VetafiInfo,
-                       fields: Seq[Field]
-                     ) {
+  name: String,
+  description: String,
+  vfi: VetafiInfo,
+  fields: Seq[Field]
+) {
 
 }
 
 object FormConfig {
   implicit val jsonFormat: OFormat[FormConfig] = Json.format[FormConfig]
 }
-
 
 case class VetafiInfo(title: String, summary: String, required: Boolean) {
 
@@ -28,13 +27,14 @@ object VetafiInfo {
   implicit val jsonFormat: OFormat[VetafiInfo] = Json.format[VetafiInfo]
 }
 
-case class Field(key: String,
-                 `type`: Field.TemplateType.Value,
-                 templateOptions: TemplateOptions,
-                 optionsTypes: Option[Seq[Field.ValidationType.Value]],
-                 hideExpression: Option[String],
-                 optional: Boolean = false) {
-
+case class Field(
+  key: String,
+  `type`: Field.TemplateType.Value,
+  templateOptions: TemplateOptions,
+  optionsTypes: Option[Seq[Field.ValidationType.Value]],
+  hideExpression: Option[String],
+  optional: Boolean = false
+) {
 
 }
 
@@ -56,12 +56,13 @@ object Field {
 
 }
 
-case class TemplateOptions(label: String,
-                           autocomplete: Option[TemplateOptions.AutocompleteType.Value],
-                           placeHolder: Option[String],
-                           rows: Option[Int],
-                           columns: Option[Int]) {
-
+case class TemplateOptions(
+  label: String,
+  autocomplete: Option[TemplateOptions.AutocompleteType.Value],
+  placeHolder: Option[String],
+  rows: Option[Int],
+  columns: Option[Int]
+) {
 
 }
 

@@ -6,64 +6,77 @@ import models._
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import org.specs2.specification.Scope
-import play.api.{Application, Configuration}
+import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
 
-
 trait FormTestContext extends Scope {
-  val condition1DependentField = Field("condition1DependentField",
+  val condition1DependentField = Field(
+    "condition1DependentField",
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
     Some("condition1 === \"x\""),
-    optional = false)
+    optional = false
+  )
 
-  val condition2DependentField = Field("condition2DependentField",
+  val condition2DependentField = Field(
+    "condition2DependentField",
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
     Some("condition2 === \"x\""),
-    optional = false)
+    optional = false
+  )
 
-  val requiredField1 = Field("requiredField1",
+  val requiredField1 = Field(
+    "requiredField1",
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
     None,
-    optional = false)
+    optional = false
+  )
 
-  val requiredField2 = Field("requiredField2",
+  val requiredField2 = Field(
+    "requiredField2",
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
     None,
-    optional = false)
+    optional = false
+  )
 
-  val optionalField1 = Field("optionalField1",
+  val optionalField1 = Field(
+    "optionalField1",
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
     None,
-    optional = true)
+    optional = true
+  )
 
-  val optionalField2 = Field("optionalField2",
+  val optionalField2 = Field(
+    "optionalField2",
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
     None,
-    optional = true)
+    optional = true
+  )
 
   class FakeFormConfig extends FormConfigManager {
-    override def getFormConfigs: Map[String, FormConfig] = Map("test" -> FormConfig("test",
-    "Test config.",
+    override def getFormConfigs: Map[String, FormConfig] = Map("test" -> FormConfig(
+      "test",
+      "Test config.",
       VetafiInfo("test", "Test config.", required = true),
       Seq(condition1DependentField, condition2DependentField,
-        requiredField1, requiredField2, optionalField1, optionalField2)))
+        requiredField1, requiredField2, optionalField1, optionalField2)
+    ))
   }
 
   /**
-    * A fake Guice module.
-    */
+   * A fake Guice module.
+   */
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
       bind[FormConfigManager].toInstance(new FakeFormConfig())

@@ -1,16 +1,16 @@
 package utils.forms
 
 import java.util
-import javax.script.{ScriptEngine, ScriptEngineManager, SimpleBindings}
+import javax.script.{ ScriptEngine, ScriptEngineManager, SimpleBindings }
 
 import com.google.inject.Inject
-import models.{ClaimForm, Field, FormConfig}
-import play.api.libs.json.{JsBoolean, JsNumber, JsString, JsValue}
+import models.{ ClaimForm, Field, FormConfig }
+import play.api.libs.json.{ JsBoolean, JsNumber, JsString, JsValue }
 
 /**
-  * ClaimService backed by FormConfig
-  */
-class ClaimServiceImpl @Inject()(formConfigManager: FormConfigManager) extends ClaimService {
+ * ClaimService backed by FormConfig
+ */
+class ClaimServiceImpl @Inject() (formConfigManager: FormConfigManager) extends ClaimService {
 
   val engine: ScriptEngine = new ScriptEngineManager().getEngineByMimeType("text/javascript")
 
@@ -21,19 +21,22 @@ class ClaimServiceImpl @Inject()(formConfigManager: FormConfigManager) extends C
 
     val formConfig: FormConfig = formConfigManager.getFormConfigs(claimForm.key)
 
-
     val optionalQuestions: Int = formConfig.fields.count(_.optional)
     val requiredQuestions: Int = formConfig.fields.count(shouldBeAnswered(claimForm.responses))
 
     val answeredOptional: Int = formConfig.fields.count(
-      (field: Field) => field.optional && claimForm.responses.contains(field.key))
+      (field: Field) => field.optional && claimForm.responses.contains(field.key)
+    )
     val answeredRequired: Int = formConfig.fields.count(
-      (field: Field) => !field.optional && claimForm.responses.contains(field.key))
+      (field: Field) => !field.optional && claimForm.responses.contains(field.key)
+    )
 
-    claimForm.copy(optionalQuestions = optionalQuestions,
+    claimForm.copy(
+      optionalQuestions = optionalQuestions,
       requiredQuestions = requiredQuestions,
       answeredRequired = answeredRequired,
-      answeredOptional = answeredOptional)
+      answeredOptional = answeredOptional
+    )
   }
 
   def shouldBeAnswered(data: Map[String, JsValue])(field: Field): Boolean = {
@@ -47,7 +50,8 @@ class ClaimServiceImpl @Inject()(formConfigManager: FormConfigManager) extends C
       data.foreach { x => bindings.put(x._1, unbox(x._2)) }
 
       val jsExpressionEval: AnyRef = engine.eval(
-        field.hideExpression.get, new SimpleBindings(bindings))
+        field.hideExpression.get, new SimpleBindings(bindings)
+      )
       jsExpressionEval.asInstanceOf[Boolean]
     }
   }

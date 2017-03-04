@@ -8,13 +8,14 @@ import scala.collection.JavaConversions._
 import play.api.libs.json._
 
 /**
-  * FormConfigManager backed by JSON files in the project resources.
-  */
+ * FormConfigManager backed by JSON files in the project resources.
+ */
 class JsonResourceFormConfigManager @Inject() (configuration: Configuration) extends FormConfigManager {
 
   def loadFormConfigFromResource(formKey: String): FormConfig = {
     val inputStream = getClass.getClassLoader.getResource(
-      s"${configuration.getString("forms.dir")}/${formKey}.json").openStream()
+      s"${configuration.getString("forms.dir")}/${formKey}.json"
+    ).openStream()
     val result: JsResult[FormConfig] = Json.parse(inputStream).validate[FormConfig]
 
     result.fold(

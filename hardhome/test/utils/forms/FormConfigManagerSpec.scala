@@ -7,12 +7,11 @@ import modules.JobModule
 import org.specs2.mock.Mockito
 import play.api.Configuration
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.{JsValue, Json, Reads}
-import play.api.test.{PlaySpecification, WithApplication}
+import play.api.libs.json.{ JsValue, Json, Reads }
+import play.api.test.{ PlaySpecification, WithApplication }
 import utils.EnumUtils
 
 import scala.collection.JavaConversions._
-
 
 class FormConfigManagerSpec extends PlaySpecification with Mockito {
   sequential

@@ -49,7 +49,7 @@ class UserValuesDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) exten
         userValuesCollection.update(
           Json.obj("userID" -> values.userID.toString),
           // The values on the RHS of `++` will overwrite the values of the LHS
-          Json.obj("$set" -> Json.obj("values" -> Json.toJson(values.values ++ existingValues))),
+          Json.obj("$set" -> Json.obj("values" -> Json.toJson(existingValues ++ values.values))),
           upsert = true
         )
       })
