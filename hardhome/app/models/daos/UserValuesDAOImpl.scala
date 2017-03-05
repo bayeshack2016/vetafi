@@ -3,7 +3,7 @@ package models.daos
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{Address, Contact, User, UserValues}
+import models.{ Address, Contact, User, UserValues }
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.modules.reactivemongo.json._
@@ -14,29 +14,30 @@ import play.api.libs.json._
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class UserValuesDAOImpl @Inject()(val reactiveMongoApi: ReactiveMongoApi,
-                                  val userDAO: UserDAO) extends UserValuesDAO {
+class UserValuesDAOImpl @Inject() (
+  val reactiveMongoApi: ReactiveMongoApi,
+  val userDAO: UserDAO
+) extends UserValuesDAO {
 
   def collection: Future[JSONCollection] = reactiveMongoApi.database.map(_.collection("user_values"))
 
   /**
-    * Finds user values for a user by their userID.
-    *
-    * @param userID The ID of the user to find values for.
-    * @return The found user values or None if no user for the given ID could be found.
-    */
+   * Finds user values for a user by their userID.
+   *
+   * @param userID The ID of the user to find values for.
+   * @return The found user values or None if no user for the given ID could be found.
+   */
   override def find(userID: UUID): Future[Option[UserValues]] = {
     collection.flatMap {
       _.find(Json.obj("userID" -> userID.toString)).one[UserValues]
     }
   }
 
-
   /**
-    * Update the [String, String] map of user values.
-    *
-    * @param values New user values, will overwrite existing values of the same key.
-    */
+   * Update the [String, String] map of user values.
+   *
+   * @param values New user values, will overwrite existing values of the same key.
+   */
   override def update(userID: UUID, values: UserValues): Future[WriteResult] = {
     collection.flatMap((userValuesCollection: JSONCollection) => {
 
@@ -69,16 +70,18 @@ class UserValuesDAOImpl @Inject()(val reactiveMongoApi: ReactiveMongoApi,
   }
 
   /**
-    * This is a mapping of user value keys to User object properties
-    * The keys and values are interpreted as JSON path strings
-    */
+   * This is a mapping of user value keys to User object properties
+   * The keys and values are interpreted as JSON path strings
+   */
   val USER_VALUES_TO_USER_PROPERTIES_MAPPING: Map[(User, Option[String]) => User, Seq[Seq[String]]] = Map(
     ((user: User, value: Option[String]) => {
       user.copy(contact = Some(user.contact.get.copy(address =
         Some(user.contact.get.address.get.copy(name = value)))))
     },
-      Seq(Seq("veteran_first_name", "veteran_middle_initial", "veteran_last_name"),
-        Seq("claimant_first_name", "claimant_middle_initial", "claimant_last_name"))),
+      Seq(
+        Seq("veteran_first_name", "veteran_middle_initial", "veteran_last_name"),
+        Seq("claimant_first_name", "claimant_middle_initial", "claimant_last_name")
+      )),
 
     ((user: User, value: Option[String]) => {
       user.copy(contact = Some(user.contact.get.copy(address =
@@ -139,16 +142,18 @@ class UserValuesDAOImpl @Inject()(val reactiveMongoApi: ReactiveMongoApi,
 
     val finalUser: User = USER_VALUES_TO_USER_PROPERTIES_MAPPING.foldLeft(updatedUser)(
       (u, t) =>
-        t._1(u, getPreferredConcatenatedValue(t._2, values)))
+        t._1(u, getPreferredConcatenatedValue(t._2, values))
+    )
 
     userDAO.save(finalUser)
   }
 
   def updateUserInfo(userID: UUID, values: UserValues): Future[WriteResult] = {
     userDAO.find(userID).flatMap {
-      user => {
-        updateUserInfo(user.get, values)
-      }
+      user =>
+        {
+          updateUserInfo(user.get, values)
+        }
     }
   }
 }
