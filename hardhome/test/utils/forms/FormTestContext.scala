@@ -15,8 +15,7 @@ trait FormTestContext extends Scope {
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
-    Some("condition1 === \"x\""),
-    optional = false
+    Some("condition1 === \"x\"")
   )
 
   val condition2DependentField = Field(
@@ -24,8 +23,7 @@ trait FormTestContext extends Scope {
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
-    Some("condition2 === \"x\""),
-    optional = false
+    Some("condition2 === \"x\"")
   )
 
   val requiredField1 = Field(
@@ -33,8 +31,7 @@ trait FormTestContext extends Scope {
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
-    None,
-    optional = false
+    None
   )
 
   val requiredField2 = Field(
@@ -42,26 +39,23 @@ trait FormTestContext extends Scope {
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
-    None,
-    optional = false
+    None
   )
 
   val optionalField1 = Field(
     "optionalField1",
     Field.TemplateType.input,
-    TemplateOptions("test", None, None, None, None),
+    TemplateOptions("test", None, None, None, None, optional = true),
     None,
-    None,
-    optional = true
+    None
   )
 
   val optionalField2 = Field(
     "optionalField2",
     Field.TemplateType.input,
-    TemplateOptions("test", None, None, None, None),
+    TemplateOptions("test", None, None, None, None, optional = true),
     None,
-    None,
-    optional = true
+    None
   )
 
   class FakeFormConfig extends FormConfigManager {

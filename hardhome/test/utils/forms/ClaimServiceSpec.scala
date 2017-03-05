@@ -29,8 +29,7 @@ class ClaimServiceSpec extends PlaySpecification with Mockito {
           Field.TemplateType.input,
           TemplateOptions("test", None, None, None, None),
           None,
-          Some("condition === \"x\""),
-          optional = false
+          Some("condition === \"x\"")
         )
       ) must beTrue
 
@@ -40,8 +39,7 @@ class ClaimServiceSpec extends PlaySpecification with Mockito {
           Field.TemplateType.input,
           TemplateOptions("test", None, None, None, None),
           None,
-          Some("condition === \"x\""),
-          optional = false
+          Some("condition === \"x\"")
         )
       ) must beFalse
     }

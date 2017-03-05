@@ -34,7 +34,7 @@ trait SilhouetteTestContext extends Scope {
   /**
    * An identity.
    */
-  val identity = User(
+  var identity = User(
     userID = userID,
     loginInfo = LoginInfo("credentials", "user@website.com"),
     firstName = None,

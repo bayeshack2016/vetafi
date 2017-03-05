@@ -35,7 +35,7 @@ trait UserDAO {
    * @param user The user to save.
    * @return The saved user.
    */
-  def save(user: User): Future[User]
+  def save(user: User): Future[WriteResult]
 
   /**
    * Update a users contact information

@@ -3,13 +3,13 @@ package models
 import play.api.libs.json.{ Json, OFormat }
 
 case class Address(
-  name: String,
-  street1: String,
-  street2: String,
-  city: String,
-  province: String,
-  postal: String,
-  country: String
+  name: Option[String] = None,
+  street1: Option[String] = None,
+  street2: Option[String] = None,
+  city: Option[String] = None,
+  province: Option[String] = None,
+  postal: Option[String] = None,
+  country: Option[String] = None
 ) {
 }
 

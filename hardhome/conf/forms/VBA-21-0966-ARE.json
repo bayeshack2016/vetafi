@@ -21,12 +21,11 @@
             "name": "For someone else",
             "value": false
           }
-        ]
+        ],
+        "optional": false
       },
-      "defaultValue": true,
-      "optional": false
+      "defaultValue": true
     },
-
     {
       "key": "veteran_intent_to_file_compensation_y_n",
       "type": "radio",
@@ -41,9 +40,9 @@
             "name": "No",
             "value": "No"
           }
-        ]
-      },
-      "optional": false
+        ],
+        "optional": false
+      }
     },
     {
       "key": "veteran_intent_to_file_pension_y_n",
@@ -59,9 +58,9 @@
             "name": "No",
             "value": "No"
           }
-        ]
-      },
-      "optional": false
+        ],
+        "optional": false
+      }
     },
     {
       "key": "dependency_indemnity_compensation_y_n",
@@ -77,9 +76,9 @@
             "name": "No",
             "value": "No"
           }
-        ]
-      },
-      "optional": false
+        ],
+        "optional": false
+      }
     },
     {
       "key": "claimant_first_name",
@@ -87,9 +86,9 @@
       "templateOptions": {
         "label": "Your First Name",
         "placeholder": "John",
-        "autocomplete": "given-name"
-      },
-      "optional": false
+        "autocomplete": "given-name",
+        "optional": false
+      }
     },
     {
       "key": "claimant_middle_initial",
@@ -97,9 +96,9 @@
       "templateOptions": {
         "label": "Your Middle Initial",
         "placeholder": "C",
-        "autocomplete": "additional-name"
-      },
-      "optional": false
+        "autocomplete": "additional-name",
+        "optional": false
+      }
     },
     {
       "key": "claimant_last_name",
@@ -107,21 +106,21 @@
       "templateOptions": {
         "label": "Your Last Name",
         "placeholder": "Doe",
-        "autocomplete": "family-name"
-      },
-      "optional": false
+        "autocomplete": "family-name",
+        "optional": false
+      }
     },
     {
       "key": "claimant_ssn",
       "type": "input",
       "templateOptions": {
         "label": "Your Social Security Number",
-        "placeholder": "000-00-0000"
+        "placeholder": "000-00-0000",
+        "optional": false
       },
       "optionsTypes": [
         "ssn"
-      ],
-      "optional": false
+      ]
     },
 
     {
@@ -130,10 +129,10 @@
       "templateOptions": {
         "label": "Veteran's First Name",
         "placeholder": "John",
-        "autocomplete": "given-name"
+        "autocomplete": "given-name",
+        "optional": false
       },
-      "hideExpression": "model.filing_for_self",
-      "optional": false
+      "hideExpression": "model.filing_for_self"
     },
     {
       "key": "veteran_middle_initial",
@@ -141,10 +140,10 @@
       "templateOptions": {
         "label": "Veteran's Middle Initial",
         "placeholder": "C",
-        "autocomplete": "additional-name"
+        "autocomplete": "additional-name",
+        "optional": false
       },
-      "hideExpression": "model.filing_for_self",
-      "optional": false
+      "hideExpression": "model.filing_for_self"
     },
     {
       "key": "veteran_last_name",
@@ -152,23 +151,23 @@
       "templateOptions": {
         "label": "Veteran's Last Name",
         "placeholder": "Doe",
-        "autocomplete": "family-name"
+        "autocomplete": "family-name",
+        "optional": false
       },
-      "hideExpression": "model.filing_for_self",
-      "optional": false
+      "hideExpression": "model.filing_for_self"
     },
     {
       "key": "veteran_ssn",
       "type": "input",
       "templateOptions": {
         "label": "Veteran's Social Security Number",
-        "placeholder": "000-00-0000"
+        "placeholder": "000-00-0000",
+        "optional": false
       },
       "optionsTypes": [
         "ssn"
       ],
-      "hideExpression": "model.filing_for_self",
-      "optional": false
+      "hideExpression": "model.filing_for_self"
     },
 
     {
@@ -180,9 +179,9 @@
       "templateOptions": {
         "label": "Veteran's Date of Birth",
         "placeholder": "MM/DD/YYYY",
-        "autocomplete": "bday"
-      },
-      "optional": false
+        "autocomplete": "bday",
+        "optional": false
+      }
     },
     {
       "key": "veteran_sex",
@@ -198,17 +197,17 @@
             "name": "Female",
             "value": "Female"
           }
-        ]
-      },
-      "optional": false
+        ],
+        "optional": false
+      }
     },
     {
       "key": "veterans_service_number",
       "type": "input",
       "templateOptions": {
-        "label": "Veteran's Service Number (If applicable)"
-      },
-      "optional": false
+        "label": "Veteran's Service Number (If applicable)",
+        "optional": false
+      }
     },
 
     {
@@ -225,19 +224,19 @@
             "name": "No",
             "value": "No"
           }
-        ]
-      },
-      "optional": false
+        ],
+        "optional": false
+      }
     },
     {
       "key": "va_file_number",
       "type": "input",
       "templateOptions": {
         "label": "VA File Number",
-        "placeholder": "000000000"
+        "placeholder": "000000000",
+        "optional": false
       },
-      "hideExpression": "model.veteran_previous_claim_with_va_y_n != 'Yes'",
-      "optional": false
+      "hideExpression": "model.veteran_previous_claim_with_va_y_n != 'Yes'"
     },
 
     {
@@ -246,9 +245,9 @@
       "templateOptions": {
         "label": "Address Line 1",
         "placeholder": "55 Magnolia St.",
-        "autocomplete": "address-line1"
-      },
-      "optional": false
+        "autocomplete": "address-line1",
+        "optional": false
+      }
     },
     {
       "key": "veteran_home_apartment_number",
@@ -256,9 +255,9 @@
       "templateOptions": {
         "label": "Apartment Number",
         "placeholder": "Apt. 3",
-        "autocomplete": "address-line3"
-      },
-      "optional": true
+        "autocomplete": "address-line3",
+        "optional": true
+      }
     },
     {
       "key": "veteran_home_city",
@@ -266,9 +265,9 @@
       "templateOptions": {
         "label": "City",
         "placeholder": "Kansas City",
-        "autocomplete": "address-level2"
-      },
-      "optional": false
+        "autocomplete": "address-level2",
+        "optional": false
+      }
     },
     {
       "key": "veteran_home_state",
@@ -278,9 +277,9 @@
       ],
       "templateOptions": {
         "label": "State",
-        "autocomplete": "address-level1"
-      },
-      "optional": false
+        "autocomplete": "address-level1",
+        "optional": false
+      }
     },
     {
       "key": "veteran_home_zip_code",
@@ -290,9 +289,9 @@
       ],
       "templateOptions": {
         "label": "Postal Code",
-        "autocomplete": "postal-code"
-      },
-      "optional": false
+        "autocomplete": "postal-code",
+        "optional": false
+      }
     },
     {
       "key": "veteran_home_country",
@@ -302,9 +301,9 @@
       ],
       "templateOptions": {
         "label": "Country",
-        "autocomplete": "country"
-      },
-      "optional": false
+        "autocomplete": "country",
+        "optional": false
+      }
     },
 
     {
@@ -315,9 +314,9 @@
       ],
       "templateOptions": {
         "label": "Contact Phone Number",
-        "autocomplete": "tel"
-      },
-      "optional": false
+        "autocomplete": "tel",
+        "optional": false
+      }
     },
     {
       "key": "contact_email",
@@ -327,9 +326,9 @@
       ],
       "templateOptions": {
         "label": "Contact Email",
-        "autocomplete": "email"
-      },
-      "optional": false
+        "autocomplete": "email",
+        "optional": false
+      }
     },
 
     {
@@ -338,9 +337,9 @@
       "templateOptions": {
         "label": "Name of attorney, agent, or veterans service organization",
         "rows": 2,
-        "columns": 100
-      },
-      "optional": true
+        "columns": 100,
+        "optional": true
+      }
     },
 
     {
@@ -351,9 +350,9 @@
       ],
       "templateOptions": {
         "label": "Date Signed",
-        "placeholder": "MM/DD/YYYY"
-      },
-      "optional": false
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      }
     }
   ]
 }

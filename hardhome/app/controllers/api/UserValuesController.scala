@@ -42,11 +42,17 @@ class UserValuesController @Inject() (
           },
           userValues => {
             userValuesDAO.update(request.identity.userID, userValues).flatMap {
-              case ok if ok.ok => Future.successful(
-                Created(Json.obj("status" -> "ok", "message" -> s"User values saved."))
-              )
-              case error => Future.successful(
-                InternalServerError(Json.obj("status" -> "error"))
+              case ok if ok.ok =>
+                userValuesDAO.updateContactInfo(request.identity.userID).flatMap {
+                  case userUpdated if userUpdated.nonEmpty && userUpdated.get.ok => Future.successful(
+                    Created(Json.obj("status" -> "ok", "message" -> s"User values saved."))
+                  )
+                  case _ => Future.successful(
+                    InternalServerError(Json.obj("status" -> "error", "message" -> "Failed to update user info."))
+                  )
+                }
+              case _ => Future.successful(
+                InternalServerError(Json.obj("status" -> "error", "message" -> "Failed to update user values."))
               )
             }
           }

@@ -3,17 +3,23 @@ package models.daos
 import java.util.UUID
 import javax.inject.Inject
 
-import models.UserValues
+import models.{ Address, Contact, User, UserValues }
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.modules.reactivemongo.json._
 import reactivemongo.api.commands.WriteResult
 import reactivemongo.play.json.collection.JSONCollection
+import play.api.libs.json._
+import utils.forms.ContactInfoService
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
-class UserValuesDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends UserValuesDAO {
+class UserValuesDAOImpl @Inject() (
+  val reactiveMongoApi: ReactiveMongoApi,
+  val userDAO: UserDAO,
+  val contactInfoService: ContactInfoService
+) extends UserValuesDAO {
 
   def collection: Future[JSONCollection] = reactiveMongoApi.database.map(_.collection("user_values"))
 
@@ -54,5 +60,14 @@ class UserValuesDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) exten
         )
       })
     })
+  }
+
+  override def updateContactInfo(userID: UUID): Future[Option[WriteResult]] = {
+    collection.flatMap(_.find(Json.obj("userID" -> userID)).one[UserValues]).flatMap {
+      case found if found.nonEmpty => contactInfoService.updateUserInfo(userID, found.get).map {
+        Some(_)
+      }
+      case _ => Future.successful(None)
+    }
   }
 }
