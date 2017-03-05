@@ -3,16 +3,16 @@ package controllers.api
 import java.util.UUID
 
 import com.google.inject.AbstractModule
-import com.mohiva.play.silhouette.api.{Environment, LoginInfo}
+import com.mohiva.play.silhouette.api.{ Environment, LoginInfo }
 import com.typesafe.config.ConfigFactory
 import controllers.SilhouetteTestContext
 import models.daos.UserDAO
 import models._
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
-import play.api.{Application, Configuration}
+import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
-import reactivemongo.api.commands.{UpdateWriteResult, WriteResult}
+import reactivemongo.api.commands.{ UpdateWriteResult, WriteResult }
 import utils.auth.DefaultEnv
 import utils.forms.ContactInfoService
 

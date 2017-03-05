@@ -3,7 +3,7 @@ package models.daos
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{Address, Contact, User, UserValues}
+import models.{ Address, Contact, User, UserValues }
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.modules.reactivemongo.json._
