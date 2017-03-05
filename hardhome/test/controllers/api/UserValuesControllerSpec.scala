@@ -70,6 +70,9 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
         val result2: Future[Result] = route(app, req2).get
 
         status(result2) must be equalTo CREATED
+
+        // Also ContactInfoService.updateUserInfo should have been called
+        identity.contact.get.phoneNumber.get must be equalTo "updated"
       }
     }
 
