@@ -22,4 +22,9 @@ trait UserValuesDAO {
    */
   def update(userID: UUID, values: UserValues): Future[WriteResult]
 
+  /**
+    *
+    */
+  def updateContactInfo(userID: UUID): Future[Option[WriteResult]]
+
 }

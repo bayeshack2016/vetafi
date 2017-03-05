@@ -5,8 +5,8 @@ import play.api.libs.json._
 import com.mohiva.play.silhouette.api.{ Identity, LoginInfo }
 
 case class Contact(
-  phoneNumber: String,
-  address: Address
+  phoneNumber: Option[String],
+  address: Option[Address]
 )
 
 object Contact {

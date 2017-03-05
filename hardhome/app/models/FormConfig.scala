@@ -32,8 +32,7 @@ case class Field(
   `type`: Field.TemplateType.Value,
   templateOptions: TemplateOptions,
   optionsTypes: Option[Seq[Field.ValidationType.Value]],
-  hideExpression: Option[String],
-  optional: Boolean = false
+  hideExpression: Option[String]
 ) {
 
 }
@@ -61,7 +60,8 @@ case class TemplateOptions(
   autocomplete: Option[TemplateOptions.AutocompleteType.Value],
   placeHolder: Option[String],
   rows: Option[Int],
-  columns: Option[Int]
+  columns: Option[Int],
+  optional: Boolean = false
 ) {
 
 }

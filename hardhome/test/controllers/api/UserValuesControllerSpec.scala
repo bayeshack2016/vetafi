@@ -16,7 +16,7 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
   sequential
 
   "The `getUserValues` action" should {
-    "return 401 if unauthorized" in new SilhouetteTestContext {
+    "return 401 if unauthorized" in new UserValuesControllerTestContext {
       new WithApplication(application) {
         val request: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
 
@@ -27,7 +27,7 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
       }
     }
 
-    "return 404 if authorized but no values" in new SilhouetteTestContext {
+    "return 404 if authorized but no values" in new UserValuesControllerTestContext {
       new WithApplication(application) {
         val request: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
 
@@ -38,7 +38,7 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
       }
     }
 
-    "return 201 when save values" in new SilhouetteTestContext {
+    "return 201 when save values" in new UserValuesControllerTestContext {
       new WithApplication(application) {
         val values = UserValues(userID, Map("key" -> "value"))
 
@@ -54,7 +54,7 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
       }
     }
 
-    "return 201 when save/update values" in new SilhouetteTestContext {
+    "return 201 when save/update values" in new UserValuesControllerTestContext {
       new WithApplication(application) {
         val values1 = UserValues(userID, Map("key" -> "value"))
         val values2 = UserValues(userID, Map("key" -> "value2", "newKey" -> "x"))
@@ -73,7 +73,7 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
       }
     }
 
-    "return 200 if authorized after update and return correct values" in new SilhouetteTestContext {
+    "return 200 if authorized after update and return correct values" in new UserValuesControllerTestContext {
       new WithApplication(application) {
         val values1 = UserValues(userID, Map("key" -> "value"))
         val values2 = UserValues(userID, Map("key" -> "value2", "newKey" -> "x"))

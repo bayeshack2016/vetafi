@@ -21,14 +21,14 @@ class ClaimServiceImpl @Inject() (formConfigManager: FormConfigManager) extends 
 
     val formConfig: FormConfig = formConfigManager.getFormConfigs(claimForm.key)
 
-    val optionalQuestions: Int = formConfig.fields.count(_.optional)
+    val optionalQuestions: Int = formConfig.fields.count(_.templateOptions.optional)
     val requiredQuestions: Int = formConfig.fields.count(shouldBeAnswered(claimForm.responses))
 
     val answeredOptional: Int = formConfig.fields.count(
-      (field: Field) => field.optional && claimForm.responses.contains(field.key)
+      (field: Field) => field.templateOptions.optional && claimForm.responses.contains(field.key)
     )
     val answeredRequired: Int = formConfig.fields.count(
-      (field: Field) => !field.optional && claimForm.responses.contains(field.key)
+      (field: Field) => !field.templateOptions.optional && claimForm.responses.contains(field.key)
     )
 
     claimForm.copy(
@@ -40,9 +40,9 @@ class ClaimServiceImpl @Inject() (formConfigManager: FormConfigManager) extends 
   }
 
   def shouldBeAnswered(data: Map[String, JsValue])(field: Field): Boolean = {
-    if (field.hideExpression.isEmpty && !field.optional) {
+    if (field.hideExpression.isEmpty && !field.templateOptions.optional) {
       true
-    } else if (field.optional) {
+    } else if (field.templateOptions.optional) {
       false
     } else {
       // SimpleBindings seems to require a real java HashMap.
