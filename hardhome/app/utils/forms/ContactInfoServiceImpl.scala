@@ -131,6 +131,4 @@ class ContactInfoServiceImpl @Inject() (
       case _ => Future.successful(None)
     }
   }
-
-
 }

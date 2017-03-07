@@ -22,7 +22,7 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
         val req = FakeRequest(
           POST,
-          controllers.api.routes.FormController.saveForm(testClaim.claimID, "test").url
+          controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url
         )
           .withJsonBody(Json.toJson(values))
           .withAuthenticator[DefaultEnv](identity.loginInfo)
@@ -40,10 +40,10 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
         val values1 = Map("key" -> JsString("value"))
         val values2 = Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
 
-        val req1 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "test").url)
+        val req1 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
           .withJsonBody(Json.toJson(values1))
           .withAuthenticator[DefaultEnv](identity.loginInfo))
-        val req2 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "test").url)
+        val req2 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
           .withJsonBody(Json.toJson(values2))
           .withAuthenticator[DefaultEnv](identity.loginInfo))
 
@@ -63,7 +63,7 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
         val values2 = Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
         val getRequest: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
 
-        val req1 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "test").url)
+        val req1 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
           .withJsonBody(Json.toJson(values1))
           .withAuthenticator[DefaultEnv](identity.loginInfo))
 
@@ -71,7 +71,7 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
         status(result1) must be equalTo CREATED
 
-        val req2 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "test").url)
+        val req2 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
           .withJsonBody(Json.toJson(values2))
           .withAuthenticator[DefaultEnv](identity.loginInfo))
 

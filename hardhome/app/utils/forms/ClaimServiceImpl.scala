@@ -1,11 +1,12 @@
 package utils.forms
 
 import java.util
-import javax.script.{ ScriptEngine, ScriptEngineManager, SimpleBindings }
+import javax.script.{ScriptEngine, ScriptEngineManager, SimpleBindings}
 
 import com.google.inject.Inject
-import models.{ ClaimForm, Field, FormConfig }
-import play.api.libs.json.{ JsBoolean, JsNumber, JsString, JsValue }
+import models.{ClaimForm, Field, FormConfig}
+import play.api.libs.json.JsValue
+import utils.JsonUnbox
 
 /**
  * ClaimService backed by FormConfig
@@ -46,22 +47,16 @@ class ClaimServiceImpl @Inject() (formConfigManager: FormConfigManager) extends 
       false
     } else {
       // SimpleBindings seems to require a real java HashMap.
+      val model = new util.HashMap[String, Object]
+      data.foreach { x => model.put(x._1, JsonUnbox.unbox(x._2)) }
+
       val bindings = new util.HashMap[String, Object]
-      data.foreach { x => bindings.put(x._1, unbox(x._2)) }
+      bindings.put("model", model)
 
       val jsExpressionEval: AnyRef = engine.eval(
         field.hideExpression.get, new SimpleBindings(bindings)
       )
       jsExpressionEval.asInstanceOf[Boolean]
-    }
-  }
-
-  def unbox(value: JsValue): Object = {
-    value match {
-      case string: JsString => string.value.asInstanceOf[Object]
-      case bool: JsBoolean => bool.value.asInstanceOf[Object]
-      case number: JsNumber => number.value.asInstanceOf[Object]
-      case _ => throw new IllegalArgumentException(value.toString())
     }
   }
 }

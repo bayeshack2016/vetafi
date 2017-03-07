@@ -31,7 +31,7 @@ trait FormControllerTestContext extends SilhouetteTestContext {
   )
 
   var testForm = ClaimForm(
-    "test",
+    "VBA-21-0966-ARE",
     Map.empty[String, JsValue],
     identity.userID,
     testClaim.claimID,
@@ -44,7 +44,7 @@ trait FormControllerTestContext extends SilhouetteTestContext {
     Map.empty[String, JsValue]
   )
 
-  class FakeClaimDao extends FormDAO {
+  class FakeFormDAO extends FormDAO {
     override def find(userID: UUID, claimID: UUID, key: String): Future[Option[ClaimForm]] = {
       if (key == testForm.key && claimID == testForm.claimID && userID == identity.userID) {
         Future.successful(Some(testForm))
@@ -67,7 +67,7 @@ trait FormControllerTestContext extends SilhouetteTestContext {
     }
   }
 
-  class FakeUserValuesDao extends UserValuesDAO {
+  class FakeUserValuesDAO extends UserValuesDAO {
     override def find(userID: UUID): Future[Option[UserValues]] = {
       if (userID == testUserValues.userID) {
         Future.successful(Some(testUserValues))
@@ -85,6 +85,8 @@ trait FormControllerTestContext extends SilhouetteTestContext {
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
       bind[Environment[DefaultEnv]].toInstance(env)
+      bind[FormDAO].toInstance(new FakeFormDAO())
+      bind[UserValuesDAO].toInstance(new FakeUserValuesDAO())
     }
   }
 

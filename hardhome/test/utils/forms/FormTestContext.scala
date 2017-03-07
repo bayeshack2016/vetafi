@@ -15,7 +15,7 @@ trait FormTestContext extends Scope {
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
-    Some("condition1 === \"x\"")
+    Some("model.condition1 === \"x\"")
   )
 
   val condition2DependentField = Field(
@@ -23,7 +23,7 @@ trait FormTestContext extends Scope {
     Field.TemplateType.input,
     TemplateOptions("test", None, None, None, None),
     None,
-    Some("condition2 === \"x\"")
+    Some("model.condition2 === \"x\"")
   )
 
   val requiredField1 = Field(
