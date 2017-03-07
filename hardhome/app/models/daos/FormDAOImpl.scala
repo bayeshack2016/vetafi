@@ -3,20 +3,21 @@ package models.daos
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{ Claim, ClaimForm, User }
+import models.{Claim, ClaimForm, User}
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.play.json.collection.JSONCollection
 import reactivemongo.api._
 import play.modules.reactivemongo.json._
 import play.modules.reactivemongo._
+import reactivemongo.api.commands.WriteResult
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
 /**
- * Created by jeffquinn on 3/2/17.
- */
+  * FormDAO backed by MongoDB, via ReactiveMongoApi
+  */
 class FormDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends FormDAO {
 
   def collection: Future[JSONCollection] = reactiveMongoApi.database.map(_.collection("forms"))
@@ -49,5 +50,9 @@ class FormDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends For
       },
       Cursor.FailOnError()
     ))
+  }
+
+  override def save(userID: UUID, claimID: UUID, key: String, claimForm: ClaimForm): Future[WriteResult] = {
+
   }
 }

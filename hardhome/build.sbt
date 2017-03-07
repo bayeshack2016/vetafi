@@ -15,6 +15,10 @@ unmanagedClasspath in Runtime += baseDirectory.value / "conf"
 unmanagedJars in Compile += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
 unmanagedJars in Runtime += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
 unmanagedJars in Test += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
+//unmanagedJars in Compile += baseDirectory.value / "nacl4s_2.10-1.0.0.jar"
+//unmanagedJars in Runtime += baseDirectory.value / "nacl4s_2.10-1.0.0.jar"
+//unmanagedJars in Test += baseDirectory.value / "nacl4s_2.10-1.0.0.jar"
+
 
 resolvers += Resolver.jcenterRepo
 resolvers += Resolver.url("Typesafe Ivy releases", url("https://repo.typesafe.com/typesafe/ivy-releases"))(Resolver.ivyStylePatterns)
@@ -36,6 +40,8 @@ libraryDependencies ++= Seq(
  // "com.github.dcoker" % "biscuit-java" % "master-SNAPSHOT",
   "com.amazonaws" % "aws-java-sdk-kms" % "1.10.76",
   "com.amazonaws" % "aws-java-sdk-core" % "1.10.76",
+  "com.github.emstlk" % "nacl4s_2.10" % "1.0.0",
+  "org.yaml" % "snakeyaml" % "1.16",
   specs2 % Test,
   cache,
   filters

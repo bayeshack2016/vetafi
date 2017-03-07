@@ -35,6 +35,7 @@ GET         /api/user/values                 controllers.api.UserValuesControlle
 POST        /api/user/values                 controllers.api.UserValuesController.updateUserValues
 
 POST        /api/claim/create                controllers.api.ClaimController.create
+POST        /api/claim/:claimID              controllers.api.ClaimController.getClaim(claimID: java.util.UUID)
 
 # Gulp managed static assets
 GET         /*file                           controllers.GulpAssets.at(file)

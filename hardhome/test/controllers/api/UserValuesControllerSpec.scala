@@ -18,8 +18,6 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
   "The `getUserValues` action" should {
     "return 401 if unauthorized" in new UserValuesControllerTestContext {
       new WithApplication(application) {
-        val request: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
-
         val result: Future[Result] = route(app, FakeRequest(controllers.api.routes.UserValuesController.getUserValues())
           .withAuthenticator[DefaultEnv](LoginInfo("invalid", "invalid"))).get
 
@@ -29,8 +27,6 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
 
     "return 404 if authorized but no values" in new UserValuesControllerTestContext {
       new WithApplication(application) {
-        val request: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
-
         val result: Future[Result] = route(app, FakeRequest(controllers.api.routes.UserValuesController.getUserValues())
           .withAuthenticator[DefaultEnv](identity.loginInfo)).get
 
