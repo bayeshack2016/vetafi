@@ -1,0 +1,151 @@
+@import "standards.styl"
+
+mainWrapperSize = 200px
+innerWrapperSize = 60px
+actionWindowMaxPx = 767px // Hack for media screen. Minor conflicts between media screening and bootstrap columns
+
+#vfi-home-view
+  background-color: colorWhite
+
+  & .banner-wrapper
+    position: relative
+    height: 360px
+    margin-bottom: megaSpacing
+    background: colorPrimaryDarkBlue
+    background-image: url('../icons/banner-child.jpg')
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    border-bottom: 4px solid colorPrimaryBlue
+
+    @media screen and (max-width: maxWindowWidthPx)
+      background-position: -360px 0px
+    @media screen and (max-width: minWindowWidthPx)
+      height: 420px
+      background-position: calc(100% + 240px)
+
+  & .banner-overlay
+    position: absolute
+    bottom: 0
+    width: 100%
+    background-color: rgba(25, 25, 25, 0.8)
+
+  & .headline-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+    padding: smallSpacing
+    color: colorWhite
+
+    & .header
+    & .subheader
+      text-align: left
+
+      @media screen and (max-width: maxWindowWidthPx)
+        text-align: center
+
+    & .header
+      color: colorWhite
+    & .subheader
+      color: colorDarkWhite
+
+    button
+      display: inline-block
+      margin-top: 8px
+      background-color: colorYellow
+      color: colorBlack
+
+      @media screen and (max-width: maxWindowWidthPx)
+        display: block
+        margin: smallSpacing auto 0
+
+
+  & .action-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto megaSpacing
+
+    & .content
+      padding-left: 30px
+      text-align: left
+
+      @media screen and (max-width: actionWindowMaxPx)
+        text-align: center
+
+      & h4
+        color: colorPrimaryDarkBlue
+
+  & .icons-wrapper
+
+    & .main-wrapper
+      position: relative
+      width: mainWrapperSize
+      height: mainWrapperSize
+      background-color: colorDarkGray
+      border-radius: 10px
+
+      &.right-align
+        float: right
+      &.left-align
+        float: left
+
+      @media screen and (max-width: actionWindowMaxPx)
+        margin: largeSpacing auto
+        float: initial !important
+
+    & .main-icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+
+      &.folder
+        width: 140px
+        height: 140px
+        background: url('../icons/folder.svg')
+        background-size: cover
+        background-repeat: no-repeat
+      &.health
+        width: 90px
+        height: 90px
+        background: url('../icons/health-white.svg')
+        background-size: cover
+        background-repeat: no-repeat
+
+    & .inner-wrapper
+      position: absolute
+      width: innerWrapperSize
+      height: innerWrapperSize
+      border-radius: 50%
+      border: 6px solid colorWhite
+
+      &.checkmark
+        background-color: colorGreen
+      &.question
+        background-color: colorPurple
+
+      &.left-align
+        bottom: -(innerWrapperSize / 2)
+        left: -(innerWrapperSize / 2)
+      &.right-align
+        bottom: -(innerWrapperSize / 2)
+        right: -(innerWrapperSize / 2)
+
+      & .inner-icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+
+        &.checkmark
+          width: 25px
+          height: 25px
+          background: url('../icons/checkmark-white.svg')
+          background-size: cover
+          background-repeat: no-repeat
+        &.question
+          width: 7px
+          height: 22px
+          background: url('../icons/info-white.svg')
+          background-size: cover
+          background-repeat: no-repeat

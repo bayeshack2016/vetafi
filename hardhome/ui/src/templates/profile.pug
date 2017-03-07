@@ -1,0 +1,12 @@
+div#vfi-profile-view
+
+  h3 My Profile
+  div.profile-tabs
+    button(ui-sref="root.profile.general", ui-sref-active="active") General
+    button(ui-sref="root.profile.claims", ui-sref-active="active") File Claims
+    button(ui-sref="root.profile.settings", ui-sref-active="active") Settings
+
+  div#vfi-profile-container
+    ui-view
+
+vfi-footer

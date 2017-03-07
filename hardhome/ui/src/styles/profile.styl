@@ -1,0 +1,212 @@
+@import "standards.styl"
+
+minWidthTabs = 312px
+claimsIconWrapperSize = 42px
+claimsIconSize = 22px
+
+#vfi-profile-view
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  min-width: minWidthTabs
+  margin: 0 auto
+  background-color: colorWarmLightGray
+
+  & h3
+    height: megaSpacing
+    line-height: megaSpacing
+    color: colorPrimaryDarkBlue
+
+//
+// Profile Tab section
+//
+.profile-tabs
+  min-width: minWidthTabs
+
+  & button
+    border-top-left-radius: 4px
+    border-top-right-radius: 4px
+    border-bottom-left-radius: 0px
+    border-bottom-right-radius: 0px
+    background-color: colorLightGray
+    color: colorBlack
+
+    &.active
+      background-color: colorWhite
+      color: colorPrimaryDarkBlue
+      border-top: 4px solid colorPrimaryDarkBlue
+
+//
+//  Profile Body Section
+//
+#vfi-profile-container
+  margin-bottom: megaSpacing
+
+.profile-section
+  min-height: 400px
+  padding: mediumSpacing largeSpacing
+  background-color: colorWhite
+
+  & .edit-icon
+    position: relative
+    top: 4px
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin-right: miniSpacing
+    background: url('../icons/edit-white.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+  & .docs-icon
+    position: relative
+    top: 4px
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin-right: miniSpacing
+    background: url('../icons/docs-white.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+//
+// Profile General section
+//
+#general
+  position: relative
+
+  & h4
+    color: colorPrimaryDarkBlue
+    margin-bottom: miniSpacing
+
+  & .content
+    margin-bottom: largeSpacing
+
+    &.missing
+      color: colorRed
+
+  & .button-wrapper
+    & button
+      position: absolute
+      top: mediumSpacing
+      right: largeSpacing
+
+//
+// Profile File Claims section
+//
+#claims
+  & .claim-card
+    position: relative
+    padding: mediumSpacing 0
+    border-top: 1px solid colorLightGray
+
+    &:last-child
+      border-bottom: 1px solid colorLightGray
+
+    & .claim-content
+      display: inline-block
+
+    & .button-wrapper
+      display: inline-block
+      float: right
+
+      @media screen and (max-width: minWindowWidthPx)
+        display: block
+        float: none
+        margin-bottom: mediumSpacing
+
+      & button
+        width: 10em
+
+        &.edit
+          background-color: colorYellow
+          color: colorBlack
+
+          & .edit-icon
+            background: url('../icons/edit-black.svg')
+            background-size: cover
+
+    &.edit
+      & .icon-wrapper
+        background-color: colorPrimaryDarkBlue
+      & .icon
+        background: url('../icons/edit-white.svg')
+        background-size: cover
+
+    &.submitted
+      & .claim-header
+        color: colorLightGreen
+      & .icon-wrapper
+        background-color: colorLightGreen
+      & .icon
+        background: url('../icons/checkmark-white.svg')
+        background-size: cover
+
+    & .icon-wrapper
+      position: relative
+      display: inline-block
+      width: claimsIconWrapperSize
+      height: claimsIconWrapperSize
+      margin-right: miniSpacing
+      vertical-align: top
+      border-radius: 50%
+      background-color: colorYellow
+
+      & .icon
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: claimsIconSize
+        height: claimsIconSize
+
+    & .text-wrapper
+      display: inline-block
+      vertical-align: middle
+
+    & .claim-header
+      margin-bottom: smallSpacing
+      color: colorPrimaryDarkBlue
+
+    & .form-content
+      & .form-icon-wrapper
+        position: relative
+        display: inline-block
+        width: claimsIconWrapperSize
+        height: claimsIconWrapperSize
+        vertical-align: middle
+        margin-right: miniSpacing
+        border-radius: 50%
+        background-color: colorDarkGray
+
+        & .docs-icon
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: claimsIconSize
+          height: claimsIconSize
+
+      & h4
+        display: inline-block
+
+      & ul
+        margin-left: megaSpacing
+//
+// Profile Settings section
+//
+#settings
+  text-align: center
+
+  & .section
+    margin-bottom: largeSpacing
+
+  & .summary
+    margin-bottom: miniSpacing
+
+  button
+    background-color: colorPrimaryDarkBlue
+
+    &.logout
+      background-color: colorDarkGray
+    &.delete
+      background-color: colorRed

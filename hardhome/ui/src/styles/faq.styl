@@ -1,0 +1,82 @@
+@import "standards.styl"
+
+iconSearchSize = 36px
+iconCancelSearchSize = 28px
+iconWarningSize = 56px
+
+#faq-view
+  margin: largeSpacing auto
+  box-sizing: border-box
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+
+  & .search-wrapper
+    position: relative
+    width: 100%
+    padding: miniSpacing
+    padding-left: megaSpacing
+    background-color: white
+    margin-bottom: largeSpacing
+    border-radius: 6px
+    box-sizing: border-box
+    border: 2px solid transparent
+
+    &:hover
+      border: 2px solid colorPrimaryBlue
+      cursor: pointer
+
+  & .search-icon
+    display: inline-block
+    width: iconSearchSize
+    height: iconSearchSize
+    margin-left: -8px
+    margin-right: smallSpacing
+    background: url('../icons/search.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+  & .search-bar
+    width: "calc(100% - %s)" % (iconSearchSize + smallSpacingPx + iconCancelSearchSize)
+    height: largeSpacing
+    line-height: largeSpacing
+    box-sizing: border-box
+    vertical-align: top
+    font-size: h3_size
+    outline: none
+    border: none
+
+  & .cancel-icon
+    position: absolute
+    right: smallSpacing
+    top: 50%
+    transform: translateY(-50%)
+    width: iconCancelSearchSize
+    height: iconCancelSearchSize
+    padding: 0
+    background: url('../icons/x-gray.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+.section-card
+  margin-bottom: largeSpacing
+  padding: largeSpacing megaSpacing
+  background-color: white
+
+  & .section-divider
+    margin-top: smallSpacing
+    margin-bottom: smallSpacing
+    border-bottom: 1px solid colorLightGray
+
+.section-card.vfi-error
+  & .warning-icon
+    display: inline-block
+    width: iconWarningSize
+    height: iconWarningSize
+    margin-right: mediumSpacing
+    background: url('../icons/warning-black.svg')
+    background-repeat: no-repeat
+    background-size: cover
+
+  & .section-content
+    display: inline-block
+    vertical-align: top

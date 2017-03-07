@@ -1,0 +1,59 @@
+@import "../standards.styl"
+
+#vfi-confirm-modify-contact-modal
+  position: relative
+  padding: smallSpacing mediumSpacing
+
+  & .close-modal-btn
+    position: absolute
+    top: 12px
+    right: mediumSpacing
+    background: none
+    padding: 0
+
+  & .close-icon
+    width: 32px
+    height: 32px
+    background: url('../icons/x-black.svg')
+    background-size: cover
+    background-repeat: no-repeat
+
+  & h3
+    height: 40px
+    margin-bottom: mediumSpacing
+    border-bottom: 2px solid colorLightGray
+
+  & .input-wrapper
+    margin-bottom: mediumSpacing
+
+    & input
+      display: block
+      width: 100%
+      line-height: 36px
+      margin-bottom: mediumSpacing
+      padding-left: 12px
+      border-radius: 5px
+      border: 2px solid colorLightGray
+      outline: none
+
+      &:active
+      &:focus
+        border: 2px solid colorFocusBlue
+
+  & .button-wrapper
+    width: 100%
+
+    & .clearer
+      clear: both;
+
+  & .cancel-btn
+    float: left
+    background-color: colorDarkGray
+
+  & .delete-btn
+    float: left
+    background-color: colorRed
+
+  & .save-btn
+    float: right
+    background-color: colorLightGreen

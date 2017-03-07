@@ -1,0 +1,199 @@
+@import "standards.styl"
+
+#select-forms-view
+  width: 100%
+  background-color: colorWhite
+
+#select-forms-wrapper
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto
+  padding: largeSpacing 0
+
+  & h3
+    margin-bottom: mediumSpacing
+    color: colorPrimaryBlue
+
+  & h4
+    display: inline-block
+    line-height: 2.5em
+    color: colorPrimaryBlue
+
+  & .section
+    margin-bottom: largeSpacing
+
+    & .section-header
+      & .progressbar // the wrapper
+        position: relative
+        top: 5px
+        width: 45%
+        height: 24px
+        margin: 0
+        float: right
+
+      & .progress-bar // the inside increasing bar
+        height: 100%
+        line-height: 24px
+        background-color: colorPrimaryDarkBlue
+
+      & .progress-bar-success
+        background-color: colorLightGreen
+
+  & .form-wrapper
+    position: relative
+    padding: smallSpacing 0
+    background-color: colorWhite
+    border-top: 2px solid colorLightGray
+
+    &:last-child
+      border-bottom: 2px solid colorLightGray
+
+    & .form-content
+      display: inline-block
+      width: 70%
+
+      @media screen and (max-width: maxWindowWidthPx)
+        width: 100%
+
+    & .form-buttons
+      position: absolute
+      top: 50%
+      right: 0
+      transform: translateY(-50%)
+      width: 30%
+      text-align: right
+
+      @media screen and (max-width: maxWindowWidthPx)
+        position: relative
+        top: 0
+        left: 0
+        right: 0
+        transform: none
+        width: 100%
+        text-align: center
+
+      & button, & .btn
+        display: inline-block
+        width: 9em
+        margin-bottom: smallSpacing
+
+        &:last-child
+          margin-bottom: 0
+
+        &.download-btn
+          background-color: colorLightGreen
+
+        @media screen and (max-width: maxWindowWidthPx)
+          display: inline-block
+          margin: 0 smallSpacing smallSpacing
+
+    & .form-title-wrapper
+      display: inline-block
+      vertical-align: middle
+
+      & .title
+        display: inline-block
+        &.required
+          color: colorRed
+
+      & .warning
+        display: inline-block
+        &.required
+          color: colorRed
+
+    & .form-summary
+      margin: smallSpacing 0
+
+    & .state-wrapper
+      display: inline-block
+      position: relative
+      width: 36px
+      height: 36px
+      margin-right: miniSpacing
+      border-radius: 50%
+      background-color: colorLightGray
+      vertical-align: middle
+
+      &.required
+        background-color: colorRed
+
+        & .state-icon
+          transform: translate(-50%, -55%)
+          width: 26px
+          height: 26px
+          background: url('../icons/warning-white.svg')
+          background-repeat: no-repeat
+          background-size: cover
+
+      &.complete
+        background-color: colorLightGreen
+
+        & .state-icon
+          transform: translate(-50%, -50%)
+          width: 22px
+          height: 22px
+          background: url('../icons/checkmark-white.svg')
+          background-repeat: no-repeat
+          background-size: cover
+
+    & .state-icon
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      width: 22px
+      height: 22px
+      background: url('../icons/docs-white.svg')
+      background-repeat: no-repeat
+      background-size: cover
+
+    & .edit-icon
+      display: inline-block
+      width: 20px
+      height: 20px
+      margin-right: miniSpacing
+      background: url('../icons/edit-white.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      vertical-align: top
+
+    & .download-icon
+      display: inline-block
+      width: 20px
+      height: 20px
+      margin-right: miniSpacing
+      background: url('../icons/download-white.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      vertical-align: top
+
+  & .button-wrapper
+    & .cancel-btn
+      float: left
+      background-color: colorLightGray
+      color: colorBlack
+
+    & .done-btn
+      float: right
+      background-color: colorLightGray
+      cursor: initial
+
+      &:hover
+        filter: brightness(1)
+        -webkit-filter: brightness(1)
+        -moz-filter: brightness(1)
+        -ms-filter: brightness(1)
+
+      &.ready
+        background-color: colorYellow
+        color: colorBlack
+        cursor: pointer
+
+        &.ready:hover
+          filter: brightness(1.2)
+          -webkit-filter: brightness(1.2)
+          -moz-filter: brightness(1.2)
+          -ms-filter: brightness(1.2)
+
+    & .clearer
+      clear: both

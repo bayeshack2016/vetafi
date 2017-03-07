@@ -1,0 +1,31 @@
+if showBanner
+    div#banner
+      div.banner-wrapper
+        h5 #{bannerMessage}
+div#header
+    div#header-content
+        a.vfi-header-logo-wrapper(ui-sref="root.home")
+            img(src="icons/vetafi-logo.svg")
+        div.header-links
+            // If not signed in
+            a.big-link(href='/signup' ng-if='!isSignedIn')
+                h5 Sign Up
+                .underline-border
+            a.big-link(href='/login' ng-if='!isSignedIn')
+                h5 Log In
+                div.underline-border
+            // If signed in
+            div.menu-wrapper(ng-if="isSignedIn")
+                button.menu-btn(ng-click="onToggleMenu()")
+                    div.menu-icon
+                ul.menu-list(ng-class="{'vfi-show':menuToggled}"
+                click-outside="closeThisMenu()"
+                outside-if-not="menu-btn"
+                ng-click="onToggleMenu()")
+                    li(ui-sref="root.profile.general") My Profile
+                    a(href="/logout")
+                        li Log out
+div.main-view-wrapper
+   ui-view
+div#busy-overlay
+   img.busy-spinner(src="../icons/spinner.svg")

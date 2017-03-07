@@ -1,0 +1,105 @@
+@import "standards.styl"
+
+.signature-success
+  color: #3c763d
+
+.signature::before
+  content: "X"
+  color: black
+  position: relative
+  top: 28vh
+  left: 5px
+  font-size: 5vh
+
+.nopadding
+  padding: 0 !important
+  margin: 0 !important
+
+.signature
+  width: 100%
+  height: 33vh
+  border-bottom-style: dotted
+  position: relative
+  background-color: white
+  cursor: default
+
+  & canvas
+    padding: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+#vfi-form-view
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto 8em
+
+  & .form-submit-button-group
+    margin-top: 3vh
+
+  & .form-title
+    margin-top: 1em
+
+  & .form-name
+    white-space: nowrap
+    margin-right: 20px
+
+  & button
+    &.clear-signature
+      background-color: colorPurple
+      color: colorWhite
+
+    &.submit
+      float: right
+      background-color: colorGreen
+      color: colorWhite
+
+      &.disabled
+        background-color: colorLightGray
+        color: colorBlack
+
+    &.save, &.download
+      float: left
+      margin: 0 miniSpacing
+
+.floating-progress
+  position: fixed
+  min-width: 33vw
+  right: 3vw
+  bottom: 3vh
+  padding: 10px 20px
+  z-index: 999
+  background-color: white
+  border: solid 1px #525252
+  border-radius: 10px
+  & .progress
+    margin-bottom: 0
+  & .form-row
+    margin-bottom: 10px
+
+.floating-progress-text
+  text-align: end
+
+.disabled
+  background-color: colorLightGray
+  cursor: not-allowed !important
+
+div.has-success::before
+  content: ' '
+  background-image: url('../icons/checkmark-green.svg')
+  position: relative
+  background-size: 25px 25px
+  height: 25px
+  width: 25px
+  display: block
+  right: 35px
+  top: 60px
+  margin-top: -25px
+
+canvas.signature-canvas
+  width: 100%
+  height: 100%

@@ -1,0 +1,79 @@
+#vfi-claim-confirm-view
+  vfi-breadcrumbs(page="2")
+  #claim-confirm-wrapper
+    h2.header Confirm Claim
+
+    div.section.intro
+      h4 Hi {{user.firstname}}!
+      div.row
+        div.col-sm-6
+          p
+            |You are one step away from submitting your claim.
+            |Please look over your submission and click on Submit if everything is correct.
+        div.col-sm-6
+          button.confirm-btn(ng-click="onClickConfirm()") Submit
+
+    div.section.basic-info
+      h4 General
+      div.basic-row
+        span Name:
+        span {{user.firstname}} {{user.lastname}}
+      div.basic-row
+        span Today's date:
+        span {{dateToday}}
+      div.basic-row
+        span Number of forms:
+        span {{formsList.length}}
+
+    div.section.mailing-list
+      div.section-header
+        h4 Mail form to:
+      div.container-fluid
+        div.row-wrapper.row
+          h5.title.col-sm-5
+            b {{vaAddress.name}}
+          div.address.col-sm-5
+            div.address-line {{vaAddress.street1}} {{vaAddress.street2}}
+            div.address-line {{vaAddress.city}}, {{vaAddress.province}}, {{vaAddress.country}} {{vaAddress.postal}}
+
+    div.section.mailing-list
+      div.section-header
+        h4 Mail copy of form to me at:
+      div.container-fluid
+        div.row-wrapper.row
+          h5.title.col-sm-5
+            b {{userAddress.name}}
+          div.address.col-sm-5
+            div.address-line {{userAddress.street1}} {{userAddress.street2}}
+            div.address-line {{userAddress.city}}, {{userAddress.province}}, {{userAddress.country}} {{userAddress.postal}}
+          button.col-sm-2(ng-click="onClickEditAddress()")
+            div.edit-icon
+            | Edit
+
+    div.section.email-list
+      div.section-header
+        h4 E-mail electronic copies to:
+      div.container-fluid
+        div.row-wrapper.row
+          div.title.col-sm-5 {{userEmail}}
+          button.col-sm-2(ng-click="onClickEditEmail()")
+            div.edit-icon
+            | Edit
+
+    div.section.forms-list
+      div.section-header
+        h4 Forms:
+        button(ui-sref="root.claimselect({claimId: claimId})")
+          div.edit-icon
+          | Review Forms
+      div.container-fluid
+        div.row-wrapper.row(ng-repeat="form in formsList")
+          h5.title.col-sm-5
+            b {{formsInfo[form.key].vfi.title}}
+          div.form-description.col-sm-7 {{formsInfo[form.key].vfi.summary}}
+
+    div.button-wrapper
+      button.back-btn(ui-sref="root.claimselect({claimId: claimId})") Back
+      button.confirm-btn(ng-click="onClickConfirm()") Submit
+
+vfi-footer

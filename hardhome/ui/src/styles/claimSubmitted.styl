@@ -1,0 +1,51 @@
+@import "standards.styl"
+
+#claim-submitted-view
+  min-height: 400px
+  padding-bottom: mediumSpacing
+  background-color: colorWhite
+
+  #claim-submitted-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+
+    & .header
+      border-bottom: 1px solid colorLightGray
+
+      & .header-icon-wrapper
+        display: inline-block
+        position: relative
+        top: 8px
+        width: 36px
+        height: 36px
+        margin-right: smallSpacing
+        border-radius: 50%
+        background-color: colorLightGreen
+
+        & .header-icon
+          position: absolute
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          width: 20px
+          height: 20px
+          background: url('../icons/checkmark-white.svg')
+          background-size: cover
+          background-repeat: no-repeat
+
+        &.rejected
+          background-color: colorDarkGray
+          & .header-icon
+            background: url('../icons/x-white.svg')
+            background-size: cover
+            background-repeat: no-repeat
+
+      & h2
+        display: inline-block
+        line-height: 2.5em
+        color: colorPrimaryDarkBlue
+
+    & .message
+      margin-top: mediumSpacing
+      max-width: 600px

@@ -1,0 +1,222 @@
+@import "standards.styl"
+
+backgroundUrl = '../icons/veteran-dog-bg.jpg'
+removePicWidth = maxLayoutWidthPx
+changeLayoutWidth = minWindowWidthPx
+textContainerWidthPx = 165px
+
+#signup-view
+#login-view
+  background: url(backgroundUrl)
+  background-attachment: fixed
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+
+  & .bg-overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(255, 255, 255, 0.4)
+
+  & .viewer
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: maxLayoutWidthPx
+    height: 520px
+    background-color: colorWhite
+    box-shadow: 0px 0px 16px 4px
+    border-radius: 6px
+    overflow: hidden
+
+    @media screen and (max-width: removePicWidth)
+      width: 400px
+
+    @media screen and (max-width: changeLayoutWidth)
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      transform: none
+      border-radius: 0px
+      background: rgba(0, 0, 0, 0.6)
+
+  & .pic-section
+    display: inline-block
+    width: 50%
+    height: 100%
+    background: url('../icons/veteran-dog-bg.jpg')
+    background-position: -50px 0px
+    background-size: cover
+    background-repeat: no-repeat
+
+    @media screen and (max-width: removePicWidth)
+      display: none
+
+  & .interact-section
+    display: inline-block
+    vertical-align: top
+    width: 50%
+    height: 100%
+    padding: largeSpacing
+
+    @media screen and (max-width: removePicWidth)
+      display: block
+      width: 100%
+      padding: largeSpacing megaSpacing
+
+    & img.logo
+      display: block
+      width: 120px
+      margin: 0 auto largeSpacing
+
+      @media screen and (max-width: changeLayoutWidth)
+        content: url('../icons/vetafi-logo.svg')
+
+    & .error-msg
+      color: colorRed
+      text-align: left
+
+  & .carousel
+    position: relative
+    width: 100%
+    height: calc(100% - 1em)
+    overflow: hidden
+
+    & .screen
+      position: absolute
+      top: 0
+      width: 100%
+      transition: 0.2s linear all
+
+      &.options
+        left: 0%
+        opacity: 1.0
+        visibility: visible
+
+        &.vfi-hide
+          left: -50%
+          opacity: 0.0
+          visibility: hidden
+
+      &.inputs
+        left: 50%
+        opacity: 0.0
+        visibility: hidden
+
+        &.vfi-show
+          left: 0%
+          opacity: 1.0
+          visibility: visible
+
+
+  & .screen.options
+    & .divider
+      margin-bottom: mediumSpacing
+      text-align: center
+      color: colorDarkGray
+
+      @media screen and (max-width: changeLayoutWidth)
+        color: colorWhite
+
+    & a
+      display: block
+      margin-bottom: smallSpacing
+      text-align: left
+      color: colorPrimaryBlue
+
+      &:hover
+        cursor: pointer
+
+      @media screen and (max-width: removePicWidth)
+        text-align: center
+      @media screen and (max-width: changeLayoutWidth)
+        color: colorWhite
+
+    & button
+      width: 100%
+      margin-bottom: mediumSpacing
+      text-align: left
+
+      & .icon-container
+        display: inline-block
+        width: "calc(100% - %s)" % textContainerWidthPx
+        vertical-align: middle
+
+      & .txt-container
+        display: inline-block
+        width: textContainerWidthPx
+
+      & .fb-icon
+        height: 24px
+        width: 24px
+        margin-left: -10px
+        margin-top: -3px
+        background: url('../icons/fb-icon.svg')
+        background-size: cover
+        background-repeat: no-repeat
+
+      & .idme-icon
+        height: 16px
+        width: 44px
+        background: url('../icons/idme-logo-white.png')
+        background-size: cover
+        background-repeat: no-repeat
+
+      & .email-icon
+        width: 40px
+        height: 24px
+        background: url('../icons/email-white.svg')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: -7px -7px
+
+      &.fb-btn
+        background-color: colorFacebook
+      &.idme-btn
+        background-color: colorIdMeNavy
+      &.email-btn
+        background-color: colorPrimaryBlue
+
+
+  & .screen.inputs
+    & a
+      display: block
+
+    & input
+      display: block
+      width: 100%
+      margin-bottom: smallSpacing
+      padding: miniSpacing smallSpacing
+      border-radius: 4px
+      outline: none
+      border: 2px solid colorLightGray
+      box-shadow: none
+
+      &:active
+      &:focus
+        border: 2px solid colorLightBlue
+
+    & .submit
+      display: block
+      width: 100%
+      margin-bottom: smallSpacing
+      background-color: colorPrimaryDarkBlue
+      border: 2px solid colorPrimaryDarkBlue
+      color: colorWhite
+
+      @media screen and (max-width: removePicWidth)
+        text-align: center
+
+    & .back-btn
+      display: block
+      width: 100%
+      background-color: transparent
+      color: colorDarkGray
+
+      @media screen and (max-width: changeLayoutWidth)
+        color: colorWhite

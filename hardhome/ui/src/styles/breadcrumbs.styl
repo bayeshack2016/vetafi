@@ -1,0 +1,23 @@
+@import "standards.styl"
+
+#vfi-breadcrumbs
+  background-color: colorBlack
+  color: colorDarkGray
+
+  & .breadcrumbs-wrapper
+    height: 40px
+    line-height: 40px
+    width: maxLayoutWidthPx
+    max-width: maxLayoutWidthPct
+    margin: 0 auto
+
+    & .link-wrapper
+      display: inline-block
+
+      & span
+        margin-right: miniSpacing
+
+        &.lighten
+          color: colorLightGray
+        &.current
+          color: colorWhite

@@ -1,0 +1,33 @@
+div.profile-section#claims
+
+  div.no-claims-wrapper(ng-show="claims.length == 0")
+    h4 You have no pending file claims at the moment.
+    br
+    p Click #[a(ui-sref="root.claimstart") here] to start a file claim.
+
+  div.claims-wrapper(ng-show="claims.length > 0")
+    h3 Your claims history
+
+    div.claim-card(ng-repeat="claim in claims", ng-class="{'edit': claim.state=='incomplete', 'submitted': claim.state=='submitted'}")
+      div.button-wrapper
+        button.edit(ui-sref="root.claimselect({claimId: claim.id})", ng-if="claim.state == 'incomplete'")
+          div.edit-icon
+          | Edit Claim
+        button.view(ui-sref="root.claimview({claimId: claim.id})", ng-if="claim.state == 'submitted'")
+          div.docs-icon
+          | View Claim
+
+      div.claim-content
+        div.claim-header
+          div.icon-wrapper
+            div.icon
+          div.text-wrapper
+            h4.status {{claim.header}}
+            div.date {{claim.date}}
+
+        div.form-content(ng-if="claim.formIds.length > 0")
+          div.form-icon-wrapper
+            div.docs-icon
+          h4 Forms:
+          ul
+            li(ng-repeat="formId in claim.formIds") {{formId}}

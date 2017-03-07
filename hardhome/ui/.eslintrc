@@ -1,0 +1,15 @@
+{
+    "env": {
+        "browser": true,
+        "node": false
+    },
+    "globals": {
+        "_": true,
+        "$": true,
+        "angular": true
+    },
+    "rules": {
+      "no-console": "off"
+    },
+    "extends": "eslint:recommended"
+}

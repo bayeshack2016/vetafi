@@ -1,0 +1,36 @@
+@import "standards.styl"
+
+#vfi-support-view
+  padding: megaSpacing 0
+
+  & .support-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+
+    & form
+      margin-top: smallSpacing
+
+    & .section
+      margin-bottom: smallSpacing
+
+    & .section-label
+      display: block
+
+    & input
+      display: block
+
+      &.submit
+        border: none
+        background: transparent
+        color: colorWhite
+
+    & textarea
+      padding: 1em
+      outline: none
+      border: 1px solid white
+
+      &:hover
+      &:active
+      &:focus
+        border: 1px solid colorPrimaryBlue

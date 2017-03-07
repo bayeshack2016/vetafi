@@ -1,6 +1,5 @@
 import com.typesafe.sbt.SbtScalariform._
-import PlayGulpPlugin._
-import PlayGulpKeys._
+import PlayGulp._
 
 import scalariform.formatter.preferences._
 
@@ -11,6 +10,11 @@ version := "4.0.0"
 scalaVersion := "2.11.8"
 
 unmanagedClasspath in Runtime += baseDirectory.value / "conf"
+
+// TODO fix me
+unmanagedJars in Compile += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
+unmanagedJars in Runtime += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
+unmanagedJars in Test += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
 
 resolvers += Resolver.jcenterRepo
 resolvers += Resolver.url("Typesafe Ivy releases", url("https://repo.typesafe.com/typesafe/ivy-releases"))(Resolver.ivyStylePatterns)
@@ -29,13 +33,18 @@ libraryDependencies ++= Seq(
   "com.enragedginger" %% "akka-quartz-scheduler" % "1.5.0-akka-2.4.x",
   "com.mohiva" %% "play-silhouette-testkit" % "4.0.0" % "test",
   "com.digitaltangible" %% "play-guard" % "2.0.0",
-  "com.github.dcoker" % "biscuit-java" % "master-SNAPSHOT",
+ // "com.github.dcoker" % "biscuit-java" % "master-SNAPSHOT",
+  "com.amazonaws" % "aws-java-sdk-kms" % "1.10.76",
+  "com.amazonaws" % "aws-java-sdk-core" % "1.10.76",
   specs2 % Test,
   cache,
   filters
+
 )
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file("."))
+    .enablePlugins(PlayScala)
+    .settings(playGulpSettings)
 
 routesGenerator := InjectedRoutesGenerator
 
@@ -51,5 +60,9 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(FormatXml, false)
   .setPreference(DoubleIndentClassDeclaration, false)
   .setPreference(PreserveDanglingCloseParenthesis, true)
+
+
+// play-gulp settings
+unmanagedResourceDirectories in Assets <+= (gulpDirectory in Compile)(base => base / "build")
 
 fork in run := false
