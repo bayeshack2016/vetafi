@@ -2,7 +2,7 @@ package models
 
 import java.util.UUID
 
-import play.api.libs.json.{ JsValue, Json, OFormat }
+import play.api.libs.json._
 
 /**
  * Represents a single completed piece of paperwork.

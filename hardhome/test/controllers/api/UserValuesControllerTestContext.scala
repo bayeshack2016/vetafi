@@ -21,9 +21,11 @@ import scala.concurrent.Future
 trait UserValuesControllerTestContext extends SilhouetteTestContext {
 
   class FakeContactInfoService extends ContactInfoService {
-    override def updateUserInfo(userID: UUID, values: UserValues): Future[WriteResult] = {
+    override def updateContactInfo(userID: UUID): Future[Option[WriteResult]] = {
       identity = identity.copy(contact = Some(Contact(Some("updated"), None)))
-      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+      Future.successful(
+        Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+      )
     }
   }
 

@@ -3,11 +3,13 @@ package utils.forms
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{ Address, Contact, User, UserValues }
-import models.daos.UserDAO
+import models.{Address, Contact, User, UserValues}
+import models.daos.{UserDAO, UserValuesDAO}
+import play.api.libs.json._
 import reactivemongo.api.commands.WriteResult
-import scala.concurrent.ExecutionContext.Implicits.global
+import utils.JsonUnbox
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 /**
@@ -16,7 +18,10 @@ import scala.concurrent.Future
  * Example: If a form asks your address, we should populate the answered
  * address into the User.Contact.Address model.
  */
-class ContactInfoServiceImpl @Inject() (userDAO: UserDAO) extends ContactInfoService {
+class ContactInfoServiceImpl @Inject() (
+  userDAO: UserDAO,
+  userValuesDAO: UserValuesDAO
+) extends ContactInfoService {
   /**
    * This is a mapping of user value keys to User object properties
    * The keys and values are interpreted as JSON path strings
@@ -72,10 +77,15 @@ class ContactInfoServiceImpl @Inject() (userDAO: UserDAO) extends ContactInfoSer
       Seq(Seq("veteran_last_name"), Seq("claimant_last_name")))
   )
 
-  def getPreferredConcatenatedValue(keySets: Seq[Seq[String]], values: UserValues): Option[String] = {
+  def getPreferredConcatenatedValue(keySets: Seq[Seq[String]], values: Map[String, JsValue]): Option[String] = {
     for (keys: Seq[String] <- keySets) {
-      if (keys.map(values.values.contains).reduce(_ && _)) {
-        return Some(keys.map(values.values.apply).reduce(_ + " " + _))
+      if (keys.map(values.contains).reduce(_ && _)) {
+        return Some(keys.map(values.apply)
+          .reduce(
+            (a: JsValue, b: JsValue) => {
+              JsString(JsonUnbox.unbox(a).toString + " " + JsonUnbox.unbox(b).toString)
+            }
+          ).toString)
       }
     }
     None
@@ -94,7 +104,7 @@ class ContactInfoServiceImpl @Inject() (userDAO: UserDAO) extends ContactInfoSer
 
     val finalUser: User = mapping.foldLeft(updatedUser)(
       (u: User, t: ((User, Option[String]) => User, Seq[Seq[String]])) => {
-        getPreferredConcatenatedValue(t._2, values) match {
+        getPreferredConcatenatedValue(t._2, values.values) match {
           case foundValue if foundValue.nonEmpty => t._1(u, foundValue)
           case _ => u
         }
@@ -112,4 +122,15 @@ class ContactInfoServiceImpl @Inject() (userDAO: UserDAO) extends ContactInfoSer
         }
     }
   }
+
+  override def updateContactInfo(userID: UUID): Future[Option[WriteResult]] = {
+    userValuesDAO.find(userID).flatMap {
+      case Some(userValues) => updateUserInfo(userID, userValues).map {
+        Some(_)
+      }
+      case _ => Future.successful(None)
+    }
+  }
+
+
 }

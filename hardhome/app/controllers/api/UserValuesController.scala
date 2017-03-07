@@ -2,8 +2,8 @@ package controllers.api
 
 import javax.inject.Inject
 
-import com.mohiva.play.silhouette.api.Silhouette
-import models.UserValues
+import com.mohiva.play.silhouette.api.{ Identity, LoginInfo, Silhouette }
+import models.{ ClaimForm, User, UserValues }
 import models.daos.UserValuesDAO
 import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc._
@@ -23,41 +23,9 @@ class UserValuesController @Inject() (
     request =>
       {
         userValuesDAO.find(request.identity.userID).map {
-          case found if found.nonEmpty => Ok(Json.toJson(found.get))
-          case notFound => NotFound
+          case Some(userValues) => Ok(Json.toJson(userValues))
+          case None => NotFound
         }
       }
   }
-
-  def updateUserValues(): Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {
-    request =>
-      {
-        val userValuesResult = request.body.validate[UserValues]
-
-        userValuesResult.fold(
-          errors => {
-            Future.successful(
-              BadRequest(Json.obj("status" -> "error", "message" -> JsError.toJson(errors)))
-            )
-          },
-          userValues => {
-            userValuesDAO.update(request.identity.userID, userValues).flatMap {
-              case ok if ok.ok =>
-                userValuesDAO.updateContactInfo(request.identity.userID).map {
-                  case userUpdated if userUpdated.nonEmpty && userUpdated.get.ok =>
-                    Created(Json.obj("status" -> "ok", "message" -> s"User values saved.")
-                  )
-                  case _ =>
-                    InternalServerError(Json.obj("status" -> "error", "message" -> "Failed to update user info.")
-                  )
-                }
-              case _ => Future.successful(
-                InternalServerError(Json.obj("status" -> "error", "message" -> "Failed to update user values."))
-              )
-            }
-          }
-        )
-      }
-  }
-
 }

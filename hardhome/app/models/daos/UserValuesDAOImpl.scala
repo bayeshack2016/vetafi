@@ -3,7 +3,7 @@ package models.daos
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{ Address, Contact, User, UserValues }
+import models._
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.modules.reactivemongo.json._
@@ -17,8 +17,7 @@ import scala.concurrent.Future
 
 class UserValuesDAOImpl @Inject() (
   val reactiveMongoApi: ReactiveMongoApi,
-  val userDAO: UserDAO,
-  val contactInfoService: ContactInfoService
+  val userDAO: UserDAO
 ) extends UserValuesDAO {
 
   def collection: Future[JSONCollection] = reactiveMongoApi.database.map(_.collection("user_values"))
@@ -40,34 +39,25 @@ class UserValuesDAOImpl @Inject() (
    *
    * @param values New user values, will overwrite existing values of the same key.
    */
-  override def update(userID: UUID, values: UserValues): Future[WriteResult] = {
+  override def update(userID: UUID, values: Map[String, JsValue]): Future[WriteResult] = {
     collection.flatMap((userValuesCollection: JSONCollection) => {
 
       val userValuesOptionFuture: Future[Option[UserValues]] =
-        userValuesCollection.find(Json.obj("userID" -> values.userID.toString)).one[UserValues]
+        userValuesCollection.find(Json.obj("userID" -> userID)).one[UserValues]
 
-      val existingValuesFuture: Future[Map[String, String]] = userValuesOptionFuture.map {
+      val existingValuesFuture: Future[Map[String, JsValue]] = userValuesOptionFuture.map {
         case userValues if userValues.nonEmpty => userValues.get.values
         case _ => Map()
       }
 
-      existingValuesFuture.flatMap((existingValues: Map[String, String]) => {
+      existingValuesFuture.flatMap((existingValues: Map[String, JsValue]) => {
         userValuesCollection.update(
-          Json.obj("userID" -> values.userID.toString),
+          Json.obj("userID" -> userID),
           // The values on the RHS of `++` will overwrite the values of the LHS
-          Json.obj("$set" -> Json.obj("values" -> Json.toJson(existingValues ++ values.values))),
+          Json.obj("$set" -> Json.obj("values" -> Json.toJson(existingValues ++ values))),
           upsert = true
         )
       })
     })
-  }
-
-  override def updateContactInfo(userID: UUID): Future[Option[WriteResult]] = {
-    collection.flatMap(_.find(Json.obj("userID" -> userID)).one[UserValues]).flatMap {
-      case found if found.nonEmpty => contactInfoService.updateUserInfo(userID, found.get).map {
-        Some(_)
-      }
-      case _ => Future.successful(None)
-    }
   }
 }

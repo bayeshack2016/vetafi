@@ -34,7 +34,6 @@ class ClaimController @Inject() (
       }
   }
 
-
   def create: Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {
     request =>
       {
