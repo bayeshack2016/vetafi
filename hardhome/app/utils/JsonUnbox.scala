@@ -1,6 +1,6 @@
 package utils
 
-import play.api.libs.json.{JsBoolean, JsNumber, JsString, JsValue}
+import play.api.libs.json.{ JsBoolean, JsNumber, JsString, JsValue }
 
 object JsonUnbox {
 

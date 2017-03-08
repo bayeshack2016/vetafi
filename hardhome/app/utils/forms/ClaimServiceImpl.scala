@@ -1,10 +1,10 @@
 package utils.forms
 
 import java.util
-import javax.script.{ScriptEngine, ScriptEngineManager, SimpleBindings}
+import javax.script.{ ScriptEngine, ScriptEngineManager, SimpleBindings }
 
 import com.google.inject.Inject
-import models.{ClaimForm, Field, FormConfig}
+import models.{ ClaimForm, Field, FormConfig }
 import play.api.libs.json.JsValue
 import utils.JsonUnbox
 

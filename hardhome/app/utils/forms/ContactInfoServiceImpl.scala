@@ -3,8 +3,8 @@ package utils.forms
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{Address, Contact, User, UserValues}
-import models.daos.{UserDAO, UserValuesDAO}
+import models.{ Address, Contact, User, UserValues }
+import models.daos.{ UserDAO, UserValuesDAO }
 import play.api.libs.json._
 import reactivemongo.api.commands.WriteResult
 import utils.JsonUnbox
@@ -80,12 +80,14 @@ class ContactInfoServiceImpl @Inject() (
   def getPreferredConcatenatedValue(keySets: Seq[Seq[String]], values: Map[String, JsValue]): Option[String] = {
     for (keys: Seq[String] <- keySets) {
       if (keys.map(values.contains).reduce(_ && _)) {
-        return Some(keys.map(values.apply)
+        return Some(
+          JsonUnbox.unbox(keys.map(values.apply)
           .reduce(
             (a: JsValue, b: JsValue) => {
               JsString(JsonUnbox.unbox(a).toString + " " + JsonUnbox.unbox(b).toString)
             }
-          ).toString)
+          )).toString
+        )
       }
     }
     None

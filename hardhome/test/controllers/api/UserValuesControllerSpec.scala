@@ -33,6 +33,5 @@ class UserValuesControllerSpec extends PlaySpecification with Mockito with CSRFT
         status(result) must be equalTo NOT_FOUND
       }
     }
-
   }
 }

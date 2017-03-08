@@ -1,7 +1,7 @@
 package controllers.api
 
 import controllers.CSRFTest
-import models.UserValues
+import models.{ Claim, ClaimForm, UserValues }
 import org.specs2.mock.Mockito
 import play.api.libs.json.{ JsResult, JsString, Json }
 import play.api.mvc.{ AnyContentAsEmpty, Result }
@@ -14,6 +14,25 @@ import scala.concurrent.Future
 
 class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
   sequential
+
+  "The `getForm` action" should {
+    "return 200 and form when get" in new FormControllerTestContext {
+      new WithApplication(application) {
+        val req = FakeRequest(
+          controllers.api.routes.FormController.getForm(testClaim.claimID, "VBA-21-0966-ARE").url
+        )
+          .withAuthenticator[DefaultEnv](identity.loginInfo)
+
+        val result: Future[Result] = route(app, req).get
+
+        status(result) must be equalTo OK
+
+        val formValidation: JsResult[ClaimForm] = contentAsJson(result).validate[ClaimForm]
+
+        formValidation.isSuccess must beTrue
+      }
+    }
+  }
 
   "The `saveForm` action" should {
     "return 201 when save values" in new FormControllerTestContext {
@@ -61,7 +80,6 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
       new WithApplication(application) {
         val values1 = Map("key" -> JsString("value"))
         val values2 = Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
-        val getRequest: FakeRequest[AnyContentAsEmpty.type] = FakeRequest().withAuthenticator(identity.loginInfo)
 
         val req1 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
           .withJsonBody(Json.toJson(values1))
@@ -79,16 +97,7 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
         status(result2) must be equalTo CREATED
 
-        val getResult: Future[Result] = route(app, FakeRequest(controllers.api.routes.UserValuesController.getUserValues())
-          .withAuthenticator[DefaultEnv](identity.loginInfo)).get
-
-        status(getResult) must be equalTo OK
-
-        val userValuesValidation: JsResult[UserValues] = contentAsJson(getResult).validate[UserValues]
-
-        userValuesValidation.isSuccess must beTrue
-
-        userValuesValidation.get.values must be equalTo Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
+        testUserValues.values must be equalTo Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
       }
     }
   }

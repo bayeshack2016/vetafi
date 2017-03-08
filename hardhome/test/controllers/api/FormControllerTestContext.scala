@@ -3,11 +3,11 @@ package controllers.api
 import java.util.UUID
 
 import com.google.inject.AbstractModule
-import com.mohiva.play.silhouette.api.Environment
+import com.mohiva.play.silhouette.api.{ Environment, LoginInfo }
 import com.typesafe.config.ConfigFactory
 import controllers.SilhouetteTestContext
 import models._
-import models.daos.{ ClaimDAO, FormDAO, UserValuesDAO }
+import models.daos.{ ClaimDAO, FormDAO, UserDAO, UserValuesDAO }
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import play.api.{ Application, Configuration }
@@ -15,6 +15,7 @@ import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.libs.json.JsValue
 import reactivemongo.api.commands.{ MultiBulkWriteResult, UpdateWriteResult, WriteResult }
 import utils.auth.DefaultEnv
+import utils.forms.ContactInfoService
 
 import scala.concurrent.Future
 
@@ -77,8 +78,40 @@ trait FormControllerTestContext extends SilhouetteTestContext {
     }
 
     override def update(userID: UUID, values: Map[String, JsValue]): Future[WriteResult] = {
-      testUserValues = testUserValues.copy(values = testUserValues.values)
+      testUserValues = testUserValues.copy(values = testUserValues.values ++ values)
       Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+    }
+  }
+
+  class FakeUserDao extends UserDAO {
+    override def find(loginInfo: LoginInfo): Future[Option[User]] = {
+      Future.successful(Some(identity))
+    }
+
+    override def find(userID: UUID): Future[Option[User]] = {
+      Future.successful(Some(identity))
+    }
+
+    override def save(user: User): Future[WriteResult] = {
+      identity = user
+      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+    }
+
+    override def updateContactInfo(user: User): Future[WriteResult] = {
+      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+    }
+
+    override def setInactive(user: User): Future[WriteResult] = {
+      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+    }
+  }
+
+  class FakeContactInfoService extends ContactInfoService {
+    override def updateContactInfo(userID: UUID): Future[Option[WriteResult]] = {
+      identity = identity.copy(contact = Some(Contact(Some("updated"), None)))
+      Future.successful(
+        Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+      )
     }
   }
 
@@ -87,6 +120,8 @@ trait FormControllerTestContext extends SilhouetteTestContext {
       bind[Environment[DefaultEnv]].toInstance(env)
       bind[FormDAO].toInstance(new FakeFormDAO())
       bind[UserValuesDAO].toInstance(new FakeUserValuesDAO())
+      bind[UserDAO].toInstance(new FakeUserDao())
+      bind[ContactInfoService].toInstance(new FakeContactInfoService())
     }
   }
 
