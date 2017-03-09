@@ -11,15 +11,6 @@ scalaVersion := "2.11.8"
 
 unmanagedClasspath in Runtime += baseDirectory.value / "conf"
 
-// TODO fix me
-unmanagedJars in Compile += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
-unmanagedJars in Runtime += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
-unmanagedJars in Test += baseDirectory.value / "biscuit-java-master-SNAPSHOT.jar"
-//unmanagedJars in Compile += baseDirectory.value / "nacl4s_2.10-1.0.0.jar"
-//unmanagedJars in Runtime += baseDirectory.value / "nacl4s_2.10-1.0.0.jar"
-//unmanagedJars in Test += baseDirectory.value / "nacl4s_2.10-1.0.0.jar"
-
-
 resolvers += Resolver.jcenterRepo
 resolvers += Resolver.url("Typesafe Ivy releases", url("https://repo.typesafe.com/typesafe/ivy-releases"))(Resolver.ivyStylePatterns)
 resolvers += "jitpack" at "https://jitpack.io" // Used to resolve com.github.* projects
@@ -37,11 +28,7 @@ libraryDependencies ++= Seq(
   "com.enragedginger" %% "akka-quartz-scheduler" % "1.5.0-akka-2.4.x",
   "com.mohiva" %% "play-silhouette-testkit" % "4.0.0" % "test",
   "com.digitaltangible" %% "play-guard" % "2.0.0",
- // "com.github.dcoker" % "biscuit-java" % "master-SNAPSHOT",
-  "com.amazonaws" % "aws-java-sdk-kms" % "1.10.76",
-  "com.amazonaws" % "aws-java-sdk-core" % "1.10.76",
-  "com.github.emstlk" % "nacl4s_2.10" % "1.0.0",
-  "org.yaml" % "snakeyaml" % "1.16",
+  "com.github.dcoker" % "biscuit-java" % "ebed4b3a238a45c007da138175f1132a6bf26b71",
   specs2 % Test,
   cache,
   filters

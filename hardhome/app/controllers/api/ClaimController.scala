@@ -4,16 +4,13 @@ import java.util.UUID
 import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.Silhouette
-import models.User
-import models.daos.{ ClaimDAO, UserDAO }
+import models.Recipients
+import models.daos.ClaimDAO
 import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc.{ Action, AnyContent, BodyParsers, Controller }
-import play.modules.reactivemongo.ReactiveMongoApi
 import utils.auth.DefaultEnv
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import play.api.libs.json._
-
 import scala.concurrent.Future
 
 /**
@@ -23,6 +20,16 @@ class ClaimController @Inject() (
   val claimDAO: ClaimDAO,
   silhouette: Silhouette[DefaultEnv]
 ) extends Controller {
+
+  def getClaims: Action[AnyContent] = silhouette.SecuredAction.async {
+    request =>
+      {
+        claimDAO.findClaims(request.identity.userID).map {
+          case claims if claims.nonEmpty => Ok(Json.toJson(claims))
+          case _ => NotFound
+        }
+      }
+  }
 
   def getClaim(claimID: UUID): Action[AnyContent] = silhouette.SecuredAction.async {
     request =>
@@ -61,6 +68,23 @@ class ClaimController @Inject() (
             }
           }
         )
+      }
+  }
+
+  def submit(claimID: UUID): Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {
+    request =>
+      {
+        val recipientsResult = request.body.validate[Recipients]
+        recipientsResult.fold(
+          errors => {
+            Future.successful(BadRequest(Json.obj("status" -> "error", "message" -> JsError.toJson(errors))))
+          },
+          recipients => {
+            //TODO implement
+            Future.successful(Ok(Json.obj("status" -> "ok")))
+          }
+        )
+
       }
   }
 }

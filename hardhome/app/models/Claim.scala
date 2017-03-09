@@ -2,7 +2,6 @@ package models
 
 import java.util.UUID
 
-import org.joda.time.DateTime
 import play.api.libs.json.{ Format, Json, OFormat }
 import utils.EnumUtils
 
@@ -41,6 +40,8 @@ var addressSchema = new Schema({
 */
 
 case class Recipients(
+  toAddress: Option[Address],
+  fromAddress: Option[Address],
   emails: Seq[String],
   addresses: Seq[Address]
 ) {

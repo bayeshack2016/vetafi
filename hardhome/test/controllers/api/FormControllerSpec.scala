@@ -1,13 +1,14 @@
 package controllers.api
 
+import java.util.UUID
+
 import controllers.CSRFTest
-import models.{ Claim, ClaimForm, UserValues }
+import models.ClaimForm
 import org.specs2.mock.Mockito
 import play.api.libs.json.{ JsResult, JsString, Json }
-import play.api.mvc.{ AnyContentAsEmpty, Result }
+import play.api.mvc.Result
 import play.api.test.{ FakeRequest, PlaySpecification, WithApplication }
 import utils.auth.DefaultEnv
-import com.mohiva.play.silhouette.api.LoginInfo
 import com.mohiva.play.silhouette.test._
 
 import scala.concurrent.Future
@@ -19,7 +20,7 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
     "return 200 and form when get" in new FormControllerTestContext {
       new WithApplication(application) {
         val req = FakeRequest(
-          controllers.api.routes.FormController.getForm(testClaim.claimID, "VBA-21-0966-ARE").url
+          controllers.api.routes.FormController.getForm(testClaim.claimID, "VBA-21-0966-ARE")
         )
           .withAuthenticator[DefaultEnv](identity.loginInfo)
 
@@ -30,6 +31,51 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
         val formValidation: JsResult[ClaimForm] = contentAsJson(result).validate[ClaimForm]
 
         formValidation.isSuccess must beTrue
+      }
+    }
+
+    "return 404 with bad id" in new FormControllerTestContext {
+      new WithApplication(application) {
+        val req = FakeRequest(
+          controllers.api.routes.FormController.getForm(UUID.randomUUID(), "VBA-21-0966-ARE")
+        )
+          .withAuthenticator[DefaultEnv](identity.loginInfo)
+
+        val result: Future[Result] = route(app, req).get
+
+        status(result) must be equalTo NOT_FOUND
+      }
+    }
+  }
+
+  "The `getFormsForClaim` action" should {
+    "return 200 and form when get" in new FormControllerTestContext {
+      new WithApplication(application) {
+        val req = FakeRequest(
+          controllers.api.routes.FormController.getFormsForClaim(testClaim.claimID)
+        )
+          .withAuthenticator[DefaultEnv](identity.loginInfo)
+
+        val result: Future[Result] = route(app, req).get
+
+        status(result) must be equalTo OK
+
+        val formsValidation: JsResult[Seq[ClaimForm]] = contentAsJson(result).validate[Seq[ClaimForm]]
+
+        formsValidation.isSuccess must beTrue
+      }
+    }
+
+    "return 404 with bad id" in new FormControllerTestContext {
+      new WithApplication(application) {
+        val req = FakeRequest(
+          controllers.api.routes.FormController.getFormsForClaim(UUID.randomUUID())
+        )
+          .withAuthenticator[DefaultEnv](identity.loginInfo)
+
+        val result: Future[Result] = route(app, req).get
+
+        status(result) must be equalTo NOT_FOUND
       }
     }
   }

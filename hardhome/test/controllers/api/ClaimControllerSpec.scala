@@ -47,6 +47,32 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
     }
   }
 
+  "The `getClaims` action" should {
+    "return 200 and claims as json if found" in new ClaimControllerTestContext {
+      new WithApplication(application) {
+        val getRequest = FakeRequest(controllers.api.routes.ClaimController.getClaims())
+          .withAuthenticator(identity.loginInfo)
+        val getResult = route(app, getRequest).get
+
+        status(getResult) must be equalTo OK
+
+        val claimsValidation: JsResult[Seq[Claim]] = contentAsJson(getResult).validate[Seq[Claim]]
+
+        claimsValidation.isSuccess must beTrue
+      }
+    }
+
+    "return 401 if not authed" in new ClaimControllerTestContext {
+      new WithApplication(application) {
+        val getRequest = FakeRequest(controllers.api.routes.ClaimController.getClaims())
+          .withAuthenticator(LoginInfo("credential", "nobody"))
+        val getResult = route(app, getRequest).get
+
+        status(getResult) must be equalTo UNAUTHORIZED
+      }
+    }
+  }
+
   "The `create` action" should {
     "return 201 if created" in new SilhouetteTestContext {
       new WithApplication(application) {

@@ -26,6 +26,7 @@ trait FormControllerTestContext extends SilhouetteTestContext {
     UUID.randomUUID(),
     Claim.State.INCOMPLETE,
     Recipients(
+      None, None,
       Seq("test@website.com"),
       Seq(Address(name = Some("name")))
     )
