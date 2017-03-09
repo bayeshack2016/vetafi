@@ -20,4 +20,6 @@ trait FormDAO {
   def find(userID: UUID, claimID: UUID, key: String): Future[Option[ClaimForm]]
 
   def find(userID: UUID, claimID: UUID): Future[Seq[ClaimForm]]
+
+  def save(userID: UUID, claimID: UUID, key: String, claimForm: ClaimForm): Future[WriteResult]
 }

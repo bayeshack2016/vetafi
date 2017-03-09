@@ -1,0 +1,27 @@
+@import "../standards.styl"
+
+// General Modal properties
+.vfi-modal
+  position: relative
+  padding: smallSpacing mediumSpacing
+
+  & .close-wrapper
+    position: absolute
+    top: miniSpacing
+    right: smallSpacing
+
+    & button
+      width: 36px
+      height: 36px
+      padding: 0
+      background: url('../../icons/x-gray.svg')
+      background-size: cover
+      background-repeat: no-repeat
+
+  & .header
+    height: largeSpacing
+    line-height: largeSpacing
+    border-bottom: 1px solid colorLighterGray
+
+    & h3
+      color: colorPrimaryDarkBlue

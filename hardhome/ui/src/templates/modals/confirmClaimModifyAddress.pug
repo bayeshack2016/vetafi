@@ -1,0 +1,20 @@
+// For Confirm Claim page
+#vfi-confirm-modify-contact-modal
+  button.close-modal-btn(ng-click="$dismiss()")
+    div.close-icon
+  h3 Change Address
+
+  form(autocomplete="on")
+    div.input-wrapper
+      input.name(placeholder="Name", ng-model="address.name" autocomplete="name")
+      input.street1(placeholder="Street Number & Name", ng-model="address.street1" autocomplete="address-line1")
+      input.street2(placeholder="i.e. Suite, Apartment, Room, P.O., etc." ng-model="address.street2" autocomplete="address-line2")
+      input.city(placeholder="City" ng-model="address.city" autocomplete="address-level2")
+      input.province(placeholder="State/Province" ng-model="address.province" autocomplete="address-level1")
+      input.postal(placeholder="Zip/Postal", ng-model="address.postal" autocomplete="postal-code")
+      input.country(placeholder="Country" ng-model="address.country" autocomplete="country")
+
+    div.button-wrapper
+      button.cancel-btn(ng-click="$dismiss()") Cancel
+      button.save-btn(ng-click="$close(address)") Save
+      div.clearer

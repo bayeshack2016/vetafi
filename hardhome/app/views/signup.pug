@@ -1,0 +1,19 @@
+extends signinLayout.pug
+
+//-
+  block fbText
+    div.txt-container Signup with Facebook
+block idmeText
+  div.txt-container Signup with Id.Me
+block emailText
+  div.txt-container Signup with your email
+block linkToOtherPage
+  a(href="/login") Already have an account?
+
+block inputs
+  form(action='/api/auth/signup' onsubmit='return validateForm()' method='post')
+    input.email(placeholder='Email Address', type='text'  name='email')
+    input.pwd(placeholder='Password', type='password' name='password')
+    input.confirm-pwd(placeholder='Confirm Password', type='password')
+    input(type='hidden' name='_csrf' value=csrf)
+    input.submit(value='SIGN UP', type='submit')

@@ -1,0 +1,34 @@
+#select-forms-view
+  vfi-breadcrumbs(page="1")
+  #select-forms-wrapper
+    h3 Select Forms for Claim
+
+    div.section.required
+      div.section-header
+        h4 Required Forms:
+        uib-progressbar.progressbar(value="numRequiredCompleted", max="numRequiredForms", type="{{numRequiredCompleted == numRequiredForms ? 'success' : 'info'}}")
+          span {{numRequiredCompleted}}/{{numRequiredForms}}
+
+      div.form-wrapper(ng-repeat="(formId, form) in allForms", ng-init="myForm = myForms[formId]")
+        div.form-content
+          div.state-wrapper(ng-class="{'required': form.vfi.required, 'complete': isCompletedForm(myForm)}")
+            div.state-icon
+          div.form-title-wrapper
+            h5.title(ng-class="{'required': form.vfi.required && !isCompletedForm(myForm)}") {{formId}}
+            h5.warning.required(ng-if="form.vfi.required && !isCompletedForm(myForm)") &nbsp;(required)
+            h5.subtitle {{form.vfi.title}}
+          div.form-summary {{form.vfi.summary}}
+        div.form-buttons
+          button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
+            div.edit-icon
+            | Edit
+          a(class="btn download-btn" href="/claim/{{claimId}}/form/{{formId}}/pdf" download="{{formId}}.pdf")
+            div.download-icon
+            | Download
+
+    div.button-wrapper
+      button.cancel-btn(ng-click="onClickCancel()") Cancel
+      button.done-btn(ng-click="onClickDone()", ng-class="{'ready':numRequiredCompleted == numRequiredForms}") Done
+      div.clearer
+
+vfi-footer

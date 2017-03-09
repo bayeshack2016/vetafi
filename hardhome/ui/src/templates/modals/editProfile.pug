@@ -1,0 +1,33 @@
+extends modalLayout.pug
+
+block modalContent
+  div#vfi-modal-edit-profile
+    form.form-horizontal
+
+      div.form-section
+        h4 Your Name
+        div.form-group.has-feedback(ng-class="nameGroup.feedbackFn()")
+          div(ng-repeat="field in nameGroup.fields")
+            label.control-label.col-sm-3(for="{{field.ngModel}}") {{field.label}}
+            div.col-sm-9
+              input.form-control(ng-attr-id="{{field.ngModel}}", ng-model="userDraft[field.ngModel]", placeholder="{{field.placeholder}}")
+
+      div.form-section
+        h4 Email
+        div.form-group.has-feedback(ng-class="emailGroup.feedbackFn()")
+          div(ng-repeat="field in emailGroup.fields")
+            label.control-label.col-sm-3(for="{{field.ngModel}}") {{field.label}}
+            div.col-sm-9
+              input.form-control(ng-attr-id="{{field.ngModel}}", ng-model="userDraft[field.ngModel]", placeholder="{{field.placeholder}}")
+
+      div.form-section
+        h4 Primary Address
+        div.form-group.has-feedback(ng-repeat="field in addressGroup", ng-class="validateAddressField(field)")
+          label.control-label.col-sm-3(for="{{field.ngModel}}") {{field.label}}
+          div.col-sm-9
+            input.form-control(ng-attr-id="{{field.ngModel}}", ng-model="userDraft.contact.address[field.ngModel]", placeholder="{{field.placeholder}}")
+
+    div.button-wrapper
+      button.cancel(ng-click="$dismiss()") Cancel
+      button.save(ng-class="allFilled() ? '' : 'faded'", ng-click="saveInfo()") Save
+      div.clearer

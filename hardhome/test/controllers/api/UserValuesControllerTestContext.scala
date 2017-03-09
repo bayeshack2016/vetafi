@@ -14,18 +14,10 @@ import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
 import reactivemongo.api.commands.{ UpdateWriteResult, WriteResult }
 import utils.auth.DefaultEnv
-import utils.forms.ContactInfoService
 
 import scala.concurrent.Future
 
 trait UserValuesControllerTestContext extends SilhouetteTestContext {
-
-  class FakeContactInfoService extends ContactInfoService {
-    override def updateUserInfo(userID: UUID, values: UserValues): Future[WriteResult] = {
-      identity = identity.copy(contact = Some(Contact(Some("updated"), None)))
-      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
-    }
-  }
 
   class FakeUserDao extends UserDAO {
     override def find(loginInfo: LoginInfo): Future[Option[User]] = {
@@ -54,7 +46,6 @@ trait UserValuesControllerTestContext extends SilhouetteTestContext {
     def configure(): Unit = {
       bind[Environment[DefaultEnv]].toInstance(env)
       bind[UserDAO].toInstance(new FakeUserDao())
-      bind[ContactInfoService].toInstance(new FakeContactInfoService())
     }
   }
 

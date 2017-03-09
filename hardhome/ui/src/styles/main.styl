@@ -1,0 +1,125 @@
+@import "standards.styl"
+
+body
+	margin: 0 !important
+	background-color: colorWarmLightGray !important
+	// default font
+	font-family: SourceSansPro !important
+	font-weight: bodyFont_weight !important
+	font-size: bodyFont_size !important
+	line-height: bodyFont_lineHeight !important
+
+	& a
+		color: colorRed
+		text-decoration: none
+
+		&:hover
+			color: colorRed
+			text-decoration: underline
+
+	& button, & a.btn
+		padding: 10px 20px
+		background-color: colorPrimaryDarkBlue
+		border-radius: 3px
+		border: none
+		outline: none
+		color: white
+		font-size: bodyFont_size
+		line-height: bodyFont_lineHeight
+
+		&:hover, &:focus
+			color: white
+			filter: brightness(1.2)
+			-webkit-filter: brightness(1.2)
+			-moz-filter: brightness(1.2)
+			-ms-filter: brightness(1.2)
+			cursor: pointer
+
+	& input.vfi-default
+		width: 300px
+		height: 2.5em
+		padding-left: 1em
+		border-radius: 3px
+		background-color: colorWhite
+		outline: none
+		border: 1px solid colorWhite
+
+		&:active
+		&:focus
+		&:hover
+			border: 1px solid colorPrimaryBlue
+
+	& h1
+		margin: 0
+		font-family: Merriweather
+		font-weight: heading_weight
+		font-size: h1_size
+		line-height: h1_lineHeight
+		letter-spacing: h1_letterSpacing
+
+	& h2
+		margin: 0
+		font-family: Merriweather
+		font-weight: heading_weight
+		font-size: h2_size
+		line-height: h2_lineHeight
+		letter-spacing: h2_letterSpacing
+
+	& h3
+		margin: 0
+		font-family: Merriweather
+		font-weight: heading_weight
+		font-size: h3_size
+		line-height: h3_lineHeight
+		letter-spacing: h3_letterSpacing
+
+	& h4
+		margin: 0
+		font-family: Merriweather
+		font-weight: heading_weight
+		font-size: h4_size
+		line-height: h4_lineHeight
+		letter-spacing: h4_letterSpacing
+
+	& h5
+		margin: 0
+		font-family: Merriweather
+		font-weight: heading_weight
+		font-size: h5_size
+		line-height: h5_lineHeight
+		letter-spacing: h5_letterSpacing
+
+	& h6
+		margin: 0
+		font-family: Merriweather
+		font-weight: heading_weight
+		font-size: h6_size
+		line-height: h6_lineHeight
+		letter-spacing: h6_letterSpacing
+
+	& .vfi-lead
+		margin: 0
+		font-family: Merriweather
+		font-weight: lead_weight
+		font-size: lead_size
+		line-height: lead_lineHeight
+
+#busy-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background-color: grey;
+  opacity: .8;
+}
+
+.busy-spinner {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin-left: -60px;
+  margin-top: -60px;
+  display: block;
+}

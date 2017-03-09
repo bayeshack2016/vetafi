@@ -1,0 +1,49 @@
+#claim-view
+  #claim-view-wrapper
+    h3 Your Submitted Claim
+    div.content.general
+      h4.content-header General Info:
+      div.line
+        span Submitted By:
+        span {{user.firstname}} {{user.lastname}}
+      div.line
+        span Submitted Date:
+        span {{claim.date}}
+
+    div.content.sent-to
+      h4.content-header.underline Copies sent to:
+      div.line(ng-click="isEmailCollapsed = !isEmailCollapsed", ng-class="{'collapsed': isEmailCollapsed}")
+        div.icon-wrapper
+          div.email-icon
+        | Emails
+        div.down-arrow-icon
+      div.collapse-wrapper.email(uib-collapse="!isEmailCollapsed")
+        ul
+          li(ng-repeat="email in claim.sentTo.emails") {{email}}
+
+      div.line(ng-click="isAddressCollapsed = !isAddressCollapsed", ng-class="{'collapsed': isAddressCollapsed}")
+        div.icon-wrapper
+          div.email-icon
+        | Addresses
+        div.down-arrow-icon
+      div.collapse-wrapper.address(uib-collapse="!isAddressCollapsed")
+        ul
+          li(ng-repeat="address in claim.sentTo.addresses")
+            div
+              b {{address.name}}
+            div {{address.street1}} {{address.street2}}
+            div {{address.city}}, {{address.province}}, {{address.country}}, {{address.postal}}
+
+    div.content.forms
+      h4.content-header.underline Forms:
+      div.form-wrapper(ng-repeat="form in claim.forms")
+        div.icon-wrapper
+          div.form-icon
+        div.form-header
+          div.form-id {{form.key}}
+          div.form-title {{form.name}}
+        a(ng-href="/claim/{{claimId}}/form/{{form.key}}/pdf")
+          button
+            div.download-icon
+            | Download
+vfi-footer

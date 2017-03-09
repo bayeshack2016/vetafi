@@ -3,19 +3,20 @@ package models.daos
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{ Claim, ClaimForm, User }
-import play.api.libs.json.Json
+import models.ClaimForm
+import models.ClaimForm._
+import play.api.libs.json.{ JsNumber, JsObject, Json }
 import play.modules.reactivemongo.ReactiveMongoApi
-import reactivemongo.play.json.collection.JSONCollection
-import reactivemongo.api._
 import play.modules.reactivemongo.json._
-import play.modules.reactivemongo._
+import reactivemongo.api._
+import reactivemongo.api.commands.WriteResult
+import reactivemongo.play.json.collection.JSONCollection
 
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 /**
- * Created by jeffquinn on 3/2/17.
+ * FormDAO backed by MongoDB, via ReactiveMongoApi
  */
 class FormDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends FormDAO {
 
@@ -49,5 +50,23 @@ class FormDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends For
       },
       Cursor.FailOnError()
     ))
+  }
+
+  override def save(userID: UUID, claimID: UUID, key: String, claimForm: ClaimForm): Future[WriteResult] = {
+    val query = Json.obj("userID" -> userID, "claimID" -> claimID, "key" -> key)
+    collection.flatMap(
+      _.update(
+        query,
+        Json.obj(
+          "$set" -> Json.obj(
+            "responses" -> JsObject(claimForm.responses),
+            "optionalQuestions" -> JsNumber(claimForm.optionalQuestions),
+            "requiredQuestions" -> JsNumber(claimForm.requiredQuestions),
+            "answeredOptional" -> JsNumber(claimForm.answeredOptional),
+            "answeredRequired" -> JsNumber(claimForm.answeredRequired)
+          )
+        )
+      )
+    )
   }
 }

@@ -1,0 +1,124 @@
+@import "standards.styl"
+
+#header
+  width: 100%
+  height: headerHeightPx
+  background-color: colorPrimaryDarkestBlue
+
+#header-content
+  position: relative
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  height: 100%
+  margin: 0 auto
+
+  & img
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    height: 30px
+
+.header-links
+  height: headerHeightPx
+  line-height: headerHeightPx
+
+  & .big-link
+    position: relative
+    float: right
+    margin-top: 25px
+    margin-left: largeSpacing
+    color: colorWhite
+
+    &:hover
+      text-decoration: none
+      cursor: pointer
+
+      & .underline-border
+        opacity: 1.0
+        visibility: visible
+
+    @media screen and (max-width: minWindowWidthPx)
+      font-size: h5_size
+
+  & .underline-border
+    position: absolute
+    bottom: -8px
+    width: 100%
+    height: 2px
+    background-color: white
+    opacity: 0.0
+    visibility: hidden
+    transition: all linear 0.1s
+
+.menu-btn
+  position: absolute
+  top: 50%
+  right: 0
+  transform: translateY(-50%)
+  width: 36px
+  height: 36px
+  background-color: white
+  border-radius: 50%
+
+  & .menu-icon
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 20px
+    height: 20px
+    background: url('../icons/menu.svg')
+    background-size: cover
+    background-repeat: no-repeat
+
+.menu-list
+  position: absolute
+  top: 36px
+  right: 24px
+  width: 160px
+  margin: 0
+  padding-left: 0
+  list-style: none
+  border-radius: 10px
+  z-index: 10
+  border: 2px solid colorWarmDarkGray
+  overflow: hidden
+  opacity: 0.5
+  visibility: hidden
+  transform: scale(0.7) translate(25%, -40%)
+  transition: 0.15s linear all
+
+  &.vfi-show
+    opacity: 1.0
+    visibility: visible
+    transform: scale(1.0) translate(0%, 0%)
+
+  & li
+    height: 40px
+    line-height: 40px
+    width: 100%
+    padding-left: largeSpacing
+    margin: 0
+    background-color: colorWhite
+    color: colorWarmDarkGray
+
+    &:hover
+      background-color: colorWarmDarkGray
+      color: colorWhite
+      cursor: pointer
+
+#banner
+  width: 100%
+  height: 5vh
+  background: colorDarkGray
+  color: colorWhite
+  overflow-x: hidden
+
+  & .banner-wrapper
+    width: maxLayoutWidthPct
+    max-width: maxLayoutWidthPx
+    margin: 0 auto
+
+  & h5
+    text-align: left
+    line-height: 5vh

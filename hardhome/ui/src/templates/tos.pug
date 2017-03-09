@@ -1,0 +1,20 @@
+#tos-view(ng-class="{'page-form': atTosPage}")
+  #tos-wrapper
+    h2.vfi-title Terms of Service
+    div.vfi-tos-scroller
+      div(ng-repeat="section in termsSections")
+        h5 {{section.header}}
+        p(ng-repeat = "paragraph in section.paragraphs") {{paragraph}}
+
+    div(ng-show="!atTosPage")
+      div.vfi-checkbox
+        input(type="checkbox" name="accept" ng-model="accept")
+        | I have read this Agreement and agree to the terms and conditions.
+      div.vfi-error-msg
+
+      div.button-wrapper
+        button.vfi-decline-btn(ng-click="onDecline()") BACK
+        button.vfi-accept-btn(ng-click="onAccept()") ACCEPT
+        div.clearer
+
+vfi-footer(ng-if="atTosPage")

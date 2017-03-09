@@ -2,7 +2,8 @@ package models.daos
 
 import java.util.UUID
 
-import models.UserValues
+import models.{ ClaimForm, UserValues }
+import play.api.libs.json.JsValue
 import reactivemongo.api.commands.WriteResult
 
 import scala.concurrent.Future
@@ -20,11 +21,6 @@ trait UserValuesDAO {
   /**
    *
    */
-  def update(userID: UUID, values: UserValues): Future[WriteResult]
-
-  /**
-   *
-   */
-  def updateContactInfo(userID: UUID): Future[Option[WriteResult]]
+  def update(userID: UUID, values: Map[String, JsValue]): Future[WriteResult]
 
 }

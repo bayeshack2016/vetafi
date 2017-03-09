@@ -53,5 +53,5 @@ case class User(
 }
 
 object User {
-  implicit val jsonFormat = Json.format[User]
+  implicit val jsonFormat: OFormat[User] = Json.format[User]
 }

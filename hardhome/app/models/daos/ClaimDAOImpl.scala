@@ -62,7 +62,7 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
       userID = userID,
       claimID = UUID.randomUUID(),
       Claim.State.INCOMPLETE,
-      Recipients(Seq.empty[String], Seq.empty[Address])
+      Recipients(None, None, Seq.empty[String], Seq.empty[Address])
     )
 
     createForms(userID, claim.claimID, forms).flatMap {
@@ -92,6 +92,15 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
         val documents = formObjects.map(implicitly[coll.ImplicitlyDocumentProducer](_))
         coll.bulkInsert(ordered = false)(documents: _*)
       }
+    )
+  }
+
+  override def submit(userID: UUID, claimID: UUID): Future[WriteResult] = {
+    collection.flatMap(
+      _.update(
+        Json.obj("userID" -> userID, "claimID" -> claimID),
+        Json.obj("$set" -> Json.obj("state" -> Claim.State.SUBMITTED))
+      )
     )
   }
 }

@@ -1,4 +1,5 @@
 import com.typesafe.sbt.SbtScalariform._
+import PlayGulp._
 
 import scalariform.formatter.preferences._
 
@@ -27,13 +28,16 @@ libraryDependencies ++= Seq(
   "com.enragedginger" %% "akka-quartz-scheduler" % "1.5.0-akka-2.4.x",
   "com.mohiva" %% "play-silhouette-testkit" % "4.0.0" % "test",
   "com.digitaltangible" %% "play-guard" % "2.0.0",
-  "com.github.dcoker" % "biscuit-java" % "master-SNAPSHOT",
+  "com.github.dcoker" % "biscuit-java" % "ebed4b3a238a45c007da138175f1132a6bf26b71",
   specs2 % Test,
   cache,
   filters
+
 )
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file("."))
+    .enablePlugins(PlayScala)
+    .settings(playGulpSettings)
 
 routesGenerator := InjectedRoutesGenerator
 
@@ -49,5 +53,9 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(FormatXml, false)
   .setPreference(DoubleIndentClassDeclaration, false)
   .setPreference(PreserveDanglingCloseParenthesis, true)
+
+
+// play-gulp settings
+unmanagedResourceDirectories in Assets <+= (gulpDirectory in Compile)(base => base / "build")
 
 fork in run := false
