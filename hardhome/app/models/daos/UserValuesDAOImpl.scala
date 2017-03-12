@@ -10,7 +10,6 @@ import play.modules.reactivemongo.json._
 import reactivemongo.api.commands.WriteResult
 import reactivemongo.play.json.collection.JSONCollection
 import play.api.libs.json._
-import utils.forms.ContactInfoService
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

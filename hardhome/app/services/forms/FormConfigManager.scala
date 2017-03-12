@@ -1,4 +1,4 @@
-package utils.forms
+package services.forms
 
 import models.FormConfig
 

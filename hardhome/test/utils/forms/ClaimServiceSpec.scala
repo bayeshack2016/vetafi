@@ -3,13 +3,14 @@ package utils.forms
 import java.util.UUID
 
 import com.typesafe.config.ConfigFactory
-import models.{ ClaimForm, Field, TemplateOptions }
+import models.{ClaimForm, Field, TemplateOptions}
 import modules.JobModule
 import org.specs2.mock.Mockito
 import play.api.Configuration
 import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.libs.json.JsString
-import play.api.test.{ PlaySpecification, WithApplication }
+import play.api.test.{PlaySpecification, WithApplication}
+import services.forms.ClaimServiceImpl
 
 class ClaimServiceSpec extends PlaySpecification with Mockito {
   sequential

@@ -1,11 +1,12 @@
-package utils.forms
+package services.forms
 
 import com.google.inject.Inject
 import models.FormConfig
 import play.Configuration
 import play.api.Logger
-import scala.collection.JavaConversions._
 import play.api.libs.json._
+
+import scala.collection.JavaConversions._
 
 /**
  * FormConfigManager backed by JSON files in the project resources.
