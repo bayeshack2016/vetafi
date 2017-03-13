@@ -1,10 +1,10 @@
 package services.documents
 
 import java.net.URL
-import java.util.concurrent.Future
 
 import models.ClaimForm
 
+import scala.concurrent.Future
 import scala.util.Try
 
 /**
@@ -18,7 +18,7 @@ trait DocumentService {
    * @param form
    * @return
    */
-  def render(form: ClaimForm): Future[Try[Array[Byte]]]
+  def render(form: ClaimForm): Future[Array[Byte]]
 
   /**
    * Get signature link for document
@@ -26,5 +26,5 @@ trait DocumentService {
    * @param form
    * @return
    */
-  def signatureLink(form: ClaimForm): Future[Try[URL]]
+  def signatureLink(form: ClaimForm): Future[URL]
 }

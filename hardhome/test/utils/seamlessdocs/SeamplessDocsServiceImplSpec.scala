@@ -57,11 +57,9 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
         val service: SeamlessDocsServiceImpl = app.injector.instanceOf[SeamlessDocsServiceImpl]
         Mockito.when(mockRequest.execute()).thenThrow(new RuntimeException("explosion!"))
 
-        val future: Future[Try[SeamlessResponse]] = service.fromPrepare("test", "joe", "joe@email.com", Map())
+        val future: Future[SeamlessApplicationCreateResponse] = service.formPrepare("test", "joe", "joe@email.com", Map())
 
-        val responseTry: Try[SeamlessResponse] = Await.result(future, Duration.Inf)
-
-        responseTry.isFailure must beTrue
+        val responseTry: SeamlessApplicationCreateResponse = Await.result(future, Duration.Inf)
       }
     }
   }

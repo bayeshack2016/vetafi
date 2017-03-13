@@ -9,10 +9,6 @@ import play.api.libs.ws.{ WSClient, WSRequest, WSResponse }
 import utils.secrets.SecretsManager
 
 import scala.concurrent.Future
-import scala.util.control.NonFatal
-import scala.util.parsing.json.JSONObject
-import scala.util.{ Failure, Success, Try }
-
 import scala.concurrent.ExecutionContext.Implicits.global
 
 class SeamlessDocsServiceImpl @Inject() (
@@ -34,7 +30,7 @@ class SeamlessDocsServiceImpl @Inject() (
     name: String,
     email: String,
     data: Map[String, JsValue]
-  ): Future[Try[SeamlessApplicationCreateResponse]] = {
+  ): Future[SeamlessApplicationCreateResponse] = {
     val jsonPost = Json.obj("recipients" ->
       Json.obj("prepared_for" ->
         Json.obj("fullname" -> name, "email" -> email)))
@@ -51,17 +47,17 @@ class SeamlessDocsServiceImpl @Inject() (
         val validate = wsResponse.json.validate[SeamlessApplicationCreateResponse]
         validate.fold(
           errors => {
-            Failure(new RuntimeException(errors.toString()))
+            throw new RuntimeException(errors.toString())
           },
           seamlessResponse => {
-            Success(seamlessResponse)
+            seamlessResponse
           }
         )
       })
 
   }
 
-  override def getInviteUrl(applicationId: String): Future[Try[URL]] = {
+  override def getInviteUrl(applicationId: String): Future[URL] = {
     signRequest(
       wsClient
         .url(s"$url/api/form/$applicationId/prepare")
@@ -69,15 +65,11 @@ class SeamlessDocsServiceImpl @Inject() (
     )
       .get()
       .map((wsResponse: WSResponse) => {
-        try {
-          Success(new URL(wsResponse.body))
-        } catch {
-          case NonFatal(e) => Failure(e)
-        }
+          new URL(wsResponse.body)
       })
   }
 
-  override def getApplication(applicationId: String): Future[Try[SeamlessApplication]] = {
+  override def getApplication(applicationId: String): Future[SeamlessApplication] = {
     signRequest(
       wsClient
         .url(s"$url/api/form/$applicationId")
@@ -88,16 +80,16 @@ class SeamlessDocsServiceImpl @Inject() (
         val validate = wsResponse.json.validate[SeamlessApplication]
         validate.fold(
           errors => {
-            Failure(new RuntimeException(errors.toString()))
+            throw new RuntimeException(errors.toString())
           },
           seamlessApplication => {
-            Success(seamlessApplication)
+            seamlessApplication
           }
         )
       })
   }
 
-  override def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[Try[SeamlessResponse]] = {
+  override def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[SeamlessResponse] = {
     signRequest(
       wsClient
         .url(s"$url/api/application/$applicationId/update_pdf")
@@ -109,10 +101,10 @@ class SeamlessDocsServiceImpl @Inject() (
         val validate = wsResponse.json.validate[SeamlessResponse]
         validate.fold(
           errors => {
-            Failure(new RuntimeException(errors.toString()))
+            throw new RuntimeException(errors.toString())
           },
           seamlessResponse => {
-            Success(seamlessResponse)
+            seamlessResponse
           }
         )
       })
