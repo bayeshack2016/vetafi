@@ -2,10 +2,10 @@ package modules
 
 import com.google.inject.AbstractModule
 import models.daos._
-import models.services.{AuthTokenService, AuthTokenServiceImpl}
+import models.services.{ AuthTokenService, AuthTokenServiceImpl }
 import net.codingwell.scalaguice.ScalaModule
 import services.forms._
-import utils.secrets.{BiscuitSecretsManager, SecretsManager}
+import utils.secrets.{ BiscuitSecretsManager, SecretsManager }
 
 /**
  * The base Guice module, manages Dependency Injection for interfaces defined by our project.

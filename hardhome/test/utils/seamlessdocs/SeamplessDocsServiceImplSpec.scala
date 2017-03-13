@@ -1,29 +1,22 @@
 package utils.seamlessdocs
 
-import java.util.UUID
-
 import com.google.inject.AbstractModule
-import com.mohiva.play.silhouette.api.{Environment, LoginInfo}
-import com.mohiva.play.silhouette.test.FakeEnvironment
 import com.typesafe.config.ConfigFactory
-import controllers.api.ClaimControllerTestContext
-import models.{Claim, User}
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import org.mockito.{Matchers, Mockito}
-import org.specs2.mock.Mockito
-import play.api.{Application, Configuration}
+import org.specs2.specification.Scope
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.JsResult
 import play.api.libs.ws.{WSClient, WSRequest}
-import play.api.test.{FakeRequest, PlaySpecification, WithApplication}
-import utils.auth.DefaultEnv
+import play.api.test.{PlaySpecification, WithApplication}
+import play.api.{Application, Configuration}
+import utils.secrets.SecretsManager
 
 import scala.concurrent.duration.Duration
 import scala.concurrent.{Await, Future}
 import scala.util.Try
 
-trait SeamplessDocsServiceTestContext {
+trait SeamplessDocsServiceTestContext extends Scope {
 
   val mockClient: WSClient = Mockito.mock(classOf[WSClient])
   val mockRequest: WSRequest = Mockito.mock(classOf[WSRequest])
@@ -31,9 +24,20 @@ trait SeamplessDocsServiceTestContext {
   Mockito.when(mockClient.url(Matchers.any()))
     .thenReturn(mockRequest)
 
+  class FakeSecretManager extends SecretsManager {
+    override def getSecret(name: String): Array[Byte] = {
+      "secret".getBytes
+    }
+
+    override def getSecretUtf8(name: String): String = {
+      "secret"
+    }
+  }
+
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
       bind[WSClient].toInstance(mockClient)
+      bind[SecretsManager].toInstance(new FakeSecretManager)
     }
   }
 

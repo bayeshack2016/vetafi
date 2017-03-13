@@ -1,10 +1,10 @@
 package utils.seamlessdocs
 
-import play.api.libs.json.{JsValue, Json, OFormat}
+import play.api.libs.json.{ JsValue, Json, OFormat }
 
 /**
-  * Case classes representing the API response from the seamless docs api.
-  */
+ * Case classes representing the API response from the seamless docs api.
+ */
 case class SeamlessResponse(result: Boolean, error_log: Seq[SeamlessAPIError]) {
 
 }
@@ -13,9 +13,11 @@ object SeamlessResponse {
   implicit val jsonFormat: OFormat[SeamlessResponse] = Json.format[SeamlessResponse]
 }
 
-case class SeamlessAPIError(error_code: String,
-                            error_message: String,
-                            error_description: String) {
+case class SeamlessAPIError(
+  error_code: String,
+  error_message: String,
+  error_description: String
+) {
 
 }
 
@@ -71,12 +73,14 @@ object SeamlessAPIError {
     * "is_incomplete": null
     * }
  */
-case class SeamlessApplication(modified_ts: java.util.Date,
-                               created_ts: java.util.Date,
-                               application_id: String,
-                               form_id: String,
-                               is_active: String,
-                               application_data: Map[String, SeamlessApplicationDatum]) {
+case class SeamlessApplication(
+  modified_ts: java.util.Date,
+  created_ts: java.util.Date,
+  application_id: String,
+  form_id: String,
+  is_active: String,
+  application_data: Map[String, SeamlessApplicationDatum]
+) {
 
 }
 
@@ -93,25 +97,27 @@ object SeamlessApplicationDatum {
 }
 
 /**
-  * {
-  *   "legal_name": "John Doe",
-  *   "birth_date": "June 2, 1978",
-  *   "gender": "Male",
-  *   "signer_data": {
-  *     "fullname": "City Clerk",
-  *     "email":"preparer@example.com"
-  *   },
-  *   "recipients": {
-  *     "prepared_for": {
-  *       "fullname": "John Doe",
-  *       "email": "johndoe@example.com"
-  *     }
-  *   }
-  * }
-  */
-case class SeamlessFormPreparation(singer_data: SeamlessRecipientInfo,
-                                   recipients: SeamlessRecipient,
-                                   answers: Map[String, JsValue]) {
+ * {
+ *   "legal_name": "John Doe",
+ *   "birth_date": "June 2, 1978",
+ *   "gender": "Male",
+ *   "signer_data": {
+ *     "fullname": "City Clerk",
+ *     "email":"preparer@example.com"
+ *   },
+ *   "recipients": {
+ *     "prepared_for": {
+ *       "fullname": "John Doe",
+ *       "email": "johndoe@example.com"
+ *     }
+ *   }
+ * }
+ */
+case class SeamlessFormPreparation(
+  singer_data: SeamlessRecipientInfo,
+  recipients: SeamlessRecipient,
+  answers: Map[String, JsValue]
+) {
 
 }
 
@@ -134,4 +140,21 @@ case class SeamlessRecipientInfo(fullname: String, email: String) {
 
 object SeamlessRecipientInfo {
   implicit val jsonFormat: OFormat[SeamlessRecipientInfo] = Json.format[SeamlessRecipientInfo]
+}
+
+/**
+  * {
+  * "result": true,
+  * "application_id": "AP15021000011409822",
+  * "description": "Submission successful"
+  * }
+  */
+case class SeamlessApplicationCreateResponse(result: Boolean,
+                                             application_id: String,
+                                             description: String) {
+
+}
+
+object SeamlessApplicationCreateResponse {
+  implicit val jsonFormat: OFormat[SeamlessApplicationCreateResponse] = Json.format[SeamlessApplicationCreateResponse]
 }

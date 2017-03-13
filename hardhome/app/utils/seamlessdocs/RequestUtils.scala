@@ -1,6 +1,6 @@
 package utils.seamlessdocs
 
-import java.util.{Date, UUID}
+import java.util.{ Date, UUID }
 import javax.crypto.spec.SecretKeySpec
 import javax.crypto.Mac
 import org.apache.commons.codec.binary.Hex
@@ -8,8 +8,8 @@ import org.apache.commons.codec.binary.Hex
 import play.api.libs.ws.WSRequest
 
 /**
-  * Utilities for signing requests.
-  */
+ * Utilities for signing requests.
+ */
 object RequestUtils {
 
   def generateRequestSignature(requestMethod: String, uri: String, timestamp: Long, nonce: String, apiSecret: Array[Byte]): String = {
@@ -29,10 +29,12 @@ object RequestUtils {
       request.uri.getPath,
       epochTime,
       nonce,
-      secretKey)
+      secretKey
+    )
 
     request.withHeaders(
       "Date" -> epochTime.toString,
-      "Authorization" -> s"HMAC-SHA256 api_key=$apiKey nonce=$nonce signature=$signature")
+      "Authorization" -> s"HMAC-SHA256 api_key=$apiKey nonce=$nonce signature=$signature"
+    )
   }
 }

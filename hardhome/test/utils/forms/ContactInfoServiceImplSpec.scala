@@ -7,12 +7,12 @@ import org.specs2.mock.Mockito
 import play.api.Configuration
 import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.libs.json.JsString
-import play.api.test.{PlaySpecification, WithApplication}
+import play.api.test.{ PlaySpecification, WithApplication }
 import reactivemongo.api.commands.WriteResult
 import services.forms.ContactInfoServiceImpl
 
 import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, Future}
+import scala.concurrent.{ Await, Future }
 
 class ContactInfoServiceImplSpec extends PlaySpecification with Mockito {
   sequential

@@ -3,8 +3,8 @@ package services.forms
 import java.util.UUID
 import javax.inject.Inject
 
-import models.daos.{UserDAO, UserValuesDAO}
-import models.{Address, Contact, User, UserValues}
+import models.daos.{ UserDAO, UserValuesDAO }
+import models.{ Address, Contact, User, UserValues }
 import play.api.libs.json._
 import reactivemongo.api.commands.WriteResult
 import utils.JsonUnbox

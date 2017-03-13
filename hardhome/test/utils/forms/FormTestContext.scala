@@ -6,9 +6,9 @@ import models._
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import org.specs2.specification.Scope
-import play.api.{Application, Configuration}
+import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
-import services.forms.FormConfigManager
+import _root_.services.forms.FormConfigManager
 
 trait FormTestContext extends Scope {
   val condition1DependentField = Field(
