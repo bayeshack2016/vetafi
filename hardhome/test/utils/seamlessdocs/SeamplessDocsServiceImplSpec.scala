@@ -4,25 +4,37 @@ import com.google.inject.AbstractModule
 import com.typesafe.config.ConfigFactory
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
-import org.mockito.{Matchers, Mockito}
 import org.specs2.specification.Scope
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.ws.{WSClient, WSRequest}
-import play.api.test.{PlaySpecification, WithApplication}
+import play.api.libs.json.Json
+import play.api.mvc.{Action, _}
+import play.api.test.{PlaySpecification, WithApplication, WsTestClient}
 import play.api.{Application, Configuration}
+import play.core.server.Server
 import utils.secrets.SecretsManager
 
-import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, Future}
-import scala.util.Try
+import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
+import scala.util.{Failure, Success}
+
+
+case class TestException() extends Exception {
+
+}
 
 trait SeamplessDocsServiceTestContext extends Scope {
 
-  val mockClient: WSClient = Mockito.mock(classOf[WSClient])
-  val mockRequest: WSRequest = Mockito.mock(classOf[WSRequest])
-
-  Mockito.when(mockClient.url(Matchers.any()))
-    .thenReturn(mockRequest)
+  def withTestClient[T](app: Application)(routes: scala.PartialFunction[play.api.mvc.RequestHeader, play.api.mvc.Handler])(block: SeamlessDocsServiceImpl => T): T = {
+    Server.withRouter()(routes) { implicit port =>
+      WsTestClient.withClient { client =>
+        block(
+          new SeamlessDocsServiceImpl(client,
+            app.injector.instanceOf[Configuration],
+            app.injector.instanceOf[SecretsManager])
+        )
+      }
+    }
+  }
 
   class FakeSecretManager extends SecretsManager {
     override def getSecret(name: String): Array[Byte] = {
@@ -36,7 +48,6 @@ trait SeamplessDocsServiceTestContext extends Scope {
 
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
-      bind[WSClient].toInstance(mockClient)
       bind[SecretsManager].toInstance(new FakeSecretManager)
     }
   }
@@ -54,12 +65,35 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
   "The SeamplessDocsServiceImpl" should {
     "return failure if failed" in new SeamplessDocsServiceTestContext {
       new WithApplication(application) {
-        val service: SeamlessDocsServiceImpl = app.injector.instanceOf[SeamlessDocsServiceImpl]
-        Mockito.when(mockRequest.execute()).thenThrow(new RuntimeException("explosion!"))
+        withTestClient(app)({
+          case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => throw TestException()
+        }
+        )({ client: SeamlessDocsServiceImpl =>
 
-        val future: Future[SeamlessApplicationCreateResponse] = service.formPrepare("test", "joe", "joe@email.com", Map())
+          val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+          future.onComplete {
+            case Failure(e) => e must beAnInstanceOf[TestException]
+            case Success(_) => failure
+          }
+        })
+      }
+    }
 
-        val responseTry: SeamlessApplicationCreateResponse = Await.result(future, Duration.Inf)
+    "return failure if failed" in new SeamplessDocsServiceTestContext {
+      new WithApplication(application) {
+        withTestClient(app)({
+          case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
+            Results.Ok(Json.obj())
+          }
+        }
+        )({ client: SeamlessDocsServiceImpl =>
+
+          val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+          future.onComplete {
+            case Failure(_) => failure
+            case Success(_) => failure
+          }
+        })
       }
     }
   }
