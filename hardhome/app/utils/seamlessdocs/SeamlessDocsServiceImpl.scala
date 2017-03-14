@@ -4,6 +4,7 @@ import java.net.URL
 import javax.inject.Inject
 
 import play.api.Configuration
+import play.api.http.Status
 import play.api.libs.json.{ JsObject, JsValue, Json }
 import play.api.libs.ws.{ WSClient, WSRequest, WSResponse }
 import utils.secrets.SecretsManager
@@ -65,7 +66,7 @@ class SeamlessDocsServiceImpl @Inject() (
     )
       .get()
       .map((wsResponse: WSResponse) => {
-          new URL(wsResponse.body)
+        new URL(wsResponse.body)
       })
   }
 
@@ -77,15 +78,20 @@ class SeamlessDocsServiceImpl @Inject() (
     )
       .get()
       .map((wsResponse: WSResponse) => {
-        val validate = wsResponse.json.validate[SeamlessApplication]
-        validate.fold(
-          errors => {
-            throw new RuntimeException(errors.toString())
-          },
-          seamlessApplication => {
-            seamlessApplication
-          }
-        )
+        wsResponse.status match {
+          case Status.OK =>
+            val validate = wsResponse.json.validate[SeamlessApplication]
+            validate.fold(
+              errors => {
+                throw new RuntimeException(errors.toString())
+              },
+              seamlessApplication => {
+                seamlessApplication
+              }
+            )
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
+
       })
   }
 

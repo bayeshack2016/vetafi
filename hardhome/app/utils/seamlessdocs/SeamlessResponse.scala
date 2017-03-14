@@ -144,15 +144,17 @@ object SeamlessRecipientInfo {
 }
 
 /**
-  * {
-  * "result": true,
-  * "application_id": "AP15021000011409822",
-  * "description": "Submission successful"
-  * }
-  */
-case class SeamlessApplicationCreateResponse(result: Boolean,
-                                             application_id: String,
-                                             description: String) {
+ * {
+ * "result": true,
+ * "application_id": "AP15021000011409822",
+ * "description": "Submission successful"
+ * }
+ */
+case class SeamlessApplicationCreateResponse(
+  result: Boolean,
+  application_id: String,
+  description: String
+) {
 
 }
 
