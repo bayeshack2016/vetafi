@@ -60,7 +60,7 @@ class SeamlessDocsServiceImpl @Inject() (
   override def getInviteUrl(applicationId: String): Future[URL] = {
     signRequest(
       wsClient
-        .url(s"$url/api/form/$applicationId/prepare")
+        .url(s"$url/api/application/$applicationId/get_invite_url")
         .withMethod("GET")
     )
       .get()

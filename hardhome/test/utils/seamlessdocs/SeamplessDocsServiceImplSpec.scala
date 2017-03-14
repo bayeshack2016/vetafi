@@ -1,5 +1,7 @@
 package utils.seamlessdocs
 
+import java.net.URL
+
 import com.google.inject.AbstractModule
 import com.typesafe.config.ConfigFactory
 import modules.JobModule
@@ -62,7 +64,7 @@ trait SeamplessDocsServiceTestContext extends Scope {
 class SeamplessDocsServiceImplSpec extends PlaySpecification {
   sequential
 
-  "The SeamplessDocsServiceImpl" should {
+  "The SeamplessDocsServiceImpl formPrepare method" should {
     "return failure if failed" in new SeamplessDocsServiceTestContext {
       new WithApplication(application) {
         withTestClient(app)({
@@ -79,11 +81,15 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
       }
     }
 
-    "return failure if failed" in new SeamplessDocsServiceTestContext {
+    "succeed when endpoint returns expected json" in new SeamplessDocsServiceTestContext {
       new WithApplication(application) {
         withTestClient(app)({
           case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
-            Results.Ok(Json.obj())
+            Results.Ok("""{
+                         |"result": true,
+                         |"application_id": "AP15021000011409822",
+                         |"description": "Submission successful"
+                         |}""")
           }
         }
         )({ client: SeamlessDocsServiceImpl =>
@@ -91,10 +97,96 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
           val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
           future.onComplete {
             case Failure(_) => failure
+            case Success(res: SeamlessApplicationCreateResponse) =>
+              res.application_id must be equalTo "AP15021000011409822"
+              res.description must be equalTo "Submission successful"
+              res.result must beTrue
+          }
+        })
+      }
+    }
+  }
+
+  "fail when endpoint returns unexpected json" in new SeamplessDocsServiceTestContext {
+    new WithApplication(application) {
+      withTestClient(app)({
+        case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
+          Results.Ok("""{
+                       |"unexpected": true
+                       |}""")
+        }
+      }
+      )({ client: SeamlessDocsServiceImpl =>
+
+        val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+        future.onComplete {
+          case Failure(e) => e must beAnInstanceOf[RuntimeException]
+          case Success(_) => failure
+        }
+      })
+    }
+  }
+
+  "The SeamplessDocsServiceImpl getInviteUrl method" should {
+    "return failure if failed" in new SeamplessDocsServiceTestContext {
+      new WithApplication(application) {
+        withTestClient(app)({
+          case post if post.method == "GET" && post.uri == "/api/application/test/get_invite_url" => throw TestException()
+        }
+        )({ client: SeamlessDocsServiceImpl =>
+
+          val future: Future[URL] = client.getInviteUrl("test")
+          future.onComplete {
+            case Failure(e) => e must beAnInstanceOf[TestException]
             case Success(_) => failure
           }
         })
       }
+    }
+
+    "succeed when endpoint returns expected json" in new SeamplessDocsServiceTestContext {
+      new WithApplication(application) {
+        withTestClient(app)({
+          case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
+            Results.Ok("""{
+                         |"result": true,
+                         |"application_id": "AP15021000011409822",
+                         |"description": "Submission successful"
+                         |}""")
+          }
+        }
+        )({ client: SeamlessDocsServiceImpl =>
+
+          val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+          future.onComplete {
+            case Failure(_) => failure
+            case Success(res: SeamlessApplicationCreateResponse) =>
+              res.application_id must be equalTo "AP15021000011409822"
+              res.description must be equalTo "Submission successful"
+              res.result must beTrue
+          }
+        })
+      }
+    }
+  }
+
+  "fail when endpoint returns unexpected json" in new SeamplessDocsServiceTestContext {
+    new WithApplication(application) {
+      withTestClient(app)({
+        case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
+          Results.Ok("""{
+                       |"unexpected": true
+                       |}""")
+        }
+      }
+      )({ client: SeamlessDocsServiceImpl =>
+
+        val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+        future.onComplete {
+          case Failure(e) => e must beAnInstanceOf[RuntimeException]
+          case Success(_) => failure
+        }
+      })
     }
   }
 }
