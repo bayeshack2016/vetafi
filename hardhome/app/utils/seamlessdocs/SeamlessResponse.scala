@@ -79,7 +79,7 @@ case class SeamlessApplication(
   application_id: String,
   form_id: String,
   is_active: String,
-  application_data: Map[String, SeamlessApplicationDatum],
+  application_data: Option[Map[String, SeamlessApplicationDatum]],
   submission_pdf_url: String
 ) {
 

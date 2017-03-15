@@ -1,6 +1,7 @@
 package utils.seamlessdocs
 
 import java.net.URL
+import java.time.Clock
 import javax.inject.Inject
 
 import play.api.Configuration
@@ -9,8 +10,8 @@ import play.api.libs.json.{ JsObject, JsValue, Json }
 import play.api.libs.ws.{ WSClient, WSRequest, WSResponse }
 import utils.secrets.SecretsManager
 
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 
 class SeamlessDocsServiceImpl @Inject() (
   wsClient: WSClient,
@@ -21,9 +22,10 @@ class SeamlessDocsServiceImpl @Inject() (
   val url: String = configuration.getString("seamlessdocs.url").get
   lazy val apiSecret: Array[Byte] = secretsManager.getSecret("seamlessdocs_secret_key")
   lazy val apiKey: String = secretsManager.getSecretUtf8("seamlessdocs_api_key")
+  lazy val requestUtils: RequestUtils = new RequestUtils(Clock.systemUTC())
 
   private def signRequest(request: WSRequest): WSRequest = {
-    RequestUtils.sign(request, apiKey, apiSecret)
+    requestUtils.sign(request, apiKey, apiSecret)
   }
 
   override def formPrepare(
@@ -66,14 +68,26 @@ class SeamlessDocsServiceImpl @Inject() (
     )
       .get()
       .map((wsResponse: WSResponse) => {
-        new URL(wsResponse.body)
+        wsResponse.status match {
+          case Status.OK =>
+            val validate = wsResponse.json.validate[Seq[String]]
+            validate.fold(
+              errors => {
+                throw new RuntimeException(errors.toString())
+              },
+              urlList => {
+                new URL(urlList.head)
+              }
+            )
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
       })
   }
 
   override def getApplication(applicationId: String): Future[SeamlessApplication] = {
     signRequest(
       wsClient
-        .url(s"$url/api/form/$applicationId")
+        .url(s"$url/api/application/$applicationId")
         .withMethod("GET")
     )
       .get()
@@ -83,7 +97,10 @@ class SeamlessDocsServiceImpl @Inject() (
             val validate = wsResponse.json.validate[SeamlessApplication]
             validate.fold(
               errors => {
-                throw new RuntimeException(errors.toString())
+                throw new RuntimeException(
+                  s"Encountered JSON parsing errors: ${errors.toString} " +
+                    s"when parsing body: ${wsResponse.body}"
+                )
               },
               seamlessApplication => {
                 seamlessApplication

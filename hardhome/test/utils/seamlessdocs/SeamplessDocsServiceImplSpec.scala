@@ -8,7 +8,6 @@ import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import org.specs2.specification.Scope
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.Json
 import play.api.mvc.{Action, _}
 import play.api.test.{PlaySpecification, WithApplication, WsTestClient}
 import play.api.{Application, Configuration}
@@ -18,7 +17,6 @@ import utils.secrets.SecretsManager
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 import scala.util.{Failure, Success}
-
 
 case class TestException() extends Exception {
 
@@ -30,9 +28,11 @@ trait SeamplessDocsServiceTestContext extends Scope {
     Server.withRouter()(routes) { implicit port =>
       WsTestClient.withClient { client =>
         block(
-          new SeamlessDocsServiceImpl(client,
+          new SeamlessDocsServiceImpl(
+            client,
             app.injector.instanceOf[Configuration],
-            app.injector.instanceOf[SecretsManager])
+            app.injector.instanceOf[SecretsManager]
+          )
         )
       }
     }
@@ -69,8 +69,7 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
       new WithApplication(application) {
         withTestClient(app)({
           case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => throw TestException()
-        }
-        )({ client: SeamlessDocsServiceImpl =>
+        })({ client: SeamlessDocsServiceImpl =>
 
           val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
           future.onComplete {
@@ -85,14 +84,14 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
       new WithApplication(application) {
         withTestClient(app)({
           case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
-            Results.Ok("""{
-                         |"result": true,
-                         |"application_id": "AP15021000011409822",
-                         |"description": "Submission successful"
-                         |}""")
+            Results.Ok(
+              """{
+                |"result": true,
+                |"application_id": "AP15021000011409822",
+                |"description": "Submission successful"
+                |}""")
           }
-        }
-        )({ client: SeamlessDocsServiceImpl =>
+        })({ client: SeamlessDocsServiceImpl =>
 
           val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
           future.onComplete {
@@ -105,25 +104,32 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
         })
       }
     }
-  }
 
-  "fail when endpoint returns unexpected json" in new SeamplessDocsServiceTestContext {
-    new WithApplication(application) {
-      withTestClient(app)({
-        case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
-          Results.Ok("""{
-                       |"unexpected": true
-                       |}""")
-        }
+
+    "fail when endpoint returns unexpected json" in new
+        SeamplessDocsServiceTestContext {
+      new WithApplication(
+        application) {
+        withTestClient(app)({
+          case post if post.method == "POST" && post.uri ==
+            "/api/form/test/prepare" => Action {
+            Results.Ok(
+              """{
+                |"unexpected": true
+                |}""")
+          }
+        })({ client: SeamlessDocsServiceImpl =>
+
+          val future: Future[SeamlessApplicationCreateResponse] =
+            client.formPrepare("test", "joe", "joe@email.com", Map())
+          future.onComplete {
+            case Failure(e) => e must
+              beAnInstanceOf[
+                RuntimeException]
+            case Success(_) => failure
+          }
+        })
       }
-      )({ client: SeamlessDocsServiceImpl =>
-
-        val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
-        future.onComplete {
-          case Failure(e) => e must beAnInstanceOf[RuntimeException]
-          case Success(_) => failure
-        }
-      })
     }
   }
 
@@ -132,8 +138,7 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
       new WithApplication(application) {
         withTestClient(app)({
           case post if post.method == "GET" && post.uri == "/api/application/test/get_invite_url" => throw TestException()
-        }
-        )({ client: SeamlessDocsServiceImpl =>
+        })({ client: SeamlessDocsServiceImpl =>
 
           val future: Future[URL] = client.getInviteUrl("test")
           future.onComplete {
@@ -147,46 +152,57 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
     "succeed when endpoint returns expected json" in new SeamplessDocsServiceTestContext {
       new WithApplication(application) {
         withTestClient(app)({
-          case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
-            Results.Ok("""{
-                         |"result": true,
-                         |"application_id": "AP15021000011409822",
-                         |"description": "Submission successful"
-                         |}""")
+          case post if post.method == "POST" && post.uri == "/api/application/test/get_invite_url" => Action {
+            Results.Ok("""["https://www.website.com"]""")
           }
-        }
-        )({ client: SeamlessDocsServiceImpl =>
+        })({ client: SeamlessDocsServiceImpl =>
 
-          val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+          val future: Future[URL] = client.getInviteUrl("test")
           future.onComplete {
             case Failure(_) => failure
-            case Success(res: SeamlessApplicationCreateResponse) =>
-              res.application_id must be equalTo "AP15021000011409822"
-              res.description must be equalTo "Submission successful"
-              res.result must beTrue
+            case Success(res: URL) =>
+              res.toString must be equalTo "https://www.website.com"
           }
         })
       }
     }
-  }
 
-  "fail when endpoint returns unexpected json" in new SeamplessDocsServiceTestContext {
-    new WithApplication(application) {
-      withTestClient(app)({
-        case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => Action {
-          Results.Ok("""{
-                       |"unexpected": true
-                       |}""")
-        }
+    "fail when endpoint returns bad url" in new SeamplessDocsServiceTestContext {
+      new WithApplication(application) {
+        withTestClient(app)({
+          case post if post.method == "POST" && post.uri == "/api/application/test/get_invite_url" => Action {
+            Results.Ok("""["----!!!hi!"]""")
+          }
+        })({ client: SeamlessDocsServiceImpl =>
+
+          val future: Future[URL] = client.getInviteUrl("test")
+          future.onComplete {
+            case Failure(e) => e must beAnInstanceOf[RuntimeException]
+            case Success(_) => failure
+          }
+        })
       }
-      )({ client: SeamlessDocsServiceImpl =>
+    }
 
-        val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
-        future.onComplete {
-          case Failure(e) => e must beAnInstanceOf[RuntimeException]
-          case Success(_) => failure
+    "fail when endpoint returns unexpected json" in new SeamplessDocsServiceTestContext {
+      new WithApplication(application) {
+        withTestClient(app)({
+          case post if post.method == "POST" && post.uri == "/api/application/test/get_invite_url" => Action {
+            Results.Ok(
+              """{
+                |"unexpected": true
+                |}""")
+          }
+        })({ client: SeamlessDocsServiceImpl =>
+
+          val future: Future[URL] = client.getInviteUrl("test")
+          future.onComplete {
+            case Failure(e) => e must beAnInstanceOf[RuntimeException]
+            case Success(_) => failure
+          }
         }
-      })
+        )
+      }
     }
   }
 }
