@@ -112,7 +112,7 @@ class SeamlessDocsServiceImpl @Inject() (
       })
   }
 
-  override def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[SeamlessResponse] = {
+  override def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[URL] = {
     signRequest(
       wsClient
         .url(s"$url/api/application/$applicationId/update_pdf")
@@ -121,15 +121,22 @@ class SeamlessDocsServiceImpl @Inject() (
     )
       .execute()
       .map((wsResponse: WSResponse) => {
-        val validate = wsResponse.json.validate[SeamlessResponse]
-        validate.fold(
-          errors => {
-            throw new RuntimeException(errors.toString())
-          },
-          seamlessResponse => {
-            seamlessResponse
-          }
-        )
+        wsResponse.status match {
+          case Status.OK =>
+            val validate = wsResponse.json.validate[Seq[String]]
+            validate.fold(
+              errors => {
+                throw new RuntimeException(
+                  s"Encountered JSON parsing errors: ${errors.toString} " +
+                    s"when parsing body: ${wsResponse.body}"
+                )
+              },
+              urlList => {
+                new URL(urlList.head)
+              }
+            )
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
       })
   }
 }

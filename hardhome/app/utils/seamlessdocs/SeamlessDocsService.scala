@@ -15,5 +15,5 @@ trait SeamlessDocsService {
 
   def getApplication(applicationId: String): Future[SeamlessApplication]
 
-  def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[SeamlessResponse]
+  def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[URL]
 }
