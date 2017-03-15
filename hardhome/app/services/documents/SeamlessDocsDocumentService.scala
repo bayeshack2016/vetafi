@@ -3,11 +3,11 @@ package services.documents
 import java.net.URL
 import javax.inject.Inject
 
-import models.daos.{ FormDAO, UserDAO }
-import models.{ ClaimForm, User }
+import models.daos.{FormDAO, UserDAO}
+import models.{ClaimForm, User}
 import play.api.http.Status
-import play.api.libs.ws.{ WSClient, WSResponse }
-import utils.seamlessdocs.{ SeamlessApplicationCreateResponse, SeamlessDocsServiceImpl }
+import play.api.libs.ws.{WSClient, WSResponse}
+import utils.seamlessdocs.{SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessDocsServiceImpl}
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -20,7 +20,7 @@ class SeamlessDocsDocumentService @Inject() (
   userDAO: UserDAO,
   formDAO: FormDAO,
   wSClient: WSClient,
-  seamlessDocs: SeamlessDocsServiceImpl
+  seamlessDocs: SeamlessDocsService
 ) extends DocumentService {
 
   private def updateFormWithApplication(form: ClaimForm)(res: SeamlessApplicationCreateResponse): Future[ClaimForm] = {
