@@ -23,17 +23,8 @@ class SeamlessDocsDocumentService @Inject() (
   seamlessDocs: SeamlessDocsService
 ) extends DocumentService {
 
-  private def updateFormWithApplication(form: ClaimForm)(res: SeamlessApplicationCreateResponse): Future[ClaimForm] = {
-    val newForm = form.copy(externalApplicationId = Some(res.application_id))
-
-    formDAO.save(form.userID, form.claimID, form.key, newForm).flatMap {
-      case ok if ok.ok =>
-        formDAO.find(form.userID, form.claimID, form.key).map {
-          case Some(updatedForm) => updatedForm
-          case None => throw new RuntimeException
-        }
-      case _ => throw new RuntimeException
-    }
+  private def updateFormWithApplication(form: ClaimForm)(res: SeamlessApplicationCreateResponse): ClaimForm = {
+    form.copy(externalApplicationId = Some(res.application_id))
   }
 
   private def createApplication(user: User, form: ClaimForm): Future[ClaimForm] = {
@@ -42,7 +33,7 @@ class SeamlessDocsDocumentService @Inject() (
       user.fullName.get,
       user.email.get,
       form.responses
-    ).flatMap(updateFormWithApplication(form))
+    ).map(updateFormWithApplication(form))
   }
 
   private def maybeCreateApplication(form: ClaimForm): Future[ClaimForm] = {
@@ -95,7 +86,10 @@ class SeamlessDocsDocumentService @Inject() (
    */
   override def signatureLink(form: ClaimForm): Future[URL] = {
     maybeCreateApplication(form).flatMap(updatedForm => {
-      seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get)
+      formDAO.save(updatedForm.userID, updatedForm.claimID, updatedForm.key, updatedForm).flatMap {
+        case ok if ok.ok => seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get)
+        case _ => throw new RuntimeException
+      }
     })
   }
 }
