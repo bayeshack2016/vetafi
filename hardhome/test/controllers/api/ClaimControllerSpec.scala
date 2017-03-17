@@ -3,13 +3,13 @@ package controllers.api
 import java.util.UUID
 
 import com.mohiva.play.silhouette.api.LoginInfo
-import controllers.{CSRFTest, SilhouetteTestContext}
+import controllers.{ CSRFTest, SilhouetteTestContext }
 import com.mohiva.play.silhouette.test._
 import models._
 import org.specs2.mock.Mockito
-import play.api.libs.json.{JsResult, Json}
-import play.api.mvc.{AnyContentAsEmpty, Result}
-import play.api.test.{FakeRequest, PlaySpecification, WithApplication}
+import play.api.libs.json.{ JsResult, Json }
+import play.api.mvc.{ AnyContentAsEmpty, Result }
+import play.api.test.{ FakeRequest, PlaySpecification, WithApplication }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future

@@ -3,11 +3,11 @@ package services.documents
 import java.net.URL
 import javax.inject.Inject
 
-import models.daos.{FormDAO, UserDAO}
-import models.{ClaimForm, User}
+import models.daos.{ FormDAO, UserDAO }
+import models.{ ClaimForm, User }
 import play.api.http.Status
-import play.api.libs.ws.{WSClient, WSResponse}
-import utils.seamlessdocs.{SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessDocsServiceImpl}
+import play.api.libs.ws.{ WSClient, WSResponse }
+import utils.seamlessdocs.{ SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessDocsServiceImpl }
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

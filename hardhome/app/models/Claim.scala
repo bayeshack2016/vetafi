@@ -75,10 +75,12 @@ object Claim {
   implicit val jsonFormat: OFormat[Claim] = Json.format[Claim]
 }
 
-case class ClaimSubmission(externalId: String,
-                          success: Boolean,
-                          message: Option[String],
-                          dateSubmitted: java.util.Date) {
+case class ClaimSubmission(
+  externalId: String,
+  success: Boolean,
+  message: Option[String],
+  dateSubmitted: java.util.Date
+) {
 
 }
 
