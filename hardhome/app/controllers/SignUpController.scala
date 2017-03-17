@@ -14,7 +14,7 @@ import models.services.{ AuthTokenService, UserService }
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.libs.mailer.{ Email, MailerClient }
-import play.api.mvc.Controller
+import play.api.mvc.{ Action, AnyContent, Controller }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -46,8 +46,19 @@ class SignUpController @Inject() (
    *
    * @return The result to display.
    */
-  def view = silhouette.UnsecuredAction.async { implicit request =>
-    Future.successful(Ok(views.html.signUp(SignUpForm.form)))
+  def view: Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
+    Future.successful(Ok(
+      views.html.signinLayout(
+        "signup-view",
+        "",
+        routes.SocialAuthController.authenticate("idme").url
+      )(
+          views.html.signup.idmeText(),
+          views.html.signup.emailText(),
+          views.html.signup.linkToOtherPage(),
+          views.html.signup.inputs()
+        )
+    ))
   }
 
   /**
