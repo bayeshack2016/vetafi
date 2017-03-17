@@ -58,10 +58,10 @@ class SignInController @Inject() (
         "",
         routes.SocialAuthController.authenticate("idme").url
       )(
-          views.html.signup.idmeText(),
-          views.html.signup.emailText(),
-          views.html.signup.linkToOtherPage(),
-          views.html.signup.inputs()
+          views.html.signin.idmeText(),
+          views.html.signin.emailText(),
+          views.html.signin.linkToOtherPage(),
+          views.html.signin.inputs()
         )
     ))
   }
