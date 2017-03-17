@@ -12,7 +12,7 @@ import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
-import reactivemongo.api.commands.{ MultiBulkWriteResult, WriteResult }
+import reactivemongo.api.commands.{ MultiBulkWriteResult, UpdateWriteResult, WriteResult }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -57,7 +57,15 @@ trait ClaimControllerTestContext extends SilhouetteTestContext {
 
     override def create(userID: UUID, forms: Seq[String]): Future[MultiBulkWriteResult] = ???
 
-    override def submit(userID: UUID, claimID: UUID): Future[WriteResult] = ???
+    override def submit(userID: UUID, claimID: UUID): Future[WriteResult] = {
+      testClaim = testClaim.copy(state = Claim.State.SUBMITTED)
+      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+    }
+
+    override def save(userID: UUID, claimID: UUID, claim: Claim): Future[WriteResult] = {
+      testClaim = claim
+      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+    }
   }
 
   class FakeModule extends AbstractModule with ScalaModule {

@@ -1,4 +1,4 @@
-package utils.forms
+package services.forms
 
 import java.util.UUID
 
@@ -10,6 +10,7 @@ import play.api.Configuration
 import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.libs.json.JsString
 import play.api.test.{ PlaySpecification, WithApplication }
+import services.forms.ClaimServiceImpl
 
 class ClaimServiceSpec extends PlaySpecification with Mockito {
   sequential

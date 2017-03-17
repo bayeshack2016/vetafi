@@ -1,4 +1,4 @@
-package utils.forms
+package services.forms
 
 import com.typesafe.config.ConfigFactory
 import models.FormConfig
@@ -9,6 +9,7 @@ import play.api.Configuration
 import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.libs.json.{ JsValue, Json, Reads }
 import play.api.test.{ PlaySpecification, WithApplication }
+import services.forms.FormConfigManager
 import utils.EnumUtils
 
 import scala.collection.JavaConversions._

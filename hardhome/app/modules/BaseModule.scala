@@ -4,7 +4,8 @@ import com.google.inject.AbstractModule
 import models.daos._
 import models.services.{ AuthTokenService, AuthTokenServiceImpl }
 import net.codingwell.scalaguice.ScalaModule
-import utils.forms._
+import services.forms._
+import services.submission.{ FaxSubmissionService, SubmissionService }
 import utils.secrets.{ BiscuitSecretsManager, SecretsManager }
 
 /**
@@ -28,5 +29,6 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[FormConfigManager].to[JsonResourceFormConfigManager]
     bind[ContactInfoService].to[ContactInfoServiceImpl]
     bind[ClaimService].to[ClaimServiceImpl]
+    bind[SubmissionService].to[FaxSubmissionService]
   }
 }

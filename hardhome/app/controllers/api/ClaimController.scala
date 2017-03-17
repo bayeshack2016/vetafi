@@ -4,10 +4,11 @@ import java.util.UUID
 import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.Silhouette
-import models.Recipients
 import models.daos.ClaimDAO
+import models.{ Claim, Recipients }
 import play.api.libs.json.{ JsError, JsValue, Json }
-import play.api.mvc.{ Action, AnyContent, BodyParsers, Controller }
+import play.api.mvc._
+import services.submission.SubmissionService
 import utils.auth.DefaultEnv
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -18,7 +19,8 @@ import scala.concurrent.Future
  */
 class ClaimController @Inject() (
   val claimDAO: ClaimDAO,
-  silhouette: Silhouette[DefaultEnv]
+  silhouette: Silhouette[DefaultEnv],
+  submissionService: SubmissionService
 ) extends Controller {
 
   def getClaims: Action[AnyContent] = silhouette.SecuredAction.async {
@@ -71,6 +73,26 @@ class ClaimController @Inject() (
       }
   }
 
+  def findUpdateAndSubmitClaim(claim: Claim, recipients: Recipients): Future[Result] = {
+    claimDAO.save(claim.userID, claim.claimID, claim.copy(sentTo = recipients)).flatMap {
+      case updateRecipients if updateRecipients.ok => submissionService.submit(claim).flatMap {
+        case success if success.success =>
+          claimDAO.submit(claim.userID, claim.claimID).flatMap {
+            case submitted if submitted.ok => Future.successful(Ok(Json.obj("status" -> "ok")))
+            case _ => Future.successful(InternalServerError)
+          }
+        case fail =>
+          Future.successful(InternalServerError(
+            Json.obj(
+              "status" -> "error",
+              "message" -> fail.message
+            )
+          ))
+      }
+      case _ => Future.successful(InternalServerError)
+    }
+  }
+
   def submit(claimID: UUID): Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {
     request =>
       {
@@ -80,11 +102,17 @@ class ClaimController @Inject() (
             Future.successful(BadRequest(Json.obj("status" -> "error", "message" -> JsError.toJson(errors))))
           },
           recipients => {
-            //TODO implement
-            Future.successful(Ok(Json.obj("status" -> "ok")))
+            claimDAO.findClaim(request.identity.userID, claimID).flatMap {
+              case Some(claim) =>
+                if (claim.state == Claim.State.INCOMPLETE) {
+                  findUpdateAndSubmitClaim(claim, recipients)
+                } else {
+                  Future.successful(InternalServerError)
+                }
+              case None => Future.successful(NotFound)
+            }
           }
         )
-
       }
   }
 }

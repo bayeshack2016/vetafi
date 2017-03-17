@@ -103,4 +103,10 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
       )
     )
   }
+
+  override def save(userID: UUID, claimID: UUID, claim: Claim): Future[WriteResult] = {
+    collection.flatMap(
+      _.update(Json.obj("userID" -> userID, "claimID" -> claimID), claim)
+    )
+  }
 }

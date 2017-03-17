@@ -1,4 +1,4 @@
-package utils.forms
+package services.forms
 
 import com.typesafe.config.ConfigFactory
 import models.UserValues
@@ -9,6 +9,7 @@ import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.libs.json.JsString
 import play.api.test.{ PlaySpecification, WithApplication }
 import reactivemongo.api.commands.WriteResult
+import services.forms.ContactInfoServiceImpl
 
 import scala.concurrent.duration.Duration
 import scala.concurrent.{ Await, Future }

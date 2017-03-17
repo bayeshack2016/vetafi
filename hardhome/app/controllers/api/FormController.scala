@@ -8,8 +8,9 @@ import models.daos.{ FormDAO, UserValuesDAO }
 import models.{ ClaimForm, User }
 import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc._
+import services.forms.{ ClaimService, ContactInfoService }
 import utils.auth.DefaultEnv
-import utils.forms.{ ClaimService, ContactInfoService }
+import services.forms.ContactInfoService
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future

@@ -13,4 +13,5 @@ trait ClaimDAO {
   def findIncompleteClaim(userID: UUID): Future[Option[Claim]]
   def create(userID: UUID, forms: Seq[String]): Future[MultiBulkWriteResult]
   def submit(userID: UUID, claimID: UUID): Future[WriteResult]
+  def save(userID: UUID, claimID: UUID, claim: Claim): Future[WriteResult]
 }

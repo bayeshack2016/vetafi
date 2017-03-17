@@ -1,4 +1,4 @@
-package utils.forms
+package services.forms
 
 import com.google.inject.AbstractModule
 import com.typesafe.config.ConfigFactory
@@ -8,6 +8,7 @@ import net.codingwell.scalaguice.ScalaModule
 import org.specs2.specification.Scope
 import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
+import _root_.services.forms.FormConfigManager
 
 trait FormTestContext extends Scope {
   val condition1DependentField = Field(

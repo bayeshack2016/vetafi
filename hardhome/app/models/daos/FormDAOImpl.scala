@@ -5,7 +5,7 @@ import javax.inject.Inject
 
 import models.ClaimForm
 import models.ClaimForm._
-import play.api.libs.json.{ JsNumber, JsObject, Json }
+import play.api.libs.json.{ JsNumber, JsObject, JsString, Json }
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.modules.reactivemongo.json._
 import reactivemongo.api._
@@ -57,15 +57,20 @@ class FormDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends For
     collection.flatMap(
       _.update(
         query,
+        claimForm
+      /*
         Json.obj(
           "$set" -> Json.obj(
             "responses" -> JsObject(claimForm.responses),
             "optionalQuestions" -> JsNumber(claimForm.optionalQuestions),
             "requiredQuestions" -> JsNumber(claimForm.requiredQuestions),
             "answeredOptional" -> JsNumber(claimForm.answeredOptional),
-            "answeredRequired" -> JsNumber(claimForm.answeredRequired)
+            "answeredRequired" -> JsNumber(claimForm.answeredRequired),
+            "externalFormId" -> claimForm.externalFormId,
+            "externalApplicationId" -> claimForm.externalApplicationId
           )
         )
+        */
       )
     )
   }

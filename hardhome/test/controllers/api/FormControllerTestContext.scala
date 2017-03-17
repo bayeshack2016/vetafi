@@ -15,7 +15,7 @@ import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.libs.json.JsValue
 import reactivemongo.api.commands.{ MultiBulkWriteResult, UpdateWriteResult, WriteResult }
 import utils.auth.DefaultEnv
-import utils.forms.ContactInfoService
+import _root_.services.forms.ContactInfoService
 
 import scala.concurrent.Future
 
