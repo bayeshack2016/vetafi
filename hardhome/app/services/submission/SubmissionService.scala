@@ -11,6 +11,5 @@ import scala.concurrent.Future
   */
 trait SubmissionService {
 
-
   def submit(claim: Claim): Future[ClaimSubmission]
 }

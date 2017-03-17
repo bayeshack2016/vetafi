@@ -5,7 +5,7 @@ import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.Silhouette
 import models.daos.ClaimDAO
-import models.{Claim, ClaimSubmission, Recipients}
+import models.{Claim, Recipients}
 import play.api.libs.json.{JsError, JsValue, Json}
 import play.api.mvc._
 import services.submission.SubmissionService
@@ -73,13 +73,17 @@ class ClaimController @Inject()(
   def findUpdateAndSubmitClaim(claim: Claim, recipients: Recipients): Future[Result] = {
     claimDAO.save(claim.userID, claim.claimID, claim.copy(sentTo = recipients)).flatMap {
       case updateRecipients if updateRecipients.ok => submissionService.submit(claim).flatMap {
-        submission: ClaimSubmission =>
+        case success if success.success =>
           claimDAO.submit(claim.userID, claim.claimID).flatMap {
             case submitted if submitted.ok => Future.successful(Ok(Json.obj("status" -> "ok")))
-            case _ => Future.successful(InternalServerError())
+            case _ => Future.successful(InternalServerError)
           }
+        case fail =>
+          Future.successful(InternalServerError(
+            Json.obj("status" -> "error",
+              "message" -> fail.message)))
       }
-      case _ => Future.successful(InternalServerError())
+      case _ => Future.successful(InternalServerError)
     }
   }
 
@@ -96,9 +100,9 @@ class ClaimController @Inject()(
               if (claim.state == Claim.State.INCOMPLETE) {
                 findUpdateAndSubmitClaim(claim, recipients)
               } else {
-                Future.successful(InternalServerError())
+                Future.successful(InternalServerError)
               }
-            case None => Future.successful(NotFound())
+            case None => Future.successful(NotFound)
           }
         }
       )
