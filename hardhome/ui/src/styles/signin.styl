@@ -47,6 +47,7 @@ textContainerWidthPx = 165px
 
   & .pic-section
     display: inline-block
+    float: left
     width: 50%
     height: 100%
     background: url('../icons/veteran-dog-bg.jpg')
@@ -85,7 +86,7 @@ textContainerWidthPx = 165px
     position: relative
     width: 100%
     height: calc(100% - 1em)
-    overflow: hidden
+    //overflow: hidden
 
     & .screen
       position: absolute
@@ -94,7 +95,7 @@ textContainerWidthPx = 165px
       transition: 0.2s linear all
 
       &.options
-        left: 0%
+        left: 0
         opacity: 1.0
         visibility: visible
 
@@ -109,7 +110,7 @@ textContainerWidthPx = 165px
         visibility: hidden
 
         &.vfi-show
-          left: 0%
+          left: 0
           opacity: 1.0
           visibility: visible
 
@@ -149,6 +150,7 @@ textContainerWidthPx = 165px
 
       & .txt-container
         display: inline-block
+        float: right
         width: textContainerWidthPx
 
       & .fb-icon
@@ -163,6 +165,8 @@ textContainerWidthPx = 165px
       & .idme-icon
         height: 16px
         width: 44px
+        margin-top: 4px
+        margin-bottom: 4px
         background: url('../icons/idme-logo-white.png')
         background-size: cover
         background-repeat: no-repeat

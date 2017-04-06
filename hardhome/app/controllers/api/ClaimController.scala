@@ -26,10 +26,9 @@ class ClaimController @Inject() (
   def getClaims: Action[AnyContent] = silhouette.SecuredAction.async {
     request =>
       {
-        claimDAO.findClaims(request.identity.userID).map {
-          case claims if claims.nonEmpty => Ok(Json.toJson(claims))
-          case _ => NotFound
-        }
+        claimDAO.findClaims(request.identity.userID).map(
+          claims => Ok(Json.toJson(claims))
+        )
       }
   }
 
@@ -53,19 +52,16 @@ class ClaimController @Inject() (
           },
           formKeys => {
             claimDAO.findIncompleteClaim(request.identity.userID).flatMap {
-              case Some(claim) => Future.successful(Ok(Json.obj(
-                "status" -> "ok",
-                "message" -> "Claim already exists."
-              )))
-              case None => claimDAO.create(request.identity.userID, formKeys).map {
-                case ok if ok.ok => Created(Json.obj(
-                  "status" -> "ok",
-                  "message" -> "Created new claim."
-                ))
-                case fail => InternalServerError(Json.obj(
+              case Some(claim) => Future.successful(Ok(Json.toJson(claim)))
+              case None => claimDAO.create(request.identity.userID, formKeys).flatMap {
+                case ok if ok.ok => claimDAO.findIncompleteClaim(request.identity.userID).map {
+                  claim => Ok(Json.toJson(claim))
+                }
+
+                case fail => Future.successful(InternalServerError(Json.obj(
                   "status" -> "error",
                   "message" -> fail.errmsg.getOrElse("Unknown database error.").toString
-                ))
+                )))
               }
             }
           }

@@ -69,7 +69,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
       return httpGet("/claim/" + claimId);
     },
     getFormsForClaim: function(claimId) {
-      return httpGet("/claim/" + claimId + "/forms");
+      return httpGet("/forms/" + claimId);
     },
     saveForm: function(claimId, formId, data) {
       return httpPost('/save/' + claimId + '/' + formId, data);

@@ -16,6 +16,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var fs = require('fs');
 var eslint = require('gulp-eslint');
 var bannerConfig = require('./bannerConfig');
+var source = require('vinyl-source-stream');
 
 var release = args.release ? true : false;
 if (release) {
@@ -117,7 +118,8 @@ gulp.task('browserify', ['js'], function () {
       debug: true
     })
     .bundle()
-    .pipe(fs.createWriteStream('build/js/main.js', {'flags': 'a'}));
+    .pipe(source('js/formly-fields.js'))
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('fonts', function () {

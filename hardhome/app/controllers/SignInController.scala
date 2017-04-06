@@ -9,13 +9,14 @@ import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
 import com.mohiva.play.silhouette.api.util.{ Clock, Credentials }
 import com.mohiva.play.silhouette.impl.exceptions.IdentityNotFoundException
 import com.mohiva.play.silhouette.impl.providers._
+import com.typesafe.config.Config
 import forms.SignInForm
 import models.services.UserService
 import net.ceedubs.ficus.Ficus._
 import play.api.Configuration
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
-import play.api.mvc.Controller
+import play.api.mvc.{ Action, AnyContent, Controller }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -51,8 +52,19 @@ class SignInController @Inject() (
    *
    * @return The result to display.
    */
-  def view = silhouette.UnsecuredAction.async { implicit request =>
-    Future.successful(Ok(views.html.signIn(SignInForm.form, socialProviderRegistry)))
+  def view: Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
+    Future.successful(Ok(
+      views.html.signinLayout(
+        "login-view",
+        "",
+        routes.SocialAuthController.authenticate("idme").url
+      )(
+          views.html.signin.idmeText(),
+          views.html.signin.emailText(),
+          views.html.signin.linkToOtherPage(),
+          views.html.signin.inputs()
+        )
+    ))
   }
 
   /**
@@ -60,7 +72,7 @@ class SignInController @Inject() (
    *
    * @return The result to display.
    */
-  def submit = silhouette.UnsecuredAction.async { implicit request =>
+  def submit: Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
     SignInForm.form.bindFromRequest.fold(
       form => Future.successful(BadRequest(views.html.signIn(form, socialProviderRegistry))),
       data => {
@@ -71,7 +83,7 @@ class SignInController @Inject() (
             case Some(user) if !user.activated =>
               Future.successful(Ok(views.html.activateAccount(data.email)))
             case Some(user) =>
-              val c = configuration.underlying
+              val c: Config = configuration.underlying
               silhouette.env.authenticatorService.create(loginInfo).map {
                 case authenticator if data.rememberMe =>
                   authenticator.copy(
