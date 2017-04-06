@@ -81,7 +81,7 @@ gulp.task('libs', function () {
 
 gulp.task('other-js', function () {
   return gulp.src('src/js/noangular/*.js')
-    //.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
+    .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
@@ -98,7 +98,7 @@ gulp.task('xhrEnv', function () {
 gulp.task('js', ['xhrEnv'], function () {
   return gulp.src('src/js/*.js')
     .pipe(concat('main.js'))
-    //.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
+    .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
