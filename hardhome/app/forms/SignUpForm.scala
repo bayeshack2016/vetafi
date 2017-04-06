@@ -6,6 +6,7 @@ import play.api.data.Forms._
 /**
  * The form which handles the sign up process.
  */
+//TODO modify this
 object SignUpForm {
 
   /**

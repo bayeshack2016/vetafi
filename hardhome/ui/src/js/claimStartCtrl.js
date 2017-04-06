@@ -5,10 +5,10 @@ app.controller('claimStartCtrl', ['$scope', '$state', 'net', 'claimService', '$u
 
     function callStartClaim() {
       net.startClaim(
-        {forms: ["VBA-21-0966-ARE"]} // hardcoded to create claim with only this form for now
+        ["VBA-21-0966-ARE"] // hardcoded to create claim with only this form for now
       ).then(function (res) {
         claimService.createNewClaim();
-        $state.transitionTo('root.claimselect', {claimId: res.data.claim._id});
+        $state.transitionTo('root.claimselect', {claimId: res.data.claimID});
       });
     }
 

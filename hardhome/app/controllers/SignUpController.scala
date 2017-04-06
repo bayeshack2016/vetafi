@@ -1,23 +1,25 @@
 package controllers
 
 import java.util.UUID
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api._
 import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
 import com.mohiva.play.silhouette.api.services.AvatarService
-import com.mohiva.play.silhouette.api.util.PasswordHasherRegistry
+import com.mohiva.play.silhouette.api.util.{ Clock, PasswordHasherRegistry, PasswordInfo }
 import com.mohiva.play.silhouette.impl.providers._
-import forms.SignUpForm
-import models.{ Contact, User }
+import forms.VetafiSignUpForm
+import models.User
 import models.services.{ AuthTokenService, UserService }
+import play.api.Configuration
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
-import play.api.libs.mailer.{ Email, MailerClient }
 import play.api.mvc.{ Action, AnyContent, Controller }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
+import scala.concurrent.duration.FiniteDuration
 
 /**
  * The `Sign Up` controller.
@@ -37,7 +39,9 @@ class SignUpController @Inject() (
   authInfoRepository: AuthInfoRepository,
   authTokenService: AuthTokenService,
   avatarService: AvatarService,
-  passwordHasherRegistry: PasswordHasherRegistry
+  passwordHasherRegistry: PasswordHasherRegistry,
+  configuration: Configuration,
+  clock: Clock
 )
   extends Controller with I18nSupport {
 
@@ -61,20 +65,42 @@ class SignUpController @Inject() (
     ))
   }
 
+  def maybeCreateUser(loginInfo: LoginInfo, data: VetafiSignUpForm.Data): Future[Option[User]] = {
+    userService.retrieve(loginInfo).flatMap {
+      case Some(user) =>
+        Future.successful(None)
+      case None =>
+        val authInfo: PasswordInfo = passwordHasherRegistry.current.hash(data.password)
+        val newUser = User(
+          userID = UUID.randomUUID(),
+          loginInfo = loginInfo,
+          firstName = None,
+          lastName = None,
+          fullName = None,
+          email = Some(data.email),
+          avatarURL = None,
+          activated = true,
+          contact = None
+        )
+        userService.save(newUser).map((u) => {
+          Some(u)
+        })
+    }
+  }
+
   /**
    * Handles the submitted form.
    *
    * @return The result to display.
    */
-  def submit = silhouette.UnsecuredAction.async { implicit request =>
-    SignUpForm.form.bindFromRequest.fold(
-      form => Future.successful(BadRequest(views.html.signUp(form))),
+  def submit: Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
+    VetafiSignUpForm.form.bindFromRequest.fold(
+      form => Future.successful(BadRequest),
       data => {
         val result = Redirect(routes.SignUpController.view()).flashing("info" -> Messages("sign.up.email.sent", data.email))
         val loginInfo = LoginInfo(CredentialsProvider.ID, data.email)
         userService.retrieve(loginInfo).flatMap {
           case Some(user) =>
-            val url = routes.SignInController.view().absoluteURL()
             /*mailerClient.send(Email(
               subject = Messages("email.already.signed.up.subject"),
               from = Messages("email.from"),
@@ -83,28 +109,26 @@ class SignUpController @Inject() (
               bodyHtml = Some(views.html.emails.alreadySignedUp(user, url).body)
             ))*/
 
-            Future.successful(result)
+            Future.successful(Redirect(routes.ApplicationController.index()))
           case None =>
             val authInfo = passwordHasherRegistry.current.hash(data.password)
             val user = User(
               userID = UUID.randomUUID(),
               loginInfo = loginInfo,
-              firstName = Some(data.firstName),
-              lastName = Some(data.lastName),
-              fullName = Some(data.firstName + " " + data.lastName),
+              firstName = None,
+              lastName = None,
+              fullName = None,
               email = Some(data.email),
               avatarURL = None,
               activated = true,
               contact = None
             )
-            for {
-              avatar <- avatarService.retrieveURL(data.email)
-              user <- userService.save(user.copy(avatarURL = avatar))
-              authInfo <- authInfoRepository.add(loginInfo, authInfo)
-              authToken <- authTokenService.create(user.userID)
-            } yield {
-              val url = routes.ActivateAccountController.activate(authToken.id).absoluteURL()
-              /*mailerClient.send(Email(
+
+            userService.save(user).flatMap {
+
+              /*val url = routes.ActivateAccountController.activate(authToken.id).absoluteURL()
+
+              mailerClient.send(Email(
                 subject = Messages("email.sign.up.subject"),
                 from = Messages("email.from"),
                 to = Seq(data.email),
@@ -112,8 +136,34 @@ class SignUpController @Inject() (
                 bodyHtml = Some(views.html.emails.signUp(user, url).body)
               ))*/
 
-              silhouette.env.eventBus.publish(SignUpEvent(user, request))
-              result
+              val expirationDateTime = clock.now.withDurationAdded(
+                configuration.getMilliseconds("silhouette.authenticator.rememberMe.authenticatorExpiry").get,
+                1
+              )
+              val idleTimeout = Some(FiniteDuration(
+                configuration.getMilliseconds("silhouette.authenticator.rememberMe.authenticatorIdleTimeout").get,
+                TimeUnit.MILLISECONDS
+              ))
+              val cookieMaxAge = Some(FiniteDuration(
+                configuration.getMilliseconds("silhouette.authenticator.rememberMe.authenticatorIdleTimeout").get,
+                TimeUnit.MILLISECONDS
+              ))
+
+              user =>
+                silhouette.env.eventBus.publish(SignUpEvent(user, request))
+                silhouette.env.authenticatorService.create(loginInfo).map {
+                  authenticator =>
+                    authenticator.copy(
+                      expirationDateTime = expirationDateTime,
+                      idleTimeout = idleTimeout,
+                      cookieMaxAge = cookieMaxAge
+                    )
+                }.flatMap { authenticator =>
+                  silhouette.env.eventBus.publish(LoginEvent(user, request))
+                  silhouette.env.authenticatorService.init(authenticator).flatMap { v =>
+                    silhouette.env.authenticatorService.embed(v, result)
+                  }
+                }
             }
         }
       }

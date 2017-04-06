@@ -9,6 +9,7 @@ import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
 import com.mohiva.play.silhouette.api.util.{ Clock, Credentials }
 import com.mohiva.play.silhouette.impl.exceptions.IdentityNotFoundException
 import com.mohiva.play.silhouette.impl.providers._
+import com.typesafe.config.Config
 import forms.SignInForm
 import models.services.UserService
 import net.ceedubs.ficus.Ficus._
@@ -82,7 +83,7 @@ class SignInController @Inject() (
             case Some(user) if !user.activated =>
               Future.successful(Ok(views.html.activateAccount(data.email)))
             case Some(user) =>
-              val c = configuration.underlying
+              val c: Config = configuration.underlying
               silhouette.env.authenticatorService.create(loginInfo).map {
                 case authenticator if data.rememberMe =>
                   authenticator.copy(

@@ -4,7 +4,7 @@
 
 # Home page
 GET         /                                controllers.ApplicationController.index
-GET         /signOut                         controllers.ApplicationController.signOut
+GET         /signout                         controllers.ApplicationController.signOut
 GET         /authenticate/:provider          controllers.SocialAuthController.authenticate(provider)
 
 GET         /signup                       controllers.SignUpController.view
@@ -35,7 +35,7 @@ GET         /api/user/values                 controllers.api.UserValuesControlle
 POST        /api/save/:claimID/:formKey      controllers.api.FormController.saveForm(claimID: java.util.UUID, formKey: String)
 
 GET         /api/claims                      controllers.api.ClaimController.getClaims
-POST        /api/claim/create                controllers.api.ClaimController.create
+POST        /api/claims/create               controllers.api.ClaimController.create
 POST        /api/claim/:claimID              controllers.api.ClaimController.getClaim(claimID: java.util.UUID)
 POST        /api/claim/submit/:claimID       controllers.api.ClaimController.submit(claimID: java.util.UUID)
 

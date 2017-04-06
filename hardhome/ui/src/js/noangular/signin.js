@@ -44,3 +44,11 @@ function onBackButton() {
   $('.options').removeClass('vfi-hide');
   $('.inputs').removeClass('vfi-show');
 }
+
+$(document).ready(
+    function() {
+        document.getElementById("reveal-email-login-button").addEventListener("click", revealEmailLogin);
+        document.getElementById("hide-email-login-button").addEventListener("click", onBackButton);
+    }
+);
+

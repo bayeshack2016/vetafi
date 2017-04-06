@@ -16,6 +16,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var fs = require('fs');
 var eslint = require('gulp-eslint');
 var bannerConfig = require('./bannerConfig');
+var source = require('vinyl-source-stream');
 
 var release = args.release ? true : false;
 if (release) {
@@ -80,7 +81,7 @@ gulp.task('libs', function () {
 
 gulp.task('other-js', function () {
   return gulp.src('src/js/noangular/*.js')
-    .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
+    //.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
@@ -97,7 +98,7 @@ gulp.task('xhrEnv', function () {
 gulp.task('js', ['xhrEnv'], function () {
   return gulp.src('src/js/*.js')
     .pipe(concat('main.js'))
-    .pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
+    //.pipe(gulpif(release, uglify())) // only minify if production (gulp --release)
     .pipe(gulp.dest('build/js'))
     .pipe(browserSync.stream())
     .pipe(sourcemaps.write());
@@ -117,7 +118,8 @@ gulp.task('browserify', ['js'], function () {
       debug: true
     })
     .bundle()
-    .pipe(fs.createWriteStream('build/js/main.js', {'flags': 'a'}));
+    .pipe(source('js/formly-fields.js'))
+    .pipe(gulp.dest('build'));
 });
 
 gulp.task('fonts', function () {
