@@ -23,4 +23,5 @@ trait UserValuesDAO {
    */
   def update(userID: UUID, values: Map[String, JsValue]): Future[WriteResult]
 
+  def initialize(userID: UUID): Future[WriteResult]
 }

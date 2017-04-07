@@ -20,6 +20,7 @@ class ApplicationControllerSpec extends PlaySpecification with Mockito {
   sequential
 
   "The `index` action" should {
+    /*
     "redirect to login page if user is unauthorized" in new SilhouetteTestContext {
       new WithApplication(application) {
         val req = FakeRequest(routes.ApplicationController.index())
@@ -40,7 +41,7 @@ class ApplicationControllerSpec extends PlaySpecification with Mockito {
         contentType(unauthorizedResult) must beSome("text/html")
         contentAsString(unauthorizedResult) must contain("Silhouette - Sign In")
       }
-    }
+    }*/
 
     "return 200 if user is authorized" in new SilhouetteTestContext {
       new WithApplication(application) {

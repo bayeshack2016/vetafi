@@ -55,7 +55,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         $interval.cancel(saveIntervalPromise)
       });
 
-      $scope.model = userValues.values.values; // TODO(jeff) fix extra attributes messing up completion percentage
+      $scope.model = userValues.values; // TODO(jeff) fix extra attributes messing up completion percentage
       $scope.signature = $scope.model.signature;
       $scope.fields = formTemplateService[$stateParams.formId].fields;
       $scope.fieldsByKey = _.keyBy(formTemplateService[$stateParams.formId].fields, 'key');

@@ -57,7 +57,8 @@ class FormDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends For
     collection.flatMap(
       _.update(
         query,
-        claimForm
+        claimForm,
+        upsert = true
       /*
         Json.obj(
           "$set" -> Json.obj(
