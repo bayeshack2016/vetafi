@@ -1,0 +1,33 @@
+@(idMeUrl: String)(implicit request: RequestHeader)
+
+
+<div class="screen options">
+    <a href="@idMeUrl">
+        <button class="idme-btn">
+            <div class="icon-container">
+                <div class="idme-icon"></div>
+            </div>
+            <div class="txt-container">Signup with Id.Me</div>
+        </button>
+    </a>
+    <p class="divider">- OR -</p>
+    <button id="reveal-email-login-button" class="email-btn">
+        <div class="icon-container">
+            <div class="email-icon"></div>
+        </div>
+        <div class="txt-container">Signup with your email</div>
+    </button>
+    <a href="/signin">Already have an account?</a>
+</div>
+<div class="screen inputs">
+    @helper.form(action = routes.SignUpController.submit()) {
+        @helper.CSRF.formField
+        <input class="email" placeholder="Email Address" type="text" name="email">
+        <input class="pwd" placeholder="Password" type="password" name="password">
+        <input class="confirm-pwd" placeholder="Confirm Password" type="password">
+        <input class="submit" value="SIGN UP" type="submit">
+    }
+    <button id="hide-email-login-button" class="back-btn">
+        Back
+    </button>
+</div>

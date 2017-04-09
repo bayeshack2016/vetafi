@@ -2,8 +2,8 @@ package modules
 
 import com.google.inject.AbstractModule
 import models.daos._
-import models.services.{ AuthTokenService, AuthTokenServiceImpl }
 import net.codingwell.scalaguice.ScalaModule
+import services.{ AuthTokenService, AuthTokenServiceImpl }
 import services.forms._
 import services.submission.{ FaxSubmissionService, SubmissionService }
 import utils.secrets.{ BiscuitSecretsManager, SecretsManager }

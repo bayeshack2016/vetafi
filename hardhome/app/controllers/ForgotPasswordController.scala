@@ -5,11 +5,11 @@ import javax.inject.Inject
 import com.mohiva.play.silhouette.api._
 import com.mohiva.play.silhouette.impl.providers.CredentialsProvider
 import forms.ForgotPasswordForm
-import models.services.{ AuthTokenService, UserService }
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.libs.mailer.{ Email, MailerClient }
 import play.api.mvc.{ Action, AnyContent, Controller }
+import _root_.services.{ AuthTokenService, UserService }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future

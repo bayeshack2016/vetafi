@@ -6,12 +6,12 @@ import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api._
 import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
+import _root_.services.{ AuthTokenService, UserService }
 import com.mohiva.play.silhouette.api.services.AvatarService
 import com.mohiva.play.silhouette.api.util.{ Clock, PasswordHasherRegistry, PasswordInfo }
 import com.mohiva.play.silhouette.impl.providers._
 import forms.VetafiSignUpForm
 import models.User
-import models.services.{ AuthTokenService, UserService }
 import play.api.Configuration
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._

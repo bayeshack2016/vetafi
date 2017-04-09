@@ -8,10 +8,10 @@ import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
 import com.mohiva.play.silhouette.api.util.{ Credentials, PasswordHasherRegistry, PasswordInfo }
 import com.mohiva.play.silhouette.impl.providers.CredentialsProvider
 import forms.{ ChangePasswordForm, ForgotPasswordForm }
-import models.services.UserService
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.mvc.{ Action, AnyContent, Controller }
+import _root_.services.UserService
 import utils.auth.{ DefaultEnv, WithProvider }
 
 import scala.concurrent.Future
@@ -44,7 +44,7 @@ class ChangePasswordController @Inject() (
   def view: Action[AnyContent] = silhouette.SecuredAction(WithProvider[DefaultEnv#A](CredentialsProvider.ID)) { implicit request =>
     Ok(
       views.html.authLayout(
-        "forgot-password-view",
+        "change-password-view",
         ""
       )(
           views.html.changePassword(ChangePasswordForm.form, request.identity)
@@ -68,7 +68,18 @@ class ChangePasswordController @Inject() (
           )
       )),
       password => {
-        val (currentPassword, newPassword) = password
+        val (currentPassword, newPassword, confirmPassword) = password
+        if (newPassword != confirmPassword) {
+          BadRequest(
+            views.html.authLayout(
+              "forgot-password-view",
+              "Passwords do not match."
+            )(
+                views.html.changePassword(ChangePasswordForm.form, request.identity)
+              )
+          )
+        }
+
         val credentials = Credentials(request.identity.email.getOrElse(""), currentPassword)
         credentialsProvider.authenticate(credentials).flatMap { loginInfo =>
           val passwordInfo = passwordHasherRegistry.current.hash(newPassword)
@@ -76,8 +87,7 @@ class ChangePasswordController @Inject() (
             Ok
           }
         }.recover {
-          case e: ProviderException =>
-            InternalServerError
+          case e: ProviderException => InternalServerError
         }
       }
     )

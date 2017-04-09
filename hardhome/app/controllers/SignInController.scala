@@ -11,12 +11,12 @@ import com.mohiva.play.silhouette.impl.exceptions.IdentityNotFoundException
 import com.mohiva.play.silhouette.impl.providers._
 import com.typesafe.config.Config
 import forms.SignInForm
-import models.services.UserService
 import net.ceedubs.ficus.Ficus._
 import play.api.Configuration
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.mvc.{ Action, AnyContent, Controller }
+import _root_.services.UserService
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future

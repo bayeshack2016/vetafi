@@ -253,4 +253,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     controller: 'supportCtrl'
   });
 
+  $stateProvider.state({
+    name: 'root.sign',
+    url: '/sign/{claimId}/form/{formId}',
+    templateUrl: 'templates/signDocument.html',
+    controller: 'signDocumentCtrl'
+  });
 }]);
