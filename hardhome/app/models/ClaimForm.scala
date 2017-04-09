@@ -24,7 +24,8 @@ case class ClaimForm(
   // for seamlessdocs
   externalFormId: Option[String] = None,
   externalApplicationId: Option[String] = None,
-  externalSignatureLink: Option[String] = None
+  externalSignatureLink: Option[String] = None,
+  isSigned: Boolean = false
 ) {
 
 }

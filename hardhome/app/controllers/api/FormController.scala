@@ -93,8 +93,11 @@ class FormController @Inject() (
     request =>
       formDAO.find(request.identity.userID, claimID, formKey).flatMap {
         case Some(claimForm) =>
-          documentService.isSigned(claimForm).map {
-            isSigned => Ok(JsBoolean(isSigned))
+          documentService.isSigned(claimForm).flatMap {
+            isSigned =>
+              formDAO.save(request.identity.userID, claimID, formKey, claimForm.copy(isSigned = isSigned)).map {
+                _ => Ok(JsBoolean(isSigned))
+              }
           }
         case None =>
           Future.successful(NotFound)
