@@ -52,15 +52,11 @@ class SignUpController @Inject() (
    */
   def view: Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
     Future.successful(Ok(
-      views.html.signinLayout(
+      views.html.authLayout(
         "signup-view",
-        "",
-        routes.SocialAuthController.authenticate("idme").url
+        ""
       )(
-          views.html.signup.idmeText(),
-          views.html.signup.emailText(),
-          views.html.signup.linkToOtherPage(),
-          views.html.signup.inputs()
+          views.html.signupForm(routes.SocialAuthController.authenticate("idme").url)
         )
     ))
   }
@@ -99,7 +95,7 @@ class SignUpController @Inject() (
         val loginInfo = LoginInfo(CredentialsProvider.ID, data.email)
         userService.retrieve(loginInfo).flatMap {
           case Some(_) =>
-            Future.successful(Redirect(routes.ApplicationController.index()))
+            Future.successful(Redirect(routes.GulpAssets.index()))
           case None =>
             val authInfo = passwordHasherRegistry.current.hash(data.password)
             val user = User(
@@ -140,7 +136,7 @@ class SignUpController @Inject() (
                 }.flatMap { authenticator =>
                   silhouette.env.eventBus.publish(LoginEvent(user, request))
                   silhouette.env.authenticatorService.init(authenticator).flatMap { v =>
-                    silhouette.env.authenticatorService.embed(v, Redirect(routes.ApplicationController.index()))
+                    silhouette.env.authenticatorService.embed(v, Redirect(routes.GulpAssets.index()))
                   }
                 }
             }

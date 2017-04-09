@@ -2,8 +2,8 @@
 var app = angular.module('vetafiApp');
 app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', '$uibModal', '$state', 'userClaims', '$filter',
   function($scope, $location, $window, Profile, claimService, net, $uibModal, $state, userClaims, $filter) {
-    $scope.user = Profile.user.user;
-    $scope.claims = userClaims.claims;
+    $scope.user = Profile.user;
+    $scope.claims = userClaims;
 
     function createHeaderString(claim) {
       if (claim.state == 'incomplete') {

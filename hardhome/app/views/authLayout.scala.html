@@ -1,0 +1,28 @@
+@(viewId: String, errorMessage: String)(inputs: Html)
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vetafi</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <script type="text/javascript" src="/libs/libs.js"></script>
+        <script type="text/javascript" src="/js/signin.js"></script>
+    </head>
+    <body id="@viewId">
+        <div class="bg-overlay"></div>
+        <div class="viewer">
+            <div class="pic-section"></div>
+            <div class="interact-section">
+                <a href="/">
+                    <img class="logo" src="/icons/vetafi-logo-black.svg">
+                </a>
+                <p class="error-msg">
+                @errorMessage
+                </p>
+                <div class="carousel">
+                    @inputs
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

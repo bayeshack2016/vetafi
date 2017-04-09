@@ -27,21 +27,12 @@ class ApplicationController @Inject() (
   extends Controller with I18nSupport {
 
   /**
-   * Handles the index action.
-   *
-   * @return The result to display.
-   */
-  def index: Action[AnyContent] = silhouette.SecuredAction(redirectSecuredErrorHandler).async { implicit request =>
-    Future.successful(Ok(views.html.home(request.identity)))
-  }
-
-  /**
    * Handles the Sign Out action.
    *
    * @return The result to display.
    */
   def signOut = silhouette.SecuredAction(redirectSecuredErrorHandler).async { implicit request =>
-    val result = Redirect(routes.ApplicationController.index())
+    val result = Redirect(routes.GulpAssets.index())
     silhouette.env.eventBus.publish(LogoutEvent(request.identity, request))
     silhouette.env.authenticatorService.discard(request.authenticator, result)
   }

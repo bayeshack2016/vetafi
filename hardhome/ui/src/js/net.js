@@ -60,7 +60,7 @@ app.factory('net', ['xhrEnv', '$http', function(xhrEnv, $http) {
       return httpPost("/claims/create", data);
     },
     submitClaim: function(claimId, data) {
-      return httpPost("/claim/" + claimId + "/submit", data);
+      return httpPost("/claim/submit/" + claimId, data);
     },
     discardClaim: function(claimId) {
       return httpDelete("/claim/" + claimId);

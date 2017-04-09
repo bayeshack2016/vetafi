@@ -3,15 +3,15 @@
 # ~~~~
 
 # Home page
-GET         /                                controllers.ApplicationController.index
+GET         /                                controllers.GulpAssets.index
 GET         /signout                         controllers.ApplicationController.signOut
 GET         /authenticate/:provider          controllers.SocialAuthController.authenticate(provider)
 
-GET         /signup                       controllers.SignUpController.view
-POST        /signup                       controllers.SignUpController.submit
+GET         /signup                          controllers.SignUpController.view
+POST        /signup                          controllers.SignUpController.submit
 
-GET         /signin                       controllers.SignInController.view
-POST        /signin                       controllers.SignInController.submit
+GET         /signin                          controllers.SignInController.view
+POST        /signin                          controllers.SignInController.submit
 
 GET         /password/forgot                 controllers.ForgotPasswordController.view
 POST        /password/forgot                 controllers.ForgotPasswordController.submit

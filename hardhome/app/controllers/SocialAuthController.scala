@@ -49,7 +49,7 @@ class SocialAuthController @Inject() (
             authInfo <- authInfoRepository.save(profile.loginInfo, authInfo)
             authenticator <- silhouette.env.authenticatorService.create(profile.loginInfo)
             value <- silhouette.env.authenticatorService.init(authenticator)
-            result <- silhouette.env.authenticatorService.embed(value, Redirect(routes.ApplicationController.index()))
+            result <- silhouette.env.authenticatorService.embed(value, Redirect(routes.GulpAssets.index()))
           } yield {
             silhouette.env.eventBus.publish(LoginEvent(user, request))
             result

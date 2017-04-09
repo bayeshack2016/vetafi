@@ -4,7 +4,7 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
   function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formTemplateService, user, vaService, claimService, $filter) {
     $scope.claimId = $stateParams.claimId;
     $scope.vaAddress = vaService.getAddress();
-    $scope.user = user.user || {};
+    $scope.user = user || {};
     $scope.userEmail = $scope.user.email;
     $scope.userAddress = $scope.user.contact.address;
     $scope.emailList = [

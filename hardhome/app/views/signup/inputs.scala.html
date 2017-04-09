@@ -1,9 +1,0 @@
-@()(implicit request: RequestHeader)
-
-@helper.form(action = routes.SignUpController.submit()) {
-    @helper.CSRF.formField
-    <input class="email" placeholder="Email Address" type="text" name="email">
-    <input class="pwd" placeholder="Password" type="password" name="password">
-    <input class="confirm-pwd" placeholder="Confirm Password" type="password">
-    <input class="submit" value="SIGN UP" type="submit">
-}
