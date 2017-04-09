@@ -4,7 +4,7 @@ div#vfi-sign-document-view
             div.col-xs-8
                 p Please sign the documents below, click complete when done.
             div.col-xs-4
-                button.complete(ng-active="allFormsSigned()" ui-sref="root.claimconfirm({claimId: claimId})")
+                button.complete(ng-disabled="!allFormsSigned()" ui-sref="root.claimconfirm({claimId: claimId})")
                     | Continue
 
         div.row(ng-repeat="form in forms" ng-class="{'highlighted': form.key == currentlySigningForm.key}")

@@ -6,7 +6,7 @@ app.controller('signDocumentCtrl', ['$scope', '$filter', '$stateParams', '$state
       $scope.forms = claimForms;
       $scope.currentFormIndex = 0;
       $scope.allFormsSigned = function() {
-          var result = false;
+          var result = true;
           for(var i = 0; i< $scope.forms.length; i++) {
               result = result && $scope.forms[i].isSigned
           }
