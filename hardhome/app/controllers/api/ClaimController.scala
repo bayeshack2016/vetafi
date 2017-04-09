@@ -9,6 +9,7 @@ import models.{ Claim, ClaimForm, Recipients }
 import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc._
 import reactivemongo.api.commands.WriteResult
+import services.documents.DocumentService
 import services.forms.ClaimService
 import services.submission.SubmissionService
 import utils.auth.DefaultEnv
@@ -23,6 +24,7 @@ class ClaimController @Inject() (
   val claimDAO: ClaimDAO,
   val formDAO: FormDAO,
   val claimService: ClaimService,
+  val documentService: DocumentService,
   silhouette: Silhouette[DefaultEnv],
   submissionService: SubmissionService
 ) extends Controller {
@@ -46,7 +48,7 @@ class ClaimController @Inject() (
       }
   }
 
-  private def createForms(userID: UUID, claimID: UUID, forms: Seq[String]): Future[Seq[WriteResult]] = {
+  private def createForms(userID: UUID, claimID: UUID, forms: Seq[String]): Future[Seq[Boolean]] = {
     val futures = forms.map((key: String) => {
       val newForm = claimService.calculateProgress(ClaimForm(
         key,
@@ -60,7 +62,13 @@ class ClaimController @Inject() (
         Array.empty[Byte]
       ))
 
-      formDAO.save(userID, claimID, key, newForm)
+      for {
+        formSaveFuture <- formDAO.save(userID, claimID, key, newForm)
+        documentServiceFuture <- documentService.create(newForm)
+      } yield {
+        true
+      }
+
     })
 
     Future.sequence(futures)
@@ -80,10 +88,7 @@ class ClaimController @Inject() (
               case None => claimDAO.create(request.identity.userID).flatMap {
                 case ok if ok.ok => claimDAO.findIncompleteClaim(request.identity.userID).flatMap {
                   case Some(claim) => createForms(claim.userID, claim.claimID, formKeys).map {
-                    case success if success.forall(_.ok) => Created(Json.toJson(claim))
-                    case _ => InternalServerError(Json.obj(
-                      "status" -> "error"
-                    ))
+                    _ => Created(Json.toJson(claim))
                   }
                   case None => Future.successful(InternalServerError(Json.obj(
                     "status" -> "error"

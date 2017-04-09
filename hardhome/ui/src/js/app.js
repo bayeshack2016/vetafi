@@ -257,6 +257,19 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     name: 'root.sign',
     url: '/sign/{claimId}/form/{formId}',
     templateUrl: 'templates/signDocument.html',
-    controller: 'signDocumentCtrl'
+    controller: 'signDocumentCtrl',
+      resolve: {
+          claimForms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+              var deferred = $q.defer();
+              net.getFormsForClaim($stateParams.claimId).then(
+                  function success(res) {
+                      deferred.resolve(res.data);
+                  }, function failure() {
+                      deferred.reject();
+                  }
+              );
+              return deferred.promise;
+          }]
+      }
   });
 }]);

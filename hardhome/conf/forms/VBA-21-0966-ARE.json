@@ -206,7 +206,7 @@
       "type": "input",
       "templateOptions": {
         "label": "Veteran's Service Number (If applicable)",
-        "optional": false
+        "optional": true
       }
     },
 

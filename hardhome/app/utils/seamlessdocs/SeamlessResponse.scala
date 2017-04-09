@@ -161,3 +161,22 @@ case class SeamlessApplicationCreateResponse(
 object SeamlessApplicationCreateResponse {
   implicit val jsonFormat: OFormat[SeamlessApplicationCreateResponse] = Json.format[SeamlessApplicationCreateResponse]
 }
+
+/**
+ * {
+ * "status": "Incomplete (pending)",
+ * "total_signers": 3,
+ * "signatures": 1
+ * }
+ */
+case class SeamlessApplicationStatus(
+  status: String,
+  total_signers: Int,
+  signatures: Int
+) {
+
+}
+
+object SeamlessApplicationStatus {
+  implicit val jsonFormat: OFormat[SeamlessApplicationStatus] = Json.format[SeamlessApplicationStatus]
+}

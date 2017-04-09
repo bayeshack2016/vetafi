@@ -67,7 +67,7 @@ object Claim {
 
   object State extends Enumeration {
     type State = Value
-    val INCOMPLETE, DISCARDED, SUBMITTED, PROCESSED = Value
+    val INCOMPLETE, SIGNING, DISCARDED, SUBMITTED, PROCESSED = Value
   }
 
   implicit val enumFormat: Format[Claim.State.Value] = EnumUtils.enumFormat(Claim.State)

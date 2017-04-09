@@ -27,7 +27,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.onSubmit = function () {
         save(true).then(
           function () {
-            $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
+            $state.go('root.sign', {claimId: $stateParams.claimId}).then(
               function success() {
               },
               function failure(err) {
@@ -49,11 +49,12 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         }
       }
 
-      var saveIntervalPromise = $interval(save, 1000);
+      // TODO delete inteval saving
+      /*var saveIntervalPromise = $interval(save, 1000);
       $scope.$on('$destroy', function() {
         // Make sure that the interval is destroyed too
         $interval.cancel(saveIntervalPromise)
-      });
+      });*/
 
       $scope.model = userValues.values; // TODO(jeff) fix extra attributes messing up completion percentage
       $scope.signature = $scope.model.signature;

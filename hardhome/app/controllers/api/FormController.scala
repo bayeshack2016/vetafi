@@ -6,8 +6,10 @@ import javax.inject.Inject
 import com.mohiva.play.silhouette.api.Silhouette
 import models.daos.{ FormDAO, UserValuesDAO }
 import models.{ ClaimForm, User }
-import play.api.libs.json.{ JsError, JsValue, Json }
+import play.api.http.ContentTypes
+import play.api.libs.json.{ JsBoolean, JsError, JsValue, Json }
 import play.api.mvc._
+import services.documents.DocumentService
 import services.forms.{ ClaimService, ContactInfoService }
 import utils.auth.DefaultEnv
 import services.forms.ContactInfoService
@@ -23,6 +25,7 @@ class FormController @Inject() (
   val userValuesDAO: UserValuesDAO,
   val claimService: ClaimService,
   val contactInfoService: ContactInfoService,
+  val documentService: DocumentService,
   silhouette: Silhouette[DefaultEnv]
 ) extends Controller {
 
@@ -63,33 +66,64 @@ class FormController @Inject() (
                 case Some(claimForm) =>
                   val formWithProgress: ClaimForm =
                     claimService.calculateProgress(claimForm.copy(responses = data))
-                  formDAO.save(request.identity.userID, claimID, formKey, formWithProgress).flatMap {
-                    case ok if ok.ok => updateUserValues(request.identity, data)
-                    case _ => Future.successful(InternalServerError(
-                      Json.obj("status" -> "error", "message" -> s"Form not saved.")
-                    ))
+
+                  documentService.signatureLink(formWithProgress).flatMap {
+                    url =>
+                      val formWithSignatureLink = formWithProgress.copy(externalSignatureLink = Some(url.toString))
+                      (for {
+                        formSaveFuture <- formDAO.save(request.identity.userID, claimID, formKey, formWithSignatureLink)
+                        updateUserValuesFuture <- updateUserValues(request.identity, data)
+                        documentServiceFuture <- documentService.save(formWithSignatureLink)
+                      } yield {
+                        Created(Json.obj("status" -> "ok"))
+                      }).recover {
+                        case _: RuntimeException => InternalServerError
+                      }
                   }
 
                 case None =>
                   Future.successful(NotFound)
               }
-
             }
           )
         }
     }
 
-  def updateUserValues(identity: User, values: Map[String, JsValue]): Future[Result] = {
+  def getFormSignatureStatus(claimID: UUID, formKey: String): Action[AnyContent] = silhouette.SecuredAction.async {
+    request =>
+      formDAO.find(request.identity.userID, claimID, formKey).flatMap {
+        case Some(claimForm) =>
+          documentService.isSigned(claimForm).map {
+            isSigned => Ok(JsBoolean(isSigned))
+          }
+        case None =>
+          Future.successful(NotFound)
+      }
+  }
+
+  def getPdf(claimID: UUID, formKey: String): Action[AnyContent] = silhouette.SecuredAction.async {
+    request =>
+      formDAO.find(request.identity.userID, claimID, formKey).flatMap {
+        case Some(claimForm) =>
+          documentService.render(claimForm).map {
+            content => Ok(content).as("application/pdf")
+          }
+        case None =>
+          Future.successful(NotFound)
+      }
+  }
+
+  def updateUserValues(identity: User, values: Map[String, JsValue]): Future[Unit] = {
     userValuesDAO.update(identity.userID, values).flatMap {
       case ok if ok.ok =>
         contactInfoService.updateContactInfo(identity.userID).map {
           case userUpdated if userUpdated.nonEmpty && userUpdated.get.ok =>
-            Created(Json.obj("status" -> "ok", "message" -> s"User values saved."))
+            Nil
           case _ =>
-            InternalServerError(Json.obj("status" -> "error", "message" -> "Failed to update user info."))
+            throw new RuntimeException("Failed to update user info.")
         }
       case _ => Future.successful(
-        InternalServerError(Json.obj("status" -> "error", "message" -> "Failed to update user values."))
+        throw new RuntimeException("Failed to update user values.")
       )
     }
   }

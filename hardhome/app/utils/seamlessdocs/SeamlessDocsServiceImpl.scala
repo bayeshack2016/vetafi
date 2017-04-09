@@ -20,8 +20,11 @@ class SeamlessDocsServiceImpl @Inject() (
 ) extends SeamlessDocsService {
 
   val url: String = configuration.getString("seamlessdocs.url").get
-  lazy val apiSecret: Array[Byte] = secretsManager.getSecret("seamlessdocs_secret_key")
-  lazy val apiKey: String = secretsManager.getSecretUtf8("seamlessdocs_api_key")
+  // lazy val apiSecret: Array[Byte] = secretsManager.getSecret("seamlessdocs_secret_key")
+  // lazy val apiKey: String = secretsManager.getSecretUtf8("seamlessdocs_api_key")
+
+  lazy val apiSecret: Array[Byte] = configuration.getString("seamlessdocs.secret_key").get.getBytes
+  lazy val apiKey: String = configuration.getString("seamlessdocs.api_key").get
   lazy val requestUtils: RequestUtils = new RequestUtils(Clock.systemUTC())
 
   private def signRequest(request: WSRequest): WSRequest = {
@@ -34,9 +37,11 @@ class SeamlessDocsServiceImpl @Inject() (
     email: String,
     data: Map[String, JsValue]
   ): Future[SeamlessApplicationCreateResponse] = {
-    val jsonPost = Json.obj("recipients" ->
-      Json.obj("prepared_for" ->
-        Json.obj("fullname" -> name, "email" -> email)))
+    val jsonPost = Json.obj( //"recipients" ->
+    //Json.obj(
+    // "prepared_for" ->
+    // Json.obj("fullname" -> name, "email" -> email))
+    )
     val jsonPostWithAnswers = jsonPost.deepMerge(JsObject(data))
 
     signRequest(
@@ -137,6 +142,34 @@ class SeamlessDocsServiceImpl @Inject() (
             )
           case _ => throw new RuntimeException(wsResponse.body)
         }
+      })
+  }
+
+  override def getApplicationStatus(applicationId: String): Future[SeamlessApplicationStatus] = {
+    signRequest(
+      wsClient
+        .url(s"$url/api/application/$applicationId/status")
+        .withMethod("GET")
+    )
+      .get()
+      .map((wsResponse: WSResponse) => {
+        wsResponse.status match {
+          case Status.OK =>
+            val validate = wsResponse.json.validate[SeamlessApplicationStatus]
+            validate.fold(
+              errors => {
+                throw new RuntimeException(
+                  s"Encountered JSON parsing errors: ${errors.toString} " +
+                    s"when parsing body: ${wsResponse.body}"
+                )
+              },
+              seamlessApplication => {
+                seamlessApplication
+              }
+            )
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
+
       })
   }
 }

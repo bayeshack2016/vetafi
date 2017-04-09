@@ -1,23 +1,29 @@
 package controllers.api
 
+import java.net.URL
 import java.util.UUID
 
 import controllers.CSRFTest
 import models.ClaimForm
-import org.specs2.mock.Mockito
-import play.api.libs.json.{ JsResult, JsString, Json }
+import org.mockito.{Matchers, Mockito}
+import play.api.libs.json.{JsResult, JsString, Json}
 import play.api.mvc.Result
-import play.api.test.{ FakeRequest, PlaySpecification, WithApplication }
+import play.api.test.{FakeRequest, PlaySpecification, WithApplication}
 import utils.auth.DefaultEnv
 import com.mohiva.play.silhouette.test._
+import reactivemongo.api.commands.UpdateWriteResult
 
 import scala.concurrent.Future
 
-class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
+class FormControllerSpec extends PlaySpecification with CSRFTest {
   sequential
 
   "The `getForm` action" should {
     "return 200 and form when get" in new FormControllerTestContext {
+
+      Mockito.when(mockFormDao.find(identity.userID, testClaim.claimID, "VBA-21-0966-ARE"))
+        .thenReturn(Future.successful(Some(testForm)))
+
       new WithApplication(application) {
         val req = FakeRequest(
           controllers.api.routes.FormController.getForm(testClaim.claimID, "VBA-21-0966-ARE")
@@ -35,6 +41,10 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
     }
 
     "return 404 with bad id" in new FormControllerTestContext {
+
+      Mockito.when(mockFormDao.find(Matchers.any(), Matchers.any(), Matchers.any()))
+        .thenReturn(Future.successful(None))
+
       new WithApplication(application) {
         val req = FakeRequest(
           controllers.api.routes.FormController.getForm(UUID.randomUUID(), "VBA-21-0966-ARE")
@@ -50,6 +60,10 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
   "The `getFormsForClaim` action" should {
     "return 200 and form when get" in new FormControllerTestContext {
+
+      Mockito.when(mockFormDao.find(identity.userID, testClaim.claimID))
+        .thenReturn(Future.successful(Seq(testForm)))
+
       new WithApplication(application) {
         val req = FakeRequest(
           controllers.api.routes.FormController.getFormsForClaim(testClaim.claimID)
@@ -67,6 +81,10 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
     }
 
     "return 404 with bad id" in new FormControllerTestContext {
+
+      Mockito.when(mockFormDao.find(Matchers.any(), Matchers.any()))
+        .thenReturn(Future.successful(Seq()))
+
       new WithApplication(application) {
         val req = FakeRequest(
           controllers.api.routes.FormController.getFormsForClaim(UUID.randomUUID())
@@ -82,6 +100,33 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
   "The `saveForm` action" should {
     "return 201 when save values" in new FormControllerTestContext {
+
+      Mockito.when(mockFormDao.find(identity.userID, testClaim.claimID, "VBA-21-0966-ARE"))
+        .thenReturn(Future.successful(Some(testForm)))
+
+      Mockito.when(mockClaimService.calculateProgress(Matchers.any()))
+        .thenReturn(testForm)
+
+      Mockito.when(mockFormDao.save(Matchers.eq(identity.userID),
+        Matchers.eq(testClaim.claimID),
+        Matchers.eq("VBA-21-0966-ARE"),
+        Matchers.any()))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockContactInfoService.updateContactInfo(identity.userID))
+        .thenReturn(Future.successful(
+          Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))))
+
+      Mockito.when(mockUserValuesDao.update(Matchers.eq(identity.userID), Matchers.any()))
+        .thenReturn(Future.successful(
+          UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockDocumentService.save(Matchers.any()))
+        .thenReturn(Future.successful(testForm))
+
+      Mockito.when(mockDocumentService.signatureLink(Matchers.any()))
+        .thenReturn(Future.successful(new URL("http://www.google.com")))
+
       new WithApplication(application) {
         val values = Map("key" -> JsString("value"))
 
@@ -100,50 +145,49 @@ class FormControllerSpec extends PlaySpecification with Mockito with CSRFTest {
       }
     }
 
-    "return 201 when save/update values" in new FormControllerTestContext {
+    "return 500 when save values if document service fails" in new FormControllerTestContext {
+
+      Mockito.when(mockFormDao.find(identity.userID, testClaim.claimID, "VBA-21-0966-ARE"))
+        .thenReturn(Future.successful(Some(testForm)))
+
+      Mockito.when(mockClaimService.calculateProgress(Matchers.any()))
+        .thenReturn(testForm)
+
+      Mockito.when(mockFormDao.save(Matchers.eq(identity.userID),
+        Matchers.eq(testClaim.claimID),
+        Matchers.eq("VBA-21-0966-ARE"),
+        Matchers.any()))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockContactInfoService.updateContactInfo(identity.userID))
+        .thenReturn(Future.successful(
+          Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))))
+
+      Mockito.when(mockUserValuesDao.update(Matchers.eq(identity.userID), Matchers.any()))
+        .thenReturn(Future.successful(
+          UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockDocumentService.save(Matchers.any()))
+        .thenThrow(new RuntimeException)
+
+      Mockito.when(mockDocumentService.signatureLink(Matchers.any()))
+        .thenReturn(Future.successful(new URL("http://www.google.com")))
+
       new WithApplication(application) {
-        val values1 = Map("key" -> JsString("value"))
-        val values2 = Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
+        val values = Map("key" -> JsString("value"))
 
-        val req1 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
-          .withJsonBody(Json.toJson(values1))
-          .withAuthenticator[DefaultEnv](identity.loginInfo))
-        val req2 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
-          .withJsonBody(Json.toJson(values2))
-          .withAuthenticator[DefaultEnv](identity.loginInfo))
+        val req = FakeRequest(
+          POST,
+          controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url
+        )
+          .withJsonBody(Json.toJson(values))
+          .withAuthenticator[DefaultEnv](identity.loginInfo)
 
-        val result1: Future[Result] = route(app, req1).get
-        val result2: Future[Result] = route(app, req2).get
+        val csrfReq = addToken(req)
 
-        status(result2) must be equalTo CREATED
+        val result: Future[Result] = route(app, csrfReq).get
 
-        // Also ContactInfoService.updateUserInfo should have been called
-        identity.contact.get.phoneNumber.get must be equalTo "updated"
-      }
-    }
-
-    "return 200 if authorized after update and return correct values" in new FormControllerTestContext {
-      new WithApplication(application) {
-        val values1 = Map("key" -> JsString("value"))
-        val values2 = Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
-
-        val req1 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
-          .withJsonBody(Json.toJson(values1))
-          .withAuthenticator[DefaultEnv](identity.loginInfo))
-
-        val result1: Future[Result] = route(app, req1).get
-
-        status(result1) must be equalTo CREATED
-
-        val req2 = addToken(FakeRequest(POST, controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url)
-          .withJsonBody(Json.toJson(values2))
-          .withAuthenticator[DefaultEnv](identity.loginInfo))
-
-        val result2 = route(app, req2).get
-
-        status(result2) must be equalTo CREATED
-
-        testUserValues.values must be equalTo Map("key" -> JsString("value2"), "newKey" -> JsString("x"))
+        status(result) must be equalTo INTERNAL_SERVER_ERROR
       }
     }
   }

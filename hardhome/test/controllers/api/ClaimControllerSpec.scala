@@ -101,6 +101,9 @@ class ClaimControllerSpec extends PlaySpecification with CSRFTest {
       Mockito.when(mockFormDao.save(Matchers.any(), Matchers.any(), Matchers.any(), Matchers.any()))
         .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
+      Mockito.when(mockDocumentService.create(Matchers.any()))
+        .thenReturn(Future.successful(testForm))
+
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
           .withJsonBody(Json.toJson(Seq("form1", "form2")))
