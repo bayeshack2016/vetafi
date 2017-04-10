@@ -255,7 +255,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
 
   $stateProvider.state({
     name: 'root.sign',
-    url: '/sign/{claimId}/form/{formId}',
+    url: '/sign/{claimId}',
     templateUrl: 'templates/signDocument.html',
     controller: 'signDocumentCtrl',
       resolve: {

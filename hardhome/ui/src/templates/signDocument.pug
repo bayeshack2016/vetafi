@@ -1,17 +1,40 @@
 div#vfi-sign-document-view
-    div.container-fluid
-        div.row.form-submit-button-group
-            div.col-xs-8
-                p Please sign the documents below, click complete when done.
-            div.col-xs-4
-                button.complete(ng-class="{'disabled': !allFormsSigned}" ui-sref="root.claimconfirm({claimId: claimId})")
-                    | Continue
+  vfi-breadcrumbs(page="2")
+
+  div#sign-document-wrapper
+    h2.header Sign Documents
+
+    div.section
+      div.container-fluid.nopadding
+        div.row
+          div.col-xs-8
+            p Please sign the documents below.
+
+            ul
+              li Click the link that says "Sign" for each document. Our secure eSignature platform will open in a new window with the completed document.
+              li After signing, close the window and return to this page.
+              li Repeat for all documents.
+          div.col-xs-4
+            button.complete(ng-class="{'disabled': !allFormsSigned}" ui-sref="root.claimconfirm({claimId: claimId})")
+              | Done
+
+    div.section
+      div.container-fluid
+        div.row
+          div.col-lg-4
+            h4 Document Name
+          div.col-lg-4
+            h4 Status
 
         div.row(ng-repeat="form in forms" ng-class="{'highlighted': form.key == currentlySigningForm.key}")
-            div.col-xs-4
-                p {{form.key}}
-            div.col-xs-4
-                a(href="{{form.externalSignatureLink | trusted}}" target="_blank" ng-click="markCurrentlySigningForm(form)") Sign
-            div.col-xs-4
-                p(ng-show="form.isSigned") Signed
-                p(ng-show="!form.isSigned") Not Signed
+          div.col-xs-4.signature-table-element
+            p {{form.key}}
+          div.col-xs-4.signature-table-element
+            div.signature-complete-indicator(ng-show="form.isSigned")
+              p(ng-show="form.isSigned") Signed
+              img(src="/icons/checkmark-green.svg")
+            p(ng-show="!form.isSigned") Not Signed
+          div.col-xs-4
+            a.btn(ng-class="{'disabled': form.isSigned}" href="{{form.externalSignatureLink | trusted}}" target="_blank" ng-click="markCurrentlySigningForm(form)") Sign
+
+vfi-footer

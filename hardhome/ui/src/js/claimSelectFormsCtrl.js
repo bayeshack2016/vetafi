@@ -27,7 +27,7 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     };
 
     $scope.onClickDone = function() {
-      $state.go('root.claimconfirm', {claimId: $stateParams.claimId}).then(
+      $state.go('root.sign', {claimId: $stateParams.claimId}).then(
         function success() {},
         function failure(err) {
           console.error(err);

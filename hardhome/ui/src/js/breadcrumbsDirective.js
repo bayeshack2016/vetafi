@@ -4,13 +4,16 @@ app.directive('vfiBreadcrumbs', function () {
   return {
     restrict: 'E',
     templateUrl: '../templates/breadcrumbs.html',
-    link: function(scope, element, attrs) {
+    link: function (scope, element, attrs) {
       scope.links = [
         {
           title: 'Start'
         },
         {
           title: 'Fill Forms'
+        },
+        {
+          title: 'Sign'
         },
         {
           title: 'Review'

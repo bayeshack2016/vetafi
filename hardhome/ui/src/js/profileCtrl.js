@@ -6,16 +6,16 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
     $scope.claims = userClaims;
 
     function createHeaderString(claim) {
-      if (claim.state == 'incomplete') {
+      if (claim.state == 'INCOMPLETE') {
         return 'Started (incomplete)';
-      } else if (claim.state == 'submitted') {
+      } else if (claim.state == 'SUBMITTED') {
         return 'Submitted';
       }
     }
 
     function init() {
       for (var i = 0; i < $scope.claims.length; i++) {
-        $scope.claims[i].id = $scope.claims[i]._id;
+        $scope.claims[i].id = $scope.claims[i].claimID;
         $scope.claims[i].header = createHeaderString($scope.claims[i]);
         $scope.claims[i].date = $filter('date')(new Date($scope.claims[i].stateUpdatedAt), 'MM/dd/yyyy');
       }
