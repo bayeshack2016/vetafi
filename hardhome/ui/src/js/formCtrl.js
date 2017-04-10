@@ -12,14 +12,6 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.claimId = $stateParams.claimId;
       $scope.formId = $stateParams.formId;
 
-      $scope.$watch('signature', function (newVal) {
-        if (newVal) {
-          $scope.model.signature = newVal;
-        } else {
-          delete $scope.model.signature;
-        }
-      });
-
       function currentDate() {
         return $filter('date')(new Date(), 'MM/dd/yyyy');
       }
@@ -57,15 +49,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       });*/
 
       $scope.model = userValues.values; // TODO(jeff) fix extra attributes messing up completion percentage
-      $scope.signature = $scope.model.signature;
       $scope.fields = formTemplateService[$stateParams.formId].fields;
       $scope.fieldsByKey = _.keyBy(formTemplateService[$stateParams.formId].fields, 'key');
-
-      for (var i = 0; i < $scope.fields.length; i++) {
-        if ($scope.fields[i].key.indexOf('date_signed') !== -1) {
-          $scope.model[$scope.fields[i].key] = currentDate();
-        }
-      }
 
       function countAnswerable() {
         var total = 0;
@@ -80,7 +65,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
             }
           }
         }
-        return total + 1; // Plus one for signature.
+        return total;
       }
 
       function countAnswered(model) {
@@ -91,10 +76,6 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
               count++;
             }
           }
-        }
-
-        if (model.signature) {
-          count++;
         }
 
         return count;

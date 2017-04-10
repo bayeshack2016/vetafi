@@ -340,19 +340,6 @@
         "columns": 100,
         "optional": true
       }
-    },
-
-    {
-      "key": "veteran_date_signed_0966",
-      "type": "input",
-      "optionsTypes": [
-        "date"
-      ],
-      "templateOptions": {
-        "label": "Date Signed",
-        "placeholder": "MM/DD/YYYY",
-        "optional": false
-      }
     }
   ]
 }
