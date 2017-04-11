@@ -180,3 +180,12 @@ case class SeamlessApplicationStatus(
 object SeamlessApplicationStatus {
   implicit val jsonFormat: OFormat[SeamlessApplicationStatus] = Json.format[SeamlessApplicationStatus]
 }
+
+/**
+  * {"key":"2748132ac631d103455f407e6250ad9f","recipient_type":"userdefined","order":"1","reference":"Signer1","color":"#D7CB35","signer_type":"userdefined","signer_key":"2748132ac631d103455f407e6250ad9f"}
+  */
+case class SeamlessSigner(key: String, recipient_type: String, order: String, reference: String, color: String, signer_type: String, signer_key: String)
+
+object SeamlessSigner {
+  implicit val jsonFormat: OFormat[SeamlessSigner] = Json.format[SeamlessSigner]
+}

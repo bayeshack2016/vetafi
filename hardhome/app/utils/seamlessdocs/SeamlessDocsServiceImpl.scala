@@ -37,10 +37,18 @@ class SeamlessDocsServiceImpl @Inject() (
     email: String,
     data: Map[String, JsValue]
   ): Future[SeamlessApplicationCreateResponse] = {
-    val jsonPost = Json.obj( //"recipients" ->
-    //Json.obj(
-    // "prepared_for" ->
-    // Json.obj("fullname" -> name, "email" -> email))
+    val jsonPost = Json.obj(
+      "signer_data" -> Json.obj(
+        "fullname" -> "Vetafi",
+        "email" -> "admin@vetafi.org"
+      ),
+      "recipients" -> Json.obj(
+        // TODO get this dynamically for the form
+        "2748132ac631d103455f407e6250ad9f" -> Json.obj(
+          "fullname" -> name,
+          "email" -> email
+        )
+      )
     )
     val jsonPostWithAnswers = jsonPost.deepMerge(JsObject(data))
 
@@ -63,6 +71,25 @@ class SeamlessDocsServiceImpl @Inject() (
         )
       })
 
+  }
+
+  override def formSubmit(
+    formId: String,
+    data: Map[String, JsValue]
+  ): Future[JsValue] = {
+    val jsonPost = Json.obj()
+    val jsonPostWithAnswers = jsonPost.deepMerge(JsObject(data))
+
+    signRequest(
+      wsClient
+        .url(s"$url/api/form/$formId/prepare")
+        .withBody(jsonPostWithAnswers)
+        .withMethod("POST")
+    )
+      .execute()
+      .map((wsResponse: WSResponse) => {
+        wsResponse.json
+      })
   }
 
   override def getInviteUrl(applicationId: String): Future[URL] = {
@@ -170,6 +197,78 @@ class SeamlessDocsServiceImpl @Inject() (
           case _ => throw new RuntimeException(wsResponse.body)
         }
 
+      })
+  }
+
+  override def getForms: Future[JsValue] = {
+    signRequest(
+      wsClient
+        .url(s"$url/api/account/forms")
+        .withMethod("GET")
+    )
+      .get()
+      .map((wsResponse: WSResponse) => {
+        wsResponse.status match {
+          case Status.OK => wsResponse.json
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
+      })
+  }
+
+  override def getFormElements(formId: String): Future[JsValue] = {
+    signRequest(
+      wsClient
+        .url(s"$url/api/form/$formId/elements")
+        .withMethod("GET")
+    )
+      .get()
+      .map((wsResponse: WSResponse) => {
+        wsResponse.status match {
+          case Status.OK => wsResponse.json
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
+      })
+  }
+
+  override def getFormProperties(formId: String): Future[JsValue] = {
+    signRequest(
+      wsClient
+        .url(s"$url/api/form/$formId/properties")
+        .withMethod("GET")
+    )
+      .get()
+      .map((wsResponse: WSResponse) => {
+        wsResponse.status match {
+          case Status.OK => wsResponse.json
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
+      })
+  }
+
+  override def getFormSigners(formId: String): Future[Seq[SeamlessSigner]] = {
+    signRequest(
+      wsClient
+        .url(s"$url/api/form/$formId/signers")
+        .withMethod("GET")
+    )
+      .get()
+      .map((wsResponse: WSResponse) => {
+        wsResponse.status match {
+          case Status.OK =>
+            val validate = wsResponse.json.validate[Seq[SeamlessSigner]]
+            validate.fold(
+              errors => {
+                throw new RuntimeException(
+                  s"Encountered JSON parsing errors: ${errors.toString} " +
+                    s"when parsing body: ${wsResponse.body}"
+                )
+              },
+              signers => {
+                signers
+              }
+            )
+          case _ => throw new RuntimeException(wsResponse.body)
+        }
       })
   }
 }

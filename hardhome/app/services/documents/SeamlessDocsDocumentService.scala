@@ -7,6 +7,7 @@ import models.daos.{ FormDAO, UserDAO }
 import models.{ ClaimForm, User }
 import play.api.http.Status
 import play.api.libs.ws.{ WSClient, WSResponse }
+import services.forms.FormConfigManager
 import utils.seamlessdocs.{ SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessDocsServiceImpl }
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -20,7 +21,8 @@ class SeamlessDocsDocumentService @Inject() (
   userDAO: UserDAO,
   formDAO: FormDAO,
   wSClient: WSClient,
-  seamlessDocs: SeamlessDocsService
+  seamlessDocs: SeamlessDocsService,
+  formConfigManager: FormConfigManager
 ) extends DocumentService {
 
   private def updateFormWithApplication(form: ClaimForm)(res: SeamlessApplicationCreateResponse): ClaimForm = {
@@ -28,7 +30,7 @@ class SeamlessDocsDocumentService @Inject() (
   }
 
   def setSeamlessDocsFormId(form: ClaimForm): ClaimForm = {
-    form.copy(externalFormId = Some("CO17021000023901967"))
+    form.copy(externalFormId = Some(formConfigManager.getFormConfigs(form.key).vfi.externalId))
   }
 
   private def createApplication(user: User, form: ClaimForm): Future[ClaimForm] = {
