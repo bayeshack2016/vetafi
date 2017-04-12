@@ -6,10 +6,11 @@ import com.google.inject.AbstractModule
 import com.mohiva.play.silhouette.api.{ Environment, LoginInfo }
 import com.typesafe.config.ConfigFactory
 import controllers.SilhouetteTestContext
-import models.daos.UserDAO
+import models.daos.{ UserDAO, UserValuesDAO }
 import models._
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
+import org.mockito.Mockito
 import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
 import reactivemongo.api.commands.{ UpdateWriteResult, WriteResult }
@@ -19,33 +20,14 @@ import scala.concurrent.Future
 
 trait UserValuesControllerTestContext extends SilhouetteTestContext {
 
-  class FakeUserDao extends UserDAO {
-    override def find(loginInfo: LoginInfo): Future[Option[User]] = {
-      Future.successful(Some(identity))
-    }
-
-    override def find(userID: UUID): Future[Option[User]] = {
-      Future.successful(Some(identity))
-    }
-
-    override def save(user: User): Future[WriteResult] = {
-      identity = user
-      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
-    }
-
-    override def updateContactInfo(user: User): Future[WriteResult] = {
-      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
-    }
-
-    override def setInactive(user: User): Future[WriteResult] = {
-      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
-    }
-  }
+  val mockUserDao: UserDAO = Mockito.mock(classOf[UserDAO])
+  val mockUserValuesDao: UserValuesDAO = Mockito.mock(classOf[UserValuesDAO])
 
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
       bind[Environment[DefaultEnv]].toInstance(env)
-      bind[UserDAO].toInstance(new FakeUserDao())
+      bind[UserDAO].toInstance(mockUserDao)
+      bind[UserValuesDAO].toInstance(mockUserValuesDao)
     }
   }
 

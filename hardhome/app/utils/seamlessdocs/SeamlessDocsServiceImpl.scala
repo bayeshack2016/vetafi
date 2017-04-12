@@ -35,6 +35,7 @@ class SeamlessDocsServiceImpl @Inject() (
     formId: String,
     name: String,
     email: String,
+    signerId: String,
     data: Map[String, JsValue]
   ): Future[SeamlessApplicationCreateResponse] = {
     val jsonPost = Json.obj(
@@ -43,8 +44,7 @@ class SeamlessDocsServiceImpl @Inject() (
         "email" -> "admin@vetafi.org"
       ),
       "recipients" -> Json.obj(
-        // TODO get this dynamically for the form
-        "2748132ac631d103455f407e6250ad9f" -> Json.obj(
+        signerId -> Json.obj(
           "fullname" -> name,
           "email" -> email
         )

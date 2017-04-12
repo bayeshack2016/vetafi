@@ -19,7 +19,8 @@ object FormConfig {
   implicit val jsonFormat: OFormat[FormConfig] = Json.format[FormConfig]
 }
 
-case class VetafiInfo(title: String, summary: String, required: Boolean, externalId: String) {
+case class VetafiInfo(title: String, summary: String, required: Boolean, externalId: String,
+  externalSignerId: String) {
 
 }
 

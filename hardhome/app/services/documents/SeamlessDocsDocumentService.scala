@@ -26,7 +26,7 @@ class SeamlessDocsDocumentService @Inject() (
 ) extends DocumentService {
 
   private def updateFormWithApplication(form: ClaimForm)(res: SeamlessApplicationCreateResponse): ClaimForm = {
-    form.copy(externalApplicationId = Some(res.application_id))
+    form.copy(externalApplicationId = Some(res.application_id.get))
   }
 
   def setSeamlessDocsFormId(form: ClaimForm): ClaimForm = {
@@ -39,6 +39,7 @@ class SeamlessDocsDocumentService @Inject() (
       formWithId.externalFormId.get,
       user.fullName.getOrElse("Unknown Unknown"),
       user.email.get,
+      formConfigManager.getFormConfigs(form.key).vfi.externalSignerId,
       formWithId.responses
     ).map(updateFormWithApplication(formWithId))
   }

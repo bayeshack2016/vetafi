@@ -5,10 +5,10 @@ import java.util.UUID
 
 import controllers.CSRFTest
 import models.ClaimForm
-import org.mockito.{Matchers, Mockito}
-import play.api.libs.json.{JsResult, JsString, Json}
+import org.mockito.{ Matchers, Mockito }
+import play.api.libs.json.{ JsResult, JsString, Json }
 import play.api.mvc.Result
-import play.api.test.{FakeRequest, PlaySpecification, WithApplication}
+import play.api.test.{ FakeRequest, PlaySpecification, WithApplication }
 import utils.auth.DefaultEnv
 import com.mohiva.play.silhouette.test._
 import reactivemongo.api.commands.UpdateWriteResult
@@ -107,19 +107,23 @@ class FormControllerSpec extends PlaySpecification with CSRFTest {
       Mockito.when(mockClaimService.calculateProgress(Matchers.any()))
         .thenReturn(testForm)
 
-      Mockito.when(mockFormDao.save(Matchers.eq(identity.userID),
+      Mockito.when(mockFormDao.save(
+        Matchers.eq(identity.userID),
         Matchers.eq(testClaim.claimID),
         Matchers.eq("VBA-21-0966-ARE"),
-        Matchers.any()))
+        Matchers.any()
+      ))
         .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
       Mockito.when(mockContactInfoService.updateContactInfo(identity.userID))
         .thenReturn(Future.successful(
-          Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))))
+          Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+        ))
 
       Mockito.when(mockUserValuesDao.update(Matchers.eq(identity.userID), Matchers.any()))
         .thenReturn(Future.successful(
-          UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+          UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)
+        ))
 
       Mockito.when(mockDocumentService.save(Matchers.any()))
         .thenReturn(Future.successful(testForm))
@@ -153,19 +157,23 @@ class FormControllerSpec extends PlaySpecification with CSRFTest {
       Mockito.when(mockClaimService.calculateProgress(Matchers.any()))
         .thenReturn(testForm)
 
-      Mockito.when(mockFormDao.save(Matchers.eq(identity.userID),
+      Mockito.when(mockFormDao.save(
+        Matchers.eq(identity.userID),
         Matchers.eq(testClaim.claimID),
         Matchers.eq("VBA-21-0966-ARE"),
-        Matchers.any()))
+        Matchers.any()
+      ))
         .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
       Mockito.when(mockContactInfoService.updateContactInfo(identity.userID))
         .thenReturn(Future.successful(
-          Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))))
+          Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
+        ))
 
       Mockito.when(mockUserValuesDao.update(Matchers.eq(identity.userID), Matchers.any()))
         .thenReturn(Future.successful(
-          UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+          UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)
+        ))
 
       Mockito.when(mockDocumentService.save(Matchers.any()))
         .thenThrow(new RuntimeException)

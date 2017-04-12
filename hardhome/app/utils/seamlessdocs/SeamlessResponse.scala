@@ -145,6 +145,23 @@ object SeamlessRecipientInfo {
 
 /**
  * {
+ * "error_code": "submission_halt",
+ * "error_message": "Error executing signature workflow: Unable to find recipient info of the next signer '71f0d6844867a206d837f6728ddb545b'",
+ * "error_description": "submission:execute"
+ * }
+ */
+case class SeamlessErrorLog(
+  error_code: String,
+  error_message: String,
+  error_description: String
+)
+
+object SeamlessErrorLog {
+  implicit val jsonFormat: OFormat[SeamlessErrorLog] = Json.format[SeamlessErrorLog]
+}
+
+/**
+ * {
  * "result": true,
  * "application_id": "AP15021000011409822",
  * "description": "Submission successful"
@@ -152,8 +169,9 @@ object SeamlessRecipientInfo {
  */
 case class SeamlessApplicationCreateResponse(
   result: Boolean,
-  application_id: String,
-  description: String
+  application_id: Option[String],
+  description: Option[String],
+  error_log: Option[Seq[SeamlessErrorLog]] = None
 ) {
 
 }
@@ -182,8 +200,8 @@ object SeamlessApplicationStatus {
 }
 
 /**
-  * {"key":"2748132ac631d103455f407e6250ad9f","recipient_type":"userdefined","order":"1","reference":"Signer1","color":"#D7CB35","signer_type":"userdefined","signer_key":"2748132ac631d103455f407e6250ad9f"}
-  */
+ * {"key":"2748132ac631d103455f407e6250ad9f","recipient_type":"userdefined","order":"1","reference":"Signer1","color":"#D7CB35","signer_type":"userdefined","signer_key":"2748132ac631d103455f407e6250ad9f"}
+ */
 case class SeamlessSigner(key: String, recipient_type: String, order: String, reference: String, color: String, signer_type: String, signer_key: String)
 
 object SeamlessSigner {

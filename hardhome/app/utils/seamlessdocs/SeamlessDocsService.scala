@@ -8,7 +8,13 @@ import scala.concurrent.Future
 
 trait SeamlessDocsService {
 
-  def formPrepare(formId: String, name: String, email: String, data: Map[String, JsValue]): Future[SeamlessApplicationCreateResponse]
+  def formPrepare(
+    formId: String,
+    name: String,
+    email: String,
+    signerId: String,
+    data: Map[String, JsValue]
+  ): Future[SeamlessApplicationCreateResponse]
 
   def formSubmit(formId: String, data: Map[String, JsValue]): Future[JsValue]
 
