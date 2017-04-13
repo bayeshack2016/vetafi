@@ -13,15 +13,7 @@ import scala.util.Try
 trait DocumentService {
 
   /**
-   * Register document with document service.
-   *
-   * @param form
-   * @return
-   */
-  def create(form: ClaimForm): Future[ClaimForm]
-
-  /**
-   * Update document service with new form information and get PDF for document.
+   * Get PDF for document from document service.
    *
    * @param form
    * @return
@@ -29,11 +21,11 @@ trait DocumentService {
   def render(form: ClaimForm): Future[Array[Byte]]
 
   /**
-   * Update document service with new form information.
+   * Submit document to document service for signature.
    * @param form
    * @return
    */
-  def save(form: ClaimForm): Future[ClaimForm]
+  def submitForSignature(form: ClaimForm): Future[ClaimForm]
 
   /**
    * Get signature link for document.

@@ -88,8 +88,7 @@ trait SeamplessDocsServiceTestContext extends Scope {
     fields = Seq())
 
   var fakeApplicationCreateResponse = SeamlessApplicationCreateResponse(
-    true, Some(UUID.randomUUID().toString), Some("fake")
-  )
+    true, UUID.randomUUID().toString, "fake")
 
   val pdfUrl: String = "https://www.pdf.com"
   val inviteUrl: String = "https://www.invite.com"
@@ -160,7 +159,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             Matchers.eq(testFormWithExternal.userID),
             Matchers.eq(testFormWithExternal.claimID),
             Matchers.eq(testFormWithExternal.key),
-            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id.get, fakePdf))
+            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
           ))
             .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
@@ -171,7 +170,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             Matchers.eq(testFormWithExternal.externalApplicationId.get),
             Matchers.any()
           ))
-            .thenReturn(Future.successful(new URL(pdfUrl)))
+            .thenReturn(Future.successful(Left(new URL(pdfUrl))))
 
           val formConfigManager = Mockito.mock(classOf[FormConfigManager])
           val fakeMap = Mockito.mock(classOf[Map[String, FormConfig]])
@@ -204,7 +203,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             Matchers.eq(testFormWithExternal.userID),
             Matchers.eq(testFormWithExternal.claimID),
             Matchers.eq(testFormWithExternal.key),
-            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id.get, fakePdf))
+            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
           ))
             .thenReturn(Future.successful(UpdateWriteResult(ok = false, 1, 1, Seq(), Seq(), None, None, None)))
 
@@ -215,7 +214,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             Matchers.eq(testFormWithExternal.externalApplicationId.get),
             Matchers.any()
           ))
-            .thenReturn(Future.successful(new URL(pdfUrl)))
+            .thenReturn(Future.successful(Left(new URL(pdfUrl))))
 
           val formConfigManager = Mockito.mock(classOf[FormConfigManager])
           val fakeMap = Mockito.mock(classOf[Map[String, FormConfig]])
@@ -250,7 +249,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             Matchers.eq(testForm.userID),
             Matchers.eq(testForm.claimID),
             Matchers.eq(testForm.key),
-            Matchers.argThat(new HasCorrectApplicationId(fakeApplicationCreateResponse.application_id.get))
+            Matchers.argThat(new HasCorrectApplicationId(fakeApplicationCreateResponse.application_id))
           ))
             .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
@@ -260,15 +259,15 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
 
           val seamlessDocsService = Mockito.mock(classOf[SeamlessDocsService])
           Mockito.when(seamlessDocsService.formPrepare(
-            Matchers.eq(fakeApplicationCreateResponse.application_id.get),
+            Matchers.eq(fakeApplicationCreateResponse.application_id),
             Matchers.eq(identity.fullName.get),
             Matchers.eq(identity.email.get),
             Matchers.any(),
             Matchers.eq(testForm.responses)
           ))
-            .thenReturn(Future.successful(SeamlessApplicationCreateResponse(result = true, Some("appId"), Some("Mock app."))))
+            .thenReturn(Future.successful(Left(SeamlessApplicationCreateResponse(result = true, "appId", "Mock app."))))
           Mockito.when(seamlessDocsService.getInviteUrl(
-            Matchers.eq(fakeApplicationCreateResponse.application_id.get)
+            Matchers.eq(fakeApplicationCreateResponse.application_id)
           ))
             .thenReturn(Future.successful(new URL(inviteUrl)))
 
@@ -303,7 +302,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             Matchers.eq(testFormWithExternal.userID),
             Matchers.eq(testFormWithExternal.claimID),
             Matchers.eq(testFormWithExternal.key),
-            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id.get, fakePdf))
+            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
           ))
             .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
@@ -311,15 +310,15 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
 
           val seamlessDocsService = Mockito.mock(classOf[SeamlessDocsService])
           Mockito.when(seamlessDocsService.formPrepare(
-            Matchers.eq(fakeApplicationCreateResponse.application_id.get),
+            Matchers.eq(fakeApplicationCreateResponse.application_id),
             Matchers.eq(identity.fullName.get),
             Matchers.eq(identity.email.get),
             Matchers.any(),
             Matchers.eq(testFormWithExternal.responses)
           ))
-            .thenReturn(Future.successful(SeamlessApplicationCreateResponse(result = true, Some("appId"), Some("Mock app."))))
+            .thenReturn(Future.successful(Left(SeamlessApplicationCreateResponse(result = true, "appId", "Mock app."))))
           Mockito.when(seamlessDocsService.getInviteUrl(
-            Matchers.eq(fakeApplicationCreateResponse.application_id.get)
+            Matchers.eq(fakeApplicationCreateResponse.application_id)
           ))
             .thenReturn(Future.successful(new URL(inviteUrl)))
 

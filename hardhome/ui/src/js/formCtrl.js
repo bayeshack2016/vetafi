@@ -19,7 +19,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.onSubmit = function () {
         save(true).then(
           function () {
-            $state.go('root.sign', {claimId: $stateParams.claimId}).then(
+            $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
               function success() {
               },
               function failure(err) {

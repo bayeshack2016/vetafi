@@ -4,6 +4,7 @@ import java.net.URL
 import java.time.Clock
 import javax.inject.Inject
 
+import play.Logger
 import play.api.Configuration
 import play.api.http.Status
 import play.api.libs.json.{ JsObject, JsValue, Json }
@@ -31,13 +32,43 @@ class SeamlessDocsServiceImpl @Inject() (
     requestUtils.sign(request, apiKey, apiSecret)
   }
 
+  private def getJsonResponse[T](wsResponse: WSResponse)(implicit rds: play.api.libs.json.Reads[T]): Either[T, SeamlessErrorResponse] = {
+    Logger.info(s"Seamless Docs Response [${wsResponse.status}]: " + wsResponse.body)
+    wsResponse.status match {
+      case Status.OK =>
+        val validateApiError = wsResponse.json.validate[SeamlessErrorResponse]
+        validateApiError.fold(
+          _ => {
+            val validateExpected = wsResponse.json.validate[T]
+            validateExpected.fold(
+              errors => {
+                throw new RuntimeException(
+                  s"Encountered JSON parsing errors: ${errors.toString} " +
+                    s"when parsing body: ${wsResponse.body}"
+                )
+              },
+              success => {
+                Left(success)
+              }
+            )
+          },
+          success => {
+            Right(success)
+          }
+        )
+      case unexpectedStatus: Int => throw new RuntimeException(
+        s"Encountered unexpected status ($unexpectedStatus): " + wsResponse.body
+      )
+    }
+  }
+
   override def formPrepare(
     formId: String,
     name: String,
     email: String,
     signerId: String,
     data: Map[String, JsValue]
-  ): Future[SeamlessApplicationCreateResponse] = {
+  ): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] = {
     val jsonPost = Json.obj(
       "signer_data" -> Json.obj(
         "fullname" -> "Vetafi",
@@ -59,24 +90,13 @@ class SeamlessDocsServiceImpl @Inject() (
         .withMethod("POST")
     )
       .execute()
-      .map((wsResponse: WSResponse) => {
-        val validate = wsResponse.json.validate[SeamlessApplicationCreateResponse]
-        validate.fold(
-          errors => {
-            throw new RuntimeException(errors.toString())
-          },
-          seamlessResponse => {
-            seamlessResponse
-          }
-        )
-      })
-
+      .map(getJsonResponse[SeamlessApplicationCreateResponse])
   }
 
   override def formSubmit(
     formId: String,
     data: Map[String, JsValue]
-  ): Future[JsValue] = {
+  ): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] = {
     val jsonPost = Json.obj()
     val jsonPostWithAnswers = jsonPost.deepMerge(JsObject(data))
 
@@ -87,9 +107,7 @@ class SeamlessDocsServiceImpl @Inject() (
         .withMethod("POST")
     )
       .execute()
-      .map((wsResponse: WSResponse) => {
-        wsResponse.json
-      })
+      .map(getJsonResponse[SeamlessApplicationCreateResponse])
   }
 
   override def getInviteUrl(applicationId: String): Future[URL] = {
@@ -144,32 +162,19 @@ class SeamlessDocsServiceImpl @Inject() (
       })
   }
 
-  override def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[URL] = {
+  override def updatePdf(applicationId: String): Future[Either[URL, SeamlessErrorResponse]] = {
     signRequest(
       wsClient
         .url(s"$url/api/application/$applicationId/update_pdf")
-        .withBody(JsObject(data))
+        .withBody(JsObject(Seq()))
         .withMethod("POST")
     )
       .execute()
-      .map((wsResponse: WSResponse) => {
-        wsResponse.status match {
-          case Status.OK =>
-            val validate = wsResponse.json.validate[Seq[String]]
-            validate.fold(
-              errors => {
-                throw new RuntimeException(
-                  s"Encountered JSON parsing errors: ${errors.toString} " +
-                    s"when parsing body: ${wsResponse.body}"
-                )
-              },
-              urlList => {
-                new URL(urlList.head)
-              }
-            )
-          case _ => throw new RuntimeException(wsResponse.body)
-        }
-      })
+      .map(getJsonResponse[Seq[String]])
+      .map {
+        case Left(urls) => Left(new URL(urls.head))
+        case Right(error) => Right(error)
+      }
   }
 
   override def getApplicationStatus(applicationId: String): Future[SeamlessApplicationStatus] = {

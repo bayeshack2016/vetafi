@@ -1,6 +1,6 @@
 var app = angular.module('vetafiApp');
-app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms',
-  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms) {
+app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms', 'net',
+  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms, net) {
     $scope.claimId = $stateParams.claimId;
 
     // claimForms is an array of form objects associated with claim
@@ -27,12 +27,19 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     };
 
     $scope.onClickDone = function() {
-      $state.go('root.sign', {claimId: $stateParams.claimId}).then(
-        function success() {},
+      net.signClaim($stateParams.claimId).then(
+        function success(res) {
+          $state.go('root.sign', {claimId: $stateParams.claimId}).then(
+            function success() {},
+            function failure(err) {
+              console.error(err);
+            }
+          );
+        },
         function failure(err) {
           console.error(err);
         }
-      );
+      )
     };
   }
 ]);

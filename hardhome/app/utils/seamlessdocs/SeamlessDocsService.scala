@@ -14,9 +14,9 @@ trait SeamlessDocsService {
     email: String,
     signerId: String,
     data: Map[String, JsValue]
-  ): Future[SeamlessApplicationCreateResponse]
+  ): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]]
 
-  def formSubmit(formId: String, data: Map[String, JsValue]): Future[JsValue]
+  def formSubmit(formId: String, data: Map[String, JsValue]): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]]
 
   def getInviteUrl(applicationId: String): Future[URL]
 
@@ -24,7 +24,7 @@ trait SeamlessDocsService {
 
   def getApplicationStatus(applicationId: String): Future[SeamlessApplicationStatus]
 
-  def updatePdf(applicationId: String, data: Map[String, JsValue]): Future[URL]
+  def updatePdf(applicationId: String): Future[Either[URL, SeamlessErrorResponse]]
 
   def getForms: Future[JsValue]
 

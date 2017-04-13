@@ -7,7 +7,7 @@
           h3.header Filing claims for U.S. Veterans
           h5.subheader Done easily and safely.
           h5.subheader Continue your previous claim now.
-        a(ui-sref="root.claimselect({claimId: currentClaim._id})")
+        a(ui-sref="root.claimselect({claimId: currentClaim.claimID})")
           button.col-sm-3 Continue Claim
       div.headline-wrapper.row(ng-show="!hasIncompleteClaim")
         div.col-sm-9
@@ -21,10 +21,10 @@
     div.action.row
       div.content.col-sm-6
         h4 Submit an Intent to File.
-        p Secure your Effective Date for your claim today. Fill in your information once and avoid having to tediously go back and forth with the VA.
+        p Secure your Effective Date for your claim today. Be first in line to get your claim processed by the V.A.
         a(ui-sref="root.claimstart", ng-show="!hasIncompleteClaim")
           button Start for Free
-        a(ui-sref="root.claimselect({claimId: currentClaim._id})", ng-show="hasIncompleteClaim")
+        a(ui-sref="root.claimselect({claimId: currentClaim.claimID})", ng-show="hasIncompleteClaim")
           button Continue Claim
       div.icons-wrapper.col-sm-6
         div.main-wrapper.folder.right-align

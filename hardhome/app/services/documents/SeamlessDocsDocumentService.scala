@@ -6,13 +6,12 @@ import javax.inject.Inject
 import models.daos.{ FormDAO, UserDAO }
 import models.{ ClaimForm, User }
 import play.api.http.Status
-import play.api.libs.ws.{ WSClient, WSResponse }
+import play.api.libs.ws.WSClient
 import services.forms.FormConfigManager
-import utils.seamlessdocs.{ SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessDocsServiceImpl }
+import utils.seamlessdocs.{ SeamlessAPIError, SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessErrorResponse }
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.util.Try
 
 /**
  * Document service backed by seamlessdocs
@@ -25,8 +24,8 @@ class SeamlessDocsDocumentService @Inject() (
   formConfigManager: FormConfigManager
 ) extends DocumentService {
 
-  private def updateFormWithApplication(form: ClaimForm)(res: SeamlessApplicationCreateResponse): ClaimForm = {
-    form.copy(externalApplicationId = Some(res.application_id.get))
+  private def updateFormWithApplication(form: ClaimForm, res: SeamlessApplicationCreateResponse): ClaimForm = {
+    form.copy(externalApplicationId = Some(res.application_id))
   }
 
   def setSeamlessDocsFormId(form: ClaimForm): ClaimForm = {
@@ -37,11 +36,15 @@ class SeamlessDocsDocumentService @Inject() (
     val formWithId = setSeamlessDocsFormId(form)
     seamlessDocs.formPrepare(
       formWithId.externalFormId.get,
-      user.fullName.getOrElse("Unknown Unknown"),
+      user.name.getOrElse("Unknown User"),
       user.email.get,
       formConfigManager.getFormConfigs(form.key).vfi.externalSignerId,
       formWithId.responses
-    ).map(updateFormWithApplication(formWithId))
+    ).map {
+        case Left(application) => updateFormWithApplication(formWithId, application)
+        case Right(error) =>
+          throw new RuntimeException("Seamless doc form prepare returned error: " + error.toString)
+      }
   }
 
   private def maybeCreateApplication(form: ClaimForm): Future[ClaimForm] = {
@@ -67,18 +70,32 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def render(form: ClaimForm): Future[Array[Byte]] = {
-    val pdfUrlFuture: Future[URL] =
-      seamlessDocs.updatePdf(form.externalApplicationId.get, form.responses)
+    val formSubmissionFuture: Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] =
+      seamlessDocs.formSubmit(form.externalFormId.get, form.responses)
+
+    val updatePdfFuture: Future[Either[URL, SeamlessErrorResponse]] =
+      formSubmissionFuture.flatMap {
+        case Left(response) => seamlessDocs.updatePdf(response.application_id)
+        case Right(_) => throw new RuntimeException
+      }
+
+    val pdfUrlFuture: Future[URL] = updatePdfFuture.flatMap {
+      // If we get an error response, we already updated the pdf
+      case Right(_) =>
+        seamlessDocs.getApplication(form.externalApplicationId.get).map(
+          application => new URL(application.submission_pdf_url)
+        )
+      case Left(pdfUrl) => Future.successful(pdfUrl)
+    }
 
     val pdfFuture: Future[Array[Byte]] = pdfUrlFuture.flatMap(
-      pdfUrl => {
+      pdfUrl =>
         wSClient.url(pdfUrl.toString).get().map(res => {
           res.status match {
             case Status.OK => res.bodyAsBytes.toArray
             case _ => throw new RuntimeException
           }
         })
-      }
     )
 
     pdfFuture.flatMap(
@@ -89,6 +106,25 @@ class SeamlessDocsDocumentService @Inject() (
         }
       }
     )
+  }
+
+  /**
+   * Submit document to document service for signature.
+   *
+   * @param form
+   * @return
+   */
+  override def submitForSignature(form: ClaimForm): Future[ClaimForm] = {
+    maybeCreateApplication(form).flatMap(updatedForm => {
+      seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get).flatMap {
+        url =>
+          val formWithSignature: ClaimForm = updatedForm.copy(externalSignatureLink = Some(url.toString))
+          formDAO.save(formWithSignature.userID, formWithSignature.claimID, formWithSignature.key, formWithSignature).map {
+            case ok if ok.ok => formWithSignature
+            case _ => throw new RuntimeException
+          }
+      }
+    })
   }
 
   /**
@@ -104,28 +140,6 @@ class SeamlessDocsDocumentService @Inject() (
         case _ => throw new RuntimeException
       }
     })
-  }
-
-  /**
-   * Register document with document service.
-   *
-   * @param form
-   * @return
-   */
-  override def create(form: ClaimForm): Future[ClaimForm] = {
-    maybeCreateApplication(form)
-  }
-
-  /**
-   * Update document service with new form information.
-   *
-   * @param form
-   * @return
-   */
-  override def save(form: ClaimForm): Future[ClaimForm] = {
-    seamlessDocs.updatePdf(form.externalApplicationId.get, form.responses).map(
-      _ => form
-    )
   }
 
   /**

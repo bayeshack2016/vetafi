@@ -6,13 +6,11 @@ import javax.inject.Inject
 import com.mohiva.play.silhouette.api.Silhouette
 import models.daos.{ FormDAO, UserValuesDAO }
 import models.{ ClaimForm, User }
-import play.api.http.ContentTypes
 import play.api.libs.json.{ JsBoolean, JsError, JsValue, Json }
 import play.api.mvc._
 import services.documents.DocumentService
 import services.forms.{ ClaimService, ContactInfoService }
 import utils.auth.DefaultEnv
-import services.forms.ContactInfoService
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -67,18 +65,13 @@ class FormController @Inject() (
                   val formWithProgress: ClaimForm =
                     claimService.calculateProgress(claimForm.copy(responses = data))
 
-                  documentService.signatureLink(formWithProgress).flatMap {
-                    url =>
-                      val formWithSignatureLink = formWithProgress.copy(externalSignatureLink = Some(url.toString))
-                      (for {
-                        formSaveFuture <- formDAO.save(request.identity.userID, claimID, formKey, formWithSignatureLink)
-                        updateUserValuesFuture <- updateUserValues(request.identity, data)
-                        documentServiceFuture <- documentService.save(formWithSignatureLink)
-                      } yield {
-                        Created(Json.obj("status" -> "ok"))
-                      }).recover {
-                        case _: RuntimeException => InternalServerError
-                      }
+                  (for {
+                    formSaveFuture <- formDAO.save(request.identity.userID, claimID, formKey, formWithProgress)
+                    updateUserValuesFuture <- updateUserValues(request.identity, data)
+                  } yield {
+                    Created(Json.obj("status" -> "ok"))
+                  }).recover {
+                    case _: RuntimeException => InternalServerError
                   }
 
                 case None =>

@@ -7,10 +7,9 @@ import com.mohiva.play.silhouette.api.Silhouette
 import models.daos.{ ClaimDAO, FormDAO }
 import models.{ Claim, ClaimForm, Recipients }
 import play.api.libs.json.{ JsError, JsValue, Json }
-import play.api.mvc._
-import reactivemongo.api.commands.WriteResult
+import play.api.mvc.{ Action, _ }
 import services.documents.DocumentService
-import services.forms.ClaimService
+import services.forms.{ ClaimService, FormConfigManager }
 import services.submission.SubmissionService
 import utils.auth.DefaultEnv
 
@@ -25,6 +24,7 @@ class ClaimController @Inject() (
   val formDAO: FormDAO,
   val claimService: ClaimService,
   val documentService: DocumentService,
+  val formConfigManager: FormConfigManager,
   silhouette: Silhouette[DefaultEnv],
   submissionService: SubmissionService
 ) extends Controller {
@@ -59,12 +59,12 @@ class ClaimController @Inject() (
         0,
         0,
         0,
-        Array.empty[Byte]
+        Array.empty[Byte],
+        externalFormId = Some(formConfigManager.getFormConfigs(key).vfi.externalId)
       ))
 
       for {
         formSaveFuture <- formDAO.save(userID, claimID, key, newForm)
-        documentServiceFuture <- documentService.create(newForm)
       } yield {
         true
       }
@@ -122,6 +122,18 @@ class ClaimController @Inject() (
       }
       case _ => Future.successful(InternalServerError)
     }
+  }
+
+  def sign(claimID: UUID): Action[AnyContent] = silhouette.SecuredAction.async {
+    request =>
+      {
+        formDAO.find(request.identity.userID, claimID).flatMap {
+          forms =>
+            Future.sequence(forms.map(documentService.submitForSignature))
+        }.map {
+          _ => Ok
+        }
+      }
   }
 
   def submit(claimID: UUID): Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {
