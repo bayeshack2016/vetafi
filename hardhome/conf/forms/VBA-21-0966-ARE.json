@@ -30,56 +30,26 @@
     },
     {
       "key": "veteran_intent_to_file_compensation_y_n",
-      "type": "radio",
+      "type": "checkbox",
       "templateOptions": {
-        "label": "Do you intend to file for compensation related benefits?",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "Yes"
-          },
-          {
-            "name": "No",
-            "value": "No"
-          }
-        ],
-        "optional": false
+        "label": "Check if you intend to file for compensation related benefits.",
+        "optional": true
       }
     },
     {
       "key": "veteran_intent_to_file_pension_y_n",
-      "type": "radio",
+      "type": "checkbox",
       "templateOptions": {
-        "label": "Do you intend to file for pension related benefits?",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "Yes"
-          },
-          {
-            "name": "No",
-            "value": "No"
-          }
-        ],
-        "optional": false
+        "label": "Check if you intend to file for pension related benefits.",
+        "optional": true
       }
     },
     {
       "key": "dependency_indemnity_compensation_y_n",
-      "type": "radio",
+      "type": "checkbox",
       "templateOptions": {
-        "label": "Do you intend to file for survivors pension and/or dependency and indemnity compensation?",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "Yes"
-          },
-          {
-            "name": "No",
-            "value": "No"
-          }
-        ],
-        "optional": false
+        "label": "Check if you intend to file for survivors pension and/or dependency and indemnity compensation.",
+        "optional": true
       }
     },
     {

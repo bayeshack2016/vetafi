@@ -42,7 +42,7 @@ object Field {
 
   object TemplateType extends Enumeration {
     type TemplateType = Value
-    val radio, input, textarea = Value
+    val radio, input, textarea, checkbox = Value
   }
 
   object ValidationType extends Enumeration {

@@ -161,7 +161,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"form-group\" ng-class=\"{'has-error': showError, 'has-success': model.hasOwnProperty(options.key) && !showError}\">\n  <formly-transclude></formly-transclude>\n</div>\n"
+	module.exports = "<div class=\"form-group\" ng-class=\"{'has-error': showError, 'has-success': model.hasOwnProperty(options.key) && !showError && options.type != 'checkbox'}\">\n  <formly-transclude></formly-transclude>\n</div>\n"
 
 /***/ },
 /* 9 */
