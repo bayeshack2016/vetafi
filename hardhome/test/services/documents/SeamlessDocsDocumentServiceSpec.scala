@@ -1,22 +1,23 @@
 package services.documents
 
 import java.net.URL
+import java.time.Instant
 import java.util.UUID
 
 import com.mohiva.play.silhouette.api.LoginInfo
 import com.typesafe.config.ConfigFactory
 import models._
-import models.daos.{ FormDAO, UserDAO }
+import models.daos.{FormDAO, UserDAO}
 import modules.JobModule
-import org.hamcrest.{ BaseMatcher, Description }
-import org.mockito.{ Matchers, Mockito }
+import org.hamcrest.{BaseMatcher, Description}
+import org.mockito.{Matchers, Mockito}
 import org.specs2.specification.Scope
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.{ JsString, JsValue }
+import play.api.libs.json.{JsString, JsValue}
 import play.api.libs.ws.WSClient
-import play.api.mvc.{ Action, Results }
-import play.api.test.{ PlaySpecification, WithApplication, WsTestClient }
-import play.api.{ Application, Configuration }
+import play.api.mvc.{Action, Results}
+import play.api.test.{PlaySpecification, WithApplication, WsTestClient}
+import play.api.{Application, Configuration}
 import play.core.server.Server
 import reactivemongo.api.commands.UpdateWriteResult
 import services.forms.FormConfigManager
@@ -24,7 +25,7 @@ import utils.seamlessdocs._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.util.{ Failure, Success }
+import scala.util.{Failure, Success}
 
 trait SeamplessDocsServiceTestContext extends Scope {
   var identity = User(
@@ -43,6 +44,7 @@ trait SeamplessDocsServiceTestContext extends Scope {
     identity.userID,
     UUID.randomUUID(),
     Claim.State.INCOMPLETE,
+    java.util.Date.from(Instant.now()),
     Recipients(
       None, None,
       Seq("test@website.com"),

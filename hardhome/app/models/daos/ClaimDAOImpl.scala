@@ -1,5 +1,6 @@
 package models.daos
 
+import java.time.Instant
 import java.util.UUID
 import javax.inject.Inject
 
@@ -61,6 +62,7 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
       userID = userID,
       claimID = UUID.randomUUID(),
       Claim.State.INCOMPLETE,
+      java.util.Date.from(Instant.now()),
       Recipients(None, None, Seq.empty[String], Seq.empty[Address])
     )
 
@@ -71,7 +73,10 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
     collection.flatMap(
       _.update(
         Json.obj("userID" -> userID, "claimID" -> claimID),
-        Json.obj("$set" -> Json.obj("state" -> Claim.State.SUBMITTED))
+        Json.obj("$set" -> Json.obj(
+          "state" -> Claim.State.SUBMITTED,
+          "stateUpdatedAt" -> java.util.Date.from(Instant.now())
+        ))
       )
     )
   }

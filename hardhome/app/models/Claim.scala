@@ -58,6 +58,7 @@ case class Claim(
   userID: UUID,
   claimID: UUID,
   state: Claim.State.Value,
+  stateUpdatedAt: java.util.Date,
   sentTo: Recipients
 ) {
 

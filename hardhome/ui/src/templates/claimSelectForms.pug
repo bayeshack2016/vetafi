@@ -22,7 +22,7 @@
           button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
             div.edit-icon
             | Edit
-          a(class="btn download-btn" href="/claim/{{claimId}}/form/{{formId}}/pdf" download="{{formId}}.pdf")
+          a(class="btn download-btn" href="/pdf/{{claimId}}/{{formId}}" download="{{formId}}.pdf")
             div.download-icon
             | Download
 
