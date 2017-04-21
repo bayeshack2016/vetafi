@@ -13,7 +13,13 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.formId = $stateParams.formId;
 
       $scope.onDownload = function() {
-        downloadSpinner.showBusyUntilDownload();
+        var popup = $window.open("/", "_blank");
+        save(false).then(
+          function() {
+            downloadSpinner.showBusyUntilDownload();
+            popup.location.href = "/pdf/" + $stateParams.claimId + "/" + $stateParams.formId;
+          }
+        );
       };
 
       $scope.onSubmit = function () {

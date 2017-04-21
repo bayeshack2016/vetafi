@@ -3,7 +3,8 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
   function($scope, claimService, formTemplateService, $stateParams, $state, claimForms, net, downloadSpinner) {
     $scope.claimId = $stateParams.claimId;
 
-    $scope.onDownload = function() {
+    $scope.onDownload = function(formId) {
+      window.open("/pdf/" + $stateParams.claimId + "/" + formId, "_blank")
       downloadSpinner.showBusyUntilDownload();
     };
 
