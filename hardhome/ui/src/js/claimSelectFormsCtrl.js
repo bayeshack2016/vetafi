@@ -1,7 +1,11 @@
 var app = angular.module('vetafiApp');
-app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms', 'net',
-  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms, net) {
+app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms', 'net', 'downloadSpinner',
+  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms, net, downloadSpinner) {
     $scope.claimId = $stateParams.claimId;
+
+    $scope.onDownload = function() {
+      downloadSpinner.showBusyUntilDownload();
+    };
 
     // claimForms is an array of form objects associated with claim
     // myForms is a mapping of formId -> claimForm object

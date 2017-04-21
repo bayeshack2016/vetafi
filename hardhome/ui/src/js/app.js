@@ -10,7 +10,8 @@ var app = angular.module('vetafiApp', [
   'formlyBootstrap',
   'angular-momentjs',
   'ui.bootstrap',
-  'ui.router'
+  'ui.router',
+  'ngCookies'
 ]);
 
 /**

@@ -4,17 +4,17 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService',
-  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval',
+  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval', 'downloadSpinner',
     function ($scope, $filter, $rootScope, formTemplateService,
-              $stateParams, $state, userValues, $window, net, $interval) {
+              $stateParams, $state, userValues, $window, net, $interval, downloadSpinner) {
       $scope.title = formTemplateService[$stateParams.formId].vfi.title;
       $scope.description = formTemplateService[$stateParams.formId].vfi.description;
       $scope.claimId = $stateParams.claimId;
       $scope.formId = $stateParams.formId;
 
-      function currentDate() {
-        return $filter('date')(new Date(), 'MM/dd/yyyy');
-      }
+      $scope.onDownload = function() {
+        downloadSpinner.showBusyUntilDownload();
+      };
 
       $scope.onSubmit = function () {
         save(true).then(
@@ -30,7 +30,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       };
 
       $scope.onSave = function () {
-        save(true)
+        downloadSpinner.showBusy();
+        save(true).then(downloadSpinner.hideBusy, downloadSpinner.hideBusy);
       };
 
       var lastParams = null;

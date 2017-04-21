@@ -102,7 +102,10 @@ class FormController @Inject() (
       formDAO.find(request.identity.userID, claimID, formKey).flatMap {
         case Some(claimForm) =>
           documentService.render(claimForm).map {
-            content => Ok(content).as("application/pdf")
+            content =>
+              Ok(content).as("application/pdf").withCookies(
+                Cookie("fileDownloadToken", "1", secure = false, httpOnly = false)
+              )
           }
         case None =>
           Future.successful(NotFound)

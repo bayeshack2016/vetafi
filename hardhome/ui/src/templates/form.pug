@@ -14,7 +14,7 @@ div#vfi-form-view
                         | Submit
                     button.save(type="button" ng-click="onSave()")
                         | Save Information
-                    a(class="download btn" href="/pdf/{{claimId}}/{{formId}}" download="{{formId}}.pdf")
+                    a(class="download btn" href="/pdf/{{claimId}}/{{formId}}" download="{{formId}}.pdf" ng-click="onDownload()")
                         | Download
 
 
