@@ -2,12 +2,11 @@ div.profile-section#settings
 
   div.section
     div.summary Change your account password
-    button(ng-click="clickChangePassword()") Change Password
+    a.btn(href="/password/change") Change Password
 
   div.section
     div.summary Log out of your account
-    a(href="/logout")
-      button.logout Log Out
+    a(class="btn logout" href="/signout") Log Out
 
   div.section
     div.summary Delete your account and all of your saved information

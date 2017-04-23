@@ -13,7 +13,7 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       $scope.formId = $stateParams.formId;
 
       $scope.onDownload = function() {
-        var popup = $window.open("/", "_blank");
+        var popup = $window.open("/loading", "_blank");
         save(false).then(
           function() {
             downloadSpinner.showBusyUntilDownload();
@@ -39,6 +39,14 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         downloadSpinner.showBusy();
         save(true).then(downloadSpinner.hideBusy, downloadSpinner.hideBusy);
       };
+
+      $window.addEventListener("visibilitychange",
+        save,
+        false);
+
+      $window.addEventListener("onbeforeunload",
+        save,
+        false);
 
       var lastParams = null;
       function save(force) {

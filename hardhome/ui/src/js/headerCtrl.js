@@ -40,7 +40,7 @@ app.controller("headerCtrl",
           });
           modal.result.then(function() {
             that.active = false;
-            $window.location.href = '/login';
+            $window.location.href = '/signin';
           });
         });
       };

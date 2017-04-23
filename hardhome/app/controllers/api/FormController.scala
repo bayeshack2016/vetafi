@@ -112,6 +112,11 @@ class FormController @Inject() (
       }
   }
 
+  def pdfLoadingScreen(): Action[AnyContent] = Action {
+    request =>
+      Ok("Please wait while your document is being generated...")
+  }
+
   def updateUserValues(identity: User, values: Map[String, JsValue]): Future[Unit] = {
     userValuesDAO.update(identity.userID, values).flatMap {
       case ok if ok.ok =>

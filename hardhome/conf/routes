@@ -42,9 +42,10 @@ POST        /api/claim/submit/:claimID       controllers.api.ClaimController.sub
 
 
 
-GET         /api/form/:claimID/:formKey      controllers.api.FormController.getForm(claimID: java.util.UUID, formKey: String)
-GET         /pdf/:claimID/:formKey       controllers.api.FormController.getPdf(claimID: java.util.UUID, formKey: String)
-GET         /api/forms/:claimID              controllers.api.FormController.getFormsForClaim(claimID: java.util.UUID)
+GET         /api/form/:claimID/:formKey           controllers.api.FormController.getForm(claimID: java.util.UUID, formKey: String)
+GET         /pdf/:claimID/:formKey                controllers.api.FormController.getPdf(claimID: java.util.UUID, formKey: String)
+GET         /loading                              controllers.api.FormController.pdfLoadingScreen()
+GET         /api/forms/:claimID                   controllers.api.FormController.getFormsForClaim(claimID: java.util.UUID)
 GET         /api/form/:claimID/:formKey/issigned  controllers.api.FormController.getFormSignatureStatus(claimID: java.util.UUID, formKey: String)
 # Gulp managed static assets
-GET         /*file                           controllers.GulpAssets.at(file)
+GET         /*file                                controllers.GulpAssets.at(file)

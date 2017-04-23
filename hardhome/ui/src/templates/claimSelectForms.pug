@@ -7,7 +7,7 @@
       div.section-header
         h4 Required Forms:
         uib-progressbar.progressbar(value="numRequiredCompleted", max="numRequiredForms", type="{{numRequiredCompleted == numRequiredForms ? 'success' : 'info'}}")
-          span {{numRequiredCompleted}}/{{numRequiredForms}}
+          span.progress-bar-text {{numRequiredCompleted}}/{{numRequiredForms}}
 
       div.form-wrapper(ng-repeat="(formId, form) in allForms", ng-init="myForm = myForms[formId]")
         div.form-content
@@ -22,7 +22,7 @@
           button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
             div.edit-icon
             | Edit
-          button.download(type="button" ng-click="onDownload(formId)")
+          button.download-btn(type="button" ng-click="onDownload(formId)")
             div.download-icon
             | Download
 
