@@ -53,10 +53,11 @@ class UserValuesDAOImpl @Inject() (
         userValuesCollection.update(
           Json.obj("userID" -> userID),
           // The values on the RHS of `++` will overwrite the values of the LHS
-          Json.obj("$set" -> Json.obj("values" -> Json.toJson(existingValues ++ values))),
-          upsert = true
+          Json.obj("$set" -> Json.obj("values" -> Json.toJson(existingValues ++ values)))
         )
       })
     })
   }
+
+  override def initialize(userID: UUID): Future[WriteResult] = collection.flatMap { _.insert(UserValues(userID, Map())) }
 }

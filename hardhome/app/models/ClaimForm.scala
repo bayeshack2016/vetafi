@@ -1,5 +1,6 @@
 package models
 
+import java.net.URL
 import java.util.UUID
 
 import play.api.libs.json._
@@ -22,7 +23,9 @@ case class ClaimForm(
   pdf: Array[Byte],
   // for seamlessdocs
   externalFormId: Option[String] = None,
-  externalApplicationId: Option[String] = None
+  externalApplicationId: Option[String] = None,
+  externalSignatureLink: Option[String] = None,
+  isSigned: Boolean = false
 ) {
 
 }

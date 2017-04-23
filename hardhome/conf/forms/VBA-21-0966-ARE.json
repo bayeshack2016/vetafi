@@ -2,7 +2,9 @@
   "vfi": {
     "title": "Intent to File",
     "summary": "This form is used to notify VA of your intent to file for benefits. Even if your claim fails to process, your benefits effective date will still be the date the VA receives this form.",
-    "required": true
+    "required": true,
+    "externalId": "CO17041000026019489",
+    "externalSignerId": "2748132ac631d103455f407e6250ad9f"
   },
   "name": "INTENT TO FILE A CLAIM FOR COMPENSATION AND/OR PENSION, OR SURVIVORS PENSION AND/OR DIC",
   "description": "This Form Is Used to Notify VA of Your Intent to File for General Benefits",
@@ -28,56 +30,26 @@
     },
     {
       "key": "veteran_intent_to_file_compensation_y_n",
-      "type": "radio",
+      "type": "checkbox",
       "templateOptions": {
-        "label": "Do you intend to file for compensation related benefits?",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "Yes"
-          },
-          {
-            "name": "No",
-            "value": "No"
-          }
-        ],
-        "optional": false
+        "label": "Check if you intend to file for compensation related benefits.",
+        "optional": true
       }
     },
     {
       "key": "veteran_intent_to_file_pension_y_n",
-      "type": "radio",
+      "type": "checkbox",
       "templateOptions": {
-        "label": "Do you intend to file for pension related benefits?",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "Yes"
-          },
-          {
-            "name": "No",
-            "value": "No"
-          }
-        ],
-        "optional": false
+        "label": "Check if you intend to file for pension related benefits.",
+        "optional": true
       }
     },
     {
       "key": "dependency_indemnity_compensation_y_n",
-      "type": "radio",
+      "type": "checkbox",
       "templateOptions": {
-        "label": "Do you intend to file for survivors pension and/or dependency and indemnity compensation?",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "Yes"
-          },
-          {
-            "name": "No",
-            "value": "No"
-          }
-        ],
-        "optional": false
+        "label": "Check if you intend to file for survivors pension and/or dependency and indemnity compensation.",
+        "optional": true
       }
     },
     {
@@ -206,7 +178,7 @@
       "type": "input",
       "templateOptions": {
         "label": "Veteran's Service Number (If applicable)",
-        "optional": false
+        "optional": true
       }
     },
 
@@ -339,19 +311,6 @@
         "rows": 2,
         "columns": 100,
         "optional": true
-      }
-    },
-
-    {
-      "key": "veteran_date_signed_0966",
-      "type": "input",
-      "optionsTypes": [
-        "date"
-      ],
-      "templateOptions": {
-        "label": "Date Signed",
-        "placeholder": "MM/DD/YYYY",
-        "optional": false
       }
     }
   ]

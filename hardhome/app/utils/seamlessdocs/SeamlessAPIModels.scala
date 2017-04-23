@@ -5,18 +5,18 @@ import play.api.libs.json.{ JsValue, Json, OFormat }
 /**
  * Case classes representing the API response from the seamless docs api.
  */
-case class SeamlessResponse(result: Boolean, error_log: Seq[SeamlessAPIError]) {
+case class SeamlessErrorResponse(error: Boolean, error_log: Seq[SeamlessAPIError]) {
 
 }
 
-object SeamlessResponse {
-  implicit val jsonFormat: OFormat[SeamlessResponse] = Json.format[SeamlessResponse]
+object SeamlessErrorResponse {
+  implicit val jsonFormat: OFormat[SeamlessErrorResponse] = Json.format[SeamlessErrorResponse]
 }
 
 case class SeamlessAPIError(
   error_code: String,
   error_message: String,
-  error_description: String
+  error_description: Option[String]
 ) {
 
 }
@@ -145,6 +145,23 @@ object SeamlessRecipientInfo {
 
 /**
  * {
+ * "error_code": "submission_halt",
+ * "error_message": "Error executing signature workflow: Unable to find recipient info of the next signer '71f0d6844867a206d837f6728ddb545b'",
+ * "error_description": "submission:execute"
+ * }
+ */
+case class SeamlessErrorLog(
+  error_code: String,
+  error_message: String,
+  error_description: String
+)
+
+object SeamlessErrorLog {
+  implicit val jsonFormat: OFormat[SeamlessErrorLog] = Json.format[SeamlessErrorLog]
+}
+
+/**
+ * {
  * "result": true,
  * "application_id": "AP15021000011409822",
  * "description": "Submission successful"
@@ -160,4 +177,32 @@ case class SeamlessApplicationCreateResponse(
 
 object SeamlessApplicationCreateResponse {
   implicit val jsonFormat: OFormat[SeamlessApplicationCreateResponse] = Json.format[SeamlessApplicationCreateResponse]
+}
+
+/**
+ * {
+ * "status": "Incomplete (pending)",
+ * "total_signers": 3,
+ * "signatures": 1
+ * }
+ */
+case class SeamlessApplicationStatus(
+  status: String,
+  total_signers: Int,
+  signatures: Int
+) {
+
+}
+
+object SeamlessApplicationStatus {
+  implicit val jsonFormat: OFormat[SeamlessApplicationStatus] = Json.format[SeamlessApplicationStatus]
+}
+
+/**
+ * {"key":"2748132ac631d103455f407e6250ad9f","recipient_type":"userdefined","order":"1","reference":"Signer1","color":"#D7CB35","signer_type":"userdefined","signer_key":"2748132ac631d103455f407e6250ad9f"}
+ */
+case class SeamlessSigner(key: String, recipient_type: String, order: String, reference: String, color: String, signer_type: String, signer_key: String)
+
+object SeamlessSigner {
+  implicit val jsonFormat: OFormat[SeamlessSigner] = Json.format[SeamlessSigner]
 }

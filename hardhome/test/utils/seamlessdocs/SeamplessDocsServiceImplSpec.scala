@@ -71,7 +71,8 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
           case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => throw TestException()
         })({ client: SeamlessDocsServiceImpl =>
 
-          val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+          val future: Future[SeamlessApplicationCreateResponse] =
+            client.formPrepare("test", "joe", "joe@email.com", "signer", Map())
           future.onComplete {
             case Failure(e) => e must beAnInstanceOf[TestException]
             case Success(_) => failure
@@ -94,12 +95,13 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
           }
         })({ client: SeamlessDocsServiceImpl =>
 
-          val future: Future[SeamlessApplicationCreateResponse] = client.formPrepare("test", "joe", "joe@email.com", Map())
+          val future: Future[SeamlessApplicationCreateResponse] =
+            client.formPrepare("test", "joe", "joe@email.com", "signer", Map())
           future.onComplete {
             case Failure(_) => failure
             case Success(res: SeamlessApplicationCreateResponse) =>
-              res.application_id must be equalTo "AP15021000011409822"
-              res.description must be equalTo "Submission successful"
+              res.application_id must be equalTo Some("AP15021000011409822")
+              res.description must be equalTo Some("Submission successful")
               res.result must beTrue
           }
         })
@@ -122,7 +124,7 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
         })({ client: SeamlessDocsServiceImpl =>
 
           val future: Future[SeamlessApplicationCreateResponse] =
-            client.formPrepare("test", "joe", "joe@email.com", Map())
+            client.formPrepare("test", "joe", "joe@email.com", "signer", Map())
           future.onComplete {
             case Failure(e) => e must
               beAnInstanceOf[RuntimeException]

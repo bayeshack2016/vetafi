@@ -10,7 +10,8 @@ var app = angular.module('vetafiApp', [
   'formlyBootstrap',
   'angular-momentjs',
   'ui.bootstrap',
-  'ui.router'
+  'ui.router',
+  'ngCookies'
 ]);
 
 /**
@@ -253,4 +254,23 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     controller: 'supportCtrl'
   });
 
+  $stateProvider.state({
+    name: 'root.sign',
+    url: '/sign/{claimId}',
+    templateUrl: 'templates/signDocument.html',
+    controller: 'signDocumentCtrl',
+      resolve: {
+          claimForms: ['net', '$q', '$stateParams', function(net, $q, $stateParams) {
+              var deferred = $q.defer();
+              net.getFormsForClaim($stateParams.claimId).then(
+                  function success(res) {
+                      deferred.resolve(res.data);
+                  }, function failure() {
+                      deferred.reject();
+                  }
+              );
+              return deferred.promise;
+          }]
+      }
+  });
 }]);

@@ -16,7 +16,6 @@ class ClaimServiceSpec extends PlaySpecification with Mockito {
   sequential
 
   "The ClaimServiceImpl" should {
-
     "evaluate hide expressions correctly" in new WithApplication(GuiceApplicationBuilder()
       .configure(Configuration(ConfigFactory.load("application.test.conf")))
       .disable(classOf[JobModule])
@@ -32,7 +31,7 @@ class ClaimServiceSpec extends PlaySpecification with Mockito {
           None,
           Some("model.condition === \"x\"")
         )
-      ) must beTrue
+      ) must beFalse
 
       claimService.shouldBeAnswered(Map("condition" -> JsString("y")))(
         Field(
@@ -42,7 +41,7 @@ class ClaimServiceSpec extends PlaySpecification with Mockito {
           None,
           Some("model.condition === \"x\"")
         )
-      ) must beFalse
+      ) must beTrue
     }
   }
 

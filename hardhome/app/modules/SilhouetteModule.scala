@@ -2,7 +2,6 @@ package modules
 
 import com.google.inject.name.Named
 import com.google.inject.{ AbstractModule, Provides }
-import com.mohiva.play.silhouette.api.actions.{ SecuredErrorHandler, UnsecuredErrorHandler }
 import com.mohiva.play.silhouette.api.crypto._
 import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
 import com.mohiva.play.silhouette.api.services._
@@ -13,7 +12,6 @@ import com.mohiva.play.silhouette.impl.authenticators._
 import com.mohiva.play.silhouette.impl.providers._
 import com.mohiva.play.silhouette.impl.providers.oauth1._
 import com.mohiva.play.silhouette.impl.providers.oauth1.secrets.{ CookieSecretProvider, CookieSecretSettings }
-import com.mohiva.play.silhouette.impl.providers.oauth1.services.PlayOAuth1Service
 import com.mohiva.play.silhouette.impl.providers.oauth2._
 import com.mohiva.play.silhouette.impl.providers.oauth2.state.{ CookieStateProvider, CookieStateSettings, DummyStateProvider }
 import com.mohiva.play.silhouette.impl.providers.openid.YahooProvider
@@ -24,7 +22,6 @@ import com.mohiva.play.silhouette.password.BCryptPasswordHasher
 import com.mohiva.play.silhouette.persistence.daos.{ DelegableAuthInfoDAO, MongoAuthInfoDAO }
 import com.mohiva.play.silhouette.persistence.repositories.DelegableAuthInfoRepository
 import models.daos._
-import models.services.{ UserService, UserServiceImpl }
 import net.ceedubs.ficus.Ficus._
 import net.ceedubs.ficus.readers.ArbitraryTypeReader._
 import net.codingwell.scalaguice.ScalaModule
@@ -32,9 +29,12 @@ import play.api.Configuration
 import play.api.libs.concurrent.Execution.Implicits._
 import play.api.libs.openid.OpenIdClient
 import play.api.libs.ws.WSClient
-import utils.auth.{ RedirectSecuredErrorHandler, CustomUnsecuredErrorHandler, DefaultEnv, IdMeProvider }
+import utils.auth.{ CustomUnsecuredErrorHandler, DefaultEnv, IdMeProvider, RedirectSecuredErrorHandler }
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.api.libs.json._
+import _root_.services.UserService
+import _root_.services.UserServiceImpl
+import com.mohiva.play.silhouette.impl.providers.oauth1.services.PlayOAuth1Service
 
 /**
  * The Guice module which wires all Silhouette dependencies.

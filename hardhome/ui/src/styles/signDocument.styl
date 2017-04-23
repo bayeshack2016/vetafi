@@ -1,0 +1,42 @@
+@import "standards.styl"
+
+#vfi-sign-document-view
+  background-color: colorWhite
+  padding-bottom: largeSpacing
+
+#sign-document-wrapper
+  width: maxLayoutWidthPct
+  max-width: maxLayoutWidthPx
+  margin: 0 auto
+  padding-top: largeSpacing
+  padding-bottom: largeSpacing
+
+  & .section
+    margin-bottom: megaSpacing
+
+  & h4
+    display: inline-block
+    color: colorPrimaryDarkBlue
+
+  & .highlighted
+    background-color: colorYellowLight
+
+  & .header
+    margin-bottom: smallSpacing
+
+  .disabled
+    background-color: colorLightGray
+    cursor: not-allowed !important
+
+  & .signature-table-element
+    padding-top: 10px
+
+  & .signature-complete-indicator
+    display: inline-block
+    & p
+      display: inline-block
+    & img
+      width: 25px
+      height: 25px
+      margin-left: 5px
+      display: inline-block

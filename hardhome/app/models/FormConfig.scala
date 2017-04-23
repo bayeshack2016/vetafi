@@ -19,7 +19,8 @@ object FormConfig {
   implicit val jsonFormat: OFormat[FormConfig] = Json.format[FormConfig]
 }
 
-case class VetafiInfo(title: String, summary: String, required: Boolean) {
+case class VetafiInfo(title: String, summary: String, required: Boolean, externalId: String,
+  externalSignerId: String) {
 
 }
 
@@ -41,7 +42,7 @@ object Field {
 
   object TemplateType extends Enumeration {
     type TemplateType = Value
-    val radio, input, textarea = Value
+    val radio, input, textarea, checkbox = Value
   }
 
   object ValidationType extends Enumeration {

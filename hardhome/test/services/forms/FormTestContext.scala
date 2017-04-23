@@ -63,7 +63,7 @@ trait FormTestContext extends Scope {
     override def getFormConfigs: Map[String, FormConfig] = Map("test" -> FormConfig(
       "test",
       "Test config.",
-      VetafiInfo("test", "Test config.", required = true),
+      VetafiInfo("test", "Test config.", required = true, externalId = "test", externalSignerId = "test"),
       Seq(condition1DependentField, condition2DependentField,
         requiredField1, requiredField2, optionalField1, optionalField2)
     ))

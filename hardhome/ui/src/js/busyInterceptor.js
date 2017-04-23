@@ -1,6 +1,7 @@
 var app = angular.module('vetafiApp');
 var BUSY_DELAY = 1000; // Will not show loading graphic until 1000ms have passed and we are still waiting for responses.
 
+/*
 app.config(function ($httpProvider) {
   $httpProvider.interceptors.push('busyHttpInterceptor');
 })
@@ -41,3 +42,4 @@ app.config(function ($httpProvider) {
       }
     }
   }]);
+*/

@@ -11,7 +11,7 @@ div#header
             a.big-link(href='/signup' ng-if='!isSignedIn')
                 h5 Sign Up
                 .underline-border
-            a.big-link(href='/login' ng-if='!isSignedIn')
+            a.big-link(href='/signin' ng-if='!isSignedIn')
                 h5 Log In
                 div.underline-border
             // If signed in
@@ -23,7 +23,7 @@ div#header
                 outside-if-not="menu-btn"
                 ng-click="onToggleMenu()")
                     li(ui-sref="root.profile.general") My Profile
-                    a(href="/logout")
+                    a(href="/signout")
                         li Log out
 div.main-view-wrapper
    ui-view

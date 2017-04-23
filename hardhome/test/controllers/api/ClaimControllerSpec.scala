@@ -6,22 +6,27 @@ import com.mohiva.play.silhouette.api.LoginInfo
 import controllers.{ CSRFTest, SilhouetteTestContext }
 import com.mohiva.play.silhouette.test._
 import models._
-import org.specs2.mock.Mockito
+import org.mockito.{ Matchers, Mockito }
 import play.api.libs.json.{ JsResult, Json }
 import play.api.mvc.{ AnyContentAsEmpty, Result }
 import play.api.test.{ FakeRequest, PlaySpecification, WithApplication }
+import reactivemongo.api.commands.{ UpdateWriteResult, WriteResult }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
 
-class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
+class ClaimControllerSpec extends PlaySpecification with CSRFTest {
   sequential
 
   "The `getClaim` action" should {
     "return 200 and claim as json if found" in new ClaimControllerTestContext {
+
+      Mockito.when(mockClaimDao.findClaim(identity.userID, testIncompleteClaim.claimID))
+        .thenReturn(Future.successful(Some(testIncompleteClaim)))
+
       new WithApplication(application) {
         val getRequest: FakeRequest[AnyContentAsEmpty.type] =
-          FakeRequest(controllers.api.routes.ClaimController.getClaim(testClaim.claimID))
+          FakeRequest(controllers.api.routes.ClaimController.getClaim(testIncompleteClaim.claimID))
             .withAuthenticator(identity.loginInfo)
         val csrfReq = addToken(getRequest)
         val getResult = route(app, csrfReq).get
@@ -35,6 +40,10 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
     }
 
     "return 404 and empty if not found" in new ClaimControllerTestContext {
+
+      Mockito.when(mockClaimDao.findClaim(Matchers.any(), Matchers.any()))
+        .thenReturn(Future.successful(None))
+
       new WithApplication(application) {
         val getRequest: FakeRequest[AnyContentAsEmpty.type] =
           FakeRequest(controllers.api.routes.ClaimController.getClaim(UUID.randomUUID()))
@@ -49,6 +58,10 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
   "The `getClaims` action" should {
     "return 200 and claims as json if found" in new ClaimControllerTestContext {
+
+      Mockito.when(mockClaimDao.findClaims(identity.userID))
+        .thenReturn(Future.successful(Seq(testIncompleteClaim)))
+
       new WithApplication(application) {
         val getRequest = FakeRequest(controllers.api.routes.ClaimController.getClaims())
           .withAuthenticator(identity.loginInfo)
@@ -77,7 +90,20 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
     // TODO mockout DAO
 
-    "return 201 if created" in new SilhouetteTestContext {
+    "return 201 if created" in new ClaimControllerTestContext {
+      Mockito.when(mockClaimDao.findIncompleteClaim(identity.userID))
+        .thenReturn(Future.successful(None))
+        .thenReturn(Future.successful(Some(testIncompleteClaim)))
+
+      Mockito.when(mockClaimDao.create(identity.userID))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockFormDao.save(Matchers.any(), Matchers.any(), Matchers.any(), Matchers.any()))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockDocumentService.create(Matchers.any()))
+        .thenReturn(Future.successful(testForm))
+
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
           .withJsonBody(Json.toJson(Seq("form1", "form2")))
@@ -91,7 +117,11 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
       }
     }
 
-    "return 200 if already created" in new SilhouetteTestContext {
+    "return 200 if already created" in new ClaimControllerTestContext {
+
+      Mockito.when(mockClaimDao.findIncompleteClaim(identity.userID))
+        .thenReturn(Future.successful(Some(testIncompleteClaim)))
+
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
           .withJsonBody(Json.toJson(Seq("form1", "form2")))
@@ -101,25 +131,25 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
 
         val result: Future[Result] = route(app, csrfReq).get
 
-        status(result) must be equalTo CREATED
-
-        val req2 = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
-          .withJsonBody(Json.toJson(Seq("form1", "form2")))
-          .withAuthenticator[DefaultEnv](identity.loginInfo)
-
-        val csrfReq2 = addToken(req2)
-
-        val result2: Future[Result] = route(app, csrfReq2).get
-
-        status(result2) must be equalTo OK
+        status(result) must be equalTo OK
       }
     }
   }
 
   "The `submit` action" should {
     "return 200" in new ClaimControllerTestContext {
+
+      Mockito.when(mockClaimDao.findClaim(identity.userID, testIncompleteClaim.claimID))
+        .thenReturn(Future.successful(Some(testIncompleteClaim)))
+
+      Mockito.when(mockClaimDao.save(Matchers.eq(identity.userID), Matchers.eq(testIncompleteClaim.claimID), Matchers.any()))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockClaimDao.submit(identity.userID, testIncompleteClaim.claimID))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
       new WithApplication(application) {
-        val req = FakeRequest(POST, controllers.api.routes.ClaimController.submit(testClaim.claimID).url)
+        val req = FakeRequest(POST, controllers.api.routes.ClaimController.submit(testIncompleteClaim.claimID).url)
           .withJsonBody(Json.toJson(Recipients(
             Some(Address(
               name = Some("joe")
@@ -137,8 +167,6 @@ class ClaimControllerSpec extends PlaySpecification with Mockito with CSRFTest {
         val result: Future[Result] = route(app, csrfReq).get
 
         status(result) must be equalTo OK
-
-        testClaim.state must be equalTo Claim.State.SUBMITTED
       }
     }
   }

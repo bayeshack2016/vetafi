@@ -8,10 +8,10 @@ import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
 import com.mohiva.play.silhouette.api.util.{ PasswordHasherRegistry, PasswordInfo }
 import com.mohiva.play.silhouette.impl.providers.CredentialsProvider
 import forms.ResetPasswordForm
-import models.services.{ AuthTokenService, UserService }
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
-import play.api.mvc.Controller
+import play.api.mvc.{ Action, AnyContent, Controller }
+import _root_.services.{ AuthTokenService, UserService }
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -42,9 +42,14 @@ class ResetPasswordController @Inject() (
    * @param token The token to identify a user.
    * @return The result to display.
    */
-  def view(token: UUID) = silhouette.UnsecuredAction.async { implicit request =>
+  def view(token: UUID): Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
     authTokenService.validate(token).map {
-      case Some(authToken) => Ok(views.html.resetPassword(ResetPasswordForm.form, token))
+      case Some(authToken) =>
+        Ok(
+          views.html.authLayout("password-reset-view", "")(
+            views.html.passwordReset(ResetPasswordForm.form, token)
+          )
+        )
       case None => Redirect(routes.SignInController.view()).flashing("error" -> Messages("invalid.reset.link"))
     }
   }
@@ -55,11 +60,11 @@ class ResetPasswordController @Inject() (
    * @param token The token to identify a user.
    * @return The result to display.
    */
-  def submit(token: UUID) = silhouette.UnsecuredAction.async { implicit request =>
+  def submit(token: UUID): Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
     authTokenService.validate(token).flatMap {
       case Some(authToken) =>
         ResetPasswordForm.form.bindFromRequest.fold(
-          form => Future.successful(BadRequest(views.html.resetPassword(form, token))),
+          errors => Future.successful(BadRequest(errors.errorsAsJson)),
           password => userService.retrieve(authToken.userID).flatMap {
             case Some(user) if user.loginInfo.providerID == CredentialsProvider.ID =>
               val passwordInfo = passwordHasherRegistry.current.hash(password)

@@ -1,25 +1,25 @@
 package models.daos
 
+import java.time.Instant
 import java.util.UUID
 import javax.inject.Inject
 
-import models.{ Address, Claim, ClaimForm, Recipients }
-import play.api.libs.json.{ JsValue, Json }
+import models.{ Address, Claim, Recipients }
+import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
-import reactivemongo.api.Cursor
-import reactivemongo.api.commands.{ MultiBulkWriteResult, WriteResult }
-import reactivemongo.play.json.collection.JSONCollection
-import play.api.libs.json._
-
-import reactivemongo.api._
 import play.modules.reactivemongo.json._
-import play.modules.reactivemongo._
+import reactivemongo.api.Cursor
+import reactivemongo.api.commands.WriteResult
+import reactivemongo.play.json.collection.JSONCollection
+
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends ClaimDAO {
   def collection: Future[JSONCollection] = reactiveMongoApi.database.map(_.collection("claims"))
+
   def formCollection: Future[JSONCollection] = reactiveMongoApi.database.map(_.collection("forms"))
+
   /**
    * Finds user's claims
    *
@@ -57,49 +57,26 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
     })
   }
 
-  override def create(userID: UUID, forms: Seq[String]): Future[MultiBulkWriteResult] = {
+  override def create(userID: UUID): Future[WriteResult] = {
     val claim = Claim(
       userID = userID,
       claimID = UUID.randomUUID(),
       Claim.State.INCOMPLETE,
+      java.util.Date.from(Instant.now()),
       Recipients(None, None, Seq.empty[String], Seq.empty[Address])
     )
 
-    createForms(userID, claim.claimID, forms).flatMap {
-      case success if success.ok => collection.flatMap(_.insert(claim)).map(
-        (result: WriteResult) => success.merge(result)
-      )
-      case fail => Future.successful(fail)
-    }
-  }
-
-  def createForms(userID: UUID, claimID: UUID, forms: Seq[String]): Future[MultiBulkWriteResult] = {
-    val formObjects: Seq[ClaimForm] = forms.map((key: String) =>
-      ClaimForm(
-        key,
-        Map.empty[String, JsValue],
-        userID,
-        claimID,
-        0,
-        0,
-        0,
-        0,
-        Array.empty[Byte]
-      ))
-
-    formCollection.flatMap(
-      (coll: JSONCollection) => {
-        val documents = formObjects.map(implicitly[coll.ImplicitlyDocumentProducer](_))
-        coll.bulkInsert(ordered = false)(documents: _*)
-      }
-    )
+    collection.flatMap(_.insert(claim))
   }
 
   override def submit(userID: UUID, claimID: UUID): Future[WriteResult] = {
     collection.flatMap(
       _.update(
         Json.obj("userID" -> userID, "claimID" -> claimID),
-        Json.obj("$set" -> Json.obj("state" -> Claim.State.SUBMITTED))
+        Json.obj("$set" -> Json.obj(
+          "state" -> Claim.State.SUBMITTED,
+          "stateUpdatedAt" -> java.util.Date.from(Instant.now())
+        ))
       )
     )
   }

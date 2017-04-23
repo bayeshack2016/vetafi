@@ -22,9 +22,14 @@ class UserValuesController @Inject() (
   def getUserValues: Action[AnyContent] = silhouette.SecuredAction.async {
     request =>
       {
-        userValuesDAO.find(request.identity.userID).map {
-          case Some(userValues) => Ok(Json.toJson(userValues))
-          case None => NotFound
+        userValuesDAO.find(request.identity.userID).flatMap {
+          case Some(userValues) => Future.successful(Ok(Json.toJson(userValues)))
+          case None => userValuesDAO.initialize(request.identity.userID).flatMap {
+            case ok if ok.ok => userValuesDAO.find(request.identity.userID).map {
+              case Some(newUserValues) => Ok(Json.toJson(newUserValues))
+              case None => InternalServerError
+            }
+          }
         }
       }
   }

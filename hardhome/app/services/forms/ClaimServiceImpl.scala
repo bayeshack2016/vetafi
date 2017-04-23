@@ -25,6 +25,8 @@ class ClaimServiceImpl @Inject() (formConfigManager: FormConfigManager) extends 
     val optionalQuestions: Int = formConfig.fields.count(_.templateOptions.optional)
     val requiredQuestions: Int = formConfig.fields.count(shouldBeAnswered(claimForm.responses))
 
+    val test = formConfig.fields.map(f => (f.key, shouldBeAnswered(claimForm.responses)(f)))
+
     val answeredOptional: Int = formConfig.fields.count(
       (field: Field) => field.templateOptions.optional && claimForm.responses.contains(field.key)
     )
@@ -56,7 +58,8 @@ class ClaimServiceImpl @Inject() (formConfigManager: FormConfigManager) extends 
       val jsExpressionEval: AnyRef = engine.eval(
         field.hideExpression.get, new SimpleBindings(bindings)
       )
-      jsExpressionEval.asInstanceOf[Boolean]
+
+      !jsExpressionEval.asInstanceOf[Boolean]
     }
   }
 }

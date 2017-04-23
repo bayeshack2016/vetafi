@@ -2,10 +2,12 @@ package modules
 
 import com.google.inject.AbstractModule
 import models.daos._
-import models.services.{ AuthTokenService, AuthTokenServiceImpl }
 import net.codingwell.scalaguice.ScalaModule
+import services.documents.{ DocumentService, SeamlessDocsDocumentService }
+import services.{ AuthTokenService, AuthTokenServiceImpl }
 import services.forms._
 import services.submission.{ FaxSubmissionService, SubmissionService }
+import utils.seamlessdocs.{ SeamlessDocsService, SeamlessDocsServiceImpl }
 import utils.secrets.{ BiscuitSecretsManager, SecretsManager }
 
 /**
@@ -30,5 +32,7 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[ContactInfoService].to[ContactInfoServiceImpl]
     bind[ClaimService].to[ClaimServiceImpl]
     bind[SubmissionService].to[FaxSubmissionService]
+    bind[DocumentService].to[SeamlessDocsDocumentService]
+    bind[SeamlessDocsService].to[SeamlessDocsServiceImpl]
   }
 }

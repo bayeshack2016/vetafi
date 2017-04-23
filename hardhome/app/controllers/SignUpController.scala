@@ -6,12 +6,12 @@ import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api._
 import com.mohiva.play.silhouette.api.repositories.AuthInfoRepository
+import _root_.services.{ AuthTokenService, UserService }
 import com.mohiva.play.silhouette.api.services.AvatarService
 import com.mohiva.play.silhouette.api.util.{ Clock, PasswordHasherRegistry, PasswordInfo }
 import com.mohiva.play.silhouette.impl.providers._
 import forms.VetafiSignUpForm
 import models.User
-import models.services.{ AuthTokenService, UserService }
 import play.api.Configuration
 import play.api.i18n.{ I18nSupport, Messages, MessagesApi }
 import play.api.libs.concurrent.Execution.Implicits._
@@ -52,23 +52,18 @@ class SignUpController @Inject() (
    */
   def view: Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
     Future.successful(Ok(
-      views.html.signinLayout(
+      views.html.authLayout(
         "signup-view",
-        "",
-        routes.SocialAuthController.authenticate("idme").url
+        ""
       )(
-          views.html.signup.idmeText(),
-          views.html.signup.emailText(),
-          views.html.signup.linkToOtherPage(),
-          views.html.signup.inputs()
+          views.html.signupForm(routes.SocialAuthController.authenticate("idme").url)
         )
     ))
   }
 
   def maybeCreateUser(loginInfo: LoginInfo, data: VetafiSignUpForm.Data): Future[Option[User]] = {
     userService.retrieve(loginInfo).flatMap {
-      case Some(user) =>
-        Future.successful(None)
+      case Some(user) => Future.successful(None)
       case None =>
         val authInfo: PasswordInfo = passwordHasherRegistry.current.hash(data.password)
         val newUser = User(
@@ -95,21 +90,12 @@ class SignUpController @Inject() (
    */
   def submit: Action[AnyContent] = silhouette.UnsecuredAction.async { implicit request =>
     VetafiSignUpForm.form.bindFromRequest.fold(
-      form => Future.successful(BadRequest),
+      error => Future.successful(BadRequest(error.errorsAsJson)),
       data => {
-        val result = Redirect(routes.SignUpController.view()).flashing("info" -> Messages("sign.up.email.sent", data.email))
         val loginInfo = LoginInfo(CredentialsProvider.ID, data.email)
         userService.retrieve(loginInfo).flatMap {
-          case Some(user) =>
-            /*mailerClient.send(Email(
-              subject = Messages("email.already.signed.up.subject"),
-              from = Messages("email.from"),
-              to = Seq(data.email),
-              bodyText = Some(views.txt.emails.alreadySignedUp(user, url).body),
-              bodyHtml = Some(views.html.emails.alreadySignedUp(user, url).body)
-            ))*/
-
-            Future.successful(Redirect(routes.ApplicationController.index()))
+          case Some(_) =>
+            Future.successful(Redirect(routes.GulpAssets.index()))
           case None =>
             val authInfo = passwordHasherRegistry.current.hash(data.password)
             val user = User(
@@ -125,17 +111,6 @@ class SignUpController @Inject() (
             )
 
             userService.save(user).flatMap {
-
-              /*val url = routes.ActivateAccountController.activate(authToken.id).absoluteURL()
-
-              mailerClient.send(Email(
-                subject = Messages("email.sign.up.subject"),
-                from = Messages("email.from"),
-                to = Seq(data.email),
-                bodyText = Some(views.txt.emails.signUp(user, url).body),
-                bodyHtml = Some(views.html.emails.signUp(user, url).body)
-              ))*/
-
               val expirationDateTime = clock.now.withDurationAdded(
                 configuration.getMilliseconds("silhouette.authenticator.rememberMe.authenticatorExpiry").get,
                 1
@@ -161,7 +136,7 @@ class SignUpController @Inject() (
                 }.flatMap { authenticator =>
                   silhouette.env.eventBus.publish(LoginEvent(user, request))
                   silhouette.env.authenticatorService.init(authenticator).flatMap { v =>
-                    silhouette.env.authenticatorService.embed(v, result)
+                    silhouette.env.authenticatorService.embed(v, Redirect(routes.GulpAssets.index()))
                   }
                 }
             }

@@ -42,7 +42,7 @@ case class User(
    *
    * @return Maybe a name.
    */
-  def name = fullName.orElse {
+  def name: Option[String] = fullName.orElse {
     firstName -> lastName match {
       case (Some(f), Some(l)) => Some(f + " " + l)
       case (Some(f), None) => Some(f)

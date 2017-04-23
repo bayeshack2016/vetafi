@@ -3,15 +3,15 @@
 # ~~~~
 
 # Home page
-GET         /                                controllers.ApplicationController.index
+GET         /                                controllers.GulpAssets.index
 GET         /signout                         controllers.ApplicationController.signOut
 GET         /authenticate/:provider          controllers.SocialAuthController.authenticate(provider)
 
-GET         /signup                       controllers.SignUpController.view
-POST        /signup                       controllers.SignUpController.submit
+GET         /signup                          controllers.SignUpController.view
+POST        /signup                          controllers.SignUpController.submit
 
-GET         /signin                       controllers.SignInController.view
-POST        /signin                       controllers.SignInController.submit
+GET         /signin                          controllers.SignInController.view
+POST        /signin                          controllers.SignInController.submit
 
 GET         /password/forgot                 controllers.ForgotPasswordController.view
 POST        /password/forgot                 controllers.ForgotPasswordController.submit
@@ -35,12 +35,17 @@ GET         /api/user/values                 controllers.api.UserValuesControlle
 POST        /api/save/:claimID/:formKey      controllers.api.FormController.saveForm(claimID: java.util.UUID, formKey: String)
 
 GET         /api/claims                      controllers.api.ClaimController.getClaims
+GET         /api/claim/sign/:claimID         controllers.api.ClaimController.sign(claimID: java.util.UUID)
+GET         /api/claim/:claimID              controllers.api.ClaimController.getClaim(claimID: java.util.UUID)
 POST        /api/claims/create               controllers.api.ClaimController.create
-POST        /api/claim/:claimID              controllers.api.ClaimController.getClaim(claimID: java.util.UUID)
 POST        /api/claim/submit/:claimID       controllers.api.ClaimController.submit(claimID: java.util.UUID)
 
-GET         /api/form/:claimID/:formKey      controllers.api.FormController.getForm(claimID: java.util.UUID, formKey: String)
-GET         /api/forms/:claimID              controllers.api.FormController.getFormsForClaim(claimID: java.util.UUID)
 
+
+GET         /api/form/:claimID/:formKey           controllers.api.FormController.getForm(claimID: java.util.UUID, formKey: String)
+GET         /pdf/:claimID/:formKey                controllers.api.FormController.getPdf(claimID: java.util.UUID, formKey: String)
+GET         /loading                              controllers.api.FormController.pdfLoadingScreen()
+GET         /api/forms/:claimID                   controllers.api.FormController.getFormsForClaim(claimID: java.util.UUID)
+GET         /api/form/:claimID/:formKey/issigned  controllers.api.FormController.getFormSignatureStatus(claimID: java.util.UUID, formKey: String)
 # Gulp managed static assets
-GET         /*file                           controllers.GulpAssets.at(file)
+GET         /*file                                controllers.GulpAssets.at(file)

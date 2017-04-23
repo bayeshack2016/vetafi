@@ -1,7 +1,12 @@
 var app = angular.module('vetafiApp');
-app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms',
-  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms) {
+app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms', 'net', 'downloadSpinner',
+  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms, net, downloadSpinner) {
     $scope.claimId = $stateParams.claimId;
+
+    $scope.onDownload = function(formId) {
+      window.open("/pdf/" + $stateParams.claimId + "/" + formId, "_blank")
+      downloadSpinner.showBusyUntilDownload();
+    };
 
     // claimForms is an array of form objects associated with claim
     // myForms is a mapping of formId -> claimForm object
@@ -27,12 +32,19 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
     };
 
     $scope.onClickDone = function() {
-      $state.go('root.claimconfirm', {claimId: $stateParams.claimId}).then(
-        function success() {},
+      net.signClaim($stateParams.claimId).then(
+        function success(res) {
+          $state.go('root.sign', {claimId: $stateParams.claimId}).then(
+            function success() {},
+            function failure(err) {
+              console.error(err);
+            }
+          );
+        },
         function failure(err) {
           console.error(err);
         }
-      );
+      )
     };
   }
 ]);

@@ -58,6 +58,7 @@ case class Claim(
   userID: UUID,
   claimID: UUID,
   state: Claim.State.Value,
+  stateUpdatedAt: java.util.Date,
   sentTo: Recipients
 ) {
 
@@ -67,7 +68,7 @@ object Claim {
 
   object State extends Enumeration {
     type State = Value
-    val INCOMPLETE, DISCARDED, SUBMITTED, PROCESSED = Value
+    val INCOMPLETE, SIGNING, DISCARDED, SUBMITTED, PROCESSED = Value
   }
 
   implicit val enumFormat: Format[Claim.State.Value] = EnumUtils.enumFormat(Claim.State)

@@ -1,28 +1,34 @@
 package controllers.api
 
+import java.time.Instant
 import java.util.UUID
 
 import com.google.inject.AbstractModule
-import com.mohiva.play.silhouette.api.{ Environment, LoginInfo }
+import com.mohiva.play.silhouette.api.{Environment, LoginInfo}
 import com.typesafe.config.ConfigFactory
 import controllers.SilhouetteTestContext
 import models._
-import models.daos.ClaimDAO
+import models.daos.{ClaimDAO, FormDAO}
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
-import play.api.{ Application, Configuration }
+import play.api.{Application, Configuration}
 import play.api.inject.guice.GuiceApplicationBuilder
-import reactivemongo.api.commands.{ MultiBulkWriteResult, UpdateWriteResult, WriteResult }
+import reactivemongo.api.commands.{MultiBulkWriteResult, UpdateWriteResult, WriteResult}
 import utils.auth.DefaultEnv
+import _root_.services.forms.ClaimService
+import org.mockito.Mockito
+import play.api.libs.json.JsValue
+import services.documents.DocumentService
 
 import scala.concurrent.Future
 
 trait ClaimControllerTestContext extends SilhouetteTestContext {
 
-  var testClaim = Claim(
+  val testIncompleteClaim = Claim(
     identity.userID,
     UUID.randomUUID(),
     Claim.State.INCOMPLETE,
+    java.util.Date.from(Instant.now()),
     Recipients(
       None, None,
       Seq("test@website.com"),
@@ -30,48 +36,27 @@ trait ClaimControllerTestContext extends SilhouetteTestContext {
     )
   )
 
-  class FakeClaimDao extends ClaimDAO {
-    override def findClaims(userID: UUID): Future[Seq[Claim]] = {
-      if (userID == identity.userID) {
-        Future.successful(Seq(testClaim))
-      } else {
-        Future.successful(Seq())
-      }
-    }
+  var testForm = ClaimForm(
+    "VBA-21-0966-ARE",
+    Map.empty[String, JsValue],
+    identity.userID,
+    testIncompleteClaim.claimID,
+    0, 0, 0, 0,
+    Array.emptyByteArray
+  )
 
-    override def findClaim(userID: UUID, claimID: UUID): Future[Option[Claim]] = {
-      if (userID == identity.userID && claimID == testClaim.claimID) {
-        Future.successful(Some(testClaim))
-      } else {
-        Future.successful(None)
-      }
-    }
-
-    override def findIncompleteClaim(userID: UUID): Future[Option[Claim]] = {
-      if (testClaim.state == Claim.State.INCOMPLETE) {
-        Future.successful(Some(testClaim))
-      } else {
-        Future.successful(None)
-      }
-    }
-
-    override def create(userID: UUID, forms: Seq[String]): Future[MultiBulkWriteResult] = ???
-
-    override def submit(userID: UUID, claimID: UUID): Future[WriteResult] = {
-      testClaim = testClaim.copy(state = Claim.State.SUBMITTED)
-      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
-    }
-
-    override def save(userID: UUID, claimID: UUID, claim: Claim): Future[WriteResult] = {
-      testClaim = claim
-      Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
-    }
-  }
+  val mockClaimDao: ClaimDAO = Mockito.mock(classOf[ClaimDAO])
+  val mockFormDao: FormDAO = Mockito.mock(classOf[FormDAO])
+  val mockClaimService: ClaimService = Mockito.mock(classOf[ClaimService])
+  val mockDocumentService: DocumentService = Mockito.mock(classOf[DocumentService])
 
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
       bind[Environment[DefaultEnv]].toInstance(env)
-      bind[ClaimDAO].toInstance(new FakeClaimDao())
+      bind[ClaimDAO].toInstance(mockClaimDao)
+      bind[FormDAO].toInstance(mockFormDao)
+      bind[ClaimService].toInstance(mockClaimService)
+      bind[DocumentService].toInstance(mockDocumentService)
     }
   }
 

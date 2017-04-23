@@ -4,10 +4,12 @@ import java.util.UUID
 import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.Silhouette
-import models.daos.ClaimDAO
-import models.{ Claim, Recipients }
+import models.daos.{ ClaimDAO, FormDAO }
+import models.{ Claim, ClaimForm, Recipients }
 import play.api.libs.json.{ JsError, JsValue, Json }
-import play.api.mvc._
+import play.api.mvc.{ Action, _ }
+import services.documents.DocumentService
+import services.forms.{ ClaimService, FormConfigManager }
 import services.submission.SubmissionService
 import utils.auth.DefaultEnv
 
@@ -19,6 +21,10 @@ import scala.concurrent.Future
  */
 class ClaimController @Inject() (
   val claimDAO: ClaimDAO,
+  val formDAO: FormDAO,
+  val claimService: ClaimService,
+  val documentService: DocumentService,
+  val formConfigManager: FormConfigManager,
   silhouette: Silhouette[DefaultEnv],
   submissionService: SubmissionService
 ) extends Controller {
@@ -42,6 +48,32 @@ class ClaimController @Inject() (
       }
   }
 
+  private def createForms(userID: UUID, claimID: UUID, forms: Seq[String]): Future[Seq[Boolean]] = {
+    val futures = forms.map((key: String) => {
+      val newForm = claimService.calculateProgress(ClaimForm(
+        key,
+        Map.empty[String, JsValue],
+        userID,
+        claimID,
+        0,
+        0,
+        0,
+        0,
+        Array.empty[Byte],
+        externalFormId = Some(formConfigManager.getFormConfigs(key).vfi.externalId)
+      ))
+
+      for {
+        formSaveFuture <- formDAO.save(userID, claimID, key, newForm)
+      } yield {
+        true
+      }
+
+    })
+
+    Future.sequence(futures)
+  }
+
   def create: Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {
     request =>
       {
@@ -53,14 +85,17 @@ class ClaimController @Inject() (
           formKeys => {
             claimDAO.findIncompleteClaim(request.identity.userID).flatMap {
               case Some(claim) => Future.successful(Ok(Json.toJson(claim)))
-              case None => claimDAO.create(request.identity.userID, formKeys).flatMap {
-                case ok if ok.ok => claimDAO.findIncompleteClaim(request.identity.userID).map {
-                  claim => Ok(Json.toJson(claim))
+              case None => claimDAO.create(request.identity.userID).flatMap {
+                case ok if ok.ok => claimDAO.findIncompleteClaim(request.identity.userID).flatMap {
+                  case Some(claim) => createForms(claim.userID, claim.claimID, formKeys).map {
+                    _ => Created(Json.toJson(claim))
+                  }
+                  case None => Future.successful(InternalServerError(Json.obj(
+                    "status" -> "error"
+                  )))
                 }
-
-                case fail => Future.successful(InternalServerError(Json.obj(
-                  "status" -> "error",
-                  "message" -> fail.errmsg.getOrElse("Unknown database error.").toString
+                case _ => Future.successful(InternalServerError(Json.obj(
+                  "status" -> "error"
                 )))
               }
             }
@@ -87,6 +122,18 @@ class ClaimController @Inject() (
       }
       case _ => Future.successful(InternalServerError)
     }
+  }
+
+  def sign(claimID: UUID): Action[AnyContent] = silhouette.SecuredAction.async {
+    request =>
+      {
+        formDAO.find(request.identity.userID, claimID).flatMap {
+          forms =>
+            Future.sequence(forms.map(documentService.submitForSignature))
+        }.map {
+          _ => Ok
+        }
+      }
   }
 
   def submit(claimID: UUID): Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {

@@ -6,12 +6,12 @@ import javax.inject.Inject
 import models.daos.{ FormDAO, UserDAO }
 import models.{ ClaimForm, User }
 import play.api.http.Status
-import play.api.libs.ws.{ WSClient, WSResponse }
-import utils.seamlessdocs.{ SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessDocsServiceImpl }
+import play.api.libs.ws.WSClient
+import services.forms.FormConfigManager
+import utils.seamlessdocs.{ SeamlessAPIError, SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessErrorResponse }
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.util.Try
 
 /**
  * Document service backed by seamlessdocs
@@ -20,52 +20,82 @@ class SeamlessDocsDocumentService @Inject() (
   userDAO: UserDAO,
   formDAO: FormDAO,
   wSClient: WSClient,
-  seamlessDocs: SeamlessDocsService
+  seamlessDocs: SeamlessDocsService,
+  formConfigManager: FormConfigManager
 ) extends DocumentService {
 
-  private def updateFormWithApplication(form: ClaimForm)(res: SeamlessApplicationCreateResponse): ClaimForm = {
+  private def updateFormWithApplication(form: ClaimForm, res: SeamlessApplicationCreateResponse): ClaimForm = {
     form.copy(externalApplicationId = Some(res.application_id))
   }
 
+  def setSeamlessDocsFormId(form: ClaimForm): ClaimForm = {
+    form.copy(externalFormId = Some(formConfigManager.getFormConfigs(form.key).vfi.externalId))
+  }
+
   private def createApplication(user: User, form: ClaimForm): Future[ClaimForm] = {
+    val formWithId = setSeamlessDocsFormId(form)
     seamlessDocs.formPrepare(
-      form.externalFormId.get,
-      user.fullName.get,
+      formWithId.externalFormId.get,
+      user.name.getOrElse("Unknown User"),
       user.email.get,
-      form.responses
-    ).map(updateFormWithApplication(form))
+      formConfigManager.getFormConfigs(form.key).vfi.externalSignerId,
+      formWithId.responses
+    ).map {
+        case Left(application) => updateFormWithApplication(formWithId, application)
+        case Right(error) =>
+          throw new RuntimeException("Seamless doc form prepare returned error: " + error.toString)
+      }
   }
 
   private def maybeCreateApplication(form: ClaimForm): Future[ClaimForm] = {
     form.externalApplicationId match {
       case Some(id) => Future.successful(form)
       case None => userDAO.find(form.userID).flatMap {
-        case Some(user) => createApplication(user, form)
+        case Some(user) => createApplication(user, form).flatMap {
+          form =>
+            formDAO.save(form.userID, form.claimID, form.key, form).map {
+              case ok if ok.ok => form
+              case _ => throw new RuntimeException
+            }
+        }
         case None => throw new RuntimeException
       }
     }
   }
 
   /**
-   * Get PDF for document.
+   * Render form.
    *
    * @param form
    * @return
    */
   override def render(form: ClaimForm): Future[Array[Byte]] = {
-    val pdfUrlFuture: Future[URL] = maybeCreateApplication(form).flatMap(updatedForm => {
-      seamlessDocs.updatePdf(updatedForm.externalApplicationId.get, updatedForm.responses)
-    })
+    val formSubmissionFuture: Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] =
+      seamlessDocs.formSubmit(form.externalFormId.get, form.responses)
+
+    val updatePdfFuture: Future[Either[URL, SeamlessErrorResponse]] =
+      formSubmissionFuture.flatMap {
+        case Left(response) => seamlessDocs.updatePdf(response.application_id)
+        case Right(_) => throw new RuntimeException
+      }
+
+    val pdfUrlFuture: Future[URL] = updatePdfFuture.flatMap {
+      // If we get an error response, we already updated the pdf
+      case Right(_) =>
+        seamlessDocs.getApplication(form.externalApplicationId.get).map(
+          application => new URL(application.submission_pdf_url)
+        )
+      case Left(pdfUrl) => Future.successful(pdfUrl)
+    }
 
     val pdfFuture: Future[Array[Byte]] = pdfUrlFuture.flatMap(
-      pdfUrl => {
+      pdfUrl =>
         wSClient.url(pdfUrl.toString).get().map(res => {
           res.status match {
             case Status.OK => res.bodyAsBytes.toArray
             case _ => throw new RuntimeException
           }
         })
-      }
     )
 
     pdfFuture.flatMap(
@@ -76,6 +106,25 @@ class SeamlessDocsDocumentService @Inject() (
         }
       }
     )
+  }
+
+  /**
+   * Submit document to document service for signature.
+   *
+   * @param form
+   * @return
+   */
+  override def submitForSignature(form: ClaimForm): Future[ClaimForm] = {
+    maybeCreateApplication(form).flatMap(updatedForm => {
+      seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get).flatMap {
+        url =>
+          val formWithSignature: ClaimForm = updatedForm.copy(externalSignatureLink = Some(url.toString))
+          formDAO.save(formWithSignature.userID, formWithSignature.claimID, formWithSignature.key, formWithSignature).map {
+            case ok if ok.ok => formWithSignature
+            case _ => throw new RuntimeException
+          }
+      }
+    })
   }
 
   /**
@@ -91,5 +140,18 @@ class SeamlessDocsDocumentService @Inject() (
         case _ => throw new RuntimeException
       }
     })
+  }
+
+  /**
+   * Get the signature status of the form.
+   *
+   * @param form
+   * @return
+   */
+  override def isSigned(form: ClaimForm): Future[Boolean] = {
+    seamlessDocs.getApplicationStatus(form.externalApplicationId.get).map {
+      status =>
+        status.total_signers == status.signatures && status.status == "Complete"
+    }
   }
 }
