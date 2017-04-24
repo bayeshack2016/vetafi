@@ -22,6 +22,7 @@
         }
       },
       "only": [
+        "amazon-ebs",
         "virtualbox-iso",
         "vmware-iso"
       ]
@@ -31,6 +32,23 @@
       "scripts": [
         "scripts/node_5.sh",
         "scripts/dep.sh"
+      ],
+      "only": [
+        "amazon-ebs", "virtualbox-iso", "vmware-iso"
+      ]
+    },
+    {
+      "type": "file",
+      "source": "../../hardhome",
+      "destination": "/home/ubuntu/",
+      "only": [
+        "amazon-ebs"
+      ]
+    },
+    {
+      "type": "shell",
+      "scripts": [
+          "scripts/setup_app.sh"
       ],
       "only": [
         "amazon-ebs"

@@ -1,7 +1,6 @@
 package https
 
 import java.io.ByteArrayInputStream
-import java.nio.file._
 import java.security.KeyStore
 import javax.net.ssl._
 
@@ -10,8 +9,8 @@ import play.server.api._
 import utils.secrets.SecretsManager
 
 class BiscuitSSLEngineProvider(
-                                                 appProvider: ApplicationProvider,
-                                                 secretsManager: SecretsManager) extends SSLEngineProvider {
+                                appProvider: ApplicationProvider,
+                                secretsManager: SecretsManager) extends SSLEngineProvider {
 
   def readPassword(): Array[Char] = {
     secretsManager.getSecretUtf8("prod::keystore-password").toCharArray
@@ -22,8 +21,7 @@ class BiscuitSSLEngineProvider(
   }
 
   def readTrustInputStream(): java.io.InputStream = {
-    val keyPath = FileSystems.getDefault.getPath("certs", "clientca.jks")
-    Files.newInputStream(keyPath)
+    new ByteArrayInputStream(secretsManager.getSecret("prod::keystore-file"))
   }
 
   def readKeyManagers(): Array[KeyManager] = {
