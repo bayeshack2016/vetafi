@@ -3,7 +3,7 @@ package utils.secrets
 import java.io.InputStreamReader
 import java.nio.charset.StandardCharsets
 
-import com.amazonaws.auth.AWSCredentialsProvider
+import com.amazonaws.auth.{ AWSCredentialsProvider, DefaultAWSCredentialsProviderChain }
 import com.amazonaws.auth.profile.ProfileCredentialsProvider
 import com.amazonaws.regions.{ Region, Regions }
 import com.amazonaws.services.kms.{ AWSKMS, AWSKMSClient }
@@ -17,7 +17,7 @@ import play.{ Configuration, Logger }
  */
 class BiscuitSecretsManager @Inject() (configuration: Configuration) extends SecretsManager {
 
-  private val credentialsProvider: ProfileCredentialsProvider = new ProfileCredentialsProvider()
+  private val credentialsProvider: DefaultAWSCredentialsProviderChain = new DefaultAWSCredentialsProviderChain()
 
   private val regionHint: String = try {
     EC2MetadataUtils.getEC2InstanceRegion
@@ -33,8 +33,12 @@ class BiscuitSecretsManager @Inject() (configuration: Configuration) extends Sec
       .withKeyManager(kmsKeyManager)
       .build()
 
+    val yamlFileResource: String = configuration.getString("biscuit.yamlFile")
+
+    Logger.info(s"Reading secrets from $yamlFileResource")
+
     _biscuit.read(
-      new InputStreamReader(getClass.getClassLoader.getResource(configuration.getString("biscuit.yamlFile")).openStream())
+      new InputStreamReader(getClass.getClassLoader.getResource(yamlFileResource).openStream())
     )
 
     _biscuit
