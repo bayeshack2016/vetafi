@@ -3,11 +3,15 @@ import PlayGulp._
 
 import scalariform.formatter.preferences._
 
-name := "play-silhouette-reactivemongo-seed"
+name := "vetafi-web"
 
 version := "4.0.0"
 
 scalaVersion := "2.11.8"
+
+maintainer in Linux := "Jeff Quinn jeff@vetafi.org"
+
+packageSummary in Linux := "Vetafi.org web application."
 
 unmanagedClasspath in Runtime += baseDirectory.value / "conf"
 
@@ -32,11 +36,10 @@ libraryDependencies ++= Seq(
   specs2 % Test,
   cache,
   filters
-
 )
 
 lazy val root = (project in file("."))
-    .enablePlugins(PlayScala)
+    .enablePlugins(PlayScala, DebianPlugin)
     .settings(playGulpSettings)
 
 routesGenerator := InjectedRoutesGenerator

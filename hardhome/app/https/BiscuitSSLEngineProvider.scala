@@ -9,8 +9,9 @@ import play.server.api._
 import utils.secrets.SecretsManager
 
 class BiscuitSSLEngineProvider(
-                                appProvider: ApplicationProvider,
-                                secretsManager: SecretsManager) extends SSLEngineProvider {
+  appProvider: ApplicationProvider,
+  secretsManager: SecretsManager
+) extends SSLEngineProvider {
 
   def readPassword(): Array[Char] = {
     secretsManager.getSecretUtf8("prod::keystore-password").toCharArray
