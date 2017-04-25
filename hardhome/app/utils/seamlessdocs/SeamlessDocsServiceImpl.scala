@@ -21,11 +21,11 @@ class SeamlessDocsServiceImpl @Inject() (
 ) extends SeamlessDocsService {
 
   val url: String = configuration.getString("seamlessdocs.url").get
-  lazy val apiSecret: Array[Byte] = secretsManager.getSecret("seamlessdocs_secret_key")
-  lazy val apiKey: String = secretsManager.getSecretUtf8("seamlessdocs_api_key")
+  // lazy val apiSecret: Array[Byte] = secretsManager.getSecret("seamlessdocs_secret_key")
+  // lazy val apiKey: String = secretsManager.getSecretUtf8("seamlessdocs_api_key")
 
-  // lazy val apiSecret: Array[Byte] = configuration.getString("seamlessdocs.secret_key").get.getBytes
-  // lazy val apiKey: String = configuration.getString("seamlessdocs.api_key").get
+  lazy val apiSecret: Array[Byte] = configuration.getString("seamlessdocs.secret_key").get.getBytes
+  lazy val apiKey: String = configuration.getString("seamlessdocs.api_key").get
   lazy val requestUtils: RequestUtils = new RequestUtils(Clock.systemUTC())
 
   private def signRequest(request: WSRequest): WSRequest = {
