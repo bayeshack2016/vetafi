@@ -69,6 +69,7 @@ javaOptions in Universal ++= Seq(
   "-J-Xmx4000m",
   "-J-Xms512m",
   s"-Dpidfile.path=/var/run/play.pid",
+  s"-Dlogger.file=/usr/share/${packageName.value}/conf/logback.prod.xml",
   // Use separate configuration file for production environment
   s"-Dconfig.file=/usr/share/${packageName.value}/conf/application.prod.conf"
 )
