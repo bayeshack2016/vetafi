@@ -1,7 +1,7 @@
 import com.typesafe.sbt.SbtScalariform._
 import PlayGulp._
-
 import scalariform.formatter.preferences._
+import com.typesafe.sbt.packager.archetypes.ServerLoader
 
 name := "vetafi-web"
 
@@ -12,6 +12,8 @@ scalaVersion := "2.11.8"
 maintainer in Linux := "Jeff Quinn jeff@vetafi.org"
 
 packageSummary in Linux := "Vetafi.org web application."
+
+serverLoading in Debian := ServerLoader.Systemd
 
 unmanagedClasspath in Runtime += baseDirectory.value / "conf"
 

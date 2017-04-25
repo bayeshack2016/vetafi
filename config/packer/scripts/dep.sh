@@ -14,6 +14,8 @@ export DEBIAN_FRONTEND=noninteractive
 # Install tools
 sudo apt install git
 sudo apt install awscli
+# This is needed to build debs from the play-framework app
+sudo apt install fakeroot
 
 # To install the add-apt-repository utility
 apt-get -y install software-properties-common python-software-properties
@@ -67,6 +69,6 @@ rm -f biscuit-linux_amd64.tgz
 rm -f biscuit-java-master-SNAPSHOT.jar
 
 # Install certbot
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install certbot 
+sudo add-apt-repository -y ppa:certbot/certbot
+sudo apt-get -y update
+sudo apt-get -y install certbot
