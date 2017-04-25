@@ -64,3 +64,11 @@ ScalariformKeys.preferences := ScalariformKeys.preferences.value
 unmanagedResourceDirectories in Assets <+= (gulpDirectory in Compile)(base => base / "build")
 
 fork in run := false
+
+javaOptions in Universal ++= Seq(
+  "-J-Xmx4000m",
+  "-J-Xms512m",
+  s"-Dpidfile.path=/var/run/${packageName.value}/play.pid",
+  // Use separate configuration file for production environment
+  s"-Dconfig.file=/usr/share/${packageName.value}/conf/application.prod.conf"
+)
