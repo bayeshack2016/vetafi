@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream
 import java.security.KeyStore
 import javax.net.ssl._
 
+import play.Logger
 import play.core.ApplicationProvider
 import play.server.api._
 import utils.secrets.SecretsManager
@@ -27,6 +28,7 @@ class BiscuitSSLEngineProvider(
   }
 
   def readKeyManagers(): Array[KeyManager] = {
+    Logger.info("Reading key managers..")
     val password = readPassword()
     val keyInputStream = readKeyInputStream()
     try {
@@ -41,6 +43,7 @@ class BiscuitSSLEngineProvider(
   }
 
   def readTrustManagers(): Array[TrustManager] = {
+    Logger.info("Reading trust managers..")
     val password = readPassword()
     val trustInputStream = readTrustInputStream()
     try {
@@ -55,8 +58,28 @@ class BiscuitSSLEngineProvider(
   }
 
   def createSSLContext(applicationProvider: ApplicationProvider): SSLContext = {
-    val keyManagers = readKeyManagers()
-    val trustManagers = readTrustManagers()
+    Logger.info("Creating ssl context..")
+
+    var keyManagers: Array[KeyManager] = null
+    var trustManagers: Array[TrustManager] = null
+
+    try {
+      keyManagers = readKeyManagers()
+    } catch {
+      case e: Exception =>
+        Logger.error("Failed to read key managers", e)
+        throw new RuntimeException("Failed to read key managers", e)
+    }
+
+    try {
+      trustManagers = readTrustManagers()
+    } catch {
+      case e: Exception =>
+        Logger.error("Failed to read trustManagers managers", e)
+        throw new RuntimeException("Failed to read trust managers", e)
+    }
+
+    Logger.info("Loaded managers..")
 
     // Configure the SSL context to use TLS
     val sslContext = SSLContext.getInstance("TLS")

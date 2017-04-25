@@ -1,7 +1,4 @@
 <configuration>
-
-    <conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" />
-
     <appender name="ROLLING" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>/var/log/vetafi-web/vetafi-web.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
@@ -23,8 +20,7 @@
     <logger name="reactivemongo-akka.actor" level="WARN" />
     <logger name="com.gargoylesoftware.htmlunit.javascript" level="OFF" />
 
-    <root level="DEBUG">
+    <root level="INFO">
         <appender-ref ref="ROLLING" />
     </root>
-
 </configuration>

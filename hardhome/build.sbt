@@ -68,8 +68,14 @@ fork in run := false
 javaOptions in Universal ++= Seq(
   "-J-Xmx4000m",
   "-J-Xms512m",
-  s"-Dpidfile.path=/var/run/play.pid",
-  s"-Dlogger.file=/usr/share/${packageName.value}/conf/logback.prod.xml",
+  //s"-Dpidfile.path=/var/run/play.pid",
+  //s"-Dlogger.file=/usr/share/${packageName.value}/conf/logback.prod.xml",
   // Use separate configuration file for production environment
-  s"-Dconfig.file=/usr/share/${packageName.value}/conf/application.prod.conf"
+  //s"-Dconfig.file=/usr/share/${packageName.value}/conf/application.prod.conf",
+
+
+  s"-Dpidfile.path=/tmp/play.pid",
+  s"-Dlogger.file=/Users/jeffquinn/Code/play-example/vetafi/hardhome/conf/logback.xml",
+  // Use separate configuration file for production environment
+  s"-Dconfig.file=/Users/jeffquinn/Code/play-example/vetafi/hardhome/conf/application.prod.conf"
 )
