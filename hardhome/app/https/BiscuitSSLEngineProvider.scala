@@ -105,6 +105,7 @@ class BiscuitSSLEngineProvider(
     val engine = sslContext.createSSLEngine
     engine.setSSLParameters(sslParameters)
 
+    Logger.info("returning engine")
     engine
   }
 
