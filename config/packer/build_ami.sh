@@ -1,3 +1,5 @@
 #!/bin/bash
 
-packer build -only=amazon-ebs vetafi-ubuntu-16.04.2-server-amd64.json
+export ATLAS_TOKEN=$(biscuit get -f ../biscuit/secrets.yaml prod::atlas_token)
+
+packer build -only=amazon-ebs vetafi-ubuntu-14.04.4-server-amd64.json

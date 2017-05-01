@@ -65,6 +65,7 @@ unmanagedResourceDirectories in Assets <+= (gulpDirectory in Compile)(base => ba
 
 fork in run := false
 
+/*
 javaOptions in Universal ++= Seq(
   "-J-Xmx4000m",
   "-J-Xms512m",
@@ -79,3 +80,4 @@ javaOptions in Universal ++= Seq(
   // Use separate configuration file for production environment
   s"-Dconfig.file=/Users/jeffquinn/Code/play-example/vetafi/hardhome/conf/application.prod.conf"
 )
+*/

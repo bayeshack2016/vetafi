@@ -19,15 +19,21 @@
         },
         "vmware-iso": {
           "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
-        },
-        "amazon-ebs": {
-          "execute_command": "sudo -S bash '{{.Path}}'"
         }
       },
       "only": [
-        "amazon-ebs",
         "virtualbox-iso",
         "vmware-iso"
+      ]
+    },
+    {
+      "type": "shell",
+      "scripts": [
+        "scripts/node_5.sh",
+        "scripts/dep.sh"
+      ],
+      "only": [
+        "amazon-ebs"
       ]
     }
   ],
