@@ -12,10 +12,10 @@ import reactivemongo.play.json.JSONSerializationPack
 import utils.secrets.SecretsManager
 
 import scala.concurrent.{Await, Future}
-import scala.util.{Failure, Try}
+import scala.util.Failure
 
 /**
-  * Created by jeffquinn on 4/30/17.
+  * Custom MongoApi
   */
 class BiscuitPasswordMongoApi @Inject() (secretsManager: SecretsManager,
                                          configuration: Configuration,
@@ -32,7 +32,6 @@ class BiscuitPasswordMongoApi @Inject() (secretsManager: SecretsManager,
 
     val uri: String = s"mongodb://$username:$password@$hosts/$db?ssl=true"
     MongoConnection.parseURI(uri).get
-
   }
 
   def getNotProdUri: ParsedURI = {
@@ -40,26 +39,41 @@ class BiscuitPasswordMongoApi @Inject() (secretsManager: SecretsManager,
   }
 
   override def connection: MongoConnection = {
-
-    val con = driver.connection(parsedUri.get, strictUri = false).get
-    registerDriverShutdownHook(con, driver)
-    con
-
-    environment.mode match {
-      case Mode.Prod => getProdConnection
-
+    val connectionOption = environment.mode match {
+      case Mode.Prod => driver.connection(getProdUri, strictUri = false)
+      case _ => driver.connection(getNotProdUri, strictUri = false)
     }
-
-
+    registerDriverShutdownHook(connectionOption.get, driver)
+    connectionOption.get
   }
 
-  override def database: Future[DefaultDB] = ???
+  override def database: Future[DefaultDB] = {
+    val db = environment.mode match {
+      case Mode.Prod => getProdUri.db.get
+      case _ => getNotProdUri.db.get
+    }
 
-  override def asyncGridFS: Future[GridFS[JSONSerializationPack.type]] = ???
+    connection.database(db)
+  }
 
-  override def db: DefaultDB = ???
+  override def asyncGridFS: Future[GridFS[JSONSerializationPack.type]] = {
+    import scala.concurrent.ExecutionContext.Implicits.global
 
-  override def gridFS: GridFS[JSONSerializationPack.type] = ???
+    database.map(GridFS[JSONSerializationPack.type](_))
+  }
+
+  override def db: DefaultDB = {
+    val db = environment.mode match {
+      case Mode.Prod => getProdUri.db.get
+      case _ => getNotProdUri.db.get
+    }
+
+    connection(db)
+  }
+
+  override def gridFS: GridFS[JSONSerializationPack.type] = {
+    GridFS[JSONSerializationPack.type](db)
+  }
 
   private def registerDriverShutdownHook(connection: MongoConnection, mongoDriver: MongoDriver): Unit = {
     import scala.concurrent.ExecutionContext.Implicits.global
