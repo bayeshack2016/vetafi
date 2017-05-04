@@ -5,7 +5,7 @@ import com.typesafe.sbt.packager.archetypes.ServerLoader
 
 name := "vetafi-web"
 
-version := "4.0.0"
+version := "0.0.1"
 
 scalaVersion := "2.11.8"
 
@@ -35,6 +35,7 @@ libraryDependencies ++= Seq(
   "com.mohiva" %% "play-silhouette-testkit" % "4.0.0" % "test",
   "com.digitaltangible" %% "play-guard" % "2.0.0",
   "com.github.dcoker" % "biscuit-java" % "ebed4b3a238a45c007da138175f1132a6bf26b71",
+  "net.logstash.logback" % "logstash-logback-encoder" % "4.9",
   specs2 % Test,
   cache,
   filters
