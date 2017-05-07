@@ -105,11 +105,11 @@ class ClaimControllerSpec extends PlaySpecification with CSRFTest {
         .thenReturn(
           Map(
             "form1" -> FormConfig(
-            "form1",
-            "description",
-            VetafiInfo("title", "summary", required = true, "externalId1", "externalSignerId1"),
-            Seq()
-          ),
+              "form1",
+              "description",
+              VetafiInfo("title", "summary", required = true, "externalId1", "externalSignerId1"),
+              Seq()
+            ),
             "form2" -> FormConfig(
               "form2",
               "description",

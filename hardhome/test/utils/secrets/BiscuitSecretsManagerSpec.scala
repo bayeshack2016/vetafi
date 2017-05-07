@@ -8,13 +8,12 @@ import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import org.specs2.mock.Mockito
 import org.specs2.specification.Scope
-import play.api.{Application, Configuration}
+import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.test.{PlaySpecification, WithApplication}
+import play.api.test.{ PlaySpecification, WithApplication }
 import play.modules.reactivemongo.ReactiveMongoApi
 import services.FakeReactiveMongoApi
 import utils.auth.DefaultEnv
-
 
 trait BiscuitSecretsManagerSpecTestContext extends Scope {
 
