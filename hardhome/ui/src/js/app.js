@@ -33,7 +33,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
         var deferred = $q.defer();
         net.getClaimsForUser().then(
           function success(res) {
-            var existingClaim = _.find(res.data.claims, {'state': 'incomplete'});
+            var existingClaim = _.find(res.data, {'state': 'INCOMPLETE'});
             if (!_.isEmpty(existingClaim)) {
               claimService.setClaim(existingClaim);
             }

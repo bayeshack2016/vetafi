@@ -7,9 +7,9 @@ app.factory('claimService', [
       tosAccepted: false
     };
     var state = {
-      INCOMPLETE: 'incomplete',
-      SUBMITTED: 'submitted',
-      DISCARDED: 'discarded'
+      INCOMPLETE: 'INCOMPLETE',
+      SUBMITTED: 'SUBMITTED',
+      DISCARDED: 'DISCARDED'
     };
     return {
       /*
@@ -42,7 +42,7 @@ app.factory('claimService', [
       },
       acceptTos: function(accepted) {
         this.currentClaim.tosAccepted = accepted;
-      },
+      }
     };
   }
 ]);

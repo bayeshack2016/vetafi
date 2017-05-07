@@ -13,7 +13,9 @@ import net.codingwell.scalaguice.ScalaModule
 import org.mockito.Mockito
 import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
+import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.commands.{ UpdateWriteResult, WriteResult }
+import services.FakeReactiveMongoApi
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -28,6 +30,7 @@ trait UserValuesControllerTestContext extends SilhouetteTestContext {
       bind[Environment[DefaultEnv]].toInstance(env)
       bind[UserDAO].toInstance(mockUserDao)
       bind[UserValuesDAO].toInstance(mockUserValuesDao)
+      bind[ReactiveMongoApi].toInstance(new FakeReactiveMongoApi)
     }
   }
 

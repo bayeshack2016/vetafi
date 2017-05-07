@@ -11,3 +11,4 @@ winterfell/npm-debug.log
 logs
 
 .vagrant
+*.box

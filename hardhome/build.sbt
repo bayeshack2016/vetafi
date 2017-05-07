@@ -1,13 +1,19 @@
 import com.typesafe.sbt.SbtScalariform._
 import PlayGulp._
-
 import scalariform.formatter.preferences._
+import com.typesafe.sbt.packager.archetypes.ServerLoader
 
-name := "play-silhouette-reactivemongo-seed"
+name := "vetafi-web"
 
-version := "4.0.0"
+version := "0.0.1"
 
 scalaVersion := "2.11.8"
+
+maintainer in Linux := "Jeff Quinn jeff@vetafi.org"
+
+packageSummary in Linux := "Vetafi.org web application."
+
+serverLoading in Debian := ServerLoader.Systemd
 
 unmanagedClasspath in Runtime += baseDirectory.value / "conf"
 
@@ -29,14 +35,16 @@ libraryDependencies ++= Seq(
   "com.mohiva" %% "play-silhouette-testkit" % "4.0.0" % "test",
   "com.digitaltangible" %% "play-guard" % "2.0.0",
   "com.github.dcoker" % "biscuit-java" % "ebed4b3a238a45c007da138175f1132a6bf26b71",
+  "net.logstash.logback" % "logstash-logback-encoder" % "4.9",
+  "ch.qos.logback" % "logback-core" % "1.2.3",
+  "ch.qos.logback" % "logback-classic" % "1.2.3",
   specs2 % Test,
   cache,
   filters
-
 )
 
 lazy val root = (project in file("."))
-    .enablePlugins(PlayScala)
+    .enablePlugins(PlayScala, DebianPlugin)
     .settings(playGulpSettings)
 
 routesGenerator := InjectedRoutesGenerator

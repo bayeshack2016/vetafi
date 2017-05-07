@@ -18,20 +18,29 @@ sudo apt-get -y install software-properties-common python-software-properties
 sudo apt-get -y install nodejs
 
 # MongoDB
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
+echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.list
 sudo apt-get -y update
 sudo apt-get -y install mongodb-org
 
+cat << EOF
+[Unit]
+Description=High-performance, schema-free document-oriented database
+After=network.target
+Documentation=https://docs.mongodb.org/manual
+
+[Service]
+User=mongodb
+Group=mongodb
+ExecStart=/usr/bin/mongod --quiet --config /etc/mongod.conf
+
+[Install]
+WantedBy=multi-user.target
+EOF | sudo tee /lib/systemd/system/mongod.service
+
+
 # Install Java 8
-sudo apt-get -y install software-properties-common
-sudo add-apt-repository -y ppa:webupd8team/java
-sudo apt-get -y update
-echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections
-sudo apt-get -y install oracle-java8-installer
-# Set default java
-sudo apt-get -y install oracle-java8-set-default
+sudo apt-get -y install openjdk-8-jdk
 
 # Install scala
 wget https://downloads.lightbend.com/scala/2.11.8/scala-2.11.8.deb

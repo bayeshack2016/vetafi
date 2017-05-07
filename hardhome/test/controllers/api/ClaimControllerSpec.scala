@@ -18,7 +18,7 @@ import scala.concurrent.Future
 class ClaimControllerSpec extends PlaySpecification with CSRFTest {
   sequential
 
-  "The `getClaim` action" should {
+  "The `subscribe` action" should {
     "return 200 and claim as json if found" in new ClaimControllerTestContext {
 
       Mockito.when(mockClaimDao.findClaim(identity.userID, testIncompleteClaim.claimID))
@@ -101,8 +101,23 @@ class ClaimControllerSpec extends PlaySpecification with CSRFTest {
       Mockito.when(mockFormDao.save(Matchers.any(), Matchers.any(), Matchers.any(), Matchers.any()))
         .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
-      Mockito.when(mockDocumentService.create(Matchers.any()))
-        .thenReturn(Future.successful(testForm))
+      Mockito.when(mockFormConfigManager.getFormConfigs)
+        .thenReturn(
+          Map(
+            "form1" -> FormConfig(
+            "form1",
+            "description",
+            VetafiInfo("title", "summary", required = true, "externalId1", "externalSignerId1"),
+            Seq()
+          ),
+            "form2" -> FormConfig(
+              "form2",
+              "description",
+              VetafiInfo("title", "summary", required = true, "externalId2", "externalSignerId2"),
+              Seq()
+            )
+          )
+        )
 
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)

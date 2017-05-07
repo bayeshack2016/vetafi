@@ -1,20 +1,15 @@
 <configuration>
-
     <conversionRule conversionWord="coloredLevel" converterClass="play.api.libs.logback.ColoredLevel" />
-
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder>
-            <pattern>%coloredLevel %logger{15} - %message%n%xException{10}</pattern>
-        </encoder>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
     </appender>
 
     <logger name="play" level="INFO" />
-    <logger name="application" level="DEBUG" />
-    <logger name="com.mohiva" level="DEBUG" />
+    <logger name="application" level="INFO" />
+    <logger name="com.mohiva" level="INFO" />
     <logger name="reactivemongo-akka.actor" level="WARN" />
     <logger name="com.gargoylesoftware.htmlunit.javascript" level="OFF" />
-
-    <root level="WARN">
+    <root level="INFO">
         <appender-ref ref="STDOUT" />
     </root>
 </configuration>

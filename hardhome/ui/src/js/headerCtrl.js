@@ -5,6 +5,29 @@ app.controller("headerCtrl",
     function ($scope, Profile, claimService, net, $window, $interval, $uibModal) {
       $scope.isSignedIn = Profile.isSetUser();
 
+      $scope.clickSubscribe = function() {
+        var newScope = $scope.$new(true);
+        newScope.headline = "Subscribe for Updates";
+
+        var modal = $uibModal.open({
+          scope: newScope,
+          templateUrl: 'templates/modals/subscribe.html',
+          windowClass: 'ngdialog-theme-default'
+        });
+
+        newScope.submitSubscribe = function(email) {
+          net.subscribe({email: email, subscriptionType: "INTERESTED_IN_UPDATES"}).then(
+            function success() {
+              modal.dismiss()
+            },
+            function failure() {
+              newScope.errorMsg = "There was an error subscribing your email."
+            }
+          )
+        };
+      };
+
+
       //
       // Header Menu
       //

@@ -3,12 +3,13 @@ package modules
 import com.google.inject.AbstractModule
 import models.daos._
 import net.codingwell.scalaguice.ScalaModule
+import play.modules.reactivemongo.ReactiveMongoApi
 import services.documents.{ DocumentService, SeamlessDocsDocumentService }
-import services.{ AuthTokenService, AuthTokenServiceImpl }
+import services.{ AuthTokenService, AuthTokenServiceImpl, BiscuitPasswordMongoApi }
 import services.forms._
 import services.submission.{ FaxSubmissionService, SubmissionService }
 import utils.seamlessdocs.{ SeamlessDocsService, SeamlessDocsServiceImpl }
-import utils.secrets.{ BiscuitSecretsManager, SecretsManager }
+import utils.secrets.{ BiscuitSecretsManager, SecretsManager, StaticSecrets }
 
 /**
  * The base Guice module, manages Dependency Injection for interfaces defined by our project.
@@ -27,6 +28,7 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[UserValuesDAO].to[UserValuesDAOImpl]
     bind[ClaimDAO].to[ClaimDAOImpl]
     bind[FormDAO].to[FormDAOImpl]
+    bind[MailingListDAO].to[MailingListDAOImpl]
     bind[SecretsManager].to[BiscuitSecretsManager]
     bind[FormConfigManager].to[JsonResourceFormConfigManager]
     bind[ContactInfoService].to[ContactInfoServiceImpl]
@@ -34,5 +36,6 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[SubmissionService].to[FaxSubmissionService]
     bind[DocumentService].to[SeamlessDocsDocumentService]
     bind[SeamlessDocsService].to[SeamlessDocsServiceImpl]
+    bind[ReactiveMongoApi].to[BiscuitPasswordMongoApi]
   }
 }

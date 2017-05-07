@@ -1,14 +1,22 @@
-#!/bin/bash
-set -euxo pipefail
 
-# Bail if we are not running inside VirtualBox.
-if [[ `facter virtual` != "virtualbox" ]]; then
-    exit 0
+#!/bin/bash -eux
+
+SSH_USER=${SSH_USERNAME:-vagrant}
+
+if [[ $PACKER_BUILDER_TYPE =~ virtualbox ]]; then
+    echo "==> Installing VirtualBox guest additions"
+    # Assuming the following packages are installed
+    # apt-get install -y linux-headers-$(uname -r) build-essential perl
+    # apt-get install -y dkms
+
+    VBOX_VERSION=$(cat /home/${SSH_USER}/.vbox_version)
+    mount -o loop /home/${SSH_USER}/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
+    sh /mnt/VBoxLinuxAdditions.run
+    umount /mnt
+    rm /home/${SSH_USER}/VBoxGuestAdditions_$VBOX_VERSION.iso
+    rm /home/${SSH_USER}/.vbox_version
+
+    if [[ $VBOX_VERSION = "4.3.10" ]]; then
+        ln -s /opt/VBoxGuestAdditions-4.3.10/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
+    fi
 fi
-
-mkdir -p /mnt/virtualbox
-mount -o loop /home/vagrant/VBoxGuest*.iso /mnt/virtualbox
-sh /mnt/virtualbox/VBoxLinuxAdditions.run
-ln -s /opt/VBoxGuestAdditions-*/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
-umount /mnt/virtualbox
-rm -rf /home/vagrant/VBoxGuest*.iso
