@@ -4,9 +4,9 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService',
-  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval', 'downloadSpinner',
+  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval', 'downloadSpinner', '$q',
     function ($scope, $filter, $rootScope, formTemplateService,
-              $stateParams, $state, userValues, $window, net, $interval, downloadSpinner) {
+              $stateParams, $state, userValues, $window, net, $interval, downloadSpinner, $q) {
       $scope.title = formTemplateService[$stateParams.formId].vfi.title;
       $scope.description = formTemplateService[$stateParams.formId].vfi.description;
       $scope.claimId = $stateParams.claimId;
@@ -50,9 +50,13 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
 
       var lastParams = null;
       function save(force) {
-        if (lastParams == null || !_.isEqual(lastParams, $scope.model) || force === true) {
+        if (lastParams === null || !_.isEqual(lastParams, $scope.model) || force === true) {
           lastParams = _.clone($scope.model);
           return net.saveForm($stateParams.claimId, $stateParams.formId, $scope.model);
+        } else {
+          var deferred = $q.defer();
+          deferred.resolve();
+          return deferred.promise;
         }
       }
 
