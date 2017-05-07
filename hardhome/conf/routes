@@ -51,4 +51,4 @@ GET         /api/form/:claimID/:formKey/issigned  controllers.api.FormController
 GET         /*file                                controllers.GulpAssets.at(file)
 
 
-POST        /subscribe                       controllers.api.MailingListController.subscribe()
+POST        /api/subscribe                        controllers.api.MailingListController.subscribe()

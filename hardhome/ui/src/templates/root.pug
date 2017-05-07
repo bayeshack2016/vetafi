@@ -1,7 +1,9 @@
 if showBanner
     div#banner
       div.banner-wrapper
-        h5 #{bannerMessage}
+        h5
+          | Vetafi.org is in beta. To be notified when it is ready, please
+          a.subscribe-link(ng-click="clickSubscribe()") subscribe.
 div#header
     div#header-content
         a.vfi-header-logo-wrapper(ui-sref="root.home")

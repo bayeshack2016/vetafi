@@ -5,11 +5,12 @@ import javax.inject.Inject
 import com.mohiva.play.silhouette.api.Silhouette
 import models.MailingListSubscription
 import models.daos.MailingListDAO
+import play.api.Logger
 import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc.{ Action, BodyParsers, Controller }
 import utils.auth.DefaultEnv
-import scala.concurrent.ExecutionContext.Implicits.global
 
+import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 class MailingListController @Inject() (
@@ -20,6 +21,7 @@ class MailingListController @Inject() (
   def subscribe(): Action[JsValue] = silhouette.UnsecuredAction.async(BodyParsers.parse.json) {
     request =>
       {
+        Logger.info("/api/subscribe got: " + request.body)
         val mailingListSubscriptionResult = request.body.validate[MailingListSubscription]
         mailingListSubscriptionResult.fold(
           errors => {

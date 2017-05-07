@@ -84,7 +84,7 @@ app.factory('net', ['xhrEnv', '$http', function (xhrEnv, $http) {
       return httpGet("/claim/sign/" + claimId)
     },
     subscribe: function (data) {
-      return httpPost("/subscribe")
+      return httpPost("/subscribe", data)
     }
   };
 }]);

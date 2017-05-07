@@ -5,11 +5,10 @@ block modalContent
     div.message
       p {{message}}
     form
-      h4 Email
       input(ng-model="email", placeholder="Email Address", type="text" name="email")
     div.error-msg {{errorMsg}}
     div.button-wrapper
       button.cancel(ng-click="$dismiss()") Cancel
-      button.save(ng-click="submit(email)") Save
+      button.save(ng-click="submitSubscribe(email)") Save
       div.clearer
 
