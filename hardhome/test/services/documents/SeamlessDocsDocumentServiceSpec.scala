@@ -173,7 +173,7 @@ trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
 
 class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
   sequential
-  
+
   "The SeamlessDocsDocumentService.render method" should {
     "work if the form already has an application id" in new SeamplessDocsServiceTestContext {
 

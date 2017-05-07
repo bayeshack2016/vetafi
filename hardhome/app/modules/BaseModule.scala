@@ -28,6 +28,7 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[UserValuesDAO].to[UserValuesDAOImpl]
     bind[ClaimDAO].to[ClaimDAOImpl]
     bind[FormDAO].to[FormDAOImpl]
+    bind[MailingListDAO].to[MailingListDAOImpl]
     bind[SecretsManager].to[BiscuitSecretsManager]
     bind[FormConfigManager].to[JsonResourceFormConfigManager]
     bind[ContactInfoService].to[ContactInfoServiceImpl]

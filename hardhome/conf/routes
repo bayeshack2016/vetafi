@@ -49,3 +49,6 @@ GET         /api/forms/:claimID                   controllers.api.FormController
 GET         /api/form/:claimID/:formKey/issigned  controllers.api.FormController.getFormSignatureStatus(claimID: java.util.UUID, formKey: String)
 # Gulp managed static assets
 GET         /*file                                controllers.GulpAssets.at(file)
+
+
+POST        /subscribe                       controllers.api.MailingListController.subscribe()

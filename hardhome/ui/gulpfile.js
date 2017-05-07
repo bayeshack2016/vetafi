@@ -48,8 +48,7 @@ gulp.task('pug', function () {
   return gulp.src('src/**/*.pug')
     .pipe(pug({
       data: {
-        showBanner: bannerConfig.showBanner,
-        bannerMessage: bannerConfig.bannerMessage
+        showBanner: bannerConfig.showBanner
       }
     }))
     .pipe(gulp.dest('build'))

@@ -18,7 +18,7 @@ import scala.concurrent.Future
 class ClaimControllerSpec extends PlaySpecification with CSRFTest {
   sequential
 
-  "The `getClaim` action" should {
+  "The `subscribe` action" should {
     "return 200 and claim as json if found" in new ClaimControllerTestContext {
 
       Mockito.when(mockClaimDao.findClaim(identity.userID, testIncompleteClaim.claimID))
