@@ -12,7 +12,9 @@ import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
 import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
+import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.commands.{ UpdateWriteResult, WriteResult }
+import services.FakeReactiveMongoApi
 import utils.auth.DefaultEnv
 
 import scala.concurrent.Future
@@ -56,6 +58,7 @@ trait ContactInfoServiceTestContext extends SilhouetteTestContext {
     def configure(): Unit = {
       bind[Environment[DefaultEnv]].toInstance(env)
       bind[UserDAO].toInstance(new FakeUserDao())
+      bind[ReactiveMongoApi].toInstance(new FakeReactiveMongoApi)
     }
   }
 

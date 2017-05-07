@@ -19,6 +19,7 @@ import _root_.services.forms.{ ClaimService, FormConfigManager }
 import org.mockito.Mockito
 import play.api.libs.json.JsValue
 import play.modules.reactivemongo.ReactiveMongoApi
+import services.FakeReactiveMongoApi
 import services.documents.DocumentService
 
 import scala.concurrent.Future
@@ -60,6 +61,7 @@ trait ClaimControllerTestContext extends SilhouetteTestContext {
       bind[ClaimService].toInstance(mockClaimService)
       bind[DocumentService].toInstance(mockDocumentService)
       bind[FormConfigManager].toInstance(mockFormConfigManager)
+      bind[ReactiveMongoApi].toInstance(new FakeReactiveMongoApi)
     }
   }
 

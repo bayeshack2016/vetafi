@@ -24,6 +24,7 @@ import play.api.{ Application, Configuration }
 import play.core.server.Server
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.commands.UpdateWriteResult
+import services.FakeReactiveMongoApi
 import services.forms.{ ClaimService, ContactInfoService, FormConfigManager }
 import utils.auth.DefaultEnv
 import utils.seamlessdocs._
@@ -158,6 +159,7 @@ trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
       bind[FormConfigManager].toInstance(mockFormConfigManager)
       bind[FormDAO].toInstance(mockFormDao)
       bind[UserDAO].toInstance(mockUserDao)
+      bind[ReactiveMongoApi].toInstance(new FakeReactiveMongoApi())
     }
   }
 
@@ -171,9 +173,7 @@ trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
 
 class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
   sequential
-
-  //TODO rewrite all these tests
-
+  
   "The SeamlessDocsDocumentService.render method" should {
     "work if the form already has an application id" in new SeamplessDocsServiceTestContext {
 

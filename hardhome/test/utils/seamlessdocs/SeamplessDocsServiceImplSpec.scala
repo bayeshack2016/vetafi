@@ -12,6 +12,8 @@ import play.api.mvc.{ Action, _ }
 import play.api.test.{ PlaySpecification, WithApplication, WsTestClient }
 import play.api.{ Application, Configuration, Environment }
 import play.core.server.Server
+import play.modules.reactivemongo.ReactiveMongoApi
+import services.FakeReactiveMongoApi
 import utils.secrets.SecretsManager
 
 import scala.concurrent.ExecutionContext.Implicits.global
@@ -52,6 +54,7 @@ trait SeamplessDocsServiceTestContext extends Scope {
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
       bind[SecretsManager].toInstance(new FakeSecretManager)
+      bind[ReactiveMongoApi].toInstance(new FakeReactiveMongoApi)
     }
   }
 

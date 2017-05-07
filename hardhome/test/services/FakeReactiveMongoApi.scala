@@ -1,7 +1,9 @@
+package services
+
 import org.mockito.Mockito
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.gridfs.GridFS
-import reactivemongo.api.{DefaultDB, MongoConnection, MongoDriver}
+import reactivemongo.api.{ DefaultDB, MongoConnection, MongoDriver }
 import reactivemongo.play.json.JSONSerializationPack
 
 import scala.concurrent.Future
