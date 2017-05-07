@@ -12,7 +12,6 @@
     <logger name="application" level="DEBUG" />
     <logger name="com.mohiva" level="DEBUG" />
     <logger name="reactivemongo-akka.actor" level="WARN" />
-
     <logger name="com.gargoylesoftware.htmlunit.javascript" level="OFF" />
 
     <root level="WARN">

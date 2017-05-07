@@ -36,6 +36,8 @@ libraryDependencies ++= Seq(
   "com.digitaltangible" %% "play-guard" % "2.0.0",
   "com.github.dcoker" % "biscuit-java" % "ebed4b3a238a45c007da138175f1132a6bf26b71",
   "net.logstash.logback" % "logstash-logback-encoder" % "4.9",
+  "ch.qos.logback" % "logback-core" % "1.2.3",
+  "ch.qos.logback" % "logback-classic" % "1.2.3",
   specs2 % Test,
   cache,
   filters

@@ -1,6 +1,6 @@
 package services
 
-import javax.inject.Inject
+import javax.inject.{ Inject, Singleton }
 
 import play.api.inject.ApplicationLifecycle
 import play.api._
@@ -19,6 +19,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 /**
  * Custom MongoApi
  */
+@Singleton
 class BiscuitPasswordMongoApi @Inject() (
   secretsManager: SecretsManager,
   configuration: Configuration,
@@ -38,7 +39,8 @@ class BiscuitPasswordMongoApi @Inject() (
 
   def getProdConnection(driver: MongoDriver): MongoConnection = {
     val options: MongoConnectionOptions = MongoConnectionOptions(
-      sslEnabled = true, sslAllowsInvalidCert = true
+      sslEnabled = true,
+      sslAllowsInvalidCert = true
     )
 
     Logger.info(s"Authenticating with ${staticSecrets.mongoUsername} to ${staticSecrets.mongoHosts}")
