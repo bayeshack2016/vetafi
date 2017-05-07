@@ -4,40 +4,45 @@ import java.net.URL
 import java.time.Instant
 import java.util.UUID
 
-import com.mohiva.play.silhouette.api.LoginInfo
+import com.google.inject.AbstractModule
+import com.mohiva.play.silhouette.api.{ Environment, LoginInfo }
 import com.typesafe.config.ConfigFactory
+import controllers.SilhouetteTestContext
 import models._
-import models.daos.{FormDAO, UserDAO}
+import models.daos.{ ClaimDAO, FormDAO, UserDAO, UserValuesDAO }
 import modules.JobModule
-import org.hamcrest.{BaseMatcher, Description}
-import org.mockito.{Matchers, Mockito}
+import net.codingwell.scalaguice.ScalaModule
+import org.hamcrest.{ BaseMatcher, Description }
+import org.mockito.{ Matchers, Mockito }
 import org.specs2.specification.Scope
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.{JsString, JsValue}
+import play.api.libs.json.{ JsString, JsValue }
 import play.api.libs.ws.WSClient
-import play.api.mvc.{Action, Results}
-import play.api.test.{PlaySpecification, WithApplication, WsTestClient}
-import play.api.{Application, Configuration}
+import play.api.mvc.{ Action, Results }
+import play.api.test.{ PlaySpecification, WithApplication, WsTestClient }
+import play.api.{ Application, Configuration }
 import play.core.server.Server
+import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.commands.UpdateWriteResult
-import services.forms.FormConfigManager
+import services.forms.{ ClaimService, ContactInfoService, FormConfigManager }
+import utils.auth.DefaultEnv
 import utils.seamlessdocs._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.util.{Failure, Success}
+import scala.util.{ Failure, Success }
 
-trait SeamplessDocsServiceTestContext extends Scope {
-  var identity = User(
-    userID = UUID.randomUUID(),
+trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
+  identity = User(
+    userID = userID,
     loginInfo = LoginInfo("credentials", "user@website.com"),
-    firstName = Some("bob"),
-    lastName = Some("smith"),
-    fullName = Some("bob smith"),
-    email = Some("user@email.com"),
+    firstName = Some("fname"),
+    lastName = Some("lname"),
+    fullName = Some("fname lname"),
+    email = Some("test@test.com"),
     avatarURL = None,
     activated = true,
-    contact = None
+    contact = Some(Contact(Some("1111111111"), Some(Address())))
   )
 
   var testClaim = Claim(
@@ -90,7 +95,8 @@ trait SeamplessDocsServiceTestContext extends Scope {
     fields = Seq())
 
   var fakeApplicationCreateResponse = SeamlessApplicationCreateResponse(
-    true, UUID.randomUUID().toString, "fake")
+    true, UUID.randomUUID().toString, "fake"
+  )
 
   val pdfUrl: String = "https://www.pdf.com"
   val inviteUrl: String = "https://www.invite.com"
@@ -109,11 +115,6 @@ trait SeamplessDocsServiceTestContext extends Scope {
       WsTestClient.withClient { client => block(client) }
     }
   }
-
-  lazy val application: Application = GuiceApplicationBuilder()
-    .configure(Configuration(ConfigFactory.load("application.test.conf")))
-    .disable(classOf[JobModule])
-    .build()
 
   class HasCorrectUpdates(applicationId: String, fakePdf: Array[Byte]) extends BaseMatcher[ClaimForm] {
     override def matches(o: scala.Any): Boolean = {
@@ -144,6 +145,28 @@ trait SeamplessDocsServiceTestContext extends Scope {
     }
   }
 
+  val mockSeamlessDocsService: SeamlessDocsService = Mockito.mock(classOf[SeamlessDocsService])
+  val mockFormConfigManager: FormConfigManager = Mockito.mock(classOf[FormConfigManager])
+  val mockFormDao: FormDAO = Mockito.mock(classOf[FormDAO])
+  val mockUserDao: UserDAO = Mockito.mock(classOf[UserDAO])
+  val mockReactiveMongoApi: ReactiveMongoApi = Mockito.mock(classOf[ReactiveMongoApi])
+
+  class FakeModule extends AbstractModule with ScalaModule {
+    def configure(): Unit = {
+      bind[Environment[DefaultEnv]].toInstance(env)
+      bind[SeamlessDocsService].toInstance(mockSeamlessDocsService)
+      bind[FormConfigManager].toInstance(mockFormConfigManager)
+      bind[FormDAO].toInstance(mockFormDao)
+      bind[UserDAO].toInstance(mockUserDao)
+    }
+  }
+
+  override lazy val application: Application = GuiceApplicationBuilder()
+    .configure(Configuration(ConfigFactory.load("application.test.conf")))
+    .disable(classOf[JobModule])
+    .overrides(new FakeModule)
+    .build()
+
 }
 
 class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
@@ -152,42 +175,37 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
   //TODO rewrite all these tests
 
   "The SeamlessDocsDocumentService.render method" should {
-
     "work if the form already has an application id" in new SeamplessDocsServiceTestContext {
+
+      Mockito.when(mockFormDao.save(
+        Matchers.eq(testFormWithExternal.userID),
+        Matchers.eq(testFormWithExternal.claimID),
+        Matchers.eq(testFormWithExternal.key),
+        Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
+      ))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockSeamlessDocsService.formSubmit(
+        Matchers.eq(testFormWithExternal.externalFormId.get),
+        Matchers.any()
+      ))
+        .thenReturn(Future.successful(
+          Left(SeamlessApplicationCreateResponse(result = true, "app_id", "description"))
+        ))
+      Mockito.when(mockSeamlessDocsService.updatePdf(
+        Matchers.eq("app_id")
+      ))
+        .thenReturn(Future.successful(Left(new URL(pdfUrl))))
+
+      private val fakeMap: Map[String, FormConfig] = Mockito.mock(classOf[Map[String, FormConfig]])
+      Mockito.when(fakeMap.apply(Matchers.any()))
+        .thenReturn(fakeFormConfig)
+      Mockito.when(mockFormConfigManager.getFormConfigs)
+        .thenReturn(fakeMap)
+
       new WithApplication(application) {
         withTestClient(app)(fakeController)({ client: WSClient =>
-          val formDao = Mockito.mock(classOf[FormDAO])
-          Mockito.when(formDao.save(
-            Matchers.eq(testFormWithExternal.userID),
-            Matchers.eq(testFormWithExternal.claimID),
-            Matchers.eq(testFormWithExternal.key),
-            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
-          ))
-            .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
-
-          val userDao = Mockito.mock(classOf[UserDAO])
-
-          val seamlessDocsService = Mockito.mock(classOf[SeamlessDocsService])
-          Mockito.when(seamlessDocsService.updatePdf(
-            Matchers.eq(testFormWithExternal.externalApplicationId.get),
-            Matchers.any()
-          ))
-            .thenReturn(Future.successful(Left(new URL(pdfUrl))))
-
-          val formConfigManager = Mockito.mock(classOf[FormConfigManager])
-          val fakeMap = Mockito.mock(classOf[Map[String, FormConfig]])
-          Mockito.when(fakeMap.apply(Matchers.any()))
-            .thenReturn(fakeFormConfig)
-          Mockito.when(formConfigManager.getFormConfigs)
-            .thenReturn(fakeMap)
-
-          val service = new SeamlessDocsDocumentService(
-            userDao,
-            formDao,
-            client,
-            seamlessDocsService,
-            formConfigManager
-          )
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
 
           service.render(testFormWithExternal).onComplete {
             case Success(bytes) => bytes must be equalTo fakePdf
@@ -197,41 +215,32 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
       }
     }
 
-    "not work if saving form fails" in new SeamplessDocsServiceTestContext {
+    "not work if formSubmit fails" in new SeamplessDocsServiceTestContext {
+      Mockito.when(mockFormDao.save(
+        Matchers.eq(testFormWithExternal.userID),
+        Matchers.eq(testFormWithExternal.claimID),
+        Matchers.eq(testFormWithExternal.key),
+        Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
+      ))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = false, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockSeamlessDocsService.updatePdf(
+        Matchers.eq(testFormWithExternal.externalApplicationId.get)
+      ))
+        .thenReturn(Future.successful(Left(new URL(pdfUrl))))
+      Mockito.when(mockSeamlessDocsService.formSubmit(Matchers.any(), Matchers.any()))
+        .thenReturn(Future.successful(Right(SeamlessErrorResponse(error = true, Seq()))))
+
+      private val fakeMap: Map[String, FormConfig] = Mockito.mock(classOf[Map[String, FormConfig]])
+      Mockito.when(fakeMap.apply(Matchers.any()))
+        .thenReturn(fakeFormConfig)
+      Mockito.when(mockFormConfigManager.getFormConfigs)
+        .thenReturn(fakeMap)
+
       new WithApplication(application) {
         withTestClient(app)(fakeController)({ client: WSClient =>
-          val formDao = Mockito.mock(classOf[FormDAO])
-          Mockito.when(formDao.save(
-            Matchers.eq(testFormWithExternal.userID),
-            Matchers.eq(testFormWithExternal.claimID),
-            Matchers.eq(testFormWithExternal.key),
-            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
-          ))
-            .thenReturn(Future.successful(UpdateWriteResult(ok = false, 1, 1, Seq(), Seq(), None, None, None)))
 
-          val userDao = Mockito.mock(classOf[UserDAO])
-
-          val seamlessDocsService = Mockito.mock(classOf[SeamlessDocsService])
-          Mockito.when(seamlessDocsService.updatePdf(
-            Matchers.eq(testFormWithExternal.externalApplicationId.get),
-            Matchers.any()
-          ))
-            .thenReturn(Future.successful(Left(new URL(pdfUrl))))
-
-          val formConfigManager = Mockito.mock(classOf[FormConfigManager])
-          val fakeMap = Mockito.mock(classOf[Map[String, FormConfig]])
-          Mockito.when(fakeMap.apply(Matchers.any()))
-            .thenReturn(fakeFormConfig)
-          Mockito.when(formConfigManager.getFormConfigs)
-            .thenReturn(fakeMap)
-
-          val service = new SeamlessDocsDocumentService(
-            userDao,
-            formDao,
-            client,
-            seamlessDocsService,
-            formConfigManager
-          )
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
 
           service.render(testFormWithExternal).onComplete {
             case Success(_) => ko
@@ -244,49 +253,39 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
 
   "The SeamlessDocsDocumentService.signatureLink method" should {
     "work if the form does not already have an application id" in new SeamplessDocsServiceTestContext {
+      Mockito.when(mockFormDao.save(
+        Matchers.eq(testForm.userID),
+        Matchers.eq(testForm.claimID),
+        Matchers.eq(testForm.key),
+        Matchers.argThat(new HasCorrectApplicationId(fakeApplicationCreateResponse.application_id))
+      ))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockUserDao.find(Matchers.eq(identity.userID)))
+        .thenReturn(Future.successful(Some(identity)))
+
+      Mockito.when(mockSeamlessDocsService.formPrepare(
+        Matchers.eq(fakeApplicationCreateResponse.application_id),
+        Matchers.eq(identity.fullName.get),
+        Matchers.eq(identity.email.get),
+        Matchers.any(),
+        Matchers.eq(testForm.responses)
+      ))
+        .thenReturn(Future.successful(Left(SeamlessApplicationCreateResponse(result = true, "appId", "Mock app."))))
+      Mockito.when(mockSeamlessDocsService.getInviteUrl(
+        Matchers.eq(fakeApplicationCreateResponse.application_id)
+      ))
+        .thenReturn(Future.successful(new URL(inviteUrl)))
+
+      private val fakeMap: Map[String, FormConfig] = Mockito.mock(classOf[Map[String, FormConfig]])
+      Mockito.when(fakeMap.apply(Matchers.any()))
+        .thenReturn(fakeFormConfig)
+      Mockito.when(mockFormConfigManager.getFormConfigs)
+        .thenReturn(fakeMap)
+
       new WithApplication(application) {
         withTestClient(app)(fakeController)({ client: WSClient =>
-          val formDao = Mockito.mock(classOf[FormDAO])
-          Mockito.when(formDao.save(
-            Matchers.eq(testForm.userID),
-            Matchers.eq(testForm.claimID),
-            Matchers.eq(testForm.key),
-            Matchers.argThat(new HasCorrectApplicationId(fakeApplicationCreateResponse.application_id))
-          ))
-            .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
-
-          val userDao = Mockito.mock(classOf[UserDAO])
-          Mockito.when(userDao.find(Matchers.eq(identity.userID)))
-            .thenReturn(Future.successful(Some(identity)))
-
-          val seamlessDocsService = Mockito.mock(classOf[SeamlessDocsService])
-          Mockito.when(seamlessDocsService.formPrepare(
-            Matchers.eq(fakeApplicationCreateResponse.application_id),
-            Matchers.eq(identity.fullName.get),
-            Matchers.eq(identity.email.get),
-            Matchers.any(),
-            Matchers.eq(testForm.responses)
-          ))
-            .thenReturn(Future.successful(Left(SeamlessApplicationCreateResponse(result = true, "appId", "Mock app."))))
-          Mockito.when(seamlessDocsService.getInviteUrl(
-            Matchers.eq(fakeApplicationCreateResponse.application_id)
-          ))
-            .thenReturn(Future.successful(new URL(inviteUrl)))
-
-          val formConfigManager = Mockito.mock(classOf[FormConfigManager])
-          val fakeMap = Mockito.mock(classOf[Map[String, FormConfig]])
-          Mockito.when(fakeMap.apply(Matchers.any()))
-            .thenReturn(fakeFormConfig)
-          Mockito.when(formConfigManager.getFormConfigs)
-            .thenReturn(fakeMap)
-
-          val service = new SeamlessDocsDocumentService(
-            userDao,
-            formDao,
-            client,
-            seamlessDocsService,
-            formConfigManager
-          )
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
 
           service.signatureLink(testForm).onComplete {
             case Success(url) => url must be equalTo new URL(inviteUrl)
@@ -297,47 +296,36 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
 
     }
     "work if the form already has an application id" in new SeamplessDocsServiceTestContext {
+      Mockito.when(mockFormDao.save(
+        Matchers.eq(testFormWithExternal.userID),
+        Matchers.eq(testFormWithExternal.claimID),
+        Matchers.eq(testFormWithExternal.key),
+        Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
+      ))
+        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
+
+      Mockito.when(mockSeamlessDocsService.formPrepare(
+        Matchers.eq(fakeApplicationCreateResponse.application_id),
+        Matchers.eq(identity.fullName.get),
+        Matchers.eq(identity.email.get),
+        Matchers.any(),
+        Matchers.eq(testFormWithExternal.responses)
+      ))
+        .thenReturn(Future.successful(Left(SeamlessApplicationCreateResponse(result = true, "appId", "Mock app."))))
+      Mockito.when(mockSeamlessDocsService.getInviteUrl(
+        Matchers.eq(fakeApplicationCreateResponse.application_id)
+      ))
+        .thenReturn(Future.successful(new URL(inviteUrl)))
+
+      private val fakeMap: Map[String, FormConfig] = Mockito.mock(classOf[Map[String, FormConfig]])
+      Mockito.when(fakeMap.apply(Matchers.any()))
+        .thenReturn(fakeFormConfig)
+      Mockito.when(mockFormConfigManager.getFormConfigs)
+        .thenReturn(fakeMap)
+
       new WithApplication(application) {
         withTestClient(app)(fakeController)({ client: WSClient =>
-          val formDao = Mockito.mock(classOf[FormDAO])
-          Mockito.when(formDao.save(
-            Matchers.eq(testFormWithExternal.userID),
-            Matchers.eq(testFormWithExternal.claimID),
-            Matchers.eq(testFormWithExternal.key),
-            Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
-          ))
-            .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
-
-          val userDao = Mockito.mock(classOf[UserDAO])
-
-          val seamlessDocsService = Mockito.mock(classOf[SeamlessDocsService])
-          Mockito.when(seamlessDocsService.formPrepare(
-            Matchers.eq(fakeApplicationCreateResponse.application_id),
-            Matchers.eq(identity.fullName.get),
-            Matchers.eq(identity.email.get),
-            Matchers.any(),
-            Matchers.eq(testFormWithExternal.responses)
-          ))
-            .thenReturn(Future.successful(Left(SeamlessApplicationCreateResponse(result = true, "appId", "Mock app."))))
-          Mockito.when(seamlessDocsService.getInviteUrl(
-            Matchers.eq(fakeApplicationCreateResponse.application_id)
-          ))
-            .thenReturn(Future.successful(new URL(inviteUrl)))
-
-          val formConfigManager = Mockito.mock(classOf[FormConfigManager])
-          val fakeMap = Mockito.mock(classOf[Map[String, FormConfig]])
-          Mockito.when(fakeMap.apply(Matchers.any()))
-            .thenReturn(fakeFormConfig)
-          Mockito.when(formConfigManager.getFormConfigs)
-            .thenReturn(fakeMap)
-
-          val service = new SeamlessDocsDocumentService(
-            userDao,
-            formDao,
-            client,
-            seamlessDocsService,
-            formConfigManager
-          )
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
 
           service.signatureLink(testFormWithExternal).onComplete {
             case Success(url) => url must be equalTo new URL(inviteUrl)

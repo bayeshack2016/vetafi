@@ -4,20 +4,21 @@ import java.time.Instant
 import java.util.UUID
 
 import com.google.inject.AbstractModule
-import com.mohiva.play.silhouette.api.{Environment, LoginInfo}
+import com.mohiva.play.silhouette.api.{ Environment, LoginInfo }
 import com.typesafe.config.ConfigFactory
 import controllers.SilhouetteTestContext
 import models._
-import models.daos.{ClaimDAO, FormDAO}
+import models.daos.{ ClaimDAO, FormDAO }
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
-import play.api.{Application, Configuration}
+import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
-import reactivemongo.api.commands.{MultiBulkWriteResult, UpdateWriteResult, WriteResult}
+import reactivemongo.api.commands.{ MultiBulkWriteResult, UpdateWriteResult, WriteResult }
 import utils.auth.DefaultEnv
-import _root_.services.forms.ClaimService
+import _root_.services.forms.{ ClaimService, FormConfigManager }
 import org.mockito.Mockito
 import play.api.libs.json.JsValue
+import play.modules.reactivemongo.ReactiveMongoApi
 import services.documents.DocumentService
 
 import scala.concurrent.Future
@@ -49,6 +50,7 @@ trait ClaimControllerTestContext extends SilhouetteTestContext {
   val mockFormDao: FormDAO = Mockito.mock(classOf[FormDAO])
   val mockClaimService: ClaimService = Mockito.mock(classOf[ClaimService])
   val mockDocumentService: DocumentService = Mockito.mock(classOf[DocumentService])
+  val mockFormConfigManager: FormConfigManager = Mockito.mock(classOf[FormConfigManager])
 
   class FakeModule extends AbstractModule with ScalaModule {
     def configure(): Unit = {
@@ -57,6 +59,7 @@ trait ClaimControllerTestContext extends SilhouetteTestContext {
       bind[FormDAO].toInstance(mockFormDao)
       bind[ClaimService].toInstance(mockClaimService)
       bind[DocumentService].toInstance(mockDocumentService)
+      bind[FormConfigManager].toInstance(mockFormConfigManager)
     }
   }
 

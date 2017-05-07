@@ -5,7 +5,7 @@ import java.time.Clock
 import javax.inject.Inject
 
 import play.Logger
-import play.api.Configuration
+import play.api.{ Configuration, Environment }
 import play.api.http.Status
 import play.api.libs.json.{ JsObject, JsValue, Json }
 import play.api.libs.ws.{ WSClient, WSRequest, WSResponse }
@@ -17,12 +17,17 @@ import scala.concurrent.Future
 class SeamlessDocsServiceImpl @Inject() (
   wsClient: WSClient,
   configuration: Configuration,
-  secretsManager: SecretsManager
+  secretsManager: SecretsManager,
+  environment: Environment
 ) extends SeamlessDocsService {
 
   val url: String = configuration.getString("seamlessdocs.url").get
-  lazy val apiSecret: Array[Byte] = secretsManager.getSecret("prod::seamlessdocs-secret-key")
-  lazy val apiKey: String = secretsManager.getSecretUtf8("prod::seamlessdocs-api-key")
+  lazy val apiSecret: Array[Byte] = secretsManager.getSecret(
+    environment.mode.toString.toLowerCase() + "::seamlessdocs-secret-key"
+  )
+  lazy val apiKey: String = secretsManager.getSecretUtf8(
+    environment.mode.toString.toLowerCase() + "::seamlessdocs-api-key"
+  )
 
   // lazy val apiSecret: Array[Byte] = configuration.getString("seamlessdocs.secret_key").get.getBytes
   // lazy val apiKey: String = configuration.getString("seamlessdocs.api_key").get

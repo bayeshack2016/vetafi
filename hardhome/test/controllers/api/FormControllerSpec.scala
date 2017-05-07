@@ -125,12 +125,6 @@ class FormControllerSpec extends PlaySpecification with CSRFTest {
           UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)
         ))
 
-      Mockito.when(mockDocumentService.save(Matchers.any()))
-        .thenReturn(Future.successful(testForm))
-
-      Mockito.when(mockDocumentService.signatureLink(Matchers.any()))
-        .thenReturn(Future.successful(new URL("http://www.google.com")))
-
       new WithApplication(application) {
         val values = Map("key" -> JsString("value"))
 
@@ -146,56 +140,6 @@ class FormControllerSpec extends PlaySpecification with CSRFTest {
         val result: Future[Result] = route(app, csrfReq).get
 
         status(result) must be equalTo CREATED
-      }
-    }
-
-    "return 500 when save values if document service fails" in new FormControllerTestContext {
-
-      Mockito.when(mockFormDao.find(identity.userID, testClaim.claimID, "VBA-21-0966-ARE"))
-        .thenReturn(Future.successful(Some(testForm)))
-
-      Mockito.when(mockClaimService.calculateProgress(Matchers.any()))
-        .thenReturn(testForm)
-
-      Mockito.when(mockFormDao.save(
-        Matchers.eq(identity.userID),
-        Matchers.eq(testClaim.claimID),
-        Matchers.eq("VBA-21-0966-ARE"),
-        Matchers.any()
-      ))
-        .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
-
-      Mockito.when(mockContactInfoService.updateContactInfo(identity.userID))
-        .thenReturn(Future.successful(
-          Some(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None))
-        ))
-
-      Mockito.when(mockUserValuesDao.update(Matchers.eq(identity.userID), Matchers.any()))
-        .thenReturn(Future.successful(
-          UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)
-        ))
-
-      Mockito.when(mockDocumentService.save(Matchers.any()))
-        .thenThrow(new RuntimeException)
-
-      Mockito.when(mockDocumentService.signatureLink(Matchers.any()))
-        .thenReturn(Future.successful(new URL("http://www.google.com")))
-
-      new WithApplication(application) {
-        val values = Map("key" -> JsString("value"))
-
-        val req = FakeRequest(
-          POST,
-          controllers.api.routes.FormController.saveForm(testClaim.claimID, "VBA-21-0966-ARE").url
-        )
-          .withJsonBody(Json.toJson(values))
-          .withAuthenticator[DefaultEnv](identity.loginInfo)
-
-        val csrfReq = addToken(req)
-
-        val result: Future[Result] = route(app, csrfReq).get
-
-        status(result) must be equalTo INTERNAL_SERVER_ERROR
       }
     }
   }

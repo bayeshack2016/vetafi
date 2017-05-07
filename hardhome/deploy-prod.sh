@@ -5,6 +5,8 @@ APPLICATION_SECRET=$1
 AUTHENTICATOR_CRYPTER_KEY=$2
 AUTHENTICATOR_COOKIE_SIGNER_KEY=$3
 
+sbt clean dist
+
 boxfuse run -env=prod \
         -healthcheck=false \
         -envvars.APPLICATION_SECRET=${APPLICATION_SECRET} \

@@ -10,7 +10,7 @@ import org.specs2.specification.Scope
 import play.api.inject.guice.GuiceApplicationBuilder
 import play.api.mvc.{ Action, _ }
 import play.api.test.{ PlaySpecification, WithApplication, WsTestClient }
-import play.api.{ Application, Configuration }
+import play.api.{ Application, Configuration, Environment }
 import play.core.server.Server
 import utils.secrets.SecretsManager
 
@@ -31,7 +31,8 @@ trait SeamplessDocsServiceTestContext extends Scope {
           new SeamlessDocsServiceImpl(
             client,
             app.injector.instanceOf[Configuration],
-            app.injector.instanceOf[SecretsManager]
+            app.injector.instanceOf[SecretsManager],
+            app.injector.instanceOf[Environment]
           )
         )
       }
@@ -71,7 +72,7 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
           case post if post.method == "POST" && post.uri == "/api/form/test/prepare" => throw TestException()
         })({ client: SeamlessDocsServiceImpl =>
 
-          val future: Future[SeamlessApplicationCreateResponse] =
+          val future: Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] =
             client.formPrepare("test", "joe", "joe@email.com", "signer", Map())
           future.onComplete {
             case Failure(e) => e must beAnInstanceOf[TestException]
@@ -95,13 +96,13 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
           }
         })({ client: SeamlessDocsServiceImpl =>
 
-          val future: Future[SeamlessApplicationCreateResponse] =
+          val future: Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] =
             client.formPrepare("test", "joe", "joe@email.com", "signer", Map())
           future.onComplete {
             case Failure(_) => failure
-            case Success(res: SeamlessApplicationCreateResponse) =>
-              res.application_id must be equalTo Some("AP15021000011409822")
-              res.description must be equalTo Some("Submission successful")
+            case Success(Left(res: SeamlessApplicationCreateResponse)) =>
+              res.application_id must be equalTo "AP15021000011409822"
+              res.description must be equalTo "Submission successful"
               res.result must beTrue
           }
         })
@@ -123,7 +124,7 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
           }
         })({ client: SeamlessDocsServiceImpl =>
 
-          val future: Future[SeamlessApplicationCreateResponse] =
+          val future: Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] =
             client.formPrepare("test", "joe", "joe@email.com", "signer", Map())
           future.onComplete {
             case Failure(e) => e must
@@ -267,10 +268,10 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
             Results.Ok("""["https://www.website.com"]""")
           }
         })({ client: SeamlessDocsServiceImpl =>
-          val future: Future[URL] = client.updatePdf("test", Map())
+          val future: Future[Either[URL, SeamlessErrorResponse]] = client.updatePdf("test")
           future.onComplete {
             case Failure(_) => failure
-            case Success(res: URL) =>
+            case Success(Left(res: URL)) =>
               res.toString must be equalTo "https://www.website.com"
           }
         })
