@@ -47,8 +47,12 @@ GET         /pdf/:claimID/:formKey                controllers.api.FormController
 GET         /loading                              controllers.api.FormController.pdfLoadingScreen()
 GET         /api/forms/:claimID                   controllers.api.FormController.getFormsForClaim(claimID: java.util.UUID)
 GET         /api/form/:claimID/:formKey/issigned  controllers.api.FormController.getFormSignatureStatus(claimID: java.util.UUID, formKey: String)
+
+GET         /survey                               controllers.ApplicationController.googleForm()
+POST        /api/subscribe                        controllers.api.MailingListController.subscribe()
+
 # Gulp managed static assets
 GET         /*file                                controllers.GulpAssets.at(file)
 
 
-POST        /api/subscribe                        controllers.api.MailingListController.subscribe()
+
