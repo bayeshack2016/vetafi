@@ -1,0 +1,27 @@
+@(formsUrl: Option[String])
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vetafi</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/assets/stylesheets/survey.css">
+    </head>
+    <body>
+        <div id="header">
+            <div id="header-content">
+                <a class="vfi-header-logo-wrapper" href="/">
+                    <img src="/icons/vetafi-logo.svg">
+                </a>
+            </div>
+        </div>
+
+        @formsUrl.map { url =>
+            <iframe class="google-form-frame" src="@url">
+                Loading...
+            </iframe>
+        }.getOrElse {
+            <p>Sorry, the google form is not available at this time. Please check back later.</p>
+        }
+    </body>
+</html>
