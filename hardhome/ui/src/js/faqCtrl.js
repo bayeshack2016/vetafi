@@ -12,7 +12,8 @@ app.controller('faqCtrl', ['$scope', function($scope) {
       "You fill out the questions on our user friendly form, " +
       "and we populate the answers into the official VA paperwork. " +
       "When you're ready to submit, you'll sign the paperwork right here in your browser, " +
-      "and we will electronically fax it to the VA.",
+      "and we will electronically fax AND mail it to the VA (we do both to make certain " +
+      "they receive all your paperwork). We will also mail you a copy for your records.",
       tags: ['health', 'claim', 'for me']
     },
     {
