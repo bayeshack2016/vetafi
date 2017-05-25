@@ -4,28 +4,28 @@
     div.banner-overlay
       div.headline-wrapper.row(ng-show="hasIncompleteClaim")
         div.col-sm-9
-          h3.header Filing claims for U.S. Veterans
-          h5.subheader Done easily and safely.
-          h5.subheader Continue your previous claim now.
+          h3.header Helping U.S. veterans file their VA claims.
+          h5.subheader Done smarter, easier, and safer.
+          h5.subheader Continue your saved paperwork below:
         a(ui-sref="root.claimselect({claimId: currentClaim.claimID})")
-          button.col-sm-3 Continue Claim
+          button.col-sm-3 Continue
       div.headline-wrapper.row(ng-show="!hasIncompleteClaim")
         div.col-sm-9
-          h3.header Filing claims for U.S. Veterans
+          h3.header Helping U.S. veterans file their VA claims.
           h5.subheader Done smarter, easier, and safer.
           h5.subheader Get the benefits that you deserve now.
         a(ui-sref="root.claimstart")
-          button.col-sm-3 Start for Free
+          button.col-sm-3 Begin
 
   div.action-wrapper.container
     div.action.row
       div.content.col-sm-6
         h4 Submit an Intent to File.
-        p Secure your Effective Date for your claim today. Be first in line to get your claim processed by the V.A.
+        p Secure an effective date for your claim today in 5 minutes. Get the largest possible retroactive payment if you are awarded benefits. Avoid eBenefits, avoid dealing with any paperwork.
         a(ui-sref="root.claimstart", ng-show="!hasIncompleteClaim")
-          button Start for Free
+          button Begin
         a(ui-sref="root.claimselect({claimId: currentClaim.claimID})", ng-show="hasIncompleteClaim")
-          button Continue Claim
+          button Continue
       div.icons-wrapper.col-sm-6
         div.main-wrapper.folder.right-align
           div.main-icon.folder
@@ -36,7 +36,7 @@
     div.action.row
       div.content.col-sm-6
         h4 How does Vetafi work?
-        p Have any questions about Vetafi and what services we provide? Want more information about the V.A. claims process? Visit our FAQ page to get your questions answered.
+        p Have any questions about Vetafi and what services we provide? Want more information about the VA claims process? Visit our FAQ page to get your questions answered.
         a(ui-sref="root.faq")
           button Frequently Asked Questions
       div.icons-wrapper.col-sm-6
