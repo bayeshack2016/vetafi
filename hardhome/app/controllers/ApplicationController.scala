@@ -39,8 +39,7 @@ class ApplicationController @Inject() (
     silhouette.env.authenticatorService.discard(request.authenticator, result)
   }
 
-  def googleForm: Action[AnyContent] = silhouette.UnsecuredAction {
-    implicit request =>
-      Ok(views.html.googleForm(configuration.getString("google.formUrl")))
+  def googleForm: Action[AnyContent] = Action {
+    Ok(views.html.googleForm(configuration.getString("google.formUrl")))
   }
 }
