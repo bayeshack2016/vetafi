@@ -8,7 +8,7 @@ import scala.concurrent.Future
 import scala.util.Try
 
 /**
- * Services for creating PDF documents
+ * Services for creating and signing PDF documents.
  */
 trait DocumentService {
 
