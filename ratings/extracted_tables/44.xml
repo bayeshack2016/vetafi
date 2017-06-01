@@ -1,0 +1,359 @@
+              <GPOTABLE CDEF="s20,6" COLS="2" OPTS="L2,p7,7/8">
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW EXPSTB="00">
+                  <ENT I="21">
+                    <E T="02">Sciatic nerve</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8520 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete; the foot dangles and drops, no active movement possible of muscles below the knee, flexion of knee weakened or (very rarely) lost</ENT>
+                  <ENT>80</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Incomplete:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe, with marked muscular atrophy</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately severe</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Mild</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8620 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8720 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">External popliteal nerve (common peroneal)</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8521 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete; foot drop and slight droop of first phalanges of all toes, cannot dorsiflex the foot, extension (dorsal flexion) of proximal phalanges of toes lost; abduction of foot lost, adduction weakened; anesthesia covers entire dorsum of foot and toes</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Incomplete:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Mild</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8621 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8721 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Musculocutaneous nerve (superficial peroneal)</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8522 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete; eversion of foot weakened</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Incomplete:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Mild</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8622 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8722 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Anterior tibial nerve (deep peroneal)</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8523 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete; dorsal flexion of foot lost</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Incomplete:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Mild</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8623 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8723 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Internal popliteal nerve (tibial)</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8524 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete; plantar flexion lost, frank adduction of foot impossible, flexion and separation of toes abolished; no muscle in sole can move; in lesions of the nerve high in popliteal fossa, plantar flexion of foot is lost</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Incomplete:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Mild</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8624 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8724 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Posterior tibial nerve</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8525 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete; paralysis of all muscles of sole of foot, frequently with painful paralysis of a causalgic nature; toes cannot be flexed; adduction is weakened; plantar flexion is impaired</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Incomplete:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Mild</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8625 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8725 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Anterior crural nerve (femoral)</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8526 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete; paralysis of quadriceps extensor muscles</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Incomplete:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Mild</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="473"/>
+                  <ENT I="11">8626 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8726 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Internal saphenous nerve</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8527 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Severe to complete</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Mild to moderate</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8627 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8727 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Obturator nerve</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8528 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Severe to complete</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Mild or moderate</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8628 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8728 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">External cutaneous nerve of thigh</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8529 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Severe to complete</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Mild or moderate</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8629 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8729 Neuralgia.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="02">Ilio-inguinal nerve</E>
+                    
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8530 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Severe to complete</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Mild or moderate</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8630 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">8730 Neuralgia.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">8540 Soft-tissue sarcoma (of neurogenic origin)</ENT>
+                  <ENT>100
+                  </ENT>
+                </ROW>
+                <ROW EXPSTB="01">
+                  <ENT I="12">
+                    <E T="04">Note:</E> The 100 percent rating will be continued for 6 months following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals.</ENT>
+                </ROW>

@@ -1,0 +1,262 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>Organic Diseases of the Central Nervous System</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">8000 Encephalitis, epidemic, chronic:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">As active febrile disease</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Brain, new growth of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">8002 Malignant</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> The rating in code 8002 will be continued for 2 years following cessation of surgical, chemotherapeutic or other treatment modality. At this point, if the residuals have stabilized, the rating will be made on neurological residuals according to symptomatology.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">8003 Benign, minimum</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8004 Paralysis agitans:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">8005 Bulbar palsy</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8007 Brain, vessels, embolism of.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8008 Brain, vessels, thrombosis of.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8009 Brain, vessels, hemorrhage from:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate the vascular conditions under Codes 8007 through 8009, for 6 months</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, thereafter, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8010 Myelitis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8011 Poliomyelitis, anterior:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">As active febrile disease</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8012 Hematomyelia:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">For 6 months</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8013 Syphilis, cerebrospinal.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8014 Syphilis, meningovascular.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8015 Tabes dorsalis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Rate upon the severity of convulsions, paralysis, visual impairment or psychotic involvement, etc.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8017 Amyotrophic lateral sclerosis</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Consider the need for special monthly compensation.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8018 Multiple sclerosis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8019 Meningitis, cerebrospinal, epidemic:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">As active febrile disease</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8020 Brain, abscess of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">As active disease</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Spinal cord, new growths of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">8021 Malignant</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> The rating in code 8021 will be continued for 2 years following cessation of surgical, chemotherapeutic or other treatment modality. At this point, if the residuals have stabilized, the rating will be made on neurological residuals according to symptomatology.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">8022 Benign, minimum rating</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Rate residuals, minimum</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8023 Progressive muscular atrophy:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8024 Syringomyelia:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8025 Myasthenia gravis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Minimum rating</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="465"/>
+                  <ENT I="12">
+                    <E T="04">Note:</E> It is required for the minimum ratings for residuals under diagnostic codes 8000-8025, that there be ascertainable residuals. Determinations as to the presence of residuals not capable of objective verification, <E T="03">i.e.</E>, headaches, dizziness, fatigability, must be approached on the basis of the diagnosis recorded; subjective residuals will be accepted when consistent with the disease and not more likely attributable to other disease or no disease. It is of exceptional importance that when ratings in excess of the prescribed minimum ratings are assigned, the diagnostic codes utilized as bases of evaluation be cited, in addition to the codes identifying the diagnoses.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8045 Residuals of traumatic brain injury (TBI):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">There are three main areas of dysfunction that may result from TBI and have profound effects on functioning: cognitive (which is common in varying degrees after TBI), emotional/behavioral, and physical. Each of these areas of dysfunction may require evaluation.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Cognitive impairment is defined as decreased memory, concentration, attention, and executive functions of the brain. Executive functions are goal setting, speed of information processing, planning, organizing, prioritizing, self-monitoring, problem solving, judgment, decision making, spontaneity, and flexibility in changing actions when they are not productive. Not all of these brain functions may be affected in a given individual with cognitive impairment, and some functions may be affected more severely than others. In a given individual, symptoms may fluctuate in severity from day to day. Evaluate cognitive impairment under the table titled “Evaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified.”</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Subjective symptoms may be the only residual of TBI or may be associated with cognitive impairment or other areas of dysfunction. Evaluate subjective symptoms that are residuals of TBI, whether or not they are part of cognitive impairment, under the subjective symptoms facet in the table titled “Evaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified.” However, separately evaluate any residual with a distinct diagnosis that may be evaluated under another diagnostic code, such as migraine headache or Meniere's disease, even if that diagnosis is based on subjective symptoms, rather than under the “Evaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified” table</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Evaluate emotional/behavioral dysfunction under § 4.130 (Schedule of ratings—mental disorders) when there is a diagnosis of a mental disorder. When there is no diagnosis of a mental disorder, evaluate emotional/behavioral symptoms under the criteria in the table titled “Evaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified.”</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Evaluate physical (including neurological) dysfunction based on the following list, under an appropriate diagnostic code: Motor and sensory dysfunction, including pain, of the extremities and face; visual impairment; hearing loss and tinnitus; loss of sense of smell and taste; seizures; gait, coordination, and balance problems; speech and other communication difficulties, including aphasia and related disorders, and dysarthria; neurogenic bladder; neurogenic bowel; cranial nerve dysfunctions; autonomic nerve dysfunctions; and endocrine dysfunctions.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">The preceding list of types of physical dysfunction does not encompass all possible residuals of TBI. For residuals not listed here that are reported on an examination, evaluate under the most appropriate diagnostic code. Evaluate each condition separately, as long as the same signs and symptoms are not used to support more than one evaluation, and combine under § 4.25 the evaluations for each separately rated condition. The evaluation assigned based on the “Evaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified” table will be considered the evaluation for a single condition for purposes of combining with other disability evaluations</ENT>
+                </ROW>
+                <ROW RUL="s">
+                  <ENT I="03">Consider the need for special monthly compensation for such problems as loss of use of an extremity, certain sensory impairments, erectile dysfunction, the need for aid and attendance (including for protection from hazards or dangers incident to the daily environment due to cognitive impairment), being housebound, etc</ENT>
+                </ROW>
+                <ROW RUL="s">
+                  <PRTPAGE P="466"/>
+                  <ENT I="21">
+                    <E T="02">Evaluation of Cognitive Impairment and Subjective Symptoms</E>
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">The table titled “Evaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified” contains 10 important facets of TBI related to cognitive impairment and subjective symptoms. It provides criteria for levels of impairment for each facet, as appropriate, ranging from 0 to 3, and a 5th level, the highest level of impairment, labeled “total.” However, not every facet has every level of severity. The Consciousness facet, for example, does not provide for an impairment level other than “total,” since any level of impaired consciousness would be totally disabling. Assign a 100-percent evaluation if “total” is the level of evaluation for one or more facets. If no facet is evaluated as “total,” assign the overall percentage evaluation based on the level of the highest facet as follows: 0 = 0 percent; 1 = 10 percent; 2 = 40 percent; and 3 = 70 percent. For example, assign a 70 percent evaluation if 3 is the highest level of evaluation for any facet.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="02">Note (1):</E> There may be an overlap of manifestations of conditions evaluated under the table titled “Evaluation Of Cognitive Impairment And Other Residuals Of TBI Not Otherwise Classified” with manifestations of a comorbid mental or neurologic or other physical disorder that can be separately evaluated under another diagnostic code. In such cases, do not assign more than one evaluation based on the same manifestations. If the manifestations of two or more conditions cannot be clearly separated, assign a single evaluation under whichever set of diagnostic criteria allows the better assessment of overall impaired functioning due to both conditions. However, if the manifestations are clearly separable, assign a separate evaluation for each condition.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="02">Note (2):</E> Symptoms listed as examples at certain evaluation levels in the table are only examples and are not symptoms that must be present in order to assign a particular evaluation.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="02">Note (3):</E> “Instrumental activities of daily living” refers to activities other than self-care that are needed for independent living, such as meal preparation, doing housework and other chores, shopping, traveling, doing laundry, being responsible for one's own medications, and using a telephone. These activities are distinguished from “Activities of daily living,” which refers to basic self-care and includes bathing or showering, dressing, eating, getting in or out of bed or a chair, and using the toilet.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="02">Note (4):</E> The terms “mild,” “moderate,” and “severe” TBI, which may appear in medical records, refer to a classification of TBI made at, or close to, the time of injury rather than to the current level of functioning. This classification does not affect the rating assigned under diagnostic code 8045.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="02">Note (5):</E> A veteran whose residuals of TBI are rated under a version of § 4.124a, diagnostic code 8045, in effect before October 23, 2008 may request review under diagnostic code 8045, irrespective of whether his or her disability has worsened since the last review. VA will review that veteran's disability rating to determine whether the veteran may be entitled to a higher disability rating under diagnostic code 8045. A request for review pursuant to this note will be treated as a claim for an increased rating for purposes of determining the effective date of an increased rating awarded as a result of such review; however, in no case will the award be effective before October 23, 2008. For the purposes of determining the effective date of an increased rating awarded as a result of such review, VA will apply 38 CFR 3.114, if applicable.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8046 Cerebral arteriosclerosis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Purely neurological disabilities, such as hemiplegia, cranial nerve paralysis, etc., due to cerebral arteriosclerosis will be rated under the diagnostic codes dealing with such specific disabilities, with citation of a hyphenated diagnostic code (e.g., 8046-8207).</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Purely subjective complaints such as headache, dizziness, tinnitus, insomnia and irritability, recognized as symptomatic of a properly diagnosed cerebral arteriosclerosis, will be rated 10 percent and no more under diagnostic code 9305. This 10 percent rating will not be combined with any other rating for a disability due to cerebral or generalized arteriosclerosis. Ratings in excess of 10 percent for cerebral arteriosclerosis under diagnostic code 9305 are not assignable in the absence of a diagnosis of multi-infarct dementia with cerebral arteriosclerosis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> The ratings under code 8046 apply only when the diagnosis of cerebral arteriosclerosis is substantiated by the entire clinical picture and not solely on findings of retinal arteriosclerosis.</ENT>
+                </ROW>

@@ -1,0 +1,278 @@
+              <GPOTABLE CDEF="s25,4" COLS="2" OPTS="L2">
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">7900 Hyperthyroidism</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Thyroid enlargement, tachycardia (more than 100 beats per minute), eye involvement, muscular weakness, loss of weight, and sympathetic nervous system, cardiovascular, or astrointestinal symptoms</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Emotional instability, tachycardia, fatigability, and increased pulse pressure or blood pressure</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Tachycardia, tremor, and increased pulse pressure or blood pressure</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (1):</E> If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (2):</E> If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079).</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7901 Thyroid gland, toxic adenoma of</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Thyroid enlargement, tachycardia (more than 100 beats per minute), eye involvement, muscular weakness, loss of weight, and sympathetic nervous system, cardiovascular, or gastrointestinal symptoms</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Emotional instability, tachycardia, fatigability, and increased pulse pressure or blood pressure</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Tachycardia, tremor, and increased pulse pressure or blood pressure</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (1):</E> If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (2):</E> If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079).</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7902 Thyroid gland, nontoxic adenoma of</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">With disfigurement of the head or neck</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Without disfigurement of the head or neck</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> If there are symptoms due to pressure on adjacent organs such as the trachea, larynx, or esophagus, evaluate under the diagnostic code for disability of that organ, if doing so would result in a higher evaluation than using this diagnostic code.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7903 Hypothyroidism</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Cold intolerance, muscular weakness, cardiovascular involvement, mental disturbance (dementia, slowing of thought, depression), bradycardia (less than 60 beats per minute), and sleepiness</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Muscular weakness, mental disturbance, and weight gain</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Fatigability, constipation, and mental sluggishness</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Fatigability, or; continuous medication required for control</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7904 Hyperparathyroidism</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Generalized decalcification of bones, kidney stones, gastrointestinal symptoms (nausea, vomiting, anorexia, constipation, weight loss, or peptic ulcer), and weakness</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Gastrointestinal symptoms and weakness</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Continuous medication required for control</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Following surgery or treatment, evaluate as digestive, skeletal, renal, or cardiovascular residuals or as endocrine dysfunction.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7905 Hypoparathyroidism</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="462"/>
+                  <ENT I="02">Marked neuromuscular excitability (such as convulsions, muscular spasms (tetany), or laryngeal stridor) plus either cataract or evidence of increased intracranial pressure (such as papilledema)</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Marked neuromuscular excitability, or; paresthesias (of arms, legs, or circumoral area) plus either cataract or evidence of increased intracranial pressure</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Continuous medication required for control</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7907 Cushing's syndrome</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">As active, progressive disease including loss of muscle strength, areas of osteoporosis, hypertension, weakness, and enlargement of pituitary or adrenal gland</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Loss of muscle strength and enlargement of pituitary or adrenal gland</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">With striae, obesity, moon face, glucose intolerance, and vascular fragility</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> With recovery or control, evaluate as residuals of adrenal insufficiency or cardiovascular, psychiatric, skin, or skeletal complications under appropriate diagnostic code.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7908 Acromegaly</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Evidence of increased intracranial pressure (such as visual field defect), arthropathy, glucose intolerance, and either hypertension or cardiomegaly</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Arthropathy, glucose intolerance, and hypertension</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Enlargement of acral parts or overgrowth of long bones, and enlarged sella turcica</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7909 Diabetes insipidus</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Polyuria with near-continuous thirst, and more than two documented episodes of dehydration requiring parenteral hydration in the past year</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Polyuria with near-continuous thirst, and one or two documented episodes of dehydration requiring parenteral hydration in the past year</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Polyuria with near-continuous thirst, and one or more episodes of dehydration in the past year not requiring parenteral hydration</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Polyuria with near-continuous thirst</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7911 Addison's disease (Adrenal Cortical Hypofunction)</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Four or more crises during the past year</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Three crises during the past year, or; five or more episodes during the past year</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">One or two crises during the past year, or; two to four episodes during the past year, or; weakness and fatigability, or; corticosteroid therapy required for control</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (1):</E> An Addisonian “crisis” consists of the rapid onset of peripheral vascular collapse (with acute hypotension and shock), with findings that may include: anorexia; nausea; vomiting; dehydration; profound weakness; pain in abdomen, legs, and back; fever; apathy, and depressed mentation with possible progression to coma, renal shutdown, and death.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (2):</E> An Addisonian “episode,” for VA purposes, is a less acute and less severe event than an Addisonian crisis and may consist of anorexia, nausea, vomiting, diarrhea, dehydration, weakness, malaise, orthostatic hypotension, or hypoglycemia, but no peripheral vascular collapse.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (3):</E> Tuberculous Addison's disease will be evaluated as active or inactive tuberculosis. If inactive, these evaluations are not to be combined with the graduated ratings of 50 percent or 30 percent for non-pulmonary tuberculosis specified under § 4.88b. Assign the higher rating.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7912 Pluriglandular syndrome</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Evaluate according to major manifestations.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7913 Diabetes mellitus</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Requiring more than one daily injection of insulin, restricted diet, and regulation of activities (avoidance of strenuous occupational and recreational activities) with episodes of ketoacidosis or hypoglycemic reactions requiring at least three hospitalizations per year or weekly visits to a diabetic care provider, plus either progressive loss of weight and strength or complications that would be compensable if separately evaluated</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Requiring insulin, restricted diet, and regulation of activities with episodes of ketoacidosis or hypoglycemic reactions requiring one or two hospitalizations per year or twice a month visits to a diabetic care provider, plus complications that would not be compensable if separately evaluated</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Requiring insulin, restricted diet, and regulation of activities</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Requiring insulin and restricted diet, or; oral hypoglycemic agent and restricted diet</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Manageable by restricted diet only</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (1):</E> Evaluate compensable complications of diabetes separately unless they are part of the criteria used to support a 100 percent evaluation. Noncompensable complications are considered part of the diabetic process under diagnostic code 7913.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="05">Note (2):</E> When diabetes mellitus has been conclusively diagnosed, do not request a glucose tolerance test solely for rating purposes.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">7914 Neoplasm, malignant, any specified part of the endocrine system</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7915 Neoplasm, benign, any specified part of the endocrine system rate as residuals of endocrine dysfunction.</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="463"/>
+                  <ENT I="22">7916 Hyperpituitarism (prolactin secreting pituitary dysfunction)</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7917 Hyperaldosteronism (benign or malignant)</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7918 Pheochromocytoma (benign or malignant)</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">7919 C-cell hyperplasia of the thyroid</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.</ENT>
+                </ROW>

@@ -1,0 +1,62 @@
+              <GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+                <TTITLE>The Forearm and Hand</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                  <CHED H="2">Dominant</CHED>
+                  <CHED H="2">Nondominant</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="01">5307 Group VII. <E T="03">Function:</E> Flexion of wrist and fingers. <E T="03">Muscles arising from internal condyle of humerus:</E> Flexors of the carpus and long flexors of fingers and thumb; pronator</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>40</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5308 Group VIII. <E T="03">Function:</E> Extension of wrist, fingers, and thumb; abduction of thumb. <E T="03">Muscles arising mainly from external condyle of humerus:</E> Extensors of carpus, fingers, and thumb; supinator</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5309 Group IX. <E T="03">Function:</E> The forearm muscles act in strong grasping movements and are supplemented by the intrinsic muscles in delicate manipulative movements. <E T="03">Intrinsic muscles of hand:</E> Thenar eminence; short flexor, opponens, abductor and adductor of thumb; hypothenar eminence; short flexor, opponens and abductor of little finger; 4 lumbricales; 4 dorsal and 3 palmar interossei
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">
+                    <E T="04">Note:</E> The hand is so compact a structure that isolated muscle injuries are rare, being nearly always complicated with injuries of bones, joints, tendons, etc. Rate on limitation of motion, minimum 10 percent.</ENT>
+                </ROW>

@@ -1,0 +1,263 @@
+              <GPOTABLE CDEF="s10,5" COLS="2" OPTS="L2">
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="11">9900 Maxilla or mandible, chronic osteomyelitis or osteoradionecrosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Rate as osteomyelitis, chronic under diagnostic code 5000</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">9901 Mandible, loss of, complete, between angles</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9902 Mandible, loss of approximately one-half:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Involving temporomandibular articulation</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Not involving temporomandibular articulation</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9903 Mandible, nonunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="04">Note</E>—Dependent upon degree of motion and relative loss of masticatory function</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9904 Mandible, malunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe displacement</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate displacement</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight displacement</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="04">Note</E>—Dependent upon degree of motion and relative loss of masticatory function</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9905 Temporomandibular articulation, limited motion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Inter-incisal range:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">0 to 10 mm</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">11 to 20 mm</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">21 to 30 mm</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">31 to 40 mm</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Range of lateral excursion:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">0 to 4 mm</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="04">Note</E>—Ratings for limited inter-incisal movement shall not be combined with ratings for limited lateral excursion</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9906 Ramus, loss of whole or part of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Involving loss of temporomandibular articulation</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Bilateral</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Unilateral</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Not involving loss of temporomandibular articulation</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Bilateral</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Unilateral</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9907 Ramus, loss of less than one-half the substance of, not involving loss of continuity:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Bilateral</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unilateral</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">9908 Condyloid process, loss of, one or both sides</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9909 Coronoid process, loss of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Bilateral</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unilateral</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9911 Hard palate, loss of half or more:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Not replaceable by prosthesis</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Replaceable by prosthesis</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9912 Hard palate, loss of less than half of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Not replaceable by prosthesis</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Replaceable by prosthesis</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9913 Teeth, loss of, due to loss of substance of body of maxilla or mandible without loss of continuity:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Where the lost masticatory surface cannot be restored by suitable prosthesis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Loss of all teeth</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Loss of all upper teeth</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Loss of all lower teeth</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">All upper and lower posterior teeth missing</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">All upper and lower anterior teeth missing</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">All upper anterior teeth missing</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">All lower anterior teeth missing</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">All upper and lower teeth on one side missing</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Where the loss of masticatory surface can be restored by suitable prosthesis</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">
+                    <E T="04">Note</E>—These ratings apply only to bone loss through trauma or disease such as osteomyelitis, and not to the loss of the alveolar process as a result of periodontal disease, since such loss is not considered disabling</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9914 Maxilla, loss of more than half:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Not replaceable by prosthesis</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Replaceable by prosthesis</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9915 Maxilla, loss of half or less:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Loss of 25 to 50 percent:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Not replaceable by prosthesis</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Replaceable by prosthesis</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Loss of less than 25 percent:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Not replaceable by prosthesis</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Replaceable by prosthesis</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">9916 Maxilla, malunion or nonunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe displacement</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate displacement</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight displacement</ENT>
+                  <ENT>0</ENT>
+                </ROW>

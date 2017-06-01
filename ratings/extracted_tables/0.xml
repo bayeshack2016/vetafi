@@ -1,0 +1,19 @@
+            <GPOTABLE CDEF="s50,9" COLS="2" OPTS="L2">
+              <BOXHD>
+                <CHED H="1"> </CHED>
+                <CHED H="1">Rating</CHED>
+              </BOXHD>
+              <ROW>
+                <ENT I="11">Unstabilized condition with severe disability—</ENT>
+              </ROW>
+              <ROW>
+                <ENT I="02">Substantially gainful employment is not feasible or advisable</ENT>
+                <ENT>100</ENT>
+              </ROW>
+              <ROW>
+                <ENT I="11">Unhealed or incompletely healed wounds or injuries—</ENT>
+              </ROW>
+              <ROW>
+                <ENT I="02">Material impairment of employability likely</ENT>
+                <ENT>50</ENT>
+              </ROW>

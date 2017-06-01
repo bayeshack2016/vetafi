@@ -1,0 +1,58 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>The Ankle</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">5270 Ankle, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">In plantar flexion at more than 40°, or in dorsiflexion at more than 10° or with abduction, adduction, inversion or eversion deformity</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">In plantar flexion, between 30° and 40°, or in dorsiflexion, between 0° and 10°</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">In plantar flexion, less than 30°</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5271 Ankle, limited motion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Marked</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5272 Subastragalar or tarsal joint, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">In poor weight-bearing position</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">In good weight-bearing position</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5273 Os calcis or astragalus, malunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Marked deformity</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Moderate deformity</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5274 Astragalectomy</ENT>
+                  <ENT>20</ENT>
+                </ROW>

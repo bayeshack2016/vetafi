@@ -1,0 +1,304 @@
+              <GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+                <TTITLE>Evaluation of Ankylosis or Limitation of Motion of Single or Multiple Digits of the Hand</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                  <CHED H="2">Major</CHED>
+                  <CHED H="2">Minor</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="01">(1) For the index, long, ring, and little fingers (digits II, III, IV, and V), zero degrees of flexion represents the fingers fully extended, making a straight line with the rest of the hand. The position of function of the hand is with the wrist dorsiflexed 20 to 30 degrees, the metacarpophalangeal and proximal interphalangeal joints flexed to 30 degrees, and the thumb (digit I) abducted and rotated so that the thumb pad faces the finger pads. Only joints in these positions are considered to be in favorable position. For digits II through V, the metacarpophalangeal joint has a range of zero to 90 degrees of flexion, the proximal interphalangeal joint has a range of zero to 100 degrees of flexion, and the distal (terminal) interphalangeal joint has a range of zero to 70 or 80 degrees of flexion</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="01">(2) When two or more digits of the same hand are affected by any combination of amputation, ankylosis, or limitation of motion that is not otherwise specified in the rating schedule, the evaluation level assigned will be that which best represents the overall disability (<E T="03">i.e.</E>, amputation, unfavorable or favorable ankylosis, or limitation of motion), assigning the higher level of evaluation when the level of disability is equally balanced between one level and the next higher level</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="11">(3) Evaluation of ankylosis of the index, long, ring, and little fingers:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(i) If both the metacarpophalangeal and proximal interphalangeal joints of a digit are ankylosed, and either is in extension or full flexion, or there is rotation or angulation of a bone, evaluate as amputation without metacarpal resection, at proximal interphalangeal joint or proximal thereto</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(ii) If both the metacarpophalangeal and proximal interphalangeal joints of a digit are ankylosed, evaluate as unfavorable ankylosis, even if each joint is individually fixed in a favorable position</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(iii) If only the metacarpophalangeal or proximal interphalangeal joint is ankylosed, and there is a gap of more than two inches (5.1 cm.) between the fingertip(s) and the proximal transverse crease of the palm, with the finger(s) flexed to the extent possible, evaluate as unfavorable ankylosis</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(iv) If only the metacarpophalangeal or proximal interphalangeal joint is ankylosed, and there is a gap of two inches (5.1 cm.) or less between the fingertip(s) and the proximal transverse crease of the palm, with the finger(s) flexed to the extent possible, evaluate as favorable ankylosis</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="11">(4) Evaluation of ankylosis of the thumb:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(i) If both the carpometacarpal and interphalangeal joints are ankylosed, and either is in extension or full flexion, or there is rotation or angulation of a bone, evaluate as amputation at metacarpophalangeal joint or through proximal phalanx</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(ii) If both the carpometacarpal and interphalangeal joints are ankylosed, evaluate as unfavorable ankylosis, even if each joint is individually fixed in a favorable position</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(iii) If only the carpometacarpal or interphalangeal joint is ankylosed, and there is a gap of more than two inches (5.1 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers, evaluate as unfavorable ankylosis</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW>
+                  <ENT I="03">(iv) If only the carpometacarpal or interphalangeal joint is ankylosed, and there is a gap of two inches (5.1 cm.) or less between the thumb pad and the fingers, with the thumb attempting to oppose the fingers, evaluate as favorable ankylosis</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW RUL="s">
+                  <ENT I="01">(5) If there is limitation of motion of two or more digits, evaluate each digit separately and combine the evaluations</ENT>
+                  <ENT/>
+                  <ENT/>
+                </ROW>
+                <ROW EXPSTB="02" RUL="s">
+                  <ENT I="21">
+                    <E T="02">I. Multiple Digits: Unfavorable Ankylosis</E>
+                  </ENT>
+                </ROW>
+                <ROW EXPSTB="00">
+                  <ENT I="01">5216 Five digits of one hand, unfavorable ankylosis of</ENT>
+                  <ENT>60</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5217 Four digits of one hand, unfavorable ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Thumb and any three fingers</ENT>
+                  <ENT>60</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Index, long, ring, and little fingers</ENT>
+                  <ENT>50</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5218 Three digits of one hand, unfavorable ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Thumb and any two fingers</ENT>
+                  <ENT>50</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Index, long, and ring; index, long, and little; or index, ring, and little fingers</ENT>
+                  <ENT>40</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Long, ring, and little fingers</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5219 Two digits of one hand, unfavorable ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Thumb and any finger</ENT>
+                  <ENT>40</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="412"/>
+                  <ENT I="03">Index and long; index and ring; or index and little fingers</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Long and ring; long and little; or ring and little fingers</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW RUL="s">
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted.</ENT>
+                </ROW>
+                <ROW EXPSTB="02" RUL="s">
+                  <ENT I="21">
+                    <E T="02">II. Multiple Digits: Favorable Ankylosis</E>
+                  </ENT>
+                </ROW>
+                <ROW EXPSTB="00">
+                  <ENT I="01">5220 Five digits of one hand, favorable ankylosis of</ENT>
+                  <ENT>50</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5221 Four digits of one hand, favorable ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Thumb and any three fingers</ENT>
+                  <ENT>50</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Index, long, ring, and little fingers</ENT>
+                  <ENT>40</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5222 Three digits of one hand, favorable ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Thumb and any two fingers</ENT>
+                  <ENT>40</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Index, long, and ring; index, long, and little; or index, ring, and little fingers</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Long, ring and little fingers</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5223 Two digits of one hand, favorable ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Thumb and any finger</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Index and long; index and ring; or index and little fingers</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW RUL="s">
+                  <ENT I="03">Long and ring; long and little; or ring and little fingers</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW EXPSTB="02" RUL="s">
+                  <ENT I="21">
+                    <E T="02">III. Ankylosis of Individual Digits</E>
+                  </ENT>
+                </ROW>
+                <ROW EXPSTB="00">
+                  <ENT I="11">5224 Thumb, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unfavorable</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Favorable</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5225 Index finger, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unfavorable or favorable</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5226 Long finger, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unfavorable or favorable</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5227 Ring or little finger, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unfavorable or favorable</ENT>
+                  <ENT>0</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW RUL="s">
+                  <ENT I="11">
+                    <E T="02">Note:</E> Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.</ENT>
+                </ROW>
+                <ROW EXPSTB="02" RUL="s">
+                  <ENT I="21">
+                    <E T="02">IV. Limitation of Motion of Individual Digits</E>
+                  </ENT>
+                </ROW>
+                <ROW EXPSTB="00">
+                  <ENT I="11">5228 Thumb, limitation of motion:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With a gap of more than two inches (5.1 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With a gap of one to two inches (2.5 to 5.1 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With a gap of less than one inch (2.5 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers</ENT>
+                  <ENT>0</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5229 Index or long finger, limitation of motion:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With a gap of one inch (2.5 cm.) or more between the fingertip and the proximal transverse crease of the palm, with the finger flexed to the extent possible, or; with extension limited by more than 30 degrees</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With a gap of less than one inch (2.5 cm.) between the fingertip and the proximal transverse crease of the palm, with the finger flexed to the extent possible, and; extension is limited by no more than 30 degrees</ENT>
+                  <ENT>0</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">5230 Ring or little finger, limitation of motion:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Any limitation of motion</ENT>
+                  <ENT>0</ENT>
+                  <ENT>0</ENT>
+                </ROW>

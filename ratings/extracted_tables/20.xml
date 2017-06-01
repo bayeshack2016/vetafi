@@ -1,0 +1,90 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>The Foot and Leg</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="01">5310 Group X. <E T="03">Function:</E> Movements of forefoot and toes; propulsion thrust in walking. <E T="03">Intrinsic muscles of the foot: Plantar:</E> (1) Flexor digitorum brevis; (2) abductor hallucis; (3) abductor digiti minimi; (4) quadratus plantae; (5) lumbricales; (6) flexor hallucis brevis; (7) adductor hallucis; (8) flexor digiti minimi brevis; (9) dorsal and plantar interossei. Other important plantar structures: Plantar aponeurosis, long plantar and calcaneonavicular ligament, tendons of posterior tibial, peroneus longus, and long flexors of great and little toes</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">
+                    <E T="03">Dorsal:</E> (1) Extensor hallucis brevis; (2) extensor digitorum brevis. Other important dorsal structures: cruciate, crural, deltoid, and other ligaments; tendons of long extensors of toes and peronei muscles</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="419"/>
+                  <ENT I="11">
+                    <E T="04">Note:</E> Minimum rating for through-and-through wounds of the foot—10.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5311 Group XI. <E T="03">Function:</E> Propulsion, plantar flexion of foot (1); stabilization of arch (2, 3); flexion of toes (4, 5); Flexion of knee (6). <E T="03">Posterior and lateral crural muscles, and muscles of the calf:</E> (1) Triceps surae (gastrocnemius and soleus); (2) tibialis posterior; (3) peroneus longus; (4) peroneus brevis; (5) flexor hallucis longus; (6) flexor digitorum longus; (7) popliteus; (8) plantaris</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5312 Group XII. <E T="03">Function:</E> Dorsiflexion (1); extension of toes (2); stabilization of arch (3). <E T="03">Anterior muscles of the leg:</E> (1) Tibialis anterior; (2) extensor digitorum longus; (3) extensor hallucis longus; (4) peroneus tertius</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>

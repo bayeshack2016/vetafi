@@ -1,0 +1,794 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>Diseases of the Heart</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (1):</E> Evaluate cor pulmonale, which is a form of secondary heart disease, as part of the pulmonary condition that causes it.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (2):</E> One MET (metabolic equivalent) is the energy cost of standing quietly at rest and represents an oxygen uptake of 3.5 milliliters per kilogram of body weight per minute. When the level of METs at which dyspnea, fatigue, angina, dizziness, or syncope develops is required for evaluation, and a laboratory determination of METs by exercise testing cannot be done for medical reasons, an estimation by a medical examiner of the level of activity (expressed in METs and supported by specific examples, such as slow stair climbing or shoveling snow) that results in dyspnea, fatigue, angina, dizziness, or syncope may be used.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7000 Valvular heart disease (including rheumatic heart disease):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">During active infection with valvular heart damage and for three months following cessation of therapy for the active infection</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="442"/>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7001 Endocarditis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">For three months following cessation of therapy for active infection with cardiac involvement</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7002 Pericarditis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">For three months following cessation of therapy for active infection with cardiac involvement</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter, with documented pericarditis resulting in:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent.</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7003 Pericardial adhesions:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7004 Syphilitic heart disease:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> Evaluate syphilitic aortic aneurysms under DC 7110 (aortic aneurysm).
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="11">7005 Arteriosclerotic heart disease (Coronary artery disease):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">With documented coronary artery disease resulting in:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="443"/>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> If nonservice-connected arteriosclerotic heart disease is superimposed on service-connected valvular or other non-arteriosclerotic heart disease, request a medical opinion as to which condition is causing the current signs and symptoms.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7006 Myocardial infarction:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">During and for three months following myocardial infarction, documented by laboratory tests</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter:
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">With history of documented myocardial infarction, resulting in:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7007 Hypertensive heart disease:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7008 Hyperthyroid heart disease:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7010 Supraventricular arrhythmias:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Paroxysmal atrial fibrillation or other supraventricular tachycardia, with more than four episodes per year documented by ECG or Holter monitor</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Permanent atrial fibrillation (lone atrial fibrillation), or; one to four episodes per year of paroxysmal atrial fibrillation or other supraventricular tachycardia documented by ECG or Holter monitor</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7011 Ventricular arrhythmias (sustained):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">For indefinite period from date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia, or; for indefinite period from date of hospital admission for ventricular aneurysmectomy, or; with an automatic implantable Cardioverter-Defibrillator (AICD) in place</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="21">
+                    <E T="04">Note:</E> A rating of 100 percent shall be assigned from the date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia or for ventricular aneurysmectomy. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7015 Atrioventricular block:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="444"/>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication or a pacemaker required</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> Unusual cases of arrhythmia such as atrioventricular block associated with a supraventricular arrhythmia or pathological bradycardia should be submitted to the Director, Compensation Service. Simple delayed P-R conduction time, in the absence of other evidence of cardiac disease, is not a disability.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7016 Heart valve replacement (prosthesis):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">For indefinite period following date of hospital admission for valve replacement</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> A rating of 100 percent shall be assigned as of the date of hospital admission for valve replacement. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7017 Coronary bypass surgery:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">For three months following hospital admission for surgery</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7018 Implantable cardiac pacemakers:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">For two months following hospital admission for implantation or reimplantation</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Evaluate as supraventricular arrhythmias (DC 7010), ventricular arrhythmias (DC 7011), or atrioventricular block (DC 7015). Minimum</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> Evaluate implantable Cardioverter-Defibrillators (AICD's) under DC 7011.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7019 Cardiac transplantation:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">For an indefinite period from date of hospital admission for cardiac transplantation</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Thereafter:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Minimum</ENT>
+                  <ENT>30
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> A rating of 100 percent shall be assigned as of the date of hospital admission for cardiac transplantation. One year following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7020 Cardiomyopathy:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="02">Diseases of the Arteries and Veins</E>
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7101 Hypertensive vascular disease (hypertension and isolated systolic hypertension):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Diastolic pressure predominantly 130 or more</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Diastolic pressure predominantly 120 or more</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="445"/>
+                  <ENT I="03">Diastolic pressure predominantly 110 or more, or; systolic pressure predominantly 200 or more</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Diastolic pressure predominantly 100 or more, or; systolic pressure predominantly 160 or more, or; minimum evaluation for an individual with a history of diastolic pressure predominantly 100 or more who requires continuous medication for control</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (1):</E> Hypertension or isolated systolic hypertension must be confirmed by readings taken two or more times on at least three different days. For purposes of this section, the term hypertension means that the diastolic blood pressure is predominantly 90mm. or greater, and isolated systolic hypertension means that the systolic blood pressure is predominantly 160mm. or greater with a diastolic blood pressure of less than 90mm.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (2):</E> Evaluate hypertension due to aortic insufficiency or hyperthyroidism, which is usually the isolated systolic type, as part of the condition causing it rather than by a separate evaluation.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (3):</E> Evaluate hypertension separately from hypertensive heart disease and other types of heart disease.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7110 Aortic aneurysm:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">If five centimeters or larger in diameter, or; if symptomatic, or; for indefinite period from date of hospital admission for surgical correction (including any type of graft insertion)</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Precluding exertion</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Evaluate residuals of surgical correction according to organ systems affected.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> A rating of 100 percent shall be assigned as of the date of admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7111 Aneurysm, any large artery:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">If symptomatic, or; for indefinite period from date of hospital admission for surgical correction</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Following surgery:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; persistent coldness of the extremity, one or more deep ischemic ulcers, or ankle/brachial index of 0.5 or less</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (1):</E> The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (2):</E> These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under § 4.25), using the bilateral factor, if applicable.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (3):</E> A rating of 100 percent shall be assigned as of the date of hospital admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7112 Aneurysm, any small artery:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Asymptomatic</ENT>
+                  <ENT>0
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> If symptomatic, evaluate according to body system affected. Following surgery, evaluate residuals under the body system affected.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7113 Arteriovenous fistula, traumatic:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With high output heart failure</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Without heart failure but with enlarged heart, wide pulse pressure, and tachycardia</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Lower extremity</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Upper extremity</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">With edema or stasis dermatitis:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Lower extremity</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Upper extremity</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7114 Arteriosclerosis obliterans:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less</ENT>
+                  <ENT>20
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (1):</E> The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (2):</E> Evaluate residuals of aortic and large arterial bypass surgery or arterial graft as arteriosclerosis obliterans.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (3):</E> These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under § 4.25), using the bilateral factor (§ 4.26), if applicable.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7115 Thrombo-angiitis obliterans (Buerger's Disease):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="446"/>
+                  <ENT I="03">Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less</ENT>
+                  <ENT>20
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (1):</E> The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note (2):</E> These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under § 4.25), using the bilateral factor (§ 4.26), if applicable.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7117 Raynaud's syndrome:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With two or more digital ulcers plus autoamputation of one or more digits and history of characteristic attacks</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With two or more digital ulcers and history of characteristic attacks</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Characteristic attacks occurring at least daily</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Characteristic attacks occurring four to six times a week</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Characteristic attacks occurring one to three times a week</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> For purposes of this section, characteristic attacks consist of sequential color changes of the digits of one or more extremities lasting minutes to hours, sometimes with pain and paresthesias, and precipitated by exposure to cold or by emotional upsets. These evaluations are for the disease as a whole, regardless of the number of extremities involved or whether the nose and ears are involved.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7118 Angioneurotic edema:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Attacks without laryngeal involvement lasting one to seven days or longer and occurring more than eight times a year, or; attacks with laryngeal involvement of any duration occurring more than twice a year</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Attacks without laryngeal involvement lasting one to seven days and occurring five to eight times a year, or; attacks with laryngeal involvement of any duration occurring once or twice a year</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Attacks without laryngeal involvement lasting one to seven days and occurring two to four times a year</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7119 Erythromelalgia:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Characteristic attacks that occur more than once a day, last an average of more than two hours each, respond poorly to treatment, and that restrict most routine daily activities</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Characteristic attacks that occur more than once a day, last an average of more than two hours each, and respond poorly to treatment, but that do not restrict most routine daily activities</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Characteristic attacks that occur daily or more often but that respond to treatment</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Characteristic attacks that occur less than daily but at least three times a week and that respond to treatment</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> For purposes of this section, a characteristic attack of erythromelalgia consists of burning pain in the hands, feet, or both, usually bilateral and symmetrical, with increased skin temperature and redness, occurring at warm ambient temperatures. These evaluations are for the disease as a whole, regardless of the number of extremities involved.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7120 Varicose veins:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With the following findings attributed to the effects of varicose veins: Massive board-like edema with constant pain at rest</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Asymptomatic palpable or visible varicose veins</ENT>
+                  <ENT>0
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> These evaluations are for involvement of a single extremity. If more than one extremity is involved, evaluate each extremity separately and combine (under § 4.25), using the bilateral factor (§ 4.26), if applicable.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7121 Post-phlebitic syndrome of any etiology:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13">With the following findings attributed to venous disease:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Massive board-like edema with constant pain at rest</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Asymptomatic palpable or visible varicose veins</ENT>
+                  <ENT>0
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> These evaluations are for involvement of a single extremity. If more than one extremity is involved, evaluate each extremity separately and combine (under § 4.25), using the bilateral factor (§ 4.26), if applicable.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">7122 Cold injury residuals:</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="447"/>
+                  <ENT I="13">With the following in affected parts:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Arthralgia or other pain, numbness, or cold sensitivity plus two or more of the following: tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Arthralgia or other pain, numbness, or cold sensitivity plus tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, or X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="05">Arthralgia or other pain, numbness, or cold sensitivity</ENT>
+                  <ENT>10
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note</E> (1): Separately evaluate amputations of fingers or toes, and complications such as squamous cell carcinoma at the site of a cold injury scar or peripheral neuropathy, under other diagnostic codes. Separately evaluate other disabilities that have been diagnosed as the residual effects of cold injury, such as Raynaud's phenomenon, muscle atrophy, etc., unless they are used to support an evaluation under diagnostic code 7122.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note</E> (2): Evaluate each affected part (e.g., hand, foot, ear, nose) separately and combine the ratings in accordance with §§ 4.25 and 4.26.
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">7123 Soft tissue sarcoma (of vascular origin)</ENT>
+                  <ENT>100
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">
+                    <E T="04">Note:</E> A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.</ENT>
+                </ROW>

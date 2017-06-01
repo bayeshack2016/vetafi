@@ -1,0 +1,121 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>The Pelvic Girdle and Thigh</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="01">5313 Group XIII. <E T="03">Function:</E> Extension of hip and flexion of knee; outward and inward rotation of flexed knee; acting with rectus femoris and sartorius (see XIV, 1, 2) synchronizing simultaneous flexion of hip and knee and extension of hip and knee by belt-over-pulley action at knee joint. <E T="03">Posterior thigh group, Hamstring complex of 2-joint muscles:</E> (1) Biceps femoris; (2) semimembranosus; (3) semitendinosus</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5314 Group XIV. <E T="03">Function:</E> Extension of knee (2, 3, 4, 5); simultaneous flexion of hip and flexion of knee (1); tension of fascia lata and iliotibial (Maissiat's) band, acting with XVII (1) in postural support of body (6); acting with hamstrings in synchronizing hip and knee (1, 2). <E T="03">Anterior thigh group:</E> (1) Sartorius; (2) rectus femoris; (3) vastus externus; (4) vastus intermedius; (5) vastus internus; (6) tensor vaginae femoris</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5315 Group XV. <E T="03">Function:</E> Adduction of hip (1, 2, 3, 4); flexion of hip (1, 2); flexion of knee (4). <E T="03">Mesial thigh group:</E> (1) Adductor longus; (2) adductor brevis; (3) adductor magnus; (4) gracilis</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5316 Group XVI. <E T="03">Function:</E> Flexion of hip (1, 2, 3). <E T="03">Pelvic girdle group 1:</E> (1) Psoas; (2) iliacus; (3) pectineus</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5317 Group XVII. <E T="03">Function:</E> Extension of hip (1); abduction of thigh; elevation of opposite side of pelvis (2, 3); tension of fascia lata and iliotibial (Maissiat's) band, acting with XIV (6) in postural support of body steadying pelvis upon head of femur and condyles of femur on tibia (1). <E T="03">Pelvic girdle group 2:</E> (1) Gluteus maximus; (2) gluteus medius; (3) gluteus minimus</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>*50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5318 Group XVIII. <E T="03">Function:</E> Outward rotation of thigh and stabilization of hip joint. <E T="03">Pelvic girdle group 3:</E> (1) Pyriformis; (2) gemellus (superior or inferior); (3) obturator (external or internal); (4) quadratus femoris</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderately Severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <TNOTE>* If bilateral, see § 3.350(a)(3) of this chapter to determine whether the veteran may be entitled to special monthly compensation.</TNOTE>

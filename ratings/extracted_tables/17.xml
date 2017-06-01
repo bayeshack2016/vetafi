@@ -1,0 +1,17 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>The Coccyx</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">5298 Coccyx, removal of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Partial or complete, with painful residuals</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Without painful residuals</ENT>
+                  <ENT>0</ENT>
+                </ROW>

@@ -1,0 +1,198 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>Acute, Subacute, or Chronic Diseases</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">5000 Osteomyelitis, acute, subacute, or chronic:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Of the pelvis, vertebrae, or extending into major joints, or with multiple localization or with long history of intractability and debility, anemia, amyloid liver changes, or other continuous constitutional symptoms</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Frequent episodes, with constitutional symptoms</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">With definite involucrum or sequestrum, with or without discharging sinus</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">With discharging sinus or other evidence of active infection within the past 5 years</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Inactive, following repeated episodes, without evidence of active infection in past 5 years</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02" O="xl">
+                    <E T="04">Note</E> (1): A rating of 10 percent, as an exception to the amputation rule, is to be assigned in any case of active osteomyelitis where the amputation rating for the affected part is no percent. This 10 percent rating and the other partial ratings of 30 percent or less are to be combined with ratings for ankylosis, limited motion, nonunion or malunion, shortening, etc., subject, of course, to the amputation rule. The 60 percent rating, as it is based on constitutional symptoms, is not subject to the amputation rule. A rating for osteomyelitis will not be applied following cure by removal or radical resection of the affected bone.</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="403"/>
+                  <ENT I="02" O="xl">
+                    <E T="04">Note</E> (2): The 20 percent rating on the basis of activity within the past 5 years is not assignable following the initial infection of active osteomyelitis with no subsequent reactivation. The prerequisite for this historical rating is an established recurrent osteomyelitis. To qualify for the 10 percent rating, 2 or more episodes following the initial infection are required. This 20 percent rating or the 10 percent rating, when applicable, will be assigned once only to cover disability at all sites of previously active infection with a future ending date in the case of the 20 percent rating.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5001 Bones and joints, tuberculosis of, active or inactive:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Active</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Inactive: See §§ 4.88b and 4.89.</ENT>
+                  <ENT> </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5002 Arthritis rheumatoid (atrophic) <E T="03">As an active process:</E>
+                  </ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">With constitutional manifestations associated with active joint involvement, totally incapacitating</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Less than criteria for 100% but with weight loss and anemia productive of severe impairment of health or severely incapacitating exacerbations occurring 4 or more times a year or a lesser number over prolonged periods</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Symptom combinations productive of definite impairment of health objectively supported by examination findings or incapacitating exacerbations occurring 3 or more times a year</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">One or two exacerbations a year in a well-established diagnosis</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">For chronic residuals:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5003 Arthritis, degenerative (hypertrophic or osteoarthritis):</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02" O="xl">Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups, with occasional incapacitating exacerbations</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note</E> (1): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be combined with ratings based on limitation of motion.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note</E> (2): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be utilized in rating conditions listed under diagnostic codes 5013 to 5024, inclusive.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5004 Arthritis, gonorrheal.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5005 Arthritis, pneumococcic.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5006 Arthritis, typhoid.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5007 Arthritis, syphilitic.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5008 Arthritis, streptococcic.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5009 Arthritis, other types (specify).</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5010 Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5011 Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5012 Bones, new growths of, malignant</ENT>
+                  <ENT>100</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> The 100 percent rating will be continued for 1 year following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5013 Osteoporosis, with joint manifestations.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5014 Osteomalacia.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5015 Bones, new growths of, benign.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5016 Osteitis deformans.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5017 Gout.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5018 Hydrarthrosis, intermittent.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5019 Bursitis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5020 Synovitis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5021 Myositis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5022 Periostitis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5023 Myositis ossificans.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5024 Tenosynovitis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5025 Fibromyalgia (fibrositis, primary fibromyalgia syndrome)</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">That are constant, or nearly so, and refractory to therapy</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">That are episodic, with exacerbations often precipitated by environmental or emotional stress or by overexertion, but that are present more than one-third of the time</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">That require continuous medication for control</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="404"/>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Widespread pain means pain in both the left and right sides of the body, that is both above and below the waist, and that affects both the axial skeleton (<E T="03">i.e.</E>, cervical spine, anterior chest, thoracic spine, or low back) and the extremities.</ENT>
+                </ROW>

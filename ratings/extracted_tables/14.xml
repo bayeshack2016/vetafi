@@ -1,0 +1,163 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>The Foot</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">5276 Flatfoot, acquired:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Pronounced; marked pronation, extreme tenderness of plantar surfaces of the feet, marked inward displacement and severe spasm of the tendo achillis on manipulation, not improved by orthopedic shoes or appliances</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Bilateral</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Unilateral</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Severe; objective evidence of marked deformity (pronation, abduction, etc.), pain on manipulation and use accentuated, indication of swelling on use, characteristic callosities:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Bilateral</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unilateral</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <PRTPAGE P="417"/>
+                  <ENT I="02">Moderate; weight-bearing line over or medial to great toe, inward bowing of the tendo achillis, pain on manipulation and use of the feet, bilateral or unilateral</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Mild; symptoms relieved by built-up shoe or arch support</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5277 Weak foot, bilateral:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">A symptomatic condition secondary to many constitutional conditions, characterized by atrophy of the musculature, disturbed circulation, and weakness:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Rate the underlying condition, minimum rating</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5278 Claw foot (pes cavus), acquired:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Marked contraction of plantar fascia with dropped forefoot, all toes hammer toes, very painful callosities, marked varus deformity:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Bilateral</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unilateral</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">All toes tending to dorsiflexion, limitation of dorsiflexion at ankle to right angle, shortened plantar fascia, and marked tenderness under metatarsal heads:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Bilateral</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unilateral</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Great toe dorsiflexed, some limitation of dorsiflexion at ankle, definite tenderness under metatarsal heads:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Bilateral</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Unilateral</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Slight</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5279 Metatarsalgia, anterior (Morton's disease), unilateral, or bilateral</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5280 Hallux valgus, unilateral:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Operated with resection of metatarsal head</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Severe, if equivalent to amputation of great toe</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5281 Hallux rigidus, unilateral, severe:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Rate as hallux valgus, severe.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="13"> Note: Not to be combined with claw foot ratings.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5282 Hammer toe:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">All toes, unilateral without claw foot</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Single toes</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5283 Tarsal, or metatarsal bones, malunion of, or nonunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Moderately severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> With actual loss of use of the foot, rate 40 percent.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5284 Foot injuries, other:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Moderately severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> With actual loss of use of the foot, rate 40 percent.</ENT>
+                </ROW>

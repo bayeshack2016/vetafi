@@ -1,0 +1,123 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>The Knee and Leg</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">5256 Knee, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extremely unfavorable, in flexion at an angle of 45° or more</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">In flexion between 20° and 45°</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">In flexion between 10° and 20°</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Favorable angle in full extension, or in slight flexion between 0° and 10°</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5257 Knee, other impairment of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Recurrent subluxation or lateral instability:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Slight</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5258 Cartilage, semilunar, dislocated, with frequent episodes of “locking,” pain, and effusion into the joint</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5259 Cartilage, semilunar, removal of, symptomatic</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5260 Leg, limitation of flexion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 15°</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 30°</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 45°</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 60°</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5261 Leg, limitation of extension of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extension limited to 45°</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extension limited to 30°</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extension limited to 20°</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extension limited to 15°</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extension limited to 10°</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extension limited to 5°</ENT>
+                  <ENT>0</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5262 Tibia and fibula, impairment of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Nonunion of, with loose motion, requiring brace</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Malunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With marked knee or ankle disability</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With moderate knee or ankle disability</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With slight knee or ankle disability</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5263 Genu recurvatum (acquired, traumatic, with weakness and insecurity in weight-bearing objectively demonstrated)</ENT>
+                  <ENT>10</ENT>
+                </ROW>

@@ -1,0 +1,181 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>Diseases of the Cranial Nerves</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="12">Disability from lesions of peripheral portions of first, second, third, fourth, sixth, and eighth nerves will be rated under the Organs of Special Sense. The ratings for the cranial nerves are for unilateral involvement; when bilateral, combine but without the bilateral factor.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Fifth (trigeminal) cranial nerve</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8205 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Dependent upon relative degree of sensory manifestation or motor loss.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8305 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8405 Neuralgia.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Tic douloureux may be rated in accordance with severity, up to complete paralysis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Seventh (facial) cranial nerve</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8207 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Complete</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Incomplete, severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Incomplete, moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Dependent upon relative loss of innervation of facial muscles.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8307 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8407 Neuralgia.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Ninth (glossopharyngeal) cranial nerve</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8209 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Dependent upon relative loss of ordinary sensation in mucous membrane of the pharynx, fauces, and tonsils.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8309 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8409 Neuralgia.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Tenth (pneumogastric, vagus) cranial nerve</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8210 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note</E> : Dependent upon extent of sensory and motor loss to organs of voice, respiration, pharynx, stomach and heart.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8310 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8410 Neuralgia.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Eleventh (spinal accessory, external branch) cranial nerve.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8211 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, severe</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Dependent upon loss of motor function of sternomastoid and trapezius muscles.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8311 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8411 Neuralgia.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Twelfth (hypoglossal) cranial nerve.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8212 Paralysis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Complete</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, severe</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Incomplete, moderate</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> Dependent upon loss of motor function of tongue.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8312 Neuritis.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">8412 Neuralgia.</ENT>
+                </ROW>

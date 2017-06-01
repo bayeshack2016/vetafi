@@ -1,0 +1,102 @@
+              <GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+                <TTITLE>The Hip and Thigh</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">5250 Hip, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Unfavorable, extremely unfavorable ankylosis, the foot not reaching ground, crutches necessitated</ENT>
+                  <ENT>
+                    <SU>3</SU> 90</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Intermediate</ENT>
+                  <ENT>70</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Favorable, in flexion at an angle between 20° and 40°, and slight adduction or abduction</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5251 Thigh, limitation of extension of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Extension limited to 5°</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5252 Thigh, limitation of flexion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 10°</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 20°</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 30°</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Flexion limited to 45°</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5253 Thigh, impairment of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Limitation of abduction of, motion lost beyond 10°</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Limitation of adduction of, cannot cross legs</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Limitation of rotation of, cannot toe-out more than 15°, affected leg</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="01">5254 Hip, flail joint</ENT>
+                  <ENT>80</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5255 Femur, impairment of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Fracture of shaft or anatomical neck of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With nonunion, with loose motion (spiral or oblique fracture)</ENT>
+                  <ENT>80</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With nonunion, without loose motion, weightbearing preserved with aid of brace</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Fracture of surgical neck of, with false joint</ENT>
+                  <ENT>60</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Malunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With marked knee or hip disability</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With moderate knee or hip disability</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With slight knee or hip disability</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <TNOTE>
+                  <SU>3</SU> Entitled to special monthly compensation.</TNOTE>

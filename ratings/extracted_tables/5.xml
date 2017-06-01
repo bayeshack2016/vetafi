@@ -1,0 +1,121 @@
+              <GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+                <TTITLE>The Shoulder and Arm</TTITLE>
+                <BOXHD>
+                  <CHED H="1"> </CHED>
+                  <CHED H="1">Rating</CHED>
+                  <CHED H="2">Major</CHED>
+                  <CHED H="2">Minor</CHED>
+                </BOXHD>
+                <ROW>
+                  <ENT I="22">5200 Scapulohumeral articulation, ankylosis of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">
+                    <E T="04">Note:</E> The scapula and humerus move as one piece.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Unfavorable, abduction limited to 25° from side</ENT>
+                  <ENT>50</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Intermediate between favorable and unfavorable</ENT>
+                  <ENT>40</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Favorable, abduction to 60°, can reach mouth and head</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5201 Arm, limitation of motion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">To 25° from side</ENT>
+                  <ENT>40</ENT>
+                  <ENT>30</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Midway between side and shoulder level</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">At shoulder level</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5202 Humerus, other impairment of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Loss of head of (flail shoulder)</ENT>
+                  <ENT>80</ENT>
+                  <ENT>70</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Nonunion of (false flail joint)</ENT>
+                  <ENT>60</ENT>
+                  <ENT>50</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Fibrous union of</ENT>
+                  <ENT>50</ENT>
+                  <ENT>40</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Recurrent dislocation of at scapulohumeral joint.</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With frequent episodes and guarding of all arm movements</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With infrequent episodes, and guarding of movement only at shoulder level</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Malunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Marked deformity</ENT>
+                  <ENT>30</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Moderate deformity</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="22">5203 Clavicle or scapula, impairment of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Dislocation of</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Nonunion of:</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">With loose movement</ENT>
+                  <ENT>20</ENT>
+                  <ENT>20</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="03">Without loose movement</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="02">Malunion of</ENT>
+                  <ENT>10</ENT>
+                  <ENT>10</ENT>
+                </ROW>
+                <ROW>
+                  <ENT I="12">Or rate on impairment of function of contiguous joint.</ENT>
+                </ROW>
