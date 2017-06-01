@@ -1,0 +1,58 @@
+{
+ "Schedule of ratings\u2014gynecological conditions and disorders of the breast.": {
+  "7610\u2003Vulva, disease or injury of (including vulvovaginitis).": {},
+  "7611\u2003Vagina, disease or injury of.": {},
+  "7612\u2003Cervix, disease or injury of.": {},
+  "7613\u2003Uterus, disease, injury, or adhesions of.": {},
+  "7614\u2003Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID)).": {},
+  "7615\u2003Ovary, disease, injury, or adhesions of.": {},
+  "General Rating Formula for Disease, Injury, or Adhesions of Female Reproductive Organs (diagnostic codes 7610 through 7615):": {
+   "Symptoms not controlled by continuous treatment": 30,
+   "Symptoms that require continuous treatment": 10,
+   "Symptoms that do not require continuous treatment": 0
+  },
+  "7617\u2003Uterus and both ovaries, removal of, complete:": {},
+  "7618\u2003Uterus, removal of, including corpus:": {},
+  "7619\u2003Ovary, removal of:": {},
+  "Thereafter:": {},
+  "7621\u2003Uterus, prolapse:": {
+   "Complete, through vagina and introitus": 50,
+   "Incomplete": 30
+  },
+  "7622\u2003Uterus, displacement of:": {
+   "With marked displacement and frequent or continuous menstrual disturbances": 30,
+   "With adhesions and irregular menstruation": 10
+  },
+  "7623\u2003Pregnancy, surgical complications of:": {
+   "With rectocele or cystocele": 50,
+   "With relaxation of perineum": 10
+  },
+  "7624\u2003Fistula, rectovaginal:": {
+   "Vaginal fecal leakage at least once a day requiring wearing of pad": 100,
+   "Vaginal fecal leakage four or more times per week, but less than daily, requiring wearing of pad": 60,
+   "Vaginal fecal leakage one to three times per week requiring wearing of pad": 30,
+   "Vaginal fecal leakage less than once a week": 10,
+   "Without leakage": 0
+  },
+  "7625\u2003Fistula, urethrovaginal:": {
+   "Multiple urethrovaginal fistulae": 100,
+   "Requiring the use of an appliance or the wearing of absorbent materials which must be changed more than four times per day": 60,
+   "Requiring the wearing of absorbent materials which must be changed two to four times per day": 40,
+   "Requiring the wearing of absorbent materials which must be changed less than two times per day": 20
+  },
+  "7626\u2003Breast, surgery of:": {},
+  "Following radical mastectomy:": {},
+  "Following modified radical mastectomy:": {},
+  "Following simple mastectomy or wide local excision with significant alteration of size or form:": {},
+  "Following wide local excision without significant alteration of size or form:": {
+   "Both or one": 0,
+   "7627\u2003Malignant neoplasms of gynecological system or breast": 100
+  },
+  "7628\u2003Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin.": {},
+  "7629\u2003Endometriosis:": {
+   "Lesions involving bowel or bladder confirmed by laparoscopy, pelvic pain or heavy or irregular bleeding not controlled by treatment, and bowel or bladder symptoms": 50,
+   "Pelvic pain or heavy or irregular bleeding not controlled by treatment": 30,
+   "Pelvic pain or heavy or irregular bleeding requiring continuous treatment for control": 10
+  }
+ }
+}

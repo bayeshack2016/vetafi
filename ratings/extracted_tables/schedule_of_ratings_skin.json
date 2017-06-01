@@ -1,0 +1,135 @@
+{
+ "Schedule of ratings\u2014skin.": {
+  "7800\u2003Burn scar(s) of the head, face, or neck; scar(s) of the head, face, or neck due to other causes; or other disfigurement of the head, face, or neck:": {
+   "With visible or palpable tissue loss and either gross distortion or asymmetry of three or more features or paired sets of features (nose, chin, forehead, eyes (including eyelids), ears (auricles), cheeks, lips), or; with six or more characteristics of disfigurement": 80,
+   "With visible or palpable tissue loss and either gross distortion or asymmetry of two features or paired sets of features (nose, chin, forehead, eyes (including eyelids), ears (auricles), cheeks, lips), or; with four or five characteristics of disfigurement": 50,
+   "With visible or palpable tissue loss and either gross distortion or asymmetry of one feature or paired set of features (nose, chin, forehead, eyes (including eyelids), ears (auricles), cheeks, lips), or; with two or three characteristics of disfigurement": 30,
+   "With one characteristic of disfigurement": 10
+  },
+  "Scar 5 or more inches (13 or more cm.) in length.": {},
+  "Scar at least one-quarter inch (0.6 cm.) wide at widest part.": {},
+  "Surface contour of scar elevated or depressed on palpation.": {},
+  "Scar adherent to underlying tissue.": {},
+  "Skin hypo-or hyper-pigmented in an area exceeding six square inches (39 sq. cm.).": {},
+  "Skin texture abnormal (irregular, atrophic, shiny, scaly, etc.) in an area exceeding six square inches (39 sq. cm.).": {},
+  "Underlying soft tissue missing in an area exceeding six square inches (39 sq. cm.).": {},
+  "Skin indurated and inflexible in an area exceeding six square inches (39 sq. cm.).": {},
+  "7801\u2003Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are deep and nonlinear:": {
+   "Area or areas of 144 square inches (929 sq. cm.) or greater": 40,
+   "Area or areas of at least 72 square inches (465 sq. cm.) but less than 144 square inches (929 sq. cm.)": 30,
+   "Area or areas of at least 12 square inches (77 sq. cm.) but less than 72 square inches (465 sq. cm.)": 20,
+   "Area or areas of at least 6 square inches (39 sq. cm.) but less than 12 square inches (77 sq. cm.)": 10
+  },
+  "7802\u2003Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are superficial and nonlinear:": {
+   "Area or areas of 144 square inches (929 sq. cm.) or greater": 10
+  },
+  "7804\u2003Scar(s), unstable or painful:": {
+   "Five or more scars that are unstable or painful": 30,
+   "Three or four scars that are unstable or painful": 20,
+   "One or two scars that are unstable or painful": 10
+  },
+  "7805\u2003Scars, other (including linear scars) and other effects of scars evaluated under diagnostic codes 7800, 7801, 7802, and 7804:": {},
+  "Evaluate any disabling effect(s) not considered in a rating provided under diagnostic codes 7800-04 under an appropriate diagnostic code.": {},
+  "7806\u2003Dermatitis or eczema.": {
+   "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period": 60,
+   "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period": 30,
+   "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period": 10,
+   "Less than 5 percent of the entire body or less than 5 percent of exposed areas affected, and; no more than topical therapy required during the past 12-month period": 0
+  },
+  "Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.": {},
+  "7807\u2003American (New World) leishmaniasis (mucocutaneous, espundia):": {},
+  "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability": {},
+  "7808\u2003Old World leishmaniasis (cutaneous, Oriental sore):": {},
+  "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's, 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disabililty": {},
+  "7809\u2003Discoid lupus erythematosus or subacute cutaneous lupus erythematosus:": {},
+  "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability. Do not combine with ratings under DC 6350": {},
+  "7811\u2003Tuberculosis luposa (lupus vulgaris), active or inactive:": {},
+  "Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate": {},
+  "7813\u2003Dermatophytosis (ringworm: of body, tinea corporis; of head, tinea capitis; of feet, tinea pedis; of beard area, tinea barbae; of nails, tinea unguium; of inguinal area (jock itch), tinea cruris):": {},
+  "7815\u2003Bullous disorders (including pemphigus vulgaris, pemphigus foliaceous, bullous pemphigoid, dermatitis herpetiformis, epidermolysis bullosa acquisita, benign chronic familial pemphigus (Hailey-Hailey), and porphyria cutanea tarda):": {
+   "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period": 60,
+   "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period": 30,
+   "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period": 10,
+   "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period": 0
+  },
+  "7816\u2003Psoriasis:": {
+   "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period": 60,
+   "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period": 30,
+   "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period": 10,
+   "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period": 0
+  },
+  "7817\u2003Exfoliative dermatitis (erythroderma):": {
+   "Generalized involvement of the skin, plus systemic manifestations (such as fever, weight loss, and hypoproteinemia), and; constant or near-constant systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required during the past 12-month period": 100,
+   "Generalized involvement of the skin without systemic manifestations, and; constant or near-constant systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required during the past 12-month period": 60,
+   "Any extent of involvement of the skin, and; systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required for a total duration of six weeks or more, but not constantly, during the past 12-month period": 30,
+   "Any extent of involvement of the skin, and; systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required for a total duration of less than six weeks during the past 12-month period": 10,
+   "Any extent of involvement of the skin, and; no more than topical therapy required during the past 12-month period": 0
+  },
+  "7818\u2003Malignant skin neoplasms (other than malignant melanoma):": {},
+  "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or impairment of function": {},
+  "7819\u2003Benign skin neoplasms:": {},
+  "7820\u2003Infections of the skin not listed elsewhere (including bacterial, fungal, viral, treponemal and parasitic diseases):": {},
+  "7821\u2003Cutaneous manifestations of collagen-vascular diseases not listed elsewhere (including scleroderma, calcinosis cutis, and dermatomyositis):": {
+   "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period": 60,
+   "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period": 30,
+   "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period": 10,
+   "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period": 0
+  },
+  "7822\u2003Papulosquamous disorders not listed elsewhere (including lichen planus, large or small plaque parapsoriasis, pityriasis lichenoides et varioliformis acuta (PLEVA), lymphomatoid papulosus, and pityriasis rubra pilaris (PRP)):": {
+   "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, and; constant or near-constant systemic medications or intensive light therapy required during the past 12-month period": 60,
+   "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy or intensive light therapy required for a total duration of six weeks or more, but not constantly, during the past 12-month period": 30,
+   "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; systemic therapy or intensive light therapy required for a total duration of less than six weeks during the past 12-month period": 10,
+   "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period": 0
+  },
+  "7823\u2003Vitiligo:": {
+   "With exposed areas affected": 10,
+   "With no exposed areas affected": 0
+  },
+  "7824 Diseases of keratinization (including icthyoses, Darier's disease, and palmoplantar keratoderma):": {
+   "With either generalized cutaneous involvement or systemic manifestations, and; constant or near-constant systemic medication, such as immunosuppressive retinoids, required during the past 12-month period": 60,
+   "With either generalized cutaneous involvement or systemic manifestations, and; intermittent systemic medication, such as immunosuppressive retinoids, required for a total duration of six weeks or more, but not constantly, during the past 12-month period": 30,
+   "With localized or episodic cutaneous involvement and intermittent systemic medication, such as immunosuppressive retinoids, required for a total duration of less than six weeks during the past 12-month period": 10,
+   "No more than topical therapy required during the past 12-month period": 0
+  },
+  "7825\u2003Urticaria:": {
+   "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite continuous immunosuppressive therapy": 60,
+   "Recurrent debilitating episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control": 30,
+   "Recurrent episodes occurring at least four times during the past 12-month period, and; responding to treatment with antihistamines or sympathomimetics": 10
+  },
+  "7826\u2003Vasculitis, primary cutaneous:": {
+   "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite continuous immunosuppressive therapy": 60,
+   "Recurrent debilitating episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control": 30,
+   "Recurrent episodes occurring one to three times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control": 10
+  },
+  "7827\u2003Erythema multiforme; Toxic epidermal necrolysis:": {
+   "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite ongoing immunosuppressive therapy": 60,
+   "Recurrent episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy": 30,
+   "Recurrent episodes occurring during the past 12-month period that respond to treatment with antihistamines or sympathomimetics, or; one to three episodes occurring during the past 12-month period requiring intermittent systemic immunosuppressive therapy": 10
+  },
+  "7828\u2003Acne:": {
+   "Deep acne (deep inflamed nodules and pus-filled cysts) affecting 40 percent or more of the face and neck": 30,
+   "Deep acne (deep inflamed nodules and pus-filled cysts) affecting less than 40 percent of the face and neck, or; deep acne other than on the face and neck": 10,
+   "Superficial acne (comedones, papules, pustules, superficial cysts) of any extent": 0
+  },
+  "7829\u2003Chloracne:": {
+   "Deep acne (deep inflamed nodules and pus-filled cysts) affecting 40 percent or more of the face and neck": 30,
+   "Deep acne (deep inflamed nodules and pus-filled cysts) affecting less than 40 percent of the face and neck, or; deep acne other than on the face and neck": 10,
+   "Superficial acne (comedones, papules, pustules, superficial cysts) of any extent": 0
+  },
+  "7830\u2003Scarring alopecia:": {
+   "Affecting more than 40 percent of the scalp": 20,
+   "Affecting 20 to 40 percent of the scalp": 10,
+   "Affecting less than 20 percent of the scalp": 0
+  },
+  "7831\u2003Alopecia areata:": {
+   "With loss of all body hair": 10,
+   "With loss of hair limited to scalp and face": 0
+  },
+  "7832\u2003Hyperhidrosis:": {
+   "Unable to handle paper or tools because of moisture, and unresponsive to therapy": 30,
+   "Able to handle paper or tools after therapy": 0
+  },
+  "7833\u2003Malignant melanoma:": {},
+  "Rate as scars (DC's 7801, 7802, 7803, 7804, or 7805), disfigurement of the head, face, or neck (DC 7800), or impairment of function (under the appropriate body system)": {}
+ }
+}

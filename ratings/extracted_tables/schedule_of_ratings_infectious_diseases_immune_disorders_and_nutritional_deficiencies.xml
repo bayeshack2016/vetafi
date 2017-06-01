@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<SECTION>
+	<SECTNO>§ 4.88b</SECTNO>
+	<SUBJECT>Schedule of ratings—infectious diseases, immune disorders and nutritional deficiencies.</SUBJECT>
+	<GPOTABLE CDEF="s200,10" COLS="2" OPTS="L2">
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="11">6300 Cholera, Asiatic:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease, and for 3 months convalescence</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as renal necrosis under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6301 Visceral Leishmaniasis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">During treatment for active disease</ENT>
+			<ENT>100
+                  </ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">
+				<E T="04">Note:</E>
+				 A 100 percent evaluation shall continue beyond the cessation of treatment for active disease. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. Rate residuals such as liver damage or lymphadenopathy under the appropriate system.
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6302 Leprosy (Hansen's Disease):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100
+                  </ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">
+				<E T="04">Note:</E>
+				 A 100 percent evaluation shall continue beyond the date that an examining physician has determined that this has become inactive. Six months after the date of inactivity, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. Rate residuals such as skin lesions or peripheral neuropathy under the appropriate system.
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6304 Malaria:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100
+                  </ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">
+				<E T="04">Note:</E>
+				 The diagnosis of malaria depends on the identification of the malarial parasites in blood smears. If the veteran served in an endemic area and presents signs and symptoms compatible with malaria, the diagnosis may be based on clinical grounds alone. Relapses must be confirmed by the presence of malarial parasites in blood smears.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">Thereafter rate residuals such as liver or spleen damage under the appropriate system
+                  </ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6305 Lymphatic Filariasis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as epididymitis or lymphangitis under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6306 Bartonellosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease, and for 3 months convalescence</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as skin lesions under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6307 Plague:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as lymphadenopathy under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6308 Relapsing Fever:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as liver or spleen damage or central nervous system involvement under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6309 Rheumatic fever:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as heart damage under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6310 Syphilis, and other treponemal infections:</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Rate the complications of nervous system, vascular system, eyes or ears. (See DC 7004, syphilitic heart disease, DC 8013, cerebrospinal syphilis, DC 8014, meningovascular syphilis, DC 8015, tabes dorsalis, and DC 9301, dementia associated with central nervous system syphilis)</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6311 Tuberculosis, miliary:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">Inactive: See §§ 4.88c and 4.89.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">6313 Avitaminosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Marked mental changes, moist dermatitis, inability to retain adequate nourishment, exhaustion, and cachexia</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With all of the symptoms listed below, plus mental symptoms and impaired bodily vigor</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With stomatitis, diarrhea, and symmetrical dermatitis</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With stomatitis, or achlorhydria, or diarrhea</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Confirmed diagnosis with nonspecific symptoms such as: decreased appetite, weight loss, abdominal discomfort, weakness, inability to concentrate and irritability</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">6314 Beriberi:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">As active disease:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With congestive heart failure, anasarca, or Wernicke-Korsakoff syndrome</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="434"/>
+			<ENT I="03">With cardiomegaly, or; with peripheral neuropathy with footdrop or atrophy of thigh or calf muscles</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With peripheral neuropathy with absent knee or ankle jerks and loss of sensation, or; with symptoms such as weakness, fatigue, anorexia, dizziness, heaviness and stiffness of legs, headache or sleep disturbance</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">Thereafter rate residuals under the appropriate body system.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">6315 Pellagra:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Marked mental changes, moist dermatitis, inability to retain adequate nourishment, exhaustion, and cachexia</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With all of the symptoms listed below, plus mental symptoms and impaired bodily vigor</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With stomatitis, diarrhea, and symmetrical dermatitis</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With stomatitis, or achlorhydria, or diarrhea</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Confirmed diagnosis with nonspecific symptoms such as: decreased appetite, weight loss, abdominal discomfort, weakness, inability to concentrate and irritability</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">6316 Brucellosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as liver or spleen damage or meningitis under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6317 Typhus, scrub:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease, and for 3 months convalescence</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as spleen damage or skin conditions under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6318 Melioidosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as arthritis, lung lesions or meningitis under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6319 Lyme Disease:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as arthritis under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6320 Parasitic diseases otherwise not specified:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">As active disease</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Thereafter rate residuals such as spleen or liver damage under the appropriate system</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6350 Lupus erythematosus, systemic (disseminated):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Not to be combined with ratings under DC 7809 Acute, with frequent exacerbations, producing severe impairment of health</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Exacerbations lasting a week or more, 2 or 3 times per year</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Exacerbations once or twice a year or symptomatic during the past 2 years</ENT>
+			<ENT>10
+                  </ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">
+				<E T="04">Note:</E>
+				 Evaluate this condition either by combining the evaluations for residuals under the appropriate system, or by evaluating DC 6350, whichever method results in a higher evaluation.
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6351 HIV-Related Illness:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">AIDS with recurrent opportunistic infections or with secondary diseases afflicting multiple body systems; HIV-related illness with debility and progressive weight loss, without remission, or few or brief remissions</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Refractory constitutional symptoms, diarrhea, and pathological weight loss, or; minimum rating following development of AIDS-related opportunistic infection or neoplasm</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Recurrent constitutional symptoms, intermittent diarrhea, and on approved medication(s), or; minimum rating with T4 cell count less than 200, or Hairy Cell Leukoplakia, or Oral Candidiasis</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Following development of definite medical symptoms, T4 cell of 200 or more and less than 500, and on approved medication(s), or; with evidence of depression or memory loss with employment limitations</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Asymptomatic, following initial diagnosis of HIV infection, with or without lymphadenopathy or decreased T4 cell count</ENT>
+			<ENT>0
+                  </ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">
+				<E T="04">Note</E>
+				 (1): The term “approved medication(s)” includes medications prescribed as part of a research protocol at an accredited medical institution.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">
+				<E T="04">Note</E>
+				 (2): Psychiatric or central nervous system manifestations, opportunistic infections, and neoplasms may be rated separately under appropriate codes if higher overall evaluation results, but not in combination with percentages otherwise assignable above.
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">6354 Chronic Fatigue Syndrome (CFS):</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">Debilitating fatigue, cognitive impairments (such as inability to concentrate, forgetfulness, confusion), or a combination of other signs and symptoms:</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="03">Which are nearly constant and so severe as to restrict routine daily activities almost completely and which may occasionally preclude self-care</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Which are nearly constant and restrict routine daily activities to less than 50 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least six weeks total duration per year</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Which are nearly constant and restrict routine daily activities to 50 to 75 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least four but less than six weeks total duration per year</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Which are nearly constant and restrict routine daily activities by less than 25 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least two but less than four weeks total duration per year</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Which wax and wane but result in periods of incapacitation of at least one but less than two weeks total duration per year, or; symptoms controlled by continuous medication</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW EXPSTB="01">
+			<ENT I="13">
+				<E T="04">Note:</E>
+				 For the purpose of evaluating this disability, the condition will be considered incapacitating only while it requires bed rest and treatment by a physician.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<CITA>[61 FR 39875, July 31, 1996]</CITA>
+</SECTION>

@@ -1,0 +1,367 @@
+<?xml version="1.0" ?>
+<SECTION>
+	<SECTNO>§ 4.115b</SECTNO>
+	<SUBJECT>Ratings of the genitourinary system—diagnoses.</SUBJECT>
+	<GPOTABLE CDEF="s25,5" COLS="2" OPTS="L2">
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="14">
+				<E T="02">Note:</E>
+				 When evaluating any claim involving loss or loss of use of one or more creative organs, refer to § 3.350 of this chapter to determine whether the veteran may be entitled to special monthly compensation. Footnotes in the schedule indicate conditions which potentially establish entitlement to special monthly compensation; however, there are other conditions in this section which under certain circumstances also establish entitlement to special monthly compensation.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7500 Kidney, removal of one:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="04">Minimum evaluation</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Or rate as renal dysfunction if there is nephritis, infection, or pathology of the other.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7501 Kidney, abscess of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="04">Rate as urinary tract infection</ENT>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="11">7502 Nephritis, chronic:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7504 Pyelonephritis, chronic:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction or urinary tract infection, whichever is predominant.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7505 Kidney, tuberculosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate in accordance with §§ 4.88b or 4.89, whichever is appropriate.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7507 Nephrosclerosis, arteriolar:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate according to predominant symptoms as renal dysfunction, hypertension or heart disease. If rated under the cardiovascular schedule, however, the percentage rating which would otherwise be assigned will be elevated to the next higher evaluation.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7508 Nephrolithiasis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				Rate as hydronephrosis, 
+				<E T="03">except for</E>
+				 recurrent stone formation requiring one or more of the following:
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="15">1. diet therapy</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="15">2. drug therapy</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">3. invasive or non-invasive procedures more than two times/year</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7509 Hydronephrosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Severe; Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Frequent attacks of colic with infection (pyonephrosis), kidney function impaired</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Frequent attacks of colic, requiring catheter drainage</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Only an occasional attack of colic, not infected and not requiring catheter drainage</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="453"/>
+			<ENT I="11">7510 Ureterolithiasis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				Rate as hydronephrosis, 
+				<E T="03">except for</E>
+				 recurrent stone formation requiring one or more of the following:
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="15">1. diet therapy</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="15">2. drug therapy</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">3. invasive or non-invasive procedures more than two times/year</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7511 Ureter, stricture of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				Rate as hydronephrosis, 
+				<E T="03">except for</E>
+				 recurrent stone formation requiring one or more of the following:
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="15">1. diet therapy</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="15">2. drug therapy</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">3. invasive or non-invasive procedures more than two times/year</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7512 Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7515 Bladder, calculus in, with symptoms interfering with function:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7516 Bladder, fistula of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction or urinary tract infection, whichever is predominant.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="04">Postoperative, suprapubic cystotomy</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7517 Bladder, injury of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7518 Urethra, stricture of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7519 Urethra, fistual of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="04">Multiple urethroperineal fistulae</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">7520 Penis, removal of half or more</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Or rate as voiding dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">7521 Penis removal of glans</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Or rate as voiding dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				7522 Penis, deformity, with loss of erectile power—20 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">7523 Testis, atrophy complete:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				Both—20 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				One—0 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">7524 Testis, removal:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				Both—30 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				One—0 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				<E T="02">Note:</E>
+				 In cases of the removal of one testis as the result of a service-incurred injury or disease, other than an undescended or congenitally undeveloped testis, with the absence or nonfunctioning of the other testis unrelated to service, an evaluation of 30 percent will be assigned for the service-connected testicular loss. Testis, underscended, or congenitally undeveloped is not a ratable disability.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7525 Epididymo-orchitis, chronic only:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as urinary tract infection.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">For tubercular infections: Rate in accordance with §§ 4.88b or 4.89, whichever is appropriate.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7527 Prostate gland injuries, infections, hypertrophy, postoperative residuals:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction or urinary tract infection, whichever is predominant.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">7528 Malignant neoplasms of the genitourinary system</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				<E T="02">Note</E>
+				—Following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure, the rating of 100 percent shall continue with a mandatory VA examination at the expiration of six months. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. If there has been no local reoccurrence or metastasis, rate on residuals as voiding dysfunction or renal dysfunction, whichever is predominant.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7529 Benign neoplasms of the genitourinary system:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction or renal dysfunction, whichever is predominant.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7530 Chronic renal disease requiring regular dialysis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7531 Kidney transplant:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="04">Following transplant surgery</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="04">Thereafter: Rate on residuals as renal dysfunction, minimum rating</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">
+				<E T="02">Note</E>
+				—The 100 percent evaluation shall be assigned as of the date of hospital admission for transplant surgery and shall continue with a mandatory VA examination one year following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7532 Renal tubular disorders (such as renal glycosurias, aminoacidurias, renal tubular acidosis, Fanconi's syndrome, Bartter's syndrome, related disorders of Henle's loop and proximal or distal nephron function, etc.):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="04">Minimum rating for symptomatic condition</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="454"/>
+			<ENT I="14">Or rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7533 Cystic diseases of the kidneys (polycystic disease, uremic medullary cystic disease, Medullary sponge kidney, and similar conditions):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7534 Atherosclerotic renal disease (renal artery stenosis or atheroembolic renal disease):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7535 Toxic nephropathy (antibotics, radiocontrast agents, nonsteroidal anti-inflammatory agents, heavy metals, and similar agents):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7536 Glomerulonephritis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7537 Interstitial nephritis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7538 Papillary necrosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7539 Renal amyloid disease:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7540 Disseminated intravascular coagulation with renal cortical necrosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7541 Renal involvement in diabetes mellitus, sickle cell anemia, systemic lupus erythematosus, vasculitis, or other systemic disease processes.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as renal dysfunction.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">7542 Neurogenic bladder:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="14">Rate as voiding dysfunction.</ENT>
+		</ROW>
+		<TNOTE>
+			<SU>1</SU>
+			 Review for entitlement to special monthly compensation under § 3.350 of this chapter.
+		</TNOTE>
+	</GPOTABLE>
+	<CITA>[59 FR 2527, Jan. 18, 1994; 59 FR 14567, Mar. 29, 1994, as amended at 59 FR 46339, Sept. 8, 1994]</CITA>
+</SECTION>

@@ -1,0 +1,741 @@
+<?xml version="1.0" ?>
+<SECTION>
+	<SECTNO>§ 4.73</SECTNO>
+	<SUBJECT>Schedule of ratings—muscle injuries.</SUBJECT>
+	<NOTE>
+		<HD SOURCE="HED">Note:</HD>
+		<P>When evaluating any claim involving muscle injuries resulting in loss of use of any extremity or loss of use of both buttocks (diagnostic code 5317, Muscle Group XVII), refer to § 3.350 of this chapter to determine whether the veteran may be entitled to special monthly compensation.</P>
+	</NOTE>
+	<PRTPAGE P="418"/>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>The Shoulder Girdle and Arm</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Dominant</CHED>
+			<CHED H="2">Nondominant</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">
+				5301 Group I. 
+				<E T="03">Function:</E>
+				 Upward rotation of scapula; elevation of arm above shoulder level. 
+				<E T="03">Extrinsic muscles of shoulder girdle:</E>
+				 (1) Trapezius; (2) levator scapulae; (3) serratus magnus
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5302 Group II. 
+				<E T="03">Function:</E>
+				 Depression of arm from vertical overhead to hanging at side (1, 2); downward rotation of scapula (3, 4); 1 and 2 act with Group III in forward and backward swing of arm. 
+				<E T="03">Extrinsic muscles of shoulder girdle: (1) Pectoralis major II (costosternal); (2) latissimus dorsi and teres major (teres major, although technically an intrinsic muscle, is included with latissimus dorsi); (3) pectoralis minor; (4) rhomboid</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5303 Group III. 
+				<E T="03">Function:</E>
+				 Elevation and abduction of arm to level of shoulder; act with 1 and 2 of Group II in forward and backward swing of arm. 
+				<E T="03">Intrinsic muscles of shoulder girdle: (1) Pectoralis major I (clavicular); (2) deltoid</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5304 Group IV. 
+				<E T="03">Function:</E>
+				 Stabilization of shoulder against injury in strong movements, holding head of humerus in socket; abduction; outward rotation and inward rotation of arm. 
+				<E T="03">Intrinsic muscles of shoulder girdle: (1) Supraspinatus; (2) infraspinatus and teres minor; (3) subscapularis; (4) coracobrachialis</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5305 Group V. 
+				<E T="03">Function:</E>
+				 Elbow supination (1) (long head of biceps is stabilizer of shoulder joint); flexion of elbow (1, 2, 3). 
+				<E T="03">Flexor muscles of elbow: (1) Biceps; (2) brachialis; (3) brachioradialis</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5306 Group VI. 
+				<E T="03">Function:</E>
+				 Extension of elbow (long head of triceps is stabilizer of shoulder joint). 
+				<E T="03">Extensor muscles of the elbow:</E>
+				 (1) Triceps; (2) anconeus.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>The Forearm and Hand</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Dominant</CHED>
+			<CHED H="2">Nondominant</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">
+				5307 Group VII. 
+				<E T="03">Function:</E>
+				 Flexion of wrist and fingers. 
+				<E T="03">Muscles arising from internal condyle of humerus:</E>
+				 Flexors of the carpus and long flexors of fingers and thumb; pronator
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5308 Group VIII. 
+				<E T="03">Function:</E>
+				 Extension of wrist, fingers, and thumb; abduction of thumb. 
+				<E T="03">Muscles arising mainly from external condyle of humerus:</E>
+				 Extensors of carpus, fingers, and thumb; supinator
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5309 Group IX. 
+				<E T="03">Function:</E>
+				 The forearm muscles act in strong grasping movements and are supplemented by the intrinsic muscles in delicate manipulative movements. 
+				<E T="03">Intrinsic muscles of hand:</E>
+				 Thenar eminence; short flexor, opponens, abductor and adductor of thumb; hypothenar eminence; short flexor, opponens and abductor of little finger; 4 lumbricales; 4 dorsal and 3 palmar interossei
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">
+				<E T="04">Note:</E>
+				 The hand is so compact a structure that isolated muscle injuries are rare, being nearly always complicated with injuries of bones, joints, tendons, etc. Rate on limitation of motion, minimum 10 percent.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Foot and Leg</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">
+				5310 Group X. 
+				<E T="03">Function:</E>
+				 Movements of forefoot and toes; propulsion thrust in walking. 
+				<E T="03">Intrinsic muscles of the foot: Plantar:</E>
+				 (1) Flexor digitorum brevis; (2) abductor hallucis; (3) abductor digiti minimi; (4) quadratus plantae; (5) lumbricales; (6) flexor hallucis brevis; (7) adductor hallucis; (8) flexor digiti minimi brevis; (9) dorsal and plantar interossei. Other important plantar structures: Plantar aponeurosis, long plantar and calcaneonavicular ligament, tendons of posterior tibial, peroneus longus, and long flexors of great and little toes
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				<E T="03">Dorsal:</E>
+				 (1) Extensor hallucis brevis; (2) extensor digitorum brevis. Other important dorsal structures: cruciate, crural, deltoid, and other ligaments; tendons of long extensors of toes and peronei muscles
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0
+                  </ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="419"/>
+			<ENT I="11">
+				<E T="04">Note:</E>
+				 Minimum rating for through-and-through wounds of the foot—10.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5311 Group XI. 
+				<E T="03">Function:</E>
+				 Propulsion, plantar flexion of foot (1); stabilization of arch (2, 3); flexion of toes (4, 5); Flexion of knee (6). 
+				<E T="03">Posterior and lateral crural muscles, and muscles of the calf:</E>
+				 (1) Triceps surae (gastrocnemius and soleus); (2) tibialis posterior; (3) peroneus longus; (4) peroneus brevis; (5) flexor hallucis longus; (6) flexor digitorum longus; (7) popliteus; (8) plantaris
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5312 Group XII. 
+				<E T="03">Function:</E>
+				 Dorsiflexion (1); extension of toes (2); stabilization of arch (3). 
+				<E T="03">Anterior muscles of the leg:</E>
+				 (1) Tibialis anterior; (2) extensor digitorum longus; (3) extensor hallucis longus; (4) peroneus tertius
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Pelvic Girdle and Thigh</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">
+				5313 Group XIII. 
+				<E T="03">Function:</E>
+				 Extension of hip and flexion of knee; outward and inward rotation of flexed knee; acting with rectus femoris and sartorius (see XIV, 1, 2) synchronizing simultaneous flexion of hip and knee and extension of hip and knee by belt-over-pulley action at knee joint. 
+				<E T="03">Posterior thigh group, Hamstring complex of 2-joint muscles:</E>
+				 (1) Biceps femoris; (2) semimembranosus; (3) semitendinosus
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5314 Group XIV. 
+				<E T="03">Function:</E>
+				 Extension of knee (2, 3, 4, 5); simultaneous flexion of hip and flexion of knee (1); tension of fascia lata and iliotibial (Maissiat's) band, acting with XVII (1) in postural support of body (6); acting with hamstrings in synchronizing hip and knee (1, 2). 
+				<E T="03">Anterior thigh group:</E>
+				 (1) Sartorius; (2) rectus femoris; (3) vastus externus; (4) vastus intermedius; (5) vastus internus; (6) tensor vaginae femoris
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5315 Group XV. 
+				<E T="03">Function:</E>
+				 Adduction of hip (1, 2, 3, 4); flexion of hip (1, 2); flexion of knee (4). 
+				<E T="03">Mesial thigh group:</E>
+				 (1) Adductor longus; (2) adductor brevis; (3) adductor magnus; (4) gracilis
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5316 Group XVI. 
+				<E T="03">Function:</E>
+				 Flexion of hip (1, 2, 3). 
+				<E T="03">Pelvic girdle group 1:</E>
+				 (1) Psoas; (2) iliacus; (3) pectineus
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5317 Group XVII. 
+				<E T="03">Function:</E>
+				 Extension of hip (1); abduction of thigh; elevation of opposite side of pelvis (2, 3); tension of fascia lata and iliotibial (Maissiat's) band, acting with XIV (6) in postural support of body steadying pelvis upon head of femur and condyles of femur on tibia (1). 
+				<E T="03">Pelvic girdle group 2:</E>
+				 (1) Gluteus maximus; (2) gluteus medius; (3) gluteus minimus
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>*50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5318 Group XVIII. 
+				<E T="03">Function:</E>
+				 Outward rotation of thigh and stabilization of hip joint. 
+				<E T="03">Pelvic girdle group 3:</E>
+				 (1) Pyriformis; (2) gemellus (superior or inferior); (3) obturator (external or internal); (4) quadratus femoris
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<TNOTE>* If bilateral, see § 3.350(a)(3) of this chapter to determine whether the veteran may be entitled to special monthly compensation.</TNOTE>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Torso and Neck</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">
+				5319 Group XIX. 
+				<E T="03">Function:</E>
+				 Support and compression of abdominal wall and lower thorax; flexion and lateral motions of spine; synergists in strong downward movements of arm (1). 
+				<E T="03">Muscles of the abdominal wall:</E>
+				 (1) Rectus abdominis; (2) external oblique; (3) internal oblique; (4) transversalis; (5) quadratus lumborum
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5320 Group XX. 
+				<E T="03">Function:</E>
+				 Postural support of body; extension and lateral movements of spine. 
+				<E T="03">Spinal muscles:</E>
+				 Sacrospinalis (erector spinae and its prolongations in thoracic and cervical regions)
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">
+				<E T="03">Cervical and thoracic region:</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">
+				<E T="03">Lumbar region:</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5321 Group XXI. 
+				<E T="03">Function:</E>
+				 Respiration. 
+				<E T="03">Muscles of respiration:</E>
+				 Thoracic muscle group
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe or Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5322 Group XXII. 
+				<E T="03">Function:</E>
+				 Rotary and forward movements of the head; respiration; deglutition. 
+				<E T="03">Muscles of the front of the neck:</E>
+				 (Lateral, supra-, and infrahyoid group.) (1) Trapezius I (clavicular insertion); (2) sternocleidomastoid; (3) the “hyoid” muscles; (4) sternothyroid; (5) digastric
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="420"/>
+			<ENT I="01">
+				5323 Group XXIII. 
+				<E T="03">Function:</E>
+				 Movements of the head; fixation of shoulder movements. 
+				<E T="03">Muscles of the side and back of the neck:</E>
+				 Suboccipital; lateral vertebral and anterior vertebral muscles
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately Severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>Miscellaneous</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">5324 Diaphragm, rupture of, with herniation. Rate under diagnostic code 7346</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5325 Muscle injury, facial muscles. Evaluate functional impairment as seventh (facial) cranial nerve neuropathy (diagnostic code 8207), disfiguring scar (diagnostic code 7800), etc. Minimum, if interfering to any extent with mastication—10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5326 Muscle hernia, extensive. Without other injury to the muscle—10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5327 Muscle, neoplasm of, malignant (excluding soft tissue sarcoma)—100
+                  </ENT>
+		</ROW>
+		<ROW>
+			<ENT I="21">
+				<E T="04">Note:</E>
+				 A rating of 100 percent shall continue beyond the cessation of any surgery, radiation treatment, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residual impairment of function.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				5328 Muscle, neoplasm of, benign, postoperative. Rate on impairment of function, 
+				<E T="03">i.e.</E>
+				, limitation of motion, or scars, diagnostic code 7805, etc
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5329 Sarcoma, soft tissue (of muscle, fat, or fibrous connective tissue)—100
+                  </ENT>
+		</ROW>
+		<ROW>
+			<ENT I="21">
+				<E T="04">Note:</E>
+				 A rating of 100 percent shall continue beyond the cessation of any surgery, radiation treatment, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residual impairment of function.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<SECAUTH>(Authority: 38 U.S.C. 1155)</SECAUTH>
+	<CITA>[62 FR 30239, June 3, 1997]</CITA>
+</SECTION>

@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 import argparse
+import string
+import json
+import re
 
 from xml.dom import minidom
 from xml.etree import ElementTree
@@ -50,17 +53,79 @@ def parse_files(filenames):
             yield rating_table
 
 
-def save_table(table_element):
-    subject = table_element.find('.//SUBJECT').text.lower().replace(' ', '_')
+def get_table_key_name(table_element):
+    return table_element.find('.//SUBJECT').text.lower().replace('.', '').replace(',', '').replace(' ', '_').replace('—', '_')
 
-    with open(subject + '.xml', 'w') as of:
+
+def save_xml(table_element):
+    with open(get_table_key_name(table_element) + '.xml', 'w') as of:
         of.write(pformat_element(table_element))
+
+
+def save_json(table_element):
+    with open(get_table_key_name(table_element) + '.json', 'w') as of:
+        of.write(convert_table_to_json(table_element))
+
+
+def is_integer_0_100(s):
+    try:
+        parsed_integer = int(s)
+        return 0 <= parsed_integer <= 100
+    except:
+        return False
+
+
+def is_category_row(row_element):
+    entries = row_element.findall('ENT')
+    row_length = len(entries)
+    return row_length == 1 and entries[0].find('E') is None
+
+
+def get_category(row_element):
+    return row_element.find('ENT').text
+
+
+def is_rating_row(row_element):
+    entries = row_element.findall('ENT')
+    row_length = len(entries)
+    return row_length == 2 and is_integer_0_100(entries[1].text)
+
+
+def get_rating(row_element):
+    return row_element.findall('ENT')[0].text, int(row_element.findall('ENT')[1].text)
+
+
+def convert_table_to_json(table_element):
+    subject = table_element.find('.//SUBJECT').text
+
+    document = {subject: {}}
+
+    gpo_table = table_element.find('GPOTABLE')
+
+    rows = gpo_table.findall('ROW')
+
+    category_doc = None
+    for row in rows:
+        if is_category_row(row):
+            category = get_category(row)
+            category_doc = {}
+            document[subject][category] = category_doc
+        elif is_rating_row(row):
+            subcategory, rating = get_rating(row)
+
+            if category_doc is None:
+                document[subject][subcategory] = rating
+            else:
+                category_doc[subcategory] = rating
+
+    return json.dumps(document, indent=True)
 
 
 def main():
     args = get_args()
     for table_element in parse_files(args.input_files):
-        save_table(table_element)
+        save_xml(table_element)
+        save_json(table_element)
 
 
 if __name__ == '__main__':

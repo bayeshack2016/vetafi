@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<SECTION>
+	<SECTNO>§ 4.87</SECTNO>
+	<SUBJECT>Schedule of ratings—ear.</SUBJECT>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>Diseases of the Ear</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">6200 Chronic suppurative otitis media, mastoiditis, or cholesteatoma (or any combination):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">During suppuration, or with aural polyps</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 Evaluate hearing impairment, and complications such as labyrinthitis, tinnitus, facial nerve paralysis, or bone loss of skull, separately.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6201 Chronic nonsuppurative otitis media with effusion (serous otitis media):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Rate hearing impairment</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6202 Otosclerosis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Rate hearing impairment</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6204 Peripheral vestibular disorders:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Dizziness and occasional staggering</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Occasional dizziness</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 Objective findings supporting the diagnosis of vestibular disequilibrium are required before a compensable evaluation can be assigned under this code. Hearing impairment or suppuration shall be separately rated and combined.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6205 Meniere's syndrome (endolymphatic hydrops):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Hearing impairment with attacks of vertigo and cerebellar gait occurring more than once weekly, with or without tinnitus</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Hearing impairment with attacks of vertigo and cerebellar gait occurring from one to four times a month, with or without tinnitus</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Hearing impairment with vertigo less than once a month, with or without tinnitus</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 Evaluate Meniere's syndrome either under these criteria or by separately evaluating vertigo (as a peripheral vestibular disorder), hearing impairment, and tinnitus, whichever method results in a higher overall evaluation. But do not combine an evaluation for hearing impairment, tinnitus, or vertigo with an evaluation under diagnostic code 6205.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6207 Loss of auricle:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Complete loss of both</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Complete loss of one</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Deformity of one, with loss of one-third or more of the substance</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">6208 Malignant neoplasm of the ear (other than skin only)</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 A rating of 100 percent shall continue beyond the cessation of any surgical, radiation treatment, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based on that or any subsequent examination shall be subject to the provisions of § 3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6209 Benign neoplasms of the ear (other than skin only):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Rate on impairment of function.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6210 Chronic otitis externa:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Swelling, dry and scaly or serous discharge, and itching requiring frequent and prolonged treatment</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">6211 Tympanic membrane, perforation of</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">6260 Tinnitus, recurrent</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="05">Note (1):</E>
+				 A separate evaluation for tinnitus may be combined with an evaluation under diagnostic codes 6100, 6200, 6204, or other diagnostic code, except when tinnitus supports an evaluation under one of those diagnostic codes.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="05">Note (2):</E>
+				 Assign only a single evaluation for recurrent tinnitus, whether the sound is perceived in one ear, both ears, or in the head.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="05">Note (3):</E>
+				 Do not evaluate objective tinnitus (in which the sound is audible to other people and has a definable cause that may or may not be pathologic) under this diagnostic code, but evaluate it as part of any underlying condition causing it.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<SECAUTH>(Authority: 38 U.S.C. 1155)</SECAUTH>
+	<CITA>[64 FR 25210, May 11, 1999, as amended at 68 FR 25823, May 14, 2003]</CITA>
+</SECTION>

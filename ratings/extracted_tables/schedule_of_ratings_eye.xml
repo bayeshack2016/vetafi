@@ -1,0 +1,802 @@
+<?xml version="1.0" ?>
+<SECTION>
+	<SECTNO>§ 4.79</SECTNO>
+	<SUBJECT>Schedule of ratings—eye.</SUBJECT>
+	<GPOTABLE CDEF="s200,8" COLS="2" OPTS="L2">
+		<TTITLE>Diseases of the Eye</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01" O="xl">6000 Choroidopathy, including uveitis, iritis, cyclitis, and choroiditis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">6001 Keratopathy.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">6002 Scleritis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">6006 Retinopathy or maculopathy.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">6007 Intraocular hemorrhage.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">6008 Detachment of retina.</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="01" O="xl">6009 Unhealed eye injury.</ENT>
+		</ROW>
+		<ROW EXPSTB="01" RUL="s">
+			<ENT I="21">
+				<E T="02">General Rating Formula for Diagnostic Codes 6000 through 6009</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="03" O="xl">Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note:</E>
+				 For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6010 Tuberculosis of eye:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Active</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Inactive: Evaluate under § 4.88c or § 4.89 of this part, whichever is appropriate.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6011 Retinal scars, atrophy, or irregularities:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Localized scars, atrophy, or irregularities of the retina, unilateral or bilateral, that are centrally located and that result in an irregular, duplicated, enlarged, or diminished image</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6012 Angle-closure glaucoma:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate on the basis of either visual impairment due to angle-closure glaucoma or incapacitating episodes, whichever results in a higher evaluation.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum evaluation if continuous medication is required</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note:</E>
+				 For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6013 Open-angle glaucoma:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment due to open-angle glaucoma.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum evaluation if continuous medication is required</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6014 Malignant neoplasms (eyeball only):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">
+				Malignant neoplasm of the eyeball that requires therapy that is comparable to that used for systemic malignancies, 
+				<E T="03">i.e.</E>
+				, systemic chemotherapy, X-ray therapy more extensive than to the area of the eye, or surgery more extensive than enucleation
+			</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note:</E>
+				 Continue the 100-percent rating beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating will be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination will be subject to the provisions of § 3.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluate based on residuals.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6015 Benign neoplasms (of eyeball and adnexa):</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="426"/>
+			<ENT I="03" O="xl">Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">6016 Nystagmus, central</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6017 Trachomatous conjunctivitis:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Active: Evaluate based on visual impairment, minimum</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6018 Chronic conjunctivitis (nontrachomatous):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Active (with objective findings, such as red, thick conjunctivae, mucous secretion, etc.)</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6019 Ptosis, unilateral or bilateral:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6020 Ectropion:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6021 Entropion:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6022 Lagophthalmos:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">6023 Loss of eyebrows, complete, unilateral or bilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">6024 Loss of eyelashes, complete, unilateral or bilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6025 Disorders of the lacrimal apparatus (epiphora, dacryocystitis, etc.):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6026 Optic neuropathy:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6027 Cataract of any type:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="03">Preoperative:</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="03">Postoperative:</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6029 Aphakia or dislocation of crystalline lens:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum (unilateral or bilateral)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6030 Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III)).</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6032 Loss of eyelids, partial or complete:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6034 Pterygium:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6035 Keratoconus:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on impairment of visual acuity.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6036 Status post corneal transplant:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum, if there is pain, photophobia, and glare sensitivity</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6037 Pinguecula:</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="03" O="xl">Evaluate based on disfigurement (diagnostic code 7800).</ENT>
+		</ROW>
+		<ROW EXPSTB="01" RUL="s">
+			<ENT I="21">
+				<E T="02">Impairment of Central Visual Acuity</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="01">
+				6061 Anatomical loss of both eyes 
+				<SU>1</SU>
+			</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				6062 No more than light perception in both eyes 
+				<SU>1</SU>
+			</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				6063 Anatomical loss of one eye: 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 5/200 (1.5/60)</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 10/200 (3/60)</ENT>
+			<ENT>90</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 15/200 (4.5/60)</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/200 (6/60)</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/100 (6/30)</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				6064 No more than light perception in one eye: 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 5/200 (1.5/60)</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 10/200 (3/60)</ENT>
+			<ENT>90</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 15/200 (4.5/60)</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/200 (6/60)</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/100 (6/30)</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="427"/>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6065 Vision in one eye 5/200 (1.5/60):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 5/200 (1.5/60)</ENT>
+			<ENT>
+				<SU>1</SU>
+				100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 10/200 (3/60)</ENT>
+			<ENT>90</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 15/200 (4.5/60)</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/200 (6/60)</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/100 (6/30)</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6066 Visual acuity in one eye 10/200 (3/60) or better:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Vision in one eye 10/200 (3/60):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 10/200 (3/60)</ENT>
+			<ENT>90</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 15/200 (4.5/60)</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/200 (6/60)</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/100 (6/30)</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Vision in one eye 15/200 (4.5/60):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 15/200 (4.5/60)</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/200 (6/60)</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/100 (6/30)</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Vision in one eye 20/200 (6/60):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/200 (6/60)</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/100 (6/30)</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Vision in one eye 20/100 (6/30):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/100 (6/30)</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Vision in one eye 20/70 (6/21):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/70 (6/21)</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Vision in one eye 20/50 (6/15):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/50 (6/15)</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Vision in one eye 20/40 (6/12):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">In the other eye 20/40 (6/12)</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<TNOTE>
+			<SU>1</SU>
+			 Review for entitlement to special monthly compensation under 38 CFR 3.350.
+		</TNOTE>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s200,8" COLS="2" OPTS="L2">
+		<TTITLE>Ratings for Impairment of Visual Fields</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">6080 Visual field defects:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Homonymous hemianopsia</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Loss of temporal half of visual field:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/70 (6/21)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Loss of nasal half of visual field:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/50 (6/15)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Loss of inferior half of visual field:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/70 (6/21)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Loss of superior half of visual field:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/50 (6/15)</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="428"/>
+			<ENT I="22">Concentric contraction of visual field:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">
+				With remaining field of 5 degrees: 
+				<SU>1</SU>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 5/200 (1.5/60)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">With remaining field of 6 to 15 degrees:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/200 (6/60)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">With remaining field of 16 to 30 degrees:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/100 (6/30)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">With remaining field of 31 to 45 degrees:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/70 (6/21)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">With remaining field of 46 to 60 degrees:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Or evaluate each affected eye as 20/50 (6/15)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6081 Scotoma, unilateral:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum, with scotoma affecting at least one-quarter of the visual field (quadrantanopsia) or with centrally located scotoma of any size</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Alternatively, evaluate based on visual impairment due to scotoma, if that would result in a higher evaluation</ENT>
+		</ROW>
+		<TNOTE>
+			<SU>1</SU>
+			 Review for entitlement to special monthly compensation under 38 CFR 3.350.
+		</TNOTE>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s200,15" COLS="2" OPTS="L2">
+		<TTITLE>Ratings for Impairment of Muscle Function</TTITLE>
+		<BOXHD>
+			<CHED H="1">Degree of diplopia</CHED>
+			<CHED H="1">
+				Equivalent
+				<LI>visual acuity</LI>
+			</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">6090 Diplopia (double vision):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">(a) Central 20 degrees</ENT>
+			<ENT>5/200 (1.5/60)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">(b) 21 degrees to 30 degrees</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">(1) Down</ENT>
+			<ENT>15/200 (4.5/60)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">(2) Lateral</ENT>
+			<ENT>20/100 (6/30)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">(3) Up</ENT>
+			<ENT>20/70 (6/21)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">(c) 31 degrees to 40 degrees</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">(1) Down</ENT>
+			<ENT>20/200 (6/60)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">(2) Lateral</ENT>
+			<ENT>20/70 (6/21)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">(3) Up</ENT>
+			<ENT>20/40 (6/12)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note:</E>
+				 In accordance with 38 CFR 4.31, diplopia that is occasional or that is correctable with spectacles is evaluated at 0 percent.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">6091 Symblepharon:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03" O="xl">Evaluate based on visual impairment, lagophthalmos (diagnostic code 6022), disfigurement (diagnostic code 7800), etc., depending on the particular findings.</ENT>
+		</ROW>
+	</GPOTABLE>
+	<SECAUTH>(Authority: 38 U.S.C. 1155)</SECAUTH>
+	<CITA>[73 FR 66550, Nov. 10, 2008]</CITA>
+</SECTION>

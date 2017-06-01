@@ -1,0 +1,56 @@
+{
+ "Schedule of ratings\u2014hemic and lymphatic systems.": {
+  "7700\u2003Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:": {
+   "Hemoglobin 5gm/100ml or less, with findings such as high output congestive heart failure or dyspnea at rest": 100,
+   "Hemoglobin 7gm/100ml or less, with findings such as dyspnea on mild exertion, cardiomegaly, tachycardia (100 to 120 beats per minute) or syncope (three episodes in the last six months)": 70,
+   "Hemoglobin 8gm/100ml or less, with findings such as weakness, easy fatigability, headaches, lightheadedness, or shortness of breath": 30,
+   "Hemoglobin 10gm/100ml or less with findings such as weakness, easy fatigability or headaches": 10,
+   "Hemoglobin 10gm/100ml or less, asymptomatic": 0
+  },
+  "7702\u2003Agranulocytosis, acute:": {
+   "Requiring bone marrow transplant, or; requiring transfusion of platelets or red cells at least once every six weeks, or; infections recurring at least once every six weeks": 100,
+   "Requiring transfusion of platelets or red cells at least once every three months, or; infections recurring at least once every three months": 60,
+   "Requiring transfusion of platelets or red cells at least once per year but less than once every three months, or; infections recurring at least once per year but less than once every three months": 30,
+   "Requiring continuous medication for control": 10
+  },
+  "7703\u2003Leukemia:": {
+   "With active disease or during a treatment phase": 100
+  },
+  "Otherwise rate as anemia (code 7700) or aplastic anemia (code 7716), whichever would result in the greater benefit.\n                  ": {},
+  "7704\u2003Polycythemia vera:": {
+   "During periods of treatment with myelosuppressants and for three months following cessation of myelosuppressant therapy": 100,
+   "Requiring phlebotomy": 40,
+   "Stable, with or without continuous medication": 10
+  },
+  "7705\u2003Thrombocytopenia, primary, idiopathic or immune:": {
+   "Platelet count of less than 20,000, with active bleeding, requiring treatment with medication and transfusions": 100,
+   "Platelet count between 20,000 and 70,000, not requiring treatment, without bleeding": 70,
+   "Stable platelet count between 70,000 and 100,000, without bleeding": 30,
+   "Stable platelet count of 100,000 or more, without bleeding": 0,
+   "7706\u2003Splenectomy": 20
+  },
+  "7707\u2003Spleen, injury of, healed.": {},
+  "Rate for any residuals.": {},
+  "7709\u2003Hodgkin's disease:": {
+   "With active disease or during a treatment phase": 100
+  },
+  "7710\u2003Adenitis, tuberculous, active or inactive.": {},
+  "Rate under \u00a7\u00a7\u20094.88c or 4.89 of this part, whichever is appropriate.": {},
+  "7714\u2003Sickle cell anemia:": {
+   "With repeated painful crises, occurring in skin, joints, bones or any major organs caused by hemolysis and sickling of red blood cells, with anemia, thrombosis and infarction, with symptoms precluding even light manual labor": 100,
+   "With painful crises several times a year or with symptoms precluding other than light manual labor": 60,
+   "Following repeated hemolytic sickling crises with continuing impairment of health": 30,
+   "Asymptomatic, established case in remission, but with identifiable organ impairment": 10
+  },
+  "7715\u2003Non-Hodgkin's lymphoma:": {
+   "With active disease or during a treatment phase": 100
+  },
+  "7716\u2003Aplastic anemia:": {
+   "Requiring bone marrow transplant, or; requiring transfusion of platelets or red cells at least once every six weeks, or; infections recurring at least once every six weeks": 100,
+   "Requiring transfusion of platelets or red cells at least once every three months, or; infections recurring at least once every three months": 60,
+   "Requiring transfusion of platelets or red cells at least once per year but less than once every three months, or; infections recurring at least once per year but less than once every three months": 30,
+   "Requiring continuous medication for control": 10,
+   "7717\u2003AL amyloidosis (primary amyloidosis)": 100
+  }
+ }
+}

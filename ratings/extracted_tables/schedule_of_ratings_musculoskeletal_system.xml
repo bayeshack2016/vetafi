@@ -1,0 +1,2568 @@
+<?xml version="1.0" ?>
+<SECTION>
+	<SECTNO>§ 4.71a</SECTNO>
+	<SUBJECT>Schedule of ratings—musculoskeletal system.</SUBJECT>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>Acute, Subacute, or Chronic Diseases</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5000 Osteomyelitis, acute, subacute, or chronic:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Of the pelvis, vertebrae, or extending into major joints, or with multiple localization or with long history of intractability and debility, anemia, amyloid liver changes, or other continuous constitutional symptoms</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Frequent episodes, with constitutional symptoms</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With definite involucrum or sequestrum, with or without discharging sinus</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With discharging sinus or other evidence of active infection within the past 5 years</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Inactive, following repeated episodes, without evidence of active infection in past 5 years</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02" O="xl">
+				<E T="04">Note</E>
+				 (1): A rating of 10 percent, as an exception to the amputation rule, is to be assigned in any case of active osteomyelitis where the amputation rating for the affected part is no percent. This 10 percent rating and the other partial ratings of 30 percent or less are to be combined with ratings for ankylosis, limited motion, nonunion or malunion, shortening, etc., subject, of course, to the amputation rule. The 60 percent rating, as it is based on constitutional symptoms, is not subject to the amputation rule. A rating for osteomyelitis will not be applied following cure by removal or radical resection of the affected bone.
+			</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="403"/>
+			<ENT I="02" O="xl">
+				<E T="04">Note</E>
+				 (2): The 20 percent rating on the basis of activity within the past 5 years is not assignable following the initial infection of active osteomyelitis with no subsequent reactivation. The prerequisite for this historical rating is an established recurrent osteomyelitis. To qualify for the 10 percent rating, 2 or more episodes following the initial infection are required. This 20 percent rating or the 10 percent rating, when applicable, will be assigned once only to cover disability at all sites of previously active infection with a future ending date in the case of the 20 percent rating.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5001 Bones and joints, tuberculosis of, active or inactive:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Active</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Inactive: See §§ 4.88b and 4.89.</ENT>
+			<ENT> </ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				5002 Arthritis rheumatoid (atrophic) 
+				<E T="03">As an active process:</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With constitutional manifestations associated with active joint involvement, totally incapacitating</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Less than criteria for 100% but with weight loss and anemia productive of severe impairment of health or severely incapacitating exacerbations occurring 4 or more times a year or a lesser number over prolonged periods</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Symptom combinations productive of definite impairment of health objectively supported by examination findings or incapacitating exacerbations occurring 3 or more times a year</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">One or two exacerbations a year in a well-established diagnosis</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">For chronic residuals:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5003 Arthritis, degenerative (hypertrophic or osteoarthritis):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02" O="xl">Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups, with occasional incapacitating exacerbations</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note</E>
+				 (1): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be combined with ratings based on limitation of motion.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note</E>
+				 (2): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be utilized in rating conditions listed under diagnostic codes 5013 to 5024, inclusive.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5004 Arthritis, gonorrheal.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5005 Arthritis, pneumococcic.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5006 Arthritis, typhoid.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5007 Arthritis, syphilitic.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5008 Arthritis, streptococcic.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5009 Arthritis, other types (specify).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5010 Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5011 Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5012 Bones, new growths of, malignant</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 The 100 percent rating will be continued for 1 year following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5013 Osteoporosis, with joint manifestations.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5014 Osteomalacia.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5015 Bones, new growths of, benign.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5016 Osteitis deformans.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5017 Gout.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5018 Hydrarthrosis, intermittent.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5019 Bursitis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5020 Synovitis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5021 Myositis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5022 Periostitis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5023 Myositis ossificans.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5024 Tenosynovitis.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5025 Fibromyalgia (fibrositis, primary fibromyalgia syndrome)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">That are constant, or nearly so, and refractory to therapy</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">That are episodic, with exacerbations often precipitated by environmental or emotional stress or by overexertion, but that are present more than one-third of the time</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">That require continuous medication for control</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="404"/>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 Widespread pain means pain in both the left and right sides of the body, that is both above and below the waist, and that affects both the axial skeleton (
+				<E T="03">i.e.</E>
+				, cervical spine, anterior chest, thoracic spine, or low back) and the extremities.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>Prosthetic Implants</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Major</CHED>
+			<CHED H="2">Minor</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5051 Shoulder replacement (prosthesis).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Prosthetic replacement of the shoulder joint:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">For 1 year following implantation of prosthesis</ENT>
+			<ENT>100</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With chronic residuals consisting of severe, painful motion or weakness in the affected extremity</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">With intermediate degrees of residual weakness, pain or limitation of motion, rate by analogy to diagnostic codes 5200 and 5203.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum rating</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5052 Elbow replacement (prosthesis).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Prosthetic replacement of the elbow joint:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">For 1 year following implantation of prosthesis</ENT>
+			<ENT>100</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With chronic residuals consisting of severe painful motion or weakness in the affected extremity</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">With intermediate degrees of residual weakness, pain or limitation of motion rate by analogy to diagnostic codes 5205 through 5208.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum evaluation</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5053 Wrist replacement (prosthesis).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Prosthetic replacement of wrist joint:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">For 1 year following implantation of prosthesis</ENT>
+			<ENT>100</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With chronic residuals consisting of severe, painful motion or weakness in the affected extremity</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">With intermediate degrees of residual weakness, pain or limitation of motion, rate by analogy to diagnostic code 5214.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum rating</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 The 100 pct rating for 1 year following implantation of prosthesis will commence after initial grant of the 1-month total rating assigned under § 4.30 following hospital discharge.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5054 Hip replacement (prosthesis).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Prosthetic replacement of the head of the femur or of the acetabulum:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">For 1 year following implantation of prosthesis</ENT>
+			<ENT> </ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Following implantation of prosthesis with painful motion or weakness such as to require the use of crutches</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 90
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Markedly severe residual weakness, pain or limitation of motion following implantation of prosthesis</ENT>
+			<ENT> </ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderately severe residuals of weakness, pain or limitation of motion</ENT>
+			<ENT> </ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum rating</ENT>
+			<ENT> </ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5055 Knee replacement (prosthesis).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Prosthetic replacement of knee joint:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">For 1 year following implantation of prosthesis</ENT>
+			<ENT> </ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With chronic residuals consisting of severe painful motion or weakness in the affected extremity</ENT>
+			<ENT> </ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">With intermediate degrees of residual weakness, pain or limitation of motion rate by analogy to diagnostic codes 5256, 5261, or 5262.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum rating</ENT>
+			<ENT> </ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5056 Ankle replacement (prosthesis).</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Prosthetic replacement of ankle joint:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">For 1 year following implantation of prosthesis</ENT>
+			<ENT> </ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With chronic residuals consisting of severe painful motion or weakness</ENT>
+			<ENT> </ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">With intermediate degrees of residual weakness, pain or limitation of motion rate by analogy to 5270 or 5271.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Minimum rating</ENT>
+			<ENT> </ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note</E>
+				 (1): The 100 pct rating for 1 year following implantation of prosthesis will commence after initial grant of the 1-month total rating assigned under § 4.30 following hospital discharge.
+			</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="12">
+				<E T="04">Note</E>
+				 (2): Special monthly compensation is assignable during the 100 pct rating period the earliest date permanent use of crutches is established.
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="02" RUL="s">
+			<ENT I="21">
+				<E T="04">combinations of disabilities</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="01">5104 Anatomical loss of one hand and loss of use of one foot</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5105 Anatomical loss of one foot and loss of use of one hand</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5106 Anatomical loss of both hands</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5107 Anatomical loss of both feet</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5108 Anatomical loss of one hand and one foot</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5109 Loss of use of both hands</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5110 Loss of use of both feet</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5111 Loss of use of one hand and one foot</ENT>
+			<ENT> </ENT>
+			<ENT>
+				<SU>1</SU>
+				 100
+			</ENT>
+		</ROW>
+		<TNOTE>
+			<E T="04">Note:</E>
+			 The term “prosthetic replacement” in diagnostic codes 5051 through 5056 means a total replacement of the named joint. However, in DC 5054, “prosthetic replacement” means a total replacement of the head of the femur or of the acetabulum.
+		</TNOTE>
+		<TNOTE>
+			<SU>1</SU>
+			 Also entitled to special monthly compensation.
+		</TNOTE>
+	</GPOTABLE>
+	<PRTPAGE P="405"/>
+	<GPOTABLE CDEF="s40,r40,r40,r40,r40,r40,r40" COLS="7" OPTS="L2">
+		<TTITLE>Table II—Ratings for Multiple Losses of Extremities With Dictator's Rating Code and 38 CFR Citation</TTITLE>
+		<BOXHD>
+			<CHED H="1">Impairment of one extremity</CHED>
+			<CHED H="1">Impairment of other extremity</CHED>
+			<CHED H="2">Anatomical loss or loss of use below elbow</CHED>
+			<CHED H="2">Anatomical loss or loss of use below knee</CHED>
+			<CHED H="2">Anatomical loss or loss of use above elbow (preventing use of prosthesis)</CHED>
+			<CHED H="2">Anatomical loss or loss of use above knee (preventing use of prosthesis)</CHED>
+			<CHED H="2">Anatomical loss near shoulder (preventing use of prosthesis)</CHED>
+			<CHED H="2">Anatomical loss near hip (preventing use of prosthesis)</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">Anatomical loss or loss of use below elbow</ENT>
+			<ENT>M Codes M-1 a, b, or c, 38 CFR 3.350 (c)(1)(i)</ENT>
+			<ENT>L Codes L-1 d, e, f, or g, 38 CFR 3.350(b)</ENT>
+			<ENT>
+				M
+				<FR>1/2</FR>
+				 Code M-5, 38 CFR 3.350 (f)(1)(x)
+			</ENT>
+			<ENT>
+				L
+				<FR>1/2</FR>
+				 Code L-2 c, 38 CFR 3.350 (f)(1)(vi)
+			</ENT>
+			<ENT>N Code N-3, 38 CFR 3.350 (f)(1)(xi)</ENT>
+			<ENT>M Code M-3 c, 38 CFR 3.350 (f)(1)(viii)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">Anatomical loss or loss of use below knee</ENT>
+			<ENT/>
+			<ENT>L Codes L-1 a, b, or c, 38 CFR 3.350(b)</ENT>
+			<ENT>
+				L
+				<FR>1/2</FR>
+				 Code L-2 b, 38 CFR 3.350 (f)(1)(iii)
+			</ENT>
+			<ENT>
+				L
+				<FR>1/2</FR>
+				 Code L-2 a, 38 CFR 3.350 (f)(1)(i)
+			</ENT>
+			<ENT>M Code M-3 b, 38 CFR 3.350 (f)(1)(iv)</ENT>
+			<ENT>M Code M-3 a, 38 CFR 3.350 (f)(1)(ii)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">Anatomical loss or loss of use above elbow (preventing use of prosthesis)</ENT>
+			<ENT/>
+			<ENT/>
+			<ENT>N Code N-1, 38 CFR 3.350 (d)(1)</ENT>
+			<ENT>M Code M-2 a, 38 CFR 3.350 (c)(1)(iii)</ENT>
+			<ENT>
+				N
+				<FR>1/2</FR>
+				 Code N-4, 38 CFR 3.350 (f)(1)(ix)
+			</ENT>
+			<ENT>
+				M
+				<FR>1/2</FR>
+				 Code M-4 c, 38 CFR 3.350 (f)(1)(xi)
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">Anatomical loss or loss of use above knee (preventing use of prosthesis)</ENT>
+			<ENT/>
+			<ENT/>
+			<ENT/>
+			<ENT>M Code M-2 a, 38 CFR 3.350 (c)(1)(ii)</ENT>
+			<ENT>
+				M
+				<FR>1/2</FR>
+				 Code M-4 b, 38 CFR 3.350 (f)(1)(vii)
+			</ENT>
+			<ENT>
+				M
+				<FR>1/2</FR>
+				 Code M-4 a, 38 CFR 3.350 (f)(1)(v)
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">Anatomical loss near shoulder (preventing use of prosthesis)</ENT>
+			<ENT/>
+			<ENT/>
+			<ENT/>
+			<ENT/>
+			<ENT>O Code O-1, 38 CFR 3.350 (e)(1)(i)</ENT>
+			<ENT>N Code N-2 b, 38 CFR 3.350 (d)(3)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">Anatomical loss near hip (preventing use of prosthesis)</ENT>
+			<ENT/>
+			<ENT/>
+			<ENT/>
+			<ENT/>
+			<ENT/>
+			<ENT>N Code N-2 a, 38 CFR 3.350 (d)(2)</ENT>
+		</ROW>
+		<TNOTE>
+			<E T="04">Note.</E>
+			—Need for aid attendance or permanently bedridden qualifies for subpar. L. Code L-1 h, i (38 CFR 3.350(b)). Paraplegia with loss of use of both lower extremities and loss of anal and bladder sphincter control qualifies for subpar. O. Code O-2 (38 CFR 3.350(e)(2)). Where there are additional disabilities rated 50% or 100%, or anatomical or loss of use of a third extremity see 38 CFR 3.350(f) (3), (4) or (5).
+		</TNOTE>
+	</GPOTABLE>
+	<PARAUTH>(Authority: 38 U.S.C. 1115)</PARAUTH>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>Amputations: Upper Extremity</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Major</CHED>
+			<CHED H="2">Minor</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="12">Arm, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5120 Disarticulation</ENT>
+			<ENT>
+				<SU>1</SU>
+				 90
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 90
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5121 Above insertion of deltoid</ENT>
+			<ENT>
+				<SU>1</SU>
+				 90
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 80
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5122 Below insertion of deltoid</ENT>
+			<ENT>
+				<SU>1</SU>
+				 80
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Forearm, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5123 Above insertion of pronator teres</ENT>
+			<ENT>
+				<SU>1</SU>
+				 80
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5124 Below insertion of pronator teres</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="01">5125 Hand, loss of use of</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="02" RUL="s">
+			<ENT I="21">
+				<E T="04">multiple finger amputations</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="01">5126 Five digits of one hand, amputation of</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Four digits of one hand, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5127 Thumb, index, long and ring</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5128 Thumb, index, long and little</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5129 Thumb, index, ring and little</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5130 Thumb, long, ring and little</ENT>
+			<ENT>
+				<SU>1</SU>
+				 70
+			</ENT>
+			<ENT>
+				<SU>1</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5131 Index, long, ring and little</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Three digits of one hand, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5132 Thumb, index and long</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5133 Thumb, index and ring</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5134 Thumb, index and little</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5135 Thumb, long and ring</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5136 Thumb, long and little</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5137 Thumb, ring and little</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5138 Index, long and ring</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5139 Index, long and little</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5140 Index, ring and little</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5141 Long, ring and little</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Two digits of one hand, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5142 Thumb and index</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5143 Thumb and long</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5144 Thumb and ring</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5145 Thumb and little</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5146 Index and long</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5147 Index and ring</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5148 Index and little</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5149 Long and ring</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5150 Long and little</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5151 Ring and little</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">(a) The ratings for multiple finger amputations apply to amputations at the proximal interphalangeal joints or through proximal phalanges.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">(b) Amputation through middle phalanges will be rated as prescribed for unfavorable ankylosis of the fingers.</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="406"/>
+			<ENT I="02">(c) Amputations at distal joints, or through distal phalanges, other than negligible losses, will be rated as prescribed for favorable ankylosis of the fingers.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">(d) Amputation or resection of metacarpal bones (more than one-half the bone lost) in multiple fingers injuries will require a rating of 10 percent added to (not combined with) the ratings, multiple finger amputations, subject to the amputation rule applied to the forearm.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				(e) Combinations of finger amputations at various levels, or finger amputations with ankylosis or limitation of motion of the fingers will be rated on the basis of the grade of disability; 
+				<E T="03">i.e.</E>
+				, amputation, unfavorable ankylosis, most representative of the levels or combinations. With an even number of fingers involved, and adjacent grades of disability, select the higher of the two grades.
+			</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="12">(f) Loss of use of the hand will be held to exist when no effective function remains other than that which would be equally well served by an amputation stump with a suitable prosthetic applicance.</ENT>
+		</ROW>
+		<ROW EXPSTB="02" RUL="s">
+			<ENT I="21">
+				<E T="04">single finger amputations</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="22">5152 Thumb, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With metacarpal resection</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">At metacarpophalangeal joint or through proximal phalanx</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">At distal joint or through distal phalanx</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5153 Index finger, amputation of</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With metacarpal resection (more than one-half the bone lost)</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Without metacarpal resection, at proximal interphalangeal joint or proximal thereto</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Through middle phalanx or at distal joint</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5154 Long finger, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With metacarpal resection (more than one-half the bone lost)</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Without metacarpal resection, at proximal interphalangeal joint or proximal thereto</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5155 Ring finger, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With metacarpal resection (more than one-half the bone lost)</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Without metacarpal resection, at proximal interphalangeal joint or proximal thereto</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5156 Little finger, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With metacarpal resection (more than one-half the bone lost)</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Without metacarpal resection, at proximal interphalangeal joint or proximal thereto</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 The single finger amputation ratings are the only applicable ratings for amputations of whole or part of single fingers.
+			</ENT>
+		</ROW>
+		<TNOTE>
+			<SU>1</SU>
+			 Entitled to special monthly compensation.
+		</TNOTE>
+	</GPOTABLE>
+	<GPH DEEP="470" SPAN="2">
+		<PRTPAGE P="407"/>
+		<GID>EC04NO91.004</GID>
+	</GPH>
+	<PRTPAGE P="408"/>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>Amputations: Lower Extremity</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="12">Thigh, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5160 Disarticulation, with loss of extrinsic pelvic girdle muscles</ENT>
+			<ENT>
+				<SU>2</SU>
+				 90
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5161 Upper third, one-third of the distance from perineum to knee joint measured from perineum</ENT>
+			<ENT>
+				<SU>2</SU>
+				 80
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5162 Middle or lower thirds</ENT>
+			<ENT>
+				<SU>2</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Leg, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5163 With defective stump, thigh amputation recommended</ENT>
+			<ENT>
+				<SU>2</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5164 Amputation not improvable by prosthesis controlled by natural knee action</ENT>
+			<ENT>
+				<SU>2</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5165 At a lower level, permitting prosthesis</ENT>
+			<ENT>
+				<SU>2</SU>
+				 40
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5166 Forefoot, amputation proximal to metatarsal bones (more than one-half of metatarsal loss)</ENT>
+			<ENT>
+				<SU>2</SU>
+				 40
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5167 Foot, loss of use of</ENT>
+			<ENT>
+				<SU>2</SU>
+				 40
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5170 Toes, all, amputation of, without metatarsal loss</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5171 Toe, great, amputation of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With removal of metatarsal head</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Without metatarsal involvement</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5172 Toes, other than great, amputation of, with removal of metatarsal head:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">One or two</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Without metatarsal involvement</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5173 Toes, three or four, amputation of, without metatarsal involvement:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Including great toe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Not including great toe</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<TNOTE>
+			<SU>2</SU>
+			 Also entitled to special monthly compensation.
+		</TNOTE>
+	</GPOTABLE>
+	<GPH DEEP="470" SPAN="2">
+		<PRTPAGE P="409"/>
+		<GID>EC04NO91.003</GID>
+	</GPH>
+	<PRTPAGE P="410"/>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>The Shoulder and Arm</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Major</CHED>
+			<CHED H="2">Minor</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5200 Scapulohumeral articulation, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 The scapula and humerus move as one piece.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Unfavorable, abduction limited to 25° from side</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Intermediate between favorable and unfavorable</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Favorable, abduction to 60°, can reach mouth and head</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5201 Arm, limitation of motion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">To 25° from side</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Midway between side and shoulder level</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">At shoulder level</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5202 Humerus, other impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Loss of head of (flail shoulder)</ENT>
+			<ENT>80</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Nonunion of (false flail joint)</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Fibrous union of</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Recurrent dislocation of at scapulohumeral joint.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With frequent episodes and guarding of all arm movements</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With infrequent episodes, and guarding of movement only at shoulder level</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Malunion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Marked deformity</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate deformity</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5203 Clavicle or scapula, impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Dislocation of</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Nonunion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With loose movement</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Without loose movement</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Malunion of</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Or rate on impairment of function of contiguous joint.</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>The Elbow and Forearm</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Major</CHED>
+			<CHED H="2">Minor</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5205 Elbow, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Unfavorable, at an angle of less than 50° or with complete loss of supination or pronation</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Intermediate, at an angle of more than 90°, or between 70° and 50°</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Favorable, at an angle between 90° and 70°</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5206 Forearm, limitation of flexion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 45°</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 55°</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 70°</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 90°</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 100°</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 110°</ENT>
+			<ENT>0</ENT>
+			<ENT> 0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5207 Forearm, limitation of extension of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 110°</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 100°</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 90°</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 75°</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 60°</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 45°</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5208 Forearm, flexion limited to 100° and extension to 45°</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5209 Elbow, other impairment of Flail joint</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Joint fracture, with marked cubitus varus or cubitus valgus deformity or with ununited fracture of head of radius</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5210 Radius and ulna, nonunion of, with flail false joint</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5211 Ulna, impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Nonunion in upper half, with false movement:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With loss of bone substance (1 inch (2.5 cms.) or more) and marked deformity</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Without loss of bone substance or deformity</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Nonunion in lower half</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Malunion of, with bad alignment</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5212 Radius, impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Nonunion in lower half, with false movement:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With loss of bone substance (1 inch (2.5 cms.) or more) and marked deformity</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Without loss of bone substance or deformity</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Nonunion in upper half</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Malunion of, with bad alignment</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5213 Supination and pronation, impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Loss of (bone fusion):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">The hand fixed in supination or hyperpronation</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">The hand fixed in full pronation</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">The hand fixed near the middle of the arc or moderate pronation</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Limitation of pronation:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Motion lost beyond middle of arc</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Motion lost beyond last quarter of arc, the hand does not approach full pronation</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Limitation of supination:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">To 30° or less</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 In all the forearm and wrist injuries, codes 5205 through 5213, multiple impaired finger movements due to tendon tie-up, muscle or nerve injury, are to be separately rated and combined not to exceed rating for loss of use of hand.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>The Wrist</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Major</CHED>
+			<CHED H="2">Minor</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5214 Wrist, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Unfavorable, in any degree of palmar flexion, or with ulnar or radial deviation</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Any other position, except favorable</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Favorable in 20° to 30° dorsiflexion</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 Extremely unfavorable ankylosis will be rated as loss of use of hands under diagnostic code 5125.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5215 Wrist, limitation of motion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Dorsiflexion less than 15°</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Palmar flexion limited in line with forearm</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+	</GPOTABLE>
+	<PRTPAGE P="411"/>
+	<GPOTABLE CDEF="s50,5,5" COLS="3" OPTS="L2">
+		<TTITLE>Evaluation of Ankylosis or Limitation of Motion of Single or Multiple Digits of the Hand</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+			<CHED H="2">Major</CHED>
+			<CHED H="2">Minor</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01">(1) For the index, long, ring, and little fingers (digits II, III, IV, and V), zero degrees of flexion represents the fingers fully extended, making a straight line with the rest of the hand. The position of function of the hand is with the wrist dorsiflexed 20 to 30 degrees, the metacarpophalangeal and proximal interphalangeal joints flexed to 30 degrees, and the thumb (digit I) abducted and rotated so that the thumb pad faces the finger pads. Only joints in these positions are considered to be in favorable position. For digits II through V, the metacarpophalangeal joint has a range of zero to 90 degrees of flexion, the proximal interphalangeal joint has a range of zero to 100 degrees of flexion, and the distal (terminal) interphalangeal joint has a range of zero to 70 or 80 degrees of flexion</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="01">
+				(2) When two or more digits of the same hand are affected by any combination of amputation, ankylosis, or limitation of motion that is not otherwise specified in the rating schedule, the evaluation level assigned will be that which best represents the overall disability (
+				<E T="03">i.e.</E>
+				, amputation, unfavorable or favorable ankylosis, or limitation of motion), assigning the higher level of evaluation when the level of disability is equally balanced between one level and the next higher level
+			</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="11">(3) Evaluation of ankylosis of the index, long, ring, and little fingers:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">(i) If both the metacarpophalangeal and proximal interphalangeal joints of a digit are ankylosed, and either is in extension or full flexion, or there is rotation or angulation of a bone, evaluate as amputation without metacarpal resection, at proximal interphalangeal joint or proximal thereto</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="03">(ii) If both the metacarpophalangeal and proximal interphalangeal joints of a digit are ankylosed, evaluate as unfavorable ankylosis, even if each joint is individually fixed in a favorable position</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">(iii) If only the metacarpophalangeal or proximal interphalangeal joint is ankylosed, and there is a gap of more than two inches (5.1 cm.) between the fingertip(s) and the proximal transverse crease of the palm, with the finger(s) flexed to the extent possible, evaluate as unfavorable ankylosis</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="03">(iv) If only the metacarpophalangeal or proximal interphalangeal joint is ankylosed, and there is a gap of two inches (5.1 cm.) or less between the fingertip(s) and the proximal transverse crease of the palm, with the finger(s) flexed to the extent possible, evaluate as favorable ankylosis</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="11">(4) Evaluation of ankylosis of the thumb:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">(i) If both the carpometacarpal and interphalangeal joints are ankylosed, and either is in extension or full flexion, or there is rotation or angulation of a bone, evaluate as amputation at metacarpophalangeal joint or through proximal phalanx</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="03">(ii) If both the carpometacarpal and interphalangeal joints are ankylosed, evaluate as unfavorable ankylosis, even if each joint is individually fixed in a favorable position</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="03">(iii) If only the carpometacarpal or interphalangeal joint is ankylosed, and there is a gap of more than two inches (5.1 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers, evaluate as unfavorable ankylosis</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW>
+			<ENT I="03">(iv) If only the carpometacarpal or interphalangeal joint is ankylosed, and there is a gap of two inches (5.1 cm.) or less between the thumb pad and the fingers, with the thumb attempting to oppose the fingers, evaluate as favorable ankylosis</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="01">(5) If there is limitation of motion of two or more digits, evaluate each digit separately and combine the evaluations</ENT>
+			<ENT/>
+			<ENT/>
+		</ROW>
+		<ROW EXPSTB="02" RUL="s">
+			<ENT I="21">
+				<E T="02">I. Multiple Digits: Unfavorable Ankylosis</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="01">5216 Five digits of one hand, unfavorable ankylosis of</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5217 Four digits of one hand, unfavorable ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Thumb and any three fingers</ENT>
+			<ENT>60</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Index, long, ring, and little fingers</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5218 Three digits of one hand, unfavorable ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Thumb and any two fingers</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Index, long, and ring; index, long, and little; or index, ring, and little fingers</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Long, ring, and little fingers</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5219 Two digits of one hand, unfavorable ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Thumb and any finger</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="412"/>
+			<ENT I="03">Index and long; index and ring; or index and little fingers</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Long and ring; long and little; or ring and little fingers</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted.
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="02" RUL="s">
+			<ENT I="21">
+				<E T="02">II. Multiple Digits: Favorable Ankylosis</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="01">5220 Five digits of one hand, favorable ankylosis of</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5221 Four digits of one hand, favorable ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Thumb and any three fingers</ENT>
+			<ENT>50</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Index, long, ring, and little fingers</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5222 Three digits of one hand, favorable ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Thumb and any two fingers</ENT>
+			<ENT>40</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Index, long, and ring; index, long, and little; or index, ring, and little fingers</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Long, ring and little fingers</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5223 Two digits of one hand, favorable ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Thumb and any finger</ENT>
+			<ENT>30</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Index and long; index and ring; or index and little fingers</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="03">Long and ring; long and little; or ring and little fingers</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW EXPSTB="02" RUL="s">
+			<ENT I="21">
+				<E T="02">III. Ankylosis of Individual Digits</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">5224 Thumb, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unfavorable</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Favorable</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5225 Index finger, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unfavorable or favorable</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5226 Long finger, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unfavorable or favorable</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5227 Ring or little finger, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unfavorable or favorable</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW RUL="s">
+			<ENT I="11">
+				<E T="02">Note:</E>
+				 Also consider whether evaluation as amputation is warranted and whether an additional evaluation is warranted for resulting limitation of motion of other digits or interference with overall function of the hand.
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="02" RUL="s">
+			<ENT I="21">
+				<E T="02">IV. Limitation of Motion of Individual Digits</E>
+			</ENT>
+		</ROW>
+		<ROW EXPSTB="00">
+			<ENT I="11">5228 Thumb, limitation of motion:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With a gap of more than two inches (5.1 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers</ENT>
+			<ENT>20</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With a gap of one to two inches (2.5 to 5.1 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With a gap of less than one inch (2.5 cm.) between the thumb pad and the fingers, with the thumb attempting to oppose the fingers</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5229 Index or long finger, limitation of motion:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With a gap of one inch (2.5 cm.) or more between the fingertip and the proximal transverse crease of the palm, with the finger flexed to the extent possible, or; with extension limited by more than 30 degrees</ENT>
+			<ENT>10</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With a gap of less than one inch (2.5 cm.) between the fingertip and the proximal transverse crease of the palm, with the finger flexed to the extent possible, and; extension is limited by no more than 30 degrees</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">5230 Ring or little finger, limitation of motion:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Any limitation of motion</ENT>
+			<ENT>0</ENT>
+			<ENT>0</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Spine</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="21">
+				<E T="02">General Rating Formula for Diseases and Injuries of the Spine</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="11">(For diagnostic codes 5235 to 5243 unless 5243 is evaluated under the Formula for Rating Intervertebral Disc Syndrome Based on Incapacitating Episodes):</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">With or without symptoms such as pain (whther or not it radiates), stiffness, or aching in the area of the spine affected by residuals of injury or disease</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">Unfavorable ankylosis of the entire spine</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">Unfavorable ankylosis of the entire thoracolumbar spine</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="413"/>
+			<ENT I="05">Unfavorable ankylosis of the entire cervical spine; or, forward flexion of the thoracolumbar spine 30 degrees or less; or, favorable ankylosis of the entire thoracolumbar spine</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">Forward flexion of the cervical spine 15 degrees or less; or, favorable ankylosis of the entire cervical spine</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">Forward flexion of the thoracolumbar spine greater than 30 degrees but not greater than 60 degrees; or, forward flexion of the cervical spine greater than 15 degrees but not greater than 30 degrees; or, the combined range of motion of the thoracolumbar spine not greater than 120 degrees; or, the combined range of motion of the cervical spine not greater than 170 degrees; or, muscle spasm or guarding severe enough to result in an abnormal gait or abnormal spinal contour such as scoliosis, reversed lordosis, or abnormal kyphosis</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="05">Forward flexion of the thoracolumbar spine greater than 60 degrees but not greater than 85 degrees; or, forward flexion of the cervical spine greater than 30 degrees but not greater than 40 degrees; or, combined range of motion of the thoracolumbar spine greater than 120 degrees but not greater than 235 degrees; or, combined range of motion of the cervical spine greater than 170 degrees but not greater than 335 degrees; or, muscle spasm, guarding, or localized tenderness not resulting in abnormal gait or abnormal spinal contour; or, vertebral body fracture with loss of 50 percent or more of the height</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note (1):</E>
+				 Evaluate any associated objective neurologic abnormalities, including, but not limited to, bowel or bladder impairment, separately, under an appropriate diagnostic code.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note (2):</E>
+				 (See also Plate V.) For VA compensation purposes, normal forward flexion of the cervical spine is zero to 45 degrees, extension is zero to 45 degrees, left and right lateral flexion are zero to 45 degrees, and left and right lateral rotation are zero to 80 degrees. Normal forward flexion of the thoracolumbar spine is zero to 90 degrees, extension is zero to 30 degrees, left and right lateral flexion are zero to 30 degrees, and left and right lateral rotation are zero to 30 degrees. The combined range of motion refers to the sum of the range of forward flexion, extension, left and right lateral flexion, and left and right rotation. The normal combined range of motion of the cervical spine is 340 degrees and of the thoracolumbar spine is 240 degrees. The normal ranges of motion for each component of spinal motion provided in this note are the maximum that can be used for calculation of the combined range of motion.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note (3):</E>
+				 In exceptional cases, an examiner may state that because of age, body habitus, neurologic disease, or other factors not the result of disease or injury of the spine, the range of motion of the spine in a particular individual should be considered normal for that individual, even though it does not conform to the normal range of motion stated in Note (2). Provided that the examiner supplies an explanation, the examiner's assessment that the range of motion is normal for that individual will be accepted.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note (4):</E>
+				 Round each range of motion measurement to the nearest five degrees.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note (5):</E>
+				 For VA compensation purposes, unfavorable ankylosis is a condition in which the entire cervical spine, the entire thoracolumbar spine, or the entire spine is fixed in flexion or extension, and the ankylosis results in one or more of the following: difficulty walking because of a limited line of vision; restricted opening of the mouth and chewing; breathing limited to diaphragmatic respiration; gastrointestinal symptoms due to pressure of the costal margin on the abdomen; dyspnea or dysphagia; atlantoaxial or cervical subluxation or dislocation; or neurologic symptoms due to nerve root stretching. Fixation of a spinal segment in neutral position (zero degrees) always represents favorable ankylosis.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note (6):</E>
+				 Separately evaluate disability of the thoracolumbar and cervical spine segments, except when there is unfavorable ankylosis of both segments, which will be rated as a single disability.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5235 Vertebral fracture or dislocation</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5236 Sacroiliac injury and weakness</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5237 Lumbosacral or cervical strain</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5238 Spinal stenosis</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5239 Spondylolisthesis or segmental instability</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5240 Ankylosing spondylitis</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5241 Spinal fusion</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5242 Degenerative arthritis of the spine (see also diagnostic code 5003)</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22"> 5243 Intervertebral disc syndrome</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">Evaluate intervertebral disc syndrome (preoperatively or postoperatively) either under the General Rating Formula for Diseases and Injuries of the Spine or under the Formula for Rating Intervertebral Disc Syndrome Based on Incapacitating Episodes, whichever method results in the higher evaluation when all disabilities are combined under § 4.25.
+                  </ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="414"/>
+			<ENT I="21">
+				<E T="02">Formula for Rating Intervertebral Disc Syndrome Based on Incapacitating Episodes</E>
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">With incapacitating episodes having a total duration of at least 4 weeks but less than 6 weeks during the past 12 months</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">With incapacitating episodes having a total duration of at least 2 weeks but less than 4 weeks during the past 12 months</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">With incapacitating episodes having a total duration of at least one week but less than 2 weeks during the past 12 months</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note</E>
+				 (1): For purposes of evaluations under diagnostic code 5243, an incapacitating episode is a period of acute signs and symptoms due to intervertebral disc syndrome that requires bed rest prescribed by a physician and treatment by a physician.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">
+				<E T="02">Note</E>
+				 (2): If intervertebral disc syndrome is present in more than one spinal segment, provided that the effects in each spinal segment are clearly distinct, evaluate each segment on the basis of incapacitating episodes or under the General Rating Formula for Diseases and Injuries of the Spine, whichever method results in a higher evaluation for that segment.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPH DEEP="470" SPAN="2">
+		<PRTPAGE P="415"/>
+		<GID>er27au03.003</GID>
+	</GPH>
+	<PRTPAGE P="416"/>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Hip and Thigh</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5250 Hip, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Unfavorable, extremely unfavorable ankylosis, the foot not reaching ground, crutches necessitated</ENT>
+			<ENT>
+				<SU>3</SU>
+				 90
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Intermediate</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Favorable, in flexion at an angle between 20° and 40°, and slight adduction or abduction</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5251 Thigh, limitation of extension of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 5°</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5252 Thigh, limitation of flexion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 10°</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 20°</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 30°</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 45°</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5253 Thigh, impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Limitation of abduction of, motion lost beyond 10°</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Limitation of adduction of, cannot cross legs</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Limitation of rotation of, cannot toe-out more than 15°, affected leg</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5254 Hip, flail joint</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5255 Femur, impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Fracture of shaft or anatomical neck of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With nonunion, with loose motion (spiral or oblique fracture)</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With nonunion, without loose motion, weightbearing preserved with aid of brace</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Fracture of surgical neck of, with false joint</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Malunion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With marked knee or hip disability</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With moderate knee or hip disability</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With slight knee or hip disability</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<TNOTE>
+			<SU>3</SU>
+			 Entitled to special monthly compensation.
+		</TNOTE>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Knee and Leg</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5256 Knee, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extremely unfavorable, in flexion at an angle of 45° or more</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">In flexion between 20° and 45°</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">In flexion between 10° and 20°</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Favorable angle in full extension, or in slight flexion between 0° and 10°</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5257 Knee, other impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Recurrent subluxation or lateral instability:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Moderate</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Slight</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5258 Cartilage, semilunar, dislocated, with frequent episodes of “locking,” pain, and effusion into the joint</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5259 Cartilage, semilunar, removal of, symptomatic</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5260 Leg, limitation of flexion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 15°</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 30°</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 45°</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Flexion limited to 60°</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5261 Leg, limitation of extension of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 45°</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 30°</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 20°</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 15°</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 10°</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Extension limited to 5°</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5262 Tibia and fibula, impairment of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Nonunion of, with loose motion, requiring brace</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Malunion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With marked knee or ankle disability</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With moderate knee or ankle disability</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">With slight knee or ankle disability</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5263 Genu recurvatum (acquired, traumatic, with weakness and insecurity in weight-bearing objectively demonstrated)</ENT>
+			<ENT>10</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Ankle</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5270 Ankle, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">In plantar flexion at more than 40°, or in dorsiflexion at more than 10° or with abduction, adduction, inversion or eversion deformity</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">In plantar flexion, between 30° and 40°, or in dorsiflexion, between 0° and 10°</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">In plantar flexion, less than 30°</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5271 Ankle, limited motion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Marked</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5272 Subastragalar or tarsal joint, ankylosis of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">In poor weight-bearing position</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">In good weight-bearing position</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5273 Os calcis or astragalus, malunion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Marked deformity</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Moderate deformity</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5274 Astragalectomy</ENT>
+			<ENT>20</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>Shortening of the Lower Extremity</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5275 Bones, of the lower extremity, shortening of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Over 4 inches (10.2 cms.)</ENT>
+			<ENT>
+				<SU>3</SU>
+				 60
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">
+				3
+				<FR>1/2</FR>
+				 to 4 inches (8.9 cms. to 10.2 cms.)
+			</ENT>
+			<ENT>
+				<SU>3</SU>
+				 50
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">
+				3 to 3
+				<FR>1/2</FR>
+				 inches (7.6 cms. to 8.9 cms.)
+			</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">
+				2
+				<FR>1/2</FR>
+				 to 3 inches (6.4 cms. to 7.6 cms.)
+			</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">
+				2 to 2
+				<FR>1/2</FR>
+				 inches (5.1 cms. to 6.4 cms.)
+			</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">
+				1
+				<FR>1/4</FR>
+				 to 2 inches (3.2 cms. to 5.1 cms.)
+			</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 Measure both lower extremities from anterior superior spine of the ilium to the internal malleolus of the tibia. Not to be combined with other ratings for fracture or faulty union in the same extremity.
+			</ENT>
+		</ROW>
+		<TNOTE>
+			<SU>3</SU>
+			 Also entitled to special monthly compensation.
+		</TNOTE>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Foot</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5276 Flatfoot, acquired:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Pronounced; marked pronation, extreme tenderness of plantar surfaces of the feet, marked inward displacement and severe spasm of the tendo achillis on manipulation, not improved by orthopedic shoes or appliances</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Bilateral</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Unilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Severe; objective evidence of marked deformity (pronation, abduction, etc.), pain on manipulation and use accentuated, indication of swelling on use, characteristic callosities:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<PRTPAGE P="417"/>
+			<ENT I="02">Moderate; weight-bearing line over or medial to great toe, inward bowing of the tendo achillis, pain on manipulation and use of the feet, bilateral or unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Mild; symptoms relieved by built-up shoe or arch support</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5277 Weak foot, bilateral:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">A symptomatic condition secondary to many constitutional conditions, characterized by atrophy of the musculature, disturbed circulation, and weakness:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Rate the underlying condition, minimum rating</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5278 Claw foot (pes cavus), acquired:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Marked contraction of plantar fascia with dropped forefoot, all toes hammer toes, very painful callosities, marked varus deformity:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">All toes tending to dorsiflexion, limitation of dorsiflexion at ankle to right angle, shortened plantar fascia, and marked tenderness under metatarsal heads:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Great toe dorsiflexed, some limitation of dorsiflexion at ankle, definite tenderness under metatarsal heads:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Bilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Unilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Slight</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01">5279 Metatarsalgia, anterior (Morton's disease), unilateral, or bilateral</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5280 Hallux valgus, unilateral:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Operated with resection of metatarsal head</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Severe, if equivalent to amputation of great toe</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5281 Hallux rigidus, unilateral, severe:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Rate as hallux valgus, severe.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13"> Note: Not to be combined with claw foot ratings.</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5282 Hammer toe:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">All toes, unilateral without claw foot</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Single toes</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5283 Tarsal, or metatarsal bones, malunion of, or nonunion of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Moderately severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 With actual loss of use of the foot, rate 40 percent.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="22">5284 Foot injuries, other:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Severe</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Moderately severe</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Moderate</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note:</E>
+				 With actual loss of use of the foot, rate 40 percent.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Skull</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5296 Skull, loss of part of, both inner and outer tables:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">With brain hernia</ENT>
+			<ENT>80</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">Without brain hernia:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">
+				Area larger than size of a 50-cent piece or 1.140 in 
+				<SU>2</SU>
+				 (7.355 cm 
+				<SU>2</SU>
+				)
+			</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">Area intermediate</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="03">
+				Area smaller than the size of a 25-cent piece or 0.716 in 
+				<SU>2</SU>
+				 (4.619 cm 
+				<SU>2</SU>
+				)
+			</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="13">
+				<E T="04">Note:</E>
+				 Rate separately for intracranial complications.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Ribs</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5297 Ribs, removal of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">More than six</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Five or six</ENT>
+			<ENT>40</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Three or four</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Two</ENT>
+			<ENT>20</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">One or resection of two or more ribs without regeneration</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note</E>
+				 (1): The rating for rib resection or removal is not to be applied with ratings for purrulent pleurisy, lobectomy, pneumonectomy or injuries of pleural cavity.
+			</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="12">
+				<E T="04">Note</E>
+				 (2): However, rib resection will be considered as rib removal in thoracoplasty performed for collapse therapy or to accomplish obliteration of space and will be combined with the rating for lung collapse, or with the rating for lobectomy, pneumonectomy or the graduated ratings for pulmonary tuberculosis.
+			</ENT>
+		</ROW>
+	</GPOTABLE>
+	<GPOTABLE CDEF="s50,5" COLS="2" OPTS="L2">
+		<TTITLE>The Coccyx</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="22">5298 Coccyx, removal of:</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Partial or complete, with painful residuals</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="02">Without painful residuals</ENT>
+			<ENT>0</ENT>
+		</ROW>
+	</GPOTABLE>
+	<SECAUTH>(Authority: 38 U.S.C. 1155)</SECAUTH>
+	<CITA>[29 FR 6718, May 22, 1964, as amended at 34 FR 5062, Mar. 11, 1969; 40 FR 42536, Sept. 15, 1975; 41 FR 11294, Mar. 18, 1976; 43 FR 45350, Oct. 2, 1978; 51 FR 6411, Feb. 24, 1986; 61 FR 20439, May 7, 1996; 67 FR 48785, July 26, 2002; 67 FR 54349, Aug. 22, 2002; 68 FR 51456, Aug. 27, 2003; 69 FR 32450, June 10, 2004; 80 FR 42041, July 16, 2015]</CITA>
+</SECTION>

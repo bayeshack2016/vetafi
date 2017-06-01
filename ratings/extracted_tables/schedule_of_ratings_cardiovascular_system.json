@@ -1,0 +1,197 @@
+{
+ "Schedule of ratings\u2014cardiovascular system.": {
+  "7000\u2003Valvular heart disease (including rheumatic heart disease):": {
+   "During active infection with valvular heart damage and for three months following cessation of therapy for the active infection": 100
+  },
+  "Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7001\u2003Endocarditis:": {
+   "For three months following cessation of therapy for active infection with cardiac involvement": 100
+  },
+  "Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7002\u2003Pericarditis:": {
+   "For three months following cessation of therapy for active infection with cardiac involvement": 100
+  },
+  "Thereafter, with documented pericarditis resulting in:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent.": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7003\u2003Pericardial adhesions:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7004\u2003Syphilitic heart disease:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7005\u2003Arteriosclerotic heart disease (Coronary artery disease):": {},
+  "With documented coronary artery disease resulting in:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7006\u2003Myocardial infarction:": {
+   "During and for three months following myocardial infarction, documented by laboratory tests": 100
+  },
+  "Thereafter:\n                  ": {},
+  "With history of documented myocardial infarction, resulting in:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7007\u2003Hypertensive heart disease:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7008\u2003Hyperthyroid heart disease:": {},
+  "Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation.": {},
+  "7010\u2003Supraventricular arrhythmias:": {
+   "Paroxysmal atrial fibrillation or other supraventricular tachycardia, with more than four episodes per year documented by ECG or Holter monitor": 30,
+   "Permanent atrial fibrillation (lone atrial fibrillation), or; one to four episodes per year of paroxysmal atrial fibrillation or other supraventricular tachycardia documented by ECG or Holter monitor": 10
+  },
+  "7011\u2003Ventricular arrhythmias (sustained):": {
+   "For indefinite period from date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia, or; for indefinite period from date of hospital admission for ventricular aneurysmectomy, or; with an automatic implantable Cardioverter-Defibrillator (AICD) in place": 100,
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7015\u2003Atrioventricular block:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication or a pacemaker required": 10
+  },
+  "7016\u2003Heart valve replacement (prosthesis):": {
+   "For indefinite period following date of hospital admission for valve replacement": 100
+  },
+  "Thereafter:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Minimum": 30
+  },
+  "7017\u2003Coronary bypass surgery:": {
+   "For three months following hospital admission for surgery": 100
+  },
+  "7018\u2003Implantable cardiac pacemakers:": {
+   "For two months following hospital admission for implantation or reimplantation": 100
+  },
+  "7019\u2003Cardiac transplantation:": {
+   "For an indefinite period from date of hospital admission for cardiac transplantation": 100
+  },
+  "7020\u2003Cardiomyopathy:": {
+   "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent": 100,
+   "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent": 60,
+   "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray": 30,
+   "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required": 10
+  },
+  "7101\u2003Hypertensive vascular disease (hypertension and isolated systolic hypertension):": {
+   "Diastolic pressure predominantly 130 or more": 60,
+   "Diastolic pressure predominantly 120 or more": 40,
+   "Diastolic pressure predominantly 110 or more, or; systolic pressure predominantly 200 or more": 20,
+   "Diastolic pressure predominantly 100 or more, or; systolic pressure predominantly 160 or more, or; minimum evaluation for an individual with a history of diastolic pressure predominantly 100 or more who requires continuous medication for control": 10
+  },
+  "7110\u2003Aortic aneurysm:": {
+   "If five centimeters or larger in diameter, or; if symptomatic, or; for indefinite period from date of hospital admission for surgical correction (including any type of graft insertion)": 100,
+   "Precluding exertion": 60
+  },
+  "Evaluate residuals of surgical correction according to organ systems affected.\n                  ": {},
+  "7111\u2003Aneurysm, any large artery:": {
+   "If symptomatic, or; for indefinite period from date of hospital admission for surgical correction": 100
+  },
+  "Following surgery:": {
+   "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less": 100,
+   "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; persistent coldness of the extremity, one or more deep ischemic ulcers, or ankle/brachial index of 0.5 or less": 60,
+   "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less": 40,
+   "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less": 20
+  },
+  "7112\u2003Aneurysm, any small artery:": {
+   "Asymptomatic": 0
+  },
+  "7113\u2003Arteriovenous fistula, traumatic:": {
+   "With high output heart failure": 100,
+   "Without heart failure but with enlarged heart, wide pulse pressure, and tachycardia": 60
+  },
+  "Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:": {
+   "Lower extremity": 50,
+   "Upper extremity": 40
+  },
+  "With edema or stasis dermatitis:": {
+   "Lower extremity": 30,
+   "Upper extremity": 20
+  },
+  "7114\u2003Arteriosclerosis obliterans:": {
+   "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less": 100,
+   "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less": 60,
+   "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less": 40,
+   "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less": 20
+  },
+  "7115\u2003Thrombo-angiitis obliterans (Buerger's Disease):": {
+   "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less": 100,
+   "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less": 60,
+   "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less": 40,
+   "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less": 20
+  },
+  "7117\u2003Raynaud's syndrome:": {
+   "With two or more digital ulcers plus autoamputation of one or more digits and history of characteristic attacks": 100,
+   "With two or more digital ulcers and history of characteristic attacks": 60,
+   "Characteristic attacks occurring at least daily": 40,
+   "Characteristic attacks occurring four to six times a week": 20,
+   "Characteristic attacks occurring one to three times a week": 10
+  },
+  "7118\u2003Angioneurotic edema:": {
+   "Attacks without laryngeal involvement lasting one to seven days or longer and occurring more than eight times a year, or; attacks with laryngeal involvement of any duration occurring more than twice a year": 40,
+   "Attacks without laryngeal involvement lasting one to seven days and occurring five to eight times a year, or; attacks with laryngeal involvement of any duration occurring once or twice a year": 20,
+   "Attacks without laryngeal involvement lasting one to seven days and occurring two to four times a year": 10
+  },
+  "7119\u2003Erythromelalgia:": {
+   "Characteristic attacks that occur more than once a day, last an average of more than two hours each, respond poorly to treatment, and that restrict most routine daily activities": 100,
+   "Characteristic attacks that occur more than once a day, last an average of more than two hours each, and respond poorly to treatment, but that do not restrict most routine daily activities": 60,
+   "Characteristic attacks that occur daily or more often but that respond to treatment": 30,
+   "Characteristic attacks that occur less than daily but at least three times a week and that respond to treatment": 10
+  },
+  "7120\u2003Varicose veins:": {
+   "With the following findings attributed to the effects of varicose veins: Massive board-like edema with constant pain at rest": 100,
+   "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration": 60,
+   "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration": 40,
+   "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema": 20,
+   "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery": 10,
+   "Asymptomatic palpable or visible varicose veins": 0
+  },
+  "7121\u2003Post-phlebitic syndrome of any etiology:": {},
+  "With the following findings attributed to venous disease:": {
+   "Massive board-like edema with constant pain at rest": 100,
+   "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration": 60,
+   "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration": 40,
+   "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema": 20,
+   "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery": 10,
+   "Asymptomatic palpable or visible varicose veins": 0
+  },
+  "7122\u2003Cold injury residuals:": {},
+  "With the following in affected parts:": {
+   "Arthralgia or other pain, numbness, or cold sensitivity plus two or more of the following: tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)": 30,
+   "Arthralgia or other pain, numbness, or cold sensitivity plus tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, or X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)": 20,
+   "Arthralgia or other pain, numbness, or cold sensitivity": 10,
+   "7123\u2003Soft tissue sarcoma (of vascular origin)": 100
+  }
+ }
+}
