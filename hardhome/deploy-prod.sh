@@ -11,6 +11,8 @@ VETAFI_CLIENT_SECRET="$(biscuit get --filename=conf/biscuit/secrets.yaml prod::i
 BOXFUSE_USER="$(biscuit get --filename=../config/biscuit/secrets.yaml boxfuse-user)"
 BOXFUSE_SECRET="$(biscuit get --filename=../config/biscuit/secrets.yaml boxfuse-secret)"
 
+NEWRELIC_LICENSE_KEY="$(biscuit get --filename=../config/biscuit/secrets.yaml newrelic-license-key)"
+
 sbt clean dist
 
 boxfuse run -env=prod \
@@ -20,4 +22,5 @@ boxfuse run -env=prod \
         -envvars.AUTHENTICATOR_COOKIE_SIGNER_KEY="${AUTHENTICATOR_COOKIE_SIGNER_KEY}" \
         -envvars.VETAFI_CLIENT_ID="${VETAFI_CLIENT_ID}" \
         -envvars.VETAFI_CLIENT_SECRET="${VETAFI_CLIENT_SECRET}" \
+        -newrelic.licensekey="${NEWRELIC_LICENSE_KEY}" \
         -jvm.args='-Dconfig.resource=application.prod.conf -Dlogger.resource=logback.prod.xml'
