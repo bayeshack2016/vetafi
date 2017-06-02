@@ -33,8 +33,7 @@ trait SeamplessDocsServiceTestContext extends Scope {
           new SeamlessDocsServiceImpl(
             client,
             app.injector.instanceOf[Configuration],
-            app.injector.instanceOf[SecretsManager],
-            app.injector.instanceOf[Environment]
+            app.injector.instanceOf[SecretsManager]
           )
         )
       }
