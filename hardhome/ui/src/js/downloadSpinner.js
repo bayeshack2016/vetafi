@@ -1,6 +1,6 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.service('downloadSpinner', ['$interval', '$cookies', function($interval, $cookies) {
+app.service('busySpinner', ['$interval', '$cookies', function($interval, $cookies) {
   var INTERVAL = 100;
   var COOKIE_NAME = 'fileDownloadToken';
   var SPINNER_ELEMENT_LOCATOR = '#busy-overlay';

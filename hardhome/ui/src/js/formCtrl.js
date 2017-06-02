@@ -4,9 +4,9 @@
 'use strict';
 var app = angular.module('vetafiApp');
 app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService',
-  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval', 'downloadSpinner', '$q',
+  '$stateParams', '$state', 'userValues', '$window', 'net', '$interval', 'busySpinner', '$q',
     function ($scope, $filter, $rootScope, formTemplateService,
-              $stateParams, $state, userValues, $window, net, $interval, downloadSpinner, $q) {
+              $stateParams, $state, userValues, $window, net, $interval, busySpinner, $q) {
       $scope.title = formTemplateService[$stateParams.formId].vfi.title;
       $scope.description = formTemplateService[$stateParams.formId].vfi.description;
       $scope.claimId = $stateParams.claimId;
@@ -16,19 +16,22 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
         var popup = $window.open("/loading", "_blank");
         save(false).then(
           function() {
-            downloadSpinner.showBusyUntilDownload();
+            busySpinner.showBusyUntilDownload();
             popup.location.href = "/pdf/" + $stateParams.claimId + "/" + $stateParams.formId;
           }
         );
       };
 
       $scope.onSubmit = function () {
+        busySpinner.showBusy();
         save(true).then(
           function () {
             $state.go('root.claimselect', {claimId: $stateParams.claimId}).then(
               function success() {
+                busySpinner.hideBusy();
               },
               function failure(err) {
+                busySpinner.hideBusy();
                 console.error(err);
               }
             );
@@ -36,8 +39,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       };
 
       $scope.onSave = function () {
-        downloadSpinner.showBusy();
-        save(true).then(downloadSpinner.hideBusy, downloadSpinner.hideBusy);
+        busySpinner.showBusy();
+        save(true).then(busySpinner.hideBusy, busySpinner.hideBusy);
       };
 
       $window.addEventListener("visibilitychange",

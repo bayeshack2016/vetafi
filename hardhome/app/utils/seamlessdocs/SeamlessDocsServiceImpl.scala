@@ -17,16 +17,15 @@ import scala.concurrent.Future
 class SeamlessDocsServiceImpl @Inject() (
   wsClient: WSClient,
   configuration: Configuration,
-  secretsManager: SecretsManager,
-  environment: Environment
+  secretsManager: SecretsManager
 ) extends SeamlessDocsService {
 
   val url: String = configuration.getString("seamlessdocs.url").get
   lazy val apiSecret: Array[Byte] = secretsManager.getSecret(
-    environment.mode.toString.toLowerCase() + "::seamlessdocs-secret-key"
+    configuration.getString("seamlessdocs.secretKeySecretName").get
   )
   lazy val apiKey: String = secretsManager.getSecretUtf8(
-    environment.mode.toString.toLowerCase() + "::seamlessdocs-api-key"
+    configuration.getString("seamlessdocs.apiKeySecretName").get
   )
 
   // lazy val apiSecret: Array[Byte] = configuration.getString("seamlessdocs.secret_key").get.getBytes
