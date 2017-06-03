@@ -1,39 +1,18 @@
 #!/usr/bin/env python3
 import argparse
 import json
+import logging
+import re
+
 import transitions
 
 from json import JSONEncoder
 from xml.dom import minidom
 from xml.etree import ElementTree
+from transitions import logger
 
+logger.setLevel(logging.INFO)
 
-class RatingTableStateMachine:
-    """
-    Defines a state machine for parsing the ratings table XML
-    """
-    states = ['category', 'rating', 'reference']
-
-    transitions = [
-        {'trigger': 'add_category', 'source': 'category', 'dest': 'category'},
-        {'trigger': 'add_category', 'source': 'reference', 'dest': 'category'},
-        {'trigger': 'add_category', 'source': 'rating', 'dest': 'category'},
-        {'trigger': 'add_reference', 'source': 'rating', 'dest': 'reference'},
-        {'trigger': 'add_reference', 'source': 'category', 'dest': 'reference'},
-        {'trigger': 'add_rating', 'source': 'category', 'dest': 'rating'},
-    ]
-
-    def __init__(self, name):
-        self.name = name
-
-        # Initialize the state machine
-        self.machine = transitions.Machine(model=self,
-                                           states=RatingTableStateMachine.states,
-                                           initial='category',
-                                           transitions=self.transitions)
-
-    def parse_row(self, row: ElementTree.Element):
-        pass
 
 
 
@@ -93,9 +72,6 @@ def save_xml(table_element: ElementTree.Element):
         of.write(pformat_element(table_element))
 
 
-def save_json(table_element: ElementTree.Element):
-    with open(get_table_key_name(table_element) + '.json', 'w') as of:
-        of.write(convert_table_to_json(table_element))
 
 
 def is_integer_0_100(s: str):
@@ -126,6 +102,16 @@ def get_rating(row_element: ElementTree.Element):
     return row_element.findall('ENT')[0].text, int(row_element.findall('ENT')[1].text)
 
 
+def describes_diagnostic_code(text):
+    re.match('^[0-9]{4}.*', text.strip())
+
+
+def is_diagnostic_code_row(row_element: ElementTree.Element):
+    entries = row_element.findall('ENT')
+    row_length = len(entries)
+    return row_length == 1 and describes_diagnostic_code(entries[0].text)
+
+
 def is_reference_row(row_element: ElementTree.Element):
     """
     Some rows reference a different rating table, saying something like:
@@ -140,6 +126,43 @@ def is_reference_row(row_element: ElementTree.Element):
     entries = row_element.findall('ENT')
     row_length = len(entries)
     return row_length == 1 and entries[0].text.lower().contains('or evaluate as')
+
+
+def is_note_row(row_element: ElementTree.Element):
+    """
+    Some rows are just an advisory note, for example:
+    
+    <ROW>
+        <ENT I="13">
+            <E T="02">Note 1:</E>
+            Natural menopause, primary amenorrhea, and pregnancy and childbirth are not disabilities for rating purposes. Chronic residuals of medical or surgical complications of pregnancy may be disabilities for rating purposes.
+        </ENT>
+    </ROW>
+                
+    This will return true if this is the case.
+    """
+    entries = row_element.findall('ENT')
+    row_length = len(entries)
+    if row_length == 1:
+        return entries[0].find('E') and entries[0].find('E').text.contains('Note:')
+    else:
+        return False
+
+
+def is_general_rating_note_row(row_element: ElementTree.Element):
+    """
+    This type of row explains that the ratings to follow are applicable to
+    the above listed diagnostic codes.
+    
+    For example:
+    
+    <ROW>
+        <ENT I="11">General Rating Formula for Disease, Injury, or Adhesions of Female Reproductive Organs (diagnostic codes 7610 through 7615):</ENT>
+    </ROW>
+    """
+    entries = row_element.findall('ENT')
+    row_length = len(entries)
+    return row_length == 1 and entries[0].text.startswith('General Rating Formula')
 
 
 class RatingTableEncoder(JSONEncoder):
@@ -189,6 +212,49 @@ class RatingCategory:
                 'ratings': [x.as_dict() for x in self.children]}
 
 
+class RatingTableStateMachine:
+    """
+    Defines a state machine for parsing the ratings table XML
+    """
+    states = ['category', 'diagnostic_code', 'rating', 'reference']
+
+    transitions = [
+        {'trigger': 'process_category', 'source': 'category', 'dest': 'category'},
+        {'trigger': 'process_category', 'source': 'reference', 'dest': 'category'},
+        {'trigger': 'process_category', 'source': 'rating', 'dest': 'category'},
+        {'trigger': 'process_reference', 'source': 'rating', 'dest': 'reference'},
+        {'trigger': 'process_reference', 'source': 'category', 'dest': 'reference'},
+        {'trigger': 'process_rating', 'source': 'category', 'dest': 'rating'},
+    ]
+
+    def __init__(self, name: str, initial: RatingCategory):
+        self.name = name
+        self.root = initial
+
+        # Initialize the state machine
+        self.machine = transitions.Machine(model=self,
+                                           states=RatingTableStateMachine.states,
+                                           initial='category',
+                                           transitions=self.transitions)
+
+
+    def parse_row(self, row: ElementTree.Element):
+        if is_category_row(row):
+            pass
+        elif is_diagnostic_code_row(row):
+            pass
+        elif is_reference_row(row):
+            pass
+        elif is_rating_row(row):
+            pass
+        elif is_note_row(row):
+            pass
+        elif is_general_rating_note_row(row):
+            pass
+        else:
+            raise ValueError('Unexpected row: {}'.format(pformat_element(row)))
+    
+
 def convert_table_to_json(table_element: ElementTree.Element):
     subject = table_element.find('.//SUBJECT').text
 
@@ -211,6 +277,11 @@ def convert_table_to_json(table_element: ElementTree.Element):
                 category_doc[subcategory] = rating
 
     return json.dumps(document, indent=True)
+
+
+def save_json(table_element: ElementTree.Element):
+    with open(get_table_key_name(table_element) + '.json', 'w') as of:
+        of.write(convert_table_to_json(table_element))
 
 
 def main():
