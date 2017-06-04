@@ -172,19 +172,20 @@ class RatingTableStateMachine:
         {'trigger': 'process_category', 'source': 'reference', 'dest': 'category', 'before': 'add_sibling_category'},
         {'trigger': 'process_category', 'source': 'rating', 'dest': 'category', 'before': 'add_sibling_category'},
         {'trigger': 'process_category', 'source': 'note', 'dest': 'category', 'before': 'add_sibling_category'},
+        {'trigger': 'process_category', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code_info'},
         {'trigger': 'process_reference', 'source': 'rating', 'dest': 'reference', 'before': 'add_reference'},
         {'trigger': 'process_reference', 'source': 'category', 'dest': 'reference', 'before': 'add_reference'},
-        {'trigger': 'process_rating', 'source': 'category', 'dest': 'rating', 'before': 'add_rating'},
         {'trigger': 'process_rating', 'source': 'rating', 'dest': 'rating', 'before': 'add_rating'},
         {'trigger': 'process_rating', 'source': 'diagnostic_code', 'dest': 'rating', 'before': 'add_rating'},
         {'trigger': 'process_rating', 'source': 'note', 'dest': 'rating', 'before': 'add_rating'},
-        {'trigger': 'process_diagnostic_code', 'source': 'note', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
-        {'trigger': 'process_diagnostic_code', 'source': 'category', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
+        {'trigger': 'process_diagnostic_code', 'source': 'note', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
+        {'trigger': 'process_diagnostic_code', 'source': 'see_other_note', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
+        {'trigger': 'process_diagnostic_code', 'source': 'category', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
         {'trigger': 'process_diagnostic_code', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
         {'trigger': 'process_note', 'source': 'category', 'dest': 'note', 'before': 'add_note'},
         {'trigger': 'process_note', 'source': 'rating', 'dest': 'note', 'before': 'add_note'},
         {'trigger': 'process_note', 'source': 'note', 'dest': 'note', 'before': 'add_note'},
-        {'trigger': 'process_see_other_note', 'source': 'category', 'dest': 'see_other_note', 'before': 'add_see_other_node'},
+        {'trigger': 'process_see_other_note', 'source': 'rating', 'dest': 'see_other_note', 'before': 'add_see_other_note'},
     ]
 
     def __init__(self, name: str, initial: models.RatingCategory):
@@ -192,6 +193,7 @@ class RatingTableStateMachine:
         self.current_category = initial
         self.last_row = None
         self.current_row = None
+        self.current_diagnostic_code_set = None
 
         # Initialize the state machine
         self.machine = transitions.Machine(model=self,
@@ -214,17 +216,26 @@ class RatingTableStateMachine:
     def add_reference(self, element):
         self.current_category.add_reference(models.RatingReference.from_element(element))
 
+    def add_first_diagnostic_code(self, element):
+        self.current_diagnostic_code_set = models.DiagnosticCodeSet()
+        self.current_category.add_diagnostic_code_set(self.current_diagnostic_code_set)
+        self.add_diagnostic_code(element)
+
     def add_diagnostic_code(self, element):
-        self.current_category.add_diagnostic_code(models.DiagnosticCode.from_element(element))
+        self.current_diagnostic_code_set.add_diagnostic_code(models.DiagnosticCode.from_element(element))
 
     def add_rating(self, element):
-        self.current_category.add_rating(models.Rating.from_element(element))
+        self.current_diagnostic_code_set.add_rating(models.Rating.from_element(element))
 
     def add_note(self, element):
         self.current_category.add_note(models.RatingNote.from_element(element))
 
     def add_see_other_note(self, element):
-        self.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
+        self.current_category.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
+
+    def add_diagnostic_code_info(self, element):
+        self.current_diagnostic_code_set.add_note(
+            models.RatingNote.from_element(element))
 
     def process_row(self, row: ElementTree.Element):
         self.last_row = self.current_row
@@ -232,7 +243,7 @@ class RatingTableStateMachine:
 
         try:
             self.process_row_unsafe(row)
-        except transitions.core.MachineError as e:
+        except Exception as e:
             util.pretty_print_element(self.last_row)
             util.pretty_print_element(self.current_row)
             raise e
@@ -264,6 +275,7 @@ def convert_table_to_json(table_element: ElementTree.Element):
     rows = gpo_table.findall('ROW')
 
     root = models.RatingCategory(subject)
+    root.parent = root
     machine = RatingTableStateMachine(subject, root)
 
     for row in rows:

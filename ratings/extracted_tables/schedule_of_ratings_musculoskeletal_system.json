@@ -1,0 +1,283 @@
+{
+ "category": "Schedule of ratings\u2014musculoskeletal system.",
+ "subcategories": [
+  {
+   "category": "For chronic residuals:",
+   "subcategories": [
+    {
+     "category": "For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion.",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          20
+         ],
+         "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups, with occasional incapacitating exacerbations"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups"
+        }
+       ],
+       "codes": [
+        {
+         "code": 5003
+        }
+       ],
+       "notes": [
+        {
+         "note": "Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:"
+        }
+       ]
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "5012\u2003Bones, new growths of, malignant"
+        }
+       ],
+       "codes": [
+        {
+         "code": 5004
+        },
+        {
+         "code": 5005
+        },
+        {
+         "code": 5006
+        },
+        {
+         "code": 5007
+        },
+        {
+         "code": 5008
+        },
+        {
+         "code": 5009
+        },
+        {
+         "code": 5010
+        },
+        {
+         "code": 5011
+        }
+       ],
+       "notes": [
+        {
+         "note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
+        }
+       ]
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          40
+         ],
+         "description": "That are constant, or nearly so, and refractory to therapy"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "That are episodic, with exacerbations often precipitated by environmental or emotional stress or by overexertion, but that are present more than one-third of the time"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "That require continuous medication for control"
+        }
+       ],
+       "codes": [
+        {
+         "code": 5013
+        },
+        {
+         "code": 5014
+        },
+        {
+         "code": 5015
+        },
+        {
+         "code": 5016
+        },
+        {
+         "code": 5017
+        },
+        {
+         "code": 5018
+        },
+        {
+         "code": 5019
+        },
+        {
+         "code": 5020
+        },
+        {
+         "code": 5021
+        },
+        {
+         "code": 5022
+        },
+        {
+         "code": 5023
+        },
+        {
+         "code": 5024
+        },
+        {
+         "code": 5025
+        }
+       ],
+       "notes": [
+        {
+         "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
+        },
+        {
+         "note": "With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:"
+        }
+       ]
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note:\n\n                    "
+      },
+      {
+       "note": "Note\n\n                    "
+      },
+      {
+       "note": "Note\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      },
+      {
+       "note": "Note: i.e.\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    }
+   ],
+   "diagnostic_code_sets": [],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  }
+ ],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Of the pelvis, vertebrae, or extending into major joints, or with multiple localization or with long history of intractability and debility, anemia, amyloid liver changes, or other continuous constitutional symptoms"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Frequent episodes, with constitutional symptoms"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "With definite involucrum or sequestrum, with or without discharging sinus"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With discharging sinus or other evidence of active infection within the past 5 years"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Inactive, following repeated episodes, without evidence of active infection in past 5 years"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5000
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Active"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5001
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With constitutional manifestations associated with active joint involvement, totally incapacitating"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Less than criteria for 100% but with weight loss and anemia productive of severe impairment of health or severely incapacitating exacerbations occurring 4 or more times a year or a lesser number over prolonged periods"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Symptom combinations productive of definite impairment of health objectively supported by examination findings or incapacitating exacerbations occurring 3 or more times a year"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "One or two exacerbations a year in a well-established diagnosis"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5002
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note\n\n                    "
+  },
+  {
+   "note": "Note\n\n                    "
+  }
+ ],
+ "see_other_notes": [
+  {
+   "see_other_note": "Inactive: See \u00a7\u00a7\u20094.88b and 4.89."
+  }
+ ]
+}
