@@ -1,5 +1,631 @@
 {
  "category": "Schedule of ratings\u2014infectious diseases, immune disorders and nutritional deficiencies.",
- "subcategories": [],
- "ratings": []
+ "subcategories": [
+  {
+   "category": "Thereafter rate residuals such as renal necrosis under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "During treatment for active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6301
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6302
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6304
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note:\n\n                    "
+    },
+    {
+     "note": "Note:\n\n                    "
+    },
+    {
+     "note": "Note:\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as liver or spleen damage under the appropriate system\n\n                  ",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6305
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as epididymitis or lymphangitis under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease, and for 3 months convalescence"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6306
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as skin lesions under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6307
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as lymphadenopathy under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6308
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as liver or spleen damage or central nervous system involvement under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6309
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as heart damage under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 6310
+      }
+     ],
+     "notes": [
+      {
+       "note": "Rate the complications of nervous system, vascular system, eyes or ears. (See DC 7004, syphilitic heart disease, DC 8013, cerebrospinal syphilis, DC 8014, meningovascular syphilis, DC 8015, tabes dorsalis, and DC 9301, dementia associated with central nervous system syphilis)"
+      }
+     ]
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6311
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Marked mental changes, moist dermatitis, inability to retain adequate nourishment, exhaustion, and cachexia"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "With all of the symptoms listed below, plus mental symptoms and impaired bodily vigor"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "With stomatitis, diarrhea, and symmetrical dermatitis"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "With stomatitis, or achlorhydria, or diarrhea"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Confirmed diagnosis with nonspecific symptoms such as: decreased appetite, weight loss, abdominal discomfort, weakness, inability to concentrate and irritability"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6313
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "With congestive heart failure, anasarca, or Wernicke-Korsakoff syndrome"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "With cardiomegaly, or; with peripheral neuropathy with footdrop or atrophy of thigh or calf muscles"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "With peripheral neuropathy with absent knee or ankle jerks and loss of sensation, or; with symptoms such as weakness, fatigue, anorexia, dizziness, heaviness and stiffness of legs, headache or sleep disturbance"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6314
+      }
+     ],
+     "notes": [
+      {
+       "note": "As active disease:"
+      }
+     ]
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "Inactive: See \u00a7\u00a7\u20094.88c and 4.89."
+    }
+   ]
+  },
+  {
+   "category": "Thereafter rate residuals under the appropriate body system.",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Marked mental changes, moist dermatitis, inability to retain adequate nourishment, exhaustion, and cachexia"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "With all of the symptoms listed below, plus mental symptoms and impaired bodily vigor"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "With stomatitis, diarrhea, and symmetrical dermatitis"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "With stomatitis, or achlorhydria, or diarrhea"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Confirmed diagnosis with nonspecific symptoms such as: decreased appetite, weight loss, abdominal discomfort, weakness, inability to concentrate and irritability"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6315
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6316
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as liver or spleen damage or meningitis under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease, and for 3 months convalescence"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6317
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as spleen damage or skin conditions under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6318
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as arthritis, lung lesions or meningitis under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6319
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as arthritis under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6320
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter rate residuals such as spleen or liver damage under the appropriate system",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Not to be combined with ratings under DC 7809 Acute, with frequent exacerbations, producing severe impairment of health"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Exacerbations lasting a week or more, 2 or 3 times per year"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Exacerbations once or twice a year or symptomatic during the past 2 years"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6350
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "AIDS with recurrent opportunistic infections or with secondary diseases afflicting multiple body systems; HIV-related illness with debility and progressive weight loss, without remission, or few or brief remissions"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Refractory constitutional symptoms, diarrhea, and pathological weight loss, or; minimum rating following development of AIDS-related opportunistic infection or neoplasm"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Recurrent constitutional symptoms, intermittent diarrhea, and on approved medication(s), or; minimum rating with T4 cell count less than 200, or Hairy Cell Leukoplakia, or Oral Candidiasis"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Following development of definite medical symptoms, T4 cell of 200 or more and less than 500, and on approved medication(s), or; with evidence of depression or memory loss with employment limitations"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Asymptomatic, following initial diagnosis of HIV infection, with or without lymphadenopathy or decreased T4 cell count"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6351
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Which are nearly constant and so severe as to restrict routine daily activities almost completely and which may occasionally preclude self-care"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Which are nearly constant and restrict routine daily activities to less than 50 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least six weeks total duration per year"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Which are nearly constant and restrict routine daily activities to 50 to 75 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least four but less than six weeks total duration per year"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Which are nearly constant and restrict routine daily activities by less than 25 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least two but less than four weeks total duration per year"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Which wax and wane but result in periods of incapacitation of at least one but less than two weeks total duration per year, or; symptoms controlled by continuous medication"
+      }
+     ],
+     "codes": [
+      {
+       "code": 6354
+      }
+     ],
+     "notes": [
+      {
+       "note": "Debilitating fatigue, cognitive impairments (such as inability to concentrate, forgetfulness, confusion), or a combination of other signs and symptoms:"
+      }
+     ]
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note:\n\n                    "
+    },
+    {
+     "note": "Note\n\n                    "
+    },
+    {
+     "note": "Note\n\n                    "
+    },
+    {
+     "note": "Note:\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  }
+ ],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "As active disease, and for 3 months convalescence"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6300
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [],
+ "see_other_notes": []
 }

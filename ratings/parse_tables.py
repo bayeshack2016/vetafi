@@ -77,6 +77,12 @@ def is_rating_row(row_element: ElementTree.Element):
     return row_length >= 2 and all([munging.is_integer_0_100(entry.text) for entry in entries[1:]])
 
 
+def is_diagnostic_and_rating_row(row_element: ElementTree.Element):
+    entries = [entry for entry in row_element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+    row_length = len(entries)
+    return row_length >= 2 and all([munging.is_integer_0_100(entry.text) for entry in entries[1:]]) and munging.describes_diagnostic_code(entries[0].text)
+
+
 def get_rating(row_element: ElementTree.Element):
     return row_element.findall('ENT')[0].text, int(row_element.findall('ENT')[1].text)
 
@@ -140,7 +146,10 @@ def is_see_other_row(row_element: ElementTree.Element):
     row_length = len(entries)
 
     for entry in entries:
-        if '§' in munging.extract_entry_text(entry) and 'see' in munging.extract_entry_text(entry).lower():
+        text = munging.extract_entry_text(entry)
+        if '§' in text and 'see' in text.lower():
+            return True
+        elif (' rate as' in text.lower() or 'rate the disability as' in text.lower()) and not 'rate as below' in text.lower():
             return True
     return False
 
@@ -178,18 +187,30 @@ class RatingTableStateMachine:
         {'trigger': 'process_rating', 'source': 'rating', 'dest': 'rating', 'before': 'add_rating'},
         {'trigger': 'process_rating', 'source': 'diagnostic_code', 'dest': 'rating', 'before': 'add_rating'},
         {'trigger': 'process_rating', 'source': 'note', 'dest': 'rating', 'before': 'add_rating'},
+        {'trigger': 'process_rating', 'source': 'category', 'dest': 'rating', 'before': 'add_rating_under_previous_category_diagnostic'},
+        {'trigger': 'process_combined_diagnostic_rating', 'source': 'category', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
+        {'trigger': 'process_combined_diagnostic_rating', 'source': 'rating', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
+        {'trigger': 'process_combined_diagnostic_rating', 'source': 'see_other_note', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
+        {'trigger': 'process_combined_diagnostic_rating', 'source': 'diagnostic_code', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
         {'trigger': 'process_diagnostic_code', 'source': 'note', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
+        {'trigger': 'process_diagnostic_code', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
         {'trigger': 'process_diagnostic_code', 'source': 'see_other_note', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
         {'trigger': 'process_diagnostic_code', 'source': 'category', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
         {'trigger': 'process_diagnostic_code', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
+        {'trigger': 'process_diagnostic_code', 'source': 'rating', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
         {'trigger': 'process_note', 'source': 'category', 'dest': 'note', 'before': 'add_note'},
         {'trigger': 'process_note', 'source': 'rating', 'dest': 'note', 'before': 'add_note'},
         {'trigger': 'process_note', 'source': 'note', 'dest': 'note', 'before': 'add_note'},
         {'trigger': 'process_see_other_note', 'source': 'rating', 'dest': 'see_other_note', 'before': 'add_see_other_note'},
+        {'trigger': 'process_see_other_note', 'source': 'diagnostic_code', 'dest': 'see_other_note', 'before': 'add_see_other_note'},
+        {'trigger': 'process_see_other_note', 'source': 'see_other_note', 'dest': 'see_other_note', 'before': 'add_see_other_note'},
+
+
     ]
 
     def __init__(self, name: str, initial: models.RatingCategory):
         self.name = name
+        self.last_category = None
         self.current_category = initial
         self.last_row = None
         self.current_row = None
@@ -205,12 +226,14 @@ class RatingTableStateMachine:
         desc = get_description(element)
         subcategory = models.RatingCategory(desc, parent=self.current_category)
         self.current_category.add_subcategory(subcategory)
+        self.last_category = self.current_category
         self.current_category = subcategory
 
     def add_sibling_category(self, element):
         desc = get_description(element)
         category = models.RatingCategory(desc, parent=self.current_category.parent)
         self.current_category.parent.add_subcategory(category)
+        self.last_category = self.current_category
         self.current_category = category
 
     def add_reference(self, element):
@@ -237,6 +260,20 @@ class RatingTableStateMachine:
         self.current_diagnostic_code_set.add_note(
             models.RatingNote.from_element(element))
 
+    def add_rating_under_previous_category_diagnostic(self, element):
+        last_diagnostic_code_set = self.last_category.diagnostic_code_sets[-1]
+        last_diagnostic_code_set.ratings = []
+        last_diagnostic_code_set.notes = []
+        self.current_diagnostic_code_set = last_diagnostic_code_set
+        self.current_category.add_diagnostic_code_set(self.current_diagnostic_code_set)
+        self.current_diagnostic_code_set.add_rating(models.Rating.from_element(element))
+
+    def add_combined_diagnostic_rating(self, element):
+        self.current_diagnostic_code_set = models.DiagnosticCodeSet()
+        self.current_category.add_diagnostic_code_set(self.current_diagnostic_code_set)
+        self.add_diagnostic_code(element)
+        self.add_rating(element)
+
     def process_row(self, row: ElementTree.Element):
         self.last_row = self.current_row
         self.current_row = row
@@ -244,23 +281,28 @@ class RatingTableStateMachine:
         try:
             self.process_row_unsafe(row)
         except Exception as e:
-            util.pretty_print_element(self.last_row)
+            if self.last_row is not None:
+                util.pretty_print_element(self.last_row)
+            else:
+                print("---FIRST ROW---")
             util.pretty_print_element(self.current_row)
             raise e
 
     def process_row_unsafe(self, row: ElementTree.Element):
-        if is_diagnostic_code_row(row):
+        if is_see_other_row(row):
+            self.process_see_other_note(row)
+        elif is_diagnostic_code_row(row):
             self.process_diagnostic_code(row)
         elif is_reference_row(row):
             self.process_reference(row)
+        elif is_diagnostic_and_rating_row(row):
+            self.process_combined_diagnostic_rating(row)
         elif is_rating_row(row):
             self.process_rating(row)
         elif is_note_row(row):
             self.process_note(row)
         elif is_general_rating_note_row(row):
             pass
-        elif is_see_other_row(row):
-            self.process_see_other_note(row)
         elif is_category_row(row):
             self.process_category(row)
         else:

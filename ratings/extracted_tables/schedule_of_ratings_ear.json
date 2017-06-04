@@ -1,5 +1,228 @@
 {
  "category": "Schedule of ratings\u2014ear.",
  "subcategories": [],
- "ratings": []
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "During suppuration, or with aural polyps"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6200
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 6201
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate hearing impairment"
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 6202
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate hearing impairment"
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Dizziness and occasional staggering"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Occasional dizziness"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6204
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Hearing impairment with attacks of vertigo and cerebellar gait occurring more than once weekly, with or without tinnitus"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Hearing impairment with attacks of vertigo and cerebellar gait occurring from one to four times a month, with or without tinnitus"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Hearing impairment with vertigo less than once a month, with or without tinnitus"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6205
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      50
+     ],
+     "description": "Complete loss of both"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Complete loss of one"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Deformity of one, with loss of one-third or more of the substance"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6207
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "6208\u2003Malignant neoplasm of the ear (other than skin only)"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6208
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 6209
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate on impairment of function."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Swelling, dry and scaly or serous discharge, and itching requiring frequent and prolonged treatment"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6210
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      0
+     ],
+     "description": "6211\u2003Tympanic membrane, perforation of"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6211
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "6260\u2003Tinnitus, recurrent"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6260
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note (1):\n\n                    "
+  },
+  {
+   "note": "Note (2):\n\n                    "
+  },
+  {
+   "note": "Note (3):\n\n                    "
+  }
+ ],
+ "see_other_notes": []
 }

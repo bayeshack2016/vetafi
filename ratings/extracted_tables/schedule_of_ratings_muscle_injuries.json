@@ -1,0 +1,237 @@
+{
+ "category": "Schedule of ratings\u2014muscle injuries.",
+ "subcategories": [],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      40,
+      30
+     ],
+     "description": "Severe"
+    },
+    {
+     "ratings": [
+      30,
+      20
+     ],
+     "description": "Moderately Severe"
+    },
+    {
+     "ratings": [
+      10,
+      10
+     ],
+     "description": "Moderate"
+    },
+    {
+     "ratings": [
+      0,
+      0
+     ],
+     "description": "Slight"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5301
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      40,
+      30
+     ],
+     "description": "Severe"
+    },
+    {
+     "ratings": [
+      30,
+      20
+     ],
+     "description": "Moderately Severe"
+    },
+    {
+     "ratings": [
+      20,
+      20
+     ],
+     "description": "Moderate"
+    },
+    {
+     "ratings": [
+      0,
+      0
+     ],
+     "description": "Slight"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5302
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      40,
+      30
+     ],
+     "description": "Severe"
+    },
+    {
+     "ratings": [
+      30,
+      20
+     ],
+     "description": "Moderately Severe"
+    },
+    {
+     "ratings": [
+      20,
+      20
+     ],
+     "description": "Moderate"
+    },
+    {
+     "ratings": [
+      0,
+      0
+     ],
+     "description": "Slight"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5303
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30,
+      20
+     ],
+     "description": "Severe"
+    },
+    {
+     "ratings": [
+      20,
+      20
+     ],
+     "description": "Moderately Severe"
+    },
+    {
+     "ratings": [
+      10,
+      10
+     ],
+     "description": "Moderate"
+    },
+    {
+     "ratings": [
+      0,
+      0
+     ],
+     "description": "Slight"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5304
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      40,
+      30
+     ],
+     "description": "Severe"
+    },
+    {
+     "ratings": [
+      30,
+      20
+     ],
+     "description": "Moderately Severe"
+    },
+    {
+     "ratings": [
+      10,
+      10
+     ],
+     "description": "Moderate"
+    },
+    {
+     "ratings": [
+      0,
+      0
+     ],
+     "description": "Slight"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5305
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      40,
+      30
+     ],
+     "description": "Severe"
+    },
+    {
+     "ratings": [
+      30,
+      20
+     ],
+     "description": "Moderately Severe"
+    },
+    {
+     "ratings": [
+      10,
+      10
+     ],
+     "description": "Moderate"
+    },
+    {
+     "ratings": [
+      0,
+      0
+     ],
+     "description": "Slight"
+    }
+   ],
+   "codes": [
+    {
+     "code": 5306
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [],
+ "see_other_notes": []
+}

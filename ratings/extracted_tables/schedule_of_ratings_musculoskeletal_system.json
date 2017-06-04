@@ -35,6 +35,60 @@
        ]
       },
       {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5004
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5005
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5006
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5007
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5008
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5009
+        }
+       ],
+       "notes": []
+      },
+      {
        "ratings": [
         {
          "ratings": [
@@ -45,33 +99,120 @@
        ],
        "codes": [
         {
-         "code": 5004
-        },
+         "code": 5012
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
         {
-         "code": 5005
-        },
+         "code": 5013
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
         {
-         "code": 5006
-        },
+         "code": 5014
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
         {
-         "code": 5007
-        },
+         "code": 5015
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
         {
-         "code": 5008
-        },
+         "code": 5016
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
         {
-         "code": 5009
-        },
+         "code": 5017
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
         {
-         "code": 5010
-        },
+         "code": 5018
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
         {
-         "code": 5011
+         "code": 5019
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5020
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5021
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5022
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5023
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 5024
         }
        ],
        "notes": [
         {
-         "note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
+         "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
         }
        ]
       },
@@ -98,49 +239,10 @@
        ],
        "codes": [
         {
-         "code": 5013
-        },
-        {
-         "code": 5014
-        },
-        {
-         "code": 5015
-        },
-        {
-         "code": 5016
-        },
-        {
-         "code": 5017
-        },
-        {
-         "code": 5018
-        },
-        {
-         "code": 5019
-        },
-        {
-         "code": 5020
-        },
-        {
-         "code": 5021
-        },
-        {
-         "code": 5022
-        },
-        {
-         "code": 5023
-        },
-        {
-         "code": 5024
-        },
-        {
          "code": 5025
         }
        ],
        "notes": [
-        {
-         "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
-        },
         {
          "note": "With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:"
         }
@@ -165,7 +267,17 @@
        "note": "Note: i.e.\n\n                    "
       }
      ],
-     "see_other_notes": []
+     "see_other_notes": [
+      {
+       "see_other_note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
+      },
+      {
+       "see_other_note": "5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative."
+      },
+      {
+       "see_other_note": "5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations."
+      }
+     ]
     }
    ],
    "diagnostic_code_sets": [],
