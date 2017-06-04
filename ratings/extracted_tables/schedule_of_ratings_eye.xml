@@ -308,24 +308,18 @@
 			</ENT>
 		</ROW>
 		<ROW EXPSTB="00">
-			<ENT I="01">
-				6061 Anatomical loss of both eyes 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="01">6061 Anatomical loss of both eyes 
+                  </ENT>
 			<ENT>100</ENT>
 		</ROW>
 		<ROW>
-			<ENT I="01">
-				6062 No more than light perception in both eyes 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="01">6062 No more than light perception in both eyes 
+                  </ENT>
 			<ENT>100</ENT>
 		</ROW>
 		<ROW>
-			<ENT I="22">
-				6063 Anatomical loss of one eye: 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="22">6063 Anatomical loss of one eye: 
+                  </ENT>
 		</ROW>
 		<ROW>
 			<ENT I="03">In the other eye 5/200 (1.5/60)</ENT>
@@ -360,10 +354,8 @@
 			<ENT>40</ENT>
 		</ROW>
 		<ROW>
-			<ENT I="22">
-				6064 No more than light perception in one eye: 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="22">6064 No more than light perception in one eye: 
+                  </ENT>
 		</ROW>
 		<ROW>
 			<ENT I="03">In the other eye 5/200 (1.5/60)</ENT>
@@ -404,9 +396,7 @@
 		<ROW>
 			<ENT I="03">In the other eye 5/200 (1.5/60)</ENT>
 			<ENT>
-				<SU>1</SU>
-				100
-			</ENT>
+                    100</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="03">In the other eye 10/200 (3/60)</ENT>
@@ -573,9 +563,7 @@
 			<ENT>0</ENT>
 		</ROW>
 		<TNOTE>
-			<SU>1</SU>
-			 Review for entitlement to special monthly compensation under 38 CFR 3.350.
-		</TNOTE>
+                   Review for entitlement to special monthly compensation under 38 CFR 3.350.</TNOTE>
 	</GPOTABLE>
 	<GPOTABLE CDEF="s200,8" COLS="2" OPTS="L2">
 		<TTITLE>Ratings for Impairment of Visual Fields</TTITLE>
@@ -651,10 +639,8 @@
 			<ENT I="22">Concentric contraction of visual field:</ENT>
 		</ROW>
 		<ROW>
-			<ENT I="03" O="xl">
-				With remaining field of 5 degrees: 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="03" O="xl">With remaining field of 5 degrees: 
+                  </ENT>
 		</ROW>
 		<ROW>
 			<ENT I="03">Bilateral</ENT>
@@ -734,9 +720,7 @@
 			<ENT I="03">Alternatively, evaluate based on visual impairment due to scotoma, if that would result in a higher evaluation</ENT>
 		</ROW>
 		<TNOTE>
-			<SU>1</SU>
-			 Review for entitlement to special monthly compensation under 38 CFR 3.350.
-		</TNOTE>
+                   Review for entitlement to special monthly compensation under 38 CFR 3.350.</TNOTE>
 	</GPOTABLE>
 	<GPOTABLE CDEF="s200,15" COLS="2" OPTS="L2">
 		<TTITLE>Ratings for Impairment of Muscle Function</TTITLE>

@@ -1,32 +1,5 @@
 {
- "Schedule of ratings\u2014ear.": {
-  "6200\u2003Chronic suppurative otitis media, mastoiditis, or cholesteatoma (or any combination):": {
-   "During suppuration, or with aural polyps": 10
-  },
-  "6201\u2003Chronic nonsuppurative otitis media with effusion (serous otitis media):": {},
-  "Rate hearing impairment": {},
-  "6202\u2003Otosclerosis:": {},
-  "6204\u2003Peripheral vestibular disorders:": {
-   "Dizziness and occasional staggering": 30,
-   "Occasional dizziness": 10
-  },
-  "6205\u2003Meniere's syndrome (endolymphatic hydrops):": {
-   "Hearing impairment with attacks of vertigo and cerebellar gait occurring more than once weekly, with or without tinnitus": 100,
-   "Hearing impairment with attacks of vertigo and cerebellar gait occurring from one to four times a month, with or without tinnitus": 60,
-   "Hearing impairment with vertigo less than once a month, with or without tinnitus": 30
-  },
-  "6207 Loss of auricle:": {
-   "Complete loss of both": 50,
-   "Complete loss of one": 30,
-   "Deformity of one, with loss of one-third or more of the substance": 10,
-   "6208\u2003Malignant neoplasm of the ear (other than skin only)": 100
-  },
-  "6209\u2003Benign neoplasms of the ear (other than skin only):": {},
-  "Rate on impairment of function.": {},
-  "6210\u2003Chronic otitis externa:": {
-   "Swelling, dry and scaly or serous discharge, and itching requiring frequent and prolonged treatment": 10,
-   "6211\u2003Tympanic membrane, perforation of": 0,
-   "6260\u2003Tinnitus, recurrent": 10
-  }
- }
+ "category": "Schedule of ratings\u2014ear.",
+ "subcategories": [],
+ "ratings": []
 }

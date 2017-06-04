@@ -10,11 +10,9 @@ from json import JSONEncoder
 from xml.dom import minidom
 from xml.etree import ElementTree
 from transitions import logger
+from io import StringIO
 
 logger.setLevel(logging.INFO)
-
-
-
 
 
 def get_args():
@@ -29,7 +27,7 @@ def pformat_element(element: ElementTree.Element):
 
 
 def pretty_print_element(element: ElementTree.Element):
-    print(pformat_element(element), end='')
+    print(pformat_element(element) + '\n', end='')
 
 
 def print_subject(element: ElementTree.Element):
@@ -49,8 +47,26 @@ def is_ratings_subject(element: ElementTree.Element):
                 not subject_element.text.startswith('Combined'))
 
 
+def repair_xml(filename):
+    """
+    These random <SU> elements appear in the CFR in a bunch of places.
+    
+    They seem to contain no information and break the structure of the XML,
+    so we are forced to cut them off at the source.
+    """
+    acceptable_lines = []
+    with open(filename) as f:
+        for line in f:
+            if '<SU>' in line:
+                acceptable_lines.append(
+                    line.replace('<SU>1</SU>', '').replace('<SU>2</SU>', '').replace('<SU>3</SU>', ''))
+            else:
+                acceptable_lines.append(line)
+    return StringIO('\n'.join(acceptable_lines))
+
+
 def parse_tables(filename: str):
-    root = ElementTree.parse(filename)
+    root = ElementTree.parse(repair_xml(filename))
     for element in root.findall(""".//GPOTABLE/.."""):
         if is_ratings_subject(element):
             yield element
@@ -72,6 +88,8 @@ def save_xml(table_element: ElementTree.Element):
         of.write(pformat_element(table_element))
 
 
+def extract_entry_text(row: ElementTree.Element):
+    return ' '.join([x.text for x in row.findall('E')]) + row.text if row.text is not None else ''
 
 
 def is_integer_0_100(s: str):
@@ -83,9 +101,9 @@ def is_integer_0_100(s: str):
 
 
 def is_category_row(row_element: ElementTree.Element):
-    entries = row_element.findall('ENT')
+    entries = [entry for entry in row_element.findall('ENT') if extract_entry_text(entry).strip()]
     row_length = len(entries)
-    return row_length == 1 and entries[0].find('E') is None
+    return row_length == 1
 
 
 def get_description(row_element: ElementTree.Element):
@@ -93,9 +111,9 @@ def get_description(row_element: ElementTree.Element):
 
 
 def is_rating_row(row_element: ElementTree.Element):
-    entries = row_element.findall('ENT')
+    entries = [entry for entry in row_element.findall('ENT') if extract_entry_text(entry).strip()]
     row_length = len(entries)
-    return row_length == 2 and is_integer_0_100(entries[1].text)
+    return row_length >= 2 and all([is_integer_0_100(entry.text) for entry in entries[1:]])
 
 
 def get_rating(row_element: ElementTree.Element):
@@ -103,7 +121,10 @@ def get_rating(row_element: ElementTree.Element):
 
 
 def describes_diagnostic_code(text):
-    re.match('^[0-9]{4}.*', text.strip())
+    if re.match('^[0-9]{4}.*', text.strip()):
+        return True
+    else:
+        return False
 
 
 def is_diagnostic_code_row(row_element: ElementTree.Element):
@@ -125,7 +146,7 @@ def is_reference_row(row_element: ElementTree.Element):
     """
     entries = row_element.findall('ENT')
     row_length = len(entries)
-    return row_length == 1 and entries[0].text.lower().contains('or evaluate as')
+    return row_length == 1 and 'or evaluate as' in entries[0].text.lower()
 
 
 def is_note_row(row_element: ElementTree.Element):
@@ -144,9 +165,30 @@ def is_note_row(row_element: ElementTree.Element):
     entries = row_element.findall('ENT')
     row_length = len(entries)
     if row_length == 1:
-        return entries[0].find('E') and entries[0].find('E').text.contains('Note:')
+        return entries[0].find('E') is not None and 'note' in entries[0].find('E').text.lower()
     else:
         return False
+
+
+def is_see_other_row(row_element: ElementTree.Element):
+    """
+    Some rows refer to another section of the CFR.
+    
+    For example:
+    
+    <ROW>
+        <ENT I="12">Inactive: See §§ 4.88b and 4.89.</ENT>
+    </ROW>
+
+    This will return true if this is the case.
+    """
+    entries = row_element.findall('ENT')
+    row_length = len(entries)
+
+    for entry in entries:
+        if '§' in extract_entry_text(entry) and 'see' in extract_entry_text(entry).lower():
+            return True
+    return False
 
 
 def is_general_rating_note_row(row_element: ElementTree.Element):
@@ -162,54 +204,141 @@ def is_general_rating_note_row(row_element: ElementTree.Element):
     """
     entries = row_element.findall('ENT')
     row_length = len(entries)
-    return row_length == 1 and entries[0].text.startswith('General Rating Formula')
+    return row_length == 1 and extract_entry_text(entries[0]).lower().strip().startswith('general rating formula')
 
 
 class RatingTableEncoder(JSONEncoder):
     def default(self, o):
-        if (isinstance(o, Rating) or
-                isinstance(o, RatingCategory) or
-                isinstance(o, RatingReference)):
+        if isinstance(o, RatingTableObject):
             return o.as_dict()
         else:
             return super().default(o)
 
 
-class Rating:
-    def __init__(self, description: str, rating: int):
-        self.rating = rating
+class RatingTableObject:
+    def as_dict(self):
+        raise NotImplementedError
+
+
+class Rating(RatingTableObject):
+    def __init__(self, description: str, ratings: list):
+        self.ratings = ratings
         self.description = description
 
+    @classmethod
+    def from_element(cls, element) -> 'Rating':
+        entries = [entry for entry in element.findall('ENT') if extract_entry_text(entry).strip()]
+        return Rating(entries[0].text, [int(entry.text) for entry in entries[1:]])
+
     def as_dict(self):
-        return {'rating': self.rating,
-                'description': self.rating}
+        return {'ratings': self.ratings,
+                'description': self.description}
+
+    def __str__(self) -> str:
+        return json.dumps(self.as_dict())
 
 
-class RatingReference:
+class DiagnosticCode(RatingTableObject):
+    def __init__(self, code: int):
+        self.code = code
+
+    @classmethod
+    def from_element(cls, element) -> 'DiagnosticCode':
+        entries = [entry for entry in element.findall('ENT') if extract_entry_text(entry).strip()]
+        code = re.findall('[0-9]{4}', entries[0].text)[0]
+        return DiagnosticCode(int(code))
+
+    def as_dict(self):
+        return {'code': self.code}
+
+
+class RatingReference(RatingTableObject):
     def __init__(self, description: str):
         self.description = description
 
+    @classmethod
+    def from_element(cls, element) -> 'RatingReference':
+        entries = [entry for entry in element.findall('ENT') if extract_entry_text(entry).strip()]
+        return RatingReference(entries[0].text)
+
     def as_dict(self):
         return {'reference': self.description}
+
+    def __str__(self) -> str:
+        return json.dumps(self.as_dict())
+
+
+class RatingNote(RatingTableObject):
+    def __init__(self, description: str):
+        self.description = description
+
+    @classmethod
+    def from_element(cls, element) -> 'RatingNote':
+        entries = [entry for entry in element.findall('ENT') if extract_entry_text(entry).strip()]
+        return RatingNote(extract_entry_text(entries[0]))
+
+    def as_dict(self):
+        return {'note': self.description}
+
+    def __str__(self) -> str:
+        return json.dumps(self.as_dict())
+
+
+class SeeOtherRatingNote(RatingTableObject):
+    def __init__(self, description: str):
+        self.description = description
+
+    @classmethod
+    def from_element(cls, element) -> 'SeeOtherRatingNote':
+        entries = [entry for entry in element.findall('ENT') if extract_entry_text(entry).strip()]
+        return SeeOtherRatingNote(extract_entry_text(entries[0]))
+
+    def as_dict(self):
+        return {'see_other_note': self.description}
+
+    def __str__(self) -> str:
+        return json.dumps(self.as_dict())
 
 
 class RatingCategory:
     def __init__(self, description: str, parent: 'RatingCategory' = None):
         self.description = description
-        self.children = []
+        self.ratings = []
         self.subcategories = []
+        self.references = []
+        self.diagnostic_codes = []
+        self.see_other_notes = []
+        self.notes = []
         self.parent = parent
 
     def add_rating(self, rating: Rating):
-        self.children.append(rating)
+        self.ratings.append(rating)
 
     def add_subcategory(self, subcategory: 'RatingCategory'):
-        self.children.append(subcategory)
+        self.subcategories.append(subcategory)
+
+    def add_reference(self, reference):
+        self.references.append(reference)
+
+    def add_diagnostic_code(self, diagnostic_code):
+        self.diagnostic_codes.append(diagnostic_code)
+
+    def add_note(self, note):
+        self.notes.append(note)
+
+    def add_see_other_note(self, see_other_note):
+        self.see_other_notes.append(note)
 
     def as_dict(self):
         return {'category': self.description,
                 'subcategories': [x.as_dict() for x in self.subcategories],
-                'ratings': [x.as_dict() for x in self.children]}
+                'ratings': [x.as_dict() for x in self.ratings],
+                'diagnostic_codes': [x.as_dict() for x in self.diagnostic_codes],
+                'references': [x.as_dict() for x in self.references],
+                }
+
+    def __str__(self) -> str:
+        return json.dumps(self.as_dict())
 
 
 class RatingTableStateMachine:
@@ -219,17 +348,23 @@ class RatingTableStateMachine:
     states = ['category', 'diagnostic_code', 'rating', 'reference']
 
     transitions = [
-        {'trigger': 'process_category', 'source': 'category', 'dest': 'category'},
-        {'trigger': 'process_category', 'source': 'reference', 'dest': 'category'},
-        {'trigger': 'process_category', 'source': 'rating', 'dest': 'category'},
-        {'trigger': 'process_reference', 'source': 'rating', 'dest': 'reference'},
-        {'trigger': 'process_reference', 'source': 'category', 'dest': 'reference'},
-        {'trigger': 'process_rating', 'source': 'category', 'dest': 'rating'},
+        {'trigger': 'process_category', 'source': 'category', 'dest': 'category', 'before': 'add_child_category'},
+        {'trigger': 'process_category', 'source': 'reference', 'dest': 'category', 'before': 'add_sibling_category'},
+        {'trigger': 'process_category', 'source': 'rating', 'dest': 'category', 'before': 'add_sibling_category'},
+        {'trigger': 'process_reference', 'source': 'rating', 'dest': 'reference', 'before': 'add_reference'},
+        {'trigger': 'process_reference', 'source': 'category', 'dest': 'reference', 'before': 'add_reference'},
+        {'trigger': 'process_rating', 'source': 'category', 'dest': 'rating', 'before': 'add_rating'},
+        {'trigger': 'process_rating', 'source': 'rating', 'dest': 'rating', 'before': 'add_rating'},
+        {'trigger': 'process_rating', 'source': 'diagnostic_code', 'dest': 'rating', 'before': 'add_rating'},
+        {'trigger': 'process_diagnostic_code', 'source': 'category', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
+        {'trigger': 'process_diagnostic_code', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
     ]
 
     def __init__(self, name: str, initial: RatingCategory):
         self.name = name
-        self.root = initial
+        self.current_category = initial
+        self.last_row = None
+        self.current_row = None
 
         # Initialize the state machine
         self.machine = transitions.Machine(model=self,
@@ -237,20 +372,53 @@ class RatingTableStateMachine:
                                            initial='category',
                                            transitions=self.transitions)
 
+    def add_child_category(self, element):
+        desc = get_description(element)
+        subcategory = RatingCategory(desc, parent=self.current_category)
+        self.current_category.add_subcategory(subcategory)
+        self.current_category = subcategory
 
-    def parse_row(self, row: ElementTree.Element):
-        if is_category_row(row):
-            pass
-        elif is_diagnostic_code_row(row):
-            pass
+    def add_sibling_category(self, element):
+        desc = get_description(element)
+        category = RatingCategory(desc, parent=self.current_category.parent)
+        self.current_category.parent.add_subcategory(category)
+        self.current_category = category
+
+    def add_reference(self, element):
+        self.current_category.add_reference(RatingReference.from_element(element))
+
+    def add_diagnostic_code(self, element):
+        self.current_category.add_diagnostic_code(DiagnosticCode.from_element(element))
+
+    def add_rating(self, element):
+        self.current_category.add_rating(Rating.from_element(element))
+
+    def process_row(self, row: ElementTree.Element):
+        self.last_row = self.current_row
+        self.current_row = row
+
+        try:
+            self.process_row_unsafe(row)
+        except transitions.core.MachineError as e:
+            pretty_print_element(self.last_row)
+            pretty_print_element(self.current_row)
+            raise e
+
+    def process_row_unsafe(self, row: ElementTree.Element):
+        if is_diagnostic_code_row(row):
+            self.process_diagnostic_code(row)
         elif is_reference_row(row):
-            pass
+            self.process_reference(row)
         elif is_rating_row(row):
-            pass
+            self.process_rating(row)
         elif is_note_row(row):
             pass
         elif is_general_rating_note_row(row):
             pass
+        elif is_see_other_row(row):
+            pass
+        elif is_category_row(row):
+            self.process_category(row)
         else:
             raise ValueError('Unexpected row: {}'.format(pformat_element(row)))
     
@@ -262,21 +430,13 @@ def convert_table_to_json(table_element: ElementTree.Element):
 
     rows = gpo_table.findall('ROW')
 
-    category = RatingCategory(subject)
+    root = RatingCategory(subject)
+    machine = RatingTableStateMachine(subject, root)
+
     for row in rows:
-        if is_category_row(row):
-            new_category = RatingCategory(get_description(row), parent=category)
+        machine.process_row(row)
 
-            document[subject][category] = category_doc
-        elif is_rating_row(row):
-            subcategory, rating = get_rating(row)
-
-            if category_doc is None:
-                document[subject][subcategory] = rating
-            else:
-                category_doc[subcategory] = rating
-
-    return json.dumps(document, indent=True)
+    return json.dumps(root, indent=True, cls=RatingTableEncoder)
 
 
 def save_json(table_element: ElementTree.Element):

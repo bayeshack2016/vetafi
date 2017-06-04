@@ -192,40 +192,30 @@
 			<ENT I="14">Or rate as voiding dysfunction.</ENT>
 		</ROW>
 		<ROW>
-			<ENT I="01">
-				7522 Penis, deformity, with loss of erectile power—20 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="01">7522 Penis, deformity, with loss of erectile power—20 
+                  </ENT>
 		</ROW>
 		<ROW>
 			<ENT I="01">7523 Testis, atrophy complete:</ENT>
 		</ROW>
 		<ROW>
-			<ENT I="14">
-				Both—20 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="14">Both—20 
+                  </ENT>
 		</ROW>
 		<ROW>
-			<ENT I="14">
-				One—0 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="14">One—0 
+                  </ENT>
 		</ROW>
 		<ROW>
 			<ENT I="01">7524 Testis, removal:</ENT>
 		</ROW>
 		<ROW>
-			<ENT I="14">
-				Both—30 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="14">Both—30 
+                  </ENT>
 		</ROW>
 		<ROW>
-			<ENT I="14">
-				One—0 
-				<SU>1</SU>
-			</ENT>
+			<ENT I="14">One—0 
+                  </ENT>
 		</ROW>
 		<ROW>
 			<ENT I="14">
@@ -359,9 +349,7 @@
 			<ENT I="14">Rate as voiding dysfunction.</ENT>
 		</ROW>
 		<TNOTE>
-			<SU>1</SU>
-			 Review for entitlement to special monthly compensation under § 3.350 of this chapter.
-		</TNOTE>
+                   Review for entitlement to special monthly compensation under § 3.350 of this chapter.</TNOTE>
 	</GPOTABLE>
 	<CITA>[59 FR 2527, Jan. 18, 1994; 59 FR 14567, Mar. 29, 1994, as amended at 59 FR 46339, Sept. 8, 1994]</CITA>
 </SECTION>

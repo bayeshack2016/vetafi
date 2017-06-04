@@ -102,9 +102,7 @@
 		<ROW>
 			<ENT I="01">6518 Laryngectomy, total.</ENT>
 			<ENT>
-				<SU>1</SU>
-				 100
-			</ENT>
+                     100</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="13">Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520).</ENT>
@@ -115,9 +113,7 @@
 		<ROW>
 			<ENT I="03">Constant inability to communicate by speech</ENT>
 			<ENT>
-				<SU>1</SU>
-				 100
-			</ENT>
+                     100</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="03">Constant inability to speak above a whisper</ENT>
@@ -718,9 +714,7 @@
 			<ENT>0</ENT>
 		</ROW>
 		<TNOTE>
-			<SU>1</SU>
-			 Review for entitlement to special monthly compensation under § 3.350 of this chapter.
-		</TNOTE>
+                   Review for entitlement to special monthly compensation under § 3.350 of this chapter.</TNOTE>
 	</GPOTABLE>
 	<CITA>[61 FR 46728, Sept. 5, 1996, as amended at 71 FR 28586, May 17, 2006]</CITA>
 </SECTION>

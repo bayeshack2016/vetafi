@@ -58,16 +58,12 @@
 		<ROW>
 			<ENT I="03">For three months after removal</ENT>
 			<ENT>
-				<SU>1</SU>
-				 100
-			</ENT>
+                     100</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="03">Thereafter</ENT>
 			<ENT>
-				<SU>1</SU>
-				 50
-			</ENT>
+                     50</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="11">7618 Uterus, removal of, including corpus:</ENT>
@@ -75,16 +71,12 @@
 		<ROW>
 			<ENT I="03">For three months after removal</ENT>
 			<ENT>
-				<SU>1</SU>
-				 100
-			</ENT>
+                     100</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="03">Thereafter</ENT>
 			<ENT>
-				<SU>1</SU>
-				 30
-			</ENT>
+                     30</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="11">7619 Ovary, removal of:</ENT>
@@ -92,9 +84,7 @@
 		<ROW>
 			<ENT I="03">For three months after removal</ENT>
 			<ENT>
-				<SU>1</SU>
-				 100
-			</ENT>
+                     100</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="13">Thereafter:</ENT>
@@ -102,23 +92,17 @@
 		<ROW>
 			<ENT I="05">Complete removal of both ovaries</ENT>
 			<ENT>
-				<SU>1</SU>
-				 30
-			</ENT>
+                     30</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="05">Removal of one with or without partial removal of the other</ENT>
 			<ENT>
-				<SU>1</SU>
-				 0
-			</ENT>
+                     0</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="01">7620 Ovaries, atrophy of both, complete</ENT>
 			<ENT>
-				<SU>1</SU>
-				 20
-			</ENT>
+                     20</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="11">7621 Uterus, prolapse:</ENT>
@@ -205,16 +189,12 @@
 		<ROW>
 			<ENT I="05">Both</ENT>
 			<ENT>
-				<SU>1</SU>
-				80
-			</ENT>
+                    80</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="05">One</ENT>
 			<ENT>
-				<SU>1</SU>
-				50
-			</ENT>
+                    50</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="13">Following modified radical mastectomy:</ENT>
@@ -222,16 +202,12 @@
 		<ROW>
 			<ENT I="05">Both</ENT>
 			<ENT>
-				<SU>1</SU>
-				60
-			</ENT>
+                    60</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="05">One</ENT>
 			<ENT>
-				<SU>1</SU>
-				40
-			</ENT>
+                    40</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="13">Following simple mastectomy or wide local excision with significant alteration of size or form:</ENT>
@@ -239,16 +215,12 @@
 		<ROW>
 			<ENT I="05">Both</ENT>
 			<ENT>
-				<SU>1</SU>
-				50
-			</ENT>
+                    50</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="05">One</ENT>
 			<ENT>
-				<SU>1</SU>
-				30
-			</ENT>
+                    30</ENT>
 		</ROW>
 		<ROW>
 			<ENT I="13">Following wide local excision without significant alteration of size or form:</ENT>
@@ -326,9 +298,7 @@
 			</ENT>
 		</ROW>
 		<TNOTE>
-			<SU>1</SU>
-			 Review for entitlement to special monthly compensation under § 3.350 of this chapter.
-		</TNOTE>
+                   Review for entitlement to special monthly compensation under § 3.350 of this chapter.</TNOTE>
 	</GPOTABLE>
 	<CITA>[60 FR 19855, Apr. 21, 1995, as amended at 67 FR 6874, Feb. 14, 2002; 67 FR 37695, May 30, 2002]</CITA>
 </SECTION>
