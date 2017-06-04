@@ -4,7 +4,6 @@ import json
 import logging
 
 from xml.etree import ElementTree
-from transitions import logger
 
 import transitions
 
@@ -12,8 +11,16 @@ import munging
 import models
 import util
 
-logger.setLevel(logging.INFO)
+logger = logging.getLogger(__file__)
+logger.setLevel(logging.DEBUG)
+ch = logging.StreamHandler()
+ch.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+ch.setFormatter(formatter)
+logger.addHandler(ch)
 
+transitions.logger.setLevel(logging.INFO)
+transitions.logger.addHandler(ch)
 
 def get_args():
     parser = argparse.ArgumentParser('Parse all tables that show percent disability rating for particular conditions')
@@ -47,6 +54,7 @@ def parse_tables(filename: str):
 
 def parse_files(filenames: list):
     for filename in filenames:
+        logger.info('Processing filename: {}'.format(filename))
         for rating_table in parse_tables(filename):
             yield rating_table
 
@@ -177,35 +185,65 @@ class RatingTableStateMachine:
     states = ['category', 'diagnostic_code', 'rating', 'reference', 'note', 'see_other_note']
 
     transitions = [
-        {'trigger': 'process_category', 'source': 'category', 'dest': 'category', 'before': 'add_child_category'},
-        {'trigger': 'process_category', 'source': 'reference', 'dest': 'category', 'before': 'add_sibling_category'},
-        {'trigger': 'process_category', 'source': 'rating', 'dest': 'category', 'before': 'add_sibling_category'},
-        {'trigger': 'process_category', 'source': 'note', 'dest': 'category', 'before': 'add_sibling_category'},
-        {'trigger': 'process_category', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code_info'},
-        {'trigger': 'process_reference', 'source': 'rating', 'dest': 'reference', 'before': 'add_reference'},
-        {'trigger': 'process_reference', 'source': 'category', 'dest': 'reference', 'before': 'add_reference'},
-        {'trigger': 'process_rating', 'source': 'rating', 'dest': 'rating', 'before': 'add_rating'},
-        {'trigger': 'process_rating', 'source': 'diagnostic_code', 'dest': 'rating', 'before': 'add_rating'},
-        {'trigger': 'process_rating', 'source': 'note', 'dest': 'rating', 'before': 'add_rating'},
-        {'trigger': 'process_rating', 'source': 'category', 'dest': 'rating', 'before': 'add_rating_under_previous_category_diagnostic'},
-        {'trigger': 'process_combined_diagnostic_rating', 'source': 'category', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
-        {'trigger': 'process_combined_diagnostic_rating', 'source': 'rating', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
-        {'trigger': 'process_combined_diagnostic_rating', 'source': 'see_other_note', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
-        {'trigger': 'process_combined_diagnostic_rating', 'source': 'diagnostic_code', 'dest': 'rating', 'before': 'add_combined_diagnostic_rating'},
-        {'trigger': 'process_diagnostic_code', 'source': 'note', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
-        {'trigger': 'process_diagnostic_code', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
-        {'trigger': 'process_diagnostic_code', 'source': 'see_other_note', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
-        {'trigger': 'process_diagnostic_code', 'source': 'category', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
-        {'trigger': 'process_diagnostic_code', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
-        {'trigger': 'process_diagnostic_code', 'source': 'rating', 'dest': 'diagnostic_code', 'before': 'add_first_diagnostic_code'},
-        {'trigger': 'process_note', 'source': 'category', 'dest': 'note', 'before': 'add_note'},
-        {'trigger': 'process_note', 'source': 'rating', 'dest': 'note', 'before': 'add_note'},
-        {'trigger': 'process_note', 'source': 'note', 'dest': 'note', 'before': 'add_note'},
-        {'trigger': 'process_see_other_note', 'source': 'rating', 'dest': 'see_other_note', 'before': 'add_see_other_note'},
-        {'trigger': 'process_see_other_note', 'source': 'diagnostic_code', 'dest': 'see_other_note', 'before': 'add_see_other_note'},
-        {'trigger': 'process_see_other_note', 'source': 'see_other_note', 'dest': 'see_other_note', 'before': 'add_see_other_note'},
+        {'trigger': 'process_category',
+         'source': 'category',
+         'dest': 'category',
+         'before': 'add_child_category'},
 
+        {'trigger': 'process_category',
+         'source': ['reference', 'rating', 'note'],
+         'dest': 'category',
+         'before': 'add_sibling_category'},
 
+        {'trigger': 'process_category',
+         'source': 'diagnostic_code',
+         'dest': 'diagnostic_code',
+         'before': 'add_diagnostic_code_info'},
+
+        {'trigger': 'process_reference',
+         'source': ['rating', 'category'],
+         'dest': 'reference',
+         'before': 'add_reference'},
+
+        {'trigger': 'process_rating',
+         'source': ['rating', 'diagnostic_code', 'note'],
+         'dest': 'rating',
+         'before': 'add_rating'},
+
+        {'trigger': 'process_rating',
+         'source': 'category',
+         'dest': 'rating',
+         'before': 'add_rating_under_previous_category_diagnostic'},
+
+        {'trigger': 'process_combined_diagnostic_rating',
+         'source': ['category', 'rating', 'see_other_note', 'diagnostic_code'],
+         'dest': 'rating',
+         'before': 'add_combined_diagnostic_rating'},
+
+        {'trigger': 'process_diagnostic_code',
+         'source': ['note', 'diagnostic_code', 'see_other_note', 'category'],
+         'dest': 'diagnostic_code',
+         'before': 'add_first_diagnostic_code'},
+
+        {'trigger': 'process_diagnostic_code',
+         'source': 'diagnostic_code',
+         'dest': 'diagnostic_code',
+         'before': 'add_diagnostic_code'},
+        
+        {'trigger': 'process_diagnostic_code',
+         'source': 'rating',
+         'dest': 'diagnostic_code',
+         'before': 'add_first_diagnostic_code'},
+
+        {'trigger': 'process_note',
+         'source': ['category', 'rating', 'note'],
+         'dest': 'note',
+         'before': 'add_note'},
+
+        {'trigger': 'process_see_other_note',
+         'source': ['rating', 'diagnostic_code', 'see_other_note'],
+         'dest': 'see_other_note',
+         'before': 'add_see_other_note'},
     ]
 
     def __init__(self, name: str, initial: models.RatingCategory):
@@ -282,10 +320,10 @@ class RatingTableStateMachine:
             self.process_row_unsafe(row)
         except Exception as e:
             if self.last_row is not None:
-                util.pretty_print_element(self.last_row)
+                logger.info(util.pformat_element(self.last_row))
             else:
-                print("---FIRST ROW---")
-            util.pretty_print_element(self.current_row)
+                logger.info("---FIRST ROW---")
+            logger.info(util.pformat_element(self.current_row))
             raise e
 
     def process_row_unsafe(self, row: ElementTree.Element):
@@ -327,8 +365,14 @@ def convert_table_to_json(table_element: ElementTree.Element):
 
 
 def save_json(table_element: ElementTree.Element):
-    with open(get_table_key_name(table_element) + '.json', 'w') as of:
-        of.write(convert_table_to_json(table_element))
+    logger.info('Converting {} table to json'.format(get_table_key_name(table_element)))
+
+    try:
+        table_as_json = convert_table_to_json(table_element)
+        with open(get_table_key_name(table_element) + '.json', 'w') as of:
+            of.write(table_as_json)
+    except:
+        logger.exception('Failed to parse table {}'.format(get_table_key_name(table_element)))
 
 
 def main():
