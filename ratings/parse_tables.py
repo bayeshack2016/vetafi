@@ -327,7 +327,7 @@ class RatingCategory:
         self.notes.append(note)
 
     def add_see_other_note(self, see_other_note):
-        self.see_other_notes.append(note)
+        self.see_other_notes.append(see_other_note)
 
     def as_dict(self):
         return {'category': self.description,
@@ -335,6 +335,8 @@ class RatingCategory:
                 'ratings': [x.as_dict() for x in self.ratings],
                 'diagnostic_codes': [x.as_dict() for x in self.diagnostic_codes],
                 'references': [x.as_dict() for x in self.references],
+                'notes': [x.as_dict() for x in self.notes],
+                'see_other_notes': [x.as_dict() for x in self.see_other_notes],
                 }
 
     def __str__(self) -> str:
@@ -345,19 +347,25 @@ class RatingTableStateMachine:
     """
     Defines a state machine for parsing the ratings table XML
     """
-    states = ['category', 'diagnostic_code', 'rating', 'reference']
+    states = ['category', 'diagnostic_code', 'rating', 'reference', 'note']
 
     transitions = [
         {'trigger': 'process_category', 'source': 'category', 'dest': 'category', 'before': 'add_child_category'},
         {'trigger': 'process_category', 'source': 'reference', 'dest': 'category', 'before': 'add_sibling_category'},
         {'trigger': 'process_category', 'source': 'rating', 'dest': 'category', 'before': 'add_sibling_category'},
+        {'trigger': 'process_category', 'source': 'note', 'dest': 'category', 'before': 'add_sibling_category'},
         {'trigger': 'process_reference', 'source': 'rating', 'dest': 'reference', 'before': 'add_reference'},
         {'trigger': 'process_reference', 'source': 'category', 'dest': 'reference', 'before': 'add_reference'},
         {'trigger': 'process_rating', 'source': 'category', 'dest': 'rating', 'before': 'add_rating'},
         {'trigger': 'process_rating', 'source': 'rating', 'dest': 'rating', 'before': 'add_rating'},
         {'trigger': 'process_rating', 'source': 'diagnostic_code', 'dest': 'rating', 'before': 'add_rating'},
+        {'trigger': 'process_rating', 'source': 'note', 'dest': 'rating', 'before': 'add_rating'},
+        {'trigger': 'process_diagnostic_code', 'source': 'note', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
         {'trigger': 'process_diagnostic_code', 'source': 'category', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
         {'trigger': 'process_diagnostic_code', 'source': 'diagnostic_code', 'dest': 'diagnostic_code', 'before': 'add_diagnostic_code'},
+        {'trigger': 'process_note', 'source': 'category', 'dest': 'note', 'before': 'add_note'},
+        {'trigger': 'process_note', 'source': 'rating', 'dest': 'note', 'before': 'add_note'},
+        {'trigger': 'process_note', 'source': 'note', 'dest': 'note', 'before': 'add_note'},
     ]
 
     def __init__(self, name: str, initial: RatingCategory):
@@ -393,6 +401,9 @@ class RatingTableStateMachine:
     def add_rating(self, element):
         self.current_category.add_rating(Rating.from_element(element))
 
+    def add_note(self, element):
+        self.current_category.add_note(RatingNote.from_element(element))
+
     def process_row(self, row: ElementTree.Element):
         self.last_row = self.current_row
         self.current_row = row
@@ -412,7 +423,7 @@ class RatingTableStateMachine:
         elif is_rating_row(row):
             self.process_rating(row)
         elif is_note_row(row):
-            pass
+            self.process_note(row)
         elif is_general_rating_note_row(row):
             pass
         elif is_see_other_row(row):
