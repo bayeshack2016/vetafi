@@ -1,0 +1,534 @@
+{
+ "category": "Schedule of ratings\u2014gynecological conditions and disorders of the breast.",
+ "subcategories": [
+  {
+   "category": "Thereafter:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Complete removal of both ovaries"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Removal of one with or without partial removal of the other"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7619
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        20
+       ],
+       "description": "7620\u2003Ovaries, atrophy of both, complete"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7620
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        50
+       ],
+       "description": "Complete, through vagina and introitus"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Incomplete"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7621
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "With marked displacement and frequent or continuous menstrual disturbances"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "With adhesions and irregular menstruation"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7622
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        50
+       ],
+       "description": "With rectocele or cystocele"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "With relaxation of perineum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7623
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Vaginal fecal leakage at least once a day requiring wearing of pad"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Vaginal fecal leakage four or more times per week, but less than daily, requiring wearing of pad"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Vaginal fecal leakage one to three times per week requiring wearing of pad"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Vaginal fecal leakage less than once a week"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Without leakage"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7624
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Multiple urethrovaginal fistulae"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Requiring the use of an appliance or the wearing of absorbent materials which must be changed more than four times per day"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Requiring the wearing of absorbent materials which must be changed two to four times per day"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Requiring the wearing of absorbent materials which must be changed less than two times per day"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7625
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Both or one"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7626
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Following modified radical mastectomy:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Both or one"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7626
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Following simple mastectomy or wide local excision with significant alteration of size or form:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Both or one"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7626
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Following wide local excision without significant alteration of size or form:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Both or one"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7626
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note:\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "category": "(1) ",
+   "subcategories": [
+    {
+     "category": "(2) ",
+     "subcategories": [
+      {
+       "category": "(3) ",
+       "subcategories": [
+        {
+         "category": "(4) ",
+         "subcategories": [],
+         "diagnostic_code_sets": [
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "7627\u2003Malignant neoplasms of gynecological system or breast"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7627
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7628
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              50
+             ],
+             "description": "Lesions involving bowel or bladder confirmed by laparoscopy, pelvic pain or heavy or irregular bleeding not controlled by treatment, and bowel or bladder symptoms"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Pelvic pain or heavy or irregular bleeding not controlled by treatment"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Pelvic pain or heavy or irregular bleeding requiring continuous treatment for control"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7629
+            }
+           ],
+           "notes": []
+          }
+         ],
+         "references": [],
+         "notes": [
+          {
+           "note": "Note:\n\n                    "
+          },
+          {
+           "note": "Note:\n\n                    "
+          }
+         ],
+         "see_other_notes": []
+        }
+       ],
+       "diagnostic_code_sets": [],
+       "references": [],
+       "notes": [],
+       "see_other_notes": []
+      }
+     ],
+     "diagnostic_code_sets": [],
+     "references": [],
+     "notes": [],
+     "see_other_notes": []
+    }
+   ],
+   "diagnostic_code_sets": [],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  }
+ ],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7610
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7611
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7612
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7613
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7614
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Symptoms not controlled by continuous treatment"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Symptoms that require continuous treatment"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Symptoms that do not require continuous treatment"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7615
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For three months after removal"
+    },
+    {
+     "ratings": [
+      50
+     ],
+     "description": "Thereafter"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7617
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For three months after removal"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Thereafter"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7618
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Complete removal of both ovaries"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Removal of one with or without partial removal of the other"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7619
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note 1:\n\n                    "
+  },
+  {
+   "note": "Note 2:\n\n                    "
+  }
+ ],
+ "see_other_notes": []
+}

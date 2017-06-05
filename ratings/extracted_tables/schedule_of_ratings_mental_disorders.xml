@@ -1,0 +1,123 @@
+<?xml version="1.0" ?>
+<SECTION>
+	<SECTNO>§ 4.130</SECTNO>
+	<SUBJECT>Schedule of ratings—Mental disorders.</SUBJECT>
+	<P>The nomenclature employed in this portion of the rating schedule is based upon the American Psychiatric Association's Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition (DSM-5) (see § 4.125 for availability information). Rating agencies must be thoroughly familiar with this manual to properly implement the directives in § 4.125 through § 4.129 and to apply the general rating formula for mental disorders in § 4.130. The schedule for rating for mental disorders is set forth as follows:
+              </P>
+	<EXTRACT>
+		<FP SOURCE="FP-2">9201 Schizophrenia</FP>
+		<FP SOURCE="FP-2">9202 [Removed]</FP>
+		<FP SOURCE="FP-2">9203 [Removed]</FP>
+		<FP SOURCE="FP-2">9204 [Removed]</FP>
+		<FP SOURCE="FP-2">9205 [Removed]</FP>
+		<FP SOURCE="FP-2">9208 Delusional disorder</FP>
+		<FP SOURCE="FP-2">9210 Other specified and unspecified schizophrenia spectrum and other psychotic disorders</FP>
+		<FP SOURCE="FP-2">9211 Schizoaffective disorder</FP>
+		<FP SOURCE="FP-2">9300 Delirium</FP>
+		<FP SOURCE="FP-2">9301 Major or mild neurocognitive disorder due to HIV or other infections</FP>
+		<FP SOURCE="FP-2">9304 Major or mild neurocognitive disorder due to traumatic brain injury</FP>
+		<FP SOURCE="FP-2">9305 Major or mild vascular neurocognitive disorder</FP>
+		<FP SOURCE="FP-2">9310 Unspecified neurocognitive disorder</FP>
+		<FP SOURCE="FP-2">9312 Major or mild neurocognitive disorder due to Alzheimer's disease</FP>
+		<FP SOURCE="FP-2">9326 Major or mild neurocognitive disorder due to another medical condition or substance/medication-induced major or mild neurocognitive disorder</FP>
+		<FP SOURCE="FP-2">9327 [Removed]</FP>
+		<FP SOURCE="FP-2">9400 Generalized anxiety disorder</FP>
+		<FP SOURCE="FP-2">9403 Specific phobia; social anxiety disorder (social phobia)</FP>
+		<FP SOURCE="FP-2">9404 Obsessive compulsive disorder</FP>
+		<FP SOURCE="FP-2">9410 Other specified anxiety disorder</FP>
+		<FP SOURCE="FP-2">9411 Posttraumatic stress disorder</FP>
+		<FP SOURCE="FP-2">9412 Panic disorder and/or agoraphobia</FP>
+		<FP SOURCE="FP-2">9413 Unspecified anxiety disorder</FP>
+		<FP SOURCE="FP-2">9416 Dissociative amnesia; dissociative identity disorder</FP>
+		<FP SOURCE="FP-2">9417 Depersonalization/Derealization disorder</FP>
+		<FP SOURCE="FP-2">9421 Somatic symptom disorder</FP>
+		<FP SOURCE="FP-2">9422 Other specified somatic symptom and related disorder</FP>
+		<FP SOURCE="FP-2">
+			9423 Unspecified somatic symptom and related disorder
+			<PRTPAGE P="476"/>
+		</FP>
+		<FP SOURCE="FP-2">9424 Conversion disorder (functional neurological symptom disorder)</FP>
+		<FP SOURCE="FP-2">9425 Illness anxiety disorder</FP>
+		<FP SOURCE="FP-2">9431 Cyclothymic disorder</FP>
+	</EXTRACT>
+	<EXTRACT>
+		<FP SOURCE="FP-2">9432 Bipolar disorder</FP>
+		<FP SOURCE="FP-2">9433 Persistent depressive disorder (dysthymia)</FP>
+		<FP SOURCE="FP-2">9434 Major depressive disorder</FP>
+		<FP SOURCE="FP-2">9435 Unspecified depressive disorder</FP>
+		<FP SOURCE="FP-2">9440 Chronic adjustment disorder </FP>
+	</EXTRACT>
+	<GPOTABLE CDEF="s200,8" COLS="2" OPTS="L2">
+		<TTITLE>General Rating Formula for Mental Disorders</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01" O="xl">Total occupational and social impairment, due to such symptoms as: gross impairment in thought processes or communication; persistent delusions or hallucinations; grossly inappropriate behavior; persistent danger of hurting self or others; intermittent inability to perform activities of daily living (including maintenance of minimal personal hygiene); disorientation to time or place; memory loss for names of close relatives, own occupation, or own name.</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Occupational and social impairment, with deficiencies in most areas, such as work, school, family relations, judgment, thinking, or mood, due to such symptoms as: suicidal ideation; obsessional rituals which interfere with routine activities; speech intermittently illogical, obscure, or irrelevant; near-continuous panic or depression affecting the ability to function independently, appropriately and effectively; impaired impulse control (such as unprovoked irritability with periods of violence); spatial disorientation; neglect of personal appearance and hygiene; difficulty in adapting to stressful circumstances (including work or a worklike setting); inability to establish and maintain effective relationships.</ENT>
+			<ENT>70</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Occupational and social impairment with reduced reliability and productivity due to such symptoms as: flattened affect; circumstantial, circumlocutory, or stereotyped speech; panic attacks more than once a week; difficulty in understanding complex commands; impairment of short- and long-term memory (e.g., retention of only highly learned material, forgetting to complete tasks); impaired judgment; impaired abstract thinking; disturbances of motivation and mood; difficulty in establishing and maintaining effective work and social relationships.</ENT>
+			<ENT>50</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Occupational and social impairment with occasional decrease in work efficiency and intermittent periods of inability to perform occupational tasks (although generally functioning satisfactorily, with routine behavior, self-care, and conversation normal), due to such symptoms as: depressed mood, anxiety, suspiciousness, panic attacks (weekly or less often), chronic sleep impairment, mild memory loss (such as forgetting names, directions, recent events).</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Occupational and social impairment due to mild or transient symptoms which decrease work efficiency and ability to perform occupational tasks only during periods of significant stress, or symptoms controlled by continuous medication.</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">A mental condition has been formally diagnosed, but symptoms are not severe enough either to interfere with occupational and social functioning or to require continuous medication.</ENT>
+			<ENT>0</ENT>
+		</ROW>
+	</GPOTABLE>
+	<EXTRACT>
+		<FP SOURCE="FP-2">9520 Anorexia nervosa</FP>
+		<FP SOURCE="FP-2">9521 Bulimia nervosa</FP>
+	</EXTRACT>
+	<GPOTABLE CDEF="s200,8" COLS="2" OPTS="L2">
+		<TTITLE>Rating Formula for Eating Disorders</TTITLE>
+		<BOXHD>
+			<CHED H="1"> </CHED>
+			<CHED H="1">Rating</CHED>
+		</BOXHD>
+		<ROW>
+			<ENT I="01" O="xl">Self-induced weight loss to less than 80 percent of expected minimum weight, with incapacitating episodes of at least six weeks total duration per year, and requiring hospitalization more than twice a year for parenteral nutrition or tube feeding.</ENT>
+			<ENT>100</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Self-induced weight loss to less than 85 percent of expected minimum weight with incapacitating episodes of six or more weeks total duration per year.</ENT>
+			<ENT>60</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Self-induced weight loss to less than 85 percent of expected minimum weight with incapacitating episodes of more than two but less than six weeks total duration per year.</ENT>
+			<ENT>30</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Binge eating followed by self-induced vomiting or other measures to prevent weight gain, or resistance to weight gain even when below expected minimum weight, with diagnosis of an eating disorder and incapacitating episodes of up to two weeks total duration per year.</ENT>
+			<ENT>10</ENT>
+		</ROW>
+		<ROW>
+			<ENT I="01" O="xl">Binge eating followed by self-induced vomiting or other measures to prevent weight gain, or resistance to weight gain even when below expected minimum weight, with diagnosis of an eating disorder but without incapacitating episodes.</ENT>
+			<ENT>0</ENT>
+		</ROW>
+		<TNOTE>
+			<E T="02">Note 1:</E>
+			 An incapacitating episode is a period during which bed rest and treatment by a physician are required.
+		</TNOTE>
+		<TNOTE>
+			<E T="02">Note 2:</E>
+			 Ratings under diagnostic codes 9201 to 9440 will be evaluated using the General Rating Formula for Mental Disorders. Ratings under diagnostic codes 9520 and 9521 will be evaluated using the General Rating Formula for Eating Disorders.
+		</TNOTE>
+	</GPOTABLE>
+	<PRTPAGE P="477"/>
+	<SECAUTH>(Authority: 38 U.S.C. 1155)</SECAUTH>
+	<CITA>[79 FR 45100, Aug. 4, 2014]</CITA>
+</SECTION>

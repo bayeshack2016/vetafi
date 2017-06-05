@@ -1,0 +1,495 @@
+{
+ "category": "Schedule of ratings\u2014dental and oral conditions.",
+ "subcategories": [
+  {
+   "category": "Range of lateral excursion:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        10
+       ],
+       "description": "0 to 4 mm"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9905
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Bilateral"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Unilateral"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9906
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "category": "Not involving loss of temporomandibular articulation",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Bilateral"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Unilateral"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9906
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Bilateral"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Unilateral"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9907
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "9908\u2003Condyloid process, loss of, one or both sides"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9908
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Bilateral"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Unilateral"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9909
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Not replaceable by prosthesis"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Replaceable by prosthesis"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9911
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Not replaceable by prosthesis"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Replaceable by prosthesis"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9912
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Loss of all teeth"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Loss of all upper teeth"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Loss of all lower teeth"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "All upper and lower posterior teeth missing"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "All upper and lower anterior teeth missing"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "All upper anterior teeth missing"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "All lower anterior teeth missing"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "All upper and lower teeth on one side missing"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Where the loss of masticatory surface can be restored by suitable prosthesis"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9913
+      }
+     ],
+     "notes": [
+      {
+       "note": "Where the lost masticatory surface cannot be restored by suitable prosthesis:"
+      }
+     ]
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Not replaceable by prosthesis"
+      },
+      {
+       "ratings": [
+        50
+       ],
+       "description": "Replaceable by prosthesis"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9914
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Not replaceable by prosthesis"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Replaceable by prosthesis"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9915
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "category": "Loss of less than 25 percent:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Not replaceable by prosthesis"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Replaceable by prosthesis"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9915
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Severe displacement"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Moderate displacement"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Slight displacement"
+      }
+     ],
+     "codes": [
+      {
+       "code": 9916
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  }
+ ],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 9900
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as osteomyelitis, chronic under diagnostic code 5000"
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "9901\u2003Mandible, loss of, complete, between angles"
+    }
+   ],
+   "codes": [
+    {
+     "code": 9901
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      50
+     ],
+     "description": "Involving temporomandibular articulation"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Not involving temporomandibular articulation"
+    }
+   ],
+   "codes": [
+    {
+     "code": 9902
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Severe"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Moderate"
+    }
+   ],
+   "codes": [
+    {
+     "code": 9903
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Severe displacement"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Moderate displacement"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Slight displacement"
+    }
+   ],
+   "codes": [
+    {
+     "code": 9904
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "0 to 4 mm"
+    }
+   ],
+   "codes": [
+    {
+     "code": 9905
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note\n\n                    "
+  },
+  {
+   "note": "Note\n\n                    "
+  }
+ ],
+ "see_other_notes": []
+}

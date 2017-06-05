@@ -1,0 +1,1329 @@
+{
+ "category": "Schedule of ratings\u2014digestive system.",
+ "subcategories": [
+  {
+   "category": "Gastritis, atrophic.",
+   "subcategories": [
+    {
+     "category": "A complication of a number of diseases, including pernicious anemia.",
+     "subcategories": [
+      {
+       "category": "Rate the underlying condition.",
+       "subcategories": [],
+       "diagnostic_code_sets": [
+        {
+         "ratings": [
+          {
+           "ratings": [
+            60
+           ],
+           "description": "Severe; associated with nausea, sweating, circulatory disturbance after meals, diarrhea, hypoglycemic symptoms, and weight loss with malnutrition and anemia"
+          },
+          {
+           "ratings": [
+            40
+           ],
+           "description": "Moderate; less frequent episodes of epigastric disorders with characteristic mild circulatory symptoms after meals but with diarrhea and weight loss"
+          },
+          {
+           "ratings": [
+            20
+           ],
+           "description": "Mild; infrequent episodes of epigastric distress with characteristic mild circulatory symptoms or continuous mild manifestations"
+          }
+         ],
+         "codes": [
+          {
+           "code": 7308
+          }
+         ],
+         "notes": []
+        },
+        {
+         "ratings": [],
+         "codes": [
+          {
+           "code": 7309
+          }
+         ],
+         "notes": [
+          {
+           "note": "Rate as for gastric ulcer."
+          }
+         ]
+        },
+        {
+         "ratings": [],
+         "codes": [
+          {
+           "code": 7310
+          }
+         ],
+         "notes": [
+          {
+           "note": "Rate as peritoneal adhesions."
+          }
+         ]
+        },
+        {
+         "ratings": [],
+         "codes": [
+          {
+           "code": 7311
+          }
+         ],
+         "notes": [
+          {
+           "note": "Depending on the specific residuals, separately evaluate as adhesions of peritoneum (diagnostic code 7301), cirrhosis of liver (diagnostic code 7312), and chronic liver disease without cirrhosis (diagnostic code 7345)."
+          }
+         ]
+        },
+        {
+         "ratings": [
+          {
+           "ratings": [
+            100
+           ],
+           "description": "Generalized weakness, substantial weight loss, and persistent jaundice, or; with one of the following refractory to treatment: ascites, hepatic encephalopathy, hemorrhage from varices or portal gastropathy (erosive gastritis)"
+          },
+          {
+           "ratings": [
+            70
+           ],
+           "description": "History of two or more episodes of ascites, hepatic encephalopathy, or hemorrhage from varices or portal gastropathy (erosive gastritis), but with periods of remission between attacks"
+          },
+          {
+           "ratings": [
+            50
+           ],
+           "description": "History of one episode of ascites, hepatic encephalopathy, or hemorrhage from varices or portal gastropathy (erosive gastritis)"
+          },
+          {
+           "ratings": [
+            30
+           ],
+           "description": "Portal hypertension and splenomegaly, with weakness, anorexia, abdominal pain, malaise, and at least minor weight loss"
+          },
+          {
+           "ratings": [
+            10
+           ],
+           "description": "Symptoms such as weakness, anorexia, abdominal pain, and malaise"
+          }
+         ],
+         "codes": [
+          {
+           "code": 7312
+          }
+         ],
+         "notes": []
+        },
+        {
+         "ratings": [
+          {
+           "ratings": [
+            30
+           ],
+           "description": "Severe; frequent attacks of gall bladder colic"
+          },
+          {
+           "ratings": [
+            10
+           ],
+           "description": "Moderate; gall bladder dyspepsia, confirmed by X-ray technique, and with infrequent attacks (not over two or three a year) of gall bladder colic, with or without jaundice"
+          },
+          {
+           "ratings": [
+            0
+           ],
+           "description": "Mild"
+          }
+         ],
+         "codes": [
+          {
+           "code": 7314
+          }
+         ],
+         "notes": []
+        },
+        {
+         "ratings": [],
+         "codes": [
+          {
+           "code": 7315
+          }
+         ],
+         "notes": [
+          {
+           "note": "Rate as for chronic cholecystitis."
+          }
+         ]
+        },
+        {
+         "ratings": [],
+         "codes": [
+          {
+           "code": 7316
+          }
+         ],
+         "notes": [
+          {
+           "note": "Rate as for chronic cholecystitis."
+          }
+         ]
+        },
+        {
+         "ratings": [],
+         "codes": [
+          {
+           "code": 7317
+          }
+         ],
+         "notes": [
+          {
+           "note": "Rate as for peritoneal adhesions."
+          }
+         ]
+        },
+        {
+         "ratings": [
+          {
+           "ratings": [
+            30
+           ],
+           "description": "With severe symptoms"
+          },
+          {
+           "ratings": [
+            10
+           ],
+           "description": "With mild symptoms"
+          },
+          {
+           "ratings": [
+            0
+           ],
+           "description": "Nonsymptomatic"
+          }
+         ],
+         "codes": [
+          {
+           "code": 7318
+          }
+         ],
+         "notes": []
+        }
+       ],
+       "references": [],
+       "notes": [
+        {
+         "note": "Note:\n\n                    "
+        }
+       ],
+       "see_other_notes": []
+      },
+      {
+       "category": "Spleen, disease or injury of.",
+       "subcategories": [
+        {
+         "category": "\u2003See Hemic and Lymphatic Systems.",
+         "subcategories": [],
+         "diagnostic_code_sets": [
+          {
+           "ratings": [
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Severe; diarrhea, or alternating diarrhea and constipation, with more or less constant abdominal distress"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Moderate; frequent episodes of bowel disturbance with abdominal distress"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Mild; disturbances of bowel function with occasional episodes of abdominal distress"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7319
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Mild gastrointestinal disturbances, lower abdominal cramps, nausea, gaseous distention, chronic constipation interrupted by diarrhea"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Asymptomatic"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7321
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7322
+            }
+           ],
+           "notes": [
+            {
+             "note": "Rate as for ulcerative colitis."
+            }
+           ]
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "Pronounced; resulting in marked malnutrition, anemia, and general debility, or with serious complication as liver abscess"
+            },
+            {
+             "ratings": [
+              60
+             ],
+             "description": "Severe; with numerous attacks a year and malnutrition, the health only fair during remissions"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Moderately severe; with frequent exacerbations"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Moderate; with infrequent exacerbations"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7323
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Severe symptoms"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Moderate symptoms"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Mild or no symptoms"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7324
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7325
+            }
+           ],
+           "notes": [
+            {
+             "note": "Rate as for irritable colon syndrome."
+            }
+           ]
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7326
+            }
+           ],
+           "notes": [
+            {
+             "note": "Rate as for irritable colon syndrome."
+            }
+           ]
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7327
+            }
+           ],
+           "notes": [
+            {
+             "note": "Rate as for irritable colon syndrome, peritoneal adhesions, or colitis, ulcerative, depending upon the predominant disability picture."
+            }
+           ]
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              60
+             ],
+             "description": "With marked interference with absorption and nutrition, manifested by severe impairment of health objectively supported by examination findings including material weight loss"
+            },
+            {
+             "ratings": [
+              40
+             ],
+             "description": "With definite interference with absorption and nutrition, manifested by impairment of health objectively supported by examination findings including definite weight loss"
+            },
+            {
+             "ratings": [
+              20
+             ],
+             "description": "Symptomatic with diarrhea, anemia and inability to gain weight"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7328
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              40
+             ],
+             "description": "With severe symptoms, objectively supported by examination findings"
+            },
+            {
+             "ratings": [
+              20
+             ],
+             "description": "With moderate symptoms"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "With slight symptoms"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7329
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "Copious and frequent, fecal discharge"
+            },
+            {
+             "ratings": [
+              60
+             ],
+             "description": "Constant or frequent, fecal discharge"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Slight infrequent, fecal discharge"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7330
+            }
+           ],
+           "notes": []
+          }
+         ],
+         "references": [],
+         "notes": [
+          {
+           "note": "Note:\n\n                    "
+          },
+          {
+           "note": "Note:\n\n                    "
+          },
+          {
+           "note": "Note:\n\n                    "
+          }
+         ],
+         "see_other_notes": []
+        },
+        {
+         "category": "Healed; rate for peritoneal adhesions.",
+         "subcategories": [],
+         "diagnostic_code_sets": [
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "Active"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7331
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "Complete loss of sphincter control"
+            },
+            {
+             "ratings": [
+              60
+             ],
+             "description": "Extensive leakage and fairly frequent involuntary bowel movements"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Occasional involuntary bowel movements, necessitating wearing of pad"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Constant slight, or occasional moderate leakage"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Healed or slight, without leakage"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7332
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "Requiring colostomy"
+            },
+            {
+             "ratings": [
+              50
+             ],
+             "description": "Great reduction of lumen, or extensive leakage"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Moderate reduction of lumen, or moderate constant leakage"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7333
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              50
+             ],
+             "description": "Severe (or complete), persistent"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Moderate, persistent or frequently recurring"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Mild with constant slight or occasional moderate leakage"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7334
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7335
+            }
+           ],
+           "notes": [
+            {
+             "note": "Rate as for impairment of sphincter control."
+            }
+           ]
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              20
+             ],
+             "description": "With persistent bleeding and with secondary anemia, or with fissures"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Large or thrombotic, irreducible, with excessive redundant tissue, evidencing frequent recurrences"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Mild or moderate"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7336
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7337
+            }
+           ],
+           "notes": [
+            {
+             "note": "Rate for the underlying condition."
+            }
+           ]
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              60
+             ],
+             "description": "Large, postoperative, recurrent, not well supported under ordinary conditions and not readily reducible, when considered inoperable"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Small, postoperative recurrent, or unoperated irremediable, not well supported by truss, or not readily reducible"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Postoperative recurrent, readily reducible and well supported by truss or belt"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Not operated, but remediable"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Small, reducible, or without true hernia protrusion"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7338
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "Massive, persistent, severe diastasis of recti muscles or extensive diffuse destruction or weakening of muscular and fascial support of abdominal wall so as to be inoperable"
+            },
+            {
+             "ratings": [
+              40
+             ],
+             "description": "Large, not well supported by belt under ordinary conditions"
+            },
+            {
+             "ratings": [
+              20
+             ],
+             "description": "Small, not well supported by belt under ordinary conditions, or healed ventral hernia or post-operative wounds with weakening of abdominal wall and indication for a supporting belt"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Wounds, postoperative, healed, no disability, belt not indicated"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7339
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7340
+            }
+           ],
+           "notes": [
+            {
+             "note": "Rate as for inguinal hernia."
+            }
+           ]
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              10
+             ],
+             "description": "7342\u2003Visceroptosis, symptomatic, marked"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7342
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "7343\u2003Malignant neoplasms of the digestive system, exclusive of skin growths"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7343
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [],
+           "codes": [
+            {
+             "code": 7344
+            }
+           ],
+           "notes": [
+            {
+             "note": "Evaluate under an appropriate diagnostic code, depending on the predominant disability or the specific residuals after treatment."
+            }
+           ]
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "Near-constant debilitating symptoms (such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain)"
+            },
+            {
+             "ratings": [
+              60
+             ],
+             "description": "Daily fatigue, malaise, and anorexia, with substantial weight loss (or other indication of malnutrition), and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least six weeks during the past 12-month period, but not occurring constantly"
+            },
+            {
+             "ratings": [
+              40
+             ],
+             "description": "Daily fatigue, malaise, and anorexia, with minor weight loss and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least four weeks, but less than six weeks, during the past 12-month period"
+            },
+            {
+             "ratings": [
+              20
+             ],
+             "description": "Daily fatigue, malaise, and anorexia (without weight loss or hepatomegaly), requiring dietary restriction or continuous medication, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least two weeks, but less than four weeks, during the past 12-month period"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Intermittent fatigue, malaise, and anorexia, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least one week, but less than two weeks, during the past 12-month period"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Nonsymptomatic"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7345
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              60
+             ],
+             "description": "Symptoms of pain, vomiting, material weight loss and hematemesis or melena with moderate anemia; or other symptom combinations productive of severe impairment of health"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Persistently recurrent epigastric distress with dysphagia, pyrosis, and regurgitation, accompanied by substernal or arm or shoulder pain, productive of considerable impairment of health"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "With two or more of the symptoms for the 30 percent evaluation of less severity"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7346
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "With frequently recurrent disabling attacks of abdominal pain with few pain free intermissions and with steatorrhea, malabsorption, diarrhea and severe malnutrition"
+            },
+            {
+             "ratings": [
+              60
+             ],
+             "description": "With frequent attacks of abdominal pain, loss of normal body weight and other findings showing continuing pancreatic insufficiency between acute attacks"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Moderately severe; with at least 4-7 typical attacks of abdominal pain per year with good remission between attacks"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "With at least one recurring attack of typical severe abdominal pain in the past year"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7347
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              40
+             ],
+             "description": "Followed by demonstrably confirmative postoperative complications of stricture or continuing gastric retention"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "With symptoms and confirmed diagnosis of alkaline gastritis, or of confirmed persisting diarrhea"
+            },
+            {
+             "ratings": [
+              20
+             ],
+             "description": "Recurrent ulcer with incomplete vagotomy"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7348
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "For an indefinite period from the date of hospital admission for transplant surgery"
+            },
+            {
+             "ratings": [
+              30
+             ],
+             "description": "Minimum"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7351
+            }
+           ],
+           "notes": []
+          },
+          {
+           "ratings": [
+            {
+             "ratings": [
+              100
+             ],
+             "description": "\u2003Near-constant debilitating symptoms (such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain)"
+            },
+            {
+             "ratings": [
+              60
+             ],
+             "description": "Daily fatigue, malaise, and anorexia, with substantial weight loss (or other indication of malnutrition), and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least six weeks during the past 12-month period, but not occurring constantly"
+            },
+            {
+             "ratings": [
+              40
+             ],
+             "description": "Daily fatigue, malaise, and anorexia, with minor weight loss and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least four weeks, but less than six weeks, during the past 12-month period"
+            },
+            {
+             "ratings": [
+              20
+             ],
+             "description": "Daily fatigue, malaise, and anorexia (without weight loss or hepatomegaly), requiring dietary restriction or continuous medication, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least two weeks, but less than four weeks, during the past 12-month period"
+            },
+            {
+             "ratings": [
+              10
+             ],
+             "description": "Intermittent fatigue, malaise, and anorexia, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least one week, but less than two weeks, during the past 12-month period"
+            },
+            {
+             "ratings": [
+              0
+             ],
+             "description": "Nonsymptomatic"
+            }
+           ],
+           "codes": [
+            {
+             "code": 7354
+            }
+           ],
+           "notes": [
+            {
+             "note": "With serologic evidence of hepatitis C infection and the following signs and symptoms due to hepatitis C infection:"
+            }
+           ]
+          }
+         ],
+         "references": [],
+         "notes": [
+          {
+           "note": "Note:\n\n                    "
+          },
+          {
+           "note": "Note:\n\n                    "
+          },
+          {
+           "note": "Note (1):\n\n                    "
+          },
+          {
+           "note": "Note (2):\n\n                    "
+          },
+          {
+           "note": "Note (3):\n\n                    "
+          },
+          {
+           "note": "Note\n\n                    "
+          },
+          {
+           "note": "Note\n\n                    "
+          },
+          {
+           "note": "Note:\n\n                    "
+          },
+          {
+           "note": "Note:\n\n                    "
+          },
+          {
+           "note": "Note (1):\n\n                    "
+          },
+          {
+           "note": "Note (2):\n\n                    "
+          }
+         ],
+         "see_other_notes": [
+          {
+           "see_other_note": "Inactive: See \u00a7\u00a7\u20094.88b and 4.89."
+          }
+         ]
+        }
+       ],
+       "diagnostic_code_sets": [],
+       "references": [],
+       "notes": [],
+       "see_other_notes": []
+      }
+     ],
+     "diagnostic_code_sets": [],
+     "references": [],
+     "notes": [],
+     "see_other_notes": []
+    }
+   ],
+   "diagnostic_code_sets": [],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  }
+ ],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7200
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as for disfigurement and impairment of function of mastication."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7201
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as for disfigurement of face."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With inability to communicate by speech"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "One-half or more"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "With marked speech impairment"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7202
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      80
+     ],
+     "description": "Permitting passage of liquids only, with marked impairment of general health"
+    },
+    {
+     "ratings": [
+      50
+     ],
+     "description": "Severe, permitting liquids only"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Moderate"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7203
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7204
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7205
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as for obstruction (stricture)."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      50
+     ],
+     "description": "Severe; definite partial obstruction shown by X-ray, with frequent and prolonged episodes of severe colic distension, nausea or vomiting, following severe peritonitis, ruptured appendix, perforated ulcer, or operation with drainage"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Moderately severe; partial obstruction manifested by delayed motility of barium meal and less frequent and less prolonged episodes of pain"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Moderate; pulling pain on attempting work or aggravated by movements of the body, or occasional episodes of colic pain, nausea, constipation (perhaps alternating with diarrhea) or abdominal distension"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Mild"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7301
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7304
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Severe; pain only partially relieved by standard ulcer therapy, periodic vomiting, recurrent hematemesis or melena, with manifestations of anemia and weight loss productive of definite impairment of health"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Moderately severe; less than severe but with impairment of health manifested by anemia and weight loss; or recurrent incapacitating episodes averaging 10 days or more in duration at least four or more times a year"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Moderate; recurring episodes of severe symptoms two or three times a year averaging 10 days in duration; or with continuous moderate manifestations"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Mild; with recurring symptoms once or twice yearly"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7305
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Pronounced; periodic or continuous pain unrelieved by standard ulcer therapy with periodic vomiting, recurring melena or hematemesis, and weight loss. Totally incapacitating"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Severe; same as pronounced with less pronounced and less continuous symptoms with definite impairment of health"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Moderately severe; intercurrent episodes of abdominal pain at least once a month partially or completely relieved by ulcer therapy, mild and transient episodes of vomiting or melena"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Moderate; with episodes of recurring symptoms several times a year"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Mild; with brief episodes of recurring symptoms once or twice yearly"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7306
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Chronic; with severe hemorrhages, or large ulcerated or eroded areas"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Chronic; with multiple small eroded or ulcerated areas, and symptoms"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Chronic; with small nodular lesions, and symptoms"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7307
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note:\n\n                    "
+  }
+ ],
+ "see_other_notes": [
+  {
+   "see_other_note": "If not amenable to dilation, rate as for the degree of obstruction (stricture)."
+  }
+ ]
+}
