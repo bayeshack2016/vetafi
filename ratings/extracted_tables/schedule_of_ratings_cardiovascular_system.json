@@ -1,0 +1,1394 @@
+{
+ "category": "Schedule of ratings\u2014cardiovascular system.",
+ "subcategories": [
+  {
+   "category": "Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7000
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "For three months following cessation of therapy for active infection with cardiac involvement"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7001
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7001
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "For three months following cessation of therapy for active infection with cardiac involvement"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7002
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter, with documented pericarditis resulting in:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent."
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7001
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7003
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7004
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7005
+      }
+     ],
+     "notes": [
+      {
+       "note": "With documented coronary artery disease resulting in:"
+      }
+     ]
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "During and for three months following myocardial infarction, documented by laboratory tests"
+      }
+     ],
+     "codes": [
+      {
+       "code": 7006
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note:\n\n                    "
+    },
+    {
+     "note": "Note:\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "category": "Thereafter:\n\n                  ",
+   "subcategories": [
+    {
+     "category": "With history of documented myocardial infarction, resulting in:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7001
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7007
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [],
+       "codes": [
+        {
+         "code": 7008
+        }
+       ],
+       "notes": [
+        {
+         "note": "Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation."
+        }
+       ]
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Paroxysmal atrial fibrillation or other supraventricular tachycardia, with more than four episodes per year documented by ECG or Holter monitor"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Permanent atrial fibrillation (lone atrial fibrillation), or; one to four episodes per year of paroxysmal atrial fibrillation or other supraventricular tachycardia documented by ECG or Holter monitor"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7010
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "For indefinite period from date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia, or; for indefinite period from date of hospital admission for ventricular aneurysmectomy, or; with an automatic implantable Cardioverter-Defibrillator (AICD) in place"
+        },
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7011
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication or a pacemaker required"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7015
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "For indefinite period following date of hospital admission for valve replacement"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note:\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    },
+    {
+     "category": "Thereafter:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "For three months following hospital admission for surgery"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7017
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note:\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    },
+    {
+     "category": "Thereafter:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Workload greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "For two months following hospital admission for implantation or reimplantation"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7018
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [],
+     "see_other_notes": []
+    },
+    {
+     "category": "Thereafter:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Evaluate as supraventricular arrhythmias (DC 7010), ventricular arrhythmias (DC 7011), or atrioventricular block (DC 7015). Minimum"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "For an indefinite period from date of hospital admission for cardiac transplantation"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7019
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note:\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    },
+    {
+     "category": "Thereafter:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Minimum"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7020
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note:\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    },
+    {
+     "category": "\n\n                    ",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Diastolic pressure predominantly 130 or more"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Diastolic pressure predominantly 120 or more"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Diastolic pressure predominantly 110 or more, or; systolic pressure predominantly 200 or more"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Diastolic pressure predominantly 100 or more, or; systolic pressure predominantly 160 or more, or; minimum evaluation for an individual with a history of diastolic pressure predominantly 100 or more who requires continuous medication for control"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7101
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "If five centimeters or larger in diameter, or; if symptomatic, or; for indefinite period from date of hospital admission for surgical correction (including any type of graft insertion)"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Precluding exertion"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7110
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note (1):\n\n                    "
+      },
+      {
+       "note": "Note (2):\n\n                    "
+      },
+      {
+       "note": "Note (3):\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    },
+    {
+     "category": "Evaluate residuals of surgical correction according to organ systems affected.\n\n                  ",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "If symptomatic, or; for indefinite period from date of hospital admission for surgical correction"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7111
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note:\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    },
+    {
+     "category": "Following surgery:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; persistent coldness of the extremity, one or more deep ischemic ulcers, or ankle/brachial index of 0.5 or less"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Asymptomatic"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7112
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "With high output heart failure"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Without heart failure but with enlarged heart, wide pulse pressure, and tachycardia"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7113
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note (1):\n\n                    "
+      },
+      {
+       "note": "Note (2):\n\n                    "
+      },
+      {
+       "note": "Note (3):\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    },
+    {
+     "category": "Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Lower extremity"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Upper extremity"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [],
+     "see_other_notes": []
+    },
+    {
+     "category": "With edema or stasis dermatitis:",
+     "subcategories": [],
+     "diagnostic_code_sets": [
+      {
+       "ratings": [
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Lower extremity"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Upper extremity"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7016
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7114
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7115
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "With two or more digital ulcers plus autoamputation of one or more digits and history of characteristic attacks"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "With two or more digital ulcers and history of characteristic attacks"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Characteristic attacks occurring at least daily"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Characteristic attacks occurring four to six times a week"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Characteristic attacks occurring one to three times a week"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7117
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Attacks without laryngeal involvement lasting one to seven days or longer and occurring more than eight times a year, or; attacks with laryngeal involvement of any duration occurring more than twice a year"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Attacks without laryngeal involvement lasting one to seven days and occurring five to eight times a year, or; attacks with laryngeal involvement of any duration occurring once or twice a year"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Attacks without laryngeal involvement lasting one to seven days and occurring two to four times a year"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7118
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Characteristic attacks that occur more than once a day, last an average of more than two hours each, respond poorly to treatment, and that restrict most routine daily activities"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Characteristic attacks that occur more than once a day, last an average of more than two hours each, and respond poorly to treatment, but that do not restrict most routine daily activities"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Characteristic attacks that occur daily or more often but that respond to treatment"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Characteristic attacks that occur less than daily but at least three times a week and that respond to treatment"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7119
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "With the following findings attributed to the effects of varicose veins: Massive board-like edema with constant pain at rest"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Asymptomatic palpable or visible varicose veins"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7120
+        }
+       ],
+       "notes": []
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Massive board-like edema with constant pain at rest"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Asymptomatic palpable or visible varicose veins"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7121
+        }
+       ],
+       "notes": [
+        {
+         "note": "With the following findings attributed to venous disease:"
+        }
+       ]
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Arthralgia or other pain, numbness, or cold sensitivity plus two or more of the following: tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Arthralgia or other pain, numbness, or cold sensitivity plus tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, or X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Arthralgia or other pain, numbness, or cold sensitivity"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7122
+        }
+       ],
+       "notes": [
+        {
+         "note": "With the following in affected parts:"
+        }
+       ]
+      },
+      {
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "7123\u2003Soft tissue sarcoma (of vascular origin)"
+        }
+       ],
+       "codes": [
+        {
+         "code": 7123
+        }
+       ],
+       "notes": []
+      }
+     ],
+     "references": [],
+     "notes": [
+      {
+       "note": "Note (1):\n\n                    "
+      },
+      {
+       "note": "Note (2):\n\n                    "
+      },
+      {
+       "note": "Note (3):\n\n                    "
+      },
+      {
+       "note": "Note (1):\n\n                    "
+      },
+      {
+       "note": "Note (2):\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      },
+      {
+       "note": "Note\n\n                    "
+      },
+      {
+       "note": "Note\n\n                    "
+      },
+      {
+       "note": "Note:\n\n                    "
+      }
+     ],
+     "see_other_notes": []
+    }
+   ],
+   "diagnostic_code_sets": [],
+   "references": [],
+   "notes": [],
+   "see_other_notes": []
+  }
+ ],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "During active infection with valvular heart damage and for three months following cessation of therapy for the active infection"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7000
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note (1):\n\n                    "
+  },
+  {
+   "note": "Note (2):\n\n                    "
+  }
+ ],
+ "see_other_notes": []
+}

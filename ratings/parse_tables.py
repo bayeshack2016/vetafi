@@ -5,6 +5,7 @@ import logging
 
 from xml.etree import ElementTree
 
+import copy
 import transitions
 
 import munging
@@ -19,12 +20,12 @@ formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(messag
 ch.setFormatter(formatter)
 logger.addHandler(ch)
 
-transitions.logger.setLevel(logging.INFO)
-transitions.logger.addHandler(ch)
+
 
 def get_args():
     parser = argparse.ArgumentParser('Parse all tables that show percent disability rating for particular conditions')
     parser.add_argument('--input-files', dest='input_files', nargs='+')
+    parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', default=False)
     return parser.parse_args()
 
 
@@ -70,7 +71,7 @@ def save_xml(table_element: ElementTree.Element):
 
 
 def is_category_row(row_element: ElementTree.Element):
-    entries = [entry for entry in row_element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+    entries = [entry for entry in row_element.findall('ENT') if util.inner_xml(entry).strip()]
     row_length = len(entries)
     return row_length == 1
 
@@ -80,13 +81,13 @@ def get_description(row_element: ElementTree.Element):
 
 
 def is_rating_row(row_element: ElementTree.Element):
-    entries = [entry for entry in row_element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+    entries = [entry for entry in row_element.findall('ENT') if util.inner_xml(entry).strip()]
     row_length = len(entries)
     return row_length >= 2 and all([munging.is_integer_0_100(entry.text) for entry in entries[1:]])
 
 
 def is_diagnostic_and_rating_row(row_element: ElementTree.Element):
-    entries = [entry for entry in row_element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+    entries = [entry for entry in row_element.findall('ENT') if util.inner_xml(entry).strip()]
     row_length = len(entries)
     return row_length >= 2 and all([munging.is_integer_0_100(entry.text) for entry in entries[1:]]) and munging.describes_diagnostic_code(entries[0].text)
 
@@ -104,13 +105,13 @@ def is_diagnostic_code_row(row_element: ElementTree.Element):
 def is_reference_row(row_element: ElementTree.Element):
     """
     Some rows reference a different rating table, saying something like:
-    
+
     "Or evaluate as DC 7800, scars, disfiguring, head, face, or neck."
-    
+
     This will return true if this is the case.
-    
+
     :param row_element: The row ElementTree object
-    :return: 
+    :return:
     """
     entries = row_element.findall('ENT')
     row_length = len(entries)
@@ -120,14 +121,14 @@ def is_reference_row(row_element: ElementTree.Element):
 def is_note_row(row_element: ElementTree.Element):
     """
     Some rows are just an advisory note, for example:
-    
+
     <ROW>
         <ENT I="13">
             <E T="02">Note 1:</E>
             Natural menopause, primary amenorrhea, and pregnancy and childbirth are not disabilities for rating purposes. Chronic residuals of medical or surgical complications of pregnancy may be disabilities for rating purposes.
         </ENT>
     </ROW>
-                
+
     This will return true if this is the case.
     """
     entries = row_element.findall('ENT')
@@ -141,9 +142,9 @@ def is_note_row(row_element: ElementTree.Element):
 def is_see_other_row(row_element: ElementTree.Element):
     """
     Some rows refer to another section of the CFR.
-    
+
     For example:
-    
+
     <ROW>
         <ENT I="12">Inactive: See §§ 4.88b and 4.89.</ENT>
     </ROW>
@@ -154,7 +155,7 @@ def is_see_other_row(row_element: ElementTree.Element):
     row_length = len(entries)
 
     for entry in entries:
-        text = munging.extract_entry_text(entry)
+        text = util.inner_xml(entry)
         if '§' in text and 'see' in text.lower():
             return True
         elif (' rate as' in text.lower() or 'rate the disability as' in text.lower()) and not 'rate as below' in text.lower():
@@ -166,16 +167,16 @@ def is_general_rating_note_row(row_element: ElementTree.Element):
     """
     This type of row explains that the ratings to follow are applicable to
     the above listed diagnostic codes.
-    
+
     For example:
-    
+
     <ROW>
         <ENT I="11">General Rating Formula for Disease, Injury, or Adhesions of Female Reproductive Organs (diagnostic codes 7610 through 7615):</ENT>
     </ROW>
     """
     entries = row_element.findall('ENT')
     row_length = len(entries)
-    return row_length == 1 and munging.extract_entry_text(entries[0]).lower().strip().startswith('general rating formula')
+    return row_length == 1 and util.inner_xml(entries[0]).lower().strip().startswith('general rating formula')
 
 
 class RatingTableStateMachine:
@@ -206,7 +207,7 @@ class RatingTableStateMachine:
          'before': 'add_reference'},
 
         {'trigger': 'process_rating',
-         'source': ['rating', 'diagnostic_code', 'note'],
+         'source': ['rating', 'diagnostic_code', 'note', 'see_other_note'],
          'dest': 'rating',
          'before': 'add_rating'},
 
@@ -216,7 +217,7 @@ class RatingTableStateMachine:
          'before': 'add_rating_under_previous_category_diagnostic'},
 
         {'trigger': 'process_combined_diagnostic_rating',
-         'source': ['category', 'rating', 'see_other_note', 'diagnostic_code'],
+         'source': ['category', 'rating', 'see_other_note', 'note', 'diagnostic_code'],
          'dest': 'rating',
          'before': 'add_combined_diagnostic_rating'},
 
@@ -236,19 +237,19 @@ class RatingTableStateMachine:
          'before': 'add_first_diagnostic_code'},
 
         {'trigger': 'process_note',
-         'source': ['category', 'rating', 'note'],
+         'source': ['category', 'rating', 'note', 'diagnostic_code', 'see_other_note'],
          'dest': 'note',
          'before': 'add_note'},
 
         {'trigger': 'process_see_other_note',
-         'source': ['rating', 'diagnostic_code', 'see_other_note'],
+         'source': ['rating', 'diagnostic_code', 'see_other_note', 'category', 'note'],
          'dest': 'see_other_note',
          'before': 'add_see_other_note'},
     ]
 
     def __init__(self, name: str, initial: models.RatingCategory):
         self.name = name
-        self.last_category = None
+        self.last_category = initial
         self.current_category = initial
         self.last_row = None
         self.current_row = None
@@ -298,8 +299,22 @@ class RatingTableStateMachine:
         self.current_diagnostic_code_set.add_note(
             models.RatingNote.from_element(element))
 
+    def get_closest_category_with_diagnostic_code(self, next_closest: models.RatingCategory):
+        if next_closest.has_diagnostic_codes():
+            return next_closest
+
+        for category in next_closest.parent.get_older_siblings(next_closest):
+            if category.has_diagnostic_codes():
+                return category
+
+        if next_closest.is_root():
+            raise ValueError("No relative with diagnostic code found.")
+
+        return self.get_closest_category_with_diagnostic_code(next_closest.parent)
+
     def add_rating_under_previous_category_diagnostic(self, element):
-        last_diagnostic_code_set = self.last_category.diagnostic_code_sets[-1]
+        last_diagnostic_code_set = copy.deepcopy(
+            self.get_closest_category_with_diagnostic_code(self.current_category).diagnostic_code_sets[-1])
         last_diagnostic_code_set.ratings = []
         last_diagnostic_code_set.notes = []
         self.current_diagnostic_code_set = last_diagnostic_code_set
@@ -328,23 +343,52 @@ class RatingTableStateMachine:
 
     def process_row_unsafe(self, row: ElementTree.Element):
         if is_see_other_row(row):
+            logger.debug("See Other:\n" + util.pformat_element(row))
             self.process_see_other_note(row)
         elif is_diagnostic_code_row(row):
+            logger.debug("Diagnostic Code:\n" + util.pformat_element(row))
             self.process_diagnostic_code(row)
         elif is_reference_row(row):
+            logger.debug("Reference:\n" + util.pformat_element(row))
             self.process_reference(row)
         elif is_diagnostic_and_rating_row(row):
+            logger.debug("Diagnostic + Rating:\n" + util.pformat_element(row))
             self.process_combined_diagnostic_rating(row)
         elif is_rating_row(row):
+            logger.debug("Rating:\n" + util.pformat_element(row))
             self.process_rating(row)
         elif is_note_row(row):
+            logger.debug("Note:\n" + util.pformat_element(row))
             self.process_note(row)
         elif is_general_rating_note_row(row):
+            logger.debug("General Rating:\n" + util.pformat_element(row))
             pass
         elif is_category_row(row):
+            logger.debug("Category:\n" + util.pformat_element(row))
             self.process_category(row)
         else:
             raise ValueError('Unexpected row: {}'.format(util.pformat_element(row)))
+
+
+def maybe_deduce_diagnosis_from_subject(category: models.RatingCategory):
+    """
+    Some tables have an implied diagnosis for all ratings within, since they are for one specific
+    thing, i.e. tuberculosis.
+
+    This will set the diagnosis appropriately.
+    """
+    if 'tuberculosis' in category.description.lower():
+        code_set = models.DiagnosticCodeSet()
+        category.add_diagnostic_code_set(code_set)
+        code_set.add_diagnostic_code(models.DiagnosticCode(6701))  # TODO(Not sure what this is actually)
+    elif 'genitourinary' in category.description.lower():
+        code_set = models.DiagnosticCodeSet()
+        category.add_diagnostic_code_set(code_set)
+        code_set.add_diagnostic_code(models.DiagnosticCode(9999))  # TODO(Not sure what this is actually)
+    elif 'mental disorders' in category.description.lower():
+        code_set = models.DiagnosticCodeSet()
+        category.add_diagnostic_code_set(code_set)
+        code_set.add_diagnostic_code(models.DiagnosticCode(9999))  # TODO(Not sure what this is actually)
 
 
 def convert_table_to_json(table_element: ElementTree.Element):
@@ -355,6 +399,7 @@ def convert_table_to_json(table_element: ElementTree.Element):
     rows = gpo_table.findall('ROW')
 
     root = models.RatingCategory(subject)
+    maybe_deduce_diagnosis_from_subject(root)
     root.parent = root
     machine = RatingTableStateMachine(subject, root)
 
@@ -367,19 +412,34 @@ def convert_table_to_json(table_element: ElementTree.Element):
 def save_json(table_element: ElementTree.Element):
     logger.info('Converting {} table to json'.format(get_table_key_name(table_element)))
 
-    try:
-        table_as_json = convert_table_to_json(table_element)
-        with open(get_table_key_name(table_element) + '.json', 'w') as of:
-            of.write(table_as_json)
-    except:
-        logger.exception('Failed to parse table {}'.format(get_table_key_name(table_element)))
+    table_as_json = convert_table_to_json(table_element)
+    with open(get_table_key_name(table_element) + '.json', 'w') as of:
+        of.write(table_as_json)
 
 
 def main():
     args = get_args()
+
+    if args.verbose:
+        logger.setLevel(logging.DEBUG)
+        transitions.logger.setLevel(logging.INFO)
+        transitions.logger.addHandler(ch)
+    else:
+        logger.setLevel(logging.INFO)
+
+    successful = 0
+    failed = 0
     for table_element in parse_files(args.input_files):
         save_xml(table_element)
+        #try:
         save_json(table_element)
+        successful += 1
+        #except:
+        #    failed += 1
+        #    logger.exception('Failed to parse table {}'.format(get_table_key_name(table_element)))
+
+
+    logger.info("{:d}/{:d} tables parsed".format(successful, successful + failed))
 
 
 if __name__ == '__main__':

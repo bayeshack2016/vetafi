@@ -1,0 +1,509 @@
+{
+ "category": "Schedule of ratings\u2014neurological conditions and convulsive disorders.",
+ "subcategories": [
+  {
+   "category": "Brain, new growth of:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "8002\u2003Malignant"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8002
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        60
+       ],
+       "description": "8003\u2003Benign, minimum"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Rate residuals, minimum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8003
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8004
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "8005\u2003Bulbar palsy"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8005
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 8007
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 8008
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Rate the vascular conditions under Codes 8007 through 8009, for 6 months"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Rate residuals, thereafter, minimum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8009
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8010
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active febrile disease"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Rate residuals, minimum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8011
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "For 6 months"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Rate residuals, minimum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8012
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 8013
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 8014
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 8015
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "8017\u2003Amyotrophic lateral sclerosis"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8017
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8018
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active febrile disease"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Rate residuals, minimum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8019
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "As active disease"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Rate residuals, minimum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8020
+      }
+     ],
+     "notes": []
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note:\n\n                    "
+    },
+    {
+     "note": "Note:\n\n                    "
+    },
+    {
+     "note": "Note:\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "category": "Spinal cord, new growths of:",
+   "subcategories": [],
+   "diagnostic_code_sets": [
+    {
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "8021\u2003Malignant"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8021
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        60
+       ],
+       "description": "8022\u2003Benign, minimum rating"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Rate residuals, minimum"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8022
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8023
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8024
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Minimum rating"
+      }
+     ],
+     "codes": [
+      {
+       "code": 8025
+      }
+     ],
+     "notes": []
+    },
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 8045
+      }
+     ],
+     "notes": [
+      {
+       "note": "There are three main areas of dysfunction that may result from TBI and have profound effects on functioning: cognitive (which is common in varying degrees after TBI), emotional/behavioral, and physical. Each of these areas of dysfunction may require evaluation."
+      },
+      {
+       "note": "Cognitive impairment is defined as decreased memory, concentration, attention, and executive functions of the brain. Executive functions are goal setting, speed of information processing, planning, organizing, prioritizing, self-monitoring, problem solving, judgment, decision making, spontaneity, and flexibility in changing actions when they are not productive. Not all of these brain functions may be affected in a given individual with cognitive impairment, and some functions may be affected more severely than others. In a given individual, symptoms may fluctuate in severity from day to day. Evaluate cognitive impairment under the table titled \u201cEvaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified.\u201d"
+      },
+      {
+       "note": "Subjective symptoms may be the only residual of TBI or may be associated with cognitive impairment or other areas of dysfunction. Evaluate subjective symptoms that are residuals of TBI, whether or not they are part of cognitive impairment, under the subjective symptoms facet in the table titled \u201cEvaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified.\u201d However, separately evaluate any residual with a distinct diagnosis that may be evaluated under another diagnostic code, such as migraine headache or Meniere's disease, even if that diagnosis is based on subjective symptoms, rather than under the \u201cEvaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified\u201d table"
+      },
+      {
+       "note": "Evaluate emotional/behavioral dysfunction under \u00a7\u20094.130 (Schedule of ratings\u2014mental disorders) when there is a diagnosis of a mental disorder. When there is no diagnosis of a mental disorder, evaluate emotional/behavioral symptoms under the criteria in the table titled \u201cEvaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified.\u201d"
+      },
+      {
+       "note": "Evaluate physical (including neurological) dysfunction based on the following list, under an appropriate diagnostic code: Motor and sensory dysfunction, including pain, of the extremities and face; visual impairment; hearing loss and tinnitus; loss of sense of smell and taste; seizures; gait, coordination, and balance problems; speech and other communication difficulties, including aphasia and related disorders, and dysarthria; neurogenic bladder; neurogenic bowel; cranial nerve dysfunctions; autonomic nerve dysfunctions; and endocrine dysfunctions."
+      },
+      {
+       "note": "The preceding list of types of physical dysfunction does not encompass all possible residuals of TBI. For residuals not listed here that are reported on an examination, evaluate under the most appropriate diagnostic code. Evaluate each condition separately, as long as the same signs and symptoms are not used to support more than one evaluation, and combine under \u00a7\u20094.25 the evaluations for each separately rated condition. The evaluation assigned based on the \u201cEvaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified\u201d table will be considered the evaluation for a single condition for purposes of combining with other disability evaluations"
+      },
+      {
+       "note": "Consider the need for special monthly compensation for such problems as loss of use of an extremity, certain sensory impairments, erectile dysfunction, the need for aid and attendance (including for protection from hazards or dangers incident to the daily environment due to cognitive impairment), being housebound, etc"
+      },
+      {
+       "note": "Evaluation of Cognitive Impairment and Subjective Symptoms\n\n                    "
+      },
+      {
+       "note": "The table titled \u201cEvaluation of Cognitive Impairment and Other Residuals of TBI Not Otherwise Classified\u201d contains 10 important facets of TBI related to cognitive impairment and subjective symptoms. It provides criteria for levels of impairment for each facet, as appropriate, ranging from 0 to 3, and a 5th level, the highest level of impairment, labeled \u201ctotal.\u201d However, not every facet has every level of severity. The Consciousness facet, for example, does not provide for an impairment level other than \u201ctotal,\u201d since any level of impaired consciousness would be totally disabling. Assign a 100-percent evaluation if \u201ctotal\u201d is the level of evaluation for one or more facets. If no facet is evaluated as \u201ctotal,\u201d assign the overall percentage evaluation based on the level of the highest facet as follows: 0 = 0 percent; 1 = 10 percent; 2 = 40 percent; and 3 = 70 percent. For example, assign a 70 percent evaluation if 3 is the highest level of evaluation for any facet."
+      }
+     ]
+    },
+    {
+     "ratings": [],
+     "codes": [
+      {
+       "code": 8046
+      }
+     ],
+     "notes": [
+      {
+       "note": "Purely neurological disabilities, such as hemiplegia, cranial nerve paralysis, etc., due to cerebral arteriosclerosis will be rated under the diagnostic codes dealing with such specific disabilities, with citation of a hyphenated diagnostic code (e.g., 8046-8207)."
+      },
+      {
+       "note": "Purely subjective complaints such as headache, dizziness, tinnitus, insomnia and irritability, recognized as symptomatic of a properly diagnosed cerebral arteriosclerosis, will be rated 10 percent and no more under diagnostic code 9305. This 10 percent rating will not be combined with any other rating for a disability due to cerebral or generalized arteriosclerosis. Ratings in excess of 10 percent for cerebral arteriosclerosis under diagnostic code 9305 are not assignable in the absence of a diagnosis of multi-infarct dementia with cerebral arteriosclerosis."
+      }
+     ]
+    }
+   ],
+   "references": [],
+   "notes": [
+    {
+     "note": "Note:\n\n                    "
+    },
+    {
+     "note": "Note: i.e.\n\n                    "
+    },
+    {
+     "note": "Note (1):\n\n                    "
+    },
+    {
+     "note": "Note (2):\n\n                    "
+    },
+    {
+     "note": "Note (3):\n\n                    "
+    },
+    {
+     "note": "Note (4):\n\n                    "
+    },
+    {
+     "note": "Note (5):\n\n                    "
+    },
+    {
+     "note": "Note:\n\n                    "
+    }
+   ],
+   "see_other_notes": []
+  }
+ ],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "As active febrile disease"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Rate residuals, minimum"
+    }
+   ],
+   "codes": [
+    {
+     "code": 8000
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [],
+ "see_other_notes": []
+}

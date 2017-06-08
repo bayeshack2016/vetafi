@@ -691,7 +691,43 @@
        "ratings": [
         {
          "ratings": [
-          0
+          90
+         ],
+         "description": "In the other eye 10/200 (3/60)"
+        },
+        {
+         "ratings": [
+          80
+         ],
+         "description": "In the other eye 15/200 (4.5/60)"
+        },
+        {
+         "ratings": [
+          70
+         ],
+         "description": "In the other eye 20/200 (6/60)"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "In the other eye 20/100 (6/30)"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "In the other eye 20/70 (6/21)"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "In the other eye 20/50 (6/15)"
+        },
+        {
+         "ratings": [
+          30
          ],
          "description": "In the other eye 20/40 (6/12)"
         }
@@ -701,7 +737,11 @@
          "code": 6066
         }
        ],
-       "notes": []
+       "notes": [
+        {
+         "note": "Vision in one eye 10/200 (3/60):"
+        }
+       ]
       }
      ],
      "references": [],
@@ -716,14 +756,44 @@
        "ratings": [
         {
          "ratings": [
-          0
+          80
+         ],
+         "description": "In the other eye 15/200 (4.5/60)"
+        },
+        {
+         "ratings": [
+          70
+         ],
+         "description": "In the other eye 20/200 (6/60)"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "In the other eye 20/100 (6/30)"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "In the other eye 20/70 (6/21)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "In the other eye 20/50 (6/15)"
+        },
+        {
+         "ratings": [
+          20
          ],
          "description": "In the other eye 20/40 (6/12)"
         }
        ],
        "codes": [
         {
-         "code": 6066
+         "code": 6017
         }
        ],
        "notes": []
@@ -741,14 +811,38 @@
        "ratings": [
         {
          "ratings": [
-          0
+          70
+         ],
+         "description": "In the other eye 20/200 (6/60)"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "In the other eye 20/100 (6/30)"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "In the other eye 20/70 (6/21)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "In the other eye 20/50 (6/15)"
+        },
+        {
+         "ratings": [
+          20
          ],
          "description": "In the other eye 20/40 (6/12)"
         }
        ],
        "codes": [
         {
-         "code": 6066
+         "code": 6017
         }
        ],
        "notes": []
@@ -766,14 +860,32 @@
        "ratings": [
         {
          "ratings": [
-          0
+          50
+         ],
+         "description": "In the other eye 20/100 (6/30)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "In the other eye 20/70 (6/21)"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "In the other eye 20/50 (6/15)"
+        },
+        {
+         "ratings": [
+          10
          ],
          "description": "In the other eye 20/40 (6/12)"
         }
        ],
        "codes": [
         {
-         "code": 6066
+         "code": 6017
         }
        ],
        "notes": []
@@ -791,14 +903,26 @@
        "ratings": [
         {
          "ratings": [
-          0
+          30
+         ],
+         "description": "In the other eye 20/70 (6/21)"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "In the other eye 20/50 (6/15)"
+        },
+        {
+         "ratings": [
+          10
          ],
          "description": "In the other eye 20/40 (6/12)"
         }
        ],
        "codes": [
         {
-         "code": 6066
+         "code": 6017
         }
        ],
        "notes": []
@@ -816,14 +940,20 @@
        "ratings": [
         {
          "ratings": [
-          0
+          10
+         ],
+         "description": "In the other eye 20/50 (6/15)"
+        },
+        {
+         "ratings": [
+          10
          ],
          "description": "In the other eye 20/40 (6/12)"
         }
        ],
        "codes": [
         {
-         "code": 6066
+         "code": 6017
         }
        ],
        "notes": []
@@ -848,7 +978,7 @@
        ],
        "codes": [
         {
-         "code": 6066
+         "code": 6017
         }
        ],
        "notes": []

@@ -25,13 +25,13 @@
      "ratings": [
       {
        "ratings": [
-        30
+        50
        ],
        "description": "Bilateral"
       },
       {
        "ratings": [
-        20
+        30
        ],
        "description": "Unilateral"
       }
@@ -41,7 +41,11 @@
        "code": 9906
       }
      ],
-     "notes": []
+     "notes": [
+      {
+       "note": "Involving loss of temporomandibular articulation"
+      }
+     ]
     }
    ],
    "references": [],
@@ -276,13 +280,13 @@
      "ratings": [
       {
        "ratings": [
-        20
+        40
        ],
        "description": "Not replaceable by prosthesis"
       },
       {
        "ratings": [
-        0
+        30
        ],
        "description": "Replaceable by prosthesis"
       }
@@ -292,7 +296,11 @@
        "code": 9915
       }
      ],
-     "notes": []
+     "notes": [
+      {
+       "note": "Loss of 25 to 50 percent:"
+      }
+     ]
     }
    ],
    "references": [],
@@ -324,7 +332,7 @@
      ],
      "codes": [
       {
-       "code": 9915
+       "code": 9906
       }
      ],
      "notes": []
@@ -469,9 +477,27 @@
    "ratings": [
     {
      "ratings": [
+      40
+     ],
+     "description": "0 to 10 mm"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "11 to 20 mm"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "21 to 30 mm"
+    },
+    {
+     "ratings": [
       10
      ],
-     "description": "0 to 4 mm"
+     "description": "31 to 40 mm"
     }
    ],
    "codes": [
@@ -479,7 +505,11 @@
      "code": 9905
     }
    ],
-   "notes": []
+   "notes": [
+    {
+     "note": "Inter-incisal range:"
+    }
+   ]
   }
  ],
  "references": [],

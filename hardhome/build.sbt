@@ -20,6 +20,9 @@ unmanagedClasspath in Runtime += baseDirectory.value / "conf"
 resolvers += Resolver.jcenterRepo
 resolvers += Resolver.url("Typesafe Ivy releases", url("https://repo.typesafe.com/typesafe/ivy-releases"))(Resolver.ivyStylePatterns)
 resolvers += "jitpack" at "https://jitpack.io" // Used to resolve com.github.* projects
+resolvers += "scalaz-bintray" at "http://dl.bintray.com/scalaz/releases"
+
+scalacOptions in Test ++= Seq("-Yrangepos")
 
 libraryDependencies ++= Seq(
   "org.reactivemongo" %% "play2-reactivemongo" % "0.12.1",

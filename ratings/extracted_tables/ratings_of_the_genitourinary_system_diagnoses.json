@@ -1,0 +1,638 @@
+{
+ "category": "Ratings of the genitourinary system\u2014diagnoses.",
+ "subcategories": [],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 9999
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Minimum evaluation"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7500
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7501
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as urinary tract infection"
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7502
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7504
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction or urinary tract infection, whichever is predominant."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7505
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate in accordance with \u00a7\u00a7\u20094.88b or 4.89, whichever is appropriate."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7507
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate according to predominant symptoms as renal dysfunction, hypertension or heart disease. If rated under the cardiovascular schedule, however, the percentage rating which would otherwise be assigned will be elevated to the next higher evaluation."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "3. invasive or non-invasive procedures more than two times/year"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7508
+    }
+   ],
+   "notes": [
+    {
+     "note": "except forRate as hydronephrosis, "
+    },
+    {
+     "note": "1. diet therapy"
+    },
+    {
+     "note": "2. drug therapy"
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Frequent attacks of colic with infection (pyonephrosis), kidney function impaired"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Frequent attacks of colic, requiring catheter drainage"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Only an occasional attack of colic, not infected and not requiring catheter drainage"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7509
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "3. invasive or non-invasive procedures more than two times/year"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7510
+    }
+   ],
+   "notes": [
+    {
+     "note": "except forRate as hydronephrosis, "
+    },
+    {
+     "note": "1. diet therapy"
+    },
+    {
+     "note": "2. drug therapy"
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "3. invasive or non-invasive procedures more than two times/year"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7511
+    }
+   ],
+   "notes": [
+    {
+     "note": "except forRate as hydronephrosis, "
+    },
+    {
+     "note": "1. diet therapy"
+    },
+    {
+     "note": "2. drug therapy"
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7512
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7515
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction"
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Postoperative, suprapubic cystotomy"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7516
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction or urinary tract infection, whichever is predominant."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7517
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7518
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Multiple urethroperineal fistulae"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7519
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "7520\u2003Penis, removal of half or more"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7520
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "7521\u2003Penis removal of glans"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7521
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7522
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7523
+    }
+   ],
+   "notes": [
+    {
+     "note": "Both\u201420\u2009\n\n                  "
+    },
+    {
+     "note": "One\u20140\u2009\n\n                  "
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7524
+    }
+   ],
+   "notes": [
+    {
+     "note": "Both\u201430\u2009\n\n                  "
+    },
+    {
+     "note": "One\u20140\u2009\n\n                    \n\n                  "
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7525
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as urinary tract infection."
+    },
+    {
+     "note": "For tubercular infections: Rate in accordance with \u00a7\u00a7\u20094.88b or 4.89, whichever is appropriate."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7527
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction or urinary tract infection, whichever is predominant."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "7528\u2003Malignant neoplasms of the genitourinary system"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7528
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7529
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction or renal dysfunction, whichever is predominant."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7530
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Following transplant surgery"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Thereafter: Rate on residuals as renal dysfunction, minimum rating"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7531
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Minimum rating for symptomatic condition"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7532
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7533
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7534
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7535
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7536
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7537
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7538
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7539
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7540
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7541
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7542
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction."
+    }
+   ]
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note\n\n                    "
+  },
+  {
+   "note": "Note\n\n                    "
+  }
+ ],
+ "see_other_notes": [
+  {
+   "see_other_note": "Or rate as renal dysfunction if there is nephritis, infection, or pathology of the other."
+  },
+  {
+   "see_other_note": "Severe; Rate as renal dysfunction."
+  },
+  {
+   "see_other_note": "Or rate as voiding dysfunction."
+  },
+  {
+   "see_other_note": "Or rate as voiding dysfunction."
+  },
+  {
+   "see_other_note": "Or rate as renal dysfunction."
+  }
+ ]
+}

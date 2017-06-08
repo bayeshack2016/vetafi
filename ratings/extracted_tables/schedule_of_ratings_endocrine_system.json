@@ -1,0 +1,469 @@
+{
+ "category": "Schedule of ratings\u2014endocrine system.",
+ "subcategories": [],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Thyroid enlargement, tachycardia (more than 100 beats per minute), eye involvement, muscular weakness, loss of weight, and sympathetic nervous system, cardiovascular, or astrointestinal symptoms"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Emotional instability, tachycardia, fatigability, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Tachycardia, tremor, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7900
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Thyroid enlargement, tachycardia (more than 100 beats per minute), eye involvement, muscular weakness, loss of weight, and sympathetic nervous system, cardiovascular, or gastrointestinal symptoms"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Emotional instability, tachycardia, fatigability, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Tachycardia, tremor, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7901
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With disfigurement of the head or neck"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Without disfigurement of the head or neck"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7902
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Cold intolerance, muscular weakness, cardiovascular involvement, mental disturbance (dementia, slowing of thought, depression), bradycardia (less than 60 beats per minute), and sleepiness"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Muscular weakness, mental disturbance, and weight gain"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Fatigability, constipation, and mental sluggishness"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Fatigability, or; continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7903
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Generalized decalcification of bones, kidney stones, gastrointestinal symptoms (nausea, vomiting, anorexia, constipation, weight loss, or peptic ulcer), and weakness"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Gastrointestinal symptoms and weakness"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7904
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Marked neuromuscular excitability (such as convulsions, muscular spasms (tetany), or laryngeal stridor) plus either cataract or evidence of increased intracranial pressure (such as papilledema)"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Marked neuromuscular excitability, or; paresthesias (of arms, legs, or circumoral area) plus either cataract or evidence of increased intracranial pressure"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7905
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "As active, progressive disease including loss of muscle strength, areas of osteoporosis, hypertension, weakness, and enlargement of pituitary or adrenal gland"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Loss of muscle strength and enlargement of pituitary or adrenal gland"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "With striae, obesity, moon face, glucose intolerance, and vascular fragility"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7907
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Evidence of increased intracranial pressure (such as visual field defect), arthropathy, glucose intolerance, and either hypertension or cardiomegaly"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Arthropathy, glucose intolerance, and hypertension"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Enlargement of acral parts or overgrowth of long bones, and enlarged sella turcica"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7908
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Polyuria with near-continuous thirst, and more than two documented episodes of dehydration requiring parenteral hydration in the past year"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Polyuria with near-continuous thirst, and one or two documented episodes of dehydration requiring parenteral hydration in the past year"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Polyuria with near-continuous thirst, and one or more episodes of dehydration in the past year not requiring parenteral hydration"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Polyuria with near-continuous thirst"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7909
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Four or more crises during the past year"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Three crises during the past year, or; five or more episodes during the past year"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "One or two crises during the past year, or; two to four episodes during the past year, or; weakness and fatigability, or; corticosteroid therapy required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7911
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7912
+    }
+   ],
+   "notes": [
+    {
+     "note": "Evaluate according to major manifestations."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Requiring more than one daily injection of insulin, restricted diet, and regulation of activities (avoidance of strenuous occupational and recreational activities) with episodes of ketoacidosis or hypoglycemic reactions requiring at least three hospitalizations per year or weekly visits to a diabetic care provider, plus either progressive loss of weight and strength or complications that would be compensable if separately evaluated"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Requiring insulin, restricted diet, and regulation of activities with episodes of ketoacidosis or hypoglycemic reactions requiring one or two hospitalizations per year or twice a month visits to a diabetic care provider, plus complications that would not be compensable if separately evaluated"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Requiring insulin, restricted diet, and regulation of activities"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Requiring insulin and restricted diet, or; oral hypoglycemic agent and restricted diet"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Manageable by restricted diet only"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7913
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "7914\u2003Neoplasm, malignant, any specified part of the endocrine system"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7914
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7916
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7917
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7918
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "7919\u2003C-cell hyperplasia of the thyroid"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7919
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note (1):\n\n                    "
+  },
+  {
+   "note": "Note (2):\n\n                    "
+  },
+  {
+   "note": "Note (1):\n\n                    "
+  },
+  {
+   "note": "Note (2):\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note (1):\n\n                    "
+  },
+  {
+   "note": "Note (2):\n\n                    "
+  },
+  {
+   "note": "Note (3):\n\n                    "
+  },
+  {
+   "note": "Note (1):\n\n                    "
+  },
+  {
+   "note": "Note (2):\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  }
+ ],
+ "see_other_notes": [
+  {
+   "see_other_note": "7915\u2003Neoplasm, benign, any specified part of the endocrine system rate as residuals of endocrine dysfunction."
+  }
+ ]
+}

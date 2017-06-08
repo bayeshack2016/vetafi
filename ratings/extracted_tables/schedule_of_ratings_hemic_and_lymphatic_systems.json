@@ -1,0 +1,351 @@
+{
+ "category": "Schedule of ratings\u2014hemic and lymphatic systems.",
+ "subcategories": [],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Hemoglobin 5gm/100ml or less, with findings such as high output congestive heart failure or dyspnea at rest"
+    },
+    {
+     "ratings": [
+      70
+     ],
+     "description": "Hemoglobin 7gm/100ml or less, with findings such as dyspnea on mild exertion, cardiomegaly, tachycardia (100 to 120 beats per minute) or syncope (three episodes in the last six months)"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Hemoglobin 8gm/100ml or less, with findings such as weakness, easy fatigability, headaches, lightheadedness, or shortness of breath"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Hemoglobin 10gm/100ml or less with findings such as weakness, easy fatigability or headaches"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Hemoglobin 10gm/100ml or less, asymptomatic"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7700
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Requiring bone marrow transplant, or; requiring transfusion of platelets or red cells at least once every six weeks, or; infections recurring at least once every six weeks"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Requiring transfusion of platelets or red cells at least once every three months, or; infections recurring at least once every three months"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Requiring transfusion of platelets or red cells at least once per year but less than once every three months, or; infections recurring at least once per year but less than once every three months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Requiring continuous medication for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7702
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With active disease or during a treatment phase"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7703
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "During periods of treatment with myelosuppressants and for three months following cessation of myelosuppressant therapy"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Requiring phlebotomy"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Stable, with or without continuous medication"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7704
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Platelet count of less than 20,000, with active bleeding, requiring treatment with medication and transfusions"
+    },
+    {
+     "ratings": [
+      70
+     ],
+     "description": "Platelet count between 20,000 and 70,000, not requiring treatment, without bleeding"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Stable platelet count between 70,000 and 100,000, without bleeding"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Stable platelet count of 100,000 or more, without bleeding"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7705
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "7706\u2003Splenectomy"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7706
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7707
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate for any residuals."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With active disease or during a treatment phase"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7709
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7710
+    }
+   ],
+   "notes": [
+    {
+     "note": "Rate under \u00a7\u00a7\u20094.88c or 4.89 of this part, whichever is appropriate."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With repeated painful crises, occurring in skin, joints, bones or any major organs caused by hemolysis and sickling of red blood cells, with anemia, thrombosis and infarction, with symptoms precluding even light manual labor"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With painful crises several times a year or with symptoms precluding other than light manual labor"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Following repeated hemolytic sickling crises with continuing impairment of health"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Asymptomatic, established case in remission, but with identifiable organ impairment"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7714
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With active disease or during a treatment phase"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7715
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Requiring bone marrow transplant, or; requiring transfusion of platelets or red cells at least once every six weeks, or; infections recurring at least once every six weeks"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Requiring transfusion of platelets or red cells at least once every three months, or; infections recurring at least once every three months"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Requiring transfusion of platelets or red cells at least once per year but less than once every three months, or; infections recurring at least once per year but less than once every three months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Requiring continuous medication for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7716
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "7717\u2003AL amyloidosis (primary amyloidosis)"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7717
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "references": [],
+ "notes": [
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  },
+  {
+   "note": "Note:\n\n                    "
+  }
+ ],
+ "see_other_notes": [
+  {
+   "see_other_note": "Otherwise rate as anemia (code 7700) or aplastic anemia (code 7716), whichever would result in the greater benefit.\n\n                  "
+  }
+ ]
+}

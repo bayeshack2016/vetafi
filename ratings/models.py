@@ -146,6 +146,18 @@ class RatingCategory(RatingTableObject):
     def add_see_other_note(self, see_other_note):
         self.see_other_notes.append(see_other_note)
 
+    def has_diagnostic_codes(self):
+        return len(self.diagnostic_code_sets) > 0
+
+    def is_root(self):
+        return id(self.parent) == id(self)
+
+    def get_older_siblings(self, older_than):
+        for category in self.subcategories:
+            if id(category) == id(older_than):
+                break
+            yield category
+
     def as_dict(self):
         return {'category': self.description,
                 'subcategories': [x.as_dict() for x in self.subcategories],

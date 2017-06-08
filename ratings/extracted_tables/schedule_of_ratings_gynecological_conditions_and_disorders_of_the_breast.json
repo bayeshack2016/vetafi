@@ -187,9 +187,15 @@
      "ratings": [
       {
        "ratings": [
-        0
+        80
        ],
-       "description": "Both or one"
+       "description": "Both"
+      },
+      {
+       "ratings": [
+        50
+       ],
+       "description": "One"
       }
      ],
      "codes": [
@@ -197,7 +203,11 @@
        "code": 7626
       }
      ],
-     "notes": []
+     "notes": [
+      {
+       "note": "Following radical mastectomy:"
+      }
+     ]
     }
    ],
    "references": [],
@@ -212,9 +222,15 @@
      "ratings": [
       {
        "ratings": [
-        0
+        60
        ],
-       "description": "Both or one"
+       "description": "Both"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "One"
       }
      ],
      "codes": [
@@ -237,9 +253,15 @@
      "ratings": [
       {
        "ratings": [
-        0
+        50
        ],
-       "description": "Both or one"
+       "description": "Both"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "One"
       }
      ],
      "codes": [
@@ -502,15 +524,9 @@
    "ratings": [
     {
      "ratings": [
-      30
+      100
      ],
-     "description": "Complete removal of both ovaries"
-    },
-    {
-     "ratings": [
-      0
-     ],
-     "description": "Removal of one with or without partial removal of the other"
+     "description": "For three months after removal"
     }
    ],
    "codes": [
