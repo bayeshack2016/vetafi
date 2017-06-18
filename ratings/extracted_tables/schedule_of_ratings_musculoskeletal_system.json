@@ -29,11 +29,7 @@
          "description": "&#;Arthritis, degenerative (hypertrophic or osteoarthritis):"
         }
        ],
-       "notes": [
-        {
-         "note": "Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:"
-        }
-       ]
+       "notes": []
       },
       {
        "ratings": [],
@@ -270,7 +266,6 @@
        ]
       }
      ],
-     "references": [],
      "notes": [
       {
        "note": "Note: The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation."
@@ -290,6 +285,9 @@
      ],
      "see_other_notes": [
       {
+       "see_other_note": "Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:"
+      },
+      {
        "see_other_note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
       },
       {
@@ -302,7 +300,6 @@
     }
    ],
    "diagnostic_code_sets": [],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   }
@@ -402,7 +399,6 @@
    "notes": []
   }
  ],
- "references": [],
  "notes": [
   {
    "note": "Note (1): A rating of 10 percent, as an exception to the amputation rule, is to be assigned in any case of active osteomyelitis where the amputation rating for the affected part is no percent. This 10 percent rating and the other partial ratings of 30 percent or less are to be combined with ratings for ankylosis, limited motion, nonunion or malunion, shortening, etc., subject, of course, to the amputation rule. The 60 percent rating, as it is based on constitutional symptoms, is not subject to the amputation rule. A rating for osteomyelitis will not be applied following cure by removal or radical resection of the affected bone."

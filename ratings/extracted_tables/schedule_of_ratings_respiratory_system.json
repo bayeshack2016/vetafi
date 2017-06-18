@@ -179,16 +179,16 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [
-    {
-     "note": "Note: Or evaluate as DC 7800, scars, disfiguring, head, face, or neck."
-    },
     {
      "note": "Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician."
     }
    ],
-   "see_other_notes": []
+   "see_other_notes": [
+    {
+     "see_other_note": "Note: Or evaluate as DC 7800, scars, disfiguring, head, face, or neck."
+    }
+   ]
   },
   {
    "category": "Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520).",
@@ -339,16 +339,16 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [
     {
      "note": "Note: Evaluate incomplete aphonia as laryngitis, chronic (DC 6516)."
-    },
-    {
-     "note": "Note: Or evaluate as aphonia (DC 6519)."
     }
    ],
-   "see_other_notes": []
+   "see_other_notes": [
+    {
+     "see_other_note": "Note: Or evaluate as aphonia (DC 6519)."
+    }
+   ]
   },
   {
    "category": "\n\n                    ",
@@ -425,7 +425,6 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   },
@@ -539,7 +538,6 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [
     {
      "note": "Note: An incapacitating episode is one that requires bedrest and treatment by a physician."
@@ -703,7 +701,6 @@
        "notes": []
       }
      ],
-     "references": [],
      "notes": [
       {
        "note": "Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment."
@@ -736,7 +733,6 @@
        "notes": []
       }
      ],
-     "references": [],
      "notes": [
       {
        "note": "Note: Active pulmonary tuberculosis will be considered permanently and totally disabling for non-service-connected pension purposes in the following circumstances:"
@@ -895,7 +891,6 @@
                "notes": []
               }
              ],
-             "references": [],
              "notes": [
               {
                "note": "Note: A mandatory examination will be requested immediately following notification that active tuberculosis evaluated under DC 6730 has become inactive. Any change in evaluation will be carried out under the provisions of &#167;&#8201;3.105(e)."
@@ -1032,7 +1027,6 @@
                  "notes": []
                 }
                ],
-               "references": [],
                "notes": [],
                "see_other_notes": []
               },
@@ -1126,7 +1120,6 @@
                  "notes": []
                 }
                ],
-               "references": [],
                "notes": [
                 {
                  "note": "Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor."
@@ -1224,7 +1217,6 @@
                  "notes": []
                 }
                ],
-               "references": [],
                "notes": [],
                "see_other_notes": []
               },
@@ -1268,7 +1260,6 @@
                  "notes": []
                 }
                ],
-               "references": [],
                "notes": [
                 {
                  "note": "Note (1): A 100-percent rating shall be assigned for pleurisy with empyema, with or without pleurocutaneous fistula, until resolved."
@@ -1322,49 +1313,41 @@
                  "notes": []
                 }
                ],
-               "references": [],
                "notes": [],
                "see_other_notes": []
               }
              ],
              "diagnostic_code_sets": [],
-             "references": [],
              "notes": [],
              "see_other_notes": []
             }
            ],
            "diagnostic_code_sets": [],
-           "references": [],
            "notes": [],
            "see_other_notes": []
           }
          ],
          "diagnostic_code_sets": [],
-         "references": [],
          "notes": [],
          "see_other_notes": []
         }
        ],
        "diagnostic_code_sets": [],
-       "references": [],
        "notes": [],
        "see_other_notes": []
       }
      ],
      "diagnostic_code_sets": [],
-     "references": [],
      "notes": [],
      "see_other_notes": []
     }
    ],
    "diagnostic_code_sets": [],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   }
  ],
  "diagnostic_code_sets": [],
- "references": [],
  "notes": [],
  "see_other_notes": []
 }

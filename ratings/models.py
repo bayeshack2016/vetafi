@@ -90,21 +90,6 @@ class DiagnosticCodeSet(RatingTableObject):
                 'notes': [note.as_dict() for note in self.notes]}
 
 
-class RatingReference(RatingTableObject):
-    def __init__(self, description: str):
-        self.description = description
-
-    @classmethod
-    def from_element(cls, element) -> 'RatingReference':
-        return RatingReference(util.inner_text(element))
-
-    def as_dict(self):
-        return {'reference': self.description}
-
-    def __str__(self) -> str:
-        return json.dumps(self.as_dict())
-
-
 class SeeOtherRatingNote(RatingTableObject):
     def __init__(self, description: str):
         self.description = description
@@ -125,7 +110,6 @@ class RatingCategory(RatingTableObject):
         self.description = description
         self.diagnostic_code_sets = []
         self.subcategories = []
-        self.references = []
         self.diagnostic_codes = []
         self.see_other_notes = []
         self.notes = []
@@ -133,9 +117,6 @@ class RatingCategory(RatingTableObject):
 
     def add_subcategory(self, subcategory: 'RatingCategory'):
         self.subcategories.append(subcategory)
-
-    def add_reference(self, reference):
-        self.references.append(reference)
 
     def add_note(self, note):
         self.notes.append(note)
@@ -162,7 +143,6 @@ class RatingCategory(RatingTableObject):
         return {'category': self.description,
                 'subcategories': [x.as_dict() for x in self.subcategories],
                 'diagnostic_code_sets': [x.as_dict() for x in self.diagnostic_code_sets],
-                'references': [x.as_dict() for x in self.references],
                 'notes': [x.as_dict() for x in self.notes],
                 'see_other_notes': [x.as_dict() for x in self.see_other_notes],
                 }

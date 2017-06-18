@@ -224,7 +224,6 @@
          "notes": []
         }
        ],
-       "references": [],
        "notes": [
         {
          "note": "Note: For evaluation under diagnostic code 7312, documentation of cirrhosis (by biopsy or imaging) and abnormal liver function tests must be present."
@@ -499,7 +498,6 @@
            "notes": []
           }
          ],
-         "references": [],
          "notes": [
           {
            "note": "Note: Amebiasis with or without liver abscess is parallel in symptomatology with ulcerative colitis and should be rated on the scale provided for the latter. Similarly, lung abscess due to amebiasis will be rated under the respiratory system schedule, diagnostic code 6809."
@@ -1043,7 +1041,6 @@
            ]
           }
          ],
-         "references": [],
          "notes": [
           {
            "note": "Note: Add 10 percent for bilateral involvement, provided the second hernia is compensable. This means that the more severely disabling hernia is to be evaluated, and 10 percent, only, added for the second hernia, if the latter is of compensable degree."
@@ -1087,19 +1084,16 @@
         }
        ],
        "diagnostic_code_sets": [],
-       "references": [],
        "notes": [],
        "see_other_notes": []
       }
      ],
      "diagnostic_code_sets": [],
-     "references": [],
      "notes": [],
      "see_other_notes": []
     }
    ],
    "diagnostic_code_sets": [],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   }
@@ -1366,7 +1360,6 @@
    "notes": []
   }
  ],
- "references": [],
  "notes": [
   {
    "note": "Note: Ratings for adhesions will be considered when there is history of operative or other traumatic or infectious (intraabdominal) process, and at least two of the following: disturbance of motility, actual partial obstruction, reflex disturbances, presence of pain."

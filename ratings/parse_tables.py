@@ -102,22 +102,6 @@ def is_diagnostic_code_row(row_element: ElementTree.Element):
     return row_length == 1 and munging.describes_diagnostic_code(entries[0].text)
 
 
-def is_reference_row(row_element: ElementTree.Element):
-    """
-    Some rows reference a different rating table, saying something like:
-
-    "Or evaluate as DC 7800, scars, disfiguring, head, face, or neck."
-
-    This will return true if this is the case.
-
-    :param row_element: The row ElementTree object
-    :return:
-    """
-    entries = row_element.findall('ENT')
-    row_length = len(entries)
-    return row_length == 1 and 'or evaluate as' in entries[0].text.lower()
-
-
 def is_note_row(row_element: ElementTree.Element):
     """
     Some rows are just an advisory note, for example:
@@ -154,11 +138,19 @@ def is_see_other_row(row_element: ElementTree.Element):
     entries = row_element.findall('ENT')
     row_length = len(entries)
 
+    identifying_fragments = [
+        'or evaluate as',
+        'rate particular condition as',
+        ' rate as',
+        'rate the disability as',
+        'rate as below'
+    ]
+
     for entry in entries:
         text = util.inner_text(entry)
         if '&#167;' in text and 'see' in text.lower():
             return True
-        elif ('rate particular condition as' in text.lower() or ' rate as' in text.lower() or 'rate the disability as' in text.lower()) and not 'rate as below' in text.lower():
+        elif any(x in text.lower() for x in identifying_fragments):
             return True
     return False
 
@@ -183,7 +175,7 @@ class RatingTableStateMachine:
     """
     Defines a state machine for parsing the ratings table XML
     """
-    states = ['category', 'diagnostic_code', 'rating', 'reference', 'note', 'see_other_note']
+    states = ['category', 'diagnostic_code', 'rating', 'note', 'see_other_note']
 
     transitions = [
         {'trigger': 'process_category',
@@ -192,7 +184,7 @@ class RatingTableStateMachine:
          'before': 'add_child_category'},
 
         {'trigger': 'process_category',
-         'source': ['reference', 'rating', 'note', 'see_other_note'],
+         'source': ['rating', 'note', 'see_other_note'],
          'dest': 'category',
          'before': 'add_sibling_category'},
 
@@ -200,11 +192,6 @@ class RatingTableStateMachine:
          'source': 'diagnostic_code',
          'dest': 'diagnostic_code',
          'before': 'add_diagnostic_code_info'},
-
-        {'trigger': 'process_reference',
-         'source': ['rating', 'category'],
-         'dest': 'reference',
-         'before': 'add_reference'},
 
         {'trigger': 'process_rating',
          'source': ['rating', 'diagnostic_code', 'note', 'see_other_note'],
@@ -274,9 +261,6 @@ class RatingTableStateMachine:
         self.current_category.parent.add_subcategory(category)
         self.last_category = self.current_category
         self.current_category = category
-
-    def add_reference(self, element):
-        self.current_category.add_reference(models.RatingReference.from_element(element))
 
     def add_first_diagnostic_code(self, element):
         self.current_diagnostic_code_set = models.DiagnosticCodeSet()
@@ -350,9 +334,6 @@ class RatingTableStateMachine:
         elif is_diagnostic_code_row(row):
             logger.debug("Diagnostic Code:\n" + util.pformat_element(row))
             self.process_diagnostic_code(row)
-        elif is_reference_row(row):
-            logger.debug("Reference:\n" + util.pformat_element(row))
-            self.process_reference(row)
         elif is_diagnostic_and_rating_row(row):
             logger.debug("Diagnostic + Rating:\n" + util.pformat_element(row))
             self.process_combined_diagnostic_rating(row)

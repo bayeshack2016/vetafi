@@ -47,7 +47,6 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   },
@@ -55,7 +54,6 @@
    "category": "Voiding dysfunction:",
    "subcategories": [],
    "diagnostic_code_sets": [],
-   "references": [],
    "notes": [],
    "see_other_notes": [
     {
@@ -97,7 +95,6 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   },
@@ -135,7 +132,6 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   },
@@ -161,7 +157,6 @@
      "notes": []
     }
    ],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   },
@@ -214,7 +209,6 @@
            "notes": []
           }
          ],
-         "references": [],
          "notes": [],
          "see_other_notes": []
         },
@@ -222,7 +216,6 @@
          "category": "Urninary tract infection:",
          "subcategories": [],
          "diagnostic_code_sets": [],
-         "references": [],
          "notes": [],
          "see_other_notes": [
           {
@@ -232,19 +225,16 @@
         }
        ],
        "diagnostic_code_sets": [],
-       "references": [],
        "notes": [],
        "see_other_notes": []
       }
      ],
      "diagnostic_code_sets": [],
-     "references": [],
      "notes": [],
      "see_other_notes": []
     }
    ],
    "diagnostic_code_sets": [],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   }
@@ -261,7 +251,6 @@
    "notes": []
   }
  ],
- "references": [],
  "notes": [],
  "see_other_notes": []
 }

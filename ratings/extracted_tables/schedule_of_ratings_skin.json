@@ -742,7 +742,6 @@
                    ]
                   }
                  ],
-                 "references": [],
                  "notes": [
                   {
                    "note": "Note (2): Rate tissue loss of the auricle under DC 6207 (loss of auricle) and anatomical loss of the eye under DC 6061 (anatomical loss of both eyes) or DC 6063 (anatomical loss of one eye), as appropriate."
@@ -822,43 +821,36 @@
                 }
                ],
                "diagnostic_code_sets": [],
-               "references": [],
                "notes": [],
                "see_other_notes": []
               }
              ],
              "diagnostic_code_sets": [],
-             "references": [],
              "notes": [],
              "see_other_notes": []
             }
            ],
            "diagnostic_code_sets": [],
-           "references": [],
            "notes": [],
            "see_other_notes": []
           }
          ],
          "diagnostic_code_sets": [],
-         "references": [],
          "notes": [],
          "see_other_notes": []
         }
        ],
        "diagnostic_code_sets": [],
-       "references": [],
        "notes": [],
        "see_other_notes": []
       }
      ],
      "diagnostic_code_sets": [],
-     "references": [],
      "notes": [],
      "see_other_notes": []
     }
    ],
    "diagnostic_code_sets": [],
-   "references": [],
    "notes": [],
    "see_other_notes": []
   }
@@ -900,7 +892,6 @@
    "notes": []
   }
  ],
- "references": [],
  "notes": [
   {
    "note": "Note (1):The 8 characteristics of disfigurement, for purposes of evaluation under &#167;&#8201;4.118, are:"
