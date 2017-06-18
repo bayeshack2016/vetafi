@@ -311,20 +311,6 @@
    "notes": []
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7912,
-     "description": "&#;Pluriglandular syndrome"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Evaluate according to major manifestations."
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -359,11 +345,19 @@
    ],
    "codes": [
     {
+     "code": 7912,
+     "description": "&#;Pluriglandular syndrome"
+    },
+    {
      "code": 7913,
      "description": "&#;Diabetes mellitus"
     }
    ],
-   "notes": []
+   "notes": [
+    {
+     "note": "Evaluate according to major manifestations."
+    }
+   ]
   },
   {
    "ratings": [
@@ -388,23 +382,11 @@
     {
      "code": 7916,
      "description": "&#;Hyperpituitarism (prolactin secreting pituitary dysfunction)"
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7917,
      "description": "&#;Hyperaldosteronism (benign or malignant)"
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7918,
      "description": "&#;Pheochromocytoma (benign or malignant)"

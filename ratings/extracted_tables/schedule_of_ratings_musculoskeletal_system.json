@@ -37,53 +37,23 @@
         {
          "code": 5004,
          "description": "&#;Arthritis, gonorrheal."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
+        },
         {
          "code": 5005,
          "description": "&#;Arthritis, pneumococcic."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
+        },
         {
          "code": 5006,
          "description": "&#;Arthritis, typhoid."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
+        },
         {
          "code": 5007,
          "description": "&#;Arthritis, syphilitic."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
+        },
         {
          "code": 5008,
          "description": "&#;Arthritis, streptococcic."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
+        },
         {
          "code": 5009,
          "description": "&#;Arthritis, other types (specify)."
@@ -109,130 +79,6 @@
        "notes": []
       },
       {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5013,
-         "description": "&#;Osteoporosis, with joint manifestations."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5014,
-         "description": "&#;Osteomalacia."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5015,
-         "description": "&#;Bones, new growths of, benign."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5016,
-         "description": "&#;Osteitis deformans."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5017,
-         "description": "&#;Gout."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5018,
-         "description": "&#;Hydrarthrosis, intermittent."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5019,
-         "description": "&#;Bursitis."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5020,
-         "description": "&#;Synovitis."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5021,
-         "description": "&#;Myositis."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5022,
-         "description": "&#;Periostitis."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5023,
-         "description": "&#;Myositis ossificans."
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5024,
-         "description": "&#;Tenosynovitis."
-        }
-       ],
-       "notes": [
-        {
-         "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
-        }
-       ]
-      },
-      {
        "ratings": [
         {
          "ratings": [
@@ -255,11 +101,62 @@
        ],
        "codes": [
         {
+         "code": 5013,
+         "description": "&#;Osteoporosis, with joint manifestations."
+        },
+        {
+         "code": 5014,
+         "description": "&#;Osteomalacia."
+        },
+        {
+         "code": 5015,
+         "description": "&#;Bones, new growths of, benign."
+        },
+        {
+         "code": 5016,
+         "description": "&#;Osteitis deformans."
+        },
+        {
+         "code": 5017,
+         "description": "&#;Gout."
+        },
+        {
+         "code": 5018,
+         "description": "&#;Hydrarthrosis, intermittent."
+        },
+        {
+         "code": 5019,
+         "description": "&#;Bursitis."
+        },
+        {
+         "code": 5020,
+         "description": "&#;Synovitis."
+        },
+        {
+         "code": 5021,
+         "description": "&#;Myositis."
+        },
+        {
+         "code": 5022,
+         "description": "&#;Periostitis."
+        },
+        {
+         "code": 5023,
+         "description": "&#;Myositis ossificans."
+        },
+        {
+         "code": 5024,
+         "description": "&#;Tenosynovitis."
+        },
+        {
          "code": 5025,
          "description": "&#;Fibromyalgia (fibrositis, primary fibromyalgia syndrome)"
         }
        ],
        "notes": [
+        {
+         "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
+        },
         {
          "note": "With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:"
         }

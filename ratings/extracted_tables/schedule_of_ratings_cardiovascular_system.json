@@ -298,7 +298,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter:\n\n                  ",
+   "category": "Thereafter:",
    "subcategories": [
     {
      "category": "With history of documented myocardial infarction, resulting in:",
@@ -375,20 +375,6 @@
        "notes": []
       },
       {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 7008,
-         "description": "&#;Hyperthyroid heart disease:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation."
-        }
-       ]
-      },
-      {
        "ratings": [
         {
          "ratings": [
@@ -405,11 +391,19 @@
        ],
        "codes": [
         {
+         "code": 7008,
+         "description": "&#;Hyperthyroid heart disease:"
+        },
+        {
          "code": 7010,
          "description": "&#;Supraventricular arrhythmias:"
         }
        ],
-       "notes": []
+       "notes": [
+        {
+         "note": "Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation."
+        }
+       ]
       },
       {
        "ratings": [
@@ -762,7 +756,7 @@
      "see_other_notes": []
     },
     {
-     "category": "\n\n                    ",
+     "category": "Diseases of the Arteries and Veins",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -838,7 +832,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Evaluate residuals of surgical correction according to organ systems affected.\n\n                  ",
+     "category": "Evaluate residuals of surgical correction according to organ systems affected.",
      "subcategories": [],
      "diagnostic_code_sets": [
       {

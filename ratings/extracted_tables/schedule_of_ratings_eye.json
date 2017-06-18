@@ -2,7 +2,7 @@
  "category": "Schedule of ratings\u2014eye.",
  "subcategories": [
   {
-   "category": "Inactive: Evaluate under \u00a7\u20094.88c or \u00a7\u20094.89 of this part, whichever is appropriate.",
+   "category": "Inactive: Evaluate under &#167;&#8201;4.88c or &#167;&#8201;4.89 of this part, whichever is appropriate.",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -207,20 +207,6 @@
      "subcategories": [],
      "diagnostic_code_sets": [
       {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6019,
-         "description": "&#;Ptosis, unilateral or bilateral:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800)."
-        }
-       ]
-      },
-      {
        "ratings": [
         {
          "ratings": [
@@ -237,11 +223,19 @@
        ],
        "codes": [
         {
+         "code": 6019,
+         "description": "&#;Ptosis, unilateral or bilateral:"
+        },
+        {
          "code": 6020,
          "description": "&#;Ectropion:"
         }
        ],
-       "notes": []
+       "notes": [
+        {
+         "note": "Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800)."
+        }
+       ]
       },
       {
        "ratings": [
@@ -347,28 +341,32 @@
        "notes": []
       },
       {
-       "ratings": [],
+       "ratings": [
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Minimum (unilateral or bilateral)"
+        }
+       ],
        "codes": [
         {
          "code": 6026,
          "description": "&#;Optic neuropathy:"
+        },
+        {
+         "code": 6027,
+         "description": "&#;Cataract of any type:"
+        },
+        {
+         "code": 6029,
+         "description": "&#;Aphakia or dislocation of crystalline lens:"
         }
        ],
        "notes": [
         {
          "note": "Evaluate based on visual impairment."
-        }
-       ]
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6027,
-         "description": "&#;Cataract of any type:"
-        }
-       ],
-       "notes": [
+        },
         {
          "note": "&#8195;Preoperative:"
         },
@@ -380,25 +378,7 @@
         },
         {
          "note": "If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia."
-        }
-       ]
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Minimum (unilateral or bilateral)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6029,
-         "description": "&#;Aphakia or dislocation of crystalline lens:"
-        }
-       ],
-       "notes": [
+        },
         {
          "note": "Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step."
         }
@@ -422,48 +402,6 @@
        "notes": []
       },
       {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6032,
-         "description": "&#;Loss of eyelids, partial or complete:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
-        }
-       ]
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6034,
-         "description": "&#;Pterygium:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings."
-        }
-       ]
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6035,
-         "description": "&#;Keratoconus:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Evaluate based on impairment of visual acuity."
-        }
-       ]
-      },
-      {
        "ratings": [
         {
          "ratings": [
@@ -474,11 +412,32 @@
        ],
        "codes": [
         {
+         "code": 6032,
+         "description": "&#;Loss of eyelids, partial or complete:"
+        },
+        {
+         "code": 6034,
+         "description": "&#;Pterygium:"
+        },
+        {
+         "code": 6035,
+         "description": "&#;Keratoconus:"
+        },
+        {
          "code": 6036,
          "description": "&#;Status post corneal transplant:"
         }
        ],
        "notes": [
+        {
+         "note": "Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
+        },
+        {
+         "note": "Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings."
+        },
+        {
+         "note": "Evaluate based on impairment of visual acuity."
+        },
         {
          "note": "Evaluate based on visual impairment."
         }
@@ -1021,66 +980,6 @@
  ],
  "diagnostic_code_sets": [
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6000,
-     "description": "&#;Choroidopathy, including uveitis, iritis, cyclitis, and choroiditis."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6001,
-     "description": "&#;Keratopathy."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6002,
-     "description": "&#;Scleritis."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6006,
-     "description": "&#;Retinopathy or maculopathy."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6007,
-     "description": "&#;Intraocular hemorrhage."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6008,
-     "description": "&#;Detachment of retina."
-    }
-   ],
-   "notes": []
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -1108,6 +1007,30 @@
     }
    ],
    "codes": [
+    {
+     "code": 6000,
+     "description": "&#;Choroidopathy, including uveitis, iritis, cyclitis, and choroiditis."
+    },
+    {
+     "code": 6001,
+     "description": "&#;Keratopathy."
+    },
+    {
+     "code": 6002,
+     "description": "&#;Scleritis."
+    },
+    {
+     "code": 6006,
+     "description": "&#;Retinopathy or maculopathy."
+    },
+    {
+     "code": 6007,
+     "description": "&#;Intraocular hemorrhage."
+    },
+    {
+     "code": 6008,
+     "description": "&#;Detachment of retina."
+    },
     {
      "code": 6009,
      "description": "&#;Unhealed eye injury."

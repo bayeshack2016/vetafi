@@ -20,34 +20,6 @@
    "notes": []
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6201,
-     "description": "&#;Chronic nonsuppurative otitis media with effusion (serous otitis media):"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate hearing impairment"
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6202,
-     "description": "&#;Otosclerosis:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate hearing impairment"
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -64,11 +36,26 @@
    ],
    "codes": [
     {
+     "code": 6201,
+     "description": "&#;Chronic nonsuppurative otitis media with effusion (serous otitis media):"
+    },
+    {
+     "code": 6202,
+     "description": "&#;Otosclerosis:"
+    },
+    {
      "code": 6204,
      "description": "&#;Peripheral vestibular disorders:"
     }
    ],
-   "notes": []
+   "notes": [
+    {
+     "note": "Rate hearing impairment"
+    },
+    {
+     "note": "Rate hearing impairment"
+    }
+   ]
   },
   {
    "ratings": [
@@ -146,20 +133,6 @@
    "notes": []
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 6209,
-     "description": "&#;Benign neoplasms of the ear (other than skin only):"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate on impairment of function."
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -170,11 +143,19 @@
    ],
    "codes": [
     {
+     "code": 6209,
+     "description": "&#;Benign neoplasms of the ear (other than skin only):"
+    },
+    {
      "code": 6210,
      "description": "&#;Chronic otitis externa:"
     }
    ],
-   "notes": []
+   "notes": [
+    {
+     "note": "Rate on impairment of function."
+    }
+   ]
   },
   {
    "ratings": [

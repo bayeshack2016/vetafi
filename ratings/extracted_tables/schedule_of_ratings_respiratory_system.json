@@ -2,7 +2,7 @@
  "category": "Schedule of ratings\u2014respiratory system.",
  "subcategories": [
   {
-   "category": "\n\n                    ",
+   "category": "DISEASES OF THE NOSE AND THROAT",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -50,46 +50,6 @@
      "notes": []
     },
     {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 6510,
-       "description": "&#;Sinusitis, pansinusitis, chronic."
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 6511,
-       "description": "&#;Sinusitis, ethmoid, chronic."
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 6512,
-       "description": "&#;Sinusitis, frontal, chronic."
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 6513,
-       "description": "&#;Sinusitis, maxillary, chronic."
-      }
-     ],
-     "notes": []
-    },
-    {
      "ratings": [
       {
        "ratings": [
@@ -118,25 +78,27 @@
      ],
      "codes": [
       {
+       "code": 6510,
+       "description": "&#;Sinusitis, pansinusitis, chronic."
+      },
+      {
+       "code": 6511,
+       "description": "&#;Sinusitis, ethmoid, chronic."
+      },
+      {
+       "code": 6512,
+       "description": "&#;Sinusitis, frontal, chronic."
+      },
+      {
+       "code": 6513,
+       "description": "&#;Sinusitis, maxillary, chronic."
+      },
+      {
        "code": 6514,
        "description": "&#;Sinusitis, sphenoid, chronic."
       }
      ],
      "notes": []
-    },
-    {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 6515,
-       "description": "&#;Laryngitis, tuberculous, active or inactive."
-      }
-     ],
-     "notes": [
-      {
-       "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
-      }
-     ]
     },
     {
      "ratings": [
@@ -155,11 +117,19 @@
      ],
      "codes": [
       {
+       "code": 6515,
+       "description": "&#;Laryngitis, tuberculous, active or inactive."
+      },
+      {
        "code": 6516,
        "description": "&#;Laryngitis, chronic:"
       }
      ],
-     "notes": []
+     "notes": [
+      {
+       "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
+      }
+     ]
     },
     {
      "ratings": [
@@ -351,7 +321,7 @@
    ]
   },
   {
-   "category": "\n\n                    ",
+   "category": "DISEASES OF THE TRACHEA AND BRONCHI",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -429,7 +399,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600).\n\n                  ",
+   "category": "Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600).",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -549,10 +519,10 @@
    "see_other_notes": []
   },
   {
-   "category": "\n\n                    ",
+   "category": "DISEASES OF THE LUNGS AND PLEURA&#8212;TUBERCULOSIS",
    "subcategories": [
     {
-     "category": "\n\n                    ",
+     "category": "Ratings for Pulmonary Tuberculosis Entitled on August 19, 1968",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -624,36 +594,6 @@
        "notes": []
       },
       {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6721,
-         "description": "&#;Tuberculosis, pulmonary, chronic, far advanced, inactive"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6722,
-         "description": "&#;Tuberculosis, pulmonary, chronic, moderately advanced, inactive"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6723,
-         "description": "&#;Tuberculosis, pulmonary, chronic, minimal, inactive"
-        }
-       ],
-       "notes": []
-      },
-      {
        "ratings": [
         {
          "ratings": [
@@ -694,6 +634,18 @@
        ],
        "codes": [
         {
+         "code": 6721,
+         "description": "&#;Tuberculosis, pulmonary, chronic, far advanced, inactive"
+        },
+        {
+         "code": 6722,
+         "description": "&#;Tuberculosis, pulmonary, chronic, moderately advanced, inactive"
+        },
+        {
+         "code": 6723,
+         "description": "&#;Tuberculosis, pulmonary, chronic, minimal, inactive"
+        },
+        {
          "code": 6724,
          "description": "&#;Tuberculosis, pulmonary, chronic, inactive, advancement unspecified"
         }
@@ -712,7 +664,7 @@
      "see_other_notes": []
     },
     {
-     "category": "\n\n                    ",
+     "category": "Ratings for Pulmonary Tuberculosis Initially Evaluated After August 19, 1968",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -753,7 +705,7 @@
            "category": "(d) With advancement of lesions on successive examinations or while under treatment.",
            "subcategories": [
             {
-             "category": "(e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from \u201cactive\u201d at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion.\n\n                  ",
+             "category": "(e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from &#8220;active&#8221; at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion.",
              "subcategories": [],
              "diagnostic_code_sets": [
               {
@@ -767,23 +719,6 @@
                "notes": [
                 {
                  "note": "Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600). Rate thoracoplasty as removal of ribs under DC 5297."
-                }
-               ]
-              },
-              {
-               "ratings": [],
-               "codes": [
-                {
-                 "code": 6732,
-                 "description": "&#;Pleurisy, tuberculous, active or inactive:"
-                }
-               ],
-               "notes": [
-                {
-                 "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
-                },
-                {
-                 "note": "NONTUBERCULOUS DISEASES"
                 }
                ]
               },
@@ -816,11 +751,22 @@
                ],
                "codes": [
                 {
+                 "code": 6732,
+                 "description": "&#;Pleurisy, tuberculous, active or inactive:"
+                },
+                {
                  "code": 6817,
                  "description": "&#;Pulmonary Vascular Disease:"
                 }
                ],
-               "notes": []
+               "notes": [
+                {
+                 "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
+                },
+                {
+                 "note": "NONTUBERCULOUS DISEASES"
+                }
+               ]
               },
               {
                "ratings": [
@@ -840,40 +786,6 @@
                "notes": []
               },
               {
-               "ratings": [],
-               "codes": [
-                {
-                 "code": 6820,
-                 "description": "&#;Neoplasms, benign, any specified part of respiratory system. Evaluate using an appropriate respiratory analogy."
-                }
-               ],
-               "notes": [
-                {
-                 "note": "Bacterial Infections of the Lung"
-                }
-               ]
-              },
-              {
-               "ratings": [],
-               "codes": [
-                {
-                 "code": 6822,
-                 "description": "&#;Actinomycosis."
-                }
-               ],
-               "notes": []
-              },
-              {
-               "ratings": [],
-               "codes": [
-                {
-                 "code": 6823,
-                 "description": "&#;Nocardiosis."
-                }
-               ],
-               "notes": []
-              },
-              {
                "ratings": [
                 {
                  "ratings": [
@@ -884,11 +796,27 @@
                ],
                "codes": [
                 {
+                 "code": 6820,
+                 "description": "&#;Neoplasms, benign, any specified part of respiratory system. Evaluate using an appropriate respiratory analogy."
+                },
+                {
+                 "code": 6822,
+                 "description": "&#;Actinomycosis."
+                },
+                {
+                 "code": 6823,
+                 "description": "&#;Nocardiosis."
+                },
+                {
                  "code": 6824,
                  "description": "&#;Chronic lung abscess."
                 }
                ],
-               "notes": []
+               "notes": [
+                {
+                 "note": "Bacterial Infections of the Lung"
+                }
+               ]
               }
              ],
              "notes": [
@@ -908,89 +836,9 @@
              "category": "Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).",
              "subcategories": [
               {
-               "category": "\n\n                    ",
+               "category": "Interstitial Lung Disease",
                "subcategories": [],
                "diagnostic_code_sets": [
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6825,
-                   "description": "&#;Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis)."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6826,
-                   "description": "&#;Desquamative interstitial pneumonitis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6827,
-                   "description": "&#;Pulmonary alveolar proteinosis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6828,
-                   "description": "&#;Eosinophilic granuloma of lung."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6829,
-                   "description": "&#;Drug-induced pulmonary pneumonitis and fibrosis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6830,
-                   "description": "&#;Radiation-induced pulmonary pneumonitis and fibrosis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6831,
-                   "description": "&#;Hypersensitivity pneumonitis (extrinsic allergic alveolitis)."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6832,
-                   "description": "&#;Pneumoconiosis (silicosis, anthracosis, etc.)."
-                  }
-                 ],
-                 "notes": []
-                },
                 {
                  "ratings": [
                   {
@@ -1020,6 +868,38 @@
                  ],
                  "codes": [
                   {
+                   "code": 6825,
+                   "description": "&#;Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis)."
+                  },
+                  {
+                   "code": 6826,
+                   "description": "&#;Desquamative interstitial pneumonitis."
+                  },
+                  {
+                   "code": 6827,
+                   "description": "&#;Pulmonary alveolar proteinosis."
+                  },
+                  {
+                   "code": 6828,
+                   "description": "&#;Eosinophilic granuloma of lung."
+                  },
+                  {
+                   "code": 6829,
+                   "description": "&#;Drug-induced pulmonary pneumonitis and fibrosis."
+                  },
+                  {
+                   "code": 6830,
+                   "description": "&#;Radiation-induced pulmonary pneumonitis and fibrosis."
+                  },
+                  {
+                   "code": 6831,
+                   "description": "&#;Hypersensitivity pneumonitis (extrinsic allergic alveolitis)."
+                  },
+                  {
+                   "code": 6832,
+                   "description": "&#;Pneumoconiosis (silicosis, anthracosis, etc.)."
+                  },
+                  {
                    "code": 6833,
                    "description": "&#;Asbestosis."
                   }
@@ -1031,59 +911,9 @@
                "see_other_notes": []
               },
               {
-               "category": "\n\n                    ",
+               "category": "Mycotic Lung Disease",
                "subcategories": [],
                "diagnostic_code_sets": [
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6834,
-                   "description": "&#;Histoplasmosis of lung."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6835,
-                   "description": "&#;Coccidioidomycosis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6836,
-                   "description": "&#;Blastomycosis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6837,
-                   "description": "&#;Cryptococcosis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6838,
-                   "description": "&#;Aspergillosis."
-                  }
-                 ],
-                 "notes": []
-                },
                 {
                  "ratings": [
                   {
@@ -1113,6 +943,26 @@
                  ],
                  "codes": [
                   {
+                   "code": 6834,
+                   "description": "&#;Histoplasmosis of lung."
+                  },
+                  {
+                   "code": 6835,
+                   "description": "&#;Coccidioidomycosis."
+                  },
+                  {
+                   "code": 6836,
+                   "description": "&#;Blastomycosis."
+                  },
+                  {
+                   "code": 6837,
+                   "description": "&#;Cryptococcosis."
+                  },
+                  {
+                   "code": 6838,
+                   "description": "&#;Aspergillosis."
+                  },
+                  {
                    "code": 6839,
                    "description": "&#;Mucormycosis."
                   }
@@ -1128,59 +978,9 @@
                "see_other_notes": []
               },
               {
-               "category": "\n\n                    ",
+               "category": "Restrictive Lung Disease",
                "subcategories": [],
                "diagnostic_code_sets": [
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6840,
-                   "description": "&#;Diaphragm paralysis or paresis."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6841,
-                   "description": "&#;Spinal cord injury with respiratory insufficiency."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6842,
-                   "description": "&#;Kyphoscoliosis, pectus excavatum, pectus carinatum."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6843,
-                   "description": "&#;Traumatic chest wall defect, pneumothorax, hernia, etc."
-                  }
-                 ],
-                 "notes": []
-                },
-                {
-                 "ratings": [],
-                 "codes": [
-                  {
-                   "code": 6844,
-                   "description": "&#;Post-surgical residual (lobectomy, pneumonectomy, etc.)."
-                  }
-                 ],
-                 "notes": []
-                },
                 {
                  "ratings": [
                   {
@@ -1210,6 +1010,26 @@
                  ],
                  "codes": [
                   {
+                   "code": 6840,
+                   "description": "&#;Diaphragm paralysis or paresis."
+                  },
+                  {
+                   "code": 6841,
+                   "description": "&#;Spinal cord injury with respiratory insufficiency."
+                  },
+                  {
+                   "code": 6842,
+                   "description": "&#;Kyphoscoliosis, pectus excavatum, pectus carinatum."
+                  },
+                  {
+                   "code": 6843,
+                   "description": "&#;Traumatic chest wall defect, pneumothorax, hernia, etc."
+                  },
+                  {
+                   "code": 6844,
+                   "description": "&#;Post-surgical residual (lobectomy, pneumonectomy, etc.)."
+                  },
+                  {
                    "code": 6845,
                    "description": "&#;Chronic pleural effusion or fibrosis."
                   }
@@ -1221,7 +1041,7 @@
                "see_other_notes": []
               },
               {
-               "category": "Or rate primary disorder.\n\n                  ",
+               "category": "Or rate primary disorder.",
                "subcategories": [],
                "diagnostic_code_sets": [
                 {

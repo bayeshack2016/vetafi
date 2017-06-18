@@ -108,20 +108,6 @@
                    "notes": []
                   },
                   {
-                   "ratings": [],
-                   "codes": [
-                    {
-                     "code": 7805,
-                     "description": "&#;Scars, other (including linear scars) and other effects of scars evaluated under diagnostic codes , , , and :"
-                    }
-                   ],
-                   "notes": [
-                    {
-                     "note": "Evaluate any disabling effect(s) not considered in a rating provided under diagnostic codes 7800-04 under an appropriate diagnostic code."
-                    }
-                   ]
-                  },
-                  {
                    "ratings": [
                     {
                      "ratings": [
@@ -150,11 +136,19 @@
                    ],
                    "codes": [
                     {
+                     "code": 7805,
+                     "description": "&#;Scars, other (including linear scars) and other effects of scars evaluated under diagnostic codes , , , and :"
+                    },
+                    {
                      "code": 7806,
                      "description": "&#;Dermatitis or eczema."
                     }
                    ],
-                   "notes": []
+                   "notes": [
+                    {
+                     "note": "Evaluate any disabling effect(s) not considered in a rating provided under diagnostic codes 7800-04 under an appropriate diagnostic code."
+                    }
+                   ]
                   },
                   {
                    "ratings": [],
@@ -181,48 +175,6 @@
                    "notes": [
                     {
                      "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's, 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disabililty"
-                    }
-                   ]
-                  },
-                  {
-                   "ratings": [],
-                   "codes": [
-                    {
-                     "code": 7809,
-                     "description": "&#;Discoid lupus erythematosus or subacute cutaneous lupus erythematosus:"
-                    }
-                   ],
-                   "notes": [
-                    {
-                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability. Do not combine with ratings under DC 6350"
-                    }
-                   ]
-                  },
-                  {
-                   "ratings": [],
-                   "codes": [
-                    {
-                     "code": 7811,
-                     "description": "&#;Tuberculosis luposa (lupus vulgaris), active or inactive:"
-                    }
-                   ],
-                   "notes": [
-                    {
-                     "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate"
-                    }
-                   ]
-                  },
-                  {
-                   "ratings": [],
-                   "codes": [
-                    {
-                     "code": 7813,
-                     "description": "&#;Dermatophytosis (ringworm: of body, tinea corporis; of head, tinea capitis; of feet, tinea pedis; of beard area, tinea barbae; of nails, tinea unguium; of inguinal area (jock itch), tinea cruris):"
-                    }
-                   ],
-                   "notes": [
-                    {
-                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability"
                     }
                    ]
                   },
@@ -255,11 +207,33 @@
                    ],
                    "codes": [
                     {
+                     "code": 7809,
+                     "description": "&#;Discoid lupus erythematosus or subacute cutaneous lupus erythematosus:"
+                    },
+                    {
+                     "code": 7811,
+                     "description": "&#;Tuberculosis luposa (lupus vulgaris), active or inactive:"
+                    },
+                    {
+                     "code": 7813,
+                     "description": "&#;Dermatophytosis (ringworm: of body, tinea corporis; of head, tinea capitis; of feet, tinea pedis; of beard area, tinea barbae; of nails, tinea unguium; of inguinal area (jock itch), tinea cruris):"
+                    },
+                    {
                      "code": 7815,
                      "description": "&#;Bullous disorders (including pemphigus vulgaris, pemphigus foliaceous, bullous pemphigoid, dermatitis herpetiformis, epidermolysis bullosa acquisita, benign chronic familial pemphigus (Hailey-Hailey), and porphyria cutanea tarda):"
                     }
                    ],
-                   "notes": []
+                   "notes": [
+                    {
+                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability. Do not combine with ratings under DC 6350"
+                    },
+                    {
+                     "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate"
+                    },
+                    {
+                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability"
+                    }
+                   ]
                   },
                   {
                    "ratings": [
@@ -352,34 +326,6 @@
                    ]
                   },
                   {
-                   "ratings": [],
-                   "codes": [
-                    {
-                     "code": 7819,
-                     "description": "&#;Benign skin neoplasms:"
-                    }
-                   ],
-                   "notes": [
-                    {
-                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or impairment of function"
-                    }
-                   ]
-                  },
-                  {
-                   "ratings": [],
-                   "codes": [
-                    {
-                     "code": 7820,
-                     "description": "&#;Infections of the skin not listed elsewhere (including bacterial, fungal, viral, treponemal and parasitic diseases):"
-                    }
-                   ],
-                   "notes": [
-                    {
-                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability"
-                    }
-                   ]
-                  },
-                  {
                    "ratings": [
                     {
                      "ratings": [
@@ -408,11 +354,26 @@
                    ],
                    "codes": [
                     {
+                     "code": 7819,
+                     "description": "&#;Benign skin neoplasms:"
+                    },
+                    {
+                     "code": 7820,
+                     "description": "&#;Infections of the skin not listed elsewhere (including bacterial, fungal, viral, treponemal and parasitic diseases):"
+                    },
+                    {
                      "code": 7821,
                      "description": "&#;Cutaneous manifestations of collagen-vascular diseases not listed elsewhere (including scleroderma, calcinosis cutis, and dermatomyositis):"
                     }
                    ],
-                   "notes": []
+                   "notes": [
+                    {
+                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or impairment of function"
+                    },
+                    {
+                     "note": "Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability"
+                    }
+                   ]
                   },
                   {
                    "ratings": [

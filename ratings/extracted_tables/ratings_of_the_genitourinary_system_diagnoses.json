@@ -30,76 +30,6 @@
    "notes": []
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7501,
-     "description": "&#;Kidney, abscess of:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as urinary tract infection"
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7502,
-     "description": "&#;Nephritis, chronic:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7504,
-     "description": "&#;Pyelonephritis, chronic:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction or urinary tract infection, whichever is predominant."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7505,
-     "description": "&#;Kidney, tuberculosis of:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate in accordance with &#167;&#167;&#8201;4.88b or 4.89, whichever is appropriate."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7507,
-     "description": "&#;Nephrosclerosis, arteriolar:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate according to predominant symptoms as renal dysfunction, hypertension or heart disease. If rated under the cardiovascular schedule, however, the percentage rating which would otherwise be assigned will be elevated to the next higher evaluation."
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -110,11 +40,46 @@
    ],
    "codes": [
     {
+     "code": 7501,
+     "description": "&#;Kidney, abscess of:"
+    },
+    {
+     "code": 7502,
+     "description": "&#;Nephritis, chronic:"
+    },
+    {
+     "code": 7504,
+     "description": "&#;Pyelonephritis, chronic:"
+    },
+    {
+     "code": 7505,
+     "description": "&#;Kidney, tuberculosis of:"
+    },
+    {
+     "code": 7507,
+     "description": "&#;Nephrosclerosis, arteriolar:"
+    },
+    {
      "code": 7508,
      "description": "&#;Nephrolithiasis:"
     }
    ],
    "notes": [
+    {
+     "note": "Rate as urinary tract infection"
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction or urinary tract infection, whichever is predominant."
+    },
+    {
+     "note": "Rate in accordance with &#167;&#167;&#8201;4.88b or 4.89, whichever is appropriate."
+    },
+    {
+     "note": "Rate according to predominant symptoms as renal dysfunction, hypertension or heart disease. If rated under the cardiovascular schedule, however, the percentage rating which would otherwise be assigned will be elevated to the next higher evaluation."
+    },
     {
      "note": "Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:"
     },
@@ -210,34 +175,6 @@
    ]
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7512,
-     "description": "&#;Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as voiding dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7515,
-     "description": "&#;Bladder, calculus in, with symptoms interfering with function:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as voiding dysfunction"
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -248,41 +185,27 @@
    ],
    "codes": [
     {
+     "code": 7512,
+     "description": "&#;Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious:"
+    },
+    {
+     "code": 7515,
+     "description": "&#;Bladder, calculus in, with symptoms interfering with function:"
+    },
+    {
      "code": 7516,
      "description": "&#;Bladder, fistula of:"
     }
    ],
    "notes": [
     {
+     "note": "Rate as voiding dysfunction."
+    },
+    {
+     "note": "Rate as voiding dysfunction"
+    },
+    {
      "note": "Rate as voiding dysfunction or urinary tract infection, whichever is predominant."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7517,
-     "description": "&#;Bladder, injury of:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as voiding dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7518,
-     "description": "&#;Urethra, stricture of:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as voiding dysfunction."
     }
    ]
   },
@@ -297,11 +220,25 @@
    ],
    "codes": [
     {
+     "code": 7517,
+     "description": "&#;Bladder, injury of:"
+    },
+    {
+     "code": 7518,
+     "description": "&#;Urethra, stricture of:"
+    },
+    {
      "code": 7519,
      "description": "&#;Urethra, fistual of:"
     }
    ],
    "notes": [
+    {
+     "note": "Rate as voiding dysfunction."
+    },
+    {
+     "note": "Rate as voiding dysfunction."
+    },
     {
      "note": "Rate as voiding dysfunction."
     }
@@ -347,16 +284,14 @@
     {
      "code": 7522,
      "description": "&#;Penis, deformity, with loss of erectile power&#;20&#;"
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7523,
      "description": "&#;Testis, atrophy complete:"
+    },
+    {
+     "code": 7524,
+     "description": "&#;Testis, removal:"
     }
    ],
    "notes": [
@@ -365,18 +300,7 @@
     },
     {
      "note": "One&#8212;0&#8201;"
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7524,
-     "description": "&#;Testis, removal:"
-    }
-   ],
-   "notes": [
+    },
     {
      "note": "Both&#8212;30&#8201;"
     },
@@ -391,6 +315,10 @@
     {
      "code": 7525,
      "description": "&#;Epididymo-orchitis, chronic only:"
+    },
+    {
+     "code": 7527,
+     "description": "&#;Prostate gland injuries, infections, hypertrophy, postoperative residuals:"
     }
    ],
    "notes": [
@@ -399,18 +327,7 @@
     },
     {
      "note": "For tubercular infections: Rate in accordance with &#167;&#167;&#8201;4.88b or 4.89, whichever is appropriate."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7527,
-     "description": "&#;Prostate gland injuries, infections, hypertrophy, postoperative residuals:"
-    }
-   ],
-   "notes": [
+    },
     {
      "note": "Rate as voiding dysfunction or urinary tract infection, whichever is predominant."
     }
@@ -434,34 +351,6 @@
    "notes": []
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7529,
-     "description": "&#;Benign neoplasms of the genitourinary system:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as voiding dysfunction or renal dysfunction, whichever is predominant."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7530,
-     "description": "&#;Chronic renal disease requiring regular dialysis:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -478,11 +367,26 @@
    ],
    "codes": [
     {
+     "code": 7529,
+     "description": "&#;Benign neoplasms of the genitourinary system:"
+    },
+    {
+     "code": 7530,
+     "description": "&#;Chronic renal disease requiring regular dialysis:"
+    },
+    {
      "code": 7531,
      "description": "&#;Kidney transplant:"
     }
    ],
-   "notes": []
+   "notes": [
+    {
+     "note": "Rate as voiding dysfunction or renal dysfunction, whichever is predominant."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    }
+   ]
   },
   {
    "ratings": [
@@ -507,135 +411,72 @@
     {
      "code": 7533,
      "description": "&#;Cystic diseases of the kidneys (polycystic disease, uremic medullary cystic disease, Medullary sponge kidney, and similar conditions):"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7534,
      "description": "&#;Atherosclerotic renal disease (renal artery stenosis or atheroembolic renal disease):"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7535,
      "description": "&#;Toxic nephropathy (antibotics, radiocontrast agents, nonsteroidal anti-inflammatory agents, heavy metals, and similar agents):"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7536,
      "description": "&#;Glomerulonephritis:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7537,
      "description": "&#;Interstitial nephritis:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7538,
      "description": "&#;Papillary necrosis:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7539,
      "description": "&#;Renal amyloid disease:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7540,
      "description": "&#;Disseminated intravascular coagulation with renal cortical necrosis:"
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7541,
      "description": "&#;Renal involvement in diabetes mellitus, sickle cell anemia, systemic lupus erythematosus, vasculitis, or other systemic disease processes."
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as renal dysfunction."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
+    },
     {
      "code": 7542,
      "description": "&#;Neurogenic bladder:"
     }
    ],
    "notes": [
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
+    {
+     "note": "Rate as renal dysfunction."
+    },
     {
      "note": "Rate as voiding dysfunction."
     }

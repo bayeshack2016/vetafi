@@ -86,26 +86,6 @@
      "notes": []
     },
     {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 8007,
-       "description": "&#;Brain, vessels, embolism of."
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 8008,
-       "description": "&#;Brain, vessels, thrombosis of."
-      }
-     ],
-     "notes": []
-    },
-    {
      "ratings": [
       {
        "ratings": [
@@ -121,6 +101,14 @@
       }
      ],
      "codes": [
+      {
+       "code": 8007,
+       "description": "&#;Brain, vessels, embolism of."
+      },
+      {
+       "code": 8008,
+       "description": "&#;Brain, vessels, thrombosis of."
+      },
       {
        "code": 8009,
        "description": "&#;Brain, vessels, hemorrhage from:"
@@ -197,23 +185,11 @@
       {
        "code": 8013,
        "description": "&#;Syphilis, cerebrospinal."
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [],
-     "codes": [
+      },
       {
        "code": 8014,
        "description": "&#;Syphilis, meningovascular."
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [],
-     "codes": [
+      },
       {
        "code": 8015,
        "description": "&#;Tabes dorsalis."

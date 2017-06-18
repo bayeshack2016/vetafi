@@ -41,48 +41,6 @@
          "notes": []
         },
         {
-         "ratings": [],
-         "codes": [
-          {
-           "code": 7309,
-           "description": "&#;Stomach, stenosis of."
-          }
-         ],
-         "notes": [
-          {
-           "note": "Rate as for gastric ulcer."
-          }
-         ]
-        },
-        {
-         "ratings": [],
-         "codes": [
-          {
-           "code": 7310,
-           "description": "&#;Stomach, injury of, residuals."
-          }
-         ],
-         "notes": [
-          {
-           "note": "Rate as peritoneal adhesions."
-          }
-         ]
-        },
-        {
-         "ratings": [],
-         "codes": [
-          {
-           "code": 7311,
-           "description": "&#;Residuals of injury of the liver:"
-          }
-         ],
-         "notes": [
-          {
-           "note": "Depending on the specific residuals, separately evaluate as adhesions of peritoneum (diagnostic code 7301), cirrhosis of liver (diagnostic code 7312), and chronic liver disease without cirrhosis (diagnostic code 7345)."
-          }
-         ]
-        },
-        {
          "ratings": [
           {
            "ratings": [
@@ -117,11 +75,33 @@
          ],
          "codes": [
           {
+           "code": 7309,
+           "description": "&#;Stomach, stenosis of."
+          },
+          {
+           "code": 7310,
+           "description": "&#;Stomach, injury of, residuals."
+          },
+          {
+           "code": 7311,
+           "description": "&#;Residuals of injury of the liver:"
+          },
+          {
            "code": 7312,
            "description": "&#;Cirrhosis of the liver, primary biliary cirrhosis, or cirrhotic phase of sclerosing cholangitis:"
           }
          ],
-         "notes": []
+         "notes": [
+          {
+           "note": "Rate as for gastric ulcer."
+          },
+          {
+           "note": "Rate as peritoneal adhesions."
+          },
+          {
+           "note": "Depending on the specific residuals, separately evaluate as adhesions of peritoneum (diagnostic code 7301), cirrhosis of liver (diagnostic code 7312), and chronic liver disease without cirrhosis (diagnostic code 7345)."
+          }
+         ]
         },
         {
          "ratings": [
@@ -153,48 +133,6 @@
          "notes": []
         },
         {
-         "ratings": [],
-         "codes": [
-          {
-           "code": 7315,
-           "description": "&#;Cholelithiasis, chronic."
-          }
-         ],
-         "notes": [
-          {
-           "note": "Rate as for chronic cholecystitis."
-          }
-         ]
-        },
-        {
-         "ratings": [],
-         "codes": [
-          {
-           "code": 7316,
-           "description": "&#;Cholangitis, chronic."
-          }
-         ],
-         "notes": [
-          {
-           "note": "Rate as for chronic cholecystitis."
-          }
-         ]
-        },
-        {
-         "ratings": [],
-         "codes": [
-          {
-           "code": 7317,
-           "description": "&#;Gall bladder, injury of."
-          }
-         ],
-         "notes": [
-          {
-           "note": "Rate as for peritoneal adhesions."
-          }
-         ]
-        },
-        {
          "ratings": [
           {
            "ratings": [
@@ -217,11 +155,33 @@
          ],
          "codes": [
           {
+           "code": 7315,
+           "description": "&#;Cholelithiasis, chronic."
+          },
+          {
+           "code": 7316,
+           "description": "&#;Cholangitis, chronic."
+          },
+          {
+           "code": 7317,
+           "description": "&#;Gall bladder, injury of."
+          },
+          {
            "code": 7318,
            "description": "&#;Gall bladder, removal of:"
           }
          ],
-         "notes": []
+         "notes": [
+          {
+           "note": "Rate as for chronic cholecystitis."
+          },
+          {
+           "note": "Rate as for chronic cholecystitis."
+          },
+          {
+           "note": "Rate as for peritoneal adhesions."
+          }
+         ]
         }
        ],
        "notes": [
@@ -235,7 +195,7 @@
        "category": "Spleen, disease or injury of.",
        "subcategories": [
         {
-         "category": "\u2003See Hemic and Lymphatic Systems.",
+         "category": "&#8195;See Hemic and Lymphatic Systems.",
          "subcategories": [],
          "diagnostic_code_sets": [
           {
@@ -291,20 +251,6 @@
            "notes": []
           },
           {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7322,
-             "description": "&#;Dysentery, bacillary."
-            }
-           ],
-           "notes": [
-            {
-             "note": "Rate as for ulcerative colitis."
-            }
-           ]
-          },
-          {
            "ratings": [
             {
              "ratings": [
@@ -333,11 +279,19 @@
            ],
            "codes": [
             {
+             "code": 7322,
+             "description": "&#;Dysentery, bacillary."
+            },
+            {
              "code": 7323,
              "description": "&#;Colitis, ulcerative:"
             }
            ],
-           "notes": []
+           "notes": [
+            {
+             "note": "Rate as for ulcerative colitis."
+            }
+           ]
           },
           {
            "ratings": [
@@ -369,48 +323,6 @@
            "notes": []
           },
           {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7325,
-             "description": "&#;Enteritis, chronic."
-            }
-           ],
-           "notes": [
-            {
-             "note": "Rate as for irritable colon syndrome."
-            }
-           ]
-          },
-          {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7326,
-             "description": "&#;Enterocolitis, chronic."
-            }
-           ],
-           "notes": [
-            {
-             "note": "Rate as for irritable colon syndrome."
-            }
-           ]
-          },
-          {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7327,
-             "description": "&#;Diverticulitis."
-            }
-           ],
-           "notes": [
-            {
-             "note": "Rate as for irritable colon syndrome, peritoneal adhesions, or colitis, ulcerative, depending upon the predominant disability picture."
-            }
-           ]
-          },
-          {
            "ratings": [
             {
              "ratings": [
@@ -433,11 +345,33 @@
            ],
            "codes": [
             {
+             "code": 7325,
+             "description": "&#;Enteritis, chronic."
+            },
+            {
+             "code": 7326,
+             "description": "&#;Enterocolitis, chronic."
+            },
+            {
+             "code": 7327,
+             "description": "&#;Diverticulitis."
+            },
+            {
              "code": 7328,
              "description": "&#;Intestine, small, resection of:"
             }
            ],
-           "notes": []
+           "notes": [
+            {
+             "note": "Rate as for irritable colon syndrome."
+            },
+            {
+             "note": "Rate as for irritable colon syndrome."
+            },
+            {
+             "note": "Rate as for irritable colon syndrome, peritoneal adhesions, or colitis, ulcerative, depending upon the predominant disability picture."
+            }
+           ]
           },
           {
            "ratings": [
@@ -632,20 +566,6 @@
            "notes": []
           },
           {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7335,
-             "description": "&#;Ano, fistula in."
-            }
-           ],
-           "notes": [
-            {
-             "note": "Rate as for impairment of sphincter control."
-            }
-           ]
-          },
-          {
            "ratings": [
             {
              "ratings": [
@@ -668,23 +588,17 @@
            ],
            "codes": [
             {
+             "code": 7335,
+             "description": "&#;Ano, fistula in."
+            },
+            {
              "code": 7336,
              "description": "&#;Hemorrhoids, external or internal:"
             }
            ],
-           "notes": []
-          },
-          {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7337,
-             "description": "&#;Pruritus ani."
-            }
-           ],
            "notes": [
             {
-             "note": "Rate for the underlying condition."
+             "note": "Rate as for impairment of sphincter control."
             }
            ]
           },
@@ -723,11 +637,19 @@
            ],
            "codes": [
             {
+             "code": 7337,
+             "description": "&#;Pruritus ani."
+            },
+            {
              "code": 7338,
              "description": "&#;Hernia, inguinal:"
             }
            ],
-           "notes": []
+           "notes": [
+            {
+             "note": "Rate for the underlying condition."
+            }
+           ]
           },
           {
            "ratings": [
@@ -813,20 +735,6 @@
            "notes": []
           },
           {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7344,
-             "description": "&#;Benign neoplasms, exclusive of skin growths:"
-            }
-           ],
-           "notes": [
-            {
-             "note": "Evaluate under an appropriate diagnostic code, depending on the predominant disability or the specific residuals after treatment."
-            }
-           ]
-          },
-          {
            "ratings": [
             {
              "ratings": [
@@ -867,11 +775,19 @@
            ],
            "codes": [
             {
+             "code": 7344,
+             "description": "&#;Benign neoplasms, exclusive of skin growths:"
+            },
+            {
              "code": 7345,
              "description": "&#;Chronic liver disease without cirrhosis (including hepatitis B, chronic active hepatitis, autoimmune hepatitis, hemochromatosis, drug-induced hepatitis, etc., but excluding bile duct disorders and hepatitis C):"
             }
            ],
-           "notes": []
+           "notes": [
+            {
+             "note": "Evaluate under an appropriate diagnostic code, depending on the predominant disability or the specific residuals after treatment."
+            }
+           ]
           },
           {
            "ratings": [
@@ -1100,34 +1016,6 @@
  ],
  "diagnostic_code_sets": [
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7200,
-     "description": "&#;Mouth, injuries of."
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as for disfigurement and impairment of function of mastication."
-    }
-   ]
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7201,
-     "description": "&#;Lips, injuries of."
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as for disfigurement of face."
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -1150,11 +1038,26 @@
    ],
    "codes": [
     {
+     "code": 7200,
+     "description": "&#;Mouth, injuries of."
+    },
+    {
+     "code": 7201,
+     "description": "&#;Lips, injuries of."
+    },
+    {
      "code": 7202,
      "description": "&#;Tongue, loss of whole or part:"
     }
    ],
-   "notes": []
+   "notes": [
+    {
+     "note": "Rate as for disfigurement and impairment of function of mastication."
+    },
+    {
+     "note": "Rate as for disfigurement of face."
+    }
+   ]
   },
   {
    "ratings": [
@@ -1196,20 +1099,6 @@
    "notes": []
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7205,
-     "description": "&#;Esophagus, diverticulum of, acquired."
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate as for obstruction (stricture)."
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -1238,21 +1127,19 @@
    ],
    "codes": [
     {
+     "code": 7205,
+     "description": "&#;Esophagus, diverticulum of, acquired."
+    },
+    {
      "code": 7301,
      "description": "&#;Peritoneum, adhesions of:"
     }
    ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
+   "notes": [
     {
-     "code": 7304,
-     "description": "&#;Ulcer, gastric."
+     "note": "Rate as for obstruction (stricture)."
     }
-   ],
-   "notes": []
+   ]
   },
   {
    "ratings": [
@@ -1282,6 +1169,10 @@
     }
    ],
    "codes": [
+    {
+     "code": 7304,
+     "description": "&#;Ulcer, gastric."
+    },
     {
      "code": 7305,
      "description": "&#;Ulcer, duodenal:"

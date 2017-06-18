@@ -313,16 +313,16 @@
    "see_other_notes": []
   },
   {
-   "category": "(1) ",
+   "category": "(1) Radical mastectomy means removal of the entire breast, underlying pectoral muscles, and regional lymph nodes up to the coracoclavicular ligament.",
    "subcategories": [
     {
-     "category": "(2) ",
+     "category": "(2) Modified radical mastectomy means removal of the entire breast and axillary lymph nodes (in continuity with the breast). Pectoral muscles are left intact.",
      "subcategories": [
       {
-       "category": "(3) ",
+       "category": "(3) Simple (or total) mastectomy means removal of all of the breast tissue, nipple, and a small portion of the overlying skin, but lymph nodes and muscles are left intact.",
        "subcategories": [
         {
-         "category": "(4) ",
+         "category": "(4) Wide local excision (including partial mastectomy, lumpectomy, tylectomy, segmentectomy, and quadrantectomy) means removal of a portion of the breast tissue.",
          "subcategories": [],
          "diagnostic_code_sets": [
           {
@@ -338,16 +338,6 @@
             {
              "code": 7627,
              "description": "&#;Malignant neoplasms of gynecological system or breast\n\n                  100"
-            }
-           ],
-           "notes": []
-          },
-          {
-           "ratings": [],
-           "codes": [
-            {
-             "code": 7628,
-             "description": "&#;Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin."
             }
            ],
            "notes": []
@@ -374,6 +364,10 @@
             }
            ],
            "codes": [
+            {
+             "code": 7628,
+             "description": "&#;Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin."
+            },
             {
              "code": 7629,
              "description": "&#;Endometriosis:"
@@ -410,56 +404,6 @@
  ],
  "diagnostic_code_sets": [
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7610,
-     "description": "&#;Vulva, disease or injury of (including vulvovaginitis)."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7611,
-     "description": "&#;Vagina, disease or injury of."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7612,
-     "description": "&#;Cervix, disease or injury of."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7613,
-     "description": "&#;Uterus, disease, injury, or adhesions of."
-    }
-   ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7614,
-     "description": "&#;Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID))."
-    }
-   ],
-   "notes": []
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -481,6 +425,26 @@
     }
    ],
    "codes": [
+    {
+     "code": 7610,
+     "description": "&#;Vulva, disease or injury of (including vulvovaginitis)."
+    },
+    {
+     "code": 7611,
+     "description": "&#;Vagina, disease or injury of."
+    },
+    {
+     "code": 7612,
+     "description": "&#;Cervix, disease or injury of."
+    },
+    {
+     "code": 7613,
+     "description": "&#;Uterus, disease, injury, or adhesions of."
+    },
+    {
+     "code": 7614,
+     "description": "&#;Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID))."
+    },
     {
      "code": 7615,
      "description": "&#;Ovary, disease, injury, or adhesions of."

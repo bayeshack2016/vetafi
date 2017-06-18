@@ -71,13 +71,13 @@ def save_xml(table_element: ElementTree.Element):
 
 
 def is_category_row(row_element: ElementTree.Element):
-    entries = [entry for entry in row_element.findall('ENT') if util.inner_text(entry).strip()]
+    entries = [entry for entry in row_element.findall('ENT') if util.inner_text(entry).strip() != '']
     row_length = len(entries)
     return row_length == 1
 
 
 def get_description(row_element: ElementTree.Element):
-    return row_element.find('ENT').text
+    return util.inner_text(row_element.find('ENT'))
 
 
 def is_rating_row(row_element: ElementTree.Element):
@@ -171,6 +171,13 @@ def is_general_rating_note_row(row_element: ElementTree.Element):
     return row_length == 1 and util.inner_text(entries[0]).lower().strip().startswith('general rating formula')
 
 
+def is_blank_row(row_element: ElementTree.Element):
+    """
+    Any row with contains only whitespace in its inner XML text.
+    """
+    return util.inner_text(row_element).replace('&#8201;', '').strip() == ''
+
+
 class RatingTableStateMachine:
     """
     Defines a state machine for parsing the ratings table XML
@@ -209,7 +216,7 @@ class RatingTableStateMachine:
          'before': 'add_combined_diagnostic_rating'},
 
         {'trigger': 'process_diagnostic_code',
-         'source': ['note', 'diagnostic_code', 'see_other_note', 'category'],
+         'source': ['note', 'rating', 'see_other_note', 'category'],
          'dest': 'diagnostic_code',
          'before': 'add_first_diagnostic_code'},
 
@@ -217,11 +224,6 @@ class RatingTableStateMachine:
          'source': 'diagnostic_code',
          'dest': 'diagnostic_code',
          'before': 'add_diagnostic_code'},
-        
-        {'trigger': 'process_diagnostic_code',
-         'source': 'rating',
-         'dest': 'diagnostic_code',
-         'before': 'add_first_diagnostic_code'},
 
         {'trigger': 'process_note',
          'source': ['category', 'rating', 'note', 'diagnostic_code', 'see_other_note'],
@@ -263,11 +265,13 @@ class RatingTableStateMachine:
         self.current_category = category
 
     def add_first_diagnostic_code(self, element):
+        logger.debug('Add First Diagnostic Code:\n' + util.pformat_element(element))
         self.current_diagnostic_code_set = models.DiagnosticCodeSet()
         self.current_category.add_diagnostic_code_set(self.current_diagnostic_code_set)
         self.add_diagnostic_code(element)
 
     def add_diagnostic_code(self, element):
+        logger.debug('Add Subsequent Diagnostic Code:\n' + util.pformat_element(element))
         self.current_diagnostic_code_set.add_diagnostic_code(models.DiagnosticCode.from_element(element))
 
     def add_rating(self, element):
@@ -328,7 +332,9 @@ class RatingTableStateMachine:
             raise e
 
     def process_row_unsafe(self, row: ElementTree.Element):
-        if is_see_other_row(row):
+        if is_blank_row(row):
+            logger.debug("Ignoring blank row:\n" + util.pformat_element(row))
+        elif is_see_other_row(row):
             logger.debug("See Other:\n" + util.pformat_element(row))
             self.process_see_other_note(row)
         elif is_diagnostic_code_row(row):

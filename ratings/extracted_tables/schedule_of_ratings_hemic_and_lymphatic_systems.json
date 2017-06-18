@@ -177,20 +177,6 @@
    "notes": []
   },
   {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7707,
-     "description": "&#;Spleen, injury of, healed."
-    }
-   ],
-   "notes": [
-    {
-     "note": "Rate for any residuals."
-    }
-   ]
-  },
-  {
    "ratings": [
     {
      "ratings": [
@@ -201,23 +187,17 @@
    ],
    "codes": [
     {
+     "code": 7707,
+     "description": "&#;Spleen, injury of, healed."
+    },
+    {
      "code": 7709,
      "description": "&#;Hodgkin's disease:"
     }
    ],
-   "notes": []
-  },
-  {
-   "ratings": [],
-   "codes": [
-    {
-     "code": 7710,
-     "description": "&#;Adenitis, tuberculous, active or inactive."
-    }
-   ],
    "notes": [
     {
-     "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89 of this part, whichever is appropriate."
+     "note": "Rate for any residuals."
     }
    ]
   },
@@ -250,11 +230,19 @@
    ],
    "codes": [
     {
+     "code": 7710,
+     "description": "&#;Adenitis, tuberculous, active or inactive."
+    },
+    {
      "code": 7714,
      "description": "&#;Sickle cell anemia:"
     }
    ],
-   "notes": []
+   "notes": [
+    {
+     "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89 of this part, whichever is appropriate."
+    }
+   ]
   },
   {
    "ratings": [

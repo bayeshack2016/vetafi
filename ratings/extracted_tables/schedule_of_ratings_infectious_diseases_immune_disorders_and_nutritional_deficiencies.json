@@ -71,7 +71,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as liver or spleen damage under the appropriate system\n\n                  ",
+   "category": "Thereafter rate residuals such as liver or spleen damage under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -200,20 +200,6 @@
    "subcategories": [],
    "diagnostic_code_sets": [
     {
-     "ratings": [],
-     "codes": [
-      {
-       "code": 6310,
-       "description": "&#;Syphilis, and other treponemal infections:"
-      }
-     ],
-     "notes": [
-      {
-       "note": "Rate the complications of nervous system, vascular system, eyes or ears. (See DC 7004, syphilitic heart disease, DC 8013, cerebrospinal syphilis, DC 8014, meningovascular syphilis, DC 8015, tabes dorsalis, and DC 9301, dementia associated with central nervous system syphilis)"
-      }
-     ]
-    },
-    {
      "ratings": [
       {
        "ratings": [
@@ -224,11 +210,19 @@
      ],
      "codes": [
       {
+       "code": 6310,
+       "description": "&#;Syphilis, and other treponemal infections:"
+      },
+      {
        "code": 6311,
        "description": "&#;Tuberculosis, miliary:"
       }
      ],
-     "notes": []
+     "notes": [
+      {
+       "note": "Rate the complications of nervous system, vascular system, eyes or ears. (See DC 7004, syphilitic heart disease, DC 8013, cerebrospinal syphilis, DC 8014, meningovascular syphilis, DC 8015, tabes dorsalis, and DC 9301, dementia associated with central nervous system syphilis)"
+      }
+     ]
     },
     {
      "ratings": [
