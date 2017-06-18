@@ -22,7 +22,8 @@
      ],
      "codes": [
       {
-       "code": 7619
+       "code": 7619,
+       "description": "&#;Ovary, removal of:"
       }
      ],
      "notes": []
@@ -38,7 +39,8 @@
      ],
      "codes": [
       {
-       "code": 7620
+       "code": 7620,
+       "description": "&#;Ovaries, atrophy of both, complete\n\n                  \n\n                    &#;20"
       }
      ],
      "notes": []
@@ -60,7 +62,8 @@
      ],
      "codes": [
       {
-       "code": 7621
+       "code": 7621,
+       "description": "&#;Uterus, prolapse:"
       }
      ],
      "notes": []
@@ -82,7 +85,8 @@
      ],
      "codes": [
       {
-       "code": 7622
+       "code": 7622,
+       "description": "&#;Uterus, displacement of:"
       }
      ],
      "notes": []
@@ -104,7 +108,8 @@
      ],
      "codes": [
       {
-       "code": 7623
+       "code": 7623,
+       "description": "&#;Pregnancy, surgical complications of:"
       }
      ],
      "notes": []
@@ -144,7 +149,8 @@
      ],
      "codes": [
       {
-       "code": 7624
+       "code": 7624,
+       "description": "&#;Fistula, rectovaginal:"
       }
      ],
      "notes": []
@@ -178,7 +184,8 @@
      ],
      "codes": [
       {
-       "code": 7625
+       "code": 7625,
+       "description": "&#;Fistula, urethrovaginal:"
       }
      ],
      "notes": []
@@ -200,7 +207,8 @@
      ],
      "codes": [
       {
-       "code": 7626
+       "code": 7626,
+       "description": "&#;Breast, surgery of:"
       }
      ],
      "notes": [
@@ -235,7 +243,8 @@
      ],
      "codes": [
       {
-       "code": 7626
+       "code": 7626,
+       "description": "&#;Breast, surgery of:"
       }
      ],
      "notes": []
@@ -266,7 +275,8 @@
      ],
      "codes": [
       {
-       "code": 7626
+       "code": 7626,
+       "description": "&#;Breast, surgery of:"
       }
      ],
      "notes": []
@@ -291,7 +301,8 @@
      ],
      "codes": [
       {
-       "code": 7626
+       "code": 7626,
+       "description": "&#;Breast, surgery of:"
       }
      ],
      "notes": []
@@ -300,7 +311,7 @@
    "references": [],
    "notes": [
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: For VA purposes:"
     }
    ],
    "see_other_notes": []
@@ -329,7 +340,8 @@
            ],
            "codes": [
             {
-             "code": 7627
+             "code": 7627,
+             "description": "&#;Malignant neoplasms of gynecological system or breast\n\n                  100"
             }
            ],
            "notes": []
@@ -338,7 +350,8 @@
            "ratings": [],
            "codes": [
             {
-             "code": 7628
+             "code": 7628,
+             "description": "&#;Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin."
             }
            ],
            "notes": []
@@ -366,7 +379,8 @@
            ],
            "codes": [
             {
-             "code": 7629
+             "code": 7629,
+             "description": "&#;Endometriosis:"
             }
            ],
            "notes": []
@@ -375,10 +389,10 @@
          "references": [],
          "notes": [
           {
-           "note": "Note:\n\n                    "
+           "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
           },
           {
-           "note": "Note:\n\n                    "
+           "note": "Note: Diagnosis of endometriosis must be substantiated by laparoscopy."
           }
          ],
          "see_other_notes": []
@@ -407,7 +421,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7610
+     "code": 7610,
+     "description": "&#;Vulva, disease or injury of (including vulvovaginitis)."
     }
    ],
    "notes": []
@@ -416,7 +431,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7611
+     "code": 7611,
+     "description": "&#;Vagina, disease or injury of."
     }
    ],
    "notes": []
@@ -425,7 +441,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7612
+     "code": 7612,
+     "description": "&#;Cervix, disease or injury of."
     }
    ],
    "notes": []
@@ -434,7 +451,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7613
+     "code": 7613,
+     "description": "&#;Uterus, disease, injury, or adhesions of."
     }
    ],
    "notes": []
@@ -443,7 +461,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7614
+     "code": 7614,
+     "description": "&#;Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID))."
     }
    ],
    "notes": []
@@ -471,7 +490,8 @@
    ],
    "codes": [
     {
-     "code": 7615
+     "code": 7615,
+     "description": "&#;Ovary, disease, injury, or adhesions of."
     }
    ],
    "notes": []
@@ -493,7 +513,8 @@
    ],
    "codes": [
     {
-     "code": 7617
+     "code": 7617,
+     "description": "&#;Uterus and both ovaries, removal of, complete:"
     }
    ],
    "notes": []
@@ -515,7 +536,8 @@
    ],
    "codes": [
     {
-     "code": 7618
+     "code": 7618,
+     "description": "&#;Uterus, removal of, including corpus:"
     }
    ],
    "notes": []
@@ -531,7 +553,8 @@
    ],
    "codes": [
     {
-     "code": 7619
+     "code": 7619,
+     "description": "&#;Ovary, removal of:"
     }
    ],
    "notes": []
@@ -540,10 +563,10 @@
  "references": [],
  "notes": [
   {
-   "note": "Note 1:\n\n                    "
+   "note": "Note 1: Natural menopause, primary amenorrhea, and pregnancy and childbirth are not disabilities for rating purposes. Chronic residuals of medical or surgical complications of pregnancy may be disabilities for rating purposes."
   },
   {
-   "note": "Note 2:\n\n                    "
+   "note": "Note 2: When evaluating any claim involving loss or loss of use of one or more creative organs or anatomical loss of one or both breasts, refer to &#167;&#8201;3.350 of this chapter to determine whether the veteran may be entitled to special monthly compensation. Footnotes in the schedule indicate conditions which potentially establish entitlement to special monthly compensation; however, almost any condition in this section might, under certain circumstances, establish entitlement to special monthly compensation."
   }
  ],
  "see_other_notes": []

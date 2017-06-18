@@ -34,7 +34,8 @@
      ],
      "codes": [
       {
-       "code": 7000
+       "code": 7000,
+       "description": "&#;Valvular heart disease (including rheumatic heart disease):"
       }
      ],
      "notes": []
@@ -50,7 +51,8 @@
      ],
      "codes": [
       {
-       "code": 7001
+       "code": 7001,
+       "description": "&#;Endocarditis:"
       }
      ],
      "notes": []
@@ -93,7 +95,8 @@
      ],
      "codes": [
       {
-       "code": 7001
+       "code": 7001,
+       "description": "&#;Endocarditis:"
       }
      ],
      "notes": []
@@ -109,7 +112,8 @@
      ],
      "codes": [
       {
-       "code": 7002
+       "code": 7002,
+       "description": "&#;Pericarditis:"
       }
      ],
      "notes": []
@@ -152,7 +156,8 @@
      ],
      "codes": [
       {
-       "code": 7001
+       "code": 7001,
+       "description": "&#;Endocarditis:"
       }
      ],
      "notes": []
@@ -186,7 +191,8 @@
      ],
      "codes": [
       {
-       "code": 7003
+       "code": 7003,
+       "description": "&#;Pericardial adhesions:"
       }
      ],
      "notes": []
@@ -220,7 +226,8 @@
      ],
      "codes": [
       {
-       "code": 7004
+       "code": 7004,
+       "description": "&#;Syphilitic heart disease:"
       }
      ],
      "notes": []
@@ -254,7 +261,8 @@
      ],
      "codes": [
       {
-       "code": 7005
+       "code": 7005,
+       "description": "&#;Arteriosclerotic heart disease (Coronary artery disease):"
       }
      ],
      "notes": [
@@ -274,7 +282,8 @@
      ],
      "codes": [
       {
-       "code": 7006
+       "code": 7006,
+       "description": "&#;Myocardial infarction:"
       }
      ],
      "notes": []
@@ -283,10 +292,10 @@
    "references": [],
    "notes": [
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: Evaluate syphilitic aortic aneurysms under DC 7110 (aortic aneurysm)."
     },
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: If nonservice-connected arteriosclerotic heart disease is superimposed on service-connected valvular or other non-arteriosclerotic heart disease, request a medical opinion as to which condition is causing the current signs and symptoms."
     }
    ],
    "see_other_notes": []
@@ -327,7 +336,8 @@
        ],
        "codes": [
         {
-         "code": 7001
+         "code": 7001,
+         "description": "&#;Endocarditis:"
         }
        ],
        "notes": []
@@ -361,7 +371,8 @@
        ],
        "codes": [
         {
-         "code": 7007
+         "code": 7007,
+         "description": "&#;Hypertensive heart disease:"
         }
        ],
        "notes": []
@@ -370,7 +381,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 7008
+         "code": 7008,
+         "description": "&#;Hyperthyroid heart disease:"
         }
        ],
        "notes": [
@@ -396,7 +408,8 @@
        ],
        "codes": [
         {
-         "code": 7010
+         "code": 7010,
+         "description": "&#;Supraventricular arrhythmias:"
         }
        ],
        "notes": []
@@ -436,7 +449,8 @@
        ],
        "codes": [
         {
-         "code": 7011
+         "code": 7011,
+         "description": "&#;Ventricular arrhythmias (sustained):"
         }
        ],
        "notes": []
@@ -470,7 +484,8 @@
        ],
        "codes": [
         {
-         "code": 7015
+         "code": 7015,
+         "description": "&#;Atrioventricular block:"
         }
        ],
        "notes": []
@@ -486,7 +501,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -495,10 +511,10 @@
      "references": [],
      "notes": [
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: A rating of 100 percent shall be assigned from the date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia or for ventricular aneurysmectomy. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: Unusual cases of arrhythmia such as atrioventricular block associated with a supraventricular arrhythmia or pathological bradycardia should be submitted to the Director, Compensation Service. Simple delayed P-R conduction time, in the absence of other evidence of cardiac disease, is not a disability."
       }
      ],
      "see_other_notes": []
@@ -536,7 +552,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -552,7 +569,8 @@
        ],
        "codes": [
         {
-         "code": 7017
+         "code": 7017,
+         "description": "&#;Coronary bypass surgery:"
         }
        ],
        "notes": []
@@ -561,7 +579,7 @@
      "references": [],
      "notes": [
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: A rating of 100 percent shall be assigned as of the date of hospital admission for valve replacement. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
       }
      ],
      "see_other_notes": []
@@ -599,7 +617,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -615,7 +634,8 @@
        ],
        "codes": [
         {
-         "code": 7018
+         "code": 7018,
+         "description": "&#;Implantable cardiac pacemakers:"
         }
        ],
        "notes": []
@@ -640,7 +660,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -656,7 +677,8 @@
        ],
        "codes": [
         {
-         "code": 7019
+         "code": 7019,
+         "description": "&#;Cardiac transplantation:"
         }
        ],
        "notes": []
@@ -665,7 +687,7 @@
      "references": [],
      "notes": [
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: Evaluate implantable Cardioverter-Defibrillators (AICD's) under DC 7011."
       }
      ],
      "see_other_notes": []
@@ -697,7 +719,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -731,7 +754,8 @@
        ],
        "codes": [
         {
-         "code": 7020
+         "code": 7020,
+         "description": "&#;Cardiomyopathy:"
         }
        ],
        "notes": []
@@ -740,7 +764,7 @@
      "references": [],
      "notes": [
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: A rating of 100 percent shall be assigned as of the date of hospital admission for cardiac transplantation. One year following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
       }
      ],
      "see_other_notes": []
@@ -778,7 +802,8 @@
        ],
        "codes": [
         {
-         "code": 7101
+         "code": 7101,
+         "description": "&#;Hypertensive vascular disease (hypertension and isolated systolic hypertension):"
         }
        ],
        "notes": []
@@ -800,7 +825,8 @@
        ],
        "codes": [
         {
-         "code": 7110
+         "code": 7110,
+         "description": "&#;Aortic aneurysm:"
         }
        ],
        "notes": []
@@ -809,13 +835,13 @@
      "references": [],
      "notes": [
       {
-       "note": "Note (1):\n\n                    "
+       "note": "Note (1): Hypertension or isolated systolic hypertension must be confirmed by readings taken two or more times on at least three different days. For purposes of this section, the term hypertension means that the diastolic blood pressure is predominantly 90mm. or greater, and isolated systolic hypertension means that the systolic blood pressure is predominantly 160mm. or greater with a diastolic blood pressure of less than 90mm."
       },
       {
-       "note": "Note (2):\n\n                    "
+       "note": "Note (2): Evaluate hypertension due to aortic insufficiency or hyperthyroidism, which is usually the isolated systolic type, as part of the condition causing it rather than by a separate evaluation."
       },
       {
-       "note": "Note (3):\n\n                    "
+       "note": "Note (3): Evaluate hypertension separately from hypertensive heart disease and other types of heart disease."
       }
      ],
      "see_other_notes": []
@@ -835,7 +861,8 @@
        ],
        "codes": [
         {
-         "code": 7111
+         "code": 7111,
+         "description": "&#;Aneurysm, any large artery:"
         }
        ],
        "notes": []
@@ -844,7 +871,7 @@
      "references": [],
      "notes": [
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: A rating of 100 percent shall be assigned as of the date of admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
       }
      ],
      "see_other_notes": []
@@ -882,7 +909,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -898,7 +926,8 @@
        ],
        "codes": [
         {
-         "code": 7112
+         "code": 7112,
+         "description": "&#;Aneurysm, any small artery:"
         }
        ],
        "notes": []
@@ -920,7 +949,8 @@
        ],
        "codes": [
         {
-         "code": 7113
+         "code": 7113,
+         "description": "&#;Arteriovenous fistula, traumatic:"
         }
        ],
        "notes": []
@@ -929,16 +959,16 @@
      "references": [],
      "notes": [
       {
-       "note": "Note (1):\n\n                    "
+       "note": "Note (1): The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater."
       },
       {
-       "note": "Note (2):\n\n                    "
+       "note": "Note (2): These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under &#167;&#8201;4.25), using the bilateral factor, if applicable."
       },
       {
-       "note": "Note (3):\n\n                    "
+       "note": "Note (3): A rating of 100 percent shall be assigned as of the date of hospital admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: If symptomatic, evaluate according to body system affected. Following surgery, evaluate residuals under the body system affected."
       }
      ],
      "see_other_notes": []
@@ -964,7 +994,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -995,7 +1026,8 @@
        ],
        "codes": [
         {
-         "code": 7016
+         "code": 7016,
+         "description": "&#;Heart valve replacement (prosthesis):"
         }
        ],
        "notes": []
@@ -1029,7 +1061,8 @@
        ],
        "codes": [
         {
-         "code": 7114
+         "code": 7114,
+         "description": "&#;Arteriosclerosis obliterans:"
         }
        ],
        "notes": []
@@ -1063,7 +1096,8 @@
        ],
        "codes": [
         {
-         "code": 7115
+         "code": 7115,
+         "description": "&#;Thrombo-angiitis obliterans (Buerger's Disease):"
         }
        ],
        "notes": []
@@ -1103,7 +1137,8 @@
        ],
        "codes": [
         {
-         "code": 7117
+         "code": 7117,
+         "description": "&#;Raynaud's syndrome:"
         }
        ],
        "notes": []
@@ -1131,7 +1166,8 @@
        ],
        "codes": [
         {
-         "code": 7118
+         "code": 7118,
+         "description": "&#;Angioneurotic edema:"
         }
        ],
        "notes": []
@@ -1165,7 +1201,8 @@
        ],
        "codes": [
         {
-         "code": 7119
+         "code": 7119,
+         "description": "&#;Erythromelalgia:"
         }
        ],
        "notes": []
@@ -1211,7 +1248,8 @@
        ],
        "codes": [
         {
-         "code": 7120
+         "code": 7120,
+         "description": "&#;Varicose veins:"
         }
        ],
        "notes": []
@@ -1257,7 +1295,8 @@
        ],
        "codes": [
         {
-         "code": 7121
+         "code": 7121,
+         "description": "&#;Post-phlebitic syndrome of any etiology:"
         }
        ],
        "notes": [
@@ -1289,7 +1328,8 @@
        ],
        "codes": [
         {
-         "code": 7122
+         "code": 7122,
+         "description": "&#;Cold injury residuals:"
         }
        ],
        "notes": [
@@ -1309,7 +1349,8 @@
        ],
        "codes": [
         {
-         "code": 7123
+         "code": 7123,
+         "description": "&#;Soft tissue sarcoma (of vascular origin)\n\n                  100"
         }
        ],
        "notes": []
@@ -1318,40 +1359,40 @@
      "references": [],
      "notes": [
       {
-       "note": "Note (1):\n\n                    "
+       "note": "Note (1): The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater."
       },
       {
-       "note": "Note (2):\n\n                    "
+       "note": "Note (2): Evaluate residuals of aortic and large arterial bypass surgery or arterial graft as arteriosclerosis obliterans."
       },
       {
-       "note": "Note (3):\n\n                    "
+       "note": "Note (3): These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under &#167;&#8201;4.25), using the bilateral factor (&#167;&#8201;4.26), if applicable."
       },
       {
-       "note": "Note (1):\n\n                    "
+       "note": "Note (1): The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater."
       },
       {
-       "note": "Note (2):\n\n                    "
+       "note": "Note (2): These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under &#167;&#8201;4.25), using the bilateral factor (&#167;&#8201;4.26), if applicable."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: For purposes of this section, characteristic attacks consist of sequential color changes of the digits of one or more extremities lasting minutes to hours, sometimes with pain and paresthesias, and precipitated by exposure to cold or by emotional upsets. These evaluations are for the disease as a whole, regardless of the number of extremities involved or whether the nose and ears are involved."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: For purposes of this section, a characteristic attack of erythromelalgia consists of burning pain in the hands, feet, or both, usually bilateral and symmetrical, with increased skin temperature and redness, occurring at warm ambient temperatures. These evaluations are for the disease as a whole, regardless of the number of extremities involved."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: These evaluations are for involvement of a single extremity. If more than one extremity is involved, evaluate each extremity separately and combine (under &#167;&#8201;4.25), using the bilateral factor (&#167;&#8201;4.26), if applicable."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: These evaluations are for involvement of a single extremity. If more than one extremity is involved, evaluate each extremity separately and combine (under &#167;&#8201;4.25), using the bilateral factor (&#167;&#8201;4.26), if applicable."
       },
       {
-       "note": "Note\n\n                    "
+       "note": "Note (1): Separately evaluate amputations of fingers or toes, and complications such as squamous cell carcinoma at the site of a cold injury scar or peripheral neuropathy, under other diagnostic codes. Separately evaluate other disabilities that have been diagnosed as the residual effects of cold injury, such as Raynaud's phenomenon, muscle atrophy, etc., unless they are used to support an evaluation under diagnostic code 7122."
       },
       {
-       "note": "Note\n\n                    "
+       "note": "Note (2): Evaluate each affected part (e.g., hand, foot, ear, nose) separately and combine the ratings in accordance with &#167;&#167;&#8201;4.25 and 4.26."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
       }
      ],
      "see_other_notes": []
@@ -1375,7 +1416,8 @@
    ],
    "codes": [
     {
-     "code": 7000
+     "code": 7000,
+     "description": "&#;Valvular heart disease (including rheumatic heart disease):"
     }
    ],
    "notes": []
@@ -1384,10 +1426,10 @@
  "references": [],
  "notes": [
   {
-   "note": "Note (1):\n\n                    "
+   "note": "Note (1): Evaluate cor pulmonale, which is a form of secondary heart disease, as part of the pulmonary condition that causes it."
   },
   {
-   "note": "Note (2):\n\n                    "
+   "note": "Note (2): One MET (metabolic equivalent) is the energy cost of standing quietly at rest and represents an oxygen uptake of 3.5 milliliters per kilogram of body weight per minute. When the level of METs at which dyspnea, fatigue, angina, dizziness, or syncope develops is required for evaluation, and a laboratory determination of METs by exercise testing cannot be done for medical reasons, an estimation by a medical examiner of the level of activity (expressed in METs and supported by specific examples, such as slow stair climbing or shoveling snow) that results in dyspnea, fatigue, angina, dizziness, or syncope may be used."
   }
  ],
  "see_other_notes": []

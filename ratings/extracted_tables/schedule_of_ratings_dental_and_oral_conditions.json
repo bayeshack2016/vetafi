@@ -16,7 +16,8 @@
      ],
      "codes": [
       {
-       "code": 9905
+       "code": 9905,
+       "description": "&#;Temporomandibular articulation, limited motion of:"
       }
      ],
      "notes": []
@@ -38,7 +39,8 @@
      ],
      "codes": [
       {
-       "code": 9906
+       "code": 9906,
+       "description": "&#;Ramus, loss of whole or part of:"
       }
      ],
      "notes": [
@@ -51,7 +53,7 @@
    "references": [],
    "notes": [
     {
-     "note": "Note\n\n                    "
+     "note": "Note&#8212;Ratings for limited inter-incisal movement shall not be combined with ratings for limited lateral excursion"
     }
    ],
    "see_other_notes": []
@@ -77,7 +79,8 @@
      ],
      "codes": [
       {
-       "code": 9906
+       "code": 9906,
+       "description": "&#;Ramus, loss of whole or part of:"
       }
      ],
      "notes": []
@@ -99,7 +102,8 @@
      ],
      "codes": [
       {
-       "code": 9907
+       "code": 9907,
+       "description": "&#;Ramus, loss of less than one-half the substance of, not involving loss of continuity:"
       }
      ],
      "notes": []
@@ -115,7 +119,8 @@
      ],
      "codes": [
       {
-       "code": 9908
+       "code": 9908,
+       "description": "&#;Condyloid process, loss of, one or both sides\n\n                  30"
       }
      ],
      "notes": []
@@ -137,7 +142,8 @@
      ],
      "codes": [
       {
-       "code": 9909
+       "code": 9909,
+       "description": "&#;Coronoid process, loss of:"
       }
      ],
      "notes": []
@@ -159,7 +165,8 @@
      ],
      "codes": [
       {
-       "code": 9911
+       "code": 9911,
+       "description": "&#;Hard palate, loss of half or more:"
       }
      ],
      "notes": []
@@ -181,7 +188,8 @@
      ],
      "codes": [
       {
-       "code": 9912
+       "code": 9912,
+       "description": "&#;Hard palate, loss of less than half of:"
       }
      ],
      "notes": []
@@ -245,7 +253,8 @@
      ],
      "codes": [
       {
-       "code": 9913
+       "code": 9913,
+       "description": "&#;Teeth, loss of, due to loss of substance of body of maxilla or mandible without loss of continuity:"
       }
      ],
      "notes": [
@@ -271,7 +280,8 @@
      ],
      "codes": [
       {
-       "code": 9914
+       "code": 9914,
+       "description": "&#;Maxilla, loss of more than half:"
       }
      ],
      "notes": []
@@ -293,7 +303,8 @@
      ],
      "codes": [
       {
-       "code": 9915
+       "code": 9915,
+       "description": "&#;Maxilla, loss of half or less:"
       }
      ],
      "notes": [
@@ -306,7 +317,7 @@
    "references": [],
    "notes": [
     {
-     "note": "Note\n\n                    "
+     "note": "Note&#8212;These ratings apply only to bone loss through trauma or disease such as osteomyelitis, and not to the loss of the alveolar process as a result of periodontal disease, since such loss is not considered disabling"
     }
    ],
    "see_other_notes": []
@@ -332,7 +343,8 @@
      ],
      "codes": [
       {
-       "code": 9906
+       "code": 9906,
+       "description": "&#;Ramus, loss of whole or part of:"
       }
      ],
      "notes": []
@@ -360,7 +372,8 @@
      ],
      "codes": [
       {
-       "code": 9916
+       "code": 9916,
+       "description": "&#;Maxilla, malunion or nonunion of:"
       }
      ],
      "notes": []
@@ -376,7 +389,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 9900
+     "code": 9900,
+     "description": "&#;Maxilla or mandible, chronic osteomyelitis or osteoradionecrosis of:"
     }
    ],
    "notes": [
@@ -396,7 +410,8 @@
    ],
    "codes": [
     {
-     "code": 9901
+     "code": 9901,
+     "description": "&#;Mandible, loss of, complete, between angles\n\n                  100"
     }
    ],
    "notes": []
@@ -418,7 +433,8 @@
    ],
    "codes": [
     {
-     "code": 9902
+     "code": 9902,
+     "description": "&#;Mandible, loss of approximately one-half:"
     }
    ],
    "notes": []
@@ -440,7 +456,8 @@
    ],
    "codes": [
     {
-     "code": 9903
+     "code": 9903,
+     "description": "&#;Mandible, nonunion of:"
     }
    ],
    "notes": []
@@ -468,7 +485,8 @@
    ],
    "codes": [
     {
-     "code": 9904
+     "code": 9904,
+     "description": "&#;Mandible, malunion of:"
     }
    ],
    "notes": []
@@ -502,7 +520,8 @@
    ],
    "codes": [
     {
-     "code": 9905
+     "code": 9905,
+     "description": "&#;Temporomandibular articulation, limited motion of:"
     }
    ],
    "notes": [
@@ -515,10 +534,10 @@
  "references": [],
  "notes": [
   {
-   "note": "Note\n\n                    "
+   "note": "Note&#8212;Dependent upon degree of motion and relative loss of masticatory function"
   },
   {
-   "note": "Note\n\n                    "
+   "note": "Note&#8212;Dependent upon degree of motion and relative loss of masticatory function"
   }
  ],
  "see_other_notes": []

@@ -33,7 +33,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 6701
+     "code": 6701,
+     "description": "tuberculosis"
     }
    ],
    "notes": []
@@ -49,7 +50,8 @@
    ],
    "codes": [
     {
-     "code": 6701
+     "code": 6701,
+     "description": "tuberculosis"
     }
    ],
    "notes": []

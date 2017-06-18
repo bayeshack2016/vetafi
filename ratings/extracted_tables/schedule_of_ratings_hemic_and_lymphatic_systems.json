@@ -37,7 +37,8 @@
    ],
    "codes": [
     {
-     "code": 7700
+     "code": 7700,
+     "description": "&#;Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:"
     }
    ],
    "notes": []
@@ -71,7 +72,8 @@
    ],
    "codes": [
     {
-     "code": 7702
+     "code": 7702,
+     "description": "&#;Agranulocytosis, acute:"
     }
    ],
    "notes": []
@@ -87,7 +89,8 @@
    ],
    "codes": [
     {
-     "code": 7703
+     "code": 7703,
+     "description": "&#;Leukemia:"
     }
    ],
    "notes": []
@@ -115,7 +118,8 @@
    ],
    "codes": [
     {
-     "code": 7704
+     "code": 7704,
+     "description": "&#;Polycythemia vera:"
     }
    ],
    "notes": []
@@ -149,7 +153,8 @@
    ],
    "codes": [
     {
-     "code": 7705
+     "code": 7705,
+     "description": "&#;Thrombocytopenia, primary, idiopathic or immune:"
     }
    ],
    "notes": []
@@ -165,7 +170,8 @@
    ],
    "codes": [
     {
-     "code": 7706
+     "code": 7706,
+     "description": "&#;Splenectomy\n\n                  20"
     }
    ],
    "notes": []
@@ -174,7 +180,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7707
+     "code": 7707,
+     "description": "&#;Spleen, injury of, healed."
     }
    ],
    "notes": [
@@ -194,7 +201,8 @@
    ],
    "codes": [
     {
-     "code": 7709
+     "code": 7709,
+     "description": "&#;Hodgkin's disease:"
     }
    ],
    "notes": []
@@ -203,12 +211,13 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7710
+     "code": 7710,
+     "description": "&#;Adenitis, tuberculous, active or inactive."
     }
    ],
    "notes": [
     {
-     "note": "Rate under \u00a7\u00a7\u20094.88c or 4.89 of this part, whichever is appropriate."
+     "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89 of this part, whichever is appropriate."
     }
    ]
   },
@@ -241,7 +250,8 @@
    ],
    "codes": [
     {
-     "code": 7714
+     "code": 7714,
+     "description": "&#;Sickle cell anemia:"
     }
    ],
    "notes": []
@@ -257,7 +267,8 @@
    ],
    "codes": [
     {
-     "code": 7715
+     "code": 7715,
+     "description": "&#;Non-Hodgkin's lymphoma:"
     }
    ],
    "notes": []
@@ -291,7 +302,8 @@
    ],
    "codes": [
     {
-     "code": 7716
+     "code": 7716,
+     "description": "&#;Aplastic anemia:"
     }
    ],
    "notes": []
@@ -307,7 +319,8 @@
    ],
    "codes": [
     {
-     "code": 7717
+     "code": 7717,
+     "description": "&#;AL amyloidosis (primary amyloidosis)\n\n                  100"
     }
    ],
    "notes": []
@@ -316,36 +329,36 @@
  "references": [],
  "notes": [
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Evaluate complications of pernicious anemia, such as dementia or peripheral neuropathy, separately."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: The 100 percent rating for bone marrow transplant shall be assigned as of the date of hospital admission and shall continue with a mandatory VA examination six months following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no recurrence, rate on residuals."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Rate complications such as hypertension, gout, stroke or thrombotic disease separately."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Rate complications such as systemic infections with encapsulated bacteria separately."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Sickle cell trait alone, without a history of directly attributable pathological findings, is not a ratable disability. Cases of symptomatic sickle cell trait will be forwarded to the Director, Compensation Service, for consideration under &#167;&#8201;3.321(b)(1) of this chapter."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be dtermined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: The 100 percent rating for bone marrow transplant shall be assigned as of the date of hospital admission and shall continue with a mandatory VA examination six months following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
   }
  ],
  "see_other_notes": [
   {
-   "see_other_note": "Otherwise rate as anemia (code 7700) or aplastic anemia (code 7716), whichever would result in the greater benefit.\n\n                  "
+   "see_other_note": "Otherwise rate as anemia (code 7700) or aplastic anemia (code 7716), whichever would result in the greater benefit."
   }
  ]
 }

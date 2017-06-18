@@ -382,15 +382,15 @@ def maybe_deduce_diagnosis_from_subject(category: models.RatingCategory):
     if 'tuberculosis' in category.description.lower():
         code_set = models.DiagnosticCodeSet()
         category.add_diagnostic_code_set(code_set)
-        code_set.add_diagnostic_code(models.DiagnosticCode(6701))  # TODO(Not sure what this is actually)
+        code_set.add_diagnostic_code(models.DiagnosticCode(6701, 'tuberculosis'))  # TODO(Not sure what this is actually)
     elif 'genitourinary' in category.description.lower():
         code_set = models.DiagnosticCodeSet()
         category.add_diagnostic_code_set(code_set)
-        code_set.add_diagnostic_code(models.DiagnosticCode(9999))  # TODO(Not sure what this is actually)
+        code_set.add_diagnostic_code(models.DiagnosticCode(9999, 'genitourinary'))  # TODO(Not sure what this is actually)
     elif 'mental disorders' in category.description.lower():
         code_set = models.DiagnosticCodeSet()
         category.add_diagnostic_code_set(code_set)
-        code_set.add_diagnostic_code(models.DiagnosticCode(9999))  # TODO(Not sure what this is actually)
+        code_set.add_diagnostic_code(models.DiagnosticCode(9999, 'mental disorders'))  # TODO(Not sure what this is actually)
 
 
 def convert_table_to_json(table_element: ElementTree.Element):

@@ -16,7 +16,8 @@
      ],
      "codes": [
       {
-       "code": 6301
+       "code": 6301,
+       "description": "&#;Visceral Leishmaniasis:"
       }
      ],
      "notes": []
@@ -32,7 +33,8 @@
      ],
      "codes": [
       {
-       "code": 6302
+       "code": 6302,
+       "description": "&#;Leprosy (Hansen's Disease):"
       }
      ],
      "notes": []
@@ -48,7 +50,8 @@
      ],
      "codes": [
       {
-       "code": 6304
+       "code": 6304,
+       "description": "&#;Malaria:"
       }
      ],
      "notes": []
@@ -57,13 +60,13 @@
    "references": [],
    "notes": [
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: A 100 percent evaluation shall continue beyond the cessation of treatment for active disease. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. Rate residuals such as liver damage or lymphadenopathy under the appropriate system."
     },
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: A 100 percent evaluation shall continue beyond the date that an examining physician has determined that this has become inactive. Six months after the date of inactivity, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. Rate residuals such as skin lesions or peripheral neuropathy under the appropriate system."
     },
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: The diagnosis of malaria depends on the identification of the malarial parasites in blood smears. If the veteran served in an endemic area and presents signs and symptoms compatible with malaria, the diagnosis may be based on clinical grounds alone. Relapses must be confirmed by the presence of malarial parasites in blood smears."
     }
    ],
    "see_other_notes": []
@@ -83,7 +86,8 @@
      ],
      "codes": [
       {
-       "code": 6305
+       "code": 6305,
+       "description": "&#;Lymphatic Filariasis:"
       }
      ],
      "notes": []
@@ -108,7 +112,8 @@
      ],
      "codes": [
       {
-       "code": 6306
+       "code": 6306,
+       "description": "&#;Bartonellosis:"
       }
      ],
      "notes": []
@@ -133,7 +138,8 @@
      ],
      "codes": [
       {
-       "code": 6307
+       "code": 6307,
+       "description": "&#;Plague:"
       }
      ],
      "notes": []
@@ -158,7 +164,8 @@
      ],
      "codes": [
       {
-       "code": 6308
+       "code": 6308,
+       "description": "&#;Relapsing Fever:"
       }
      ],
      "notes": []
@@ -183,7 +190,8 @@
      ],
      "codes": [
       {
-       "code": 6309
+       "code": 6309,
+       "description": "&#;Rheumatic fever:"
       }
      ],
      "notes": []
@@ -201,7 +209,8 @@
      "ratings": [],
      "codes": [
       {
-       "code": 6310
+       "code": 6310,
+       "description": "&#;Syphilis, and other treponemal infections:"
       }
      ],
      "notes": [
@@ -221,7 +230,8 @@
      ],
      "codes": [
       {
-       "code": 6311
+       "code": 6311,
+       "description": "&#;Tuberculosis, miliary:"
       }
      ],
      "notes": []
@@ -261,7 +271,8 @@
      ],
      "codes": [
       {
-       "code": 6313
+       "code": 6313,
+       "description": "&#;Avitaminosis:"
       }
      ],
      "notes": []
@@ -289,7 +300,8 @@
      ],
      "codes": [
       {
-       "code": 6314
+       "code": 6314,
+       "description": "&#;Beriberi:"
       }
      ],
      "notes": [
@@ -303,7 +315,7 @@
    "notes": [],
    "see_other_notes": [
     {
-     "see_other_note": "Inactive: See \u00a7\u00a7\u20094.88c and 4.89."
+     "see_other_note": "Inactive: See &#167;&#167;&#8201;4.88c and 4.89."
     }
    ]
   },
@@ -346,7 +358,8 @@
      ],
      "codes": [
       {
-       "code": 6315
+       "code": 6315,
+       "description": "&#;Pellagra:"
       }
      ],
      "notes": []
@@ -362,7 +375,8 @@
      ],
      "codes": [
       {
-       "code": 6316
+       "code": 6316,
+       "description": "&#;Brucellosis:"
       }
      ],
      "notes": []
@@ -387,7 +401,8 @@
      ],
      "codes": [
       {
-       "code": 6317
+       "code": 6317,
+       "description": "&#;Typhus, scrub:"
       }
      ],
      "notes": []
@@ -412,7 +427,8 @@
      ],
      "codes": [
       {
-       "code": 6318
+       "code": 6318,
+       "description": "&#;Melioidosis:"
       }
      ],
      "notes": []
@@ -437,7 +453,8 @@
      ],
      "codes": [
       {
-       "code": 6319
+       "code": 6319,
+       "description": "&#;Lyme Disease:"
       }
      ],
      "notes": []
@@ -462,7 +479,8 @@
      ],
      "codes": [
       {
-       "code": 6320
+       "code": 6320,
+       "description": "&#;Parasitic diseases otherwise not specified:"
       }
      ],
      "notes": []
@@ -499,7 +517,8 @@
      ],
      "codes": [
       {
-       "code": 6350
+       "code": 6350,
+       "description": "&#;Lupus erythematosus, systemic (disseminated):"
       }
      ],
      "notes": []
@@ -539,7 +558,8 @@
      ],
      "codes": [
       {
-       "code": 6351
+       "code": 6351,
+       "description": "&#;HIV-Related Illness:"
       }
      ],
      "notes": []
@@ -579,7 +599,8 @@
      ],
      "codes": [
       {
-       "code": 6354
+       "code": 6354,
+       "description": " Chronic Fatigue Syndrome (CFS):"
       }
      ],
      "notes": [
@@ -592,16 +613,16 @@
    "references": [],
    "notes": [
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: Evaluate this condition either by combining the evaluations for residuals under the appropriate system, or by evaluating DC 6350, whichever method results in a higher evaluation."
     },
     {
-     "note": "Note\n\n                    "
+     "note": "Note (1): The term &#8220;approved medication(s)&#8221; includes medications prescribed as part of a research protocol at an accredited medical institution."
     },
     {
-     "note": "Note\n\n                    "
+     "note": "Note (2): Psychiatric or central nervous system manifestations, opportunistic infections, and neoplasms may be rated separately under appropriate codes if higher overall evaluation results, but not in combination with percentages otherwise assignable above."
     },
     {
-     "note": "Note:\n\n                    "
+     "note": "Note: For the purpose of evaluating this disability, the condition will be considered incapacitating only while it requires bed rest and treatment by a physician."
     }
    ],
    "see_other_notes": []
@@ -619,7 +640,8 @@
    ],
    "codes": [
     {
-     "code": 6300
+     "code": 6300,
+     "description": "&#;Cholera, Asiatic:"
     }
    ],
    "notes": []

@@ -13,7 +13,8 @@
    ],
    "codes": [
     {
-     "code": 6200
+     "code": 6200,
+     "description": "&#;Chronic suppurative otitis media, mastoiditis, or cholesteatoma (or any combination):"
     }
    ],
    "notes": []
@@ -22,7 +23,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 6201
+     "code": 6201,
+     "description": "&#;Chronic nonsuppurative otitis media with effusion (serous otitis media):"
     }
    ],
    "notes": [
@@ -35,7 +37,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 6202
+     "code": 6202,
+     "description": "&#;Otosclerosis:"
     }
    ],
    "notes": [
@@ -61,7 +64,8 @@
    ],
    "codes": [
     {
-     "code": 6204
+     "code": 6204,
+     "description": "&#;Peripheral vestibular disorders:"
     }
    ],
    "notes": []
@@ -89,7 +93,8 @@
    ],
    "codes": [
     {
-     "code": 6205
+     "code": 6205,
+     "description": "&#;Meniere's syndrome (endolymphatic hydrops):"
     }
    ],
    "notes": []
@@ -117,7 +122,8 @@
    ],
    "codes": [
     {
-     "code": 6207
+     "code": 6207,
+     "description": " Loss of auricle:"
     }
    ],
    "notes": []
@@ -133,7 +139,8 @@
    ],
    "codes": [
     {
-     "code": 6208
+     "code": 6208,
+     "description": "&#;Malignant neoplasm of the ear (other than skin only)\n\n                  100"
     }
    ],
    "notes": []
@@ -142,7 +149,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 6209
+     "code": 6209,
+     "description": "&#;Benign neoplasms of the ear (other than skin only):"
     }
    ],
    "notes": [
@@ -162,7 +170,8 @@
    ],
    "codes": [
     {
-     "code": 6210
+     "code": 6210,
+     "description": "&#;Chronic otitis externa:"
     }
    ],
    "notes": []
@@ -178,7 +187,8 @@
    ],
    "codes": [
     {
-     "code": 6211
+     "code": 6211,
+     "description": "&#;Tympanic membrane, perforation of\n\n                  0"
     }
    ],
    "notes": []
@@ -194,7 +204,8 @@
    ],
    "codes": [
     {
-     "code": 6260
+     "code": 6260,
+     "description": "&#;Tinnitus, recurrent\n\n                  10"
     }
    ],
    "notes": []
@@ -203,25 +214,25 @@
  "references": [],
  "notes": [
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Evaluate hearing impairment, and complications such as labyrinthitis, tinnitus, facial nerve paralysis, or bone loss of skull, separately."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Objective findings supporting the diagnosis of vestibular disequilibrium are required before a compensable evaluation can be assigned under this code. Hearing impairment or suppuration shall be separately rated and combined."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Evaluate Meniere's syndrome either under these criteria or by separately evaluating vertigo (as a peripheral vestibular disorder), hearing impairment, and tinnitus, whichever method results in a higher overall evaluation. But do not combine an evaluation for hearing impairment, tinnitus, or vertigo with an evaluation under diagnostic code 6205."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, radiation treatment, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based on that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
   },
   {
-   "note": "Note (1):\n\n                    "
+   "note": "Note (1): A separate evaluation for tinnitus may be combined with an evaluation under diagnostic codes 6100, 6200, 6204, or other diagnostic code, except when tinnitus supports an evaluation under one of those diagnostic codes."
   },
   {
-   "note": "Note (2):\n\n                    "
+   "note": "Note (2): Assign only a single evaluation for recurrent tinnitus, whether the sound is perceived in one ear, both ears, or in the head."
   },
   {
-   "note": "Note (3):\n\n                    "
+   "note": "Note (3): Do not evaluate objective tinnitus (in which the sound is audible to other people and has a definable cause that may or may not be pathologic) under this diagnostic code, but evaluate it as part of any underlying condition causing it."
   }
  ],
  "see_other_notes": []

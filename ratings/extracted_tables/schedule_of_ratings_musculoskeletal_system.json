@@ -25,7 +25,8 @@
        ],
        "codes": [
         {
-         "code": 5003
+         "code": 5003,
+         "description": "&#;Arthritis, degenerative (hypertrophic or osteoarthritis):"
         }
        ],
        "notes": [
@@ -38,7 +39,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5004
+         "code": 5004,
+         "description": "&#;Arthritis, gonorrheal."
         }
        ],
        "notes": []
@@ -47,7 +49,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5005
+         "code": 5005,
+         "description": "&#;Arthritis, pneumococcic."
         }
        ],
        "notes": []
@@ -56,7 +59,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5006
+         "code": 5006,
+         "description": "&#;Arthritis, typhoid."
         }
        ],
        "notes": []
@@ -65,7 +69,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5007
+         "code": 5007,
+         "description": "&#;Arthritis, syphilitic."
         }
        ],
        "notes": []
@@ -74,7 +79,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5008
+         "code": 5008,
+         "description": "&#;Arthritis, streptococcic."
         }
        ],
        "notes": []
@@ -83,7 +89,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5009
+         "code": 5009,
+         "description": "&#;Arthritis, other types (specify)."
         }
        ],
        "notes": []
@@ -99,7 +106,8 @@
        ],
        "codes": [
         {
-         "code": 5012
+         "code": 5012,
+         "description": "&#;Bones, new growths of, malignant\n\n                  100"
         }
        ],
        "notes": []
@@ -108,7 +116,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5013
+         "code": 5013,
+         "description": "&#;Osteoporosis, with joint manifestations."
         }
        ],
        "notes": []
@@ -117,7 +126,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5014
+         "code": 5014,
+         "description": "&#;Osteomalacia."
         }
        ],
        "notes": []
@@ -126,7 +136,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5015
+         "code": 5015,
+         "description": "&#;Bones, new growths of, benign."
         }
        ],
        "notes": []
@@ -135,7 +146,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5016
+         "code": 5016,
+         "description": "&#;Osteitis deformans."
         }
        ],
        "notes": []
@@ -144,7 +156,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5017
+         "code": 5017,
+         "description": "&#;Gout."
         }
        ],
        "notes": []
@@ -153,7 +166,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5018
+         "code": 5018,
+         "description": "&#;Hydrarthrosis, intermittent."
         }
        ],
        "notes": []
@@ -162,7 +176,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5019
+         "code": 5019,
+         "description": "&#;Bursitis."
         }
        ],
        "notes": []
@@ -171,7 +186,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5020
+         "code": 5020,
+         "description": "&#;Synovitis."
         }
        ],
        "notes": []
@@ -180,7 +196,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5021
+         "code": 5021,
+         "description": "&#;Myositis."
         }
        ],
        "notes": []
@@ -189,7 +206,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5022
+         "code": 5022,
+         "description": "&#;Periostitis."
         }
        ],
        "notes": []
@@ -198,7 +216,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5023
+         "code": 5023,
+         "description": "&#;Myositis ossificans."
         }
        ],
        "notes": []
@@ -207,7 +226,8 @@
        "ratings": [],
        "codes": [
         {
-         "code": 5024
+         "code": 5024,
+         "description": "&#;Tenosynovitis."
         }
        ],
        "notes": [
@@ -239,7 +259,8 @@
        ],
        "codes": [
         {
-         "code": 5025
+         "code": 5025,
+         "description": "&#;Fibromyalgia (fibrositis, primary fibromyalgia syndrome)"
         }
        ],
        "notes": [
@@ -252,19 +273,19 @@
      "references": [],
      "notes": [
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation."
       },
       {
-       "note": "Note\n\n                    "
+       "note": "Note (1): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be combined with ratings based on limitation of motion."
       },
       {
-       "note": "Note\n\n                    "
+       "note": "Note (2): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be utilized in rating conditions listed under diagnostic codes 5013 to 5024, inclusive."
       },
       {
-       "note": "Note:\n\n                    "
+       "note": "Note: The 100 percent rating will be continued for 1 year following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals."
       },
       {
-       "note": "Note: i.e.\n\n                    "
+       "note": "Note: Widespread pain means pain in both the left and right sides of the body, that is both above and below the waist, and that affects both the axial skeleton (i.e., cervical spine, anterior chest, thoracic spine, or low back) and the extremities."
       }
      ],
      "see_other_notes": [
@@ -272,10 +293,10 @@
        "see_other_note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
       },
       {
-       "see_other_note": "5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative."
+       "see_other_note": "5010&#8195;Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative."
       },
       {
-       "see_other_note": "5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations."
+       "see_other_note": "5011&#8195;Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations."
       }
      ]
     }
@@ -322,7 +343,8 @@
    ],
    "codes": [
     {
-     "code": 5000
+     "code": 5000,
+     "description": "&#;Osteomyelitis, acute, subacute, or chronic:"
     }
    ],
    "notes": []
@@ -338,7 +360,8 @@
    ],
    "codes": [
     {
-     "code": 5001
+     "code": 5001,
+     "description": "&#;Bones and joints, tuberculosis of, active or inactive:"
     }
    ],
    "notes": []
@@ -372,7 +395,8 @@
    ],
    "codes": [
     {
-     "code": 5002
+     "code": 5002,
+     "description": "&#;Arthritis rheumatoid (atrophic) As an active process:"
     }
    ],
    "notes": []
@@ -381,15 +405,15 @@
  "references": [],
  "notes": [
   {
-   "note": "Note\n\n                    "
+   "note": "Note (1): A rating of 10 percent, as an exception to the amputation rule, is to be assigned in any case of active osteomyelitis where the amputation rating for the affected part is no percent. This 10 percent rating and the other partial ratings of 30 percent or less are to be combined with ratings for ankylosis, limited motion, nonunion or malunion, shortening, etc., subject, of course, to the amputation rule. The 60 percent rating, as it is based on constitutional symptoms, is not subject to the amputation rule. A rating for osteomyelitis will not be applied following cure by removal or radical resection of the affected bone."
   },
   {
-   "note": "Note\n\n                    "
+   "note": "Note (2): The 20 percent rating on the basis of activity within the past 5 years is not assignable following the initial infection of active osteomyelitis with no subsequent reactivation. The prerequisite for this historical rating is an established recurrent osteomyelitis. To qualify for the 10 percent rating, 2 or more episodes following the initial infection are required. This 20 percent rating or the 10 percent rating, when applicable, will be assigned once only to cover disability at all sites of previously active infection with a future ending date in the case of the 20 percent rating."
   }
  ],
  "see_other_notes": [
   {
-   "see_other_note": "Inactive: See \u00a7\u00a7\u20094.88b and 4.89."
+   "see_other_note": "Inactive: See &#167;&#167;&#8201;4.88b and 4.89.\n\n                  &#8195;"
   }
  ]
 }

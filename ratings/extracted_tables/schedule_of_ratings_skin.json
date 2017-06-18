@@ -55,7 +55,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7801
+                     "code": 7801,
+                     "description": "&#;Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are deep and nonlinear:"
                     }
                    ],
                    "notes": []
@@ -71,7 +72,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7802
+                     "code": 7802,
+                     "description": "&#;Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are superficial and nonlinear:"
                     }
                    ],
                    "notes": []
@@ -99,7 +101,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7804
+                     "code": 7804,
+                     "description": "&#;Scar(s), unstable or painful:"
                     }
                    ],
                    "notes": []
@@ -108,7 +111,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7805
+                     "code": 7805,
+                     "description": "&#;Scars, other (including linear scars) and other effects of scars evaluated under diagnostic codes , , , and :"
                     }
                    ],
                    "notes": [
@@ -146,7 +150,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7806
+                     "code": 7806,
+                     "description": "&#;Dermatitis or eczema."
                     }
                    ],
                    "notes": []
@@ -155,7 +160,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7807
+                     "code": 7807,
+                     "description": "&#;American (New World) leishmaniasis (mucocutaneous, espundia):"
                     }
                    ],
                    "notes": [
@@ -168,7 +174,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7808
+                     "code": 7808,
+                     "description": "&#;Old World leishmaniasis (cutaneous, Oriental sore):"
                     }
                    ],
                    "notes": [
@@ -181,7 +188,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7809
+                     "code": 7809,
+                     "description": "&#;Discoid lupus erythematosus or subacute cutaneous lupus erythematosus:"
                     }
                    ],
                    "notes": [
@@ -194,12 +202,13 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7811
+                     "code": 7811,
+                     "description": "&#;Tuberculosis luposa (lupus vulgaris), active or inactive:"
                     }
                    ],
                    "notes": [
                     {
-                     "note": "Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate"
+                     "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate"
                     }
                    ]
                   },
@@ -207,7 +216,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7813
+                     "code": 7813,
+                     "description": "&#;Dermatophytosis (ringworm: of body, tinea corporis; of head, tinea capitis; of feet, tinea pedis; of beard area, tinea barbae; of nails, tinea unguium; of inguinal area (jock itch), tinea cruris):"
                     }
                    ],
                    "notes": [
@@ -245,7 +255,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7815
+                     "code": 7815,
+                     "description": "&#;Bullous disorders (including pemphigus vulgaris, pemphigus foliaceous, bullous pemphigoid, dermatitis herpetiformis, epidermolysis bullosa acquisita, benign chronic familial pemphigus (Hailey-Hailey), and porphyria cutanea tarda):"
                     }
                    ],
                    "notes": []
@@ -279,7 +290,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7816
+                     "code": 7816,
+                     "description": "&#;Psoriasis:"
                     }
                    ],
                    "notes": []
@@ -319,7 +331,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7817
+                     "code": 7817,
+                     "description": "&#;Exfoliative dermatitis (erythroderma):"
                     }
                    ],
                    "notes": []
@@ -328,7 +341,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7818
+                     "code": 7818,
+                     "description": "&#;Malignant skin neoplasms (other than malignant melanoma):"
                     }
                    ],
                    "notes": [
@@ -341,7 +355,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7819
+                     "code": 7819,
+                     "description": "&#;Benign skin neoplasms:"
                     }
                    ],
                    "notes": [
@@ -354,7 +369,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7820
+                     "code": 7820,
+                     "description": "&#;Infections of the skin not listed elsewhere (including bacterial, fungal, viral, treponemal and parasitic diseases):"
                     }
                    ],
                    "notes": [
@@ -392,7 +408,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7821
+                     "code": 7821,
+                     "description": "&#;Cutaneous manifestations of collagen-vascular diseases not listed elsewhere (including scleroderma, calcinosis cutis, and dermatomyositis):"
                     }
                    ],
                    "notes": []
@@ -426,7 +443,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7822
+                     "code": 7822,
+                     "description": "&#;Papulosquamous disorders not listed elsewhere (including lichen planus, large or small plaque parapsoriasis, pityriasis lichenoides et varioliformis acuta (PLEVA), lymphomatoid papulosus, and pityriasis rubra pilaris (PRP)):"
                     }
                    ],
                    "notes": []
@@ -448,7 +466,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7823
+                     "code": 7823,
+                     "description": "&#;Vitiligo:"
                     }
                    ],
                    "notes": []
@@ -482,7 +501,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7824
+                     "code": 7824,
+                     "description": " Diseases of keratinization (including icthyoses, Darier's disease, and palmoplantar keratoderma):"
                     }
                    ],
                    "notes": []
@@ -510,7 +530,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7825
+                     "code": 7825,
+                     "description": "&#;Urticaria:"
                     }
                    ],
                    "notes": []
@@ -538,7 +559,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7826
+                     "code": 7826,
+                     "description": "&#;Vasculitis, primary cutaneous:"
                     }
                    ],
                    "notes": []
@@ -566,7 +588,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7827
+                     "code": 7827,
+                     "description": "&#;Erythema multiforme; Toxic epidermal necrolysis:"
                     }
                    ],
                    "notes": []
@@ -594,7 +617,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7828
+                     "code": 7828,
+                     "description": "&#;Acne:"
                     }
                    ],
                    "notes": []
@@ -622,7 +646,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7829
+                     "code": 7829,
+                     "description": "&#;Chloracne:"
                     }
                    ],
                    "notes": []
@@ -650,7 +675,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7830
+                     "code": 7830,
+                     "description": "&#;Scarring alopecia:"
                     }
                    ],
                    "notes": []
@@ -672,7 +698,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7831
+                     "code": 7831,
+                     "description": "&#;Alopecia areata:"
                     }
                    ],
                    "notes": []
@@ -694,7 +721,8 @@
                    ],
                    "codes": [
                     {
-                     "code": 7832
+                     "code": 7832,
+                     "description": "&#;Hyperhidrosis:"
                     }
                    ],
                    "notes": []
@@ -703,7 +731,8 @@
                    "ratings": [],
                    "codes": [
                     {
-                     "code": 7833
+                     "code": 7833,
+                     "description": "&#;Malignant melanoma:"
                     }
                    ],
                    "notes": [
@@ -716,49 +745,49 @@
                  "references": [],
                  "notes": [
                   {
-                   "note": "Note (2):\n\n                    "
+                   "note": "Note (2): Rate tissue loss of the auricle under DC 6207 (loss of auricle) and anatomical loss of the eye under DC 6061 (anatomical loss of both eyes) or DC 6063 (anatomical loss of one eye), as appropriate."
                   },
                   {
-                   "note": "Note (3):\n\n                    "
+                   "note": "Note (3): Take into consideration unretouched color photographs when evaluating under these criteria."
                   },
                   {
-                   "note": "Note (4):\n\n                    "
+                   "note": "Note (4): Separately evaluate disabling effects other than disfigurement that are associated with individual scar(s) of the head, face, or neck, such as pain, instability, and residuals of associated muscle or nerve injury, under the appropriate diagnostic code(s) and apply &#167;&#8201;4.25 to combine the evaluation(s) with the evaluation assigned under this diagnostic code."
                   },
                   {
-                   "note": "Note (5):\n\n                    "
+                   "note": "Note (5): The characteristic(s) of disfigurement may be caused by one scar or by multiple scars; the characteristic(s) required to assign a particular evaluation need not be caused by a single scar in order to assign that evaluation."
                   },
                   {
-                   "note": "Note (1):\n\n                    "
+                   "note": "Note (1): A deep scar is one associated with underlying soft tissue damage."
                   },
                   {
-                   "note": "Note (2):\n\n                    "
+                   "note": "Note (2): If multiple qualifying scars are present, or if a single qualifying scar affects more than one extremity, or a single qualifying scar affects one or more extremities and either the anterior portion or posterior portion of the trunk, or both, or a single qualifying scar affects both the anterior portion and the posterior portion of the trunk, assign a separate evaluation for each affected extremity based on the total area of the qualifying scars that affect that extremity, assign a separate evaluation based on the total area of the qualifying scars that affect the anterior portion of the trunk, and assign a separate evaluation based on the total area of the qualifying scars that affect the posterior portion of the trunk. The midaxillary line on each side separates the anterior and posterior portions of the trunk. Combine the separate evaluations under &#167;&#8201;4.25. Qualifying scars are scars that are nonlinear, deep, and are not located on the head, face, or neck."
                   },
                   {
-                   "note": "Note (1):\n\n                    "
+                   "note": "Note (1): A superficial scar is one not associated with underlying soft tissue damage"
                   },
                   {
-                   "note": "Note (2):\n\n                    "
+                   "note": "Note (2): If multiple qualifying scars are present, or if a single qualifying scar affects more than one extremity, or a single qualifying scar affects one or more extremities and either the anterior portion or posterior portion of the trunk, or both, or a single qualifying scar affects both the anterior portion and the posterior portion of the trunk, assign a separate evaluation for each affected extremity based on the total area of the qualifying scars that affect that extremity, assign a separate evaluation based on the total area of the qualifying scars that affect the anterior portion of the trunk, and assign a separate evaluation based on the total area of the qualifying scars that affect the posterior portion of the trunk. The midaxillary line on each side separates the anterior and posterior portions of the trunk. Combine the separate evaluations under &#167;&#8201;4.25. Qualifying scars are scars that are nonlinear, superficial, and are not located on the head, face, or neck."
                   },
                   {
-                   "note": "Note (1):\n\n                    "
+                   "note": "Note (1): An unstable scar is one where, for any reason, there is frequent loss of covering of skin over the scar."
                   },
                   {
-                   "note": "Note (2):\n\n                    "
+                   "note": "Note (2): If one or more scars are both unstable and painful, add 10 percent to the evaluation that is based on the total number of unstable or painful scars"
                   },
                   {
-                   "note": "Note (3):\n\n                    "
+                   "note": "Note (3): Scars evaluated under diagnostic codes 7800, 7801, 7802, or 7805 may also receive an evaluation under this diagnostic code, when applicable"
                   },
                   {
-                   "note": "Note:\n\n                    "
+                   "note": "Note: Evaluate non-cutaneous (visceral) leishmaniasis under DC 6301 (visceral leishmaniasis)."
                   },
                   {
-                   "note": "Note:\n\n                    "
+                   "note": "Note: Evaluate non-cutaneous (visceral) leishmaniasis under DC 6301 (visceral leishmaniasis)."
                   },
                   {
-                   "note": "Note: i.e.\n\n                    "
+                   "note": "Note: If a skin malignancy requires therapy that is comparable to that used for systemic malignancies, i.e., systemic chemotherapy, X-ray therapy more extensive than to the skin, or surgery more extensive than wide local excision, a 100-percent evaluation will be assigned from the date of onset of treatment, and will continue, with a mandatory VA examination six months following the completion of such antineoplastic treatment, and any change in evaluation based upon that or any subsequent examination will be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluation will then be made on residuals. If treatment is confined to the skin, the provisions for a 100-percent evaluation do not apply."
                   },
                   {
-                   "note": "Note: i.e.\n\n                    "
+                   "note": "Note: If a skin malignancy requires therapy that is comparable to that used for systemic malignancies, i.e., systemic chemotherapy, X-ray therapy more extensive than to the skin, or surgery more extensive than wide local excision, a 100-percent evaluation will be assigned from the date of onset of treatment, and will continue, with a mandatory VA examination six months following the completion of such antineoplastic treatment, and any change in evaluation based upon that or any subsequent examination will be subject to the provisions of &#167;&#8201;3.105(e). If there has been no local recurrence or metastasis, evaluation will then be made on residuals. If treatment is confined to the skin, the provisions for a 100-percent evaluation do not apply."
                   }
                  ],
                  "see_other_notes": [
@@ -864,7 +893,8 @@
    ],
    "codes": [
     {
-     "code": 7800
+     "code": 7800,
+     "description": "&#;Burn scar(s) of the head, face, or neck; scar(s) of the head, face, or neck due to other causes; or other disfigurement of the head, face, or neck:"
     }
    ],
    "notes": []
@@ -873,7 +903,7 @@
  "references": [],
  "notes": [
   {
-   "note": "Note (1):\n\n                    "
+   "note": "Note (1):The 8 characteristics of disfigurement, for purposes of evaluation under &#167;&#8201;4.118, are:"
   }
  ],
  "see_other_notes": []

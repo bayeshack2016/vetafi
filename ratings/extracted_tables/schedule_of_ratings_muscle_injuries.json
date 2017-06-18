@@ -35,7 +35,8 @@
    ],
    "codes": [
     {
-     "code": 5301
+     "code": 5301,
+     "description": "&#;Group I. Function: Upward rotation of scapula; elevation of arm above shoulder level. Extrinsic muscles of shoulder girdle: (1) Trapezius; (2) levator scapulae; (3) serratus magnus"
     }
    ],
    "notes": []
@@ -73,7 +74,8 @@
    ],
    "codes": [
     {
-     "code": 5302
+     "code": 5302,
+     "description": "&#;Group II. Function: Depression of arm from vertical overhead to hanging at side (1, 2); downward rotation of scapula (3, 4); 1 and 2 act with Group III in forward and backward swing of arm. Extrinsic muscles of shoulder girdle: (1) Pectoralis major II (costosternal); (2) latissimus dorsi and teres major (teres major, although technically an intrinsic muscle, is included with latissimus dorsi); (3) pectoralis minor; (4) rhomboid"
     }
    ],
    "notes": []
@@ -111,7 +113,8 @@
    ],
    "codes": [
     {
-     "code": 5303
+     "code": 5303,
+     "description": "&#;Group III. Function: Elevation and abduction of arm to level of shoulder; act with 1 and 2 of Group II in forward and backward swing of arm. Intrinsic muscles of shoulder girdle: (1) Pectoralis major I (clavicular); (2) deltoid"
     }
    ],
    "notes": []
@@ -149,7 +152,8 @@
    ],
    "codes": [
     {
-     "code": 5304
+     "code": 5304,
+     "description": "&#;Group IV. Function: Stabilization of shoulder against injury in strong movements, holding head of humerus in socket; abduction; outward rotation and inward rotation of arm. Intrinsic muscles of shoulder girdle: (1) Supraspinatus; (2) infraspinatus and teres minor; (3) subscapularis; (4) coracobrachialis"
     }
    ],
    "notes": []
@@ -187,7 +191,8 @@
    ],
    "codes": [
     {
-     "code": 5305
+     "code": 5305,
+     "description": "&#;Group V. Function: Elbow supination (1) (long head of biceps is stabilizer of shoulder joint); flexion of elbow (1, 2, 3). Flexor muscles of elbow: (1) Biceps; (2) brachialis; (3) brachioradialis"
     }
    ],
    "notes": []
@@ -225,7 +230,8 @@
    ],
    "codes": [
     {
-     "code": 5306
+     "code": 5306,
+     "description": "&#;Group VI. Function: Extension of elbow (long head of triceps is stabilizer of shoulder joint). Extensor muscles of the elbow: (1) Triceps; (2) anconeus."
     }
    ],
    "notes": []

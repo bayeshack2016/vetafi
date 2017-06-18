@@ -6,7 +6,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 9999
+     "code": 9999,
+     "description": "mental disorders"
     }
    ],
    "notes": []
@@ -52,7 +53,8 @@
    ],
    "codes": [
     {
-     "code": 9999
+     "code": 9999,
+     "description": "mental disorders"
     }
    ],
    "notes": []

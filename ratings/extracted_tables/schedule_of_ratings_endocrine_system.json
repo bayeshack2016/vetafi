@@ -31,7 +31,8 @@
    ],
    "codes": [
     {
-     "code": 7900
+     "code": 7900,
+     "description": "&#;Hyperthyroidism"
     }
    ],
    "notes": []
@@ -65,7 +66,8 @@
    ],
    "codes": [
     {
-     "code": 7901
+     "code": 7901,
+     "description": "&#;Thyroid gland, toxic adenoma of"
     }
    ],
    "notes": []
@@ -87,7 +89,8 @@
    ],
    "codes": [
     {
-     "code": 7902
+     "code": 7902,
+     "description": "&#;Thyroid gland, nontoxic adenoma of"
     }
    ],
    "notes": []
@@ -121,7 +124,8 @@
    ],
    "codes": [
     {
-     "code": 7903
+     "code": 7903,
+     "description": "&#;Hypothyroidism"
     }
    ],
    "notes": []
@@ -149,7 +153,8 @@
    ],
    "codes": [
     {
-     "code": 7904
+     "code": 7904,
+     "description": "&#;Hyperparathyroidism"
     }
    ],
    "notes": []
@@ -177,7 +182,8 @@
    ],
    "codes": [
     {
-     "code": 7905
+     "code": 7905,
+     "description": "&#;Hypoparathyroidism"
     }
    ],
    "notes": []
@@ -205,7 +211,8 @@
    ],
    "codes": [
     {
-     "code": 7907
+     "code": 7907,
+     "description": "&#;Cushing's syndrome"
     }
    ],
    "notes": []
@@ -233,7 +240,8 @@
    ],
    "codes": [
     {
-     "code": 7908
+     "code": 7908,
+     "description": "&#;Acromegaly"
     }
    ],
    "notes": []
@@ -267,7 +275,8 @@
    ],
    "codes": [
     {
-     "code": 7909
+     "code": 7909,
+     "description": "&#;Diabetes insipidus"
     }
    ],
    "notes": []
@@ -295,7 +304,8 @@
    ],
    "codes": [
     {
-     "code": 7911
+     "code": 7911,
+     "description": "&#;Addison's disease (Adrenal Cortical Hypofunction)"
     }
    ],
    "notes": []
@@ -304,7 +314,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7912
+     "code": 7912,
+     "description": "&#;Pluriglandular syndrome"
     }
    ],
    "notes": [
@@ -348,7 +359,8 @@
    ],
    "codes": [
     {
-     "code": 7913
+     "code": 7913,
+     "description": "&#;Diabetes mellitus"
     }
    ],
    "notes": []
@@ -364,7 +376,8 @@
    ],
    "codes": [
     {
-     "code": 7914
+     "code": 7914,
+     "description": "&#;Neoplasm, malignant, any specified part of the endocrine system\n\n                  100"
     }
    ],
    "notes": []
@@ -373,7 +386,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7916
+     "code": 7916,
+     "description": "&#;Hyperpituitarism (prolactin secreting pituitary dysfunction)"
     }
    ],
    "notes": []
@@ -382,7 +396,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7917
+     "code": 7917,
+     "description": "&#;Hyperaldosteronism (benign or malignant)"
     }
    ],
    "notes": []
@@ -391,7 +406,8 @@
    "ratings": [],
    "codes": [
     {
-     "code": 7918
+     "code": 7918,
+     "description": "&#;Pheochromocytoma (benign or malignant)"
     }
    ],
    "notes": []
@@ -407,7 +423,8 @@
    ],
    "codes": [
     {
-     "code": 7919
+     "code": 7919,
+     "description": "&#;C-cell hyperplasia of the thyroid\n\n                  100"
     }
    ],
    "notes": []
@@ -416,54 +433,54 @@
  "references": [],
  "notes": [
   {
-   "note": "Note (1):\n\n                    "
+   "note": "Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above."
   },
   {
-   "note": "Note (2):\n\n                    "
+   "note": "Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079)."
   },
   {
-   "note": "Note (1):\n\n                    "
+   "note": "Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above."
   },
   {
-   "note": "Note (2):\n\n                    "
+   "note": "Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079)."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: If there are symptoms due to pressure on adjacent organs such as the trachea, larynx, or esophagus, evaluate under the diagnostic code for disability of that organ, if doing so would result in a higher evaluation than using this diagnostic code."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Following surgery or treatment, evaluate as digestive, skeletal, renal, or cardiovascular residuals or as endocrine dysfunction."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: With recovery or control, evaluate as residuals of adrenal insufficiency or cardiovascular, psychiatric, skin, or skeletal complications under appropriate diagnostic code."
   },
   {
-   "note": "Note (1):\n\n                    "
+   "note": "Note (1): An Addisonian &#8220;crisis&#8221; consists of the rapid onset of peripheral vascular collapse (with acute hypotension and shock), with findings that may include: anorexia; nausea; vomiting; dehydration; profound weakness; pain in abdomen, legs, and back; fever; apathy, and depressed mentation with possible progression to coma, renal shutdown, and death."
   },
   {
-   "note": "Note (2):\n\n                    "
+   "note": "Note (2): An Addisonian &#8220;episode,&#8221; for VA purposes, is a less acute and less severe event than an Addisonian crisis and may consist of anorexia, nausea, vomiting, diarrhea, dehydration, weakness, malaise, orthostatic hypotension, or hypoglycemia, but no peripheral vascular collapse."
   },
   {
-   "note": "Note (3):\n\n                    "
+   "note": "Note (3): Tuberculous Addison's disease will be evaluated as active or inactive tuberculosis. If inactive, these evaluations are not to be combined with the graduated ratings of 50 percent or 30 percent for non-pulmonary tuberculosis specified under &#167;&#8201;4.88b. Assign the higher rating."
   },
   {
-   "note": "Note (1):\n\n                    "
+   "note": "Note (1): Evaluate compensable complications of diabetes separately unless they are part of the criteria used to support a 100 percent evaluation. Noncompensable complications are considered part of the diabetic process under diagnostic code 7913."
   },
   {
-   "note": "Note (2):\n\n                    "
+   "note": "Note (2): When diabetes mellitus has been conclusively diagnosed, do not request a glucose tolerance test solely for rating purposes."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate."
   },
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
   }
  ],
  "see_other_notes": [
   {
-   "see_other_note": "7915\u2003Neoplasm, benign, any specified part of the endocrine system rate as residuals of endocrine dysfunction."
+   "see_other_note": "7915&#8195;Neoplasm, benign, any specified part of the endocrine system rate as residuals of endocrine dysfunction."
   }
  ]
 }

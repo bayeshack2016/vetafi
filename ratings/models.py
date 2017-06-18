@@ -1,7 +1,6 @@
 import json
 import re
 
-import munging
 import util
 
 from json import JSONEncoder
@@ -44,8 +43,7 @@ class RatingNote(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'RatingNote':
-        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
-        return RatingNote(munging.extract_entry_text(entries[0]))
+        return RatingNote(util.inner_text(element))
 
     def as_dict(self):
         return {'note': self.description}
@@ -55,17 +53,20 @@ class RatingNote(RatingTableObject):
 
 
 class DiagnosticCode(RatingTableObject):
-    def __init__(self, code: int):
+    def __init__(self, code: int, description: str):
         self.code = code
+        self.description = description
 
     @classmethod
     def from_element(cls, element) -> 'DiagnosticCode':
         entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
         code = re.findall('[0-9]{4}', entries[0].text)[0]
-        return DiagnosticCode(int(code))
+        description = re.sub('[0-9]{4}', '', util.inner_text(element))
+        return DiagnosticCode(int(code), description)
 
     def as_dict(self):
-        return {'code': self.code}
+        return {'code': self.code,
+                'description': self.description}
 
 
 class DiagnosticCodeSet(RatingTableObject):
@@ -95,8 +96,7 @@ class RatingReference(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'RatingReference':
-        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
-        return RatingReference(entries[0].text)
+        return RatingReference(util.inner_text(element))
 
     def as_dict(self):
         return {'reference': self.description}
@@ -111,8 +111,7 @@ class SeeOtherRatingNote(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'SeeOtherRatingNote':
-        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
-        return SeeOtherRatingNote(munging.extract_entry_text(entries[0]))
+        return SeeOtherRatingNote(util.inner_text(element))
 
     def as_dict(self):
         return {'see_other_note': self.description}

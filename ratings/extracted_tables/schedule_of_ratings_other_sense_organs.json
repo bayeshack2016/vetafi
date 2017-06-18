@@ -13,7 +13,8 @@
    ],
    "codes": [
     {
-     "code": 6275
+     "code": 6275,
+     "description": "&#;Sense of smell, complete loss\n\n                  10"
     }
    ],
    "notes": []
@@ -29,7 +30,8 @@
    ],
    "codes": [
     {
-     "code": 6276
+     "code": 6276,
+     "description": "&#;Sense of taste, complete loss\n\n                  10"
     }
    ],
    "notes": []
@@ -38,7 +40,7 @@
  "references": [],
  "notes": [
   {
-   "note": "Note:\n\n                    "
+   "note": "Note: Evaluation will be assigned under diagnostic codes 6275 or 6276 only if there is an anatomical or pathological basis for the condition."
   }
  ],
  "see_other_notes": []
