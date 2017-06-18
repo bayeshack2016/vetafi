@@ -51,6 +51,9 @@ GET         /api/form/:claimID/:formKey/issigned  controllers.api.FormController
 GET         /beta                                 controllers.ApplicationController.googleForm()
 POST        /api/subscribe                        controllers.api.MailingListController.subscribe()
 
+
+GET         /ratings                              controllers.RatingsController.index()
+
 # Gulp managed static assets
 GET         /*file                                controllers.GulpAssets.at(file)
 

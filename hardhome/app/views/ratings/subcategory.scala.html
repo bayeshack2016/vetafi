@@ -1,0 +1,23 @@
+@(ratingsCategory: models.RatingCategory)
+
+<table>
+    <tbody>
+
+    @ratingsCategory.diagnostic_code_sets.map { diagnostic_code_set: models.DiagnosticCodeSet =>
+        <tr>
+            <td>@diagnostic_code_set</td>
+        </tr>
+    }
+
+    @ratingsCategory.subcategories.map { subcategory: models.RatingCategory =>
+        <tr>
+            <td>
+                @subcategory.category
+            </td>
+            <td>
+                @views.html.ratings.subcategory(subcategory)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

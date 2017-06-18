@@ -7,6 +7,7 @@ import play.modules.reactivemongo.ReactiveMongoApi
 import services.documents.{ DocumentService, SeamlessDocsDocumentService }
 import services.{ AuthTokenService, AuthTokenServiceImpl, BiscuitPasswordMongoApi }
 import services.forms._
+import services.ratings.{ JsonResourceRatingsConfigManager, RatingsConfigManager }
 import services.submission.{ FaxSubmissionService, SubmissionService }
 import utils.seamlessdocs.{ SeamlessDocsService, SeamlessDocsServiceImpl }
 import utils.secrets.{ BiscuitSecretsManager, SecretsManager, StaticSecrets }
@@ -37,5 +38,6 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[DocumentService].to[SeamlessDocsDocumentService]
     bind[SeamlessDocsService].to[SeamlessDocsServiceImpl]
     bind[ReactiveMongoApi].to[BiscuitPasswordMongoApi]
+    bind[RatingsConfigManager].to[JsonResourceRatingsConfigManager]
   }
 }

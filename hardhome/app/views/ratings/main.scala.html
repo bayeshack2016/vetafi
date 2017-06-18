@@ -1,0 +1,15 @@
+@(ratingsCategories: Map[String, models.RatingCategory])
+
+
+<table>
+    <tbody>
+        @ratingsCategories.map { row =>
+        <tr>
+            <td>@row._1</td>
+            <td>
+                @views.html.ratings.subcategory(row._2)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

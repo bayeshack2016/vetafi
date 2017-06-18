@@ -1,0 +1,46 @@
+{
+ "category": "Schedule of ratings\u2014other sense organs.",
+ "subcategories": [],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "6275\u2003Sense of smell, complete loss"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6275,
+     "description": "&#;Sense of smell, complete loss\n\n                  10"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "6276\u2003Sense of taste, complete loss"
+    }
+   ],
+   "codes": [
+    {
+     "code": 6276,
+     "description": "&#;Sense of taste, complete loss\n\n                  10"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "notes": [
+  {
+   "note": "Note: Evaluation will be assigned under diagnostic codes 6275 or 6276 only if there is an anatomical or pathological basis for the condition."
+  }
+ ],
+ "see_other_notes": []
+}

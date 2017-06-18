@@ -1,0 +1,467 @@
+{
+ "category": "Schedule of ratings\u2014endocrine system.",
+ "subcategories": [],
+ "diagnostic_code_sets": [
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Thyroid enlargement, tachycardia (more than 100 beats per minute), eye involvement, muscular weakness, loss of weight, and sympathetic nervous system, cardiovascular, or astrointestinal symptoms"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Emotional instability, tachycardia, fatigability, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Tachycardia, tremor, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7900,
+     "description": "&#;Hyperthyroidism"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Thyroid enlargement, tachycardia (more than 100 beats per minute), eye involvement, muscular weakness, loss of weight, and sympathetic nervous system, cardiovascular, or gastrointestinal symptoms"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Emotional instability, tachycardia, fatigability, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Tachycardia, tremor, and increased pulse pressure or blood pressure"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7901,
+     "description": "&#;Thyroid gland, toxic adenoma of"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With disfigurement of the head or neck"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Without disfigurement of the head or neck"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7902,
+     "description": "&#;Thyroid gland, nontoxic adenoma of"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Cold intolerance, muscular weakness, cardiovascular involvement, mental disturbance (dementia, slowing of thought, depression), bradycardia (less than 60 beats per minute), and sleepiness"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Muscular weakness, mental disturbance, and weight gain"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Fatigability, constipation, and mental sluggishness"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Fatigability, or; continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7903,
+     "description": "&#;Hypothyroidism"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Generalized decalcification of bones, kidney stones, gastrointestinal symptoms (nausea, vomiting, anorexia, constipation, weight loss, or peptic ulcer), and weakness"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Gastrointestinal symptoms and weakness"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7904,
+     "description": "&#;Hyperparathyroidism"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Marked neuromuscular excitability (such as convulsions, muscular spasms (tetany), or laryngeal stridor) plus either cataract or evidence of increased intracranial pressure (such as papilledema)"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Marked neuromuscular excitability, or; paresthesias (of arms, legs, or circumoral area) plus either cataract or evidence of increased intracranial pressure"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Continuous medication required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7905,
+     "description": "&#;Hypoparathyroidism"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "As active, progressive disease including loss of muscle strength, areas of osteoporosis, hypertension, weakness, and enlargement of pituitary or adrenal gland"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Loss of muscle strength and enlargement of pituitary or adrenal gland"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "With striae, obesity, moon face, glucose intolerance, and vascular fragility"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7907,
+     "description": "&#;Cushing's syndrome"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Evidence of increased intracranial pressure (such as visual field defect), arthropathy, glucose intolerance, and either hypertension or cardiomegaly"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Arthropathy, glucose intolerance, and hypertension"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Enlargement of acral parts or overgrowth of long bones, and enlarged sella turcica"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7908,
+     "description": "&#;Acromegaly"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Polyuria with near-continuous thirst, and more than two documented episodes of dehydration requiring parenteral hydration in the past year"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Polyuria with near-continuous thirst, and one or two documented episodes of dehydration requiring parenteral hydration in the past year"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Polyuria with near-continuous thirst, and one or more episodes of dehydration in the past year not requiring parenteral hydration"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Polyuria with near-continuous thirst"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7909,
+     "description": "&#;Diabetes insipidus"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Four or more crises during the past year"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Three crises during the past year, or; five or more episodes during the past year"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "One or two crises during the past year, or; two to four episodes during the past year, or; weakness and fatigability, or; corticosteroid therapy required for control"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7911,
+     "description": "&#;Addison's disease (Adrenal Cortical Hypofunction)"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Requiring more than one daily injection of insulin, restricted diet, and regulation of activities (avoidance of strenuous occupational and recreational activities) with episodes of ketoacidosis or hypoglycemic reactions requiring at least three hospitalizations per year or weekly visits to a diabetic care provider, plus either progressive loss of weight and strength or complications that would be compensable if separately evaluated"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Requiring insulin, restricted diet, and regulation of activities with episodes of ketoacidosis or hypoglycemic reactions requiring one or two hospitalizations per year or twice a month visits to a diabetic care provider, plus complications that would not be compensable if separately evaluated"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Requiring insulin, restricted diet, and regulation of activities"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Requiring insulin and restricted diet, or; oral hypoglycemic agent and restricted diet"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Manageable by restricted diet only"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7912,
+     "description": "&#;Pluriglandular syndrome"
+    },
+    {
+     "code": 7913,
+     "description": "&#;Diabetes mellitus"
+    }
+   ],
+   "notes": [
+    {
+     "note": "Evaluate according to major manifestations."
+    }
+   ]
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "7914\u2003Neoplasm, malignant, any specified part of the endocrine system"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7914,
+     "description": "&#;Neoplasm, malignant, any specified part of the endocrine system\n\n                  100"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [],
+   "codes": [
+    {
+     "code": 7916,
+     "description": "&#;Hyperpituitarism (prolactin secreting pituitary dysfunction)"
+    },
+    {
+     "code": 7917,
+     "description": "&#;Hyperaldosteronism (benign or malignant)"
+    },
+    {
+     "code": 7918,
+     "description": "&#;Pheochromocytoma (benign or malignant)"
+    }
+   ],
+   "notes": []
+  },
+  {
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "7919\u2003C-cell hyperplasia of the thyroid"
+    }
+   ],
+   "codes": [
+    {
+     "code": 7919,
+     "description": "&#;C-cell hyperplasia of the thyroid\n\n                  100"
+    }
+   ],
+   "notes": []
+  }
+ ],
+ "notes": [
+  {
+   "note": "Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above."
+  },
+  {
+   "note": "Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079)."
+  },
+  {
+   "note": "Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above."
+  },
+  {
+   "note": "Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079)."
+  },
+  {
+   "note": "Note: If there are symptoms due to pressure on adjacent organs such as the trachea, larynx, or esophagus, evaluate under the diagnostic code for disability of that organ, if doing so would result in a higher evaluation than using this diagnostic code."
+  },
+  {
+   "note": "Note: Following surgery or treatment, evaluate as digestive, skeletal, renal, or cardiovascular residuals or as endocrine dysfunction."
+  },
+  {
+   "note": "Note: With recovery or control, evaluate as residuals of adrenal insufficiency or cardiovascular, psychiatric, skin, or skeletal complications under appropriate diagnostic code."
+  },
+  {
+   "note": "Note (1): An Addisonian &#8220;crisis&#8221; consists of the rapid onset of peripheral vascular collapse (with acute hypotension and shock), with findings that may include: anorexia; nausea; vomiting; dehydration; profound weakness; pain in abdomen, legs, and back; fever; apathy, and depressed mentation with possible progression to coma, renal shutdown, and death."
+  },
+  {
+   "note": "Note (2): An Addisonian &#8220;episode,&#8221; for VA purposes, is a less acute and less severe event than an Addisonian crisis and may consist of anorexia, nausea, vomiting, diarrhea, dehydration, weakness, malaise, orthostatic hypotension, or hypoglycemia, but no peripheral vascular collapse."
+  },
+  {
+   "note": "Note (3): Tuberculous Addison's disease will be evaluated as active or inactive tuberculosis. If inactive, these evaluations are not to be combined with the graduated ratings of 50 percent or 30 percent for non-pulmonary tuberculosis specified under &#167;&#8201;4.88b. Assign the higher rating."
+  },
+  {
+   "note": "Note (1): Evaluate compensable complications of diabetes separately unless they are part of the criteria used to support a 100 percent evaluation. Noncompensable complications are considered part of the diabetic process under diagnostic code 7913."
+  },
+  {
+   "note": "Note (2): When diabetes mellitus has been conclusively diagnosed, do not request a glucose tolerance test solely for rating purposes."
+  },
+  {
+   "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+  },
+  {
+   "note": "Note: Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate."
+  },
+  {
+   "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+  }
+ ],
+ "see_other_notes": [
+  {
+   "see_other_note": "7915&#8195;Neoplasm, benign, any specified part of the endocrine system rate as residuals of endocrine dysfunction."
+  }
+ ]
+}
