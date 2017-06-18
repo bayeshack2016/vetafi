@@ -71,7 +71,7 @@ def save_xml(table_element: ElementTree.Element):
 
 
 def is_category_row(row_element: ElementTree.Element):
-    entries = [entry for entry in row_element.findall('ENT') if util.inner_xml(entry).strip()]
+    entries = [entry for entry in row_element.findall('ENT') if util.inner_text(entry).strip()]
     row_length = len(entries)
     return row_length == 1
 
@@ -81,13 +81,13 @@ def get_description(row_element: ElementTree.Element):
 
 
 def is_rating_row(row_element: ElementTree.Element):
-    entries = [entry for entry in row_element.findall('ENT') if util.inner_xml(entry).strip()]
+    entries = [entry for entry in row_element.findall('ENT') if util.inner_text(entry).strip()]
     row_length = len(entries)
     return row_length >= 2 and all([munging.is_integer_0_100(entry.text) for entry in entries[1:]])
 
 
 def is_diagnostic_and_rating_row(row_element: ElementTree.Element):
-    entries = [entry for entry in row_element.findall('ENT') if util.inner_xml(entry).strip()]
+    entries = [entry for entry in row_element.findall('ENT') if util.inner_text(entry).strip()]
     row_length = len(entries)
     return row_length >= 2 and all([munging.is_integer_0_100(entry.text) for entry in entries[1:]]) and munging.describes_diagnostic_code(entries[0].text)
 
@@ -155,10 +155,10 @@ def is_see_other_row(row_element: ElementTree.Element):
     row_length = len(entries)
 
     for entry in entries:
-        text = util.inner_xml(entry)
-        if '§' in text and 'see' in text.lower():
+        text = util.inner_text(entry)
+        if '&#167;' in text and 'see' in text.lower():
             return True
-        elif (' rate as' in text.lower() or 'rate the disability as' in text.lower()) and not 'rate as below' in text.lower():
+        elif ('rate particular condition as' in text.lower() or ' rate as' in text.lower() or 'rate the disability as' in text.lower()) and not 'rate as below' in text.lower():
             return True
     return False
 
@@ -176,7 +176,7 @@ def is_general_rating_note_row(row_element: ElementTree.Element):
     """
     entries = row_element.findall('ENT')
     row_length = len(entries)
-    return row_length == 1 and util.inner_xml(entries[0]).lower().strip().startswith('general rating formula')
+    return row_length == 1 and util.inner_text(entries[0]).lower().strip().startswith('general rating formula')
 
 
 class RatingTableStateMachine:
@@ -192,7 +192,7 @@ class RatingTableStateMachine:
          'before': 'add_child_category'},
 
         {'trigger': 'process_category',
-         'source': ['reference', 'rating', 'note'],
+         'source': ['reference', 'rating', 'note', 'see_other_note'],
          'dest': 'category',
          'before': 'add_sibling_category'},
 
@@ -336,9 +336,11 @@ class RatingTableStateMachine:
         except Exception as e:
             if self.last_row is not None:
                 logger.info(util.pformat_element(self.last_row))
+                logger.info(util.inner_text(self.last_row))
             else:
                 logger.info("---FIRST ROW---")
             logger.info(util.pformat_element(self.current_row))
+            logger.info(util.inner_text(self.current_row))
             raise e
 
     def process_row_unsafe(self, row: ElementTree.Element):

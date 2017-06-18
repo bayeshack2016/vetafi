@@ -2,6 +2,7 @@ import json
 import re
 
 import munging
+import util
 
 from json import JSONEncoder
 
@@ -26,7 +27,7 @@ class Rating(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'Rating':
-        entries = [entry for entry in element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
         return Rating(entries[0].text, [int(entry.text) for entry in entries[1:]])
 
     def as_dict(self):
@@ -43,7 +44,7 @@ class RatingNote(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'RatingNote':
-        entries = [entry for entry in element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
         return RatingNote(munging.extract_entry_text(entries[0]))
 
     def as_dict(self):
@@ -59,7 +60,7 @@ class DiagnosticCode(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'DiagnosticCode':
-        entries = [entry for entry in element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
         code = re.findall('[0-9]{4}', entries[0].text)[0]
         return DiagnosticCode(int(code))
 
@@ -94,7 +95,7 @@ class RatingReference(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'RatingReference':
-        entries = [entry for entry in element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
         return RatingReference(entries[0].text)
 
     def as_dict(self):
@@ -110,7 +111,7 @@ class SeeOtherRatingNote(RatingTableObject):
 
     @classmethod
     def from_element(cls, element) -> 'SeeOtherRatingNote':
-        entries = [entry for entry in element.findall('ENT') if munging.extract_entry_text(entry).strip()]
+        entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
         return SeeOtherRatingNote(munging.extract_entry_text(entries[0]))
 
     def as_dict(self):
@@ -169,4 +170,3 @@ class RatingCategory(RatingTableObject):
 
     def __str__(self) -> str:
         return json.dumps(self.as_dict())
-

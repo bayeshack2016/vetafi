@@ -1012,9 +1012,6 @@
            "note": "Note:\n\n                    "
           },
           {
-           "note": "Note (1):\n\n                    "
-          },
-          {
            "note": "Note (2):\n\n                    "
           },
           {
@@ -1033,15 +1030,18 @@
            "note": "Note:\n\n                    "
           },
           {
-           "note": "Note (1):\n\n                    "
-          },
-          {
            "note": "Note (2):\n\n                    "
           }
          ],
          "see_other_notes": [
           {
            "see_other_note": "Inactive: See \u00a7\u00a7\u20094.88b and 4.89."
+          },
+          {
+           "see_other_note": "Note (1):\n\n                    "
+          },
+          {
+           "see_other_note": "Note (1):\n\n                    "
           }
          ]
         }

@@ -13,9 +13,25 @@ def pretty_print_element(element: ElementTree.Element):
     print(pformat_element(element) + '\n', end='')
 
 
-def inner_xml(element: ElementTree.Element) -> str:
+def strip_tags(s) -> str:
+    in_tag = False
+
+    chars = []
+
+    for c in s:
+        if c == '<':
+            in_tag = True
+        elif c == '>':
+            in_tag = False
+        else:
+            if not in_tag:
+                chars.append(c)
+
+    return ''.join(chars)
+
+
+def inner_text(element: ElementTree.Element) -> str:
     """
     Get all contents of element as string.
     """
-
-    return "".join(([element.text] if element.text is not None else []) + [e.text for e in element if e.text is not None])
+    return strip_tags(ElementTree.tostring(element).decode('utf-8')).strip()
