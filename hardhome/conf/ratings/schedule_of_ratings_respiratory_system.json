@@ -1,8 +1,8 @@
 {
- "category": "Schedule of ratings\u2014respiratory system.",
+ "description": "Schedule of ratings\u2014respiratory system.",
  "subcategories": [
   {
-   "category": "DISEASES OF THE NOSE AND THROAT",
+   "description": "DISEASES OF THE NOSE AND THROAT",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -161,7 +161,7 @@
    ]
   },
   {
-   "category": "Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520).",
+   "description": "Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520).",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -321,7 +321,7 @@
    ]
   },
   {
-   "category": "DISEASES OF THE TRACHEA AND BRONCHI",
+   "description": "DISEASES OF THE TRACHEA AND BRONCHI",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -399,7 +399,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600).",
+   "description": "Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600).",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -519,10 +519,10 @@
    "see_other_notes": []
   },
   {
-   "category": "DISEASES OF THE LUNGS AND PLEURA&#8212;TUBERCULOSIS",
+   "description": "DISEASES OF THE LUNGS AND PLEURA&#8212;TUBERCULOSIS",
    "subcategories": [
     {
-     "category": "Ratings for Pulmonary Tuberculosis Entitled on August 19, 1968",
+     "description": "Ratings for Pulmonary Tuberculosis Entitled on August 19, 1968",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -664,7 +664,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Ratings for Pulmonary Tuberculosis Initially Evaluated After August 19, 1968",
+     "description": "Ratings for Pulmonary Tuberculosis Initially Evaluated After August 19, 1968",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -693,19 +693,19 @@
      "see_other_notes": []
     },
     {
-     "category": "(a) Associated with active tuberculosis involving other than the respiratory system.",
+     "description": "(a) Associated with active tuberculosis involving other than the respiratory system.",
      "subcategories": [
       {
-       "category": "(b) With severe associated symptoms or with extensive cavity formation.",
+       "description": "(b) With severe associated symptoms or with extensive cavity formation.",
        "subcategories": [
         {
-         "category": "(c) Reactivated cases, generally.",
+         "description": "(c) Reactivated cases, generally.",
          "subcategories": [
           {
-           "category": "(d) With advancement of lesions on successive examinations or while under treatment.",
+           "description": "(d) With advancement of lesions on successive examinations or while under treatment.",
            "subcategories": [
             {
-             "category": "(e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from &#8220;active&#8221; at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion.",
+             "description": "(e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from &#8220;active&#8221; at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion.",
              "subcategories": [],
              "diagnostic_code_sets": [
               {
@@ -833,10 +833,10 @@
              "see_other_notes": []
             },
             {
-             "category": "Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).",
+             "description": "Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).",
              "subcategories": [
               {
-               "category": "Interstitial Lung Disease",
+               "description": "Interstitial Lung Disease",
                "subcategories": [],
                "diagnostic_code_sets": [
                 {
@@ -911,7 +911,7 @@
                "see_other_notes": []
               },
               {
-               "category": "Mycotic Lung Disease",
+               "description": "Mycotic Lung Disease",
                "subcategories": [],
                "diagnostic_code_sets": [
                 {
@@ -978,7 +978,7 @@
                "see_other_notes": []
               },
               {
-               "category": "Restrictive Lung Disease",
+               "description": "Restrictive Lung Disease",
                "subcategories": [],
                "diagnostic_code_sets": [
                 {
@@ -1041,7 +1041,7 @@
                "see_other_notes": []
               },
               {
-               "category": "Or rate primary disorder.",
+               "description": "Or rate primary disorder.",
                "subcategories": [],
                "diagnostic_code_sets": [
                 {
@@ -1094,7 +1094,7 @@
                "see_other_notes": []
               },
               {
-               "category": "Or rate active disease or residuals as chronic bronchitis (DC 6600) and extra-pulmonary involvement under specific body system involved",
+               "description": "Or rate active disease or residuals as chronic bronchitis (DC 6600) and extra-pulmonary involvement under specific body system involved",
                "subcategories": [],
                "diagnostic_code_sets": [
                 {

@@ -5,14 +5,16 @@
 
     @ratingsCategory.diagnostic_code_sets.map { diagnostic_code_set: models.DiagnosticCodeSet =>
         <tr>
-            <td>@diagnostic_code_set</td>
+            <td>
+                @views.html.ratings.ratings(diagnostic_code_set)
+            </td>
         </tr>
     }
 
     @ratingsCategory.subcategories.map { subcategory: models.RatingCategory =>
         <tr>
             <td>
-                @subcategory.category
+                @subcategory.description
             </td>
             <td>
                 @views.html.ratings.subcategory(subcategory)

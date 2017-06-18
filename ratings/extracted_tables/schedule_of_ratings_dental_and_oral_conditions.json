@@ -1,8 +1,8 @@
 {
- "category": "Schedule of ratings\u2014dental and oral conditions.",
+ "description": "Schedule of ratings\u2014dental and oral conditions.",
  "subcategories": [
   {
-   "category": "Range of lateral excursion:",
+   "description": "Range of lateral excursion:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -58,7 +58,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Not involving loss of temporomandibular articulation",
+   "description": "Not involving loss of temporomandibular articulation",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -321,7 +321,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Loss of less than 25 percent:",
+   "description": "Loss of less than 25 percent:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {

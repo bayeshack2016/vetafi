@@ -1,0 +1,23 @@
+@(codeSet: models.DiagnosticCodeSet)
+
+<table>
+    <tbody>
+        @codeSet.codes.map { code =>
+        <tr>
+            <td>@code.code</td>
+            <td>@code.description</td>
+        </tr>
+        }
+        @codeSet.ratings.map { rating =>
+        <tr>
+            <td>@rating.ratings</td>
+            <td>@rating.description</td>
+        </tr>
+        }
+        @codeSet.notes.map { note =>
+        <tr>
+            <td>@note.note</td>
+        </tr>
+        }
+    </tbody>
+</table>

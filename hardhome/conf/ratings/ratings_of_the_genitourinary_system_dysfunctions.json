@@ -1,8 +1,8 @@
 {
- "category": "Ratings of the genitourinary system\u2014dysfunctions.",
+ "description": "Ratings of the genitourinary system\u2014dysfunctions.",
  "subcategories": [
   {
-   "category": "Renal dysfunction:",
+   "description": "Renal dysfunction:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -51,7 +51,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Voiding dysfunction:",
+   "description": "Voiding dysfunction:",
    "subcategories": [],
    "diagnostic_code_sets": [],
    "notes": [],
@@ -62,7 +62,7 @@
    ]
   },
   {
-   "category": "Continual Urine Leakage, Post Surgical Urinary Diversion, Urinary Incontinence, or Stress Incontinence:",
+   "description": "Continual Urine Leakage, Post Surgical Urinary Diversion, Urinary Incontinence, or Stress Incontinence:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -99,7 +99,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Urinary frequency:",
+   "description": "Urinary frequency:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -136,7 +136,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Obstructed voiding:",
+   "description": "Obstructed voiding:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -161,16 +161,16 @@
    "see_other_notes": []
   },
   {
-   "category": "Marked obstructive symptomatology (hesitancy, slow or weak stream, decreased force of stream) with any one or combination of the following:",
+   "description": "Marked obstructive symptomatology (hesitancy, slow or weak stream, decreased force of stream) with any one or combination of the following:",
    "subcategories": [
     {
-     "category": "1. Post void residuals greater than 150 cc.",
+     "description": "1. Post void residuals greater than 150 cc.",
      "subcategories": [
       {
-       "category": "2. Uroflowmetry; markedly diminished peak flow rate (less than 10 cc/sec).",
+       "description": "2. Uroflowmetry; markedly diminished peak flow rate (less than 10 cc/sec).",
        "subcategories": [
         {
-         "category": "3. Recurrent urinary tract infections secondary to obstruction.",
+         "description": "3. Recurrent urinary tract infections secondary to obstruction.",
          "subcategories": [],
          "diagnostic_code_sets": [
           {
@@ -213,7 +213,7 @@
          "see_other_notes": []
         },
         {
-         "category": "Urninary tract infection:",
+         "description": "Urninary tract infection:",
          "subcategories": [],
          "diagnostic_code_sets": [],
          "notes": [],

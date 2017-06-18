@@ -1,0 +1,21 @@
+div#vfi-ratings-categories
+    button(ng-click="back()" ng-show="breadcrumbs.length > 0") Back
+
+    ul
+        li(ng-repeat="category in breadcrumbs") {{category.description}}
+
+    ul
+        li(ng-repeat="subcategory in category.subcategories")
+            button(ng-click="gotoCategory(subcategory)") {{subcategory.description}}
+
+    table
+        tbody
+            tr(ng-repeat="diagnostic_code_set in category.diagnostic_code_sets") {{diagnostic_code_set}}
+                table
+                    tbody
+                        tr(ng-repeat="code in diagnostic_code_set.codes")
+                            td {{code.description}}
+                            td {{code.code}}
+                        tr(ng-repeat="rating in diagnostic_code_set.ratings")
+                            td {{rating.description}}
+                            td {{rating.ratings}}

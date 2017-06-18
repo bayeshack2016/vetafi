@@ -1,8 +1,8 @@
 {
- "category": "Schedule of ratings\u2014gynecological conditions and disorders of the breast.",
+ "description": "Schedule of ratings\u2014gynecological conditions and disorders of the breast.",
  "subcategories": [
   {
-   "category": "Thereafter:",
+   "description": "Thereafter:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -222,7 +222,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Following modified radical mastectomy:",
+   "description": "Following modified radical mastectomy:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -253,7 +253,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Following simple mastectomy or wide local excision with significant alteration of size or form:",
+   "description": "Following simple mastectomy or wide local excision with significant alteration of size or form:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -284,7 +284,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Following wide local excision without significant alteration of size or form:",
+   "description": "Following wide local excision without significant alteration of size or form:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -313,16 +313,16 @@
    "see_other_notes": []
   },
   {
-   "category": "(1) Radical mastectomy means removal of the entire breast, underlying pectoral muscles, and regional lymph nodes up to the coracoclavicular ligament.",
+   "description": "(1) Radical mastectomy means removal of the entire breast, underlying pectoral muscles, and regional lymph nodes up to the coracoclavicular ligament.",
    "subcategories": [
     {
-     "category": "(2) Modified radical mastectomy means removal of the entire breast and axillary lymph nodes (in continuity with the breast). Pectoral muscles are left intact.",
+     "description": "(2) Modified radical mastectomy means removal of the entire breast and axillary lymph nodes (in continuity with the breast). Pectoral muscles are left intact.",
      "subcategories": [
       {
-       "category": "(3) Simple (or total) mastectomy means removal of all of the breast tissue, nipple, and a small portion of the overlying skin, but lymph nodes and muscles are left intact.",
+       "description": "(3) Simple (or total) mastectomy means removal of all of the breast tissue, nipple, and a small portion of the overlying skin, but lymph nodes and muscles are left intact.",
        "subcategories": [
         {
-         "category": "(4) Wide local excision (including partial mastectomy, lumpectomy, tylectomy, segmentectomy, and quadrantectomy) means removal of a portion of the breast tissue.",
+         "description": "(4) Wide local excision (including partial mastectomy, lumpectomy, tylectomy, segmentectomy, and quadrantectomy) means removal of a portion of the breast tissue.",
          "subcategories": [],
          "diagnostic_code_sets": [
           {

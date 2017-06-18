@@ -1,8 +1,8 @@
 {
- "category": "Schedule of ratings\u2014infectious diseases, immune disorders and nutritional deficiencies.",
+ "description": "Schedule of ratings\u2014infectious diseases, immune disorders and nutritional deficiencies.",
  "subcategories": [
   {
-   "category": "Thereafter rate residuals such as renal necrosis under the appropriate system",
+   "description": "Thereafter rate residuals such as renal necrosis under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -71,7 +71,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as liver or spleen damage under the appropriate system",
+   "description": "Thereafter rate residuals such as liver or spleen damage under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -96,7 +96,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as epididymitis or lymphangitis under the appropriate system",
+   "description": "Thereafter rate residuals such as epididymitis or lymphangitis under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -121,7 +121,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as skin lesions under the appropriate system",
+   "description": "Thereafter rate residuals such as skin lesions under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -146,7 +146,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as lymphadenopathy under the appropriate system",
+   "description": "Thereafter rate residuals such as lymphadenopathy under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -171,7 +171,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as liver or spleen damage or central nervous system involvement under the appropriate system",
+   "description": "Thereafter rate residuals such as liver or spleen damage or central nervous system involvement under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -196,7 +196,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as heart damage under the appropriate system",
+   "description": "Thereafter rate residuals such as heart damage under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -307,7 +307,7 @@
    ]
   },
   {
-   "category": "Thereafter rate residuals under the appropriate body system.",
+   "description": "Thereafter rate residuals under the appropriate body system.",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -373,7 +373,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as liver or spleen damage or meningitis under the appropriate system",
+   "description": "Thereafter rate residuals such as liver or spleen damage or meningitis under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -398,7 +398,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as spleen damage or skin conditions under the appropriate system",
+   "description": "Thereafter rate residuals such as spleen damage or skin conditions under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -423,7 +423,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as arthritis, lung lesions or meningitis under the appropriate system",
+   "description": "Thereafter rate residuals such as arthritis, lung lesions or meningitis under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -448,7 +448,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as arthritis under the appropriate system",
+   "description": "Thereafter rate residuals such as arthritis under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -473,7 +473,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter rate residuals such as spleen or liver damage under the appropriate system",
+   "description": "Thereafter rate residuals such as spleen or liver damage under the appropriate system",
    "subcategories": [],
    "diagnostic_code_sets": [
     {

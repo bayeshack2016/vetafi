@@ -140,7 +140,7 @@ class RatingCategory(RatingTableObject):
             yield category
 
     def as_dict(self):
-        return {'category': self.description,
+        return {'description': self.description,
                 'subcategories': [x.as_dict() for x in self.subcategories],
                 'diagnostic_code_sets': [x.as_dict() for x in self.diagnostic_code_sets],
                 'notes': [x.as_dict() for x in self.notes],

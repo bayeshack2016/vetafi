@@ -1,14 +1,14 @@
 {
- "category": "Schedule of ratings\u2014digestive system.",
+ "description": "Schedule of ratings\u2014digestive system.",
  "subcategories": [
   {
-   "category": "Gastritis, atrophic.",
+   "description": "Gastritis, atrophic.",
    "subcategories": [
     {
-     "category": "A complication of a number of diseases, including pernicious anemia.",
+     "description": "A complication of a number of diseases, including pernicious anemia.",
      "subcategories": [
       {
-       "category": "Rate the underlying condition.",
+       "description": "Rate the underlying condition.",
        "subcategories": [],
        "diagnostic_code_sets": [
         {
@@ -192,10 +192,10 @@
        "see_other_notes": []
       },
       {
-       "category": "Spleen, disease or injury of.",
+       "description": "Spleen, disease or injury of.",
        "subcategories": [
         {
-         "category": "&#8195;See Hemic and Lymphatic Systems.",
+         "description": "&#8195;See Hemic and Lymphatic Systems.",
          "subcategories": [],
          "diagnostic_code_sets": [
           {
@@ -446,7 +446,7 @@
          "see_other_notes": []
         },
         {
-         "category": "Healed; rate for peritoneal adhesions.",
+         "description": "Healed; rate for peritoneal adhesions.",
          "subcategories": [],
          "diagnostic_code_sets": [
           {

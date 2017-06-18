@@ -1,11 +1,11 @@
 {
- "category": "Schedule of ratings\u2014musculoskeletal system.",
+ "description": "Schedule of ratings\u2014musculoskeletal system.",
  "subcategories": [
   {
-   "category": "For chronic residuals:",
+   "description": "For chronic residuals:",
    "subcategories": [
     {
-     "category": "For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion.",
+     "description": "For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion.",
      "subcategories": [],
      "diagnostic_code_sets": [
       {

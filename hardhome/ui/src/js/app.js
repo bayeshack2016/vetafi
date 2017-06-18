@@ -233,6 +233,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
     }
   });
 
+  $stateProvider.state({
+      name: 'root.ratingsCategories',
+      url: '/ratings',
+      templateUrl: 'templates/ratingsCategories.html',
+      controller: 'ratingsCategoriesCtrl'
+  });
+
   // Misc. Pages
   $stateProvider.state({
     name: 'root.faq',

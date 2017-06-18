@@ -112,13 +112,23 @@ gulp.task('lint', ['xhrEnv'], function () {
     ;
 });
 
-gulp.task('browserify', ['js'], function () {
+gulp.task('browserify-forms', ['js'], function () {
   return browserify(['src/formly-fields.js'], {
       transform: [bulkify],
       debug: true
     })
     .bundle()
     .pipe(source('js/formly-fields.js'))
+    .pipe(gulp.dest('build'));
+});
+
+gulp.task('browserify-ratings', ['js'], function () {
+  return browserify(['src/ratings-configs.js'], {
+      transform: [bulkify],
+      debug: true
+    })
+    .bundle()
+    .pipe(source('js/ratings-configs.js'))
     .pipe(gulp.dest('build'));
 });
 
@@ -146,6 +156,6 @@ gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/**/*.pug', ['pug']);
 });
 
-gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'pug', 'browserify', 'lint']);
+gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'pug', 'browserify-forms', 'browserify-ratings', 'lint']);
 
 gulp.task('default', ['clean', 'build', 'initBrowserSync', 'watch']);

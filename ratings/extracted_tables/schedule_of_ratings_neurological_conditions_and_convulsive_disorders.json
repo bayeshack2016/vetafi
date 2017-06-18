@@ -1,8 +1,8 @@
 {
- "category": "Schedule of ratings\u2014neurological conditions and convulsive disorders.",
+ "description": "Schedule of ratings\u2014neurological conditions and convulsive disorders.",
  "subcategories": [
   {
-   "category": "Brain, new growth of:",
+   "description": "Brain, new growth of:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -292,7 +292,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Spinal cord, new growths of:",
+   "description": "Spinal cord, new growths of:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {

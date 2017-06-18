@@ -1,29 +1,29 @@
 {
- "category": "Schedule of ratings\u2014skin.",
+ "description": "Schedule of ratings\u2014skin.",
  "subcategories": [
   {
-   "category": "Scar 5 or more inches (13 or more cm.) in length.",
+   "description": "Scar 5 or more inches (13 or more cm.) in length.",
    "subcategories": [
     {
-     "category": "Scar at least one-quarter inch (0.6 cm.) wide at widest part.",
+     "description": "Scar at least one-quarter inch (0.6 cm.) wide at widest part.",
      "subcategories": [
       {
-       "category": "Surface contour of scar elevated or depressed on palpation.",
+       "description": "Surface contour of scar elevated or depressed on palpation.",
        "subcategories": [
         {
-         "category": "Scar adherent to underlying tissue.",
+         "description": "Scar adherent to underlying tissue.",
          "subcategories": [
           {
-           "category": "Skin hypo-or hyper-pigmented in an area exceeding six square inches (39 sq. cm.).",
+           "description": "Skin hypo-or hyper-pigmented in an area exceeding six square inches (39 sq. cm.).",
            "subcategories": [
             {
-             "category": "Skin texture abnormal (irregular, atrophic, shiny, scaly, etc.) in an area exceeding six square inches (39 sq. cm.).",
+             "description": "Skin texture abnormal (irregular, atrophic, shiny, scaly, etc.) in an area exceeding six square inches (39 sq. cm.).",
              "subcategories": [
               {
-               "category": "Underlying soft tissue missing in an area exceeding six square inches (39 sq. cm.).",
+               "description": "Underlying soft tissue missing in an area exceeding six square inches (39 sq. cm.).",
                "subcategories": [
                 {
-                 "category": "Skin indurated and inflexible in an area exceeding six square inches (39 sq. cm.).",
+                 "description": "Skin indurated and inflexible in an area exceeding six square inches (39 sq. cm.).",
                  "subcategories": [],
                  "diagnostic_code_sets": [
                   {

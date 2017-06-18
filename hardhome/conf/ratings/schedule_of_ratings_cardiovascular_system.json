@@ -1,8 +1,8 @@
 {
- "category": "Schedule of ratings\u2014cardiovascular system.",
+ "description": "Schedule of ratings\u2014cardiovascular system.",
  "subcategories": [
   {
-   "category": "Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
+   "description": "Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -62,7 +62,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
+   "description": "Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -122,7 +122,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter, with documented pericarditis resulting in:",
+   "description": "Thereafter, with documented pericarditis resulting in:",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -298,10 +298,10 @@
    "see_other_notes": []
   },
   {
-   "category": "Thereafter:",
+   "description": "Thereafter:",
    "subcategories": [
     {
-     "category": "With history of documented myocardial infarction, resulting in:",
+     "description": "With history of documented myocardial infarction, resulting in:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -510,7 +510,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Thereafter:",
+     "description": "Thereafter:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -574,7 +574,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Thereafter:",
+     "description": "Thereafter:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -634,7 +634,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Thereafter:",
+     "description": "Thereafter:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -680,7 +680,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Thereafter:",
+     "description": "Thereafter:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -756,7 +756,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Diseases of the Arteries and Veins",
+     "description": "Diseases of the Arteries and Veins",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -832,7 +832,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Evaluate residuals of surgical correction according to organ systems affected.",
+     "description": "Evaluate residuals of surgical correction according to organ systems affected.",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -861,7 +861,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Following surgery:",
+     "description": "Following surgery:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -957,7 +957,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:",
+     "description": "Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -988,7 +988,7 @@
      "see_other_notes": []
     },
     {
-     "category": "With edema or stasis dermatitis:",
+     "description": "With edema or stasis dermatitis:",
      "subcategories": [],
      "diagnostic_code_sets": [
       {

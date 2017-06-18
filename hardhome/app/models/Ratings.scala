@@ -4,7 +4,7 @@ import play.api.libs.json.{ Format, Json, OFormat }
 import utils.EnumUtils
 
 case class RatingCategory(
-  category: String,
+  description: String,
   subcategories: Seq[RatingCategory],
   diagnostic_code_sets: Seq[DiagnosticCodeSet],
   notes: Seq[RatingNote],

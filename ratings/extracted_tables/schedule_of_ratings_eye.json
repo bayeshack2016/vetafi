@@ -1,8 +1,8 @@
 {
- "category": "Schedule of ratings\u2014eye.",
+ "description": "Schedule of ratings\u2014eye.",
  "subcategories": [
   {
-   "category": "Inactive: Evaluate under &#167;&#8201;4.88c or &#167;&#8201;4.89 of this part, whichever is appropriate.",
+   "description": "Inactive: Evaluate under &#167;&#8201;4.88c or &#167;&#8201;4.89 of this part, whichever is appropriate.",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -27,7 +27,7 @@
    "see_other_notes": []
   },
   {
-   "category": "Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation.",
+   "description": "Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation.",
    "subcategories": [],
    "diagnostic_code_sets": [
     {
@@ -119,10 +119,10 @@
    "see_other_notes": []
   },
   {
-   "category": "Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:",
+   "description": "Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:",
    "subcategories": [
     {
-     "category": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.",
+     "description": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -178,7 +178,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).",
+     "description": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -203,7 +203,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).",
+     "description": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -733,7 +733,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Vision in one eye 15/200 (4.5/60):",
+     "description": "Vision in one eye 15/200 (4.5/60):",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -788,7 +788,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Vision in one eye 20/200 (6/60):",
+     "description": "Vision in one eye 20/200 (6/60):",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -837,7 +837,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Vision in one eye 20/100 (6/30):",
+     "description": "Vision in one eye 20/100 (6/30):",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -880,7 +880,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Vision in one eye 20/70 (6/21):",
+     "description": "Vision in one eye 20/70 (6/21):",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -917,7 +917,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Vision in one eye 20/50 (6/15):",
+     "description": "Vision in one eye 20/50 (6/15):",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
@@ -948,7 +948,7 @@
      "see_other_notes": []
     },
     {
-     "category": "Vision in one eye 20/40 (6/12):",
+     "description": "Vision in one eye 20/40 (6/12):",
      "subcategories": [],
      "diagnostic_code_sets": [
       {
