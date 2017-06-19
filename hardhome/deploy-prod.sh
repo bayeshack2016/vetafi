@@ -17,10 +17,12 @@ sbt clean dist
 
 boxfuse run -env=prod \
         -healthcheck=false \
+        -ports.http=80 \
+        -ports.https=443 \
         -envvars.APPLICATION_SECRET="${APPLICATION_SECRET}" \
         -envvars.AUTHENTICATOR_CRYPTER_KEY="${AUTHENTICATOR_CRYPTER_KEY}" \
         -envvars.AUTHENTICATOR_COOKIE_SIGNER_KEY="${AUTHENTICATOR_COOKIE_SIGNER_KEY}" \
         -envvars.VETAFI_CLIENT_ID="${VETAFI_CLIENT_ID}" \
         -envvars.VETAFI_CLIENT_SECRET="${VETAFI_CLIENT_SECRET}" \
         -newrelic.licensekey="${NEWRELIC_LICENSE_KEY}" \
-        -jvm.args='-Dconfig.resource=application.prod.conf -Dlogger.resource=logback.prod.xml'
+        -jvm.args='-Dhttp.port=80 -Dhttps.port=443 -Dconfig.resource=application.prod.conf -Dlogger.resource=logback.prod.xml'
