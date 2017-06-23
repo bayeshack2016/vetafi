@@ -25,6 +25,8 @@ logger.addHandler(ch)
 def get_args():
     parser = argparse.ArgumentParser('Parse all tables that show percent disability rating for particular conditions')
     parser.add_argument('--input-files', dest='input_files', nargs='+')
+    parser.add_argument('--output-dir', dest='output_dir')
+    parser.add_argument('--write-xml-tables', dest='write_xml_tables', action='store_true', default=False)
     parser.add_argument('-v', '--verbose', dest='verbose', action='store_true', default=False)
     return parser.parse_args()
 
@@ -65,8 +67,8 @@ def get_table_key_name(table_element: ElementTree.Element):
         '—', '_')
 
 
-def save_xml(table_element: ElementTree.Element):
-    with open(get_table_key_name(table_element) + '.xml', 'w') as of:
+def save_xml(table_element: ElementTree.Element, output_dir: str):
+    with open(os.path.join(output_dir, get_table_key_name(table_element)) + '.xml', 'w') as of:
         of.write(util.pformat_element(table_element))
 
 
@@ -398,11 +400,11 @@ def convert_table_to_json(table_element: ElementTree.Element):
     return json.dumps(root, indent=True, cls=models.RatingTableEncoder)
 
 
-def save_json(table_element: ElementTree.Element):
+def save_json(table_element: ElementTree.Element, output_dir: str):
     logger.info('Converting {} table to json'.format(get_table_key_name(table_element)))
 
     table_as_json = convert_table_to_json(table_element)
-    with open(get_table_key_name(table_element) + '.json', 'w') as of:
+    with open(os.path.join(output_dir, get_table_key_name(table_element)) + '.json', 'w') as of:
         of.write(table_as_json)
 
 
@@ -419,14 +421,10 @@ def main():
     successful = 0
     failed = 0
     for table_element in parse_files(args.input_files):
-        save_xml(table_element)
-        #try:
-        save_json(table_element)
+        if args.write_xml_tables:
+            save_xml(table_element, args.output_dir)
+        save_json(table_element, args.output_dir)
         successful += 1
-        #except:
-        #    failed += 1
-        #    logger.exception('Failed to parse table {}'.format(get_table_key_name(table_element)))
-
 
     logger.info("{:d}/{:d} tables parsed".format(successful, successful + failed))
 

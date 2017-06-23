@@ -72,6 +72,6 @@ app.controller("headerCtrl",
 
       $interval(function() {
         expirationChecker.checkSessionExpiration();
-      }, 20 * 60 * 1000); // check every 20 minutes
+      }, 60 * 60 * 24 * 1000); // check every 24 hours
     }]
 );
