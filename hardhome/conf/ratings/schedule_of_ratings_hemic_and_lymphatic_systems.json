@@ -1,8 +1,12 @@
 {
  "description": "Schedule of ratings\u2014hemic and lymphatic systems.",
  "subcategories": [],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 7700,
+    "description": "&#;Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -35,15 +39,16 @@
      "description": "Hemoglobin 10gm/100ml or less, asymptomatic"
     }
    ],
-   "codes": [
-    {
-     "code": 7700,
-     "description": "&#;Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7702,
+    "description": "&#;Agranulocytosis, acute:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -70,15 +75,16 @@
      "description": "Requiring continuous medication for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7702,
-     "description": "&#;Agranulocytosis, acute:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7703,
+    "description": "&#;Leukemia:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -87,15 +93,16 @@
      "description": "With active disease or during a treatment phase"
     }
    ],
-   "codes": [
-    {
-     "code": 7703,
-     "description": "&#;Leukemia:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7704,
+    "description": "&#;Polycythemia vera:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -116,15 +123,16 @@
      "description": "Stable, with or without continuous medication"
     }
    ],
-   "codes": [
-    {
-     "code": 7704,
-     "description": "&#;Polycythemia vera:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7705,
+    "description": "&#;Thrombocytopenia, primary, idiopathic or immune:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -151,15 +159,16 @@
      "description": "Stable platelet count of 100,000 or more, without bleeding"
     }
    ],
-   "codes": [
-    {
-     "code": 7705,
-     "description": "&#;Thrombocytopenia, primary, idiopathic or immune:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7706,
+    "description": "&#;Splenectomy\n\n                  20"
+   },
    "ratings": [
     {
      "ratings": [
@@ -168,15 +177,16 @@
      "description": "7706\u2003Splenectomy"
     }
    ],
-   "codes": [
-    {
-     "code": 7706,
-     "description": "&#;Splenectomy\n\n                  20"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7707,
+    "description": "&#;Spleen, injury of, healed."
+   },
    "ratings": [
     {
      "ratings": [
@@ -185,15 +195,8 @@
      "description": "With active disease or during a treatment phase"
     }
    ],
-   "codes": [
-    {
-     "code": 7707,
-     "description": "&#;Spleen, injury of, healed."
-    },
-    {
-     "code": 7709,
-     "description": "&#;Hodgkin's disease:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": [
     {
@@ -202,6 +205,43 @@
    ]
   },
   {
+   "code": {
+    "code": 7709,
+    "description": "&#;Hodgkin's disease:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With active disease or during a treatment phase"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Rate for any residuals."
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7710,
+    "description": "&#;Adenitis, tuberculous, active or inactive."
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7714,
+    "description": "&#;Sickle cell anemia:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -228,23 +268,16 @@
      "description": "Asymptomatic, established case in remission, but with identifiable organ impairment"
     }
    ],
-   "codes": [
-    {
-     "code": 7710,
-     "description": "&#;Adenitis, tuberculous, active or inactive."
-    },
-    {
-     "code": 7714,
-     "description": "&#;Sickle cell anemia:"
-    }
+   "header": [
+    "Rating"
    ],
-   "notes": [
-    {
-     "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89 of this part, whichever is appropriate."
-    }
-   ]
+   "notes": []
   },
   {
+   "code": {
+    "code": 7715,
+    "description": "&#;Non-Hodgkin's lymphoma:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -253,15 +286,16 @@
      "description": "With active disease or during a treatment phase"
     }
    ],
-   "codes": [
-    {
-     "code": 7715,
-     "description": "&#;Non-Hodgkin's lymphoma:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7716,
+    "description": "&#;Aplastic anemia:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -288,15 +322,16 @@
      "description": "Requiring continuous medication for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7716,
-     "description": "&#;Aplastic anemia:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7717,
+    "description": "&#;AL amyloidosis (primary amyloidosis)\n\n                  100"
+   },
    "ratings": [
     {
      "ratings": [
@@ -305,11 +340,8 @@
      "description": "7717\u2003AL amyloidosis (primary amyloidosis)"
     }
    ],
-   "codes": [
-    {
-     "code": 7717,
-     "description": "&#;AL amyloidosis (primary amyloidosis)\n\n                  100"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }
@@ -332,6 +364,9 @@
   },
   {
    "note": "Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+  },
+  {
+   "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89 of this part, whichever is appropriate."
   },
   {
    "note": "Note: Sickle cell trait alone, without a history of directly attributable pathological findings, is not a ratable disability. Cases of symptomatic sickle cell trait will be forwarded to the Director, Compensation Service, for consideration under &#167;&#8201;3.321(b)(1) of this chapter."

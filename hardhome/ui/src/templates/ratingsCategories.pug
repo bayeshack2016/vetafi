@@ -1,6 +1,4 @@
 div#vfi-ratings-categories
-  button(ng-click="back()" ng-show="breadcrumbs.length > 0") Back
-
   ul
     li(ng-repeat="category in breadcrumbs") {{category}}
 
@@ -12,14 +10,9 @@ div#vfi-ratings-categories
 
   table.diagnostic-code-sets
     tbody
-      tr(ng-repeat="diagnostic_code_set in diagnostic_code_sets")
-        td {{$index}}
+      tr(ng-repeat="rating in ratings")
+        td {{rating.code.code}}
+        td {{rating.code.description}}
         td
-          table.diagnostic-code-set
-            tbody
-              tr(ng-repeat="code in diagnostic_code_set.codes")
-                td {{code.description}}
-                td {{code.code}}
-              tr(ng-repeat="rating in diagnostic_code_set.ratings")
-                td {{rating.description}}
-                td {{rating.ratings}}
+          button(ng-click="gotoRating($index)") Goto
+

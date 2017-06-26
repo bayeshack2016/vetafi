@@ -4,8 +4,12 @@
   {
    "description": "Renal dysfunction:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 9999,
+      "description": "genitourinary"
+     },
      "ratings": [
       {
        "ratings": [
@@ -36,37 +40,7 @@
         0
        ],
        "description": "Albumin and casts with history of acute nephritis; or, hypertension non-compensable under diagnostic code 7101"
-      }
-     ],
-     "codes": [
-      {
-       "code": 9999,
-       "description": "genitourinary"
-      }
-     ],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Voiding dysfunction:",
-   "subcategories": [],
-   "diagnostic_code_sets": [],
-   "notes": [],
-   "see_other_notes": [
-    {
-     "see_other_note": "Rate particular condition as urine leakage, frequency, or obstructed voiding\n\n                  &#8195;"
-    }
-   ]
-  },
-  {
-   "description": "Continual Urine Leakage, Post Surgical Urinary Diversion, Urinary Incontinence, or Stress Incontinence:",
-   "subcategories": [],
-   "diagnostic_code_sets": [
-    {
-     "ratings": [
+      },
       {
        "ratings": [
         60
@@ -86,11 +60,8 @@
        "description": "Requiring the wearing of absorbent materials which must be changed less than 2 times per day"
       }
      ],
-     "codes": [
-      {
-       "code": 9999,
-       "description": "genitourinary"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     }
@@ -99,10 +70,29 @@
    "see_other_notes": []
   },
   {
+   "description": "Voiding dysfunction:",
+   "subcategories": [],
+   "ratings": [],
+   "notes": [
+    {
+     "note": "Continual Urine Leakage, Post Surgical Urinary Diversion, Urinary Incontinence, or Stress Incontinence:"
+    }
+   ],
+   "see_other_notes": [
+    {
+     "see_other_note": "Rate particular condition as urine leakage, frequency, or obstructed voiding\n\n                  &#8195;"
+    }
+   ]
+  },
+  {
    "description": "Urinary frequency:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 9999,
+      "description": "genitourinary"
+     },
      "ratings": [
       {
        "ratings": [
@@ -123,11 +113,8 @@
        "description": "Daytime voiding interval between two and three hours, or; awakening to void two times per night"
       }
      ],
-     "codes": [
-      {
-       "code": 9999,
-       "description": "genitourinary"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     }
@@ -138,8 +125,12 @@
   {
    "description": "Obstructed voiding:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 9999,
+      "description": "genitourinary"
+     },
      "ratings": [
       {
        "ratings": [
@@ -148,11 +139,67 @@
        "description": "Urinary retention requiring intermittent or continuous catheterization"
       }
      ],
-     "codes": [
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    }
+   ],
+   "notes": [
+    {
+     "note": "Marked obstructive symptomatology (hesitancy, slow or weak stream, decreased force of stream) with any one or combination of the following:"
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "description": "1. Post void residuals greater than 150 cc.",
+   "subcategories": [],
+   "ratings": [],
+   "notes": [
+    {
+     "note": "2. Uroflowmetry; markedly diminished peak flow rate (less than 10 cc/sec)."
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "description": "3. Recurrent urinary tract infections secondary to obstruction.",
+   "subcategories": [],
+   "ratings": [
+    {
+     "code": {
+      "code": 9999,
+      "description": "genitourinary"
+     },
+     "ratings": [
       {
-       "code": 9999,
-       "description": "genitourinary"
+       "ratings": [
+        10
+       ],
+       "description": "4. Stricture disease requiring periodic dilatation every 2 to 3 months"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Obstructive symptomatology with or without stricture disease requiring dilatation 1 to 2 times per year"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Recurrent symptomatic infection requiring drainage/frequent hospitalization (greater than two times/year), and/or requiring continuous intensive management"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Long-term drug therapy, 1-2 hospitalizations per year and/or requiring intermittent intensive management"
       }
+     ],
+     "header": [
+      "Rating"
      ],
      "notes": []
     }
@@ -161,92 +208,26 @@
    "see_other_notes": []
   },
   {
-   "description": "Marked obstructive symptomatology (hesitancy, slow or weak stream, decreased force of stream) with any one or combination of the following:",
-   "subcategories": [
-    {
-     "description": "1. Post void residuals greater than 150 cc.",
-     "subcategories": [
-      {
-       "description": "2. Uroflowmetry; markedly diminished peak flow rate (less than 10 cc/sec).",
-       "subcategories": [
-        {
-         "description": "3. Recurrent urinary tract infections secondary to obstruction.",
-         "subcategories": [],
-         "diagnostic_code_sets": [
-          {
-           "ratings": [
-            {
-             "ratings": [
-              10
-             ],
-             "description": "4. Stricture disease requiring periodic dilatation every 2 to 3 months"
-            },
-            {
-             "ratings": [
-              0
-             ],
-             "description": "Obstructive symptomatology with or without stricture disease requiring dilatation 1 to 2 times per year"
-            },
-            {
-             "ratings": [
-              30
-             ],
-             "description": "Recurrent symptomatic infection requiring drainage/frequent hospitalization (greater than two times/year), and/or requiring continuous intensive management"
-            },
-            {
-             "ratings": [
-              10
-             ],
-             "description": "Long-term drug therapy, 1-2 hospitalizations per year and/or requiring intermittent intensive management"
-            }
-           ],
-           "codes": [
-            {
-             "code": 9999,
-             "description": "genitourinary"
-            }
-           ],
-           "notes": []
-          }
-         ],
-         "notes": [],
-         "see_other_notes": []
-        },
-        {
-         "description": "Urninary tract infection:",
-         "subcategories": [],
-         "diagnostic_code_sets": [],
-         "notes": [],
-         "see_other_notes": [
-          {
-           "see_other_note": "Poor renal function: Rate as renal dysfunction."
-          }
-         ]
-        }
-       ],
-       "diagnostic_code_sets": [],
-       "notes": [],
-       "see_other_notes": []
-      }
-     ],
-     "diagnostic_code_sets": [],
-     "notes": [],
-     "see_other_notes": []
-    }
-   ],
-   "diagnostic_code_sets": [],
+   "description": "Urninary tract infection:",
+   "subcategories": [],
+   "ratings": [],
    "notes": [],
-   "see_other_notes": []
+   "see_other_notes": [
+    {
+     "see_other_note": "Poor renal function: Rate as renal dysfunction."
+    }
+   ]
   }
  ],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 9999,
+    "description": "genitourinary"
+   },
    "ratings": [],
-   "codes": [
-    {
-     "code": 9999,
-     "description": "genitourinary"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }

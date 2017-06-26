@@ -4,8 +4,12 @@
   {
    "description": "Thereafter:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 7619,
+      "description": "&#;Ovary, removal of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -20,15 +24,16 @@
        "description": "Removal of one with or without partial removal of the other"
       }
      ],
-     "codes": [
-      {
-       "code": 7619,
-       "description": "&#;Ovary, removal of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7620,
+      "description": "&#;Ovaries, atrophy of both, complete\n\n                  \n\n                    &#;20"
+     },
      "ratings": [
       {
        "ratings": [
@@ -37,15 +42,16 @@
        "description": "7620\u2003Ovaries, atrophy of both, complete"
       }
      ],
-     "codes": [
-      {
-       "code": 7620,
-       "description": "&#;Ovaries, atrophy of both, complete\n\n                  \n\n                    &#;20"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7621,
+      "description": "&#;Uterus, prolapse:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -60,15 +66,16 @@
        "description": "Incomplete"
       }
      ],
-     "codes": [
-      {
-       "code": 7621,
-       "description": "&#;Uterus, prolapse:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7622,
+      "description": "&#;Uterus, displacement of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -83,15 +90,16 @@
        "description": "With adhesions and irregular menstruation"
       }
      ],
-     "codes": [
-      {
-       "code": 7622,
-       "description": "&#;Uterus, displacement of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7623,
+      "description": "&#;Pregnancy, surgical complications of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -106,15 +114,16 @@
        "description": "With relaxation of perineum"
       }
      ],
-     "codes": [
-      {
-       "code": 7623,
-       "description": "&#;Pregnancy, surgical complications of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7624,
+      "description": "&#;Fistula, rectovaginal:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -147,15 +156,16 @@
        "description": "Without leakage"
       }
      ],
-     "codes": [
-      {
-       "code": 7624,
-       "description": "&#;Fistula, rectovaginal:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7625,
+      "description": "&#;Fistula, urethrovaginal:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -182,15 +192,16 @@
        "description": "Requiring the wearing of absorbent materials which must be changed less than two times per day"
       }
      ],
-     "codes": [
-      {
-       "code": 7625,
-       "description": "&#;Fistula, urethrovaginal:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7626,
+      "description": "&#;Breast, surgery of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -205,11 +216,8 @@
        "description": "One"
       }
      ],
-     "codes": [
-      {
-       "code": 7626,
-       "description": "&#;Breast, surgery of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": [
       {
@@ -224,8 +232,12 @@
   {
    "description": "Following modified radical mastectomy:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 7626,
+      "description": "&#;Breast, surgery of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -238,26 +250,7 @@
         40
        ],
        "description": "One"
-      }
-     ],
-     "codes": [
-      {
-       "code": 7626,
-       "description": "&#;Breast, surgery of:"
-      }
-     ],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Following simple mastectomy or wide local excision with significant alteration of size or form:",
-   "subcategories": [],
-   "diagnostic_code_sets": [
-    {
-     "ratings": [
+      },
       {
        "ratings": [
         50
@@ -269,26 +262,7 @@
         30
        ],
        "description": "One"
-      }
-     ],
-     "codes": [
-      {
-       "code": 7626,
-       "description": "&#;Breast, surgery of:"
-      }
-     ],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Following wide local excision without significant alteration of size or form:",
-   "subcategories": [],
-   "diagnostic_code_sets": [
-    {
-     "ratings": [
+      },
       {
        "ratings": [
         0
@@ -296,114 +270,134 @@
        "description": "Both or one"
       }
      ],
-     "codes": [
-      {
-       "code": 7626,
-       "description": "&#;Breast, surgery of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Note: For VA purposes:"
+     "note": "Following simple mastectomy or wide local excision with significant alteration of size or form:"
+    },
+    {
+     "note": "Following wide local excision without significant alteration of size or form:"
     }
    ],
    "see_other_notes": []
   },
   {
-   "description": "(1) Radical mastectomy means removal of the entire breast, underlying pectoral muscles, and regional lymph nodes up to the coracoclavicular ligament.",
-   "subcategories": [
+   "description": "Note: For VA purposes:",
+   "subcategories": [],
+   "ratings": [
     {
-     "description": "(2) Modified radical mastectomy means removal of the entire breast and axillary lymph nodes (in continuity with the breast). Pectoral muscles are left intact.",
-     "subcategories": [
+     "code": {
+      "code": 7627,
+      "description": "&#;Malignant neoplasms of gynecological system or breast\n\n                  100"
+     },
+     "ratings": [
       {
-       "description": "(3) Simple (or total) mastectomy means removal of all of the breast tissue, nipple, and a small portion of the overlying skin, but lymph nodes and muscles are left intact.",
-       "subcategories": [
-        {
-         "description": "(4) Wide local excision (including partial mastectomy, lumpectomy, tylectomy, segmentectomy, and quadrantectomy) means removal of a portion of the breast tissue.",
-         "subcategories": [],
-         "diagnostic_code_sets": [
-          {
-           "ratings": [
-            {
-             "ratings": [
-              100
-             ],
-             "description": "7627\u2003Malignant neoplasms of gynecological system or breast"
-            }
-           ],
-           "codes": [
-            {
-             "code": 7627,
-             "description": "&#;Malignant neoplasms of gynecological system or breast\n\n                  100"
-            }
-           ],
-           "notes": []
-          },
-          {
-           "ratings": [
-            {
-             "ratings": [
-              50
-             ],
-             "description": "Lesions involving bowel or bladder confirmed by laparoscopy, pelvic pain or heavy or irregular bleeding not controlled by treatment, and bowel or bladder symptoms"
-            },
-            {
-             "ratings": [
-              30
-             ],
-             "description": "Pelvic pain or heavy or irregular bleeding not controlled by treatment"
-            },
-            {
-             "ratings": [
-              10
-             ],
-             "description": "Pelvic pain or heavy or irregular bleeding requiring continuous treatment for control"
-            }
-           ],
-           "codes": [
-            {
-             "code": 7628,
-             "description": "&#;Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin."
-            },
-            {
-             "code": 7629,
-             "description": "&#;Endometriosis:"
-            }
-           ],
-           "notes": []
-          }
-         ],
-         "notes": [
-          {
-           "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
-          },
-          {
-           "note": "Note: Diagnosis of endometriosis must be substantiated by laparoscopy."
-          }
-         ],
-         "see_other_notes": []
-        }
+       "ratings": [
+        100
        ],
-       "diagnostic_code_sets": [],
-       "notes": [],
-       "see_other_notes": []
+       "description": "7627\u2003Malignant neoplasms of gynecological system or breast"
       }
      ],
-     "diagnostic_code_sets": [],
-     "notes": [],
-     "see_other_notes": []
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 7628,
+      "description": "&#;Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin."
+     },
+     "ratings": [
+      {
+       "ratings": [
+        50
+       ],
+       "description": "Lesions involving bowel or bladder confirmed by laparoscopy, pelvic pain or heavy or irregular bleeding not controlled by treatment, and bowel or bladder symptoms"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Pelvic pain or heavy or irregular bleeding not controlled by treatment"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Pelvic pain or heavy or irregular bleeding requiring continuous treatment for control"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 7629,
+      "description": "&#;Endometriosis:"
+     },
+     "ratings": [
+      {
+       "ratings": [
+        50
+       ],
+       "description": "Lesions involving bowel or bladder confirmed by laparoscopy, pelvic pain or heavy or irregular bleeding not controlled by treatment, and bowel or bladder symptoms"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Pelvic pain or heavy or irregular bleeding not controlled by treatment"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Pelvic pain or heavy or irregular bleeding requiring continuous treatment for control"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
     }
    ],
-   "diagnostic_code_sets": [],
-   "notes": [],
+   "notes": [
+    {
+     "note": "(1) Radical mastectomy means removal of the entire breast, underlying pectoral muscles, and regional lymph nodes up to the coracoclavicular ligament."
+    },
+    {
+     "note": "(2) Modified radical mastectomy means removal of the entire breast and axillary lymph nodes (in continuity with the breast). Pectoral muscles are left intact."
+    },
+    {
+     "note": "(3) Simple (or total) mastectomy means removal of all of the breast tissue, nipple, and a small portion of the overlying skin, but lymph nodes and muscles are left intact."
+    },
+    {
+     "note": "(4) Wide local excision (including partial mastectomy, lumpectomy, tylectomy, segmentectomy, and quadrantectomy) means removal of a portion of the breast tissue."
+    },
+    {
+     "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+    },
+    {
+     "note": "Note: Diagnosis of endometriosis must be substantiated by laparoscopy."
+    }
+   ],
    "see_other_notes": []
   }
  ],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 7610,
+    "description": "&#;Vulva, disease or injury of (including vulvovaginitis)."
+   },
    "ratings": [
     {
      "ratings": [
@@ -424,35 +418,166 @@
      "description": "Symptoms that do not require continuous treatment"
     }
    ],
-   "codes": [
-    {
-     "code": 7610,
-     "description": "&#;Vulva, disease or injury of (including vulvovaginitis)."
-    },
-    {
-     "code": 7611,
-     "description": "&#;Vagina, disease or injury of."
-    },
-    {
-     "code": 7612,
-     "description": "&#;Cervix, disease or injury of."
-    },
-    {
-     "code": 7613,
-     "description": "&#;Uterus, disease, injury, or adhesions of."
-    },
-    {
-     "code": 7614,
-     "description": "&#;Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID))."
-    },
-    {
-     "code": 7615,
-     "description": "&#;Ovary, disease, injury, or adhesions of."
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7611,
+    "description": "&#;Vagina, disease or injury of."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Symptoms not controlled by continuous treatment"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Symptoms that require continuous treatment"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Symptoms that do not require continuous treatment"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7612,
+    "description": "&#;Cervix, disease or injury of."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Symptoms not controlled by continuous treatment"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Symptoms that require continuous treatment"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Symptoms that do not require continuous treatment"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7613,
+    "description": "&#;Uterus, disease, injury, or adhesions of."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Symptoms not controlled by continuous treatment"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Symptoms that require continuous treatment"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Symptoms that do not require continuous treatment"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7614,
+    "description": "&#;Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID))."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Symptoms not controlled by continuous treatment"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Symptoms that require continuous treatment"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Symptoms that do not require continuous treatment"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7615,
+    "description": "&#;Ovary, disease, injury, or adhesions of."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Symptoms not controlled by continuous treatment"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Symptoms that require continuous treatment"
+    },
+    {
+     "ratings": [
+      0
+     ],
+     "description": "Symptoms that do not require continuous treatment"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7617,
+    "description": "&#;Uterus and both ovaries, removal of, complete:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -467,15 +592,16 @@
      "description": "Thereafter"
     }
    ],
-   "codes": [
-    {
-     "code": 7617,
-     "description": "&#;Uterus and both ovaries, removal of, complete:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7618,
+    "description": "&#;Uterus, removal of, including corpus:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -490,15 +616,16 @@
      "description": "Thereafter"
     }
    ],
-   "codes": [
-    {
-     "code": 7618,
-     "description": "&#;Uterus, removal of, including corpus:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7619,
+    "description": "&#;Ovary, removal of:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -507,11 +634,8 @@
      "description": "For three months after removal"
     }
    ],
-   "codes": [
-    {
-     "code": 7619,
-     "description": "&#;Ovary, removal of:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }

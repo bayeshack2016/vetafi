@@ -1,8 +1,12 @@
 {
  "description": "Schedule of ratings\u2014endocrine system.",
  "subcategories": [],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 7900,
+    "description": "&#;Hyperthyroidism"
+   },
    "ratings": [
     {
      "ratings": [
@@ -29,15 +33,16 @@
      "description": "Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7900,
-     "description": "&#;Hyperthyroidism"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7901,
+    "description": "&#;Thyroid gland, toxic adenoma of"
+   },
    "ratings": [
     {
      "ratings": [
@@ -64,15 +69,16 @@
      "description": "Tachycardia, which may be intermittent, and tremor, or; continuous medication required for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7901,
-     "description": "&#;Thyroid gland, toxic adenoma of"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7902,
+    "description": "&#;Thyroid gland, nontoxic adenoma of"
+   },
    "ratings": [
     {
      "ratings": [
@@ -87,15 +93,16 @@
      "description": "Without disfigurement of the head or neck"
     }
    ],
-   "codes": [
-    {
-     "code": 7902,
-     "description": "&#;Thyroid gland, nontoxic adenoma of"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7903,
+    "description": "&#;Hypothyroidism"
+   },
    "ratings": [
     {
      "ratings": [
@@ -122,15 +129,16 @@
      "description": "Fatigability, or; continuous medication required for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7903,
-     "description": "&#;Hypothyroidism"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7904,
+    "description": "&#;Hyperparathyroidism"
+   },
    "ratings": [
     {
      "ratings": [
@@ -151,15 +159,16 @@
      "description": "Continuous medication required for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7904,
-     "description": "&#;Hyperparathyroidism"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7905,
+    "description": "&#;Hypoparathyroidism"
+   },
    "ratings": [
     {
      "ratings": [
@@ -180,15 +189,16 @@
      "description": "Continuous medication required for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7905,
-     "description": "&#;Hypoparathyroidism"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7907,
+    "description": "&#;Cushing's syndrome"
+   },
    "ratings": [
     {
      "ratings": [
@@ -209,15 +219,16 @@
      "description": "With striae, obesity, moon face, glucose intolerance, and vascular fragility"
     }
    ],
-   "codes": [
-    {
-     "code": 7907,
-     "description": "&#;Cushing's syndrome"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7908,
+    "description": "&#;Acromegaly"
+   },
    "ratings": [
     {
      "ratings": [
@@ -238,15 +249,16 @@
      "description": "Enlargement of acral parts or overgrowth of long bones, and enlarged sella turcica"
     }
    ],
-   "codes": [
-    {
-     "code": 7908,
-     "description": "&#;Acromegaly"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7909,
+    "description": "&#;Diabetes insipidus"
+   },
    "ratings": [
     {
      "ratings": [
@@ -273,15 +285,16 @@
      "description": "Polyuria with near-continuous thirst"
     }
    ],
-   "codes": [
-    {
-     "code": 7909,
-     "description": "&#;Diabetes insipidus"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7911,
+    "description": "&#;Addison's disease (Adrenal Cortical Hypofunction)"
+   },
    "ratings": [
     {
      "ratings": [
@@ -302,15 +315,16 @@
      "description": "One or two crises during the past year, or; two to four episodes during the past year, or; weakness and fatigability, or; corticosteroid therapy required for control"
     }
    ],
-   "codes": [
-    {
-     "code": 7911,
-     "description": "&#;Addison's disease (Adrenal Cortical Hypofunction)"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7912,
+    "description": "&#;Pluriglandular syndrome"
+   },
    "ratings": [
     {
      "ratings": [
@@ -343,15 +357,8 @@
      "description": "Manageable by restricted diet only"
     }
    ],
-   "codes": [
-    {
-     "code": 7912,
-     "description": "&#;Pluriglandular syndrome"
-    },
-    {
-     "code": 7913,
-     "description": "&#;Diabetes mellitus"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": [
     {
@@ -360,6 +367,56 @@
    ]
   },
   {
+   "code": {
+    "code": 7913,
+    "description": "&#;Diabetes mellitus"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Requiring more than one daily injection of insulin, restricted diet, and regulation of activities (avoidance of strenuous occupational and recreational activities) with episodes of ketoacidosis or hypoglycemic reactions requiring at least three hospitalizations per year or weekly visits to a diabetic care provider, plus either progressive loss of weight and strength or complications that would be compensable if separately evaluated"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "Requiring insulin, restricted diet, and regulation of activities with episodes of ketoacidosis or hypoglycemic reactions requiring one or two hospitalizations per year or twice a month visits to a diabetic care provider, plus complications that would not be compensable if separately evaluated"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "Requiring insulin, restricted diet, and regulation of activities"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Requiring insulin and restricted diet, or; oral hypoglycemic agent and restricted diet"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Manageable by restricted diet only"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Evaluate according to major manifestations."
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7914,
+    "description": "&#;Neoplasm, malignant, any specified part of the endocrine system\n\n                  100"
+   },
    "ratings": [
     {
      "ratings": [
@@ -368,33 +425,49 @@
      "description": "7914\u2003Neoplasm, malignant, any specified part of the endocrine system"
     }
    ],
-   "codes": [
-    {
-     "code": 7914,
-     "description": "&#;Neoplasm, malignant, any specified part of the endocrine system\n\n                  100"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7916,
+    "description": "&#;Hyperpituitarism (prolactin secreting pituitary dysfunction)"
+   },
    "ratings": [],
-   "codes": [
-    {
-     "code": 7916,
-     "description": "&#;Hyperpituitarism (prolactin secreting pituitary dysfunction)"
-    },
-    {
-     "code": 7917,
-     "description": "&#;Hyperaldosteronism (benign or malignant)"
-    },
-    {
-     "code": 7918,
-     "description": "&#;Pheochromocytoma (benign or malignant)"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 7917,
+    "description": "&#;Hyperaldosteronism (benign or malignant)"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7918,
+    "description": "&#;Pheochromocytoma (benign or malignant)"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7919,
+    "description": "&#;C-cell hyperplasia of the thyroid\n\n                  100"
+   },
    "ratings": [
     {
      "ratings": [
@@ -403,11 +476,8 @@
      "description": "7919\u2003C-cell hyperplasia of the thyroid"
     }
    ],
-   "codes": [
-    {
-     "code": 7919,
-     "description": "&#;C-cell hyperplasia of the thyroid\n\n                  100"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }

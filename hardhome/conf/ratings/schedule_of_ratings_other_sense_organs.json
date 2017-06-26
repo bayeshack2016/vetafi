@@ -1,8 +1,12 @@
 {
  "description": "Schedule of ratings\u2014other sense organs.",
  "subcategories": [],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 6275,
+    "description": "&#;Sense of smell, complete loss\n\n                  10"
+   },
    "ratings": [
     {
      "ratings": [
@@ -11,15 +15,16 @@
      "description": "6275\u2003Sense of smell, complete loss"
     }
    ],
-   "codes": [
-    {
-     "code": 6275,
-     "description": "&#;Sense of smell, complete loss\n\n                  10"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 6276,
+    "description": "&#;Sense of taste, complete loss\n\n                  10"
+   },
    "ratings": [
     {
      "ratings": [
@@ -28,11 +33,8 @@
      "description": "6276\u2003Sense of taste, complete loss"
     }
    ],
-   "codes": [
-    {
-     "code": 6276,
-     "description": "&#;Sense of taste, complete loss\n\n                  10"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }

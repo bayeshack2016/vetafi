@@ -76,7 +76,15 @@ def save_xml(table_element: ElementTree.Element, output_dir: str):
 def is_category_row(row_element: ElementTree.Element):
     entries = [entry for entry in row_element.findall('ENT') if util.inner_text(entry).strip() != '']
     row_length = len(entries)
-    return row_length == 1
+
+    if row_length == 1:
+        nwords = len(util.inner_text(entries[0]).split())
+        if nwords <= 8:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 def get_description(row_element: ElementTree.Element):
@@ -255,21 +263,21 @@ class RatingTableStateMachine:
 
     def add_child_category(self, element):
         desc = get_description(element)
-        subcategory = models.RatingCategory(desc, parent=self.current_category)
+        subcategory = models.RatingCategory(desc, parent=self.current_category, header=self.current_category.header)
         self.current_category.add_subcategory(subcategory)
         self.last_category = self.current_category
         self.current_category = subcategory
 
     def add_sibling_category(self, element):
         desc = get_description(element)
-        category = models.RatingCategory(desc, parent=self.current_category.parent)
+        category = models.RatingCategory(desc, parent=self.current_category.parent, header=self.current_category.header)
         self.current_category.parent.add_subcategory(category)
         self.last_category = self.current_category
         self.current_category = category
 
     def add_first_diagnostic_code(self, element):
         logger.debug('Add First Diagnostic Code:\n' + util.pformat_element(element))
-        self.current_diagnostic_code_set = models.DiagnosticCodeSet()
+        self.current_diagnostic_code_set = models.DiagnosticCodeSet(header=self.current_category.header)
         self.current_category.add_diagnostic_code_set(self.current_diagnostic_code_set)
         self.add_diagnostic_code(element)
 
@@ -313,7 +321,7 @@ class RatingTableStateMachine:
         self.current_diagnostic_code_set.add_rating(models.Rating.from_element(element))
 
     def add_combined_diagnostic_rating(self, element):
-        self.current_diagnostic_code_set = models.DiagnosticCodeSet()
+        self.current_diagnostic_code_set = models.DiagnosticCodeSet(header=self.current_category.header)
         self.current_category.add_diagnostic_code_set(self.current_diagnostic_code_set)
         self.add_diagnostic_code(element)
         self.add_rating(element)
@@ -349,17 +357,17 @@ class RatingTableStateMachine:
         elif is_rating_row(row):
             logger.debug("Rating:\n" + util.pformat_element(row))
             self.process_rating(row)
-        elif is_note_row(row):
-            logger.debug("Note:\n" + util.pformat_element(row))
-            self.process_note(row)
-        elif is_general_rating_note_row(row):
-            logger.debug("General Rating:\n" + util.pformat_element(row))
-            pass
         elif is_category_row(row):
             logger.debug("Category:\n" + util.pformat_element(row))
             self.process_category(row)
+        elif is_general_rating_note_row(row):
+            logger.debug("General Rating:\n" + util.pformat_element(row))
+            pass
         else:
-            raise ValueError('Unexpected row: {}'.format(util.pformat_element(row)))
+            logger.debug("Note:\n" + util.pformat_element(row))
+            self.process_note(row)
+        #else:
+        #    raise ValueError('Unexpected row: {}'.format(util.pformat_element(row)))
 
 
 def maybe_deduce_diagnosis_from_subject(category: models.RatingCategory):
@@ -370,17 +378,25 @@ def maybe_deduce_diagnosis_from_subject(category: models.RatingCategory):
     This will set the diagnosis appropriately.
     """
     if 'tuberculosis' in category.description.lower():
-        code_set = models.DiagnosticCodeSet()
+        code_set = models.DiagnosticCodeSet(['Rating'])
         category.add_diagnostic_code_set(code_set)
         code_set.add_diagnostic_code(models.DiagnosticCode(6701, 'tuberculosis'))  # TODO(Not sure what this is actually)
     elif 'genitourinary' in category.description.lower():
-        code_set = models.DiagnosticCodeSet()
+        code_set = models.DiagnosticCodeSet(['Rating'])
         category.add_diagnostic_code_set(code_set)
         code_set.add_diagnostic_code(models.DiagnosticCode(9999, 'genitourinary'))  # TODO(Not sure what this is actually)
     elif 'mental disorders' in category.description.lower():
-        code_set = models.DiagnosticCodeSet()
+        code_set = models.DiagnosticCodeSet(['Rating'])
         category.add_diagnostic_code_set(code_set)
         code_set.add_diagnostic_code(models.DiagnosticCode(9999, 'mental disorders'))  # TODO(Not sure what this is actually)
+
+
+def get_rating_table_header(table_element: ElementTree.Element):
+    header = table_element.find('BOXHD')
+
+    header_elements = header.findall('CHED')
+
+    return [x.text for x in header_elements[1:]]
 
 
 def convert_table_to_json(table_element: ElementTree.Element):
@@ -388,11 +404,13 @@ def convert_table_to_json(table_element: ElementTree.Element):
 
     gpo_table = table_element.find('GPOTABLE')
 
+    header = get_rating_table_header(gpo_table)
     rows = gpo_table.findall('ROW')
 
-    root = models.RatingCategory(subject)
+    root = models.RatingCategory(subject, header=header)
     maybe_deduce_diagnosis_from_subject(root)
     root.parent = root
+
     machine = RatingTableStateMachine(subject, root)
 
     for row in rows:

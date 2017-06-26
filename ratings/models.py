@@ -70,10 +70,11 @@ class DiagnosticCode(RatingTableObject):
 
 
 class DiagnosticCodeSet(RatingTableObject):
-    def __init__(self):
+    def __init__(self, header):
         self.codes = []
         self.ratings = []
         self.notes = []
+        self.header = header
 
     def add_diagnostic_code(self, code: DiagnosticCode):
         self.codes.append(code)
@@ -84,10 +85,19 @@ class DiagnosticCodeSet(RatingTableObject):
     def add_note(self, note: RatingNote):
         self.notes.append(note)
 
+    def get_all_ratings(self):
+        for code in self.codes:
+            yield {
+                'code': code.as_dict(),
+                'ratings': [rating.as_dict() for rating in self.ratings],
+                'header': self.header,
+                'notes': [note.as_dict() for note in self.notes]}
+
     def as_dict(self):
         return {'ratings': [rating.as_dict() for rating in self.ratings],
                 'codes': [code.as_dict() for code in self.codes],
-                'notes': [note.as_dict() for note in self.notes]}
+                'notes': [note.as_dict() for note in self.notes],
+                'header': self.header}
 
 
 class SeeOtherRatingNote(RatingTableObject):
@@ -106,7 +116,7 @@ class SeeOtherRatingNote(RatingTableObject):
 
 
 class RatingCategory(RatingTableObject):
-    def __init__(self, description: str, parent: 'RatingCategory' = None):
+    def __init__(self, description: str, parent: 'RatingCategory' = None, header=None):
         self.description = description
         self.diagnostic_code_sets = []
         self.subcategories = []
@@ -114,6 +124,7 @@ class RatingCategory(RatingTableObject):
         self.see_other_notes = []
         self.notes = []
         self.parent = parent
+        self.header = header
 
     def add_subcategory(self, subcategory: 'RatingCategory'):
         self.subcategories.append(subcategory)
@@ -139,13 +150,17 @@ class RatingCategory(RatingTableObject):
                 break
             yield category
 
+    def get_all_ratings(self):
+        for diagnostic_code_set in self.diagnostic_code_sets:
+            for rating in diagnostic_code_set.get_all_ratings():
+                yield rating
+
     def as_dict(self):
         return {'description': self.description,
                 'subcategories': [x.as_dict() for x in self.subcategories],
-                'diagnostic_code_sets': [x.as_dict() for x in self.diagnostic_code_sets],
+                'ratings': list(self.get_all_ratings()),
                 'notes': [x.as_dict() for x in self.notes],
-                'see_other_notes': [x.as_dict() for x in self.see_other_notes],
-                }
+                'see_other_notes': [x.as_dict() for x in self.see_other_notes]}
 
     def __str__(self) -> str:
         return json.dumps(self.as_dict())

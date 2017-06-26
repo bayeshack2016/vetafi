@@ -4,8 +4,12 @@
   {
    "description": "Range of lateral excursion:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 9905,
+      "description": "&#;Temporomandibular articulation, limited motion of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -14,15 +18,16 @@
        "description": "0 to 4 mm"
       }
      ],
-     "codes": [
-      {
-       "code": 9905,
-       "description": "&#;Temporomandibular articulation, limited motion of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9906,
+      "description": "&#;Ramus, loss of whole or part of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -37,11 +42,8 @@
        "description": "Unilateral"
       }
      ],
-     "codes": [
-      {
-       "code": 9906,
-       "description": "&#;Ramus, loss of whole or part of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": [
       {
@@ -60,8 +62,12 @@
   {
    "description": "Not involving loss of temporomandibular articulation",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 9906,
+      "description": "&#;Ramus, loss of whole or part of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -76,15 +82,16 @@
        "description": "Unilateral"
       }
      ],
-     "codes": [
-      {
-       "code": 9906,
-       "description": "&#;Ramus, loss of whole or part of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9907,
+      "description": "&#;Ramus, loss of less than one-half the substance of, not involving loss of continuity:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -99,15 +106,16 @@
        "description": "Unilateral"
       }
      ],
-     "codes": [
-      {
-       "code": 9907,
-       "description": "&#;Ramus, loss of less than one-half the substance of, not involving loss of continuity:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9908,
+      "description": "&#;Condyloid process, loss of, one or both sides\n\n                  30"
+     },
      "ratings": [
       {
        "ratings": [
@@ -116,15 +124,16 @@
        "description": "9908\u2003Condyloid process, loss of, one or both sides"
       }
      ],
-     "codes": [
-      {
-       "code": 9908,
-       "description": "&#;Condyloid process, loss of, one or both sides\n\n                  30"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9909,
+      "description": "&#;Coronoid process, loss of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -139,15 +148,16 @@
        "description": "Unilateral"
       }
      ],
-     "codes": [
-      {
-       "code": 9909,
-       "description": "&#;Coronoid process, loss of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9911,
+      "description": "&#;Hard palate, loss of half or more:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -162,15 +172,16 @@
        "description": "Replaceable by prosthesis"
       }
      ],
-     "codes": [
-      {
-       "code": 9911,
-       "description": "&#;Hard palate, loss of half or more:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9912,
+      "description": "&#;Hard palate, loss of less than half of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -185,15 +196,16 @@
        "description": "Replaceable by prosthesis"
       }
      ],
-     "codes": [
-      {
-       "code": 9912,
-       "description": "&#;Hard palate, loss of less than half of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9913,
+      "description": "&#;Teeth, loss of, due to loss of substance of body of maxilla or mandible without loss of continuity:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -250,19 +262,16 @@
        "description": "Where the loss of masticatory surface can be restored by suitable prosthesis"
       }
      ],
-     "codes": [
-      {
-       "code": 9913,
-       "description": "&#;Teeth, loss of, due to loss of substance of body of maxilla or mandible without loss of continuity:"
-      }
+     "header": [
+      "Rating"
      ],
-     "notes": [
-      {
-       "note": "Where the lost masticatory surface cannot be restored by suitable prosthesis:"
-      }
-     ]
+     "notes": []
     },
     {
+     "code": {
+      "code": 9914,
+      "description": "&#;Maxilla, loss of more than half:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -277,15 +286,16 @@
        "description": "Replaceable by prosthesis"
       }
      ],
-     "codes": [
-      {
-       "code": 9914,
-       "description": "&#;Maxilla, loss of more than half:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9915,
+      "description": "&#;Maxilla, loss of half or less:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -300,11 +310,8 @@
        "description": "Replaceable by prosthesis"
       }
      ],
-     "codes": [
-      {
-       "code": 9915,
-       "description": "&#;Maxilla, loss of half or less:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": [
       {
@@ -315,6 +322,9 @@
    ],
    "notes": [
     {
+     "note": "Where the lost masticatory surface cannot be restored by suitable prosthesis:"
+    },
+    {
      "note": "Note&#8212;These ratings apply only to bone loss through trauma or disease such as osteomyelitis, and not to the loss of the alveolar process as a result of periodontal disease, since such loss is not considered disabling"
     }
    ],
@@ -323,8 +333,12 @@
   {
    "description": "Loss of less than 25 percent:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 9906,
+      "description": "&#;Ramus, loss of whole or part of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -339,15 +353,16 @@
        "description": "Replaceable by prosthesis"
       }
      ],
-     "codes": [
-      {
-       "code": 9906,
-       "description": "&#;Ramus, loss of whole or part of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 9916,
+      "description": "&#;Maxilla, malunion or nonunion of:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -368,11 +383,8 @@
        "description": "Slight displacement"
       }
      ],
-     "codes": [
-      {
-       "code": 9916,
-       "description": "&#;Maxilla, malunion or nonunion of:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     }
@@ -381,14 +393,15 @@
    "see_other_notes": []
   }
  ],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 9900,
+    "description": "&#;Maxilla or mandible, chronic osteomyelitis or osteoradionecrosis of:"
+   },
    "ratings": [],
-   "codes": [
-    {
-     "code": 9900,
-     "description": "&#;Maxilla or mandible, chronic osteomyelitis or osteoradionecrosis of:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": [
     {
@@ -397,6 +410,10 @@
    ]
   },
   {
+   "code": {
+    "code": 9901,
+    "description": "&#;Mandible, loss of, complete, between angles\n\n                  100"
+   },
    "ratings": [
     {
      "ratings": [
@@ -405,15 +422,16 @@
      "description": "9901\u2003Mandible, loss of, complete, between angles"
     }
    ],
-   "codes": [
-    {
-     "code": 9901,
-     "description": "&#;Mandible, loss of, complete, between angles\n\n                  100"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 9902,
+    "description": "&#;Mandible, loss of approximately one-half:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -428,15 +446,16 @@
      "description": "Not involving temporomandibular articulation"
     }
    ],
-   "codes": [
-    {
-     "code": 9902,
-     "description": "&#;Mandible, loss of approximately one-half:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 9903,
+    "description": "&#;Mandible, nonunion of:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -451,15 +470,16 @@
      "description": "Moderate"
     }
    ],
-   "codes": [
-    {
-     "code": 9903,
-     "description": "&#;Mandible, nonunion of:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 9904,
+    "description": "&#;Mandible, malunion of:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -480,15 +500,16 @@
      "description": "Slight displacement"
     }
    ],
-   "codes": [
-    {
-     "code": 9904,
-     "description": "&#;Mandible, malunion of:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 9905,
+    "description": "&#;Temporomandibular articulation, limited motion of:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -515,11 +536,8 @@
      "description": "31 to 40 mm"
     }
    ],
-   "codes": [
-    {
-     "code": 9905,
-     "description": "&#;Temporomandibular articulation, limited motion of:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": [
     {

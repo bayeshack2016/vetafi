@@ -154,6 +154,7 @@ gulp.task('watch', ['build', 'initBrowserSync'], function () {
   gulp.watch('src/js/*.js', ['js', 'other-js']);
   gulp.watch('src/styles/**/*.styl', ['stylus']);
   gulp.watch('src/**/*.pug', ['pug']);
+  gulp.watch('../conf/ratings/*.json', ['browserify-ratings']);
 });
 
 gulp.task('build', ['clean', 'fonts', 'icons', 'libs', 'xhrEnv', 'js', 'other-js', 'css-libs', 'stylus', 'pug', 'browserify-forms', 'browserify-ratings', 'lint']);

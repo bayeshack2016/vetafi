@@ -1,18 +1,23 @@
 {
  "description": "Schedule of ratings\u2014Mental disorders.",
  "subcategories": [],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 9999,
+    "description": "mental disorders"
+   },
    "ratings": [],
-   "codes": [
-    {
-     "code": 9999,
-     "description": "mental disorders"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 9999,
+    "description": "mental disorders"
+   },
    "ratings": [
     {
      "ratings": [
@@ -51,11 +56,8 @@
      "description": "A mental condition has been formally diagnosed, but symptoms are not severe enough either to interfere with occupational and social functioning or to require continuous medication."
     }
    ],
-   "codes": [
-    {
-     "code": 9999,
-     "description": "mental disorders"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }

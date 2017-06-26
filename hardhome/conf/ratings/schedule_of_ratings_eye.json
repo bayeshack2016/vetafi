@@ -2,984 +2,258 @@
  "description": "Schedule of ratings\u2014eye.",
  "subcategories": [
   {
-   "description": "Inactive: Evaluate under &#167;&#8201;4.88c or &#167;&#8201;4.89 of this part, whichever is appropriate.",
+   "description": "Vision in one eye 15/200 (4.5/60):",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 6066,
+      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+     },
      "ratings": [
       {
        "ratings": [
-        10
+        80
        ],
-       "description": "Localized scars, atrophy, or irregularities of the retina, unilateral or bilateral, that are centrally located and that result in an irregular, duplicated, enlarged, or diminished image"
-      }
-     ],
-     "codes": [
+       "description": "In the other eye 15/200 (4.5/60)"
+      },
       {
-       "code": 6011,
-       "description": "&#;Retinal scars, atrophy, or irregularities:"
-      }
-     ],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation.",
-   "subcategories": [],
-   "diagnostic_code_sets": [
-    {
-     "ratings": [
+       "ratings": [
+        70
+       ],
+       "description": "In the other eye 20/200 (6/60)"
+      },
       {
        "ratings": [
         60
        ],
-       "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+       "description": "In the other eye 20/100 (6/30)"
       },
       {
        "ratings": [
         40
        ],
-       "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "In the other eye 20/50 (6/15)"
       },
       {
        "ratings": [
         20
        ],
-       "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Minimum evaluation if continuous medication is required"
+       "description": "In the other eye 20/40 (6/12)"
       }
      ],
-     "codes": [
-      {
-       "code": 6012,
-       "description": "&#;Angle-closure glaucoma:"
-      }
-     ],
-     "notes": [
-      {
-       "note": "Evaluate on the basis of either visual impairment due to angle-closure glaucoma or incapacitating episodes, whichever results in a higher evaluation."
-      }
-     ]
-    },
-    {
-     "ratings": [
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Minimum evaluation if continuous medication is required"
-      }
-     ],
-     "codes": [
-      {
-       "code": 6013,
-       "description": "&#;Open-angle glaucoma:"
-      }
-     ],
-     "notes": [
-      {
-       "note": "Evaluate based on visual impairment due to open-angle glaucoma."
-      }
-     ]
-    },
-    {
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Malignant neoplasm of the eyeball that requires therapy that is comparable to that used for systemic malignancies, "
-      }
-     ],
-     "codes": [
-      {
-       "code": 6014,
-       "description": "&#;Malignant neoplasms (eyeball only):"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     }
    ],
-   "notes": [
-    {
-     "note": "Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider."
-    },
-    {
-     "note": "Note: Continue the 100-percent rating beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating will be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination will be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluate based on residuals."
-    }
-   ],
+   "notes": [],
    "see_other_notes": []
   },
   {
-   "description": "Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:",
-   "subcategories": [
+   "description": "Vision in one eye 20/200 (6/60):",
+   "subcategories": [],
+   "ratings": [
     {
-     "description": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.",
-     "subcategories": [],
-     "diagnostic_code_sets": [
+     "code": {
+      "code": 6066,
+      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+     },
+     "ratings": [
       {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6015,
-         "description": "&#;Benign neoplasms (of eyeball and adnexa):"
-        }
+       "ratings": [
+        70
        ],
-       "notes": [
-        {
-         "note": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
-        }
-       ]
+       "description": "In the other eye 20/200 (6/60)"
       },
       {
        "ratings": [
-        {
-         "ratings": [
-          10
-         ],
-         "description": "6016\u2003Nystagmus, central"
-        }
+        60
        ],
-       "codes": [
-        {
-         "code": 6016,
-         "description": "&#;Nystagmus, central\n\n                  10"
-        }
-       ],
-       "notes": []
+       "description": "In the other eye 20/100 (6/30)"
       },
       {
        "ratings": [
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Active: Evaluate based on visual impairment, minimum"
-        }
+        40
        ],
-       "codes": [
-        {
-         "code": 6017,
-         "description": "&#;Trachomatous conjunctivitis:"
-        }
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        30
        ],
-       "notes": []
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "In the other eye 20/40 (6/12)"
       }
      ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Active (with objective findings, such as red, thick conjunctivae, mucous secretion, etc.)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6018,
-         "description": "&#;Chronic conjunctivitis (nontrachomatous):"
-        }
-       ],
-       "notes": []
-      }
+     "header": [
+      "Rating"
      ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Bilateral"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Unilateral"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6019,
-         "description": "&#;Ptosis, unilateral or bilateral:"
-        },
-        {
-         "code": 6020,
-         "description": "&#;Ectropion:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800)."
-        }
-       ]
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Bilateral"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Unilateral"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6021,
-         "description": "&#;Entropion:"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Bilateral"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Unilateral"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6022,
-         "description": "&#;Lagophthalmos:"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          10
-         ],
-         "description": "6023\u2003Loss of eyebrows, complete, unilateral or bilateral"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6023,
-         "description": "&#;Loss of eyebrows, complete, unilateral or bilateral\n\n                  10"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          10
-         ],
-         "description": "6024\u2003Loss of eyelashes, complete, unilateral or bilateral"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6024,
-         "description": "&#;Loss of eyelashes, complete, unilateral or bilateral\n\n                  10"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Bilateral"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Unilateral"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6025,
-         "description": "&#;Disorders of the lacrimal apparatus (epiphora, dacryocystitis, etc.):"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Minimum (unilateral or bilateral)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6026,
-         "description": "&#;Optic neuropathy:"
-        },
-        {
-         "code": 6027,
-         "description": "&#;Cataract of any type:"
-        },
-        {
-         "code": 6029,
-         "description": "&#;Aphakia or dislocation of crystalline lens:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Evaluate based on visual impairment."
-        },
-        {
-         "note": "&#8195;Preoperative:"
-        },
-        {
-         "note": "Evaluate based on visual impairment."
-        },
-        {
-         "note": "&#8195;Postoperative:"
-        },
-        {
-         "note": "If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia."
-        },
-        {
-         "note": "Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step."
-        }
-       ]
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          20
-         ],
-         "description": "6030\u2003Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III))."
-        }
-       ],
-       "codes": [
-        {
-         "code": 6030,
-         "description": "&#;Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III)).\n\n                  20"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Minimum, if there is pain, photophobia, and glare sensitivity"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6032,
-         "description": "&#;Loss of eyelids, partial or complete:"
-        },
-        {
-         "code": 6034,
-         "description": "&#;Pterygium:"
-        },
-        {
-         "code": 6035,
-         "description": "&#;Keratoconus:"
-        },
-        {
-         "code": 6036,
-         "description": "&#;Status post corneal transplant:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
-        },
-        {
-         "note": "Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings."
-        },
-        {
-         "note": "Evaluate based on impairment of visual acuity."
-        },
-        {
-         "note": "Evaluate based on visual impairment."
-        }
-       ]
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 6037,
-         "description": "&#;Pinguecula:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Evaluate based on disfigurement (diagnostic code 7800)."
-        },
-        {
-         "note": "Impairment of Central Visual Acuity"
-        }
-       ]
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "6061\u2003Anatomical loss of both eyes\u2009\n\n                  "
-        }
-       ],
-       "codes": [
-        {
-         "code": 6061,
-         "description": "&#;Anatomical loss of both eyes&#;\n\n                  \n\n                  100"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "6062\u2003No more than light perception in both eyes\u2009\n\n                  "
-        }
-       ],
-       "codes": [
-        {
-         "code": 6062,
-         "description": "&#;No more than light perception in both eyes&#;\n\n                  \n\n                  100"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "In the other eye 5/200 (1.5/60)"
-        },
-        {
-         "ratings": [
-          90
-         ],
-         "description": "In the other eye 10/200 (3/60)"
-        },
-        {
-         "ratings": [
-          80
-         ],
-         "description": "In the other eye 15/200 (4.5/60)"
-        },
-        {
-         "ratings": [
-          70
-         ],
-         "description": "In the other eye 20/200 (6/60)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "In the other eye 20/100 (6/30)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          50
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6063,
-         "description": "&#;Anatomical loss of one eye:&#;"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "In the other eye 5/200 (1.5/60)"
-        },
-        {
-         "ratings": [
-          90
-         ],
-         "description": "In the other eye 10/200 (3/60)"
-        },
-        {
-         "ratings": [
-          80
-         ],
-         "description": "In the other eye 15/200 (4.5/60)"
-        },
-        {
-         "ratings": [
-          70
-         ],
-         "description": "In the other eye 20/200 (6/60)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "In the other eye 20/100 (6/30)"
-        },
-        {
-         "ratings": [
-          50
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6064,
-         "description": "&#;No more than light perception in one eye:&#;"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "In the other eye 5/200 (1.5/60)"
-        },
-        {
-         "ratings": [
-          90
-         ],
-         "description": "In the other eye 10/200 (3/60)"
-        },
-        {
-         "ratings": [
-          80
-         ],
-         "description": "In the other eye 15/200 (4.5/60)"
-        },
-        {
-         "ratings": [
-          70
-         ],
-         "description": "In the other eye 20/200 (6/60)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "In the other eye 20/100 (6/30)"
-        },
-        {
-         "ratings": [
-          50
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6065,
-         "description": "&#;Vision in one eye 5/200 (1.5/60):"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          90
-         ],
-         "description": "In the other eye 10/200 (3/60)"
-        },
-        {
-         "ratings": [
-          80
-         ],
-         "description": "In the other eye 15/200 (4.5/60)"
-        },
-        {
-         "ratings": [
-          70
-         ],
-         "description": "In the other eye 20/200 (6/60)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "In the other eye 20/100 (6/30)"
-        },
-        {
-         "ratings": [
-          50
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6066,
-         "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
-        }
-       ],
-       "notes": [
-        {
-         "note": "Vision in one eye 10/200 (3/60):"
-        }
-       ]
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Vision in one eye 15/200 (4.5/60):",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          80
-         ],
-         "description": "In the other eye 15/200 (4.5/60)"
-        },
-        {
-         "ratings": [
-          70
-         ],
-         "description": "In the other eye 20/200 (6/60)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "In the other eye 20/100 (6/30)"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6017,
-         "description": "&#;Trachomatous conjunctivitis:"
-        }
-       ],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Vision in one eye 20/200 (6/60):",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          70
-         ],
-         "description": "In the other eye 20/200 (6/60)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "In the other eye 20/100 (6/30)"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6017,
-         "description": "&#;Trachomatous conjunctivitis:"
-        }
-       ],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Vision in one eye 20/100 (6/30):",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          50
-         ],
-         "description": "In the other eye 20/100 (6/30)"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6017,
-         "description": "&#;Trachomatous conjunctivitis:"
-        }
-       ],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Vision in one eye 20/70 (6/21):",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          30
-         ],
-         "description": "In the other eye 20/70 (6/21)"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6017,
-         "description": "&#;Trachomatous conjunctivitis:"
-        }
-       ],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Vision in one eye 20/50 (6/15):",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          10
-         ],
-         "description": "In the other eye 20/50 (6/15)"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6017,
-         "description": "&#;Trachomatous conjunctivitis:"
-        }
-       ],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Vision in one eye 20/40 (6/12):",
-     "subcategories": [],
-     "diagnostic_code_sets": [
-      {
-       "ratings": [
-        {
-         "ratings": [
-          0
-         ],
-         "description": "In the other eye 20/40 (6/12)"
-        }
-       ],
-       "codes": [
-        {
-         "code": 6017,
-         "description": "&#;Trachomatous conjunctivitis:"
-        }
-       ],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
+     "notes": []
     }
    ],
-   "diagnostic_code_sets": [],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "description": "Vision in one eye 20/100 (6/30):",
+   "subcategories": [],
+   "ratings": [
+    {
+     "code": {
+      "code": 6066,
+      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+     },
+     "ratings": [
+      {
+       "ratings": [
+        50
+       ],
+       "description": "In the other eye 20/100 (6/30)"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    }
+   ],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "description": "Vision in one eye 20/70 (6/21):",
+   "subcategories": [],
+   "ratings": [
+    {
+     "code": {
+      "code": 6066,
+      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+     },
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    }
+   ],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "description": "Vision in one eye 20/50 (6/15):",
+   "subcategories": [],
+   "ratings": [
+    {
+     "code": {
+      "code": 6066,
+      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+     },
+     "ratings": [
+      {
+       "ratings": [
+        10
+       ],
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    }
+   ],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "description": "Vision in one eye 20/40 (6/12):",
+   "subcategories": [],
+   "ratings": [
+    {
+     "code": {
+      "code": 6066,
+      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+     },
+     "ratings": [
+      {
+       "ratings": [
+        0
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    }
+   ],
    "notes": [],
    "see_other_notes": []
   }
  ],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 6000,
+    "description": "&#;Choroidopathy, including uveitis, iritis, cyclitis, and choroiditis."
+   },
    "ratings": [
     {
      "ratings": [
@@ -1006,43 +280,232 @@
      "description": "With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months"
     }
    ],
-   "codes": [
-    {
-     "code": 6000,
-     "description": "&#;Choroidopathy, including uveitis, iritis, cyclitis, and choroiditis."
-    },
-    {
-     "code": 6001,
-     "description": "&#;Keratopathy."
-    },
-    {
-     "code": 6002,
-     "description": "&#;Scleritis."
-    },
-    {
-     "code": 6006,
-     "description": "&#;Retinopathy or maculopathy."
-    },
-    {
-     "code": 6007,
-     "description": "&#;Intraocular hemorrhage."
-    },
-    {
-     "code": 6008,
-     "description": "&#;Detachment of retina."
-    },
-    {
-     "code": 6009,
-     "description": "&#;Unhealed eye injury."
-    }
+   "header": [
+    "Rating"
    ],
-   "notes": [
-    {
-     "note": "Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation."
-    }
-   ]
+   "notes": []
   },
   {
+   "code": {
+    "code": 6001,
+    "description": "&#;Keratopathy."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6002,
+    "description": "&#;Scleritis."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6006,
+    "description": "&#;Retinopathy or maculopathy."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6007,
+    "description": "&#;Intraocular hemorrhage."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6008,
+    "description": "&#;Detachment of retina."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6009,
+    "description": "&#;Unhealed eye injury."
+   },
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 1 week, but less than 2 weeks, during the past 12 months"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6010,
+    "description": "&#;Tuberculosis of eye:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -1051,18 +514,812 @@
      "description": "Active"
     }
    ],
-   "codes": [
-    {
-     "code": 6010,
-     "description": "&#;Tuberculosis of eye:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
+  },
+  {
+   "code": {
+    "code": 6011,
+    "description": "&#;Retinal scars, atrophy, or irregularities:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Localized scars, atrophy, or irregularities of the retina, unilateral or bilateral, that are centrally located and that result in an irregular, duplicated, enlarged, or diminished image"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6012,
+    "description": "&#;Angle-closure glaucoma:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      60
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 6 weeks during the past 12 months"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 4 weeks, but less than 6 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      20
+     ],
+     "description": "With incapacitating episodes having a total duration of at least 2 weeks, but less than 4 weeks, during the past 12 months"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Minimum evaluation if continuous medication is required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6013,
+    "description": "&#;Open-angle glaucoma:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Minimum evaluation if continuous medication is required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6014,
+    "description": "&#;Malignant neoplasms (eyeball only):"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Malignant neoplasm of the eyeball that requires therapy that is comparable to that used for systemic malignancies, "
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6015,
+    "description": "&#;Benign neoplasms (of eyeball and adnexa):"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6016,
+    "description": "&#;Nystagmus, central\n\n                  10"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "6016\u2003Nystagmus, central"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6017,
+    "description": "&#;Trachomatous conjunctivitis:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Active: Evaluate based on visual impairment, minimum"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6018,
+    "description": "&#;Chronic conjunctivitis (nontrachomatous):"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Active (with objective findings, such as red, thick conjunctivae, mucous secretion, etc.)"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6019,
+    "description": "&#;Ptosis, unilateral or bilateral:"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6020,
+    "description": "&#;Ectropion:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Bilateral"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Unilateral"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6021,
+    "description": "&#;Entropion:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Bilateral"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Unilateral"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6022,
+    "description": "&#;Lagophthalmos:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Bilateral"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Unilateral"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6023,
+    "description": "&#;Loss of eyebrows, complete, unilateral or bilateral\n\n                  10"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "6023\u2003Loss of eyebrows, complete, unilateral or bilateral"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6024,
+    "description": "&#;Loss of eyelashes, complete, unilateral or bilateral\n\n                  10"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "6024\u2003Loss of eyelashes, complete, unilateral or bilateral"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6025,
+    "description": "&#;Disorders of the lacrimal apparatus (epiphora, dacryocystitis, etc.):"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "Bilateral"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Unilateral"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6026,
+    "description": "&#;Optic neuropathy:"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Evaluate based on visual impairment."
+    },
+    {
+     "note": "&#8195;Preoperative:"
+    },
+    {
+     "note": "Evaluate based on visual impairment."
+    },
+    {
+     "note": "&#8195;Postoperative:"
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6027,
+    "description": "&#;Cataract of any type:"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Evaluate based on visual impairment."
+    },
+    {
+     "note": "&#8195;Preoperative:"
+    },
+    {
+     "note": "Evaluate based on visual impairment."
+    },
+    {
+     "note": "&#8195;Postoperative:"
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6029,
+    "description": "&#;Aphakia or dislocation of crystalline lens:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Minimum (unilateral or bilateral)"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6030,
+    "description": "&#;Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III)).\n\n                  20"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      20
+     ],
+     "description": "6030\u2003Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III))."
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6032,
+    "description": "&#;Loss of eyelids, partial or complete:"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6034,
+    "description": "&#;Pterygium:"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6035,
+    "description": "&#;Keratoconus:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Minimum, if there is pain, photophobia, and glare sensitivity"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Evaluate based on impairment of visual acuity."
+    },
+    {
+     "note": "Evaluate based on visual impairment."
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6036,
+    "description": "&#;Status post corneal transplant:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Minimum, if there is pain, photophobia, and glare sensitivity"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Evaluate based on impairment of visual acuity."
+    },
+    {
+     "note": "Evaluate based on visual impairment."
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6037,
+    "description": "&#;Pinguecula:"
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Evaluate based on disfigurement (diagnostic code 7800)."
+    },
+    {
+     "note": "Impairment of Central Visual Acuity"
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6061,
+    "description": "&#;Anatomical loss of both eyes&#;\n\n                  \n\n                  100"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "6061\u2003Anatomical loss of both eyes\u2009\n\n                  "
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6062,
+    "description": "&#;No more than light perception in both eyes&#;\n\n                  \n\n                  100"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "6062\u2003No more than light perception in both eyes\u2009\n\n                  "
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6063,
+    "description": "&#;Anatomical loss of one eye:&#;"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "In the other eye 5/200 (1.5/60)"
+    },
+    {
+     "ratings": [
+      90
+     ],
+     "description": "In the other eye 10/200 (3/60)"
+    },
+    {
+     "ratings": [
+      80
+     ],
+     "description": "In the other eye 15/200 (4.5/60)"
+    },
+    {
+     "ratings": [
+      70
+     ],
+     "description": "In the other eye 20/200 (6/60)"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "In the other eye 20/100 (6/30)"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "In the other eye 20/70 (6/21)"
+    },
+    {
+     "ratings": [
+      50
+     ],
+     "description": "In the other eye 20/50 (6/15)"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "In the other eye 20/40 (6/12)"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6064,
+    "description": "&#;No more than light perception in one eye:&#;"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "In the other eye 5/200 (1.5/60)"
+    },
+    {
+     "ratings": [
+      90
+     ],
+     "description": "In the other eye 10/200 (3/60)"
+    },
+    {
+     "ratings": [
+      80
+     ],
+     "description": "In the other eye 15/200 (4.5/60)"
+    },
+    {
+     "ratings": [
+      70
+     ],
+     "description": "In the other eye 20/200 (6/60)"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "In the other eye 20/100 (6/30)"
+    },
+    {
+     "ratings": [
+      50
+     ],
+     "description": "In the other eye 20/70 (6/21)"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "In the other eye 20/50 (6/15)"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "In the other eye 20/40 (6/12)"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6065,
+    "description": "&#;Vision in one eye 5/200 (1.5/60):"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "In the other eye 5/200 (1.5/60)"
+    },
+    {
+     "ratings": [
+      90
+     ],
+     "description": "In the other eye 10/200 (3/60)"
+    },
+    {
+     "ratings": [
+      80
+     ],
+     "description": "In the other eye 15/200 (4.5/60)"
+    },
+    {
+     "ratings": [
+      70
+     ],
+     "description": "In the other eye 20/200 (6/60)"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "In the other eye 20/100 (6/30)"
+    },
+    {
+     "ratings": [
+      50
+     ],
+     "description": "In the other eye 20/70 (6/21)"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "In the other eye 20/50 (6/15)"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "In the other eye 20/40 (6/12)"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 6066,
+    "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      90
+     ],
+     "description": "In the other eye 10/200 (3/60)"
+    },
+    {
+     "ratings": [
+      80
+     ],
+     "description": "In the other eye 15/200 (4.5/60)"
+    },
+    {
+     "ratings": [
+      70
+     ],
+     "description": "In the other eye 20/200 (6/60)"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "In the other eye 20/100 (6/30)"
+    },
+    {
+     "ratings": [
+      50
+     ],
+     "description": "In the other eye 20/70 (6/21)"
+    },
+    {
+     "ratings": [
+      40
+     ],
+     "description": "In the other eye 20/50 (6/15)"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "In the other eye 20/40 (6/12)"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Vision in one eye 10/200 (3/60):"
+    }
+   ]
   }
  ],
  "notes": [
   {
+   "note": "Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation."
+  },
+  {
    "note": "Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider."
+  },
+  {
+   "note": "Inactive: Evaluate under &#167;&#8201;4.88c or &#167;&#8201;4.89 of this part, whichever is appropriate."
+  },
+  {
+   "note": "Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation."
+  },
+  {
+   "note": "Evaluate on the basis of either visual impairment due to angle-closure glaucoma or incapacitating episodes, whichever results in a higher evaluation."
+  },
+  {
+   "note": "Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider."
+  },
+  {
+   "note": "Evaluate based on visual impairment due to open-angle glaucoma."
+  },
+  {
+   "note": "Note: Continue the 100-percent rating beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating will be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination will be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluate based on residuals."
+  },
+  {
+   "note": "Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:"
+  },
+  {
+   "note": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
+  },
+  {
+   "note": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
+  },
+  {
+   "note": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800)."
+  },
+  {
+   "note": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800)."
+  },
+  {
+   "note": "Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800)."
+  },
+  {
+   "note": "If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia."
+  },
+  {
+   "note": "Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step."
+  },
+  {
+   "note": "Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
+  },
+  {
+   "note": "Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings."
   }
  ],
  "see_other_notes": []

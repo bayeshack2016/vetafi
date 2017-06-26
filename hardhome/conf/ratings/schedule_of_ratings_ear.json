@@ -1,8 +1,12 @@
 {
  "description": "Schedule of ratings\u2014ear.",
  "subcategories": [],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 6200,
+    "description": "&#;Chronic suppurative otitis media, mastoiditis, or cholesteatoma (or any combination):"
+   },
    "ratings": [
     {
      "ratings": [
@@ -11,15 +15,16 @@
      "description": "During suppuration, or with aural polyps"
     }
    ],
-   "codes": [
-    {
-     "code": 6200,
-     "description": "&#;Chronic suppurative otitis media, mastoiditis, or cholesteatoma (or any combination):"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 6201,
+    "description": "&#;Chronic nonsuppurative otitis media with effusion (serous otitis media):"
+   },
    "ratings": [
     {
      "ratings": [
@@ -34,19 +39,8 @@
      "description": "Occasional dizziness"
     }
    ],
-   "codes": [
-    {
-     "code": 6201,
-     "description": "&#;Chronic nonsuppurative otitis media with effusion (serous otitis media):"
-    },
-    {
-     "code": 6202,
-     "description": "&#;Otosclerosis:"
-    },
-    {
-     "code": 6204,
-     "description": "&#;Peripheral vestibular disorders:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": [
     {
@@ -58,6 +52,72 @@
    ]
   },
   {
+   "code": {
+    "code": 6202,
+    "description": "&#;Otosclerosis:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Dizziness and occasional staggering"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Occasional dizziness"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Rate hearing impairment"
+    },
+    {
+     "note": "Rate hearing impairment"
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6204,
+    "description": "&#;Peripheral vestibular disorders:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Dizziness and occasional staggering"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Occasional dizziness"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Rate hearing impairment"
+    },
+    {
+     "note": "Rate hearing impairment"
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6205,
+    "description": "&#;Meniere's syndrome (endolymphatic hydrops):"
+   },
    "ratings": [
     {
      "ratings": [
@@ -78,15 +138,16 @@
      "description": "Hearing impairment with vertigo less than once a month, with or without tinnitus"
     }
    ],
-   "codes": [
-    {
-     "code": 6205,
-     "description": "&#;Meniere's syndrome (endolymphatic hydrops):"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 6207,
+    "description": " Loss of auricle:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -107,15 +168,16 @@
      "description": "Deformity of one, with loss of one-third or more of the substance"
     }
    ],
-   "codes": [
-    {
-     "code": 6207,
-     "description": " Loss of auricle:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 6208,
+    "description": "&#;Malignant neoplasm of the ear (other than skin only)\n\n                  100"
+   },
    "ratings": [
     {
      "ratings": [
@@ -124,15 +186,16 @@
      "description": "6208\u2003Malignant neoplasm of the ear (other than skin only)"
     }
    ],
-   "codes": [
-    {
-     "code": 6208,
-     "description": "&#;Malignant neoplasm of the ear (other than skin only)\n\n                  100"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 6209,
+    "description": "&#;Benign neoplasms of the ear (other than skin only):"
+   },
    "ratings": [
     {
      "ratings": [
@@ -141,15 +204,8 @@
      "description": "Swelling, dry and scaly or serous discharge, and itching requiring frequent and prolonged treatment"
     }
    ],
-   "codes": [
-    {
-     "code": 6209,
-     "description": "&#;Benign neoplasms of the ear (other than skin only):"
-    },
-    {
-     "code": 6210,
-     "description": "&#;Chronic otitis externa:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": [
     {
@@ -158,6 +214,32 @@
    ]
   },
   {
+   "code": {
+    "code": 6210,
+    "description": "&#;Chronic otitis externa:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Swelling, dry and scaly or serous discharge, and itching requiring frequent and prolonged treatment"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": [
+    {
+     "note": "Rate on impairment of function."
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 6211,
+    "description": "&#;Tympanic membrane, perforation of\n\n                  0"
+   },
    "ratings": [
     {
      "ratings": [
@@ -166,15 +248,16 @@
      "description": "6211\u2003Tympanic membrane, perforation of"
     }
    ],
-   "codes": [
-    {
-     "code": 6211,
-     "description": "&#;Tympanic membrane, perforation of\n\n                  0"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 6260,
+    "description": "&#;Tinnitus, recurrent\n\n                  10"
+   },
    "ratings": [
     {
      "ratings": [
@@ -183,11 +266,8 @@
      "description": "6260\u2003Tinnitus, recurrent"
     }
    ],
-   "codes": [
-    {
-     "code": 6260,
-     "description": "&#;Tinnitus, recurrent\n\n                  10"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }

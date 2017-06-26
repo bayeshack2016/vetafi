@@ -3,206 +3,327 @@
  "subcategories": [
   {
    "description": "For chronic residuals:",
-   "subcategories": [
+   "subcategories": [],
+   "ratings": [
     {
-     "description": "For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion.",
-     "subcategories": [],
-     "diagnostic_code_sets": [
+     "code": {
+      "code": 5003,
+      "description": "&#;Arthritis, degenerative (hypertrophic or osteoarthritis):"
+     },
+     "ratings": [
       {
        "ratings": [
-        {
-         "ratings": [
-          20
-         ],
-         "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups, with occasional incapacitating exacerbations"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups"
-        }
+        20
        ],
-       "codes": [
-        {
-         "code": 5003,
-         "description": "&#;Arthritis, degenerative (hypertrophic or osteoarthritis):"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [],
-       "codes": [
-        {
-         "code": 5004,
-         "description": "&#;Arthritis, gonorrheal."
-        },
-        {
-         "code": 5005,
-         "description": "&#;Arthritis, pneumococcic."
-        },
-        {
-         "code": 5006,
-         "description": "&#;Arthritis, typhoid."
-        },
-        {
-         "code": 5007,
-         "description": "&#;Arthritis, syphilitic."
-        },
-        {
-         "code": 5008,
-         "description": "&#;Arthritis, streptococcic."
-        },
-        {
-         "code": 5009,
-         "description": "&#;Arthritis, other types (specify)."
-        }
-       ],
-       "notes": []
+       "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups, with occasional incapacitating exacerbations"
       },
       {
        "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "5012\u2003Bones, new growths of, malignant"
-        }
+        10
        ],
-       "codes": [
-        {
-         "code": 5012,
-         "description": "&#;Bones, new growths of, malignant\n\n                  100"
-        }
-       ],
-       "notes": []
-      },
-      {
-       "ratings": [
-        {
-         "ratings": [
-          40
-         ],
-         "description": "That are constant, or nearly so, and refractory to therapy"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "That are episodic, with exacerbations often precipitated by environmental or emotional stress or by overexertion, but that are present more than one-third of the time"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "That require continuous medication for control"
-        }
-       ],
-       "codes": [
-        {
-         "code": 5013,
-         "description": "&#;Osteoporosis, with joint manifestations."
-        },
-        {
-         "code": 5014,
-         "description": "&#;Osteomalacia."
-        },
-        {
-         "code": 5015,
-         "description": "&#;Bones, new growths of, benign."
-        },
-        {
-         "code": 5016,
-         "description": "&#;Osteitis deformans."
-        },
-        {
-         "code": 5017,
-         "description": "&#;Gout."
-        },
-        {
-         "code": 5018,
-         "description": "&#;Hydrarthrosis, intermittent."
-        },
-        {
-         "code": 5019,
-         "description": "&#;Bursitis."
-        },
-        {
-         "code": 5020,
-         "description": "&#;Synovitis."
-        },
-        {
-         "code": 5021,
-         "description": "&#;Myositis."
-        },
-        {
-         "code": 5022,
-         "description": "&#;Periostitis."
-        },
-        {
-         "code": 5023,
-         "description": "&#;Myositis ossificans."
-        },
-        {
-         "code": 5024,
-         "description": "&#;Tenosynovitis."
-        },
-        {
-         "code": 5025,
-         "description": "&#;Fibromyalgia (fibrositis, primary fibromyalgia syndrome)"
-        }
-       ],
-       "notes": [
-        {
-         "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
-        },
-        {
-         "note": "With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:"
-        }
-       ]
+       "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups"
       }
      ],
-     "notes": [
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5004,
+      "description": "&#;Arthritis, gonorrheal."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5005,
+      "description": "&#;Arthritis, pneumococcic."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5006,
+      "description": "&#;Arthritis, typhoid."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5007,
+      "description": "&#;Arthritis, syphilitic."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5008,
+      "description": "&#;Arthritis, streptococcic."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5009,
+      "description": "&#;Arthritis, other types (specify)."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5012,
+      "description": "&#;Bones, new growths of, malignant\n\n                  100"
+     },
+     "ratings": [
       {
-       "note": "Note: The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation."
-      },
-      {
-       "note": "Note (1): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be combined with ratings based on limitation of motion."
-      },
-      {
-       "note": "Note (2): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be utilized in rating conditions listed under diagnostic codes 5013 to 5024, inclusive."
-      },
-      {
-       "note": "Note: The 100 percent rating will be continued for 1 year following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals."
-      },
-      {
-       "note": "Note: Widespread pain means pain in both the left and right sides of the body, that is both above and below the waist, and that affects both the axial skeleton (i.e., cervical spine, anterior chest, thoracic spine, or low back) and the extremities."
+       "ratings": [
+        100
+       ],
+       "description": "5012\u2003Bones, new growths of, malignant"
       }
      ],
-     "see_other_notes": [
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5013,
+      "description": "&#;Osteoporosis, with joint manifestations."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5014,
+      "description": "&#;Osteomalacia."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5015,
+      "description": "&#;Bones, new growths of, benign."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5016,
+      "description": "&#;Osteitis deformans."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5017,
+      "description": "&#;Gout."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5018,
+      "description": "&#;Hydrarthrosis, intermittent."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5019,
+      "description": "&#;Bursitis."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5020,
+      "description": "&#;Synovitis."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5021,
+      "description": "&#;Myositis."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5022,
+      "description": "&#;Periostitis."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5023,
+      "description": "&#;Myositis ossificans."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5024,
+      "description": "&#;Tenosynovitis."
+     },
+     "ratings": [],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 5025,
+      "description": "&#;Fibromyalgia (fibrositis, primary fibromyalgia syndrome)"
+     },
+     "ratings": [
       {
-       "see_other_note": "Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:"
+       "ratings": [
+        40
+       ],
+       "description": "That are constant, or nearly so, and refractory to therapy"
       },
       {
-       "see_other_note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
+       "ratings": [
+        20
+       ],
+       "description": "That are episodic, with exacerbations often precipitated by environmental or emotional stress or by overexertion, but that are present more than one-third of the time"
       },
       {
-       "see_other_note": "5010&#8195;Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative."
-      },
-      {
-       "see_other_note": "5011&#8195;Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations."
+       "ratings": [
+        10
+       ],
+       "description": "That require continuous medication for control"
       }
-     ]
+     ],
+     "header": [
+      "Rating"
+     ],
+     "notes": []
     }
    ],
-   "diagnostic_code_sets": [],
-   "notes": [],
-   "see_other_notes": []
+   "notes": [
+    {
+     "note": "For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion."
+    },
+    {
+     "note": "Note: The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation."
+    },
+    {
+     "note": "Note (1): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be combined with ratings based on limitation of motion."
+    },
+    {
+     "note": "Note (2): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be utilized in rating conditions listed under diagnostic codes 5013 to 5024, inclusive."
+    },
+    {
+     "note": "Note: The 100 percent rating will be continued for 1 year following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals."
+    },
+    {
+     "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
+    },
+    {
+     "note": "With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:"
+    },
+    {
+     "note": "Note: Widespread pain means pain in both the left and right sides of the body, that is both above and below the waist, and that affects both the axial skeleton (i.e., cervical spine, anterior chest, thoracic spine, or low back) and the extremities."
+    }
+   ],
+   "see_other_notes": [
+    {
+     "see_other_note": "Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:"
+    },
+    {
+     "see_other_note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
+    },
+    {
+     "see_other_note": "5010&#8195;Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative."
+    },
+    {
+     "see_other_note": "5011&#8195;Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations."
+    }
+   ]
   }
  ],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 5000,
+    "description": "&#;Osteomyelitis, acute, subacute, or chronic:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -235,15 +356,16 @@
      "description": "Inactive, following repeated episodes, without evidence of active infection in past 5 years"
     }
    ],
-   "codes": [
-    {
-     "code": 5000,
-     "description": "&#;Osteomyelitis, acute, subacute, or chronic:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 5001,
+    "description": "&#;Bones and joints, tuberculosis of, active or inactive:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -252,15 +374,16 @@
      "description": "Active"
     }
    ],
-   "codes": [
-    {
-     "code": 5001,
-     "description": "&#;Bones and joints, tuberculosis of, active or inactive:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   },
   {
+   "code": {
+    "code": 5002,
+    "description": "&#;Arthritis rheumatoid (atrophic) As an active process:"
+   },
    "ratings": [
     {
      "ratings": [
@@ -287,11 +410,8 @@
      "description": "One or two exacerbations a year in a well-established diagnosis"
     }
    ],
-   "codes": [
-    {
-     "code": 5002,
-     "description": "&#;Arthritis rheumatoid (atrophic) As an active process:"
-    }
+   "header": [
+    "Rating"
    ],
    "notes": []
   }

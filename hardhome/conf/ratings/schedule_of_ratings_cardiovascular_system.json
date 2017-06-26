@@ -2,130 +2,14 @@
  "description": "Schedule of ratings\u2014cardiovascular system.",
  "subcategories": [
   {
-   "description": "Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
-   "subcategories": [],
-   "diagnostic_code_sets": [
-    {
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-      }
-     ],
-     "codes": [
-      {
-       "code": 7000,
-       "description": "&#;Valvular heart disease (including rheumatic heart disease):"
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "For three months following cessation of therapy for active infection with cardiac involvement"
-      }
-     ],
-     "codes": [
-      {
-       "code": 7001,
-       "description": "&#;Endocarditis:"
-      }
-     ],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:",
-   "subcategories": [],
-   "diagnostic_code_sets": [
-    {
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-      }
-     ],
-     "codes": [
-      {
-       "code": 7001,
-       "description": "&#;Endocarditis:"
-      }
-     ],
-     "notes": []
-    },
-    {
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "For three months following cessation of therapy for active infection with cardiac involvement"
-      }
-     ],
-     "codes": [
-      {
-       "code": 7002,
-       "description": "&#;Pericarditis:"
-      }
-     ],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
    "description": "Thereafter, with documented pericarditis resulting in:",
    "subcategories": [],
-   "diagnostic_code_sets": [
+   "ratings": [
     {
+     "code": {
+      "code": 7002,
+      "description": "&#;Pericarditis:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -152,15 +36,16 @@
        "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
       }
      ],
-     "codes": [
-      {
-       "code": 7001,
-       "description": "&#;Endocarditis:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7003,
+      "description": "&#;Pericardial adhesions:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -187,15 +72,16 @@
        "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
       }
      ],
-     "codes": [
-      {
-       "code": 7003,
-       "description": "&#;Pericardial adhesions:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7004,
+      "description": "&#;Syphilitic heart disease:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -222,15 +108,16 @@
        "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
       }
      ],
-     "codes": [
-      {
-       "code": 7004,
-       "description": "&#;Syphilitic heart disease:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     },
     {
+     "code": {
+      "code": 7005,
+      "description": "&#;Arteriosclerotic heart disease (Coronary artery disease):"
+     },
      "ratings": [
       {
        "ratings": [
@@ -257,11 +144,8 @@
        "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
       }
      ],
-     "codes": [
-      {
-       "code": 7005,
-       "description": "&#;Arteriosclerotic heart disease (Coronary artery disease):"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": [
       {
@@ -270,6 +154,10 @@
      ]
     },
     {
+     "code": {
+      "code": 7006,
+      "description": "&#;Myocardial infarction:"
+     },
      "ratings": [
       {
        "ratings": [
@@ -278,11 +166,8 @@
        "description": "During and for three months following myocardial infarction, documented by laboratory tests"
       }
      ],
-     "codes": [
-      {
-       "code": 7006,
-       "description": "&#;Myocardial infarction:"
-      }
+     "header": [
+      "Rating"
      ],
      "notes": []
     }
@@ -303,8 +188,12 @@
     {
      "description": "With history of documented myocardial infarction, resulting in:",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7006,
+        "description": "&#;Myocardial infarction:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -331,15 +220,16 @@
          "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
         }
        ],
-       "codes": [
-        {
-         "code": 7001,
-         "description": "&#;Endocarditis:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7007,
+        "description": "&#;Hypertensive heart disease:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -366,15 +256,27 @@
          "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
         }
        ],
-       "codes": [
-        {
-         "code": 7007,
-         "description": "&#;Hypertensive heart disease:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7008,
+        "description": "&#;Hyperthyroid heart disease:"
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7010,
+        "description": "&#;Supraventricular arrhythmias:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -389,23 +291,16 @@
          "description": "Permanent atrial fibrillation (lone atrial fibrillation), or; one to four episodes per year of paroxysmal atrial fibrillation or other supraventricular tachycardia documented by ECG or Holter monitor"
         }
        ],
-       "codes": [
-        {
-         "code": 7008,
-         "description": "&#;Hyperthyroid heart disease:"
-        },
-        {
-         "code": 7010,
-         "description": "&#;Supraventricular arrhythmias:"
-        }
+       "header": [
+        "Rating"
        ],
-       "notes": [
-        {
-         "note": "Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation."
-        }
-       ]
+       "notes": []
       },
       {
+       "code": {
+        "code": 7011,
+        "description": "&#;Ventricular arrhythmias (sustained):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -438,15 +333,16 @@
          "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
         }
        ],
-       "codes": [
-        {
-         "code": 7011,
-         "description": "&#;Ventricular arrhythmias (sustained):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7015,
+        "description": "&#;Atrioventricular block:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -473,15 +369,16 @@
          "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication or a pacemaker required"
         }
        ],
-       "codes": [
-        {
-         "code": 7015,
-         "description": "&#;Atrioventricular block:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7016,
+        "description": "&#;Heart valve replacement (prosthesis):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -490,16 +387,16 @@
          "description": "For indefinite period following date of hospital admission for valve replacement"
         }
        ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
      ],
      "notes": [
+      {
+       "note": "Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation."
+      },
       {
        "note": "Note: A rating of 100 percent shall be assigned from the date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia or for ventricular aneurysmectomy. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
       },
@@ -512,8 +409,12 @@
     {
      "description": "Thereafter:",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7016,
+        "description": "&#;Heart valve replacement (prosthesis):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -540,15 +441,16 @@
          "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
         }
        ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7017,
+        "description": "&#;Coronary bypass surgery:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -557,11 +459,8 @@
          "description": "For three months following hospital admission for surgery"
         }
        ],
-       "codes": [
-        {
-         "code": 7017,
-         "description": "&#;Coronary bypass surgery:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
@@ -576,8 +475,12 @@
     {
      "description": "Thereafter:",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7016,
+        "description": "&#;Heart valve replacement (prosthesis):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -604,15 +507,16 @@
          "description": "Workload greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
         }
        ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7018,
+        "description": "&#;Implantable cardiac pacemakers:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -621,11 +525,8 @@
          "description": "For two months following hospital admission for implantation or reimplantation"
         }
        ],
-       "codes": [
-        {
-         "code": 7018,
-         "description": "&#;Implantable cardiac pacemakers:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
@@ -636,8 +537,12 @@
     {
      "description": "Thereafter:",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7016,
+        "description": "&#;Heart valve replacement (prosthesis):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -646,15 +551,24 @@
          "description": "Evaluate as supraventricular arrhythmias (DC 7010), ventricular arrhythmias (DC 7011), or atrioventricular block (DC 7015). Minimum"
         }
        ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
-      },
+      }
+     ],
+     "notes": [],
+     "see_other_notes": []
+    },
+    {
+     "description": "Note: Evaluate implantable Cardioverter-Defibrillators (AICD's) under DC 7011.",
+     "subcategories": [],
+     "ratings": [
       {
+       "code": {
+        "code": 7019,
+        "description": "&#;Cardiac transplantation:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -663,27 +577,24 @@
          "description": "For an indefinite period from date of hospital admission for cardiac transplantation"
         }
        ],
-       "codes": [
-        {
-         "code": 7019,
-         "description": "&#;Cardiac transplantation:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
      ],
-     "notes": [
-      {
-       "note": "Note: Evaluate implantable Cardioverter-Defibrillators (AICD's) under DC 7011."
-      }
-     ],
+     "notes": [],
      "see_other_notes": []
     },
     {
      "description": "Thereafter:",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7016,
+        "description": "&#;Heart valve replacement (prosthesis):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -704,15 +615,16 @@
          "description": "Minimum"
         }
        ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7020,
+        "description": "&#;Cardiomyopathy:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -739,11 +651,8 @@
          "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
         }
        ],
-       "codes": [
-        {
-         "code": 7020,
-         "description": "&#;Cardiomyopathy:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
@@ -758,8 +667,12 @@
     {
      "description": "Diseases of the Arteries and Veins",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7101,
+        "description": "&#;Hypertensive vascular disease (hypertension and isolated systolic hypertension):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -786,15 +699,16 @@
          "description": "Diastolic pressure predominantly 100 or more, or; systolic pressure predominantly 160 or more, or; minimum evaluation for an individual with a history of diastolic pressure predominantly 100 or more who requires continuous medication for control"
         }
        ],
-       "codes": [
-        {
-         "code": 7101,
-         "description": "&#;Hypertensive vascular disease (hypertension and isolated systolic hypertension):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7110,
+        "description": "&#;Aortic aneurysm:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -809,11 +723,26 @@
          "description": "Precluding exertion"
         }
        ],
-       "codes": [
+       "header": [
+        "Rating"
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7111,
+        "description": "&#;Aneurysm, any large artery:"
+       },
+       "ratings": [
         {
-         "code": 7110,
-         "description": "&#;Aortic aneurysm:"
+         "ratings": [
+          100
+         ],
+         "description": "If symptomatic, or; for indefinite period from date of hospital admission for surgical correction"
         }
+       ],
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
@@ -827,33 +756,10 @@
       },
       {
        "note": "Note (3): Evaluate hypertension separately from hypertensive heart disease and other types of heart disease."
-      }
-     ],
-     "see_other_notes": []
-    },
-    {
-     "description": "Evaluate residuals of surgical correction according to organ systems affected.",
-     "subcategories": [],
-     "diagnostic_code_sets": [
+      },
       {
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "If symptomatic, or; for indefinite period from date of hospital admission for surgical correction"
-        }
-       ],
-       "codes": [
-        {
-         "code": 7111,
-         "description": "&#;Aneurysm, any large artery:"
-        }
-       ],
-       "notes": []
-      }
-     ],
-     "notes": [
+       "note": "Evaluate residuals of surgical correction according to organ systems affected."
+      },
       {
        "note": "Note: A rating of 100 percent shall be assigned as of the date of admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
       }
@@ -863,8 +769,12 @@
     {
      "description": "Following surgery:",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7016,
+        "description": "&#;Heart valve replacement (prosthesis):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -891,15 +801,16 @@
          "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
         }
        ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7112,
+        "description": "&#;Aneurysm, any small artery:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -908,15 +819,16 @@
          "description": "Asymptomatic"
         }
        ],
-       "codes": [
-        {
-         "code": 7112,
-         "description": "&#;Aneurysm, any small artery:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7113,
+        "description": "&#;Arteriovenous fistula, traumatic:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -929,13 +841,22 @@
           60
          ],
          "description": "Without heart failure but with enlarged heart, wide pulse pressure, and tachycardia"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Lower extremity"
+        },
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Upper extremity"
         }
        ],
-       "codes": [
-        {
-         "code": 7113,
-         "description": "&#;Arteriovenous fistula, traumatic:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
@@ -952,46 +873,22 @@
       },
       {
        "note": "Note: If symptomatic, evaluate according to body system affected. Following surgery, evaluate residuals under the body system affected."
-      }
-     ],
-     "see_other_notes": []
-    },
-    {
-     "description": "Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:",
-     "subcategories": [],
-     "diagnostic_code_sets": [
+      },
       {
-       "ratings": [
-        {
-         "ratings": [
-          50
-         ],
-         "description": "Lower extremity"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Upper extremity"
-        }
-       ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
-       ],
-       "notes": []
+       "note": "Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:"
       }
      ],
-     "notes": [],
      "see_other_notes": []
     },
     {
      "description": "With edema or stasis dermatitis:",
      "subcategories": [],
-     "diagnostic_code_sets": [
+     "ratings": [
       {
+       "code": {
+        "code": 7016,
+        "description": "&#;Heart valve replacement (prosthesis):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1006,15 +903,16 @@
          "description": "Upper extremity"
         }
        ],
-       "codes": [
-        {
-         "code": 7016,
-         "description": "&#;Heart valve replacement (prosthesis):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7114,
+        "description": "&#;Arteriosclerosis obliterans:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1041,15 +939,16 @@
          "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
         }
        ],
-       "codes": [
-        {
-         "code": 7114,
-         "description": "&#;Arteriosclerosis obliterans:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7115,
+        "description": "&#;Thrombo-angiitis obliterans (Buerger's Disease):"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1076,15 +975,16 @@
          "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
         }
        ],
-       "codes": [
-        {
-         "code": 7115,
-         "description": "&#;Thrombo-angiitis obliterans (Buerger's Disease):"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7117,
+        "description": "&#;Raynaud's syndrome:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1117,15 +1017,16 @@
          "description": "Characteristic attacks occurring one to three times a week"
         }
        ],
-       "codes": [
-        {
-         "code": 7117,
-         "description": "&#;Raynaud's syndrome:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7118,
+        "description": "&#;Angioneurotic edema:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1146,15 +1047,16 @@
          "description": "Attacks without laryngeal involvement lasting one to seven days and occurring two to four times a year"
         }
        ],
-       "codes": [
-        {
-         "code": 7118,
-         "description": "&#;Angioneurotic edema:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7119,
+        "description": "&#;Erythromelalgia:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1181,15 +1083,16 @@
          "description": "Characteristic attacks that occur less than daily but at least three times a week and that respond to treatment"
         }
        ],
-       "codes": [
-        {
-         "code": 7119,
-         "description": "&#;Erythromelalgia:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7120,
+        "description": "&#;Varicose veins:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1228,15 +1131,16 @@
          "description": "Asymptomatic palpable or visible varicose veins"
         }
        ],
-       "codes": [
-        {
-         "code": 7120,
-         "description": "&#;Varicose veins:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       },
       {
+       "code": {
+        "code": 7121,
+        "description": "&#;Post-phlebitic syndrome of any etiology:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1275,11 +1179,8 @@
          "description": "Asymptomatic palpable or visible varicose veins"
         }
        ],
-       "codes": [
-        {
-         "code": 7121,
-         "description": "&#;Post-phlebitic syndrome of any etiology:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": [
         {
@@ -1288,6 +1189,10 @@
        ]
       },
       {
+       "code": {
+        "code": 7122,
+        "description": "&#;Cold injury residuals:"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1308,11 +1213,8 @@
          "description": "Arthralgia or other pain, numbness, or cold sensitivity"
         }
        ],
-       "codes": [
-        {
-         "code": 7122,
-         "description": "&#;Cold injury residuals:"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": [
         {
@@ -1321,6 +1223,10 @@
        ]
       },
       {
+       "code": {
+        "code": 7123,
+        "description": "&#;Soft tissue sarcoma (of vascular origin)\n\n                  100"
+       },
        "ratings": [
         {
          "ratings": [
@@ -1329,11 +1235,8 @@
          "description": "7123\u2003Soft tissue sarcoma (of vascular origin)"
         }
        ],
-       "codes": [
-        {
-         "code": 7123,
-         "description": "&#;Soft tissue sarcoma (of vascular origin)\n\n                  100"
-        }
+       "header": [
+        "Rating"
        ],
        "notes": []
       }
@@ -1379,26 +1282,111 @@
      "see_other_notes": []
     }
    ],
-   "diagnostic_code_sets": [],
+   "ratings": [],
    "notes": [],
    "see_other_notes": []
   }
  ],
- "diagnostic_code_sets": [
+ "ratings": [
   {
+   "code": {
+    "code": 7000,
+    "description": "&#;Valvular heart disease (including rheumatic heart disease):"
+   },
    "ratings": [
     {
      "ratings": [
       100
      ],
      "description": "During active infection with valvular heart damage and for three months following cessation of therapy for the active infection"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
     }
    ],
-   "codes": [
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7001,
+    "description": "&#;Endocarditis:"
+   },
+   "ratings": [
     {
-     "code": 7000,
-     "description": "&#;Valvular heart disease (including rheumatic heart disease):"
+     "ratings": [
+      100
+     ],
+     "description": "For three months following cessation of therapy for active infection with cardiac involvement"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
     }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7002,
+    "description": "&#;Pericarditis:"
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For three months following cessation of therapy for active infection with cardiac involvement"
+    }
+   ],
+   "header": [
+    "Rating"
    ],
    "notes": []
   }
@@ -1409,6 +1397,12 @@
   },
   {
    "note": "Note (2): One MET (metabolic equivalent) is the energy cost of standing quietly at rest and represents an oxygen uptake of 3.5 milliliters per kilogram of body weight per minute. When the level of METs at which dyspnea, fatigue, angina, dizziness, or syncope develops is required for evaluation, and a laboratory determination of METs by exercise testing cannot be done for medical reasons, an estimation by a medical examiner of the level of activity (expressed in METs and supported by specific examples, such as slow stair climbing or shoveling snow) that results in dyspnea, fatigue, angina, dizziness, or syncope may be used."
+  },
+  {
+   "note": "Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:"
+  },
+  {
+   "note": "Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:"
   }
  ],
  "see_other_notes": []
