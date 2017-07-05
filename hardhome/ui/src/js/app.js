@@ -234,6 +234,13 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
   });
 
   $stateProvider.state({
+      name: 'root.ratingsHome',
+      url: '/ratings',
+      templateUrl: 'templates/ratingsHome.html',
+      controller: 'ratingsHomeCtrl'
+  });
+
+  $stateProvider.state({
       name: 'root.ratingsCategories',
       url: '/ratings/category/{path}',
       templateUrl: 'templates/ratingsCategories.html',
@@ -241,11 +248,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
   });
 
   $stateProvider.state({
-        name: 'root.ratings',
-        url: '/ratings/category/{categoryPath}/rating/{ratingPath}',
-        templateUrl: 'templates/ratings.html',
-        controller: 'ratingsCtrl'
-    });
+      name: 'root.ratingsSelect',
+      url: '/ratings/category/{categoryPath}/rating/{ratingPath}',
+      templateUrl: 'templates/ratingsSelect.html',
+      controller: 'ratingsSelectCtrl'
+  });
 
   // Misc. Pages
   $stateProvider.state({
