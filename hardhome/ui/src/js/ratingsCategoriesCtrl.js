@@ -36,7 +36,7 @@ app.controller('ratingsCategoriesCtrl', ['$scope', 'ratingsConfigsService', '$st
         };
 
         $scope.gotoRating = function(ratingIndex) {
-            $state.go('root.ratings', {
+            $state.go('root.ratingsSelect', {
                 categoryPath: _.join(path, ","),
                 ratingPath: ratingIndex
             });

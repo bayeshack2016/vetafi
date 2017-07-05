@@ -53,3 +53,9 @@ case class SeeOtherNote(see_other_note: String) {}
 object SeeOtherNote {
   implicit val jsonFormat: OFormat[SeeOtherNote] = Json.format[SeeOtherNote]
 }
+
+case class Condition(diagnosticCode: DiagnosticCode, rating: Int) {}
+
+object Condition {
+  implicit val jsonFormat: OFormat[Condition] = Json.format[Condition]
+}

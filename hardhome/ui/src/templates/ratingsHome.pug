@@ -1,0 +1,25 @@
+div.container
+  div.row
+    div.col-sm-8
+      h4 ProRate - Disability Rating and Pension Calculator
+      h5
+        | To begin click “Add Condition”.
+        | You may add multiple conditions and we will calculate
+        | your combined rating using the VA formula.
+    div.col-sm-4
+      div
+        p
+          | Rating info last updated:
+          | May 2017
+        p
+          | All information on this page comes directly from CFR 38.
+
+  div.row
+    div.col-sm-12
+      button(ng-click="addCondition()")
+        | Add Condition
+
+  div.row(ng-repeat="condition in conditions")
+    div.col-sm-12
+      p
+      | {{condition}}

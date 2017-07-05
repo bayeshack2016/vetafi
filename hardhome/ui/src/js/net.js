@@ -85,6 +85,14 @@ app.factory('net', ['xhrEnv', '$http', function (xhrEnv, $http) {
     },
     subscribe: function (data) {
       return httpPost("/subscribe", data)
+    },
+
+    // Ratings
+    getConditions: function(claimId) {
+      return httpGet("/claim/conditions/" + claimId)
+    },
+    addCondition: function(claimId, data) {
+      return httpPost("/claim/conditions/" + claimId, data)
     }
   };
 }]);
