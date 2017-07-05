@@ -37,7 +37,14 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079).\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -74,7 +81,14 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079).\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -99,7 +113,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: If there are symptoms due to pressure on adjacent organs such as the trachea, larynx, or esophagus, evaluate under the diagnostic code for disability of that organ, if doing so would result in a higher evaluation than using this diagnostic code.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -167,7 +185,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Following surgery or treatment, evaluate as digestive, skeletal, renal, or cardiovascular residuals or as endocrine dysfunction.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -229,7 +251,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: With recovery or control, evaluate as residuals of adrenal insufficiency or cardiovascular, psychiatric, skin, or skeletal complications under appropriate diagnostic code.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -328,7 +354,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note (1): An Addisonian \u201ccrisis\u201d consists of the rapid onset of peripheral vascular collapse (with acute hypotension and shock), with findings that may include: anorexia; nausea; vomiting; dehydration; profound weakness; pain in abdomen, legs, and back; fever; apathy, and depressed mentation with possible progression to coma, renal shutdown, and death.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (2): An Addisonian \u201cepisode,\u201d for VA purposes, is a less acute and less severe event than an Addisonian crisis and may consist of anorexia, nausea, vomiting, diarrhea, dehydration, weakness, malaise, orthostatic hypotension, or hypoglycemia, but no peripheral vascular collapse.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (3): Tuberculous Addison's disease will be evaluated as active or inactive tuberculosis. If inactive, these evaluations are not to be combined with the graduated ratings of 50 percent or 30 percent for non-pulmonary tuberculosis specified under \u00a7\u20094.88b. Assign the higher rating.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -374,6 +410,12 @@
    "notes": [
     {
      "note": "\n\n                  Evaluate according to major manifestations.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (1): Evaluate compensable complications of diabetes separately unless they are part of the criteria used to support a 100 percent evaluation. Noncompensable complications are considered part of the diabetic process under diagnostic code 7913.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (2): When diabetes mellitus has been conclusively diagnosed, do not request a glucose tolerance test solely for rating purposes.\n\n                \n\n                "
     }
    ]
   },
@@ -421,6 +463,12 @@
    "notes": [
     {
      "note": "\n\n                  Evaluate according to major manifestations.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (1): Evaluate compensable complications of diabetes separately unless they are part of the criteria used to support a 100 percent evaluation. Noncompensable complications are considered part of the diabetic process under diagnostic code 7913.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (2): When diabetes mellitus has been conclusively diagnosed, do not request a glucose tolerance test solely for rating purposes.\n\n                \n\n                "
     }
    ]
   },
@@ -440,12 +488,28 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [
+   "see_other_notes": [],
+   "notes": [
     {
-     "see_other_note": "\n\n                  7915\u2003Neoplasm, benign, any specified part of the endocrine system rate as residuals of endocrine dysfunction.\n\n                \n\n                "
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n                "
     }
+   ]
+  },
+  {
+   "code": {
+    "code": 7915,
+    "description": "\n\n                  \u2003Neoplasm, benign, any specified part of the endocrine system rate as residuals of endocrine dysfunction.\n\n                \n\n                "
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
    ],
-   "notes": []
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -457,7 +521,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -469,7 +537,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -481,7 +553,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -500,55 +576,13 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n              "
+    }
+   ]
   }
  ],
- "notes": [
-  {
-   "note": "\n\n                  \n\n                    Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079).\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (1): If disease of the heart is the predominant finding, evaluate as hyperthyroid heart disease (DC 7008) if doing so would result in a higher evaluation than using the criteria above.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (2): If ophthalmopathy is the sole finding, evaluate as field vision, impairment of (DC 6080); diplopia (DC 6090); or impairment of central visual acuity (DC 6061-6079).\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: If there are symptoms due to pressure on adjacent organs such as the trachea, larynx, or esophagus, evaluate under the diagnostic code for disability of that organ, if doing so would result in a higher evaluation than using this diagnostic code.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: Following surgery or treatment, evaluate as digestive, skeletal, renal, or cardiovascular residuals or as endocrine dysfunction.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: With recovery or control, evaluate as residuals of adrenal insufficiency or cardiovascular, psychiatric, skin, or skeletal complications under appropriate diagnostic code.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (1): An Addisonian \u201ccrisis\u201d consists of the rapid onset of peripheral vascular collapse (with acute hypotension and shock), with findings that may include: anorexia; nausea; vomiting; dehydration; profound weakness; pain in abdomen, legs, and back; fever; apathy, and depressed mentation with possible progression to coma, renal shutdown, and death.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (2): An Addisonian \u201cepisode,\u201d for VA purposes, is a less acute and less severe event than an Addisonian crisis and may consist of anorexia, nausea, vomiting, diarrhea, dehydration, weakness, malaise, orthostatic hypotension, or hypoglycemia, but no peripheral vascular collapse.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (3): Tuberculous Addison's disease will be evaluated as active or inactive tuberculosis. If inactive, these evaluations are not to be combined with the graduated ratings of 50 percent or 30 percent for non-pulmonary tuberculosis specified under \u00a7\u20094.88b. Assign the higher rating.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (1): Evaluate compensable complications of diabetes separately unless they are part of the criteria used to support a 100 percent evaluation. Noncompensable complications are considered part of the diabetic process under diagnostic code 7913.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (2): When diabetes mellitus has been conclusively diagnosed, do not request a glucose tolerance test solely for rating purposes.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: Evaluate diagnostic codes 7916, 7917, and 7918 as malignant or benign neoplasm as appropriate.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n              "
-  }
- ],
+ "notes": [],
  "see_other_notes": []
 }

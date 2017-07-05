@@ -2,774 +2,44 @@
  "description": "Schedule of ratings\u2014cardiovascular system.",
  "subcategories": [
   {
-   "description": "Thereafter, with documented pericarditis resulting in:\n\n                ",
+   "description": "\n\n                    Diseases of the Arteries and Veins\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
-      "code": 7002,
-      "description": "\n\n                  \u2003Pericarditis:\n\n                \n\n                "
+      "code": 7101,
+      "description": "\n\n                  \u2003Hypertensive vascular disease (hypertension and isolated systolic hypertension):\n\n                \n\n                "
      },
      "ratings": [
       {
        "ratings": [
-        100
-       ],
-       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent."
-      },
-      {
-       "ratings": [
         60
        ],
-       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+       "description": "Diastolic pressure predominantly 130 or more"
       },
       {
        "ratings": [
-        30
+        40
        ],
-       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
+       "description": "Diastolic pressure predominantly 120 or more"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Diastolic pressure predominantly 110 or more, or; systolic pressure predominantly 200 or more"
       },
       {
        "ratings": [
         10
        ],
-       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+       "description": "Diastolic pressure predominantly 100 or more, or; systolic pressure predominantly 160 or more, or; minimum evaluation for an individual with a history of diastolic pressure predominantly 100 or more who requires continuous medication for control"
       }
      ],
      "header": [
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7003,
-      "description": "\n\n                  \u2003Pericardial adhesions:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7004,
-      "description": "\n\n                  \u2003Syphilitic heart disease:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7005,
-      "description": "\n\n                  \u2003Arteriosclerotic heart disease (Coronary artery disease):\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": [
-      {
-       "note": "\n\n                  With documented coronary artery disease resulting in:\n\n                \n\n                "
-      }
-     ]
-    },
-    {
-     "code": {
-      "code": 7006,
-      "description": "\n\n                  \u2003Myocardial infarction:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "During and for three months following myocardial infarction, documented by laboratory tests"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [
-    {
-     "note": "\n\n                  \n\n                    Note: Evaluate syphilitic aortic aneurysms under DC 7110 (aortic aneurysm).\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: If nonservice-connected arteriosclerotic heart disease is superimposed on service-connected valvular or other non-arteriosclerotic heart disease, request a medical opinion as to which condition is causing the current signs and symptoms.\n\n                  \n\n                \n\n                "
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
-   "description": "Thereafter:\n\n                  \n\n                ",
-   "subcategories": [
-    {
-     "description": "With history of documented myocardial infarction, resulting in:\n\n                ",
-     "subcategories": [],
-     "ratings": [
-      {
-       "code": {
-        "code": 7006,
-        "description": "\n\n                  \u2003Myocardial infarction:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7007,
-        "description": "\n\n                  \u2003Hypertensive heart disease:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7008,
-        "description": "\n\n                  \u2003Hyperthyroid heart disease:\n\n                \n\n                "
-       },
-       "ratings": [],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7010,
-        "description": "\n\n                  \u2003Supraventricular arrhythmias:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Paroxysmal atrial fibrillation or other supraventricular tachycardia, with more than four episodes per year documented by ECG or Holter monitor"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Permanent atrial fibrillation (lone atrial fibrillation), or; one to four episodes per year of paroxysmal atrial fibrillation or other supraventricular tachycardia documented by ECG or Holter monitor"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7011,
-        "description": "\n\n                  \u2003Ventricular arrhythmias (sustained):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "For indefinite period from date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia, or; for indefinite period from date of hospital admission for ventricular aneurysmectomy, or; with an automatic implantable Cardioverter-Defibrillator (AICD) in place"
-        },
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7015,
-        "description": "\n\n                  \u2003Atrioventricular block:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication or a pacemaker required"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7016,
-        "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "For indefinite period following date of hospital admission for valve replacement"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      }
-     ],
-     "notes": [
-      {
-       "note": "\n\n                  Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation.\n\n                \n\n                "
-      },
-      {
-       "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned from the date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia or for ventricular aneurysmectomy. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
-      },
-      {
-       "note": "\n\n                  \n\n                    Note: Unusual cases of arrhythmia such as atrioventricular block associated with a supraventricular arrhythmia or pathological bradycardia should be submitted to the Director, Compensation Service. Simple delayed P-R conduction time, in the absence of other evidence of cardiac disease, is not a disability.\n\n                  \n\n                \n\n                "
-      }
-     ],
-     "see_other_notes": []
-    },
-    {
-     "description": "Thereafter:\n\n                ",
-     "subcategories": [],
-     "ratings": [
-      {
-       "code": {
-        "code": 7016,
-        "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7017,
-        "description": "\n\n                  \u2003Coronary bypass surgery:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "For three months following hospital admission for surgery"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      }
-     ],
-     "notes": [
-      {
-       "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned as of the date of hospital admission for valve replacement. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
-      }
-     ],
-     "see_other_notes": []
-    },
-    {
-     "description": "Thereafter:\n\n                ",
-     "subcategories": [],
-     "ratings": [
-      {
-       "code": {
-        "code": 7016,
-        "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Workload greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7018,
-        "description": "\n\n                  \u2003Implantable cardiac pacemakers:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "For two months following hospital admission for implantation or reimplantation"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Thereafter:\n\n                ",
-     "subcategories": [],
-     "ratings": [
-      {
-       "code": {
-        "code": 7016,
-        "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Evaluate as supraventricular arrhythmias (DC 7010), ventricular arrhythmias (DC 7011), or atrioventricular block (DC 7015). Minimum"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "\n\n                    Note: Evaluate implantable Cardioverter-Defibrillators (AICD's) under DC 7011.\n\n                  \n\n                ",
-     "subcategories": [],
-     "ratings": [
-      {
-       "code": {
-        "code": 7019,
-        "description": "\n\n                  \u2003Cardiac transplantation:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "For an indefinite period from date of hospital admission for cardiac transplantation"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      }
-     ],
-     "notes": [],
-     "see_other_notes": []
-    },
-    {
-     "description": "Thereafter:\n\n                ",
-     "subcategories": [],
-     "ratings": [
-      {
-       "code": {
-        "code": 7016,
-        "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Minimum"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7020,
-        "description": "\n\n                  \u2003Cardiomyopathy:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      }
-     ],
-     "notes": [
-      {
-       "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned as of the date of hospital admission for cardiac transplantation. One year following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
-      }
-     ],
-     "see_other_notes": []
-    },
-    {
-     "description": "\n\n                    Diseases of the Arteries and Veins\n\n                  \n\n                ",
-     "subcategories": [],
-     "ratings": [
-      {
-       "code": {
-        "code": 7101,
-        "description": "\n\n                  \u2003Hypertensive vascular disease (hypertension and isolated systolic hypertension):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Diastolic pressure predominantly 130 or more"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Diastolic pressure predominantly 120 or more"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Diastolic pressure predominantly 110 or more, or; systolic pressure predominantly 200 or more"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Diastolic pressure predominantly 100 or more, or; systolic pressure predominantly 160 or more, or; minimum evaluation for an individual with a history of diastolic pressure predominantly 100 or more who requires continuous medication for control"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7110,
-        "description": "\n\n                  \u2003Aortic aneurysm:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "If five centimeters or larger in diameter, or; if symptomatic, or; for indefinite period from date of hospital admission for surgical correction (including any type of graft insertion)"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Precluding exertion"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7111,
-        "description": "\n\n                  \u2003Aneurysm, any large artery:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "If symptomatic, or; for indefinite period from date of hospital admission for surgical correction"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      }
-     ],
      "notes": [
       {
        "note": "\n\n                  \n\n                    Note (1): Hypertension or isolated systolic hypertension must be confirmed by readings taken two or more times on at least three different days. For purposes of this section, the term hypertension means that the diastolic blood pressure is predominantly 90mm. or greater, and isolated systolic hypertension means that the systolic blood pressure is predominantly 160mm. or greater with a diastolic blood pressure of less than 90mm.\n\n                \n\n                "
@@ -779,115 +49,87 @@
       },
       {
        "note": "\n\n                  \n\n                    Note (3): Evaluate hypertension separately from hypertensive heart disease and other types of heart disease.\n\n                  \n\n                \n\n                "
-      },
-      {
-       "note": "\n\n                  Evaluate residuals of surgical correction according to organ systems affected.\n\n                  \n\n                \n\n                "
-      },
-      {
-       "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned as of the date of admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
       }
-     ],
-     "see_other_notes": []
+     ]
     },
     {
-     "description": "Following surgery:\n\n                ",
-     "subcategories": [],
+     "code": {
+      "code": 7110,
+      "description": "\n\n                  \u2003Aortic aneurysm:\n\n                \n\n                "
+     },
      "ratings": [
       {
-       "code": {
-        "code": 7016,
-        "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
-       },
        "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; persistent coldness of the extremity, one or more deep ischemic ulcers, or ankle/brachial index of 0.5 or less"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
-        }
+        100
        ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
+       "description": "If five centimeters or larger in diameter, or; if symptomatic, or; for indefinite period from date of hospital admission for surgical correction (including any type of graft insertion)"
       },
       {
-       "code": {
-        "code": 7112,
-        "description": "\n\n                  \u2003Aneurysm, any small artery:\n\n                \n\n                "
-       },
        "ratings": [
-        {
-         "ratings": [
-          0
-         ],
-         "description": "Asymptomatic"
-        }
+        60
        ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7113,
-        "description": "\n\n                  \u2003Arteriovenous fistula, traumatic:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "With high output heart failure"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Without heart failure but with enlarged heart, wide pulse pressure, and tachycardia"
-        },
-        {
-         "ratings": [
-          50
-         ],
-         "description": "Lower extremity"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Upper extremity"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
+       "description": "Precluding exertion"
       }
      ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": []
+    }
+   ],
+   "notes": [],
+   "see_other_notes": []
+  },
+  {
+   "description": "Evaluate residuals of surgical correction according to organ systems affected.\n\n                  \n\n                ",
+   "subcategories": [],
+   "ratings": [
+    {
+     "code": {
+      "code": 7111,
+      "description": "\n\n                  \u2003Aneurysm, any large artery:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "If symptomatic, or; for indefinite period from date of hospital admission for surgical correction"
+      },
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; persistent coldness of the extremity, one or more deep ischemic ulcers, or ankle/brachial index of 0.5 or less"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
      "notes": [
+      {
+       "note": "\n\n                  Following surgery:\n\n                \n\n                "
+      },
       {
        "note": "\n\n                  \n\n                    Note (1): The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater.\n\n                \n\n                "
       },
@@ -896,387 +138,123 @@
       },
       {
        "note": "\n\n                  \n\n                    Note (3): A rating of 100 percent shall be assigned as of the date of hospital admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
-      },
-      {
-       "note": "\n\n                  \n\n                    Note: If symptomatic, evaluate according to body system affected. Following surgery, evaluate residuals under the body system affected.\n\n                  \n\n                \n\n                "
-      },
-      {
-       "note": "\n\n                  Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:\n\n                \n\n                "
       }
-     ],
-     "see_other_notes": []
+     ]
     },
     {
-     "description": "With edema or stasis dermatitis:\n\n                ",
-     "subcategories": [],
+     "code": {
+      "code": 7112,
+      "description": "\n\n                  \u2003Aneurysm, any small artery:\n\n                \n\n                "
+     },
      "ratings": [
       {
-       "code": {
-        "code": 7016,
-        "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
-       },
        "ratings": [
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Lower extremity"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Upper extremity"
-        }
+        0
        ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7114,
-        "description": "\n\n                  \u2003Arteriosclerosis obliterans:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7115,
-        "description": "\n\n                  \u2003Thrombo-angiitis obliterans (Buerger's Disease):\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7117,
-        "description": "\n\n                  \u2003Raynaud's syndrome:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "With two or more digital ulcers plus autoamputation of one or more digits and history of characteristic attacks"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "With two or more digital ulcers and history of characteristic attacks"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Characteristic attacks occurring at least daily"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Characteristic attacks occurring four to six times a week"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Characteristic attacks occurring one to three times a week"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7118,
-        "description": "\n\n                  \u2003Angioneurotic edema:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Attacks without laryngeal involvement lasting one to seven days or longer and occurring more than eight times a year, or; attacks with laryngeal involvement of any duration occurring more than twice a year"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Attacks without laryngeal involvement lasting one to seven days and occurring five to eight times a year, or; attacks with laryngeal involvement of any duration occurring once or twice a year"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Attacks without laryngeal involvement lasting one to seven days and occurring two to four times a year"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7119,
-        "description": "\n\n                  \u2003Erythromelalgia:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Characteristic attacks that occur more than once a day, last an average of more than two hours each, respond poorly to treatment, and that restrict most routine daily activities"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Characteristic attacks that occur more than once a day, last an average of more than two hours each, and respond poorly to treatment, but that do not restrict most routine daily activities"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Characteristic attacks that occur daily or more often but that respond to treatment"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Characteristic attacks that occur less than daily but at least three times a week and that respond to treatment"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7120,
-        "description": "\n\n                  \u2003Varicose veins:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "With the following findings attributed to the effects of varicose veins: Massive board-like edema with constant pain at rest"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery"
-        },
-        {
-         "ratings": [
-          0
-         ],
-         "description": "Asymptomatic palpable or visible varicose veins"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
-      },
-      {
-       "code": {
-        "code": 7121,
-        "description": "\n\n                  \u2003Post-phlebitic syndrome of any etiology:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Massive board-like edema with constant pain at rest"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration"
-        },
-        {
-         "ratings": [
-          40
-         ],
-         "description": "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery"
-        },
-        {
-         "ratings": [
-          0
-         ],
-         "description": "Asymptomatic palpable or visible varicose veins"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": [
-        {
-         "note": "\n\n                  With the following findings attributed to venous disease:\n\n                \n\n                "
-        }
-       ]
-      },
-      {
-       "code": {
-        "code": 7122,
-        "description": "\n\n                  \u2003Cold injury residuals:\n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Arthralgia or other pain, numbness, or cold sensitivity plus two or more of the following: tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)"
-        },
-        {
-         "ratings": [
-          20
-         ],
-         "description": "Arthralgia or other pain, numbness, or cold sensitivity plus tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, or X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Arthralgia or other pain, numbness, or cold sensitivity"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": [
-        {
-         "note": "\n\n                  \n\n                  With the following in affected parts:\n\n                \n\n                "
-        }
-       ]
-      },
-      {
-       "code": {
-        "code": 7123,
-        "description": "\n\n                  \u2003Soft tissue sarcoma (of vascular origin)\n\n                  100\n\n                  \n\n                \n\n                "
-       },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "7123\u2003Soft tissue sarcoma (of vascular origin)"
-        }
-       ],
-       "header": [
-        "Rating"
-       ],
-       "see_other_notes": [],
-       "notes": []
+       "description": "Asymptomatic"
       }
      ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
+      {
+       "note": "\n\n                  \n\n                    Note: If symptomatic, evaluate according to body system affected. Following surgery, evaluate residuals under the body system affected.\n\n                  \n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7113,
+      "description": "\n\n                  \u2003Arteriovenous fistula, traumatic:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "With high output heart failure"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Without heart failure but with enlarged heart, wide pulse pressure, and tachycardia"
+      },
+      {
+       "ratings": [
+        50
+       ],
+       "description": "Lower extremity"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Upper extremity"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Lower extremity"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Upper extremity"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
+      {
+       "note": "\n\n                  Without cardiac involvement but with edema, stasis dermatitis, and either ulceration or cellulitis:\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  With edema or stasis dermatitis:\n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7114,
+      "description": "\n\n                  \u2003Arteriosclerosis obliterans:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
      "notes": [
       {
        "note": "\n\n                  \n\n                    Note (1): The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater.\n\n                \n\n                "
@@ -1286,40 +264,351 @@
       },
       {
        "note": "\n\n                  \n\n                    Note (3): These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under \u00a7\u20094.25), using the bilateral factor (\u00a7\u20094.26), if applicable.\n\n                  \n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7115,
+      "description": "\n\n                  \u2003Thrombo-angiitis obliterans (Buerger's Disease):\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Ischemic limb pain at rest, and; either deep ischemic ulcers or ankle/brachial index of 0.4 or less"
       },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Claudication on walking less than 25 yards on a level grade at 2 miles per hour, and; either persistent coldness of the extremity or ankle/brachial index of 0.5 or less"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Claudication on walking between 25 and 100 yards on a level grade at 2 miles per hour, and; trophic changes (thin skin, absence of hair, dystrophic nails) or ankle/brachial index of 0.7 or less"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Claudication on walking more than 100 yards, and; diminished peripheral pulses or ankle/brachial index of 0.9 or less"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
       {
        "note": "\n\n                  \n\n                    Note (1): The ankle/brachial index is the ratio of the systolic blood pressure at the ankle (determined by Doppler study) divided by the simultaneous brachial artery systolic blood pressure. The normal index is 1.0 or greater.\n\n                \n\n                "
       },
       {
        "note": "\n\n                  \n\n                    Note (2): These evaluations are for involvement of a single extremity. If more than one extremity is affected, evaluate each extremity separately and combine (under \u00a7\u20094.25), using the bilateral factor (\u00a7\u20094.26), if applicable.\n\n                  \n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7117,
+      "description": "\n\n                  \u2003Raynaud's syndrome:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "With two or more digital ulcers plus autoamputation of one or more digits and history of characteristic attacks"
       },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "With two or more digital ulcers and history of characteristic attacks"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Characteristic attacks occurring at least daily"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Characteristic attacks occurring four to six times a week"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Characteristic attacks occurring one to three times a week"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
       {
        "note": "\n\n                  \n\n                    Note: For purposes of this section, characteristic attacks consist of sequential color changes of the digits of one or more extremities lasting minutes to hours, sometimes with pain and paresthesias, and precipitated by exposure to cold or by emotional upsets. These evaluations are for the disease as a whole, regardless of the number of extremities involved or whether the nose and ears are involved.\n\n                  \n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7118,
+      "description": "\n\n                  \u2003Angioneurotic edema:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Attacks without laryngeal involvement lasting one to seven days or longer and occurring more than eight times a year, or; attacks with laryngeal involvement of any duration occurring more than twice a year"
       },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Attacks without laryngeal involvement lasting one to seven days and occurring five to eight times a year, or; attacks with laryngeal involvement of any duration occurring once or twice a year"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Attacks without laryngeal involvement lasting one to seven days and occurring two to four times a year"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 7119,
+      "description": "\n\n                  \u2003Erythromelalgia:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Characteristic attacks that occur more than once a day, last an average of more than two hours each, respond poorly to treatment, and that restrict most routine daily activities"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Characteristic attacks that occur more than once a day, last an average of more than two hours each, and respond poorly to treatment, but that do not restrict most routine daily activities"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Characteristic attacks that occur daily or more often but that respond to treatment"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Characteristic attacks that occur less than daily but at least three times a week and that respond to treatment"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
       {
        "note": "\n\n                  \n\n                    Note: For purposes of this section, a characteristic attack of erythromelalgia consists of burning pain in the hands, feet, or both, usually bilateral and symmetrical, with increased skin temperature and redness, occurring at warm ambient temperatures. These evaluations are for the disease as a whole, regardless of the number of extremities involved.\n\n                  \n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7120,
+      "description": "\n\n                  \u2003Varicose veins:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "With the following findings attributed to the effects of varicose veins: Massive board-like edema with constant pain at rest"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Asymptomatic palpable or visible varicose veins"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
+      {
+       "note": "\n\n                  \n\n                    Note: These evaluations are for involvement of a single extremity. If more than one extremity is involved, evaluate each extremity separately and combine (under \u00a7\u20094.25), using the bilateral factor (\u00a7\u20094.26), if applicable.\n\n                  \n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7121,
+      "description": "\n\n                  \u2003Post-phlebitic syndrome of any etiology:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "Massive board-like edema with constant pain at rest"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "Persistent edema or subcutaneous induration, stasis pigmentation or eczema, and persistent ulceration"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "Persistent edema and stasis pigmentation or eczema, with or without intermittent ulceration"
+      },
+      {
+       "ratings": [
+        20
+       ],
+       "description": "Persistent edema, incompletely relieved by elevation of extremity, with or without beginning stasis pigmentation or eczema"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Intermittent edema of extremity or aching and fatigue in leg after prolonged standing or walking, with symptoms relieved by elevation of extremity or compression hosiery"
+      },
+      {
+       "ratings": [
+        0
+       ],
+       "description": "Asymptomatic palpable or visible varicose veins"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
+      {
+       "note": "\n\n                  With the following findings attributed to venous disease:\n\n                \n\n                "
       },
       {
        "note": "\n\n                  \n\n                    Note: These evaluations are for involvement of a single extremity. If more than one extremity is involved, evaluate each extremity separately and combine (under \u00a7\u20094.25), using the bilateral factor (\u00a7\u20094.26), if applicable.\n\n                  \n\n                \n\n                "
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7122,
+      "description": "\n\n                  \u2003Cold injury residuals:\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        30
+       ],
+       "description": "Arthralgia or other pain, numbness, or cold sensitivity plus two or more of the following: tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)"
       },
       {
-       "note": "\n\n                  \n\n                    Note: These evaluations are for involvement of a single extremity. If more than one extremity is involved, evaluate each extremity separately and combine (under \u00a7\u20094.25), using the bilateral factor (\u00a7\u20094.26), if applicable.\n\n                  \n\n                \n\n                "
+       "ratings": [
+        20
+       ],
+       "description": "Arthralgia or other pain, numbness, or cold sensitivity plus tissue loss, nail abnormalities, color changes, locally impaired sensation, hyperhidrosis, or X-ray abnormalities (osteoporosis, subarticular punched out lesions, or osteoarthritis)"
+      },
+      {
+       "ratings": [
+        10
+       ],
+       "description": "Arthralgia or other pain, numbness, or cold sensitivity"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
+      {
+       "note": "\n\n                  \n\n                  With the following in affected parts:\n\n                \n\n                "
       },
       {
        "note": "\n\n                  \n\n                    Note (1): Separately evaluate amputations of fingers or toes, and complications such as squamous cell carcinoma at the site of a cold injury scar or peripheral neuropathy, under other diagnostic codes. Separately evaluate other disabilities that have been diagnosed as the residual effects of cold injury, such as Raynaud's phenomenon, muscle atrophy, etc., unless they are used to support an evaluation under diagnostic code 7122.\n\n                \n\n                "
       },
       {
        "note": "\n\n                  \n\n                    Note (2): Evaluate each affected part (e.g., hand, foot, ear, nose) separately and combine the ratings in accordance with \u00a7\u00a7\u20094.25 and 4.26.\n\n                  \n\n                \n\n                "
-      },
+      }
+     ]
+    },
+    {
+     "code": {
+      "code": 7123,
+      "description": "\n\n                  \u2003Soft tissue sarcoma (of vascular origin)\n\n                  100\n\n                  \n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "7123\u2003Soft tissue sarcoma (of vascular origin)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": [
       {
        "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n              "
       }
-     ],
-     "see_other_notes": []
+     ]
     }
    ],
-   "ratings": [],
-   "notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned as of the date of admission for surgical correction. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
+    }
+   ],
    "see_other_notes": []
   }
  ],
@@ -1365,7 +654,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -1408,7 +701,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -1421,6 +718,582 @@
       100
      ],
      "description": "For three months following cessation of therapy for active infection with cardiac involvement"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent."
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter, with documented pericarditis resulting in:\n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7003,
+    "description": "\n\n                  \u2003Pericardial adhesions:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electro-cardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7004,
+    "description": "\n\n                  \u2003Syphilitic heart disease:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate syphilitic aortic aneurysms under DC 7110 (aortic aneurysm).\n\n                  \n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7005,
+    "description": "\n\n                  \u2003Arteriosclerotic heart disease (Coronary artery disease):\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  With documented coronary artery disease resulting in:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: If nonservice-connected arteriosclerotic heart disease is superimposed on service-connected valvular or other non-arteriosclerotic heart disease, request a medical opinion as to which condition is causing the current signs and symptoms.\n\n                  \n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7006,
+    "description": "\n\n                  \u2003Myocardial infarction:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "During and for three months following myocardial infarction, documented by laboratory tests"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter:\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  With history of documented myocardial infarction, resulting in:\n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7007,
+    "description": "\n\n                  \u2003Hypertensive heart disease:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7008,
+    "description": "\n\n                  \u2003Hyperthyroid heart disease:\n\n                \n\n                "
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Include as part of the overall evaluation for hyperthyroidism under DC 7900. However, when atrial fibrillation is present, hyperthyroidism may be evaluated either under DC 7900 or under DC 7010 (supraventricular arrhythmia), whichever results in a higher evaluation.\n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7010,
+    "description": "\n\n                  \u2003Supraventricular arrhythmias:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Paroxysmal atrial fibrillation or other supraventricular tachycardia, with more than four episodes per year documented by ECG or Holter monitor"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Permanent atrial fibrillation (lone atrial fibrillation), or; one to four episodes per year of paroxysmal atrial fibrillation or other supraventricular tachycardia documented by ECG or Holter monitor"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7011,
+    "description": "\n\n                  \u2003Ventricular arrhythmias (sustained):\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For indefinite period from date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia, or; for indefinite period from date of hospital admission for ventricular aneurysmectomy, or; with an automatic implantable Cardioverter-Defibrillator (AICD) in place"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned from the date of hospital admission for initial evaluation and medical therapy for a sustained ventricular arrhythmia or for ventricular aneurysmectomy. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7015,
+    "description": "\n\n                  \u2003Atrioventricular block:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication or a pacemaker required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Unusual cases of arrhythmia such as atrioventricular block associated with a supraventricular arrhythmia or pathological bradycardia should be submitted to the Director, Compensation Service. Simple delayed P-R conduction time, in the absence of other evidence of cardiac disease, is not a disability.\n\n                  \n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7016,
+    "description": "\n\n                  \u2003Heart valve replacement (prosthesis):\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For indefinite period following date of hospital admission for valve replacement"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned as of the date of hospital admission for valve replacement. Six months following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7017,
+    "description": "\n\n                  \u2003Coronary bypass surgery:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For three months following hospital admission for surgery"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter:\n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7018,
+    "description": "\n\n                  \u2003Implantable cardiac pacemakers:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For two months following hospital admission for implantation or reimplantation"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Evaluate as supraventricular arrhythmias (DC 7010), ventricular arrhythmias (DC 7011), or atrioventricular block (DC 7015). Minimum"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate implantable Cardioverter-Defibrillators (AICD's) under DC 7011.\n\n                  \n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7019,
+    "description": "\n\n                  \u2003Cardiac transplantation:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "For an indefinite period from date of hospital admission for cardiac transplantation"
+    },
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Minimum"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Thereafter:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall be assigned as of the date of hospital admission for cardiac transplantation. One year following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 7020,
+    "description": "\n\n                  \u2003Cardiomyopathy:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "Chronic congestive heart failure, or; workload of 3 METs or less results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of less than 30 percent"
+    },
+    {
+     "ratings": [
+      60
+     ],
+     "description": "More than one episode of acute congestive heart failure in the past year, or; workload of greater than 3 METs but not greater than 5 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; left ventricular dysfunction with an ejection fraction of 30 to 50 percent"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Workload of greater than 5 METs but not greater than 7 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; evidence of cardiac hypertrophy or dilatation on electrocardiogram, echocardiogram, or X-ray"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "Workload of greater than 7 METs but not greater than 10 METs results in dyspnea, fatigue, angina, dizziness, or syncope, or; continuous medication required"
     }
    ],
    "header": [
@@ -1436,12 +1309,6 @@
   },
   {
    "note": "\n\n                  \n\n                    Note (2): One MET (metabolic equivalent) is the energy cost of standing quietly at rest and represents an oxygen uptake of 3.5 milliliters per kilogram of body weight per minute. When the level of METs at which dyspnea, fatigue, angina, dizziness, or syncope develops is required for evaluation, and a laboratory determination of METs by exercise testing cannot be done for medical reasons, an estimation by a medical examiner of the level of activity (expressed in METs and supported by specific examples, such as slow stair climbing or shoveling snow) that results in dyspnea, fatigue, angina, dizziness, or syncope may be used.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Thereafter, with valvular heart disease (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Thereafter, with endocarditis (documented by findings on physical examination and either echocardiogram, Doppler echocardiogram, or cardiac catheterization) resulting in:\n\n                \n\n                "
   }
  ],
  "see_other_notes": []

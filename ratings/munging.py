@@ -54,11 +54,16 @@ def describes_diagnosis(text: str) -> bool:
     """
     Return true if the text describes a diagnosis. 
     """
+    identifying_fragments = [
+        'continual urine leakage',
+        'urninary tract infection',
+        'gastritis, atrophic',
+        'marked obstructive symptomatology'
+    ]
+
     if len(text.split()) == 2 and 'dysfunction' in text.lower():
         return True
-    elif 'continual urine leakage' in text.lower():
-        return True
-    elif 'urninary tract infection' in text.lower():
+    elif any(x in text.lower() for x in identifying_fragments):
         return True
     else:
         return False

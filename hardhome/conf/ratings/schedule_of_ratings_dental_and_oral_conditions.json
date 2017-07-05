@@ -2,66 +2,6 @@
  "description": "Schedule of ratings\u2014dental and oral conditions.",
  "subcategories": [
   {
-   "description": "Range of lateral excursion:\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 9905,
-      "description": "\n\n                  \u2003Temporomandibular articulation, limited motion of:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        10
-       ],
-       "description": "0 to 4 mm"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 9906,
-      "description": "\n\n                  \u2003Ramus, loss of whole or part of:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Bilateral"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Unilateral"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": [
-      {
-       "note": "\n\n                  Involving loss of temporomandibular articulation\n\n                \n\n                "
-      }
-     ]
-    }
-   ],
-   "notes": [
-    {
-     "note": "\n\n                  \n\n                    Note\u2014Ratings for limited inter-incisal movement shall not be combined with ratings for limited lateral excursion\n\n                \n\n                "
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
    "description": "Not involving loss of temporomandibular articulation\n\n                ",
    "subcategories": [],
    "ratings": [
@@ -274,7 +214,14 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  Where the lost masticatory surface cannot be restored by suitable prosthesis:\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note\u2014These ratings apply only to bone loss through trauma or disease such as osteomyelitis, and not to the loss of the alveolar process as a result of periodontal disease, since such loss is not considered disabling\n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -318,39 +265,7 @@
         30
        ],
        "description": "Replaceable by prosthesis"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": [
-      {
-       "note": "\n\n                  Loss of 25 to 50 percent:\n\n                \n\n                "
-      }
-     ]
-    }
-   ],
-   "notes": [
-    {
-     "note": "\n\n                  Where the lost masticatory surface cannot be restored by suitable prosthesis:\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note\u2014These ratings apply only to bone loss through trauma or disease such as osteomyelitis, and not to the loss of the alveolar process as a result of periodontal disease, since such loss is not considered disabling\n\n                \n\n                "
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
-   "description": "Loss of less than 25 percent:\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 9906,
-      "description": "\n\n                  \u2003Ramus, loss of whole or part of:\n\n                \n\n                "
-     },
-     "ratings": [
+      },
       {
        "ratings": [
         20
@@ -368,7 +283,14 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  Loss of 25 to 50 percent:\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Loss of less than 25 percent:\n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -490,7 +412,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note\u2014Dependent upon degree of motion and relative loss of masticatory function\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -521,7 +447,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note\u2014Dependent upon degree of motion and relative loss of masticatory function\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -552,6 +482,12 @@
       10
      ],
      "description": "31 to 40 mm"
+    },
+    {
+     "ratings": [
+      10
+     ],
+     "description": "0 to 4 mm"
     }
    ],
    "header": [
@@ -561,17 +497,45 @@
    "notes": [
     {
      "note": "\n\n                  Inter-incisal range:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Range of lateral excursion:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note\u2014Ratings for limited inter-incisal movement shall not be combined with ratings for limited lateral excursion\n\n                \n\n                "
+    }
+   ]
+  },
+  {
+   "code": {
+    "code": 9906,
+    "description": "\n\n                  \u2003Ramus, loss of whole or part of:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      50
+     ],
+     "description": "Bilateral"
+    },
+    {
+     "ratings": [
+      30
+     ],
+     "description": "Unilateral"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": [
+    {
+     "note": "\n\n                  Involving loss of temporomandibular articulation\n\n                \n\n                "
     }
    ]
   }
  ],
- "notes": [
-  {
-   "note": "\n\n                  \n\n                    Note\u2014Dependent upon degree of motion and relative loss of masticatory function\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note\u2014Dependent upon degree of motion and relative loss of masticatory function\n\n                \n\n                "
-  }
- ],
+ "notes": [],
  "see_other_notes": []
 }

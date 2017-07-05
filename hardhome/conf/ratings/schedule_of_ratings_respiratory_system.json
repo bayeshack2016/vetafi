@@ -50,12 +50,12 @@
      "header": [
       "Rating"
      ],
-     "see_other_notes": [
+     "see_other_notes": [],
+     "notes": [
       {
-       "see_other_note": "\n\n                  \n\n                  \n\n                    Note: Or evaluate as DC 7800, scars, disfiguring, head, face, or neck.\n\n                  \n\n                \n\n                "
+       "note": "\n\n                  \n\n                  \n\n                    Note: Or evaluate as DC 7800, scars, disfiguring, head, face, or neck.\n\n                  \n\n                \n\n                "
       }
-     ],
-     "notes": []
+     ]
     },
     {
      "code": {
@@ -92,7 +92,14 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  General Rating Formula for Sinusitis (DC's 6510 through 6514):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician.\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -129,7 +136,14 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  General Rating Formula for Sinusitis (DC's 6510 through 6514):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician.\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -166,7 +180,14 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  General Rating Formula for Sinusitis (DC's 6510 through 6514):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician.\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -203,7 +224,14 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  General Rating Formula for Sinusitis (DC's 6510 through 6514):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician.\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -240,7 +268,14 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  General Rating Formula for Sinusitis (DC's 6510 through 6514):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician.\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -252,7 +287,11 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate.\n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -295,7 +334,11 @@
      "header": [
       "Rating"
      ],
-     "see_other_notes": [],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520).\n\n                \n\n                "
+      }
+     ],
      "notes": []
     },
     {
@@ -321,7 +364,11 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  \n\n                    Note: Evaluate incomplete aphonia as laryngitis, chronic (DC 6516).\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -357,12 +404,12 @@
      "header": [
       "Rating"
      ],
-     "see_other_notes": [
+     "see_other_notes": [],
+     "notes": [
       {
-       "see_other_note": "\n\n                  \n\n                    Note: Or evaluate as aphonia (DC 6519).\n\n                  \n\n                \n\n                "
+       "note": "\n\n                  \n\n                    Note: Or evaluate as aphonia (DC 6519).\n\n                  \n\n                \n\n                "
       }
-     ],
-     "notes": []
+     ]
     },
     {
      "code": {
@@ -459,20 +506,7 @@
      "notes": []
     }
    ],
-   "notes": [
-    {
-     "note": "\n\n                  \n\n                    Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: Evaluate incomplete aphonia as laryngitis, chronic (DC 6516).\n\n                  \n\n                \n\n                "
-    }
-   ],
+   "notes": [],
    "see_other_notes": []
   },
   {
@@ -550,8 +584,16 @@
      "header": [
       "Rating"
      ],
-     "see_other_notes": [],
-     "notes": []
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600).\n\n                  \n\n                \n\n                "
+      }
+     ],
+     "notes": [
+      {
+       "note": "\n\n                  \n\n                    Note: An incapacitating episode is one that requires bedrest and treatment by a physician.\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -588,7 +630,11 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  \n\n                    Note: In the absence of clinical findings of asthma at time of examination, a verified history of asthmatic attacks must be of record.\n\n                  \n\n                \n\n                "
+      }
+     ]
     },
     {
      "code": {
@@ -665,1452 +711,1596 @@
      "notes": []
     }
    ],
-   "notes": [
-    {
-     "note": "\n\n                  Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600).\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: An incapacitating episode is one that requires bedrest and treatment by a physician.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: In the absence of clinical findings of asthma at time of examination, a verified history of asthmatic attacks must be of record.\n\n                  \n\n                \n\n                "
-    }
-   ],
+   "notes": [],
    "see_other_notes": []
   },
   {
    "description": "\n\n                    DISEASES OF THE LUNGS AND PLEURA\u2014TUBERCULOSIS\n\n                  \n\n                ",
-   "subcategories": [],
-   "ratings": [
+   "subcategories": [
     {
-     "code": {
-      "code": 6701,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, far advanced, active\n\n                  100\n\n                \n\n                "
-     },
+     "description": "\n\n                    Ratings for Pulmonary Tuberculosis Entitled on August 19, 1968\n\n                  \n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 6701,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, far advanced, active\n\n                  100\n\n                \n\n                "
+       },
        "ratings": [
-        100
+        {
+         "ratings": [
+          100
+         ],
+         "description": "6701\u2003Tuberculosis, pulmonary, chronic, far advanced, active"
+        }
        ],
-       "description": "6701\u2003Tuberculosis, pulmonary, chronic, far advanced, active"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 6702,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, moderately advanced, active\n\n                  100\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "6702\u2003Tuberculosis, pulmonary, chronic, moderately advanced, active"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 6703,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, minimal, active\n\n                  100\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "6703\u2003Tuberculosis, pulmonary, chronic, minimal, active"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 6704,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, active, advancement unspecified\n\n                  100\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "6704\u2003Tuberculosis, pulmonary, chronic, active, advancement unspecified"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 6721,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, far advanced, inactive\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Thereafter, for five years, or to eleven years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Otherwise"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                  \n\n                    Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (2): The graduated 50-percent and 30-percent ratings and the permanent 30 percent and 20 percent ratings for inactive pulmonary tuberculosis are not to be combined with ratings for other respiratory disabilities. Following thoracoplasty the rating will be for removal of ribs combined with the rating for collapsed lung. Resection of the ribs incident to thoracoplasty will be rated as removal.\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6722,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, moderately advanced, inactive\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Thereafter, for five years, or to eleven years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Otherwise"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                  \n\n                    Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (2): The graduated 50-percent and 30-percent ratings and the permanent 30 percent and 20 percent ratings for inactive pulmonary tuberculosis are not to be combined with ratings for other respiratory disabilities. Following thoracoplasty the rating will be for removal of ribs combined with the rating for collapsed lung. Resection of the ribs incident to thoracoplasty will be rated as removal.\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6723,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, minimal, inactive\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Thereafter, for five years, or to eleven years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Otherwise"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                  \n\n                    Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (2): The graduated 50-percent and 30-percent ratings and the permanent 30 percent and 20 percent ratings for inactive pulmonary tuberculosis are not to be combined with ratings for other respiratory disabilities. Following thoracoplasty the rating will be for removal of ribs combined with the rating for collapsed lung. Resection of the ribs incident to thoracoplasty will be rated as removal.\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6724,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, inactive, advancement unspecified\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Thereafter, for five years, or to eleven years after date of inactivity"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Otherwise"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                  \n\n                    Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (2): The graduated 50-percent and 30-percent ratings and the permanent 30 percent and 20 percent ratings for inactive pulmonary tuberculosis are not to be combined with ratings for other respiratory disabilities. Following thoracoplasty the rating will be for removal of ribs combined with the rating for collapsed lung. Resection of the ribs incident to thoracoplasty will be rated as removal.\n\n                \n\n                "
+        }
+       ]
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
+     "notes": [],
+     "see_other_notes": []
     },
     {
-     "code": {
-      "code": 6702,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, moderately advanced, active\n\n                  100\n\n                \n\n                "
-     },
+     "description": "\n\n                    Ratings for Pulmonary Tuberculosis Initially Evaluated After August 19, 1968\n\n                  \n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 6730,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, active\n\n                  100\n\n                  \n\n                \n\n                "
+       },
        "ratings": [
-        100
+        {
+         "ratings": [
+          100
+         ],
+         "description": "6730\u2003Tuberculosis, pulmonary, chronic, active"
+        }
        ],
-       "description": "6702\u2003Tuberculosis, pulmonary, chronic, moderately advanced, active"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: Active pulmonary tuberculosis will be considered permanently and totally disabling for non-service-connected pension purposes in the following circumstances:\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  (a) Associated with active tuberculosis involving other than the respiratory system.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  (b) With severe associated symptoms or with extensive cavity formation.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  (c) Reactivated cases, generally.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  (d) With advancement of lesions on successive examinations or while under treatment.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  (e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from \u201cactive\u201d at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion.\n\n                  \n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6731,
+        "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, inactive:\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600). Rate thoracoplasty as removal of ribs under DC 5297.\n\n                  \n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: A mandatory examination will be requested immediately following notification that active tuberculosis evaluated under DC 6730 has become inactive. Any change in evaluation will be carried out under the provisions of \u00a7\u20093.105(e).\n\n                  \n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6732,
+        "description": "\n\n                  \u2003Pleurisy, tuberculous, active or inactive:\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate.\n\n                \n\n                "
+        }
+       ]
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
+     "notes": [],
+     "see_other_notes": []
     },
     {
-     "code": {
-      "code": 6703,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, minimal, active\n\n                  100\n\n                \n\n                "
-     },
+     "description": "\n\n                    NONTUBERCULOUS DISEASES\n\n                  \n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 6817,
+        "description": "\n\n                  \u2003Pulmonary Vascular Disease:\n\n                \n\n                "
+       },
        "ratings": [
-        100
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Primary pulmonary hypertension, or; chronic pulmonary thromboembolism with evidence of pulmonary hypertension, right ventricular hypertrophy, or cor pulmonale, or; pulmonary hypertension secondary to other obstructive disease of pulmonary arteries or veins with evidence of right ventricular hypertrophy or cor pulmonale"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Chronic pulmonary thromboembolism requiring anticoagulant therapy, or; following inferior vena cava surgery without evidence of pulmonary hypertension or right ventricular dysfunction"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Symptomatic, following resolution of acute pulmonary embolism"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Asymptomatic, following resolution of pulmonary thromboembolism"
+        }
        ],
-       "description": "6703\u2003Tuberculosis, pulmonary, chronic, minimal, active"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: Evaluate other residuals following pulmonary embolism under the most appropriate diagnostic code, such as chronic bronchitis (DC 6600) or chronic pleural effusion or fibrosis (DC 6844), but do not combine that evaluation with any of the above evaluations.\n\n                  \n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6819,
+        "description": "\n\n                  \u2003Neoplasms, malignant, any specified part of respiratory system exclusive of skin growths\n\n                  100\n\n                  \n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "6819\u2003Neoplasms, malignant, any specified part of respiratory system exclusive of skin growths"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                  \n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6820,
+        "description": "\n\n                  \u2003Neoplasms, benign, any specified part of respiratory system. Evaluate using an appropriate respiratory analogy.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  General Rating Formula for Bacterial Infections of the Lung (diagnostic codes 6822 through 6824):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6822,
+        "description": "\n\n                  \u2003Actinomycosis.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  General Rating Formula for Bacterial Infections of the Lung (diagnostic codes 6822 through 6824):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6823,
+        "description": "\n\n                  \u2003Nocardiosis.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  General Rating Formula for Bacterial Infections of the Lung (diagnostic codes 6822 through 6824):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6824,
+        "description": "\n\n                  \u2003Chronic lung abscess.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  General Rating Formula for Bacterial Infections of the Lung (diagnostic codes 6822 through 6824):\n\n                \n\n                "
+        }
+       ]
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
+     "notes": [],
+     "see_other_notes": []
     },
     {
-     "code": {
-      "code": 6704,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, active, advancement unspecified\n\n                  100\n\n                \n\n                "
-     },
+     "description": "\n\n                    Interstitial Lung Disease\n\n                  \n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 6825,
+        "description": "\n\n                  \u2003Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis).\n\n                \n\n                "
+       },
        "ratings": [
-        100
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
        ],
-       "description": "6704\u2003Tuberculosis, pulmonary, chronic, active, advancement unspecified"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6826,
+        "description": "\n\n                  \u2003Desquamative interstitial pneumonitis.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6827,
+        "description": "\n\n                  \u2003Pulmonary alveolar proteinosis.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6828,
+        "description": "\n\n                  \u2003Eosinophilic granuloma of lung.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6829,
+        "description": "\n\n                  \n\n                  \u2003Drug-induced pulmonary pneumonitis and fibrosis.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6830,
+        "description": "\n\n                  \u2003Radiation-induced pulmonary pneumonitis and fibrosis.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6831,
+        "description": "\n\n                  \u2003Hypersensitivity pneumonitis (extrinsic allergic alveolitis).\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6832,
+        "description": "\n\n                  \u2003Pneumoconiosis (silicosis, anthracosis, etc.).\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 6833,
+        "description": "\n\n                  \u2003Asbestosis.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Interstitial Lung Disease (diagnostic codes 6825 through 6833):\n\n                \n\n                "
+        }
+       ]
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
+     "notes": [],
+     "see_other_notes": []
     },
     {
-     "code": {
-      "code": 6721,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, far advanced, inactive\n\n                \n\n                "
-     },
+     "description": "\n\n                    Mycotic Lung Disease\n\n                  \n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 6834,
+        "description": "\n\n                  \u2003Histoplasmosis of lung.\n\n                \n\n                "
+       },
        "ratings": [
-        100
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Healed and inactive mycotic lesions, asymptomatic"
+        }
        ],
-       "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Mycotic Lung Disease (diagnostic codes 6834 through 6839):\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6835,
+        "description": "\n\n                  \u2003Coccidioidomycosis.\n\n                \n\n                "
+       },
        "ratings": [
-        50
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Healed and inactive mycotic lesions, asymptomatic"
+        }
        ],
-       "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Mycotic Lung Disease (diagnostic codes 6834 through 6839):\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6836,
+        "description": "\n\n                  \u2003Blastomycosis.\n\n                \n\n                "
+       },
        "ratings": [
-        30
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Healed and inactive mycotic lesions, asymptomatic"
+        }
        ],
-       "description": "Thereafter, for five years, or to eleven years after date of inactivity"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Mycotic Lung Disease (diagnostic codes 6834 through 6839):\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6837,
+        "description": "\n\n                  \u2003Cryptococcosis.\n\n                \n\n                "
+       },
        "ratings": [
-        30
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Healed and inactive mycotic lesions, asymptomatic"
+        }
        ],
-       "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Mycotic Lung Disease (diagnostic codes 6834 through 6839):\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6838,
+        "description": "\n\n                  \u2003Aspergillosis.\n\n                \n\n                "
+       },
        "ratings": [
-        20
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Healed and inactive mycotic lesions, asymptomatic"
+        }
        ],
-       "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Mycotic Lung Disease (diagnostic codes 6834 through 6839):\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6839,
+        "description": "\n\n                  \u2003Mucormycosis.\n\n                \n\n                "
+       },
        "ratings": [
-        0
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Healed and inactive mycotic lesions, asymptomatic"
+        }
        ],
-       "description": "Otherwise"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Mycotic Lung Disease (diagnostic codes 6834 through 6839):\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
+        }
+       ]
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
+     "notes": [],
+     "see_other_notes": []
     },
     {
-     "code": {
-      "code": 6722,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, moderately advanced, inactive\n\n                \n\n                "
-     },
+     "description": "\n\n                    Restrictive Lung Disease\n\n                  \n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 6840,
+        "description": "\n\n                  \u2003Diaphragm paralysis or paresis.\n\n                \n\n                "
+       },
        "ratings": [
-        100
+        {
+         "ratings": [
+          100
+         ],
+         "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
+        }
        ],
-       "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Restrictive Lung Disease (diagnostic codes 6840 through 6845):\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6841,
+        "description": "\n\n                  \u2003Spinal cord injury with respiratory insufficiency.\n\n                \n\n                "
+       },
        "ratings": [
-        50
+        {
+         "ratings": [
+          100
+         ],
+         "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
+        }
        ],
-       "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Restrictive Lung Disease (diagnostic codes 6840 through 6845):\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6842,
+        "description": "\n\n                  \u2003Kyphoscoliosis, pectus excavatum, pectus carinatum.\n\n                \n\n                "
+       },
        "ratings": [
-        30
+        {
+         "ratings": [
+          100
+         ],
+         "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
+        }
        ],
-       "description": "Thereafter, for five years, or to eleven years after date of inactivity"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Restrictive Lung Disease (diagnostic codes 6840 through 6845):\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6843,
+        "description": "\n\n                  \u2003Traumatic chest wall defect, pneumothorax, hernia, etc.\n\n                \n\n                "
+       },
        "ratings": [
-        30
+        {
+         "ratings": [
+          100
+         ],
+         "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
+        }
        ],
-       "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Restrictive Lung Disease (diagnostic codes 6840 through 6845):\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6844,
+        "description": "\n\n                  \u2003Post-surgical residual (lobectomy, pneumonectomy, etc.).\n\n                \n\n                "
+       },
        "ratings": [
-        20
+        {
+         "ratings": [
+          100
+         ],
+         "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
+        }
        ],
-       "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Restrictive Lung Disease (diagnostic codes 6840 through 6845):\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 6845,
+        "description": "\n\n                  \u2003Chronic pleural effusion or fibrosis.\n\n                \n\n                "
+       },
        "ratings": [
-        0
+        {
+         "ratings": [
+          100
+         ],
+         "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
+        }
        ],
-       "description": "Otherwise"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  General Rating Formula for Restrictive Lung Disease (diagnostic codes 6840 through 6845):\n\n                \n\n                "
+        }
+       ]
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
+     "notes": [],
+     "see_other_notes": []
     },
     {
-     "code": {
-      "code": 6723,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, minimal, inactive\n\n                \n\n                "
-     },
+     "description": "Or rate primary disorder.\n\n                  \n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 6846,
+        "description": "\n\n                  \u2003Sarcoidosis:\n\n                \n\n                "
+       },
        "ratings": [
-        100
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Cor pulmonale, or; cardiac involvement with congestive heart failure, or; progressive pulmonary disease with fever, night sweats, and weight loss despite treatment"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Pulmonary involvement requiring systemic high dose (therapeutic) corticosteroids for control"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Pulmonary involvement with persistent symptoms requiring chronic low dose (maintenance) or intermittent corticosteroids"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Chronic hilar adenopathy or stable lung infiltrates without symptoms or physiologic impairment"
+        }
        ],
-       "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate active disease or residuals as chronic bronchitis (DC 6600) and extra-pulmonary involvement under specific body system involved\n\n                \n\n                "
+        }
+       ],
+       "notes": []
       },
       {
+       "code": {
+        "code": 6847,
+        "description": "\n\n                  \u2003Sleep Apnea Syndromes (Obstructive, Central, Mixed):\n\n                \n\n                "
+       },
        "ratings": [
-        50
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Chronic respiratory failure with carbon dioxide retention or cor pulmonale, or; requires tracheostomy"
+        },
+        {
+         "ratings": [
+          50
+         ],
+         "description": "Requires use of breathing assistance device such as continuous airway pressure (CPAP) machine"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Persistent day-time hypersomnolence"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Asymptomatic but with documented sleep disorder breathing"
+        }
        ],
-       "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
-      },
-      {
-       "ratings": [
-        30
+       "header": [
+        "Rating"
        ],
-       "description": "Thereafter, for five years, or to eleven years after date of inactivity"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
-      },
-      {
-       "ratings": [
-        20
-       ],
-       "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Otherwise"
+       "see_other_notes": [],
+       "notes": []
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6724,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, inactive, advancement unspecified\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "General Rating Formula for Inactive Pulmonary Tuberculosis: For two years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Thereafter for four years, or in any event, to six years after date of inactivity"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Thereafter, for five years, or to eleven years after date of inactivity"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Following far advanced lesions diagnosed at any time while the disease process was active, minimum"
-      },
-      {
-       "ratings": [
-        20
-       ],
-       "description": "Following moderately advanced lesions, provided there is continued disability, emphysema, dyspnea on exertion, impairment of health, etc"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Otherwise"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6730,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, active\n\n                  100\n\n                  \n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "6730\u2003Tuberculosis, pulmonary, chronic, active"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [
-    {
-     "note": "\n\n                  \n\n                    Ratings for Pulmonary Tuberculosis Entitled on August 19, 1968\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                  \n\n                    Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (2): The graduated 50-percent and 30-percent ratings and the permanent 30 percent and 20 percent ratings for inactive pulmonary tuberculosis are not to be combined with ratings for other respiratory disabilities. Following thoracoplasty the rating will be for removal of ribs combined with the rating for collapsed lung. Resection of the ribs incident to thoracoplasty will be rated as removal.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Ratings for Pulmonary Tuberculosis Initially Evaluated After August 19, 1968\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: Active pulmonary tuberculosis will be considered permanently and totally disabling for non-service-connected pension purposes in the following circumstances:\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  (a) Associated with active tuberculosis involving other than the respiratory system.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  (b) With severe associated symptoms or with extensive cavity formation.\n\n                \n\n                "
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
-   "description": "(c) Reactivated cases, generally.\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6731,
-      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, inactive:\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6732,
-      "description": "\n\n                  \u2003Pleurisy, tuberculous, active or inactive:\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [
-    {
-     "note": "\n\n                  (d) With advancement of lesions on successive examinations or while under treatment.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  (e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from \u201cactive\u201d at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600). Rate thoracoplasty as removal of ribs under DC 5297.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: A mandatory examination will be requested immediately following notification that active tuberculosis evaluated under DC 6730 has become inactive. Any change in evaluation will be carried out under the provisions of \u00a7\u20093.105(e).\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate.\n\n                \n\n                "
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
-   "description": "\n\n                    NONTUBERCULOUS DISEASES\n\n                  \n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6817,
-      "description": "\n\n                  \u2003Pulmonary Vascular Disease:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Primary pulmonary hypertension, or; chronic pulmonary thromboembolism with evidence of pulmonary hypertension, right ventricular hypertrophy, or cor pulmonale, or; pulmonary hypertension secondary to other obstructive disease of pulmonary arteries or veins with evidence of right ventricular hypertrophy or cor pulmonale"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "Chronic pulmonary thromboembolism requiring anticoagulant therapy, or; following inferior vena cava surgery without evidence of pulmonary hypertension or right ventricular dysfunction"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Symptomatic, following resolution of acute pulmonary embolism"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Asymptomatic, following resolution of pulmonary thromboembolism"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6819,
-      "description": "\n\n                  \u2003Neoplasms, malignant, any specified part of respiratory system exclusive of skin growths\n\n                  100\n\n                  \n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "6819\u2003Neoplasms, malignant, any specified part of respiratory system exclusive of skin growths"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6820,
-      "description": "\n\n                  \u2003Neoplasms, benign, any specified part of respiratory system. Evaluate using an appropriate respiratory analogy.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
      "notes": [
       {
-       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
-      }
-     ]
-    },
-    {
-     "code": {
-      "code": 6822,
-      "description": "\n\n                  \u2003Actinomycosis.\n\n                \n\n                "
-     },
-     "ratings": [
+       "note": "\n\n                  \n\n                    Note (1): A 100-percent rating shall be assigned for pleurisy with empyema, with or without pleurocutaneous fistula, until resolved.\n\n                  \n\n                \n\n                "
+      },
       {
-       "ratings": [
-        100
-       ],
-       "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
+       "note": "\n\n                  \n\n                    Note (2): Following episodes of total spontaneous pneumothorax, a rating of 100 percent shall be assigned as of the date of hospital admission and shall continue for three months from the first day of the month after hospital discharge.\n\n                  \n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note (3): Gunshot wounds of the pleural cavity with bullet or missile retained in lung, pain or discomfort on exertion, or with scattered rales or some limitation of excursion of diaphragm or of lower chest expansion shall be rated at least 20-percent disabling. Disabling injuries of shoulder girdle muscles (Groups I to IV) shall be separately rated and combined with ratings for respiratory involvement. Involvement of Muscle Group XXI (DC 5321), however, will not be separately rated.\n\n                  \n\n                \n\n                "
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": [
-      {
-       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
-      }
-     ]
-    },
-    {
-     "code": {
-      "code": 6823,
-      "description": "\n\n                  \u2003Nocardiosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": [
-      {
-       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
-      }
-     ]
-    },
-    {
-     "code": {
-      "code": 6824,
-      "description": "\n\n                  \u2003Chronic lung abscess.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Active infection with systemic symptoms such as fever, night sweats, weight loss, or hemoptysis"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": [
-      {
-       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
-      }
-     ]
+     "see_other_notes": []
     }
    ],
-   "notes": [
-    {
-     "note": "\n\n                  \n\n                    Note: Evaluate other residuals following pulmonary embolism under the most appropriate diagnostic code, such as chronic bronchitis (DC 6600) or chronic pleural effusion or fibrosis (DC 6844), but do not combine that evaluation with any of the above evaluations.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).\n\n                \n\n                "
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
-   "description": "\n\n                    Interstitial Lung Disease\n\n                  \n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6825,
-      "description": "\n\n                  \u2003Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis).\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6826,
-      "description": "\n\n                  \u2003Desquamative interstitial pneumonitis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6827,
-      "description": "\n\n                  \u2003Pulmonary alveolar proteinosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6828,
-      "description": "\n\n                  \u2003Eosinophilic granuloma of lung.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6829,
-      "description": "\n\n                  \n\n                  \u2003Drug-induced pulmonary pneumonitis and fibrosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6830,
-      "description": "\n\n                  \u2003Radiation-induced pulmonary pneumonitis and fibrosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6831,
-      "description": "\n\n                  \u2003Hypersensitivity pneumonitis (extrinsic allergic alveolitis).\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6832,
-      "description": "\n\n                  \u2003Pneumoconiosis (silicosis, anthracosis, etc.).\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6833,
-      "description": "\n\n                  \u2003Asbestosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Forced Vital Capacity (FVC) less than 50-percent predicted, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption with cardiorespiratory limitation, or; cor pulmonale or pulmonary hypertension, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FVC of 50- to 64-percent predicted, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum exercise capacity of 15 to 20 ml/kg/min oxygen consumption with cardiorespiratory limitation"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FVC of 65- to 74-percent predicted, or; DLCO (SB) of 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FVC of 75- to 80-percent predicted, or; DLCO (SB) of 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
+   "ratings": [],
    "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "\n\n                    Mycotic Lung Disease\n\n                  \n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6834,
-      "description": "\n\n                  \u2003Histoplasmosis of lung.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Healed and inactive mycotic lesions, asymptomatic"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6835,
-      "description": "\n\n                  \u2003Coccidioidomycosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Healed and inactive mycotic lesions, asymptomatic"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6836,
-      "description": "\n\n                  \u2003Blastomycosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Healed and inactive mycotic lesions, asymptomatic"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6837,
-      "description": "\n\n                  \u2003Cryptococcosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Healed and inactive mycotic lesions, asymptomatic"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6838,
-      "description": "\n\n                  \u2003Aspergillosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Healed and inactive mycotic lesions, asymptomatic"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6839,
-      "description": "\n\n                  \u2003Mucormycosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic pulmonary mycosis with persistent fever, weight loss, night sweats, or massive hemoptysis"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Chronic pulmonary mycosis requiring suppressive therapy with no more than minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Chronic pulmonary mycosis with minimal symptoms such as occasional minor hemoptysis or productive cough"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Healed and inactive mycotic lesions, asymptomatic"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [
-    {
-     "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
-   "description": "\n\n                    Restrictive Lung Disease\n\n                  \n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6840,
-      "description": "\n\n                  \u2003Diaphragm paralysis or paresis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6841,
-      "description": "\n\n                  \u2003Spinal cord injury with respiratory insufficiency.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6842,
-      "description": "\n\n                  \u2003Kyphoscoliosis, pectus excavatum, pectus carinatum.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6843,
-      "description": "\n\n                  \u2003Traumatic chest wall defect, pneumothorax, hernia, etc.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6844,
-      "description": "\n\n                  \u2003Post-surgical residual (lobectomy, pneumonectomy, etc.).\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6845,
-      "description": "\n\n                  \u2003Chronic pleural effusion or fibrosis.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "FEV-1 less than 40 percent of predicted value, or; the ratio of Forced Expiratory Volume in one second to Forced Vital Capacity (FEV-1/FVC) less than 40 percent, or; Diffusion Capacity of the Lung for Carbon Monoxide by the Single Breath Method (DLCO (SB)) less than 40-percent predicted, or; maximum exercise capacity less than 15 ml/kg/min oxygen consumption (with cardiac or respiratory limitation), or; cor pulmonale (right heart failure), or; right ventricular hypertrophy, or; pulmonary hypertension (shown by Echo or cardiac catheterization), or; episode(s) of acute respiratory failure, or; requires outpatient oxygen therapy"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "FEV-1 of 40- to 55-percent predicted, or; FEV-1/FVC of 40 to 55 percent, or; DLCO (SB) of 40- to 55-percent predicted, or; maximum oxygen consumption of 15 to 20 ml/kg/min (with cardiorespiratory limit)"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "FEV-1 of 56- to 70-percent predicted, or; FEV-1/FVC of 56 to 70 percent, or; DLCO (SB) 56- to 65-percent predicted"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "FEV-1 of 71- to 80-percent predicted, or; FEV-1/FVC of 71 to 80 percent, or; DLCO (SB) 66- to 80-percent predicted"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Or rate primary disorder.\n\n                  \n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6846,
-      "description": "\n\n                  \u2003Sarcoidosis:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Cor pulmonale, or; cardiac involvement with congestive heart failure, or; progressive pulmonary disease with fever, night sweats, and weight loss despite treatment"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "Pulmonary involvement requiring systemic high dose (therapeutic) corticosteroids for control"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Pulmonary involvement with persistent symptoms requiring chronic low dose (maintenance) or intermittent corticosteroids"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Chronic hilar adenopathy or stable lung infiltrates without symptoms or physiologic impairment"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 6847,
-      "description": "\n\n                  \u2003Sleep Apnea Syndromes (Obstructive, Central, Mixed):\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Chronic respiratory failure with carbon dioxide retention or cor pulmonale, or; requires tracheostomy"
-      },
-      {
-       "ratings": [
-        50
-       ],
-       "description": "Requires use of breathing assistance device such as continuous airway pressure (CPAP) machine"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Persistent day-time hypersomnolence"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Asymptomatic but with documented sleep disorder breathing"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [
-    {
-     "note": "\n\n                  \n\n                    Note (1): A 100-percent rating shall be assigned for pleurisy with empyema, with or without pleurocutaneous fistula, until resolved.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (2): Following episodes of total spontaneous pneumothorax, a rating of 100 percent shall be assigned as of the date of hospital admission and shall continue for three months from the first day of the month after hospital discharge.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (3): Gunshot wounds of the pleural cavity with bullet or missile retained in lung, pain or discomfort on exertion, or with scattered rales or some limitation of excursion of diaphragm or of lower chest expansion shall be rated at least 20-percent disabling. Disabling injuries of shoulder girdle muscles (Groups I to IV) shall be separately rated and combined with ratings for respiratory involvement. Involvement of Muscle Group XXI (DC 5321), however, will not be separately rated.\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Or rate active disease or residuals as chronic bronchitis (DC 6600) and extra-pulmonary involvement under specific body system involved\n\n                \n\n                "
-    }
-   ],
    "see_other_notes": []
   }
  ],

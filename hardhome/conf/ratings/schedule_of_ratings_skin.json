@@ -2,876 +2,893 @@
  "description": "Schedule of ratings\u2014skin.",
  "subcategories": [
   {
-   "description": "Scar adherent to underlying tissue.\n\n                ",
-   "subcategories": [],
-   "ratings": [
+   "description": "Surface contour of scar elevated or depressed on palpation.\n\n                ",
+   "subcategories": [
     {
-     "code": {
-      "code": 7801,
-      "description": "\n\n                  \u2003Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are deep and nonlinear:\n\n                \n\n                "
-     },
+     "description": "Scar adherent to underlying tissue.\n\n                ",
+     "subcategories": [],
      "ratings": [
       {
+       "code": {
+        "code": 7801,
+        "description": "\n\n                  \u2003Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are deep and nonlinear:\n\n                \n\n                "
+       },
        "ratings": [
-        40
+        {
+         "ratings": [
+          40
+         ],
+         "description": "Area or areas of 144 square inches (929 sq. cm.) or greater"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Area or areas of at least 72 square inches (465 sq. cm.) but less than 144 square inches (929 sq. cm.)"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Area or areas of at least 12 square inches (77 sq. cm.) but less than 72 square inches (465 sq. cm.)"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Area or areas of at least 6 square inches (39 sq. cm.) but less than 12 square inches (77 sq. cm.)"
+        }
        ],
-       "description": "Area or areas of 144 square inches (929 sq. cm.) or greater"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note (1): A deep scar is one associated with underlying soft tissue damage.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (2): If multiple qualifying scars are present, or if a single qualifying scar affects more than one extremity, or a single qualifying scar affects one or more extremities and either the anterior portion or posterior portion of the trunk, or both, or a single qualifying scar affects both the anterior portion and the posterior portion of the trunk, assign a separate evaluation for each affected extremity based on the total area of the qualifying scars that affect that extremity, assign a separate evaluation based on the total area of the qualifying scars that affect the anterior portion of the trunk, and assign a separate evaluation based on the total area of the qualifying scars that affect the posterior portion of the trunk. The midaxillary line on each side separates the anterior and posterior portions of the trunk. Combine the separate evaluations under \u00a7\u20094.25. Qualifying scars are scars that are nonlinear, deep, and are not located on the head, face, or neck.\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 7802,
+        "description": "\n\n                  \u2003Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are superficial and nonlinear:\n\n                \n\n                "
+       },
        "ratings": [
-        30
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Area or areas of 144 square inches (929 sq. cm.) or greater"
+        }
        ],
-       "description": "Area or areas of at least 72 square inches (465 sq. cm.) but less than 144 square inches (929 sq. cm.)"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                  \n\n                    Note (1): A superficial scar is one not associated with underlying soft tissue damage\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (2): If multiple qualifying scars are present, or if a single qualifying scar affects more than one extremity, or a single qualifying scar affects one or more extremities and either the anterior portion or posterior portion of the trunk, or both, or a single qualifying scar affects both the anterior portion and the posterior portion of the trunk, assign a separate evaluation for each affected extremity based on the total area of the qualifying scars that affect that extremity, assign a separate evaluation based on the total area of the qualifying scars that affect the anterior portion of the trunk, and assign a separate evaluation based on the total area of the qualifying scars that affect the posterior portion of the trunk. The midaxillary line on each side separates the anterior and posterior portions of the trunk. Combine the separate evaluations under \u00a7\u20094.25. Qualifying scars are scars that are nonlinear, superficial, and are not located on the head, face, or neck.\n\n                \n\n                "
+        }
+       ]
       },
       {
+       "code": {
+        "code": 7804,
+        "description": "\n\n                  \u2003Scar(s), unstable or painful:\n\n                \n\n                "
+       },
        "ratings": [
-        20
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Five or more scars that are unstable or painful"
+        },
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Three or four scars that are unstable or painful"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "One or two scars that are unstable or painful"
+        }
        ],
-       "description": "Area or areas of at least 12 square inches (77 sq. cm.) but less than 72 square inches (465 sq. cm.)"
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note (1): An unstable scar is one where, for any reason, there is frequent loss of covering of skin over the scar.\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (2): If one or more scars are both unstable and painful, add 10 percent to the evaluation that is based on the total number of unstable or painful scars\n\n                \n\n                "
+        },
+        {
+         "note": "\n\n                  \n\n                    Note (3): Scars evaluated under diagnostic codes 7800, 7801, 7802, or 7805 may also receive an evaluation under this diagnostic code, when applicable\n\n                \n\n                "
+        }
+       ]
       },
       {
-       "ratings": [
-        10
+       "code": {
+        "code": 7805,
+        "description": "\n\n                  \u2003Scars, other (including linear scars) and other effects of scars evaluated under diagnostic codes , , , and :\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
        ],
-       "description": "Area or areas of at least 6 square inches (39 sq. cm.) but less than 12 square inches (77 sq. cm.)"
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Evaluate any disabling effect(s) not considered in a rating provided under diagnostic codes 7800-04 under an appropriate diagnostic code.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7806,
+        "description": "\n\n                  \u2003Dermatitis or eczema.\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Less than 5 percent of the entire body or less than 5 percent of exposed areas affected, and; no more than topical therapy required during the past 12-month period"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7807,
+        "description": "\n\n                  \u2003American (New World) leishmaniasis (mucocutaneous, espundia):\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: Evaluate non-cutaneous (visceral) leishmaniasis under DC 6301 (visceral leishmaniasis).\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 7808,
+        "description": "\n\n                  \u2003Old World leishmaniasis (cutaneous, Oriental sore):\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's, 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disabililty\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: Evaluate non-cutaneous (visceral) leishmaniasis under DC 6301 (visceral leishmaniasis).\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 7809,
+        "description": "\n\n                  \u2003Discoid lupus erythematosus or subacute cutaneous lupus erythematosus:\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability. Do not combine with ratings under DC 6350\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7811,
+        "description": "\n\n                  \u2003Tuberculosis luposa (lupus vulgaris), active or inactive:\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": [
+        {
+         "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 7813,
+        "description": "\n\n                  \u2003Dermatophytosis (ringworm: of body, tinea corporis; of head, tinea capitis; of feet, tinea pedis; of beard area, tinea barbae; of nails, tinea unguium; of inguinal area (jock itch), tinea cruris):\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7815,
+        "description": "\n\n                  \u2003Bullous disorders (including pemphigus vulgaris, pemphigus foliaceous, bullous pemphigoid, dermatitis herpetiformis, epidermolysis bullosa acquisita, benign chronic familial pemphigus (Hailey-Hailey), and porphyria cutanea tarda):\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7816,
+        "description": "\n\n                  \u2003Psoriasis:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7817,
+        "description": "\n\n                  \u2003Exfoliative dermatitis (erythroderma):\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          100
+         ],
+         "description": "Generalized involvement of the skin, plus systemic manifestations (such as fever, weight loss, and hypoproteinemia), and; constant or near-constant systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Generalized involvement of the skin without systemic manifestations, and; constant or near-constant systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Any extent of involvement of the skin, and; systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Any extent of involvement of the skin, and; systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required for a total duration of less than six weeks during the past 12-month period"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Any extent of involvement of the skin, and; no more than topical therapy required during the past 12-month period"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7818,
+        "description": "\n\n                  \u2003Malignant skin neoplasms (other than malignant melanoma):\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or impairment of function\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: If a skin malignancy requires therapy that is comparable to that used for systemic malignancies, i.e., systemic chemotherapy, X-ray therapy more extensive than to the skin, or surgery more extensive than wide local excision, a 100-percent evaluation will be assigned from the date of onset of treatment, and will continue, with a mandatory VA examination six months following the completion of such antineoplastic treatment, and any change in evaluation based upon that or any subsequent examination will be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluation will then be made on residuals. If treatment is confined to the skin, the provisions for a 100-percent evaluation do not apply.\n\n                \n\n                "
+        }
+       ]
+      },
+      {
+       "code": {
+        "code": 7819,
+        "description": "\n\n                  \u2003Benign skin neoplasms:\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or impairment of function\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7820,
+        "description": "\n\n                  \u2003Infections of the skin not listed elsewhere (including bacterial, fungal, viral, treponemal and parasitic diseases):\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7821,
+        "description": "\n\n                  \u2003Cutaneous manifestations of collagen-vascular diseases not listed elsewhere (including scleroderma, calcinosis cutis, and dermatomyositis):\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7822,
+        "description": "\n\n                  \u2003Papulosquamous disorders not listed elsewhere (including lichen planus, large or small plaque parapsoriasis, pityriasis lichenoides et varioliformis acuta (PLEVA), lymphomatoid papulosus, and pityriasis rubra pilaris (PRP)):\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, and; constant or near-constant systemic medications or intensive light therapy required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy or intensive light therapy required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; systemic therapy or intensive light therapy required for a total duration of less than six weeks during the past 12-month period"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7823,
+        "description": "\n\n                  \u2003Vitiligo:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          10
+         ],
+         "description": "With exposed areas affected"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "With no exposed areas affected"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7824,
+        "description": "\n\n                   Diseases of keratinization (including icthyoses, Darier's disease, and palmoplantar keratoderma):\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "With either generalized cutaneous involvement or systemic manifestations, and; constant or near-constant systemic medication, such as immunosuppressive retinoids, required during the past 12-month period"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "With either generalized cutaneous involvement or systemic manifestations, and; intermittent systemic medication, such as immunosuppressive retinoids, required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "With localized or episodic cutaneous involvement and intermittent systemic medication, such as immunosuppressive retinoids, required for a total duration of less than six weeks during the past 12-month period"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "No more than topical therapy required during the past 12-month period"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7825,
+        "description": "\n\n                  \u2003Urticaria:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite continuous immunosuppressive therapy"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Recurrent episodes occurring at least four times during the past 12-month period, and; responding to treatment with antihistamines or sympathomimetics"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7826,
+        "description": "\n\n                  \u2003Vasculitis, primary cutaneous:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite continuous immunosuppressive therapy"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Recurrent episodes occurring one to three times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7827,
+        "description": "\n\n                  \u2003Erythema multiforme; Toxic epidermal necrolysis:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          60
+         ],
+         "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite ongoing immunosuppressive therapy"
+        },
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Recurrent episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Recurrent episodes occurring during the past 12-month period that respond to treatment with antihistamines or sympathomimetics, or; one to three episodes occurring during the past 12-month period requiring intermittent systemic immunosuppressive therapy"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7828,
+        "description": "\n\n                  \u2003Acne:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting 40 percent or more of the face and neck"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting less than 40 percent of the face and neck, or; deep acne other than on the face and neck"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Superficial acne (comedones, papules, pustules, superficial cysts) of any extent"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  \n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7829,
+        "description": "\n\n                  \u2003Chloracne:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting 40 percent or more of the face and neck"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting less than 40 percent of the face and neck, or; deep acne other than on the face and neck"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Superficial acne (comedones, papules, pustules, superficial cysts) of any extent"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
+        }
+       ],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7830,
+        "description": "\n\n                  \u2003Scarring alopecia:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          20
+         ],
+         "description": "Affecting more than 40 percent of the scalp"
+        },
+        {
+         "ratings": [
+          10
+         ],
+         "description": "Affecting 20 to 40 percent of the scalp"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Affecting less than 20 percent of the scalp"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7831,
+        "description": "\n\n                  \u2003Alopecia areata:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          10
+         ],
+         "description": "With loss of all body hair"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "With loss of hair limited to scalp and face"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7832,
+        "description": "\n\n                  \u2003Hyperhidrosis:\n\n                \n\n                "
+       },
+       "ratings": [
+        {
+         "ratings": [
+          30
+         ],
+         "description": "Unable to handle paper or tools because of moisture, and unresponsive to therapy"
+        },
+        {
+         "ratings": [
+          0
+         ],
+         "description": "Able to handle paper or tools after therapy"
+        }
+       ],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [],
+       "notes": []
+      },
+      {
+       "code": {
+        "code": 7833,
+        "description": "\n\n                  \u2003Malignant melanoma:\n\n                \n\n                "
+       },
+       "ratings": [],
+       "header": [
+        "Rating"
+       ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as scars (DC's 7801, 7802, 7803, 7804, or 7805), disfigurement of the head, face, or neck (DC 7800), or impairment of function (under the appropriate body system)\n\n                \n\n                "
+        }
+       ],
+       "notes": [
+        {
+         "note": "\n\n                  \n\n                    Note: If a skin malignancy requires therapy that is comparable to that used for systemic malignancies, i.e., systemic chemotherapy, X-ray therapy more extensive than to the skin, or surgery more extensive than wide local excision, a 100-percent evaluation will be assigned from the date of onset of treatment, and will continue, with a mandatory VA examination six months following the completion of such antineoplastic treatment, and any change in evaluation based upon that or any subsequent examination will be subject to the provisions of \u00a7\u20093.105(e). If there has been no local recurrence or metastasis, evaluation will then be made on residuals. If treatment is confined to the skin, the provisions for a 100-percent evaluation do not apply.\n\n                \n\n              "
+        }
+       ]
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7802,
-      "description": "\n\n                  \u2003Burn scar(s) or scar(s) due to other causes, not of the head, face, or neck, that are superficial and nonlinear:\n\n                \n\n                "
-     },
-     "ratings": [
+     "notes": [
       {
-       "ratings": [
-        10
-       ],
-       "description": "Area or areas of 144 square inches (929 sq. cm.) or greater"
+       "note": "\n\n                  Skin hypo-or hyper-pigmented in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Skin texture abnormal (irregular, atrophic, shiny, scaly, etc.) in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Underlying soft tissue missing in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Skin indurated and inflexible in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note (2): Rate tissue loss of the auricle under DC 6207 (loss of auricle) and anatomical loss of the eye under DC 6061 (anatomical loss of both eyes) or DC 6063 (anatomical loss of one eye), as appropriate.\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note (3): Take into consideration unretouched color photographs when evaluating under these criteria.\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note (4): Separately evaluate disabling effects other than disfigurement that are associated with individual scar(s) of the head, face, or neck, such as pain, instability, and residuals of associated muscle or nerve injury, under the appropriate diagnostic code(s) and apply \u00a7\u20094.25 to combine the evaluation(s) with the evaluation assigned under this diagnostic code.\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note (5): The characteristic(s) of disfigurement may be caused by one scar or by multiple scars; the characteristic(s) required to assign a particular evaluation need not be caused by a single scar in order to assign that evaluation.\n\n                \n\n                "
       }
      ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7804,
-      "description": "\n\n                  \u2003Scar(s), unstable or painful:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Five or more scars that are unstable or painful"
-      },
-      {
-       "ratings": [
-        20
-       ],
-       "description": "Three or four scars that are unstable or painful"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "One or two scars that are unstable or painful"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7805,
-      "description": "\n\n                  \u2003Scars, other (including linear scars) and other effects of scars evaluated under diagnostic codes , , , and :\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7806,
-      "description": "\n\n                  \u2003Dermatitis or eczema.\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Less than 5 percent of the entire body or less than 5 percent of exposed areas affected, and; no more than topical therapy required during the past 12-month period"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7807,
-      "description": "\n\n                  \u2003American (New World) leishmaniasis (mucocutaneous, espundia):\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7808,
-      "description": "\n\n                  \u2003Old World leishmaniasis (cutaneous, Oriental sore):\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's, 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disabililty\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7809,
-      "description": "\n\n                  \u2003Discoid lupus erythematosus or subacute cutaneous lupus erythematosus:\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability. Do not combine with ratings under DC 6350\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7811,
-      "description": "\n\n                  \u2003Tuberculosis luposa (lupus vulgaris), active or inactive:\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7813,
-      "description": "\n\n                  \u2003Dermatophytosis (ringworm: of body, tinea corporis; of head, tinea capitis; of feet, tinea pedis; of beard area, tinea barbae; of nails, tinea unguium; of inguinal area (jock itch), tinea cruris):\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7815,
-      "description": "\n\n                  \u2003Bullous disorders (including pemphigus vulgaris, pemphigus foliaceous, bullous pemphigoid, dermatitis herpetiformis, epidermolysis bullosa acquisita, benign chronic familial pemphigus (Hailey-Hailey), and porphyria cutanea tarda):\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7816,
-      "description": "\n\n                  \u2003Psoriasis:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7817,
-      "description": "\n\n                  \u2003Exfoliative dermatitis (erythroderma):\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Generalized involvement of the skin, plus systemic manifestations (such as fever, weight loss, and hypoproteinemia), and; constant or near-constant systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "Generalized involvement of the skin without systemic manifestations, and; constant or near-constant systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Any extent of involvement of the skin, and; systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Any extent of involvement of the skin, and; systemic therapy such as therapeutic doses of corticosteroids, immunosuppressive retinoids, PUVA (psoralen with long-wave ultraviolet-A light) or UVB (ultraviolet-B light) treatments, or electron beam therapy required for a total duration of less than six weeks during the past 12-month period"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Any extent of involvement of the skin, and; no more than topical therapy required during the past 12-month period"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7818,
-      "description": "\n\n                  \u2003Malignant skin neoplasms (other than malignant melanoma):\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or impairment of function\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7819,
-      "description": "\n\n                  \u2003Benign skin neoplasms:\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or impairment of function\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7820,
-      "description": "\n\n                  \u2003Infections of the skin not listed elsewhere (including bacterial, fungal, viral, treponemal and parasitic diseases):\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as disfigurement of the head, face, or neck (DC 7800), scars (DC's 7801, 7802, 7803, 7804, or 7805), or dermatitis (DC 7806), depending upon the predominant disability\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7821,
-      "description": "\n\n                  \u2003Cutaneous manifestations of collagen-vascular diseases not listed elsewhere (including scleroderma, calcinosis cutis, and dermatomyositis):\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, or; constant or near-constant systemic therapy such as corticosteroids or other immunosuppressive drugs required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; intermittent systemic therapy such as corticosteroids or other immunosuppressive drugs required for a total duration of less than six weeks during the past 12-month period"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7822,
-      "description": "\n\n                  \u2003Papulosquamous disorders not listed elsewhere (including lichen planus, large or small plaque parapsoriasis, pityriasis lichenoides et varioliformis acuta (PLEVA), lymphomatoid papulosus, and pityriasis rubra pilaris (PRP)):\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "More than 40 percent of the entire body or more than 40 percent of exposed areas affected, and; constant or near-constant systemic medications or intensive light therapy required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "20 to 40 percent of the entire body or 20 to 40 percent of exposed areas affected, or; systemic therapy or intensive light therapy required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "At least 5 percent, but less than 20 percent, of the entire body, or at least 5 percent, but less than 20 percent, of exposed areas affected, or; systemic therapy or intensive light therapy required for a total duration of less than six weeks during the past 12-month period"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Less than 5 percent of the entire body or exposed areas affected, and; no more than topical therapy required during the past 12-month period"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7823,
-      "description": "\n\n                  \u2003Vitiligo:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        10
-       ],
-       "description": "With exposed areas affected"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "With no exposed areas affected"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7824,
-      "description": "\n\n                   Diseases of keratinization (including icthyoses, Darier's disease, and palmoplantar keratoderma):\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "With either generalized cutaneous involvement or systemic manifestations, and; constant or near-constant systemic medication, such as immunosuppressive retinoids, required during the past 12-month period"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "With either generalized cutaneous involvement or systemic manifestations, and; intermittent systemic medication, such as immunosuppressive retinoids, required for a total duration of six weeks or more, but not constantly, during the past 12-month period"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "With localized or episodic cutaneous involvement and intermittent systemic medication, such as immunosuppressive retinoids, required for a total duration of less than six weeks during the past 12-month period"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "No more than topical therapy required during the past 12-month period"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7825,
-      "description": "\n\n                  \u2003Urticaria:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite continuous immunosuppressive therapy"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Recurrent episodes occurring at least four times during the past 12-month period, and; responding to treatment with antihistamines or sympathomimetics"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7826,
-      "description": "\n\n                  \u2003Vasculitis, primary cutaneous:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite continuous immunosuppressive therapy"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Recurrent episodes occurring one to three times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy for control"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7827,
-      "description": "\n\n                  \u2003Erythema multiforme; Toxic epidermal necrolysis:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        60
-       ],
-       "description": "Recurrent debilitating episodes occurring at least four times during the past 12-month period despite ongoing immunosuppressive therapy"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Recurrent episodes occurring at least four times during the past 12-month period, and; requiring intermittent systemic immunosuppressive therapy"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Recurrent episodes occurring during the past 12-month period that respond to treatment with antihistamines or sympathomimetics, or; one to three episodes occurring during the past 12-month period requiring intermittent systemic immunosuppressive therapy"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7828,
-      "description": "\n\n                  \u2003Acne:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting 40 percent or more of the face and neck"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting less than 40 percent of the face and neck, or; deep acne other than on the face and neck"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Superficial acne (comedones, papules, pustules, superficial cysts) of any extent"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  \n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7829,
-      "description": "\n\n                  \u2003Chloracne:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting 40 percent or more of the face and neck"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Deep acne (deep inflamed nodules and pus-filled cysts) affecting less than 40 percent of the face and neck, or; deep acne other than on the face and neck"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Superficial acne (comedones, papules, pustules, superficial cysts) of any extent"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Or rate as disfigurement of the head, face, or neck (DC 7800) or scars (DC's 7801, 7802, 7803, 7804, or 7805), depending upon the predominant disability.\n\n                \n\n                "
-      }
-     ],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7830,
-      "description": "\n\n                  \u2003Scarring alopecia:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        20
-       ],
-       "description": "Affecting more than 40 percent of the scalp"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Affecting 20 to 40 percent of the scalp"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Affecting less than 20 percent of the scalp"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7831,
-      "description": "\n\n                  \u2003Alopecia areata:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        10
-       ],
-       "description": "With loss of all body hair"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "With loss of hair limited to scalp and face"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7832,
-      "description": "\n\n                  \u2003Hyperhidrosis:\n\n                \n\n                "
-     },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Unable to handle paper or tools because of moisture, and unresponsive to therapy"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Able to handle paper or tools after therapy"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    },
-    {
-     "code": {
-      "code": 7833,
-      "description": "\n\n                  \u2003Malignant melanoma:\n\n                \n\n                "
-     },
-     "ratings": [],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "\n\n                  Rate as scars (DC's 7801, 7802, 7803, 7804, or 7805), disfigurement of the head, face, or neck (DC 7800), or impairment of function (under the appropriate body system)\n\n                \n\n                "
-      }
-     ],
-     "notes": []
+     "see_other_notes": []
     }
    ],
-   "notes": [
-    {
-     "note": "\n\n                  Skin hypo-or hyper-pigmented in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Skin texture abnormal (irregular, atrophic, shiny, scaly, etc.) in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Underlying soft tissue missing in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Skin indurated and inflexible in an area exceeding six square inches (39 sq. cm.).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (2): Rate tissue loss of the auricle under DC 6207 (loss of auricle) and anatomical loss of the eye under DC 6061 (anatomical loss of both eyes) or DC 6063 (anatomical loss of one eye), as appropriate.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (3): Take into consideration unretouched color photographs when evaluating under these criteria.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (4): Separately evaluate disabling effects other than disfigurement that are associated with individual scar(s) of the head, face, or neck, such as pain, instability, and residuals of associated muscle or nerve injury, under the appropriate diagnostic code(s) and apply \u00a7\u20094.25 to combine the evaluation(s) with the evaluation assigned under this diagnostic code.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (5): The characteristic(s) of disfigurement may be caused by one scar or by multiple scars; the characteristic(s) required to assign a particular evaluation need not be caused by a single scar in order to assign that evaluation.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (1): A deep scar is one associated with underlying soft tissue damage.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (2): If multiple qualifying scars are present, or if a single qualifying scar affects more than one extremity, or a single qualifying scar affects one or more extremities and either the anterior portion or posterior portion of the trunk, or both, or a single qualifying scar affects both the anterior portion and the posterior portion of the trunk, assign a separate evaluation for each affected extremity based on the total area of the qualifying scars that affect that extremity, assign a separate evaluation based on the total area of the qualifying scars that affect the anterior portion of the trunk, and assign a separate evaluation based on the total area of the qualifying scars that affect the posterior portion of the trunk. The midaxillary line on each side separates the anterior and posterior portions of the trunk. Combine the separate evaluations under \u00a7\u20094.25. Qualifying scars are scars that are nonlinear, deep, and are not located on the head, face, or neck.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                  \n\n                    Note (1): A superficial scar is one not associated with underlying soft tissue damage\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (2): If multiple qualifying scars are present, or if a single qualifying scar affects more than one extremity, or a single qualifying scar affects one or more extremities and either the anterior portion or posterior portion of the trunk, or both, or a single qualifying scar affects both the anterior portion and the posterior portion of the trunk, assign a separate evaluation for each affected extremity based on the total area of the qualifying scars that affect that extremity, assign a separate evaluation based on the total area of the qualifying scars that affect the anterior portion of the trunk, and assign a separate evaluation based on the total area of the qualifying scars that affect the posterior portion of the trunk. The midaxillary line on each side separates the anterior and posterior portions of the trunk. Combine the separate evaluations under \u00a7\u20094.25. Qualifying scars are scars that are nonlinear, superficial, and are not located on the head, face, or neck.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (1): An unstable scar is one where, for any reason, there is frequent loss of covering of skin over the scar.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (2): If one or more scars are both unstable and painful, add 10 percent to the evaluation that is based on the total number of unstable or painful scars\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note (3): Scars evaluated under diagnostic codes 7800, 7801, 7802, or 7805 may also receive an evaluation under this diagnostic code, when applicable\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Evaluate any disabling effect(s) not considered in a rating provided under diagnostic codes 7800-04 under an appropriate diagnostic code.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: Evaluate non-cutaneous (visceral) leishmaniasis under DC 6301 (visceral leishmaniasis).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: Evaluate non-cutaneous (visceral) leishmaniasis under DC 6301 (visceral leishmaniasis).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: If a skin malignancy requires therapy that is comparable to that used for systemic malignancies, i.e., systemic chemotherapy, X-ray therapy more extensive than to the skin, or surgery more extensive than wide local excision, a 100-percent evaluation will be assigned from the date of onset of treatment, and will continue, with a mandatory VA examination six months following the completion of such antineoplastic treatment, and any change in evaluation based upon that or any subsequent examination will be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluation will then be made on residuals. If treatment is confined to the skin, the provisions for a 100-percent evaluation do not apply.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Note: If a skin malignancy requires therapy that is comparable to that used for systemic malignancies, i.e., systemic chemotherapy, X-ray therapy more extensive than to the skin, or surgery more extensive than wide local excision, a 100-percent evaluation will be assigned from the date of onset of treatment, and will continue, with a mandatory VA examination six months following the completion of such antineoplastic treatment, and any change in evaluation based upon that or any subsequent examination will be subject to the provisions of \u00a7\u20093.105(e). If there has been no local recurrence or metastasis, evaluation will then be made on residuals. If treatment is confined to the skin, the provisions for a 100-percent evaluation do not apply.\n\n                \n\n              "
-    }
-   ],
+   "ratings": [],
+   "notes": [],
    "see_other_notes": []
   }
  ],
@@ -911,22 +928,19 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note (1):The 8 characteristics of disfigurement, for purposes of evaluation under \u00a7\u20094.118, are:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Scar 5 or more inches (13 or more cm.) in length.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Scar at least one-quarter inch (0.6 cm.) wide at widest part.\n\n                \n\n                "
+    }
+   ]
   }
  ],
- "notes": [
-  {
-   "note": "\n\n                  \n\n                    Note (1):The 8 characteristics of disfigurement, for purposes of evaluation under \u00a7\u20094.118, are:\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Scar 5 or more inches (13 or more cm.) in length.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Scar at least one-quarter inch (0.6 cm.) wide at widest part.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Surface contour of scar elevated or depressed on palpation.\n\n                \n\n                "
-  }
- ],
+ "notes": [],
  "see_other_notes": []
 }

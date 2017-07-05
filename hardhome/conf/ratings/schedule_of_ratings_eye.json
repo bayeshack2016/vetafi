@@ -2,15 +2,278 @@
  "description": "Schedule of ratings\u2014eye.",
  "subcategories": [
   {
-   "description": "Vision in one eye 15/200 (4.5/60):\n\n                ",
+   "description": "\n\n                    Impairment of Central Visual Acuity\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
+    {
+     "code": {
+      "code": 6061,
+      "description": "\n\n                  \u2003Anatomical loss of both eyes\u2009\n\n                  \n\n                  100\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "6061\u2003Anatomical loss of both eyes\u2009\n\n                  "
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 6062,
+      "description": "\n\n                  \u2003No more than light perception in both eyes\u2009\n\n                  \n\n                  100\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "6062\u2003No more than light perception in both eyes\u2009\n\n                  "
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 6063,
+      "description": "\n\n                  \u2003Anatomical loss of one eye:\u2009\n\n                  \n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "In the other eye 5/200 (1.5/60)"
+      },
+      {
+       "ratings": [
+        90
+       ],
+       "description": "In the other eye 10/200 (3/60)"
+      },
+      {
+       "ratings": [
+        80
+       ],
+       "description": "In the other eye 15/200 (4.5/60)"
+      },
+      {
+       "ratings": [
+        70
+       ],
+       "description": "In the other eye 20/200 (6/60)"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "In the other eye 20/100 (6/30)"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        50
+       ],
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 6064,
+      "description": "\n\n                  \u2003No more than light perception in one eye:\u2009\n\n                  \n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "In the other eye 5/200 (1.5/60)"
+      },
+      {
+       "ratings": [
+        90
+       ],
+       "description": "In the other eye 10/200 (3/60)"
+      },
+      {
+       "ratings": [
+        80
+       ],
+       "description": "In the other eye 15/200 (4.5/60)"
+      },
+      {
+       "ratings": [
+        70
+       ],
+       "description": "In the other eye 20/200 (6/60)"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "In the other eye 20/100 (6/30)"
+      },
+      {
+       "ratings": [
+        50
+       ],
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": []
+    },
+    {
+     "code": {
+      "code": 6065,
+      "description": "\n\n                  \u2003Vision in one eye 5/200 (1.5/60):\n\n                \n\n                "
+     },
+     "ratings": [
+      {
+       "ratings": [
+        100
+       ],
+       "description": "In the other eye 5/200 (1.5/60)"
+      },
+      {
+       "ratings": [
+        90
+       ],
+       "description": "In the other eye 10/200 (3/60)"
+      },
+      {
+       "ratings": [
+        80
+       ],
+       "description": "In the other eye 15/200 (4.5/60)"
+      },
+      {
+       "ratings": [
+        70
+       ],
+       "description": "In the other eye 20/200 (6/60)"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "In the other eye 20/100 (6/30)"
+      },
+      {
+       "ratings": [
+        50
+       ],
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      }
+     ],
+     "header": [
+      "Rating"
+     ],
+     "see_other_notes": [],
+     "notes": []
+    },
     {
      "code": {
       "code": 6066,
       "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
      },
      "ratings": [
+      {
+       "ratings": [
+        90
+       ],
+       "description": "In the other eye 10/200 (3/60)"
+      },
+      {
+       "ratings": [
+        80
+       ],
+       "description": "In the other eye 15/200 (4.5/60)"
+      },
+      {
+       "ratings": [
+        70
+       ],
+       "description": "In the other eye 20/200 (6/60)"
+      },
+      {
+       "ratings": [
+        60
+       ],
+       "description": "In the other eye 20/100 (6/30)"
+      },
+      {
+       "ratings": [
+        50
+       ],
+       "description": "In the other eye 20/70 (6/21)"
+      },
+      {
+       "ratings": [
+        40
+       ],
+       "description": "In the other eye 20/50 (6/15)"
+      },
+      {
+       "ratings": [
+        30
+       ],
+       "description": "In the other eye 20/40 (6/12)"
+      },
       {
        "ratings": [
         80
@@ -46,28 +309,7 @@
         20
        ],
        "description": "In the other eye 20/40 (6/12)"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Vision in one eye 20/200 (6/60):\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6066,
-      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
-     },
-     "ratings": [
+      },
       {
        "ratings": [
         70
@@ -97,28 +339,7 @@
         20
        ],
        "description": "In the other eye 20/40 (6/12)"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Vision in one eye 20/100 (6/30):\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6066,
-      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
-     },
-     "ratings": [
+      },
       {
        "ratings": [
         50
@@ -142,28 +363,7 @@
         10
        ],
        "description": "In the other eye 20/40 (6/12)"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Vision in one eye 20/70 (6/21):\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6066,
-      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
-     },
-     "ratings": [
+      },
       {
        "ratings": [
         30
@@ -181,28 +381,7 @@
         10
        ],
        "description": "In the other eye 20/40 (6/12)"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Vision in one eye 20/50 (6/15):\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6066,
-      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
-     },
-     "ratings": [
+      },
       {
        "ratings": [
         10
@@ -214,28 +393,7 @@
         10
        ],
        "description": "In the other eye 20/40 (6/12)"
-      }
-     ],
-     "header": [
-      "Rating"
-     ],
-     "see_other_notes": [],
-     "notes": []
-    }
-   ],
-   "notes": [],
-   "see_other_notes": []
-  },
-  {
-   "description": "Vision in one eye 20/40 (6/12):\n\n                ",
-   "subcategories": [],
-   "ratings": [
-    {
-     "code": {
-      "code": 6066,
-      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
-     },
-     "ratings": [
+      },
       {
        "ratings": [
         0
@@ -247,7 +405,29 @@
       "Rating"
      ],
      "see_other_notes": [],
-     "notes": []
+     "notes": [
+      {
+       "note": "\n\n                  Vision in one eye 10/200 (3/60):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Vision in one eye 15/200 (4.5/60):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Vision in one eye 20/200 (6/60):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Vision in one eye 20/100 (6/30):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Vision in one eye 20/70 (6/21):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Vision in one eye 20/50 (6/15):\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  Vision in one eye 20/40 (6/12):\n\n                \n\n                "
+      }
+     ]
     }
    ],
    "notes": [],
@@ -290,7 +470,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    General Rating Formula for Diagnostic Codes 6000 through 6009\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -327,7 +517,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    General Rating Formula for Diagnostic Codes 6000 through 6009\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -364,7 +564,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    General Rating Formula for Diagnostic Codes 6000 through 6009\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -401,7 +611,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    General Rating Formula for Diagnostic Codes 6000 through 6009\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -438,7 +658,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    General Rating Formula for Diagnostic Codes 6000 through 6009\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -475,7 +705,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    General Rating Formula for Diagnostic Codes 6000 through 6009\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -512,7 +752,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    General Rating Formula for Diagnostic Codes 6000 through 6009\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -531,7 +781,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  Inactive: Evaluate under \u00a7\u20094.88c or \u00a7\u20094.89 of this part, whichever is appropriate.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -549,7 +803,11 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation.\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
@@ -587,7 +845,14 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  Evaluate on the basis of either visual impairment due to angle-closure glaucoma or incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -605,7 +870,11 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Evaluate based on visual impairment due to open-angle glaucoma.\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
@@ -625,7 +894,17 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Continue the 100-percent rating beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating will be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination will be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluate based on residuals.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -637,7 +916,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                  Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -674,7 +957,11 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
@@ -693,7 +980,11 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
@@ -705,7 +996,11 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800).\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
@@ -855,21 +1150,12 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \u2003Preoperative:\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \u2003Postoperative:\n\n                  \n\n                \n\n                "
+     "see_other_note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
@@ -880,16 +1166,17 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
+    },
+    {
+     "see_other_note": "\n\n                  If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia.\n\n                \n\n                "
+    }
+   ],
    "notes": [
     {
-     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
-    },
-    {
      "note": "\n\n                  \u2003Preoperative:\n\n                  \n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     },
     {
      "note": "\n\n                  \u2003Postoperative:\n\n                  \n\n                \n\n                "
@@ -912,7 +1199,11 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step.\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
@@ -944,7 +1235,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -955,7 +1250,11 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings.\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
@@ -963,26 +1262,16 @@
     "code": 6035,
     "description": "\n\n                  \u2003Keratoconus:\n\n                \n\n                "
    },
-   "ratings": [
-    {
-     "ratings": [
-      10
-     ],
-     "description": "Minimum, if there is pain, photophobia, and glare sensitivity"
-    }
-   ],
+   "ratings": [],
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "\n\n                  Evaluate based on impairment of visual acuity.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
+     "see_other_note": "\n\n                  Evaluate based on impairment of visual acuity.\n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
@@ -1000,15 +1289,12 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "\n\n                  Evaluate based on impairment of visual acuity.\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
+     "see_other_note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
@@ -1019,352 +1305,14 @@
    "header": [
     "Rating"
    ],
-   "see_other_notes": [],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "\n\n                  Evaluate based on disfigurement (diagnostic code 7800).\n\n                \n\n                "
-    },
-    {
-     "note": "\n\n                  \n\n                    Impairment of Central Visual Acuity\n\n                  \n\n                \n\n                "
-    }
-   ]
-  },
-  {
-   "code": {
-    "code": 6061,
-    "description": "\n\n                  \u2003Anatomical loss of both eyes\u2009\n\n                  \n\n                  100\n\n                \n\n                "
-   },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "6061\u2003Anatomical loss of both eyes\u2009\n\n                  "
+     "see_other_note": "\n\n                  Evaluate based on disfigurement (diagnostic code 7800).\n\n                \n\n                "
     }
    ],
-   "header": [
-    "Rating"
-   ],
-   "see_other_notes": [],
    "notes": []
-  },
-  {
-   "code": {
-    "code": 6062,
-    "description": "\n\n                  \u2003No more than light perception in both eyes\u2009\n\n                  \n\n                  100\n\n                \n\n                "
-   },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "6062\u2003No more than light perception in both eyes\u2009\n\n                  "
-    }
-   ],
-   "header": [
-    "Rating"
-   ],
-   "see_other_notes": [],
-   "notes": []
-  },
-  {
-   "code": {
-    "code": 6063,
-    "description": "\n\n                  \u2003Anatomical loss of one eye:\u2009\n\n                  \n\n                \n\n                "
-   },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "In the other eye 5/200 (1.5/60)"
-    },
-    {
-     "ratings": [
-      90
-     ],
-     "description": "In the other eye 10/200 (3/60)"
-    },
-    {
-     "ratings": [
-      80
-     ],
-     "description": "In the other eye 15/200 (4.5/60)"
-    },
-    {
-     "ratings": [
-      70
-     ],
-     "description": "In the other eye 20/200 (6/60)"
-    },
-    {
-     "ratings": [
-      60
-     ],
-     "description": "In the other eye 20/100 (6/30)"
-    },
-    {
-     "ratings": [
-      60
-     ],
-     "description": "In the other eye 20/70 (6/21)"
-    },
-    {
-     "ratings": [
-      50
-     ],
-     "description": "In the other eye 20/50 (6/15)"
-    },
-    {
-     "ratings": [
-      40
-     ],
-     "description": "In the other eye 20/40 (6/12)"
-    }
-   ],
-   "header": [
-    "Rating"
-   ],
-   "see_other_notes": [],
-   "notes": []
-  },
-  {
-   "code": {
-    "code": 6064,
-    "description": "\n\n                  \u2003No more than light perception in one eye:\u2009\n\n                  \n\n                \n\n                "
-   },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "In the other eye 5/200 (1.5/60)"
-    },
-    {
-     "ratings": [
-      90
-     ],
-     "description": "In the other eye 10/200 (3/60)"
-    },
-    {
-     "ratings": [
-      80
-     ],
-     "description": "In the other eye 15/200 (4.5/60)"
-    },
-    {
-     "ratings": [
-      70
-     ],
-     "description": "In the other eye 20/200 (6/60)"
-    },
-    {
-     "ratings": [
-      60
-     ],
-     "description": "In the other eye 20/100 (6/30)"
-    },
-    {
-     "ratings": [
-      50
-     ],
-     "description": "In the other eye 20/70 (6/21)"
-    },
-    {
-     "ratings": [
-      40
-     ],
-     "description": "In the other eye 20/50 (6/15)"
-    },
-    {
-     "ratings": [
-      30
-     ],
-     "description": "In the other eye 20/40 (6/12)"
-    }
-   ],
-   "header": [
-    "Rating"
-   ],
-   "see_other_notes": [],
-   "notes": []
-  },
-  {
-   "code": {
-    "code": 6065,
-    "description": "\n\n                  \u2003Vision in one eye 5/200 (1.5/60):\n\n                \n\n                "
-   },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "In the other eye 5/200 (1.5/60)"
-    },
-    {
-     "ratings": [
-      90
-     ],
-     "description": "In the other eye 10/200 (3/60)"
-    },
-    {
-     "ratings": [
-      80
-     ],
-     "description": "In the other eye 15/200 (4.5/60)"
-    },
-    {
-     "ratings": [
-      70
-     ],
-     "description": "In the other eye 20/200 (6/60)"
-    },
-    {
-     "ratings": [
-      60
-     ],
-     "description": "In the other eye 20/100 (6/30)"
-    },
-    {
-     "ratings": [
-      50
-     ],
-     "description": "In the other eye 20/70 (6/21)"
-    },
-    {
-     "ratings": [
-      40
-     ],
-     "description": "In the other eye 20/50 (6/15)"
-    },
-    {
-     "ratings": [
-      30
-     ],
-     "description": "In the other eye 20/40 (6/12)"
-    }
-   ],
-   "header": [
-    "Rating"
-   ],
-   "see_other_notes": [],
-   "notes": []
-  },
-  {
-   "code": {
-    "code": 6066,
-    "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
-   },
-   "ratings": [
-    {
-     "ratings": [
-      90
-     ],
-     "description": "In the other eye 10/200 (3/60)"
-    },
-    {
-     "ratings": [
-      80
-     ],
-     "description": "In the other eye 15/200 (4.5/60)"
-    },
-    {
-     "ratings": [
-      70
-     ],
-     "description": "In the other eye 20/200 (6/60)"
-    },
-    {
-     "ratings": [
-      60
-     ],
-     "description": "In the other eye 20/100 (6/30)"
-    },
-    {
-     "ratings": [
-      50
-     ],
-     "description": "In the other eye 20/70 (6/21)"
-    },
-    {
-     "ratings": [
-      40
-     ],
-     "description": "In the other eye 20/50 (6/15)"
-    },
-    {
-     "ratings": [
-      30
-     ],
-     "description": "In the other eye 20/40 (6/12)"
-    }
-   ],
-   "header": [
-    "Rating"
-   ],
-   "see_other_notes": [],
-   "notes": [
-    {
-     "note": "\n\n                  Vision in one eye 10/200 (3/60):\n\n                \n\n                "
-    }
-   ]
   }
  ],
- "notes": [
-  {
-   "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Inactive: Evaluate under \u00a7\u20094.88c or \u00a7\u20094.89 of this part, whichever is appropriate.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Evaluate on the basis of either visual impairment due to angle-closure glaucoma or incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Evaluate based on visual impairment due to open-angle glaucoma.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: Continue the 100-percent rating beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating will be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination will be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluate based on residuals.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                  Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800).\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings.\n\n                \n\n                "
-  }
- ],
+ "notes": [],
  "see_other_notes": []
 }

@@ -19,7 +19,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate hearing impairment, and complications such as labyrinthitis, tinnitus, facial nerve paralysis, or bone loss of skull, separately.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -50,6 +54,9 @@
     },
     {
      "note": "\n\n                  Rate hearing impairment\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: Objective findings supporting the diagnosis of vestibular disequilibrium are required before a compensable evaluation can be assigned under this code. Hearing impairment or suppuration shall be separately rated and combined.\n\n                \n\n                "
     }
    ]
   },
@@ -82,6 +89,9 @@
     },
     {
      "note": "\n\n                  Rate hearing impairment\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: Objective findings supporting the diagnosis of vestibular disequilibrium are required before a compensable evaluation can be assigned under this code. Hearing impairment or suppuration shall be separately rated and combined.\n\n                \n\n                "
     }
    ]
   },
@@ -114,6 +124,9 @@
     },
     {
      "note": "\n\n                  Rate hearing impairment\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: Objective findings supporting the diagnosis of vestibular disequilibrium are required before a compensable evaluation can be assigned under this code. Hearing impairment or suppuration shall be separately rated and combined.\n\n                \n\n                "
     }
    ]
   },
@@ -146,7 +159,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate Meniere's syndrome either under these criteria or by separately evaluating vertigo (as a peripheral vestibular disorder), hearing impairment, and tinnitus, whichever method results in a higher overall evaluation. But do not combine an evaluation for hearing impairment, tinnitus, or vertigo with an evaluation under diagnostic code 6205.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -196,7 +213,11 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, radiation treatment, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based on that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n                "
+    }
+   ]
   },
   {
    "code": {
@@ -280,31 +301,19 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note (1): A separate evaluation for tinnitus may be combined with an evaluation under diagnostic codes 6100, 6200, 6204, or other diagnostic code, except when tinnitus supports an evaluation under one of those diagnostic codes.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (2): Assign only a single evaluation for recurrent tinnitus, whether the sound is perceived in one ear, both ears, or in the head.\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note (3): Do not evaluate objective tinnitus (in which the sound is audible to other people and has a definable cause that may or may not be pathologic) under this diagnostic code, but evaluate it as part of any underlying condition causing it.\n\n                \n\n              "
+    }
+   ]
   }
  ],
- "notes": [
-  {
-   "note": "\n\n                  \n\n                    Note: Evaluate hearing impairment, and complications such as labyrinthitis, tinnitus, facial nerve paralysis, or bone loss of skull, separately.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: Objective findings supporting the diagnosis of vestibular disequilibrium are required before a compensable evaluation can be assigned under this code. Hearing impairment or suppuration shall be separately rated and combined.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: Evaluate Meniere's syndrome either under these criteria or by separately evaluating vertigo (as a peripheral vestibular disorder), hearing impairment, and tinnitus, whichever method results in a higher overall evaluation. But do not combine an evaluation for hearing impairment, tinnitus, or vertigo with an evaluation under diagnostic code 6205.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, radiation treatment, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based on that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (1): A separate evaluation for tinnitus may be combined with an evaluation under diagnostic codes 6100, 6200, 6204, or other diagnostic code, except when tinnitus supports an evaluation under one of those diagnostic codes.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (2): Assign only a single evaluation for recurrent tinnitus, whether the sound is perceived in one ear, both ears, or in the head.\n\n                \n\n                "
-  },
-  {
-   "note": "\n\n                  \n\n                    Note (3): Do not evaluate objective tinnitus (in which the sound is audible to other people and has a definable cause that may or may not be pathologic) under this diagnostic code, but evaluate it as part of any underlying condition causing it.\n\n                \n\n              "
-  }
- ],
+ "notes": [],
  "see_other_notes": []
 }

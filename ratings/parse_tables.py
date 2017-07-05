@@ -79,7 +79,7 @@ def is_category_row(row_element: ElementTree.Element):
 
     if row_length == 1:
         nwords = len(util.inner_text(entries[0]).split())
-        if nwords <= 8:
+        if nwords <= 10:
             return True
         else:
             return False
@@ -129,10 +129,38 @@ def is_note_row(row_element: ElementTree.Element):
     """
     entries = row_element.findall('ENT')
     row_length = len(entries)
+
+    identifying_fragments = [
+        'combine the evaluations',
+        'thereafter rate residuals',
+        'thereafter: rate residuals',
+        'the total rating for the 1 year period',
+        'the total rating during the 1-year period',
+        'the total rating for the 2-year period',
+        'will not be combined with',
+        'the ending dates of all graduated ratings',
+        'these ratings are applicable only to',
+        '(a)', '(b)', '(c)', '(d)', '(e)', '1.', '2.', '3.', '4.', '5.',
+        '(1)', '(2)', '(3)', '(4)', '(5)',
+        'in length',
+        'scar at least',
+        'in an area exceeding',
+        'whichever results in a higher evaluation',
+        'main areas of dysfunction',
+        'is defined as',
+        'consider the need for',
+        'the table titled'
+    ]
+
     if row_length == 1:
-        return entries[0].find('E') is not None and 'note' in entries[0].find('E').text.lower()
-    else:
-        return False
+        text = util.inner_text(entries[0])
+        if any(x in text.lower() for x in identifying_fragments):
+            return True
+        elif entries[0].find('E') is not None and 'note' in entries[0].find('E').text.lower():
+            return True
+        elif util.inner_text(entries[0]).strip().endswith(':'):
+            return True
+    return False
 
 
 def is_see_other_row(row_element: ElementTree.Element):
@@ -155,14 +183,28 @@ def is_see_other_row(row_element: ElementTree.Element):
         'rate particular condition as',
         'rate as',
         'rate the disability as',
-        'rate as below',
         'rate for',
-        'rate the underlying condition'
+        'rate the underlying condition',
+        'rate under',
+        'will be rated on',
+        'evaluate on the basis of',
+        'evaluate based on',
+        'evaluate under',
+        'see dc ',
+        'rate the residuals of',
+        'or rate according to',
+        'rate residuals as',
+        'rate active disease or residuals as',
+        'depending on the specific residuals, separately evaluate as',
+        'rate according to predominant symptoms',
+        'under an appropriate diagnostic code',
+        'separately evaluate any residual',
+        'will be rated under the diagnostic codes'
     ]
 
     for entry in entries:
         text = util.inner_text(entry)
-        if '§' in text and 'see' in text.lower():
+        if '§' in text and ('see' in text.lower() or 'under' in text.lower()):
             return True
         elif any(x in text.lower() for x in identifying_fragments):
             return True
@@ -196,7 +238,12 @@ class RatingTableStateMachine:
     """
     Defines a state machine for parsing the ratings table XML
     """
-    states = ['category', 'diagnostic_code', 'rating', 'note', 'see_other_note']
+    states = ['category',
+              'diagnostic_code',
+              'rating',
+              'category_note',
+              'rating_note',
+              'see_other_note']
 
     transitions = [
         {'trigger': 'process_category',
@@ -205,7 +252,7 @@ class RatingTableStateMachine:
          'before': 'add_child_category'},
 
         {'trigger': 'process_category',
-         'source': ['rating', 'note', 'see_other_note'],
+         'source': ['rating', 'category_note', 'see_other_note', 'rating_note'],
          'dest': 'category',
          'before': 'add_sibling_category'},
 
@@ -215,7 +262,7 @@ class RatingTableStateMachine:
          'before': 'add_diagnostic_code_info'},
 
         {'trigger': 'process_rating',
-         'source': ['rating', 'diagnostic_code', 'note', 'see_other_note'],
+         'source': ['rating', 'diagnostic_code', 'rating_note', 'see_other_note'],
          'dest': 'rating',
          'before': 'add_rating'},
 
@@ -225,12 +272,12 @@ class RatingTableStateMachine:
          'before': 'add_rating_under_previous_category_diagnostic'},
 
         {'trigger': 'process_combined_diagnostic_rating',
-         'source': ['category', 'rating', 'see_other_note', 'note', 'diagnostic_code'],
+         'source': ['category', 'rating', 'see_other_note', 'rating_note', 'category_note', 'diagnostic_code'],
          'dest': 'rating',
          'before': 'add_combined_diagnostic_rating'},
 
         {'trigger': 'process_diagnostic_code',
-         'source': ['note', 'rating', 'see_other_note', 'category'],
+         'source': ['rating_note', 'rating', 'see_other_note', 'category', 'category_note'],
          'dest': 'diagnostic_code',
          'before': 'add_first_diagnostic_code'},
 
@@ -240,12 +287,17 @@ class RatingTableStateMachine:
          'before': 'add_diagnostic_code'},
 
         {'trigger': 'process_note',
-         'source': ['category', 'rating', 'note', 'diagnostic_code', 'see_other_note'],
-         'dest': 'note',
-         'before': 'add_note'},
+         'source': ['category', 'category_note'],
+         'dest': 'category_note',
+         'before': 'add_category_note'},
+
+        {'trigger': 'process_note',
+         'source': ['rating', 'rating_note', 'diagnostic_code', 'see_other_note'],
+         'dest': 'rating_note',
+         'before': 'add_rating_note'},
 
         {'trigger': 'process_see_other_note',
-         'source': ['rating', 'diagnostic_code', 'see_other_note', 'note'],
+         'source': ['rating', 'diagnostic_code', 'see_other_note', 'rating_note'],
          'dest': 'see_other_note',
          'before': 'add_see_other_note'},
     ]
@@ -293,14 +345,14 @@ class RatingTableStateMachine:
     def add_rating(self, element):
         self.current_diagnostic_code_set.add_rating(models.Rating.from_element(element))
 
-    def add_note(self, element):
+    def add_category_note(self, element):
         self.current_category.add_note(models.RatingNote.from_element(element))
 
+    def add_rating_note(self, element):
+        self.current_diagnostic_code_set.add_note(models.RatingNote.from_element(element))
+
     def add_see_other_note(self, element):
-        if self.current_diagnostic_code_set:
-            self.current_diagnostic_code_set.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
-        else:
-            self.current_category.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
+        self.current_diagnostic_code_set.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
 
     def add_diagnostic_code_info(self, element):
         self.current_diagnostic_code_set.add_note(
@@ -353,9 +405,7 @@ class RatingTableStateMachine:
     def process_row_unsafe(self, row: ElementTree.Element):
         if is_blank_row(row):
             logger.debug("Ignoring blank row:\n" + util.pformat_element(row))
-        elif is_see_other_row(row):
-            logger.debug("See Other:\n" + util.pformat_element(row))
-            self.process_see_other_note(row)
+
         elif is_diagnostic_code_row(row):
             logger.debug("Diagnostic Code:\n" + util.pformat_element(row))
             self.process_diagnostic_code(row)
@@ -365,6 +415,12 @@ class RatingTableStateMachine:
         elif is_rating_row(row):
             logger.debug("Rating:\n" + util.pformat_element(row))
             self.process_rating(row)
+        elif is_note_row(row):
+            logger.debug("Note:\n" + util.pformat_element(row))
+            self.process_note(row)
+        elif is_see_other_row(row):
+            logger.debug("See Other:\n" + util.pformat_element(row))
+            self.process_see_other_note(row)
         elif is_category_row(row):
             logger.debug("Category:\n" + util.pformat_element(row))
             self.process_category(row)
@@ -372,10 +428,7 @@ class RatingTableStateMachine:
             logger.debug("General Rating:\n" + util.pformat_element(row))
             pass
         else:
-            logger.debug("Note:\n" + util.pformat_element(row))
-            self.process_note(row)
-        #else:
-        #    raise ValueError('Unexpected row: {}'.format(util.pformat_element(row)))
+            raise ValueError('Unexpected row: {}'.format(util.pformat_element(row)))
 
 
 def maybe_deduce_diagnosis_from_subject(category: models.RatingCategory):

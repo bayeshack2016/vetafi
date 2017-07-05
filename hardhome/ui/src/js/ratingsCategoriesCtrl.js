@@ -18,7 +18,6 @@ app.controller('ratingsCategoriesCtrl', ['$scope', 'ratingsConfigsService', '$st
 
         $scope.breadcrumbs = tempBreadcrumbs;
         $scope.notes = currentCategory.notes;
-        $scope.see_other_notes = currentCategory.see_other_notes;
 
         console.log(currentCategory);
 

@@ -38,13 +38,13 @@
     "Rating"
    ],
    "see_other_notes": [],
-   "notes": []
+   "notes": [
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluation will be assigned under diagnostic codes 6275 or 6276 only if there is an anatomical or pathological basis for the condition.\n\n                \n\n              "
+    }
+   ]
   }
  ],
- "notes": [
-  {
-   "note": "\n\n                  \n\n                    Note: Evaluation will be assigned under diagnostic codes 6275 or 6276 only if there is an anatomical or pathological basis for the condition.\n\n                \n\n              "
-  }
- ],
+ "notes": [],
  "see_other_notes": []
 }
