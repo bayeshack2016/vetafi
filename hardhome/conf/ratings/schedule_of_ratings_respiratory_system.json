@@ -2,13 +2,13 @@
  "description": "Schedule of ratings\u2014respiratory system.",
  "subcategories": [
   {
-   "description": "DISEASES OF THE NOSE AND THROAT",
+   "description": "\n\n                    DISEASES OF THE NOSE AND THROAT\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6502,
-      "description": "&#;Septum, nasal, deviation of:"
+      "description": "\n\n                  \u2003Septum, nasal, deviation of:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -21,16 +21,17 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": [
       {
-       "note": "Traumatic only,"
+       "note": "\n\n                  Traumatic only,\n\n                \n\n                "
       }
      ]
     },
     {
      "code": {
       "code": 6504,
-      "description": "&#;Nose, loss of part of, or scars:"
+      "description": "\n\n                  \u2003Nose, loss of part of, or scars:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -49,12 +50,17 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  \n\n                  \n\n                    Note: Or evaluate as DC 7800, scars, disfiguring, head, face, or neck.\n\n                  \n\n                \n\n                "
+      }
+     ],
      "notes": []
     },
     {
      "code": {
       "code": 6510,
-      "description": "&#;Sinusitis, pansinusitis, chronic."
+      "description": "\n\n                  \u2003Sinusitis, pansinusitis, chronic.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -85,12 +91,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6511,
-      "description": "&#;Sinusitis, ethmoid, chronic."
+      "description": "\n\n                  \u2003Sinusitis, ethmoid, chronic.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -121,12 +128,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6512,
-      "description": "&#;Sinusitis, frontal, chronic."
+      "description": "\n\n                  \u2003Sinusitis, frontal, chronic.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -157,12 +165,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6513,
-      "description": "&#;Sinusitis, maxillary, chronic."
+      "description": "\n\n                  \u2003Sinusitis, maxillary, chronic.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -193,12 +202,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6514,
-      "description": "&#;Sinusitis, sphenoid, chronic."
+      "description": "\n\n                  \u2003Sinusitis, sphenoid, chronic.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -229,40 +239,25 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6515,
-      "description": "&#;Laryngitis, tuberculous, active or inactive."
+      "description": "\n\n                  \u2003Laryngitis, tuberculous, active or inactive.\n\n                \n\n                "
      },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Hoarseness, with thickening or nodules of cords, polyps, submucous infiltration, or pre-malignant changes on biopsy"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "Hoarseness, with inflammation of cords or mucous membrane"
-      }
-     ],
+     "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
-      {
-       "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
-      }
-     ]
+     "see_other_notes": [],
+     "notes": []
     },
     {
      "code": {
       "code": 6516,
-      "description": "&#;Laryngitis, chronic:"
+      "description": "\n\n                  \u2003Laryngitis, chronic:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -281,16 +276,13 @@
      "header": [
       "Rating"
      ],
-     "notes": [
-      {
-       "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
-      }
-     ]
+     "see_other_notes": [],
+     "notes": []
     },
     {
      "code": {
       "code": 6518,
-      "description": "&#;Laryngectomy, total.\n\n                  \n\n                    &#;100"
+      "description": "\n\n                  \u2003Laryngectomy, total.\n\n                  \n\n                    \u2009100\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -303,12 +295,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6519,
-      "description": "&#;Aphonia, complete organic:"
+      "description": "\n\n                  \u2003Aphonia, complete organic:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -327,12 +320,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6520,
-      "description": "&#;Larynx, stenosis of, including residuals of laryngeal trauma (unilateral or bilateral):"
+      "description": "\n\n                  \u2003Larynx, stenosis of, including residuals of laryngeal trauma (unilateral or bilateral):\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -363,12 +357,17 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  \n\n                    Note: Or evaluate as aphonia (DC 6519).\n\n                  \n\n                \n\n                "
+      }
+     ],
      "notes": []
     },
     {
      "code": {
       "code": 6521,
-      "description": "&#;Pharynx, injuries to:"
+      "description": "\n\n                  \u2003Pharynx, injuries to:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -381,12 +380,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6522,
-      "description": "&#;Allergic or vasomotor rhinitis:"
+      "description": "\n\n                  \u2003Allergic or vasomotor rhinitis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -405,12 +405,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6523,
-      "description": "&#;Bacterial rhinitis:"
+      "description": "\n\n                  \u2003Bacterial rhinitis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -429,12 +430,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6524,
-      "description": "&#;Granulomatous rhinitis:"
+      "description": "\n\n                  \u2003Granulomatous rhinitis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -453,37 +455,34 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician."
+     "note": "\n\n                  \n\n                    Note: An incapacitating episode of sinusitis means one that requires bed rest and treatment by a physician.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520)."
+     "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate.\n\n                \n\n                "
     },
     {
-     "note": "Note: Evaluate incomplete aphonia as laryngitis, chronic (DC 6516)."
+     "note": "\n\n                  Rate the residuals of partial laryngectomy as laryngitis (DC 6516), aphonia (DC 6519), or stenosis of larynx (DC 6520).\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: Evaluate incomplete aphonia as laryngitis, chronic (DC 6516).\n\n                  \n\n                \n\n                "
     }
    ],
-   "see_other_notes": [
-    {
-     "see_other_note": "Note: Or evaluate as DC 7800, scars, disfiguring, head, face, or neck."
-    },
-    {
-     "see_other_note": "Note: Or evaluate as aphonia (DC 6519)."
-    }
-   ]
+   "see_other_notes": []
   },
   {
-   "description": "DISEASES OF THE TRACHEA AND BRONCHI",
+   "description": "\n\n                    DISEASES OF THE TRACHEA AND BRONCHI\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6600,
-      "description": "&#;Bronchitis, chronic:"
+      "description": "\n\n                  \u2003Bronchitis, chronic:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -514,12 +513,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6601,
-      "description": "&#;Bronchiectasis:"
+      "description": "\n\n                  \u2003Bronchiectasis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -550,12 +550,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6602,
-      "description": "&#;Asthma, bronchial:"
+      "description": "\n\n                  \u2003Asthma, bronchial:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -586,12 +587,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6603,
-      "description": "&#;Emphysema, pulmonary:"
+      "description": "\n\n                  \u2003Emphysema, pulmonary:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -622,12 +624,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6604,
-      "description": "&#;Chronic obstructive pulmonary disease:"
+      "description": "\n\n                  \u2003Chronic obstructive pulmonary disease:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -658,30 +661,31 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600)."
+     "note": "\n\n                  Or rate according to pulmonary impairment as for chronic bronchitis (DC 6600).\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Note: An incapacitating episode is one that requires bedrest and treatment by a physician."
+     "note": "\n\n                  \n\n                    Note: An incapacitating episode is one that requires bedrest and treatment by a physician.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Note: In the absence of clinical findings of asthma at time of examination, a verified history of asthmatic attacks must be of record."
+     "note": "\n\n                  \n\n                    Note: In the absence of clinical findings of asthma at time of examination, a verified history of asthmatic attacks must be of record.\n\n                  \n\n                \n\n                "
     }
    ],
    "see_other_notes": []
   },
   {
-   "description": "DISEASES OF THE LUNGS AND PLEURA&#8212;TUBERCULOSIS",
+   "description": "\n\n                    DISEASES OF THE LUNGS AND PLEURA\u2014TUBERCULOSIS\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6701,
-      "description": "&#;Tuberculosis, pulmonary, chronic, far advanced, active\n\n                  100"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, far advanced, active\n\n                  100\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -694,12 +698,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6702,
-      "description": "&#;Tuberculosis, pulmonary, chronic, moderately advanced, active\n\n                  100"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, moderately advanced, active\n\n                  100\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -712,12 +717,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6703,
-      "description": "&#;Tuberculosis, pulmonary, chronic, minimal, active\n\n                  100"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, minimal, active\n\n                  100\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -730,12 +736,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6704,
-      "description": "&#;Tuberculosis, pulmonary, chronic, active, advancement unspecified\n\n                  100"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, active, advancement unspecified\n\n                  100\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -748,12 +755,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6721,
-      "description": "&#;Tuberculosis, pulmonary, chronic, far advanced, inactive"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, far advanced, inactive\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -796,12 +804,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6722,
-      "description": "&#;Tuberculosis, pulmonary, chronic, moderately advanced, inactive"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, moderately advanced, inactive\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -844,12 +853,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6723,
-      "description": "&#;Tuberculosis, pulmonary, chronic, minimal, inactive"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, minimal, inactive\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -892,12 +902,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6724,
-      "description": "&#;Tuberculosis, pulmonary, chronic, inactive, advancement unspecified"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, inactive, advancement unspecified\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -940,12 +951,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6730,
-      "description": "&#;Tuberculosis, pulmonary, chronic, active\n\n                  100"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, active\n\n                  100\n\n                  \n\n                \n\n                "
      },
      "ratings": [
       {
@@ -958,96 +970,91 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Ratings for Pulmonary Tuberculosis Entitled on August 19, 1968"
+     "note": "\n\n                  \n\n                    Ratings for Pulmonary Tuberculosis Entitled on August 19, 1968\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment."
+     "note": "\n\n                  \n\n                  \n\n                    Note (1): The 100-percent rating under codes 6701 through 6724 is not subject to a requirement of precedent hospital treatment. It will be reduced to 50 percent for failure to submit to examination or to follow prescribed treatment upon report to that effect from the medical authorities. When a veteran is placed on the 100-percent rating for inactive tuberculosis, the medical authorities will be appropriately notified of the fact, and of the necessity, as given in footnote 1 to 38 U.S.C. 1156 (and formerly in 38 U.S.C. 356, which has been repealed by Public Law 90-493), to notify the Veterans Service Center in the event of failure to submit to examination or to follow treatment.\n\n                \n\n                "
     },
     {
-     "note": "Note (2): The graduated 50-percent and 30-percent ratings and the permanent 30 percent and 20 percent ratings for inactive pulmonary tuberculosis are not to be combined with ratings for other respiratory disabilities. Following thoracoplasty the rating will be for removal of ribs combined with the rating for collapsed lung. Resection of the ribs incident to thoracoplasty will be rated as removal."
+     "note": "\n\n                  \n\n                    Note (2): The graduated 50-percent and 30-percent ratings and the permanent 30 percent and 20 percent ratings for inactive pulmonary tuberculosis are not to be combined with ratings for other respiratory disabilities. Following thoracoplasty the rating will be for removal of ribs combined with the rating for collapsed lung. Resection of the ribs incident to thoracoplasty will be rated as removal.\n\n                \n\n                "
     },
     {
-     "note": "Ratings for Pulmonary Tuberculosis Initially Evaluated After August 19, 1968"
+     "note": "\n\n                  \n\n                    Ratings for Pulmonary Tuberculosis Initially Evaluated After August 19, 1968\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Note: Active pulmonary tuberculosis will be considered permanently and totally disabling for non-service-connected pension purposes in the following circumstances:"
+     "note": "\n\n                  \n\n                    Note: Active pulmonary tuberculosis will be considered permanently and totally disabling for non-service-connected pension purposes in the following circumstances:\n\n                \n\n                "
     },
     {
-     "note": "(a) Associated with active tuberculosis involving other than the respiratory system."
+     "note": "\n\n                  (a) Associated with active tuberculosis involving other than the respiratory system.\n\n                \n\n                "
     },
     {
-     "note": "(b) With severe associated symptoms or with extensive cavity formation."
+     "note": "\n\n                  (b) With severe associated symptoms or with extensive cavity formation.\n\n                \n\n                "
     }
    ],
    "see_other_notes": []
   },
   {
-   "description": "(c) Reactivated cases, generally.",
+   "description": "(c) Reactivated cases, generally.\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6731,
-      "description": "&#;Tuberculosis, pulmonary, chronic, inactive:"
+      "description": "\n\n                  \u2003Tuberculosis, pulmonary, chronic, inactive:\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6732,
-      "description": "&#;Pleurisy, tuberculous, active or inactive:"
+      "description": "\n\n                  \u2003Pleurisy, tuberculous, active or inactive:\n\n                \n\n                "
      },
-     "ratings": [
-      {
-       "ratings": [
-        100
-       ],
-       "description": "Primary pulmonary hypertension, or; chronic pulmonary thromboembolism with evidence of pulmonary hypertension, right ventricular hypertrophy, or cor pulmonale, or; pulmonary hypertension secondary to other obstructive disease of pulmonary arteries or veins with evidence of right ventricular hypertrophy or cor pulmonale"
-      },
-      {
-       "ratings": [
-        60
-       ],
-       "description": "Chronic pulmonary thromboembolism requiring anticoagulant therapy, or; following inferior vena cava surgery without evidence of pulmonary hypertension or right ventricular dysfunction"
-      },
-      {
-       "ratings": [
-        30
-       ],
-       "description": "Symptomatic, following resolution of acute pulmonary embolism"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Asymptomatic, following resolution of pulmonary thromboembolism"
-      }
-     ],
+     "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
-      {
-       "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
-      },
-      {
-       "note": "NONTUBERCULOUS DISEASES"
-      }
-     ]
+     "see_other_notes": [],
+     "notes": []
+    }
+   ],
+   "notes": [
+    {
+     "note": "\n\n                  (d) With advancement of lesions on successive examinations or while under treatment.\n\n                \n\n                "
     },
+    {
+     "note": "\n\n                  (e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from \u201cactive\u201d at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion.\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600). Rate thoracoplasty as removal of ribs under DC 5297.\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                    Note: A mandatory examination will be requested immediately following notification that active tuberculosis evaluated under DC 6730 has become inactive. Any change in evaluation will be carried out under the provisions of \u00a7\u20093.105(e).\n\n                  \n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89, whichever is appropriate.\n\n                \n\n                "
+    }
+   ],
+   "see_other_notes": []
+  },
+  {
+   "description": "\n\n                    NONTUBERCULOUS DISEASES\n\n                  \n\n                ",
+   "subcategories": [],
+   "ratings": [
     {
      "code": {
       "code": 6817,
-      "description": "&#;Pulmonary Vascular Disease:"
+      "description": "\n\n                  \u2003Pulmonary Vascular Disease:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1078,19 +1085,13 @@
      "header": [
       "Rating"
      ],
-     "notes": [
-      {
-       "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89, whichever is appropriate."
-      },
-      {
-       "note": "NONTUBERCULOUS DISEASES"
-      }
-     ]
+     "see_other_notes": [],
+     "notes": []
     },
     {
      "code": {
       "code": 6819,
-      "description": "&#;Neoplasms, malignant, any specified part of respiratory system exclusive of skin growths\n\n                  100"
+      "description": "\n\n                  \u2003Neoplasms, malignant, any specified part of respiratory system exclusive of skin growths\n\n                  100\n\n                  \n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1103,12 +1104,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6820,
-      "description": "&#;Neoplasms, benign, any specified part of respiratory system. Evaluate using an appropriate respiratory analogy."
+      "description": "\n\n                  \u2003Neoplasms, benign, any specified part of respiratory system. Evaluate using an appropriate respiratory analogy.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1121,16 +1123,17 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": [
       {
-       "note": "Bacterial Infections of the Lung"
+       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
       }
      ]
     },
     {
      "code": {
       "code": 6822,
-      "description": "&#;Actinomycosis."
+      "description": "\n\n                  \u2003Actinomycosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1143,16 +1146,17 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": [
       {
-       "note": "Bacterial Infections of the Lung"
+       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
       }
      ]
     },
     {
      "code": {
       "code": 6823,
-      "description": "&#;Nocardiosis."
+      "description": "\n\n                  \u2003Nocardiosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1165,16 +1169,17 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": [
       {
-       "note": "Bacterial Infections of the Lung"
+       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
       }
      ]
     },
     {
      "code": {
       "code": 6824,
-      "description": "&#;Chronic lung abscess."
+      "description": "\n\n                  \u2003Chronic lung abscess.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1187,46 +1192,35 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": [
       {
-       "note": "Bacterial Infections of the Lung"
+       "note": "\n\n                  \n\n                    Bacterial Infections of the Lung\n\n                  \n\n                \n\n                "
       }
      ]
     }
    ],
    "notes": [
     {
-     "note": "(d) With advancement of lesions on successive examinations or while under treatment."
+     "note": "\n\n                  \n\n                    Note: Evaluate other residuals following pulmonary embolism under the most appropriate diagnostic code, such as chronic bronchitis (DC 6600) or chronic pleural effusion or fibrosis (DC 6844), but do not combine that evaluation with any of the above evaluations.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "(e) Without retrogression of lesions or other evidence of material improvement at the end of six months hospitalization or without change of diagnosis from &#8220;active&#8221; at the end of 12 months hospitalization. Material improvement means lessening or absence of clinical symptoms, and X-ray findings of a stationary or retrogressive lesion."
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600). Rate thoracoplasty as removal of ribs under DC 5297."
-    },
-    {
-     "note": "Note: A mandatory examination will be requested immediately following notification that active tuberculosis evaluated under DC 6730 has become inactive. Any change in evaluation will be carried out under the provisions of &#167;&#8201;3.105(e)."
-    },
-    {
-     "note": "Note: Evaluate other residuals following pulmonary embolism under the most appropriate diagnostic code, such as chronic bronchitis (DC 6600) or chronic pleural effusion or fibrosis (DC 6844), but do not combine that evaluation with any of the above evaluations."
-    },
-    {
-     "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
-    },
-    {
-     "note": "Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600)."
+     "note": "\n\n                  Depending on the specific findings, rate residuals as interstitial lung disease, restrictive lung disease, or, when obstructive lung disease is the major residual, as chronic bronchitis (DC 6600).\n\n                \n\n                "
     }
    ],
    "see_other_notes": []
   },
   {
-   "description": "Interstitial Lung Disease",
+   "description": "\n\n                    Interstitial Lung Disease\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6825,
-      "description": "&#;Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis)."
+      "description": "\n\n                  \u2003Diffuse interstitial fibrosis (interstitial pneumonitis, fibrosing alveolitis).\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1257,12 +1251,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6826,
-      "description": "&#;Desquamative interstitial pneumonitis."
+      "description": "\n\n                  \u2003Desquamative interstitial pneumonitis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1293,12 +1288,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6827,
-      "description": "&#;Pulmonary alveolar proteinosis."
+      "description": "\n\n                  \u2003Pulmonary alveolar proteinosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1329,12 +1325,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6828,
-      "description": "&#;Eosinophilic granuloma of lung."
+      "description": "\n\n                  \u2003Eosinophilic granuloma of lung.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1365,12 +1362,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6829,
-      "description": "&#;Drug-induced pulmonary pneumonitis and fibrosis."
+      "description": "\n\n                  \n\n                  \u2003Drug-induced pulmonary pneumonitis and fibrosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1401,12 +1399,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6830,
-      "description": "&#;Radiation-induced pulmonary pneumonitis and fibrosis."
+      "description": "\n\n                  \u2003Radiation-induced pulmonary pneumonitis and fibrosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1437,12 +1436,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6831,
-      "description": "&#;Hypersensitivity pneumonitis (extrinsic allergic alveolitis)."
+      "description": "\n\n                  \u2003Hypersensitivity pneumonitis (extrinsic allergic alveolitis).\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1473,12 +1473,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6832,
-      "description": "&#;Pneumoconiosis (silicosis, anthracosis, etc.)."
+      "description": "\n\n                  \u2003Pneumoconiosis (silicosis, anthracosis, etc.).\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1509,12 +1510,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6833,
-      "description": "&#;Asbestosis."
+      "description": "\n\n                  \u2003Asbestosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1545,6 +1547,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -1552,13 +1555,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Mycotic Lung Disease",
+   "description": "\n\n                    Mycotic Lung Disease\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6834,
-      "description": "&#;Histoplasmosis of lung."
+      "description": "\n\n                  \u2003Histoplasmosis of lung.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1589,12 +1592,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6835,
-      "description": "&#;Coccidioidomycosis."
+      "description": "\n\n                  \u2003Coccidioidomycosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1625,12 +1629,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6836,
-      "description": "&#;Blastomycosis."
+      "description": "\n\n                  \u2003Blastomycosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1661,12 +1666,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6837,
-      "description": "&#;Cryptococcosis."
+      "description": "\n\n                  \u2003Cryptococcosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1697,12 +1703,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6838,
-      "description": "&#;Aspergillosis."
+      "description": "\n\n                  \u2003Aspergillosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1733,12 +1740,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6839,
-      "description": "&#;Mucormycosis."
+      "description": "\n\n                  \u2003Mucormycosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1769,24 +1777,25 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor."
+     "note": "\n\n                  \n\n                    Note: Coccidioidomycosis has an incubation period up to 21 days, and the disseminated phase is ordinarily manifest within six months of the primary phase. However, there are instances of dissemination delayed up to many years after the initial infection which may have been unrecognized. Accordingly, when service connection is under consideration in the absence of record or other evidence of the disease in service, service in southwestern United States where the disease is endemic and absence of prolonged residence in this locality before or after service will be the deciding factor.\n\n                \n\n                "
     }
    ],
    "see_other_notes": []
   },
   {
-   "description": "Restrictive Lung Disease",
+   "description": "\n\n                    Restrictive Lung Disease\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6840,
-      "description": "&#;Diaphragm paralysis or paresis."
+      "description": "\n\n                  \u2003Diaphragm paralysis or paresis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1817,12 +1826,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6841,
-      "description": "&#;Spinal cord injury with respiratory insufficiency."
+      "description": "\n\n                  \u2003Spinal cord injury with respiratory insufficiency.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1853,12 +1863,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6842,
-      "description": "&#;Kyphoscoliosis, pectus excavatum, pectus carinatum."
+      "description": "\n\n                  \u2003Kyphoscoliosis, pectus excavatum, pectus carinatum.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1889,12 +1900,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6843,
-      "description": "&#;Traumatic chest wall defect, pneumothorax, hernia, etc."
+      "description": "\n\n                  \u2003Traumatic chest wall defect, pneumothorax, hernia, etc.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1925,12 +1937,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6844,
-      "description": "&#;Post-surgical residual (lobectomy, pneumonectomy, etc.)."
+      "description": "\n\n                  \u2003Post-surgical residual (lobectomy, pneumonectomy, etc.).\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1961,12 +1974,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6845,
-      "description": "&#;Chronic pleural effusion or fibrosis."
+      "description": "\n\n                  \u2003Chronic pleural effusion or fibrosis.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -1997,6 +2011,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -2004,13 +2019,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Or rate primary disorder.",
+   "description": "Or rate primary disorder.\n\n                  \n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6846,
-      "description": "&#;Sarcoidosis:"
+      "description": "\n\n                  \u2003Sarcoidosis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -2041,12 +2056,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6847,
-      "description": "&#;Sleep Apnea Syndromes (Obstructive, Central, Mixed):"
+      "description": "\n\n                  \u2003Sleep Apnea Syndromes (Obstructive, Central, Mixed):\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -2077,21 +2093,22 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Note (1): A 100-percent rating shall be assigned for pleurisy with empyema, with or without pleurocutaneous fistula, until resolved."
+     "note": "\n\n                  \n\n                    Note (1): A 100-percent rating shall be assigned for pleurisy with empyema, with or without pleurocutaneous fistula, until resolved.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Note (2): Following episodes of total spontaneous pneumothorax, a rating of 100 percent shall be assigned as of the date of hospital admission and shall continue for three months from the first day of the month after hospital discharge."
+     "note": "\n\n                  \n\n                    Note (2): Following episodes of total spontaneous pneumothorax, a rating of 100 percent shall be assigned as of the date of hospital admission and shall continue for three months from the first day of the month after hospital discharge.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Note (3): Gunshot wounds of the pleural cavity with bullet or missile retained in lung, pain or discomfort on exertion, or with scattered rales or some limitation of excursion of diaphragm or of lower chest expansion shall be rated at least 20-percent disabling. Disabling injuries of shoulder girdle muscles (Groups I to IV) shall be separately rated and combined with ratings for respiratory involvement. Involvement of Muscle Group XXI (DC 5321), however, will not be separately rated."
+     "note": "\n\n                  \n\n                    Note (3): Gunshot wounds of the pleural cavity with bullet or missile retained in lung, pain or discomfort on exertion, or with scattered rales or some limitation of excursion of diaphragm or of lower chest expansion shall be rated at least 20-percent disabling. Disabling injuries of shoulder girdle muscles (Groups I to IV) shall be separately rated and combined with ratings for respiratory involvement. Involvement of Muscle Group XXI (DC 5321), however, will not be separately rated.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Or rate active disease or residuals as chronic bronchitis (DC 6600) and extra-pulmonary involvement under specific body system involved"
+     "note": "\n\n                  Or rate active disease or residuals as chronic bronchitis (DC 6600) and extra-pulmonary involvement under specific body system involved\n\n                \n\n                "
     }
    ],
    "see_other_notes": []

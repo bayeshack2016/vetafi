@@ -2,13 +2,13 @@
  "description": "Schedule of ratings\u2014eye.",
  "subcategories": [
   {
-   "description": "Vision in one eye 15/200 (4.5/60):",
+   "description": "Vision in one eye 15/200 (4.5/60):\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6066,
-      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -51,6 +51,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -58,13 +59,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Vision in one eye 20/200 (6/60):",
+   "description": "Vision in one eye 20/200 (6/60):\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6066,
-      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -101,6 +102,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -108,13 +110,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Vision in one eye 20/100 (6/30):",
+   "description": "Vision in one eye 20/100 (6/30):\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6066,
-      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -145,6 +147,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -152,13 +155,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Vision in one eye 20/70 (6/21):",
+   "description": "Vision in one eye 20/70 (6/21):\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6066,
-      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -183,6 +186,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -190,13 +194,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Vision in one eye 20/50 (6/15):",
+   "description": "Vision in one eye 20/50 (6/15):\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6066,
-      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -215,6 +219,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -222,13 +227,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Vision in one eye 20/40 (6/12):",
+   "description": "Vision in one eye 20/40 (6/12):\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6066,
-      "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+      "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -241,6 +246,7 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
@@ -252,7 +258,7 @@
   {
    "code": {
     "code": 6000,
-    "description": "&#;Choroidopathy, including uveitis, iritis, cyclitis, and choroiditis."
+    "description": "\n\n                  \u2003Choroidopathy, including uveitis, iritis, cyclitis, and choroiditis.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -283,12 +289,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6001,
-    "description": "&#;Keratopathy."
+    "description": "\n\n                  \u2003Keratopathy.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -319,12 +326,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6002,
-    "description": "&#;Scleritis."
+    "description": "\n\n                  \u2003Scleritis.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -355,12 +363,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6006,
-    "description": "&#;Retinopathy or maculopathy."
+    "description": "\n\n                  \u2003Retinopathy or maculopathy.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -391,12 +400,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6007,
-    "description": "&#;Intraocular hemorrhage."
+    "description": "\n\n                  \u2003Intraocular hemorrhage.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -427,12 +437,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6008,
-    "description": "&#;Detachment of retina."
+    "description": "\n\n                  \u2003Detachment of retina.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -463,12 +474,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6009,
-    "description": "&#;Unhealed eye injury."
+    "description": "\n\n                  \u2003Unhealed eye injury.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -499,12 +511,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6010,
-    "description": "&#;Tuberculosis of eye:"
+    "description": "\n\n                  \u2003Tuberculosis of eye:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -517,12 +530,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6011,
-    "description": "&#;Retinal scars, atrophy, or irregularities:"
+    "description": "\n\n                  \u2003Retinal scars, atrophy, or irregularities:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -535,12 +549,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6012,
-    "description": "&#;Angle-closure glaucoma:"
+    "description": "\n\n                  \u2003Angle-closure glaucoma:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -571,12 +586,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6013,
-    "description": "&#;Open-angle glaucoma:"
+    "description": "\n\n                  \u2003Open-angle glaucoma:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -589,12 +605,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6014,
-    "description": "&#;Malignant neoplasms (eyeball only):"
+    "description": "\n\n                  \u2003Malignant neoplasms (eyeball only):\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -607,23 +624,25 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6015,
-    "description": "&#;Benign neoplasms (of eyeball and adnexa):"
+    "description": "\n\n                  \u2003Benign neoplasms (of eyeball and adnexa):\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6016,
-    "description": "&#;Nystagmus, central\n\n                  10"
+    "description": "\n\n                  \u2003Nystagmus, central\n\n                  10\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -636,12 +655,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6017,
-    "description": "&#;Trachomatous conjunctivitis:"
+    "description": "\n\n                  \u2003Trachomatous conjunctivitis:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -654,12 +674,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6018,
-    "description": "&#;Chronic conjunctivitis (nontrachomatous):"
+    "description": "\n\n                  \u2003Chronic conjunctivitis (nontrachomatous):\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -672,23 +693,25 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6019,
-    "description": "&#;Ptosis, unilateral or bilateral:"
+    "description": "\n\n                  \u2003Ptosis, unilateral or bilateral:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6020,
-    "description": "&#;Ectropion:"
+    "description": "\n\n                  \u2003Ectropion:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -707,12 +730,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6021,
-    "description": "&#;Entropion:"
+    "description": "\n\n                  \u2003Entropion:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -731,12 +755,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6022,
-    "description": "&#;Lagophthalmos:"
+    "description": "\n\n                  \u2003Lagophthalmos:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -755,12 +780,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6023,
-    "description": "&#;Loss of eyebrows, complete, unilateral or bilateral\n\n                  10"
+    "description": "\n\n                  \u2003Loss of eyebrows, complete, unilateral or bilateral\n\n                  10\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -773,12 +799,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6024,
-    "description": "&#;Loss of eyelashes, complete, unilateral or bilateral\n\n                  10"
+    "description": "\n\n                  \u2003Loss of eyelashes, complete, unilateral or bilateral\n\n                  10\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -791,12 +818,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6025,
-    "description": "&#;Disorders of the lacrimal apparatus (epiphora, dacryocystitis, etc.):"
+    "description": "\n\n                  \u2003Disorders of the lacrimal apparatus (epiphora, dacryocystitis, etc.):\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -815,60 +843,63 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6026,
-    "description": "&#;Optic neuropathy:"
+    "description": "\n\n                  \u2003Optic neuropathy:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": [
     {
-     "note": "Evaluate based on visual impairment."
+     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     },
     {
-     "note": "&#8195;Preoperative:"
+     "note": "\n\n                  \u2003Preoperative:\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Evaluate based on visual impairment."
+     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     },
     {
-     "note": "&#8195;Postoperative:"
+     "note": "\n\n                  \u2003Postoperative:\n\n                  \n\n                \n\n                "
     }
    ]
   },
   {
    "code": {
     "code": 6027,
-    "description": "&#;Cataract of any type:"
+    "description": "\n\n                  \u2003Cataract of any type:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": [
     {
-     "note": "Evaluate based on visual impairment."
+     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     },
     {
-     "note": "&#8195;Preoperative:"
+     "note": "\n\n                  \u2003Preoperative:\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Evaluate based on visual impairment."
+     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     },
     {
-     "note": "&#8195;Postoperative:"
+     "note": "\n\n                  \u2003Postoperative:\n\n                  \n\n                \n\n                "
     }
    ]
   },
   {
    "code": {
     "code": 6029,
-    "description": "&#;Aphakia or dislocation of crystalline lens:"
+    "description": "\n\n                  \u2003Aphakia or dislocation of crystalline lens:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -881,12 +912,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6030,
-    "description": "&#;Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III)).\n\n                  20"
+    "description": "\n\n                  \u2003Paralysis of accommodation (due to neuropathy of the Oculomotor Nerve (cranial nerve III)).\n\n                  20\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -899,34 +931,37 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6032,
-    "description": "&#;Loss of eyelids, partial or complete:"
+    "description": "\n\n                  \u2003Loss of eyelids, partial or complete:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6034,
-    "description": "&#;Pterygium:"
+    "description": "\n\n                  \u2003Pterygium:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6035,
-    "description": "&#;Keratoconus:"
+    "description": "\n\n                  \u2003Keratoconus:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -939,19 +974,20 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": [
     {
-     "note": "Evaluate based on impairment of visual acuity."
+     "note": "\n\n                  Evaluate based on impairment of visual acuity.\n\n                \n\n                "
     },
     {
-     "note": "Evaluate based on visual impairment."
+     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     }
    ]
   },
   {
    "code": {
     "code": 6036,
-    "description": "&#;Status post corneal transplant:"
+    "description": "\n\n                  \u2003Status post corneal transplant:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -964,37 +1000,39 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": [
     {
-     "note": "Evaluate based on impairment of visual acuity."
+     "note": "\n\n                  Evaluate based on impairment of visual acuity.\n\n                \n\n                "
     },
     {
-     "note": "Evaluate based on visual impairment."
+     "note": "\n\n                  Evaluate based on visual impairment.\n\n                \n\n                "
     }
    ]
   },
   {
    "code": {
     "code": 6037,
-    "description": "&#;Pinguecula:"
+    "description": "\n\n                  \u2003Pinguecula:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": [
     {
-     "note": "Evaluate based on disfigurement (diagnostic code 7800)."
+     "note": "\n\n                  Evaluate based on disfigurement (diagnostic code 7800).\n\n                \n\n                "
     },
     {
-     "note": "Impairment of Central Visual Acuity"
+     "note": "\n\n                  \n\n                    Impairment of Central Visual Acuity\n\n                  \n\n                \n\n                "
     }
    ]
   },
   {
    "code": {
     "code": 6061,
-    "description": "&#;Anatomical loss of both eyes&#;\n\n                  \n\n                  100"
+    "description": "\n\n                  \u2003Anatomical loss of both eyes\u2009\n\n                  \n\n                  100\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1007,12 +1045,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6062,
-    "description": "&#;No more than light perception in both eyes&#;\n\n                  \n\n                  100"
+    "description": "\n\n                  \u2003No more than light perception in both eyes\u2009\n\n                  \n\n                  100\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1025,12 +1064,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6063,
-    "description": "&#;Anatomical loss of one eye:&#;"
+    "description": "\n\n                  \u2003Anatomical loss of one eye:\u2009\n\n                  \n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1085,12 +1125,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6064,
-    "description": "&#;No more than light perception in one eye:&#;"
+    "description": "\n\n                  \u2003No more than light perception in one eye:\u2009\n\n                  \n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1145,12 +1186,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6065,
-    "description": "&#;Vision in one eye 5/200 (1.5/60):"
+    "description": "\n\n                  \u2003Vision in one eye 5/200 (1.5/60):\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1205,12 +1247,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6066,
-    "description": "&#;Visual acuity in one eye 10/200 (3/60) or better:"
+    "description": "\n\n                  \u2003Visual acuity in one eye 10/200 (3/60) or better:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1259,67 +1302,68 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": [
     {
-     "note": "Vision in one eye 10/200 (3/60):"
+     "note": "\n\n                  Vision in one eye 10/200 (3/60):\n\n                \n\n                "
     }
    ]
   }
  ],
  "notes": [
   {
-   "note": "Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation."
+   "note": "\n\n                  Evaluate on the basis of either visual impairment due to the particular condition or on incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
   },
   {
-   "note": "Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider."
+   "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
   },
   {
-   "note": "Inactive: Evaluate under &#167;&#8201;4.88c or &#167;&#8201;4.89 of this part, whichever is appropriate."
+   "note": "\n\n                  Inactive: Evaluate under \u00a7\u20094.88c or \u00a7\u20094.89 of this part, whichever is appropriate.\n\n                \n\n                "
   },
   {
-   "note": "Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation."
+   "note": "\n\n                  Alternatively, evaluate based on visual impairment due to retinal scars, atrophy, or irregularities, if this would result in a higher evaluation.\n\n                \n\n                "
   },
   {
-   "note": "Evaluate on the basis of either visual impairment due to angle-closure glaucoma or incapacitating episodes, whichever results in a higher evaluation."
+   "note": "\n\n                  Evaluate on the basis of either visual impairment due to angle-closure glaucoma or incapacitating episodes, whichever results in a higher evaluation.\n\n                \n\n                "
   },
   {
-   "note": "Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider."
+   "note": "\n\n                  \n\n                    Note: For VA purposes, an incapacitating episode is a period of acute symptoms severe enough to require prescribed bed rest and treatment by a physician or other healthcare provider.\n\n                \n\n                "
   },
   {
-   "note": "Evaluate based on visual impairment due to open-angle glaucoma."
+   "note": "\n\n                  Evaluate based on visual impairment due to open-angle glaucoma.\n\n                \n\n                "
   },
   {
-   "note": "Note: Continue the 100-percent rating beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating will be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination will be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluate based on residuals."
+   "note": "\n\n                  \n\n                    Note: Continue the 100-percent rating beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating will be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination will be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, evaluate based on residuals.\n\n                \n\n                "
   },
   {
-   "note": "Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:"
+   "note": "\n\n                  Malignant neoplasm of the eyeball that does not require therapy comparable to that for systemic malignancies:\n\n                \n\n                "
   },
   {
-   "note": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
+   "note": "\n\n                  Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
   },
   {
-   "note": "Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
+   "note": "\n\n                  \n\n                  Separately evaluate visual impairment and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
   },
   {
-   "note": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800)."
+   "note": "\n\n                  Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).\n\n                \n\n                "
   },
   {
-   "note": "Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800)."
+   "note": "\n\n                  Inactive: Evaluate based on residuals, such as visual impairment and disfigurement (diagnostic code 7800).\n\n                \n\n                "
   },
   {
-   "note": "Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800)."
+   "note": "\n\n                  Evaluate based on visual impairment or, in the absence of visual impairment, on disfigurement (diagnostic code 7800).\n\n                \n\n                "
   },
   {
-   "note": "If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia."
+   "note": "\n\n                  If a replacement lens is present (pseudophakia), evaluate based on visual impairment. If there is no replacement lens, evaluate based on aphakia.\n\n                \n\n                "
   },
   {
-   "note": "Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step."
+   "note": "\n\n                  Evaluate based on visual impairment, and elevate the resulting level of visual impairment one step.\n\n                \n\n                "
   },
   {
-   "note": "Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations."
+   "note": "\n\n                  Separately evaluate both visual impairment due to eyelid loss and nonvisual impairment, e.g., disfigurement (diagnostic code 7800), and combine the evaluations.\n\n                \n\n                "
   },
   {
-   "note": "Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings."
+   "note": "\n\n                  Evaluate based on visual impairment, disfigurement (diagnostic code 7800), conjunctivitis (diagnostic code 6018), etc., depending on the particular findings.\n\n                \n\n                "
   }
  ],
  "see_other_notes": []

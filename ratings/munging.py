@@ -49,3 +49,16 @@ def extract_entry_text(row: ElementTree.Element):
     """
     return ' '.join([x.text for x in row.findall('E')]) + row.text if row.text is not None else ''
 
+
+def describes_diagnosis(text: str) -> bool:
+    """
+    Return true if the text describes a diagnosis. 
+    """
+    if len(text.split()) == 2 and 'dysfunction' in text.lower():
+        return True
+    elif 'continual urine leakage' in text.lower():
+        return True
+    elif 'urninary tract infection' in text.lower():
+        return True
+    else:
+        return False

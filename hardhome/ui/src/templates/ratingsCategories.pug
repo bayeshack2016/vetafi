@@ -1,6 +1,5 @@
 div#vfi-ratings-categories
-  ul
-    li(ng-repeat="category in breadcrumbs") {{category}}
+  rating-category-breadcrumbs(breadcrumbs="breadcrumbs")
 
   h4 {{category}}
 
@@ -16,3 +15,19 @@ div#vfi-ratings-categories
         td
           button(ng-click="gotoRating($index)") Goto
 
+  table(ng-show="{{notes.length > 0}}")
+    thead
+      tr
+        th Notes
+    tbody
+      tr(ng-repeat="note in notes")
+        td {{note.note}}
+
+
+  table(ng-show="{{see_other_notes.length > 0}}")
+    thead
+      tr
+        th See Other Notes
+    tbody
+      tr(ng-repeat="note in see_other_notes")
+        td {{note.see_other_note}}

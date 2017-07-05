@@ -2,13 +2,13 @@
  "description": "Schedule of ratings\u2014gynecological conditions and disorders of the breast.",
  "subcategories": [
   {
-   "description": "Thereafter:",
+   "description": "Thereafter:\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 7619,
-      "description": "&#;Ovary, removal of:"
+      "description": "\n\n                  \u2003Ovary, removal of:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -27,12 +27,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7620,
-      "description": "&#;Ovaries, atrophy of both, complete\n\n                  \n\n                    &#;20"
+      "description": "\n\n                  \u2003Ovaries, atrophy of both, complete\n\n                  \n\n                    \u200920\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -45,12 +46,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7621,
-      "description": "&#;Uterus, prolapse:"
+      "description": "\n\n                  \u2003Uterus, prolapse:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -69,12 +71,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7622,
-      "description": "&#;Uterus, displacement of:"
+      "description": "\n\n                  \u2003Uterus, displacement of:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -93,12 +96,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7623,
-      "description": "&#;Pregnancy, surgical complications of:"
+      "description": "\n\n                  \u2003Pregnancy, surgical complications of:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -117,12 +121,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7624,
-      "description": "&#;Fistula, rectovaginal:"
+      "description": "\n\n                  \u2003Fistula, rectovaginal:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -159,12 +164,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7625,
-      "description": "&#;Fistula, urethrovaginal:"
+      "description": "\n\n                  \u2003Fistula, urethrovaginal:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -195,12 +201,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7626,
-      "description": "&#;Breast, surgery of:"
+      "description": "\n\n                  \u2003Breast, surgery of:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -219,9 +226,10 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": [
       {
-       "note": "Following radical mastectomy:"
+       "note": "\n\n                  Following radical mastectomy:\n\n                \n\n                "
       }
      ]
     }
@@ -230,13 +238,13 @@
    "see_other_notes": []
   },
   {
-   "description": "Following modified radical mastectomy:",
+   "description": "Following modified radical mastectomy:\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 7626,
-      "description": "&#;Breast, surgery of:"
+      "description": "\n\n                  \u2003Breast, surgery of:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -273,27 +281,28 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Following simple mastectomy or wide local excision with significant alteration of size or form:"
+     "note": "\n\n                  Following simple mastectomy or wide local excision with significant alteration of size or form:\n\n                \n\n                "
     },
     {
-     "note": "Following wide local excision without significant alteration of size or form:"
+     "note": "\n\n                  Following wide local excision without significant alteration of size or form:\n\n                \n\n                "
     }
    ],
    "see_other_notes": []
   },
   {
-   "description": "Note: For VA purposes:",
+   "description": "\n\n                    Note: For VA purposes:\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 7627,
-      "description": "&#;Malignant neoplasms of gynecological system or breast\n\n                  100"
+      "description": "\n\n                  \u2003Malignant neoplasms of gynecological system or breast\n\n                  100\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -306,12 +315,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7628,
-      "description": "&#;Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin."
+      "description": "\n\n                  \u2003Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin.\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -336,12 +346,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7629,
-      "description": "&#;Endometriosis:"
+      "description": "\n\n                  \u2003Endometriosis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -366,27 +377,28 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "(1) Radical mastectomy means removal of the entire breast, underlying pectoral muscles, and regional lymph nodes up to the coracoclavicular ligament."
+     "note": "\n\n                  (1) Radical mastectomy means removal of the entire breast, underlying pectoral muscles, and regional lymph nodes up to the coracoclavicular ligament.\n\n                \n\n                "
     },
     {
-     "note": "(2) Modified radical mastectomy means removal of the entire breast and axillary lymph nodes (in continuity with the breast). Pectoral muscles are left intact."
+     "note": "\n\n                  (2) Modified radical mastectomy means removal of the entire breast and axillary lymph nodes (in continuity with the breast). Pectoral muscles are left intact.\n\n                \n\n                "
     },
     {
-     "note": "(3) Simple (or total) mastectomy means removal of all of the breast tissue, nipple, and a small portion of the overlying skin, but lymph nodes and muscles are left intact."
+     "note": "\n\n                  (3) Simple (or total) mastectomy means removal of all of the breast tissue, nipple, and a small portion of the overlying skin, but lymph nodes and muscles are left intact.\n\n                \n\n                "
     },
     {
-     "note": "(4) Wide local excision (including partial mastectomy, lumpectomy, tylectomy, segmentectomy, and quadrantectomy) means removal of a portion of the breast tissue."
+     "note": "\n\n                  (4) Wide local excision (including partial mastectomy, lumpectomy, tylectomy, segmentectomy, and quadrantectomy) means removal of a portion of the breast tissue.\n\n                \n\n                "
     },
     {
-     "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+     "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n                "
     },
     {
-     "note": "Note: Diagnosis of endometriosis must be substantiated by laparoscopy."
+     "note": "\n\n                  \n\n                    Note: Diagnosis of endometriosis must be substantiated by laparoscopy.\n\n                \n\n                "
     }
    ],
    "see_other_notes": []
@@ -396,7 +408,7 @@
   {
    "code": {
     "code": 7610,
-    "description": "&#;Vulva, disease or injury of (including vulvovaginitis)."
+    "description": "\n\n                  \u2003Vulva, disease or injury of (including vulvovaginitis).\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -421,12 +433,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7611,
-    "description": "&#;Vagina, disease or injury of."
+    "description": "\n\n                  \u2003Vagina, disease or injury of.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -451,12 +464,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7612,
-    "description": "&#;Cervix, disease or injury of."
+    "description": "\n\n                  \u2003Cervix, disease or injury of.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -481,12 +495,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7613,
-    "description": "&#;Uterus, disease, injury, or adhesions of."
+    "description": "\n\n                  \u2003Uterus, disease, injury, or adhesions of.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -511,12 +526,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7614,
-    "description": "&#;Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID))."
+    "description": "\n\n                  \u2003Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID)).\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -541,12 +557,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7615,
-    "description": "&#;Ovary, disease, injury, or adhesions of."
+    "description": "\n\n                  \u2003Ovary, disease, injury, or adhesions of.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -571,12 +588,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7617,
-    "description": "&#;Uterus and both ovaries, removal of, complete:"
+    "description": "\n\n                  \u2003Uterus and both ovaries, removal of, complete:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -595,12 +613,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7618,
-    "description": "&#;Uterus, removal of, including corpus:"
+    "description": "\n\n                  \u2003Uterus, removal of, including corpus:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -619,12 +638,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7619,
-    "description": "&#;Ovary, removal of:"
+    "description": "\n\n                  \u2003Ovary, removal of:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -637,15 +657,16 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   }
  ],
  "notes": [
   {
-   "note": "Note 1: Natural menopause, primary amenorrhea, and pregnancy and childbirth are not disabilities for rating purposes. Chronic residuals of medical or surgical complications of pregnancy may be disabilities for rating purposes."
+   "note": "\n\n                  \n\n                    Note 1: Natural menopause, primary amenorrhea, and pregnancy and childbirth are not disabilities for rating purposes. Chronic residuals of medical or surgical complications of pregnancy may be disabilities for rating purposes.\n\n                \n\n                "
   },
   {
-   "note": "Note 2: When evaluating any claim involving loss or loss of use of one or more creative organs or anatomical loss of one or both breasts, refer to &#167;&#8201;3.350 of this chapter to determine whether the veteran may be entitled to special monthly compensation. Footnotes in the schedule indicate conditions which potentially establish entitlement to special monthly compensation; however, almost any condition in this section might, under certain circumstances, establish entitlement to special monthly compensation."
+   "note": "\n\n                  \n\n                    Note 2: When evaluating any claim involving loss or loss of use of one or more creative organs or anatomical loss of one or both breasts, refer to \u00a7\u20093.350 of this chapter to determine whether the veteran may be entitled to special monthly compensation. Footnotes in the schedule indicate conditions which potentially establish entitlement to special monthly compensation; however, almost any condition in this section might, under certain circumstances, establish entitlement to special monthly compensation.\n\n                \n\n                "
   }
  ],
  "see_other_notes": []

@@ -240,7 +240,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $u
       controller: 'ratingsCategoriesCtrl'
   });
 
-    $stateProvider.state({
+  $stateProvider.state({
         name: 'root.ratings',
         url: '/ratings/category/{categoryPath}/rating/{ratingPath}',
         templateUrl: 'templates/ratings.html',

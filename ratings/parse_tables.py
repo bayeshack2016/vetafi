@@ -110,7 +110,8 @@ def get_rating(row_element: ElementTree.Element):
 def is_diagnostic_code_row(row_element: ElementTree.Element):
     entries = row_element.findall('ENT')
     row_length = len(entries)
-    return row_length == 1 and munging.describes_diagnostic_code(entries[0].text)
+    return row_length == 1 and (
+        munging.describes_diagnostic_code(entries[0].text) or munging.describes_diagnosis(entries[0].text))
 
 
 def is_note_row(row_element: ElementTree.Element):
@@ -152,14 +153,16 @@ def is_see_other_row(row_element: ElementTree.Element):
     identifying_fragments = [
         'or evaluate as',
         'rate particular condition as',
-        ' rate as',
+        'rate as',
         'rate the disability as',
-        'rate as below'
+        'rate as below',
+        'rate for',
+        'rate the underlying condition'
     ]
 
     for entry in entries:
         text = util.inner_text(entry)
-        if '&#167;' in text and 'see' in text.lower():
+        if '§' in text and 'see' in text.lower():
             return True
         elif any(x in text.lower() for x in identifying_fragments):
             return True
@@ -186,7 +189,7 @@ def is_blank_row(row_element: ElementTree.Element):
     """
     Any row with contains only whitespace in its inner XML text.
     """
-    return util.inner_text(row_element).replace('&#8201;', '').strip() == ''
+    return util.inner_text(row_element).replace('\u8201', '').strip() == ''
 
 
 class RatingTableStateMachine:
@@ -242,7 +245,7 @@ class RatingTableStateMachine:
          'before': 'add_note'},
 
         {'trigger': 'process_see_other_note',
-         'source': ['rating', 'diagnostic_code', 'see_other_note', 'category', 'note'],
+         'source': ['rating', 'diagnostic_code', 'see_other_note', 'note'],
          'dest': 'see_other_note',
          'before': 'add_see_other_note'},
     ]
@@ -267,6 +270,7 @@ class RatingTableStateMachine:
         self.current_category.add_subcategory(subcategory)
         self.last_category = self.current_category
         self.current_category = subcategory
+        self.current_diagnostic_code_set = None
 
     def add_sibling_category(self, element):
         desc = get_description(element)
@@ -274,6 +278,7 @@ class RatingTableStateMachine:
         self.current_category.parent.add_subcategory(category)
         self.last_category = self.current_category
         self.current_category = category
+        self.current_diagnostic_code_set = None
 
     def add_first_diagnostic_code(self, element):
         logger.debug('Add First Diagnostic Code:\n' + util.pformat_element(element))
@@ -292,7 +297,10 @@ class RatingTableStateMachine:
         self.current_category.add_note(models.RatingNote.from_element(element))
 
     def add_see_other_note(self, element):
-        self.current_category.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
+        if self.current_diagnostic_code_set:
+            self.current_diagnostic_code_set.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
+        else:
+            self.current_category.add_see_other_note(models.SeeOtherRatingNote.from_element(element))
 
     def add_diagnostic_code_info(self, element):
         self.current_diagnostic_code_set.add_note(

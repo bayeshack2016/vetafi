@@ -5,7 +5,7 @@
   {
    "code": {
     "code": 7700,
-    "description": "&#;Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:"
+    "description": "\n\n                  \u2003Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -42,12 +42,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7702,
-    "description": "&#;Agranulocytosis, acute:"
+    "description": "\n\n                  \u2003Agranulocytosis, acute:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -78,12 +79,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7703,
-    "description": "&#;Leukemia:"
+    "description": "\n\n                  \u2003Leukemia:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -96,12 +98,17 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Otherwise rate as anemia (code 7700) or aplastic anemia (code 7716), whichever would result in the greater benefit.\n\n                  \n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
    "code": {
     "code": 7704,
-    "description": "&#;Polycythemia vera:"
+    "description": "\n\n                  \u2003Polycythemia vera:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -126,12 +133,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7705,
-    "description": "&#;Thrombocytopenia, primary, idiopathic or immune:"
+    "description": "\n\n                  \u2003Thrombocytopenia, primary, idiopathic or immune:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -162,12 +170,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7706,
-    "description": "&#;Splenectomy\n\n                  20"
+    "description": "\n\n                  \u2003Splenectomy\n\n                  20\n\n                  \n\n                \n\n                "
    },
    "ratings": [
     {
@@ -180,67 +189,60 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7707,
-    "description": "&#;Spleen, injury of, healed."
-   },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "With active disease or during a treatment phase"
-    }
-   ],
-   "header": [
-    "Rating"
-   ],
-   "notes": [
-    {
-     "note": "Rate for any residuals."
-    }
-   ]
-  },
-  {
-   "code": {
-    "code": 7709,
-    "description": "&#;Hodgkin's disease:"
-   },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "With active disease or during a treatment phase"
-    }
-   ],
-   "header": [
-    "Rating"
-   ],
-   "notes": [
-    {
-     "note": "Rate for any residuals."
-    }
-   ]
-  },
-  {
-   "code": {
-    "code": 7710,
-    "description": "&#;Adenitis, tuberculous, active or inactive."
+    "description": "\n\n                  \u2003Spleen, injury of, healed.\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Rate for any residuals.\n\n                \n\n                "
+    }
+   ],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7709,
+    "description": "\n\n                  \u2003Hodgkin's disease:\n\n                \n\n                "
+   },
+   "ratings": [
+    {
+     "ratings": [
+      100
+     ],
+     "description": "With active disease or during a treatment phase"
+    }
+   ],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
+   "notes": []
+  },
+  {
+   "code": {
+    "code": 7710,
+    "description": "\n\n                  \u2003Adenitis, tuberculous, active or inactive.\n\n                \n\n                "
+   },
+   "ratings": [],
+   "header": [
+    "Rating"
+   ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7714,
-    "description": "&#;Sickle cell anemia:"
+    "description": "\n\n                  \u2003Sickle cell anemia:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -271,12 +273,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7715,
-    "description": "&#;Non-Hodgkin's lymphoma:"
+    "description": "\n\n                  \u2003Non-Hodgkin's lymphoma:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -289,12 +292,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7716,
-    "description": "&#;Aplastic anemia:"
+    "description": "\n\n                  \u2003Aplastic anemia:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -325,12 +329,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7717,
-    "description": "&#;AL amyloidosis (primary amyloidosis)\n\n                  100"
+    "description": "\n\n                  \u2003AL amyloidosis (primary amyloidosis)\n\n                  100\n\n                \n\n              "
    },
    "ratings": [
     {
@@ -343,44 +348,41 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   }
  ],
  "notes": [
   {
-   "note": "Note: Evaluate complications of pernicious anemia, such as dementia or peripheral neuropathy, separately."
+   "note": "\n\n                  \n\n                    Note: Evaluate complications of pernicious anemia, such as dementia or peripheral neuropathy, separately.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: The 100 percent rating for bone marrow transplant shall be assigned as of the date of hospital admission and shall continue with a mandatory VA examination six months following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
+   "note": "\n\n                  \n\n                    Note: The 100 percent rating for bone marrow transplant shall be assigned as of the date of hospital admission and shall continue with a mandatory VA examination six months following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no recurrence, rate on residuals."
+   "note": "\n\n                  \n\n                    Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no recurrence, rate on residuals.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: Rate complications such as hypertension, gout, stroke or thrombotic disease separately."
+   "note": "\n\n                  \n\n                    Note: Rate complications such as hypertension, gout, stroke or thrombotic disease separately.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: Rate complications such as systemic infections with encapsulated bacteria separately."
+   "note": "\n\n                  \n\n                    Note: Rate complications such as systemic infections with encapsulated bacteria separately.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+   "note": "\n\n                  \n\n                    Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Rate under &#167;&#167;&#8201;4.88c or 4.89 of this part, whichever is appropriate."
+   "note": "\n\n                  Rate under \u00a7\u00a7\u20094.88c or 4.89 of this part, whichever is appropriate.\n\n                \n\n                "
   },
   {
-   "note": "Note: Sickle cell trait alone, without a history of directly attributable pathological findings, is not a ratable disability. Cases of symptomatic sickle cell trait will be forwarded to the Director, Compensation Service, for consideration under &#167;&#8201;3.321(b)(1) of this chapter."
+   "note": "\n\n                  \n\n                    Note: Sickle cell trait alone, without a history of directly attributable pathological findings, is not a ratable disability. Cases of symptomatic sickle cell trait will be forwarded to the Director, Compensation Service, for consideration under \u00a7\u20093.321(b)(1) of this chapter.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be dtermined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+   "note": "\n\n                  \n\n                    Note: The 100 percent rating shall continue beyond the cessation of any surgical, radiation, antineoplastic chemotherapy or other therapeutic procedures. Six months after discontinuance of such treatment, the appropriate disability rating shall be dtermined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: The 100 percent rating for bone marrow transplant shall be assigned as of the date of hospital admission and shall continue with a mandatory VA examination six months following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
+   "note": "\n\n                  \n\n                    Note: The 100 percent rating for bone marrow transplant shall be assigned as of the date of hospital admission and shall continue with a mandatory VA examination six months following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                \n\n                "
   }
  ],
- "see_other_notes": [
-  {
-   "see_other_note": "Otherwise rate as anemia (code 7700) or aplastic anemia (code 7716), whichever would result in the greater benefit."
-  }
- ]
+ "see_other_notes": []
 }

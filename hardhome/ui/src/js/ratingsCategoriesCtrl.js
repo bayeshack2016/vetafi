@@ -2,25 +2,27 @@
 var app = angular.module('vetafiApp');
 app.controller('ratingsCategoriesCtrl', ['$scope', 'ratingsConfigsService', '$stateParams', '$state',
     function($scope, ratingsConfigs, $stateParams, $state) {
-        var path = _.map(_.split($stateParams.path, ","), function (index) { return parseInt(index) });
-        path.shift();
+        function getCategoryPath() {
+            return _.map(_.split($stateParams.path, ","), function (index) { return parseInt(index) });
+        }
 
-        var temp = ratingsConfigs;
+        var path = $stateParams.path ? getCategoryPath() : [];
+
+        var currentCategory = ratingsConfigs;
         var tempBreadcrumbs = [];
-        tempBreadcrumbs.push(temp.description);
+        tempBreadcrumbs.push(currentCategory.description);
         _.map(path, function(i) {
-            temp = temp.subcategories[i];
-            tempBreadcrumbs.push(temp.description);
+            currentCategory = currentCategory.subcategories[i];
+            tempBreadcrumbs.push(currentCategory.description);
         });
 
-        console.log(ratingsConfigs);
+        $scope.breadcrumbs = tempBreadcrumbs;
+        $scope.notes = currentCategory.notes;
+        $scope.see_other_notes = currentCategory.see_other_notes;
 
-        var currentCategory = temp;
-        var breadcrumbs = tempBreadcrumbs;
+        console.log(currentCategory);
 
         function bindCategoryToScope(category) {
-            $scope.breadcrumbs = _.map(breadcrumbs,
-              function(c) { return c.description });
             $scope.subcategories = _.map(category.subcategories,
               function(c) { return c.description });
             $scope.category = category.description;
@@ -31,12 +33,12 @@ app.controller('ratingsCategoriesCtrl', ['$scope', 'ratingsConfigsService', '$st
 
         $scope.gotoSubcategory = function(subcategoryIndex) {
             $state.go('root.ratingsCategories', {path: _.join(
-              _.concat(0, path, subcategoryIndex), ",")});
+              _.concat(path, subcategoryIndex), ",")});
         };
 
         $scope.gotoRating = function(ratingIndex) {
             $state.go('root.ratings', {
-                categoryPath: _.join(_.concat(0, path), ","),
+                categoryPath: _.join(path, ","),
                 ratingPath: ratingIndex
             });
         };

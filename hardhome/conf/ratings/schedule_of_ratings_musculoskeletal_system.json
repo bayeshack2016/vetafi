@@ -2,13 +2,13 @@
  "description": "Schedule of ratings\u2014musculoskeletal system.",
  "subcategories": [
   {
-   "description": "For chronic residuals:",
+   "description": "For chronic residuals:\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 5003,
-      "description": "&#;Arthritis, degenerative (hypertrophic or osteoarthritis):"
+      "description": "\n\n                  \u2003Arthritis, degenerative (hypertrophic or osteoarthritis):\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -27,78 +27,149 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:\n\n                \n\n                "
+      }
+     ],
      "notes": []
     },
     {
      "code": {
       "code": 5004,
-      "description": "&#;Arthritis, gonorrheal."
+      "description": "\n\n                  \u2003Arthritis, gonorrheal.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
+     ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.\n\n                \n\n                "
+      }
      ],
      "notes": []
     },
     {
      "code": {
       "code": 5005,
-      "description": "&#;Arthritis, pneumococcic."
+      "description": "\n\n                  \u2003Arthritis, pneumococcic.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
+     ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.\n\n                \n\n                "
+      }
      ],
      "notes": []
     },
     {
      "code": {
       "code": 5006,
-      "description": "&#;Arthritis, typhoid."
+      "description": "\n\n                  \u2003Arthritis, typhoid.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
+     ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.\n\n                \n\n                "
+      }
      ],
      "notes": []
     },
     {
      "code": {
       "code": 5007,
-      "description": "&#;Arthritis, syphilitic."
+      "description": "\n\n                  \u2003Arthritis, syphilitic.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
+     ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.\n\n                \n\n                "
+      }
      ],
      "notes": []
     },
     {
      "code": {
       "code": 5008,
-      "description": "&#;Arthritis, streptococcic."
+      "description": "\n\n                  \u2003Arthritis, streptococcic.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
+     ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.\n\n                \n\n                "
+      }
      ],
      "notes": []
     },
     {
      "code": {
       "code": 5009,
-      "description": "&#;Arthritis, other types (specify)."
+      "description": "\n\n                  \u2003Arthritis, other types (specify).\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
+     ],
+     "see_other_notes": [
+      {
+       "see_other_note": "\n\n                  With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5010\u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.\n\n                \n\n                "
+      },
+      {
+       "see_other_note": "\n\n                  5011\u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.\n\n                \n\n                "
+      }
      ],
      "notes": []
     },
     {
      "code": {
       "code": 5012,
-      "description": "&#;Bones, new growths of, malignant\n\n                  100"
+      "description": "\n\n                  \u2003Bones, new growths of, malignant\n\n                  100\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -111,144 +182,157 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5013,
-      "description": "&#;Osteoporosis, with joint manifestations."
+      "description": "\n\n                  \u2003Osteoporosis, with joint manifestations.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5014,
-      "description": "&#;Osteomalacia."
+      "description": "\n\n                  \u2003Osteomalacia.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5015,
-      "description": "&#;Bones, new growths of, benign."
+      "description": "\n\n                  \u2003Bones, new growths of, benign.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5016,
-      "description": "&#;Osteitis deformans."
+      "description": "\n\n                  \u2003Osteitis deformans.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5017,
-      "description": "&#;Gout."
+      "description": "\n\n                  \u2003Gout.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5018,
-      "description": "&#;Hydrarthrosis, intermittent."
+      "description": "\n\n                  \u2003Hydrarthrosis, intermittent.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5019,
-      "description": "&#;Bursitis."
+      "description": "\n\n                  \u2003Bursitis.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5020,
-      "description": "&#;Synovitis."
+      "description": "\n\n                  \u2003Synovitis.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5021,
-      "description": "&#;Myositis."
+      "description": "\n\n                  \u2003Myositis.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5022,
-      "description": "&#;Periostitis."
+      "description": "\n\n                  \u2003Periostitis.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5023,
-      "description": "&#;Myositis ossificans."
+      "description": "\n\n                  \u2003Myositis ossificans.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5024,
-      "description": "&#;Tenosynovitis."
+      "description": "\n\n                  \u2003Tenosynovitis.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 5025,
-      "description": "&#;Fibromyalgia (fibrositis, primary fibromyalgia syndrome)"
+      "description": "\n\n                  \u2003Fibromyalgia (fibrositis, primary fibromyalgia syndrome)\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -273,56 +357,44 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion."
+     "note": "\n\n                  For residuals such as limitation of motion or ankylosis, favorable or unfavorable, rate under the appropriate diagnostic codes for the specific joints involved. Where, however, the limitation of motion of the specific joint or joints involved is noncompensable under the codes a rating of 10 percent is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5002. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion.\n\n                \n\n                "
     },
     {
-     "note": "Note: The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation."
+     "note": "\n\n                  \n\n                    Note: The ratings for the active process will not be combined with the residual ratings for limitation of motion or ankylosis. Assign the higher evaluation.\n\n                \n\n                "
     },
     {
-     "note": "Note (1): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be combined with ratings based on limitation of motion."
+     "note": "\n\n                  \n\n                    Note (1): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be combined with ratings based on limitation of motion.\n\n                \n\n                "
     },
     {
-     "note": "Note (2): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be utilized in rating conditions listed under diagnostic codes 5013 to 5024, inclusive."
+     "note": "\n\n                  \n\n                    Note (2): The 20 pct and 10 pct ratings based on X-ray findings, above, will not be utilized in rating conditions listed under diagnostic codes 5013 to 5024, inclusive.\n\n                \n\n                "
     },
     {
-     "note": "Note: The 100 percent rating will be continued for 1 year following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals."
+     "note": "\n\n                  \n\n                    Note: The 100 percent rating will be continued for 1 year following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. At this point, if there has been no local recurrence or metastases, the rating will be made on residuals.\n\n                \n\n                "
     },
     {
-     "note": "The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002."
+     "note": "\n\n                  The diseases under diagnostic codes 5013 through 5024 will be rated on limitation of motion of affected parts, as arthritis, degenerative, except gout which will be rated under diagnostic code 5002.\n\n                \n\n                "
     },
     {
-     "note": "With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:"
+     "note": "\n\n                  With widespread musculoskeletal pain and tender points, with or without associated fatigue, sleep disturbance, stiffness, paresthesias, headache, irritable bowel symptoms, depression, anxiety, or Raynaud's-like symptoms:\n\n                \n\n                "
     },
     {
-     "note": "Note: Widespread pain means pain in both the left and right sides of the body, that is both above and below the waist, and that affects both the axial skeleton (i.e., cervical spine, anterior chest, thoracic spine, or low back) and the extremities."
+     "note": "\n\n                  \n\n                  \n\n                    Note: Widespread pain means pain in both the left and right sides of the body, that is both above and below the waist, and that affects both the axial skeleton (i.e., cervical spine, anterior chest, thoracic spine, or low back) and the extremities.\n\n                \n\n              "
     }
    ],
-   "see_other_notes": [
-    {
-     "see_other_note": "Degenerative arthritis established by X-ray findings will be rated on the basis of limitation of motion under the appropriate diagnostic codes for the specific joint or joints involved (DC 5200 etc.). When however, the limitation of motion of the specific joint or joints involved is noncompensable under the appropriate diagnostic codes, a rating of 10 pct is for application for each such major joint or group of minor joints affected by limitation of motion, to be combined, not added under diagnostic code 5003. Limitation of motion must be objectively confirmed by findings such as swelling, muscle spasm, or satisfactory evidence of painful motion. In the absence of limitation of motion, rate as below:"
-    },
-    {
-     "see_other_note": "With the types of arthritis, diagnostic codes 5004 through 5009, rate the disability as rheumatoid arthritis."
-    },
-    {
-     "see_other_note": "5010&#8195;Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative."
-    },
-    {
-     "see_other_note": "5011&#8195;Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations."
-    }
-   ]
+   "see_other_notes": []
   }
  ],
  "ratings": [
   {
    "code": {
     "code": 5000,
-    "description": "&#;Osteomyelitis, acute, subacute, or chronic:"
+    "description": "\n\n                  \u2003Osteomyelitis, acute, subacute, or chronic:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -359,12 +431,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 5001,
-    "description": "&#;Bones and joints, tuberculosis of, active or inactive:"
+    "description": "\n\n                  \u2003Bones and joints, tuberculosis of, active or inactive:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -377,12 +450,17 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Inactive: See \u00a7\u00a7\u20094.88b and 4.89.\n\n                  \u2003\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
    "code": {
     "code": 5002,
-    "description": "&#;Arthritis rheumatoid (atrophic) As an active process:"
+    "description": "\n\n                  \u2003Arthritis rheumatoid (atrophic) As an active process:\n\n                  \n\n                \n\n                "
    },
    "ratings": [
     {
@@ -413,20 +491,17 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   }
  ],
  "notes": [
   {
-   "note": "Note (1): A rating of 10 percent, as an exception to the amputation rule, is to be assigned in any case of active osteomyelitis where the amputation rating for the affected part is no percent. This 10 percent rating and the other partial ratings of 30 percent or less are to be combined with ratings for ankylosis, limited motion, nonunion or malunion, shortening, etc., subject, of course, to the amputation rule. The 60 percent rating, as it is based on constitutional symptoms, is not subject to the amputation rule. A rating for osteomyelitis will not be applied following cure by removal or radical resection of the affected bone."
+   "note": "\n\n                  \n\n                    Note (1): A rating of 10 percent, as an exception to the amputation rule, is to be assigned in any case of active osteomyelitis where the amputation rating for the affected part is no percent. This 10 percent rating and the other partial ratings of 30 percent or less are to be combined with ratings for ankylosis, limited motion, nonunion or malunion, shortening, etc., subject, of course, to the amputation rule. The 60 percent rating, as it is based on constitutional symptoms, is not subject to the amputation rule. A rating for osteomyelitis will not be applied following cure by removal or radical resection of the affected bone.\n\n                \n\n                "
   },
   {
-   "note": "Note (2): The 20 percent rating on the basis of activity within the past 5 years is not assignable following the initial infection of active osteomyelitis with no subsequent reactivation. The prerequisite for this historical rating is an established recurrent osteomyelitis. To qualify for the 10 percent rating, 2 or more episodes following the initial infection are required. This 20 percent rating or the 10 percent rating, when applicable, will be assigned once only to cover disability at all sites of previously active infection with a future ending date in the case of the 20 percent rating."
+   "note": "\n\n                  \n\n                  \n\n                    Note (2): The 20 percent rating on the basis of activity within the past 5 years is not assignable following the initial infection of active osteomyelitis with no subsequent reactivation. The prerequisite for this historical rating is an established recurrent osteomyelitis. To qualify for the 10 percent rating, 2 or more episodes following the initial infection are required. This 20 percent rating or the 10 percent rating, when applicable, will be assigned once only to cover disability at all sites of previously active infection with a future ending date in the case of the 20 percent rating.\n\n                \n\n                "
   }
  ],
- "see_other_notes": [
-  {
-   "see_other_note": "Inactive: See &#167;&#167;&#8201;4.88b and 4.89.\n\n                  &#8195;"
-  }
- ]
+ "see_other_notes": []
 }

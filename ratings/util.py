@@ -34,4 +34,4 @@ def inner_text(element: ElementTree.Element) -> str:
     """
     Get all contents of element as string.
     """
-    return strip_tags(ElementTree.tostring(element).decode('utf-8')).strip()
+    return strip_tags(ElementTree.tostring(element, encoding='utf-8').decode('utf-8'))

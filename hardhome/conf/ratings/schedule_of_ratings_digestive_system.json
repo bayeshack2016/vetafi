@@ -2,24 +2,13 @@
  "description": "Schedule of ratings\u2014digestive system.",
  "subcategories": [
   {
-   "description": "Gastritis, atrophic.",
-   "subcategories": [],
-   "ratings": [],
-   "notes": [
-    {
-     "note": "A complication of a number of diseases, including pernicious anemia."
-    }
-   ],
-   "see_other_notes": []
-  },
-  {
-   "description": "Rate the underlying condition.",
+   "description": "Gastritis, atrophic.\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 7308,
-      "description": "&#;Postgastrectomy syndromes:"
+      "description": "\n\n                  \u2003Postgastrectomy syndromes:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -44,66 +33,57 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7309,
-      "description": "&#;Stomach, stenosis of."
+      "description": "\n\n                  \u2003Stomach, stenosis of.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
+     "see_other_notes": [
       {
-       "note": "Rate as for gastric ulcer."
-      },
-      {
-       "note": "Rate as peritoneal adhesions."
+       "see_other_note": "\n\n                  Rate as for gastric ulcer.\n\n                \n\n                "
       }
-     ]
+     ],
+     "notes": []
     },
     {
      "code": {
       "code": 7310,
-      "description": "&#;Stomach, injury of, residuals."
+      "description": "\n\n                  \u2003Stomach, injury of, residuals.\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
+     "see_other_notes": [
       {
-       "note": "Rate as for gastric ulcer."
-      },
-      {
-       "note": "Rate as peritoneal adhesions."
+       "see_other_note": "\n\n                  Rate as peritoneal adhesions.\n\n                \n\n                "
       }
-     ]
+     ],
+     "notes": []
     },
     {
      "code": {
       "code": 7311,
-      "description": "&#;Residuals of injury of the liver:"
+      "description": "\n\n                  \u2003Residuals of injury of the liver:\n\n                \n\n                "
      },
      "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
-      {
-       "note": "Rate as for gastric ulcer."
-      },
-      {
-       "note": "Rate as peritoneal adhesions."
-      }
-     ]
+     "see_other_notes": [],
+     "notes": []
     },
     {
      "code": {
       "code": 7312,
-      "description": "&#;Cirrhosis of the liver, primary biliary cirrhosis, or cirrhotic phase of sclerosing cholangitis:"
+      "description": "\n\n                  \u2003Cirrhosis of the liver, primary biliary cirrhosis, or cirrhotic phase of sclerosing cholangitis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -140,12 +120,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7314,
-      "description": "&#;Cholecystitis, chronic:"
+      "description": "\n\n                  \u2003Cholecystitis, chronic:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -170,132 +151,61 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 7315,
-      "description": "&#;Cholelithiasis, chronic."
+      "description": "\n\n                  \u2003Cholelithiasis, chronic.\n\n                \n\n                "
      },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "With severe symptoms"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "With mild symptoms"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Nonsymptomatic"
-      }
-     ],
+     "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
+     "see_other_notes": [
       {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for peritoneal adhesions."
+       "see_other_note": "\n\n                  Rate as for chronic cholecystitis.\n\n                \n\n                "
       }
-     ]
+     ],
+     "notes": []
     },
     {
      "code": {
       "code": 7316,
-      "description": "&#;Cholangitis, chronic."
+      "description": "\n\n                  \u2003Cholangitis, chronic.\n\n                \n\n                "
      },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "With severe symptoms"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "With mild symptoms"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Nonsymptomatic"
-      }
-     ],
+     "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
+     "see_other_notes": [
       {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for peritoneal adhesions."
+       "see_other_note": "\n\n                  Rate as for chronic cholecystitis.\n\n                \n\n                "
       }
-     ]
+     ],
+     "notes": []
     },
     {
      "code": {
       "code": 7317,
-      "description": "&#;Gall bladder, injury of."
+      "description": "\n\n                  \u2003Gall bladder, injury of.\n\n                \n\n                "
      },
-     "ratings": [
-      {
-       "ratings": [
-        30
-       ],
-       "description": "With severe symptoms"
-      },
-      {
-       "ratings": [
-        10
-       ],
-       "description": "With mild symptoms"
-      },
-      {
-       "ratings": [
-        0
-       ],
-       "description": "Nonsymptomatic"
-      }
-     ],
+     "ratings": [],
      "header": [
       "Rating"
      ],
-     "notes": [
+     "see_other_notes": [
       {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for peritoneal adhesions."
+       "see_other_note": "\n\n                  Rate as for peritoneal adhesions.\n\n                \n\n                "
       }
-     ]
+     ],
+     "notes": []
     },
     {
      "code": {
       "code": 7318,
-      "description": "&#;Gall bladder, removal of:"
+      "description": "\n\n                  \u2003Gall bladder, removal of:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -320,40 +230,38 @@
      "header": [
       "Rating"
      ],
-     "notes": [
-      {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for chronic cholecystitis."
-      },
-      {
-       "note": "Rate as for peritoneal adhesions."
-      }
-     ]
+     "see_other_notes": [],
+     "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Depending on the specific residuals, separately evaluate as adhesions of peritoneum (diagnostic code 7301), cirrhosis of liver (diagnostic code 7312), and chronic liver disease without cirrhosis (diagnostic code 7345)."
+     "note": "\n\n                  A complication of a number of diseases, including pernicious anemia.\n\n                \n\n                "
     },
     {
-     "note": "Note: For evaluation under diagnostic code 7312, documentation of cirrhosis (by biopsy or imaging) and abnormal liver function tests must be present."
+     "note": "\n\n                  Depending on the specific residuals, separately evaluate as adhesions of peritoneum (diagnostic code 7301), cirrhosis of liver (diagnostic code 7312), and chronic liver disease without cirrhosis (diagnostic code 7345).\n\n                \n\n                "
+    },
+    {
+     "note": "\n\n                  \n\n                  \n\n                    Note: For evaluation under diagnostic code 7312, documentation of cirrhosis (by biopsy or imaging) and abnormal liver function tests must be present.\n\n                \n\n                "
     }
    ],
-   "see_other_notes": []
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Rate the underlying condition.\n\n                \n\n                "
+    }
+   ]
   },
   {
-   "description": "Spleen, disease or injury of.",
+   "description": "Spleen, disease or injury of.\n\n                ",
    "subcategories": [
     {
-     "description": "&#8195;See Hemic and Lymphatic Systems.",
+     "description": "\u2003See Hemic and Lymphatic Systems.\n\n                ",
      "subcategories": [],
      "ratings": [
       {
        "code": {
         "code": 7319,
-        "description": "&#;Irritable colon syndrome (spastic colitis, mucous colitis, etc.):"
+        "description": "\n\n                  \u2003Irritable colon syndrome (spastic colitis, mucous colitis, etc.):\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -378,12 +286,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7321,
-        "description": "&#;Amebiasis:"
+        "description": "\n\n                  \u2003Amebiasis:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -402,52 +311,29 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7322,
-        "description": "&#;Dysentery, bacillary."
+        "description": "\n\n                  \u2003Dysentery, bacillary.\n\n                \n\n                "
        },
-       "ratings": [
-        {
-         "ratings": [
-          100
-         ],
-         "description": "Pronounced; resulting in marked malnutrition, anemia, and general debility, or with serious complication as liver abscess"
-        },
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Severe; with numerous attacks a year and malnutrition, the health only fair during remissions"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Moderately severe; with frequent exacerbations"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Moderate; with infrequent exacerbations"
-        }
-       ],
+       "ratings": [],
        "header": [
         "Rating"
        ],
-       "notes": [
+       "see_other_notes": [
         {
-         "note": "Rate as for ulcerative colitis."
+         "see_other_note": "\n\n                  Rate as for ulcerative colitis.\n\n                \n\n                "
         }
-       ]
+       ],
+       "notes": []
       },
       {
        "code": {
         "code": 7323,
-        "description": "&#;Colitis, ulcerative:"
+        "description": "\n\n                  \u2003Colitis, ulcerative:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -478,16 +364,13 @@
        "header": [
         "Rating"
        ],
-       "notes": [
-        {
-         "note": "Rate as for ulcerative colitis."
-        }
-       ]
+       "see_other_notes": [],
+       "notes": []
       },
       {
        "code": {
         "code": 7324,
-        "description": "&#;Distomiasis, intestinal or hepatic:"
+        "description": "\n\n                  \u2003Distomiasis, intestinal or hepatic:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -512,66 +395,61 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7325,
-        "description": "&#;Enteritis, chronic."
+        "description": "\n\n                  \u2003Enteritis, chronic.\n\n                \n\n                "
        },
        "ratings": [],
        "header": [
         "Rating"
        ],
-       "notes": [
+       "see_other_notes": [
         {
-         "note": "Rate as for irritable colon syndrome."
-        },
-        {
-         "note": "Rate as for irritable colon syndrome."
+         "see_other_note": "\n\n                  Rate as for irritable colon syndrome.\n\n                \n\n                "
         }
-       ]
+       ],
+       "notes": []
       },
       {
        "code": {
         "code": 7326,
-        "description": "&#;Enterocolitis, chronic."
+        "description": "\n\n                  \u2003Enterocolitis, chronic.\n\n                \n\n                "
        },
        "ratings": [],
        "header": [
         "Rating"
        ],
-       "notes": [
+       "see_other_notes": [
         {
-         "note": "Rate as for irritable colon syndrome."
-        },
-        {
-         "note": "Rate as for irritable colon syndrome."
+         "see_other_note": "\n\n                  Rate as for irritable colon syndrome.\n\n                \n\n                "
         }
-       ]
+       ],
+       "notes": []
       },
       {
        "code": {
         "code": 7327,
-        "description": "&#;Diverticulitis."
+        "description": "\n\n                  \u2003Diverticulitis.\n\n                \n\n                "
        },
        "ratings": [],
        "header": [
         "Rating"
        ],
-       "notes": [
+       "see_other_notes": [
         {
-         "note": "Rate as for irritable colon syndrome."
-        },
-        {
-         "note": "Rate as for irritable colon syndrome."
+         "see_other_note": "\n\n                  Rate as for irritable colon syndrome, peritoneal adhesions, or colitis, ulcerative, depending upon the predominant disability picture.\n\n                \n\n                "
         }
-       ]
+       ],
+       "notes": []
       },
       {
        "code": {
         "code": 7328,
-        "description": "&#;Intestine, small, resection of:"
+        "description": "\n\n                  \u2003Intestine, small, resection of:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -596,12 +474,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7329,
-        "description": "&#;Intestine, large, resection of:"
+        "description": "\n\n                  \u2003Intestine, large, resection of:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -626,12 +505,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7330,
-        "description": "&#;Intestine, fistula of, persistent, or after attempt at operative closure:"
+        "description": "\n\n                  \u2003Intestine, fistula of, persistent, or after attempt at operative closure:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -656,33 +536,17 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Healed; rate for peritoneal adhesions.\n\n                \n\n                "
+        }
+       ],
        "notes": []
-      }
-     ],
-     "notes": [
-      {
-       "note": "Note: Amebiasis with or without liver abscess is parallel in symptomatology with ulcerative colitis and should be rated on the scale provided for the latter. Similarly, lung abscess due to amebiasis will be rated under the respiratory system schedule, diagnostic code 6809."
       },
-      {
-       "note": "Rate as for irritable colon syndrome, peritoneal adhesions, or colitis, ulcerative, depending upon the predominant disability picture."
-      },
-      {
-       "note": "Note: Where residual adhesions constitute the predominant disability, rate under diagnostic code 7301."
-      },
-      {
-       "note": "Note: Where residual adhesions constitute the predominant disability, rate under diagnostic code 7301."
-      }
-     ],
-     "see_other_notes": []
-    },
-    {
-     "description": "Healed; rate for peritoneal adhesions.",
-     "subcategories": [],
-     "ratings": [
       {
        "code": {
         "code": 7331,
-        "description": "&#;Peritonitis, tuberculous, active or inactive:"
+        "description": "\n\n                  \u2003Peritonitis, tuberculous, active or inactive:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -695,12 +559,17 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Inactive: See \u00a7\u00a7\u20094.88b and 4.89.\n\n                \n\n                "
+        }
+       ],
        "notes": []
       },
       {
        "code": {
         "code": 7332,
-        "description": "&#;Rectum and anus, impairment of sphincter control:"
+        "description": "\n\n                  \u2003Rectum and anus, impairment of sphincter control:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -737,12 +606,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7333,
-        "description": "&#;Rectum and anus, stricture of:"
+        "description": "\n\n                  \u2003Rectum and anus, stricture of:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -767,12 +637,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7334,
-        "description": "&#;Rectum, prolapse of:"
+        "description": "\n\n                  \u2003Rectum, prolapse of:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -797,46 +668,29 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7335,
-        "description": "&#;Ano, fistula in."
+        "description": "\n\n                  \u2003Ano, fistula in.\n\n                \n\n                "
        },
-       "ratings": [
-        {
-         "ratings": [
-          20
-         ],
-         "description": "With persistent bleeding and with secondary anemia, or with fissures"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Large or thrombotic, irreducible, with excessive redundant tissue, evidencing frequent recurrences"
-        },
-        {
-         "ratings": [
-          0
-         ],
-         "description": "Mild or moderate"
-        }
-       ],
+       "ratings": [],
        "header": [
         "Rating"
        ],
-       "notes": [
+       "see_other_notes": [
         {
-         "note": "Rate as for impairment of sphincter control."
+         "see_other_note": "\n\n                  Rate as for impairment of sphincter control.\n\n                \n\n                "
         }
-       ]
+       ],
+       "notes": []
       },
       {
        "code": {
         "code": 7336,
-        "description": "&#;Hemorrhoids, external or internal:"
+        "description": "\n\n                  \u2003Hemorrhoids, external or internal:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -861,62 +715,29 @@
        "header": [
         "Rating"
        ],
-       "notes": [
-        {
-         "note": "Rate as for impairment of sphincter control."
-        }
-       ]
+       "see_other_notes": [],
+       "notes": []
       },
       {
        "code": {
         "code": 7337,
-        "description": "&#;Pruritus ani."
+        "description": "\n\n                  \u2003Pruritus ani.\n\n                \n\n                "
        },
-       "ratings": [
-        {
-         "ratings": [
-          60
-         ],
-         "description": "Large, postoperative, recurrent, not well supported under ordinary conditions and not readily reducible, when considered inoperable"
-        },
-        {
-         "ratings": [
-          30
-         ],
-         "description": "Small, postoperative recurrent, or unoperated irremediable, not well supported by truss, or not readily reducible"
-        },
-        {
-         "ratings": [
-          10
-         ],
-         "description": "Postoperative recurrent, readily reducible and well supported by truss or belt"
-        },
-        {
-         "ratings": [
-          0
-         ],
-         "description": "Not operated, but remediable"
-        },
-        {
-         "ratings": [
-          0
-         ],
-         "description": "Small, reducible, or without true hernia protrusion"
-        }
-       ],
+       "ratings": [],
        "header": [
         "Rating"
        ],
-       "notes": [
+       "see_other_notes": [
         {
-         "note": "Rate for the underlying condition."
+         "see_other_note": "\n\n                  Rate for the underlying condition.\n\n                \n\n                "
         }
-       ]
+       ],
+       "notes": []
       },
       {
        "code": {
         "code": 7338,
-        "description": "&#;Hernia, inguinal:"
+        "description": "\n\n                  \u2003Hernia, inguinal:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -953,16 +774,13 @@
        "header": [
         "Rating"
        ],
-       "notes": [
-        {
-         "note": "Rate for the underlying condition."
-        }
-       ]
+       "see_other_notes": [],
+       "notes": []
       },
       {
        "code": {
         "code": 7339,
-        "description": "&#;Hernia, ventral, postoperative:"
+        "description": "\n\n                  \u2003Hernia, ventral, postoperative:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -993,27 +811,29 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7340,
-        "description": "&#;Hernia, femoral."
+        "description": "\n\n                  \u2003Hernia, femoral.\n\n                \n\n                "
        },
        "ratings": [],
        "header": [
         "Rating"
        ],
-       "notes": [
+       "see_other_notes": [
         {
-         "note": "Rate as for inguinal hernia."
+         "see_other_note": "\n\n                  Rate as for inguinal hernia.\n\n                \n\n                "
         }
-       ]
+       ],
+       "notes": []
       },
       {
        "code": {
         "code": 7342,
-        "description": "&#;Visceroptosis, symptomatic, marked\n\n                  10"
+        "description": "\n\n                  \u2003Visceroptosis, symptomatic, marked\n\n                  10\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1026,12 +846,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7343,
-        "description": "&#;Malignant neoplasms of the digestive system, exclusive of skin growths\n\n                  100"
+        "description": "\n\n                  \u2003Malignant neoplasms of the digestive system, exclusive of skin growths\n\n                  100\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1044,23 +865,25 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7344,
-        "description": "&#;Benign neoplasms, exclusive of skin growths:"
+        "description": "\n\n                  \u2003Benign neoplasms, exclusive of skin growths:\n\n                \n\n                "
        },
        "ratings": [],
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7345,
-        "description": "&#;Chronic liver disease without cirrhosis (including hepatitis B, chronic active hepatitis, autoimmune hepatitis, hemochromatosis, drug-induced hepatitis, etc., but excluding bile duct disorders and hepatitis C):"
+        "description": "\n\n                  \u2003Chronic liver disease without cirrhosis (including hepatitis B, chronic active hepatitis, autoimmune hepatitis, hemochromatosis, drug-induced hepatitis, etc., but excluding bile duct disorders and hepatitis C):\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1103,12 +926,17 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  \n\n                    Note (1): Evaluate sequelae, such as cirrhosis or malignancy of the liver, under an appropriate diagnostic code, but do not use the same signs and symptoms as the basis for evaluation under DC 7354 and under a diagnostic code for sequelae. (See \u00a7\u20094.14.).\n\n                \n\n                "
+        }
+       ],
        "notes": []
       },
       {
        "code": {
         "code": 7346,
-        "description": "&#;Hernia hiatal:"
+        "description": "\n\n                  \u2003Hernia hiatal:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1133,12 +961,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7347,
-        "description": "&#;Pancreatitis:"
+        "description": "\n\n                  \u2003Pancreatitis:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1169,12 +998,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7348,
-        "description": "&#;Vagotomy with pyloroplasty or gastroenterostomy:"
+        "description": "\n\n                  \u2003Vagotomy with pyloroplasty or gastroenterostomy:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1199,12 +1029,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7351,
-        "description": "&#;Liver transplant:"
+        "description": "\n\n                  \u2003Liver transplant:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1223,12 +1054,13 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [],
        "notes": []
       },
       {
        "code": {
         "code": 7354,
-        "description": "&#;Hepatitis C (or non-A, non-B hepatitis):"
+        "description": "\n\n                  \u2003Hepatitis C (or non-A, non-B hepatitis):\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -1271,55 +1103,59 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  \n\n                    Note (1): Evaluate sequelae, such as cirrhosis or malignancy of the liver, under an appropriate diagnostic code, but do not use the same signs and symptoms as the basis for evaluation under DC 7354 and under a diagnostic code for sequelae. (See \u00a7\u20094.14.).\n\n                \n\n                "
+        }
+       ],
        "notes": []
       }
      ],
      "notes": [
       {
-       "note": "Note: Add 10 percent for bilateral involvement, provided the second hernia is compensable. This means that the more severely disabling hernia is to be evaluated, and 10 percent, only, added for the second hernia, if the latter is of compensable degree."
+       "note": "\n\n                  \n\n                    Note: Amebiasis with or without liver abscess is parallel in symptomatology with ulcerative colitis and should be rated on the scale provided for the latter. Similarly, lung abscess due to amebiasis will be rated under the respiratory system schedule, diagnostic code 6809.\n\n                \n\n                "
       },
       {
-       "note": "Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals."
+       "note": "\n\n                  \n\n                    Note: Where residual adhesions constitute the predominant disability, rate under diagnostic code 7301.\n\n                \n\n                "
       },
       {
-       "note": "Evaluate under an appropriate diagnostic code, depending on the predominant disability or the specific residuals after treatment."
+       "note": "\n\n                  \n\n                    Note: Where residual adhesions constitute the predominant disability, rate under diagnostic code 7301.\n\n                \n\n                "
       },
       {
-       "note": "Note (2): For purposes of evaluating conditions under diagnostic code 7345, &#8220;incapacitating episode&#8221; means a period of acute signs and symptoms severe enough to require bed rest and treatment by a physician."
+       "note": "\n\n                  \n\n                    Note: Add 10 percent for bilateral involvement, provided the second hernia is compensable. This means that the more severely disabling hernia is to be evaluated, and 10 percent, only, added for the second hernia, if the latter is of compensable degree.\n\n                \n\n                "
       },
       {
-       "note": "Note (3): Hepatitis B infection must be confirmed by serologic testing in order to evaluate it under diagnostic code 7345."
+       "note": "\n\n                  \n\n                    Note: A rating of 100 percent shall continue beyond the cessation of any surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local recurrence or metastasis, rate on residuals.\n\n                \n\n                "
       },
       {
-       "note": "Note 1: Abdominal pain in this condition must be confirmed as resulting from pancreatitis by appropriate laboratory and clinical studies."
+       "note": "\n\n                  Evaluate under an appropriate diagnostic code, depending on the predominant disability or the specific residuals after treatment.\n\n                \n\n                "
       },
       {
-       "note": "Note 2: Following total or partial pancreatectomy, rate under above, symptoms, minimum rating 30 percent."
+       "note": "\n\n                  \n\n                    Note (2): For purposes of evaluating conditions under diagnostic code 7345, \u201cincapacitating episode\u201d means a period of acute signs and symptoms severe enough to require bed rest and treatment by a physician.\n\n                \n\n                "
       },
       {
-       "note": "Note: Rate recurrent ulcer following complete vagotomy under diagnostic code 7305, minimum rating 20 percent; and rate dumping syndrome under diagnostic code 7308."
+       "note": "\n\n                  \n\n                    Note (3): Hepatitis B infection must be confirmed by serologic testing in order to evaluate it under diagnostic code 7345.\n\n                \n\n                "
       },
       {
-       "note": "Note: A rating of 100 percent shall be assigned as of the date of hospital admission for transplant surgery and shall continue. One year following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
+       "note": "\n\n                  \n\n                    Note 1: Abdominal pain in this condition must be confirmed as resulting from pancreatitis by appropriate laboratory and clinical studies.\n\n                \n\n                "
       },
       {
-       "note": "With serologic evidence of hepatitis C infection and the following signs and symptoms due to hepatitis C infection:"
+       "note": "\n\n                  \n\n                    Note 2: Following total or partial pancreatectomy, rate under above, symptoms, minimum rating 30 percent.\n\n                \n\n                "
       },
       {
-       "note": "Note (2): For purposes of evaluating conditions under diagnostic code 7354, &#8220;incapacitating episode&#8221; means a period of acute signs and symptoms severe enough to require bed rest and treatment by a physician."
+       "note": "\n\n                  \n\n                    Note: Rate recurrent ulcer following complete vagotomy under diagnostic code 7305, minimum rating 20 percent; and rate dumping syndrome under diagnostic code 7308.\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                  \n\n                    Note: A rating of 100 percent shall be assigned as of the date of hospital admission for transplant surgery and shall continue. One year following discharge, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  With serologic evidence of hepatitis C infection and the following signs and symptoms due to hepatitis C infection:\n\n                \n\n                "
+      },
+      {
+       "note": "\n\n                  \n\n                    Note (2): For purposes of evaluating conditions under diagnostic code 7354, \u201cincapacitating episode\u201d means a period of acute signs and symptoms severe enough to require bed rest and treatment by a physician.\n\n                \n\n              "
       }
      ],
-     "see_other_notes": [
-      {
-       "see_other_note": "Inactive: See &#167;&#167;&#8201;4.88b and 4.89."
-      },
-      {
-       "see_other_note": "Note (1): Evaluate sequelae, such as cirrhosis or malignancy of the liver, under an appropriate diagnostic code, but do not use the same signs and symptoms as the basis for evaluation under DC 7354 and under a diagnostic code for sequelae. (See &#167;&#8201;4.14.)."
-      },
-      {
-       "see_other_note": "Note (1): Evaluate sequelae, such as cirrhosis or malignancy of the liver, under an appropriate diagnostic code, but do not use the same signs and symptoms as the basis for evaluation under DC 7354 and under a diagnostic code for sequelae. (See &#167;&#8201;4.14.)."
-      }
-     ]
+     "see_other_notes": []
     }
    ],
    "ratings": [],
@@ -1331,52 +1167,39 @@
   {
    "code": {
     "code": 7200,
-    "description": "&#;Mouth, injuries of."
+    "description": "\n\n                  \u2003Mouth, injuries of.\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
+   ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Rate as for disfigurement and impairment of function of mastication.\n\n                \n\n                "
+    }
    ],
    "notes": []
   },
   {
    "code": {
     "code": 7201,
-    "description": "&#;Lips, injuries of."
+    "description": "\n\n                  \u2003Lips, injuries of.\n\n                \n\n                "
    },
-   "ratings": [
-    {
-     "ratings": [
-      100
-     ],
-     "description": "With inability to communicate by speech"
-    },
-    {
-     "ratings": [
-      60
-     ],
-     "description": "One-half or more"
-    },
-    {
-     "ratings": [
-      30
-     ],
-     "description": "With marked speech impairment"
-    }
-   ],
+   "ratings": [],
    "header": [
     "Rating"
    ],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "Rate as for disfigurement of face."
+     "see_other_note": "\n\n                  Rate as for disfigurement of face.\n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
     "code": 7202,
-    "description": "&#;Tongue, loss of whole or part:"
+    "description": "\n\n                  \u2003Tongue, loss of whole or part:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1401,16 +1224,13 @@
    "header": [
     "Rating"
    ],
-   "notes": [
-    {
-     "note": "Rate as for disfigurement of face."
-    }
-   ]
+   "see_other_notes": [],
+   "notes": []
   },
   {
    "code": {
     "code": 7203,
-    "description": "&#;Esophagus, stricture of:"
+    "description": "\n\n                  \u2003Esophagus, stricture of:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1435,63 +1255,45 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7204,
-    "description": "&#;Esophagus, spasm of (cardiospasm)."
+    "description": "\n\n                  \u2003Esophagus, spasm of (cardiospasm).\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
+   ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  If not amenable to dilation, rate as for the degree of obstruction (stricture).\n\n                \n\n                "
+    }
    ],
    "notes": []
   },
   {
    "code": {
     "code": 7205,
-    "description": "&#;Esophagus, diverticulum of, acquired."
+    "description": "\n\n                  \u2003Esophagus, diverticulum of, acquired.\n\n                \n\n                "
    },
-   "ratings": [
-    {
-     "ratings": [
-      50
-     ],
-     "description": "Severe; definite partial obstruction shown by X-ray, with frequent and prolonged episodes of severe colic distension, nausea or vomiting, following severe peritonitis, ruptured appendix, perforated ulcer, or operation with drainage"
-    },
-    {
-     "ratings": [
-      30
-     ],
-     "description": "Moderately severe; partial obstruction manifested by delayed motility of barium meal and less frequent and less prolonged episodes of pain"
-    },
-    {
-     "ratings": [
-      10
-     ],
-     "description": "Moderate; pulling pain on attempting work or aggravated by movements of the body, or occasional episodes of colic pain, nausea, constipation (perhaps alternating with diarrhea) or abdominal distension"
-    },
-    {
-     "ratings": [
-      0
-     ],
-     "description": "Mild"
-    }
-   ],
+   "ratings": [],
    "header": [
     "Rating"
    ],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "Rate as for obstruction (stricture)."
+     "see_other_note": "\n\n                  Rate as for obstruction (stricture).\n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
     "code": 7301,
-    "description": "&#;Peritoneum, adhesions of:"
+    "description": "\n\n                  \u2003Peritoneum, adhesions of:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1522,16 +1324,13 @@
    "header": [
     "Rating"
    ],
-   "notes": [
-    {
-     "note": "Rate as for obstruction (stricture)."
-    }
-   ]
+   "see_other_notes": [],
+   "notes": []
   },
   {
    "code": {
     "code": 7304,
-    "description": "&#;Ulcer, gastric."
+    "description": "\n\n                  \u2003Ulcer, gastric.\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1562,12 +1361,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7305,
-    "description": "&#;Ulcer, duodenal:"
+    "description": "\n\n                  \u2003Ulcer, duodenal:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1598,12 +1398,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7306,
-    "description": "&#;Ulcer, marginal (gastrojejunal):"
+    "description": "\n\n                  \u2003Ulcer, marginal (gastrojejunal):\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1640,12 +1441,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7307,
-    "description": "&#;Gastritis, hypertrophic (identified by gastroscope):"
+    "description": "\n\n                  \u2003Gastritis, hypertrophic (identified by gastroscope):\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1670,20 +1472,14 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   }
  ],
  "notes": [
   {
-   "note": "Rate as for disfigurement and impairment of function of mastication."
-  },
-  {
-   "note": "Note: Ratings for adhesions will be considered when there is history of operative or other traumatic or infectious (intraabdominal) process, and at least two of the following: disturbance of motility, actual partial obstruction, reflex disturbances, presence of pain."
+   "note": "\n\n                  \n\n                    Note: Ratings for adhesions will be considered when there is history of operative or other traumatic or infectious (intraabdominal) process, and at least two of the following: disturbance of motility, actual partial obstruction, reflex disturbances, presence of pain.\n\n                \n\n                "
   }
  ],
- "see_other_notes": [
-  {
-   "see_other_note": "If not amenable to dilation, rate as for the degree of obstruction (stricture)."
-  }
- ]
+ "see_other_notes": []
 }

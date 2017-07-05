@@ -27,7 +27,8 @@ class Rating(RatingTableObject):
     @classmethod
     def from_element(cls, element) -> 'Rating':
         entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
-        return Rating(entries[0].text, [int(entry.text) for entry in entries[1:]])
+        return Rating(entries[0].text,
+                      [int(entry.text) for entry in entries[1:]])
 
     def as_dict(self):
         return {'ratings': self.ratings,
@@ -60,7 +61,11 @@ class DiagnosticCode(RatingTableObject):
     @classmethod
     def from_element(cls, element) -> 'DiagnosticCode':
         entries = [entry for entry in element.findall('ENT') if util.inner_text(entry).strip()]
-        code = re.findall('[0-9]{4}', entries[0].text)[0]
+        codes = re.findall('[0-9]{4}', entries[0].text)
+        if len(codes):
+            code = codes[0]
+        else:
+            code = 9999
         description = re.sub('[0-9]{4}', '', util.inner_text(element))
         return DiagnosticCode(int(code), description)
 
@@ -74,10 +79,14 @@ class DiagnosticCodeSet(RatingTableObject):
         self.codes = []
         self.ratings = []
         self.notes = []
+        self.see_other_notes = []
         self.header = header
 
     def add_diagnostic_code(self, code: DiagnosticCode):
         self.codes.append(code)
+
+    def add_see_other_note(self, see_other_note):
+        self.see_other_notes.append(see_other_note)
 
     def add_rating(self, rating: Rating):
         self.ratings.append(rating)
@@ -91,12 +100,14 @@ class DiagnosticCodeSet(RatingTableObject):
                 'code': code.as_dict(),
                 'ratings': [rating.as_dict() for rating in self.ratings],
                 'header': self.header,
+                'see_other_notes': [note.as_dict() for note in self.see_other_notes],
                 'notes': [note.as_dict() for note in self.notes]}
 
     def as_dict(self):
         return {'ratings': [rating.as_dict() for rating in self.ratings],
                 'codes': [code.as_dict() for code in self.codes],
                 'notes': [note.as_dict() for note in self.notes],
+                'see_other_notes': [note.as_dict() for note in self.see_other_notes],
                 'header': self.header}
 
 

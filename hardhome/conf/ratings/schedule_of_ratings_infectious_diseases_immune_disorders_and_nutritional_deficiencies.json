@@ -2,13 +2,13 @@
  "description": "Schedule of ratings\u2014infectious diseases, immune disorders and nutritional deficiencies.",
  "subcategories": [
   {
-   "description": "Thereafter rate residuals under the appropriate body system.",
+   "description": "Thereafter rate residuals under the appropriate body system.\n\n                ",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 6315,
-      "description": "&#;Pellagra:"
+      "description": "\n\n                  \u2003Pellagra:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -45,12 +45,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6316,
-      "description": "&#;Brucellosis:"
+      "description": "\n\n                  \u2003Brucellosis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -63,12 +64,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6317,
-      "description": "&#;Typhus, scrub:"
+      "description": "\n\n                  \u2003Typhus, scrub:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -81,12 +83,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6318,
-      "description": "&#;Melioidosis:"
+      "description": "\n\n                  \u2003Melioidosis:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -99,12 +102,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6319,
-      "description": "&#;Lyme Disease:"
+      "description": "\n\n                  \u2003Lyme Disease:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -117,12 +121,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6320,
-      "description": "&#;Parasitic diseases otherwise not specified:"
+      "description": "\n\n                  \u2003Parasitic diseases otherwise not specified:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -135,12 +140,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6350,
-      "description": "&#;Lupus erythematosus, systemic (disseminated):"
+      "description": "\n\n                  \u2003Lupus erythematosus, systemic (disseminated):\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -165,12 +171,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6351,
-      "description": "&#;HIV-Related Illness:"
+      "description": "\n\n                  \u2003HIV-Related Illness:\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -207,12 +214,13 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     },
     {
      "code": {
       "code": 6354,
-      "description": " Chronic Fatigue Syndrome (CFS):"
+      "description": "\n\n                   Chronic Fatigue Syndrome (CFS):\n\n                \n\n                "
      },
      "ratings": [
       {
@@ -249,39 +257,40 @@
      "header": [
       "Rating"
      ],
+     "see_other_notes": [],
      "notes": []
     }
    ],
    "notes": [
     {
-     "note": "Thereafter rate residuals such as liver or spleen damage or meningitis under the appropriate system"
+     "note": "\n\n                  Thereafter rate residuals such as liver or spleen damage or meningitis under the appropriate system\n\n                \n\n                "
     },
     {
-     "note": "Thereafter rate residuals such as spleen damage or skin conditions under the appropriate system"
+     "note": "\n\n                  Thereafter rate residuals such as spleen damage or skin conditions under the appropriate system\n\n                \n\n                "
     },
     {
-     "note": "Thereafter rate residuals such as arthritis, lung lesions or meningitis under the appropriate system"
+     "note": "\n\n                  Thereafter rate residuals such as arthritis, lung lesions or meningitis under the appropriate system\n\n                \n\n                "
     },
     {
-     "note": "Thereafter rate residuals such as arthritis under the appropriate system"
+     "note": "\n\n                  Thereafter rate residuals such as arthritis under the appropriate system\n\n                \n\n                "
     },
     {
-     "note": "Thereafter rate residuals such as spleen or liver damage under the appropriate system"
+     "note": "\n\n                  Thereafter rate residuals such as spleen or liver damage under the appropriate system\n\n                \n\n                "
     },
     {
-     "note": "Note: Evaluate this condition either by combining the evaluations for residuals under the appropriate system, or by evaluating DC 6350, whichever method results in a higher evaluation."
+     "note": "\n\n                  \n\n                    Note: Evaluate this condition either by combining the evaluations for residuals under the appropriate system, or by evaluating DC 6350, whichever method results in a higher evaluation.\n\n                  \n\n                \n\n                "
     },
     {
-     "note": "Note (1): The term &#8220;approved medication(s)&#8221; includes medications prescribed as part of a research protocol at an accredited medical institution."
+     "note": "\n\n                  \n\n                    Note (1): The term \u201capproved medication(s)\u201d includes medications prescribed as part of a research protocol at an accredited medical institution.\n\n                \n\n                "
     },
     {
-     "note": "Note (2): Psychiatric or central nervous system manifestations, opportunistic infections, and neoplasms may be rated separately under appropriate codes if higher overall evaluation results, but not in combination with percentages otherwise assignable above."
+     "note": "\n\n                  \n\n                    Note (2): Psychiatric or central nervous system manifestations, opportunistic infections, and neoplasms may be rated separately under appropriate codes if higher overall evaluation results, but not in combination with percentages otherwise assignable above.\n\n                \n\n                "
     },
     {
-     "note": "Debilitating fatigue, cognitive impairments (such as inability to concentrate, forgetfulness, confusion), or a combination of other signs and symptoms:"
+     "note": "\n\n                  Debilitating fatigue, cognitive impairments (such as inability to concentrate, forgetfulness, confusion), or a combination of other signs and symptoms:\n\n                \n\n                "
     },
     {
-     "note": "Note: For the purpose of evaluating this disability, the condition will be considered incapacitating only while it requires bed rest and treatment by a physician."
+     "note": "\n\n                  \n\n                    Note: For the purpose of evaluating this disability, the condition will be considered incapacitating only while it requires bed rest and treatment by a physician.\n\n                \n\n              "
     }
    ],
    "see_other_notes": []
@@ -291,7 +300,7 @@
   {
    "code": {
     "code": 6300,
-    "description": "&#;Cholera, Asiatic:"
+    "description": "\n\n                  \u2003Cholera, Asiatic:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -304,12 +313,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6301,
-    "description": "&#;Visceral Leishmaniasis:"
+    "description": "\n\n                  \u2003Visceral Leishmaniasis:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -322,12 +332,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6302,
-    "description": "&#;Leprosy (Hansen's Disease):"
+    "description": "\n\n                  \u2003Leprosy (Hansen's Disease):\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -340,12 +351,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6304,
-    "description": "&#;Malaria:"
+    "description": "\n\n                  \u2003Malaria:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -358,12 +370,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6305,
-    "description": "&#;Lymphatic Filariasis:"
+    "description": "\n\n                  \u2003Lymphatic Filariasis:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -376,12 +389,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6306,
-    "description": "&#;Bartonellosis:"
+    "description": "\n\n                  \u2003Bartonellosis:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -394,12 +408,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6307,
-    "description": "&#;Plague:"
+    "description": "\n\n                  \u2003Plague:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -412,12 +427,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6308,
-    "description": "&#;Relapsing Fever:"
+    "description": "\n\n                  \u2003Relapsing Fever:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -430,12 +446,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6309,
-    "description": "&#;Rheumatic fever:"
+    "description": "\n\n                  \u2003Rheumatic fever:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -448,23 +465,25 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6310,
-    "description": "&#;Syphilis, and other treponemal infections:"
+    "description": "\n\n                  \u2003Syphilis, and other treponemal infections:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6311,
-    "description": "&#;Tuberculosis, miliary:"
+    "description": "\n\n                  \u2003Tuberculosis, miliary:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -476,13 +495,18 @@
    ],
    "header": [
     "Rating"
+   ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Inactive: See \u00a7\u00a7\u20094.88c and 4.89.\n\n                \n\n                "
+    }
    ],
    "notes": []
   },
   {
    "code": {
     "code": 6313,
-    "description": "&#;Avitaminosis:"
+    "description": "\n\n                  \u2003Avitaminosis:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -519,12 +543,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 6314,
-    "description": "&#;Beriberi:"
+    "description": "\n\n                  \u2003Beriberi:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -549,51 +574,48 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": [
     {
-     "note": "As active disease:"
+     "note": "\n\n                  As active disease:\n\n                \n\n                "
     }
    ]
   }
  ],
  "notes": [
   {
-   "note": "Thereafter rate residuals such as renal necrosis under the appropriate system"
+   "note": "\n\n                  Thereafter rate residuals such as renal necrosis under the appropriate system\n\n                \n\n                "
   },
   {
-   "note": "Note: A 100 percent evaluation shall continue beyond the cessation of treatment for active disease. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. Rate residuals such as liver damage or lymphadenopathy under the appropriate system."
+   "note": "\n\n                  \n\n                    Note: A 100 percent evaluation shall continue beyond the cessation of treatment for active disease. Six months after discontinuance of such treatment, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. Rate residuals such as liver damage or lymphadenopathy under the appropriate system.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: A 100 percent evaluation shall continue beyond the date that an examining physician has determined that this has become inactive. Six months after the date of inactivity, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. Rate residuals such as skin lesions or peripheral neuropathy under the appropriate system."
+   "note": "\n\n                  \n\n                    Note: A 100 percent evaluation shall continue beyond the date that an examining physician has determined that this has become inactive. Six months after the date of inactivity, the appropriate disability rating shall be determined by mandatory VA examination. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. Rate residuals such as skin lesions or peripheral neuropathy under the appropriate system.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Note: The diagnosis of malaria depends on the identification of the malarial parasites in blood smears. If the veteran served in an endemic area and presents signs and symptoms compatible with malaria, the diagnosis may be based on clinical grounds alone. Relapses must be confirmed by the presence of malarial parasites in blood smears."
+   "note": "\n\n                  \n\n                    Note: The diagnosis of malaria depends on the identification of the malarial parasites in blood smears. If the veteran served in an endemic area and presents signs and symptoms compatible with malaria, the diagnosis may be based on clinical grounds alone. Relapses must be confirmed by the presence of malarial parasites in blood smears.\n\n                \n\n                "
   },
   {
-   "note": "Thereafter rate residuals such as liver or spleen damage under the appropriate system"
+   "note": "\n\n                  Thereafter rate residuals such as liver or spleen damage under the appropriate system\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Thereafter rate residuals such as epididymitis or lymphangitis under the appropriate system"
+   "note": "\n\n                  Thereafter rate residuals such as epididymitis or lymphangitis under the appropriate system\n\n                \n\n                "
   },
   {
-   "note": "Thereafter rate residuals such as skin lesions under the appropriate system"
+   "note": "\n\n                  Thereafter rate residuals such as skin lesions under the appropriate system\n\n                \n\n                "
   },
   {
-   "note": "Thereafter rate residuals such as lymphadenopathy under the appropriate system"
+   "note": "\n\n                  Thereafter rate residuals such as lymphadenopathy under the appropriate system\n\n                \n\n                "
   },
   {
-   "note": "Thereafter rate residuals such as liver or spleen damage or central nervous system involvement under the appropriate system"
+   "note": "\n\n                  Thereafter rate residuals such as liver or spleen damage or central nervous system involvement under the appropriate system\n\n                \n\n                "
   },
   {
-   "note": "Thereafter rate residuals such as heart damage under the appropriate system"
+   "note": "\n\n                  Thereafter rate residuals such as heart damage under the appropriate system\n\n                \n\n                "
   },
   {
-   "note": "Rate the complications of nervous system, vascular system, eyes or ears. (See DC 7004, syphilitic heart disease, DC 8013, cerebrospinal syphilis, DC 8014, meningovascular syphilis, DC 8015, tabes dorsalis, and DC 9301, dementia associated with central nervous system syphilis)"
+   "note": "\n\n                  Rate the complications of nervous system, vascular system, eyes or ears. (See DC 7004, syphilitic heart disease, DC 8013, cerebrospinal syphilis, DC 8014, meningovascular syphilis, DC 8015, tabes dorsalis, and DC 9301, dementia associated with central nervous system syphilis)\n\n                \n\n                "
   }
  ],
- "see_other_notes": [
-  {
-   "see_other_note": "Inactive: See &#167;&#167;&#8201;4.88c and 4.89."
-  }
- ]
+ "see_other_notes": []
 }

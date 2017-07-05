@@ -2,16 +2,16 @@
  "description": "Ratings of the genitourinary system\u2014diagnoses.",
  "subcategories": [
   {
-   "description": "1. diet therapy",
+   "description": "1. diet therapy\n\n                ",
    "subcategories": [
     {
-     "description": "2. drug therapy",
+     "description": "2. drug therapy\n\n                ",
      "subcategories": [],
      "ratings": [
       {
        "code": {
         "code": 7508,
-        "description": "&#;Nephrolithiasis:"
+        "description": "\n\n                  \u2003Nephrolithiasis:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -24,12 +24,17 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:\n\n                \n\n                "
+        }
+       ],
        "notes": []
       },
       {
        "code": {
         "code": 7509,
-        "description": "&#;Hydronephrosis:"
+        "description": "\n\n                  \u2003Hydronephrosis:\n\n                \n\n                "
        },
        "ratings": [
         {
@@ -54,42 +59,44 @@
        "header": [
         "Rating"
        ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Severe; Rate as renal dysfunction.\n\n                \n\n                "
+        }
+       ],
        "notes": []
       },
       {
        "code": {
         "code": 7510,
-        "description": "&#;Ureterolithiasis:"
+        "description": "\n\n                  \n\n                  \u2003Ureterolithiasis:\n\n                \n\n                "
        },
        "ratings": [],
        "header": [
         "Rating"
        ],
+       "see_other_notes": [
+        {
+         "see_other_note": "\n\n                  Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:\n\n                \n\n                "
+        }
+       ],
        "notes": []
       }
      ],
-     "notes": [
-      {
-       "note": "Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:"
-      }
-     ],
-     "see_other_notes": [
-      {
-       "see_other_note": "Severe; Rate as renal dysfunction."
-      }
-     ]
+     "notes": [],
+     "see_other_notes": []
     },
     {
-     "description": "1. diet therapy",
+     "description": "1. diet therapy\n\n                ",
      "subcategories": [
       {
-       "description": "2. drug therapy",
+       "description": "2. drug therapy\n\n                ",
        "subcategories": [],
        "ratings": [
         {
          "code": {
           "code": 7510,
-          "description": "&#;Ureterolithiasis:"
+          "description": "\n\n                  \n\n                  \u2003Ureterolithiasis:\n\n                \n\n                "
          },
          "ratings": [
           {
@@ -102,38 +109,44 @@
          "header": [
           "Rating"
          ],
+         "see_other_notes": [
+          {
+           "see_other_note": "\n\n                  Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:\n\n                \n\n                "
+          }
+         ],
          "notes": []
         },
         {
          "code": {
           "code": 7511,
-          "description": "&#;Ureter, stricture of:"
+          "description": "\n\n                  \u2003Ureter, stricture of:\n\n                \n\n                "
          },
          "ratings": [],
          "header": [
           "Rating"
          ],
+         "see_other_notes": [
+          {
+           "see_other_note": "\n\n                  Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:\n\n                \n\n                "
+          }
+         ],
          "notes": []
         }
        ],
-       "notes": [
-        {
-         "note": "Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:"
-        }
-       ],
+       "notes": [],
        "see_other_notes": []
       },
       {
-       "description": "1. diet therapy",
+       "description": "1. diet therapy\n\n                ",
        "subcategories": [
         {
-         "description": "2. drug therapy",
+         "description": "2. drug therapy\n\n                ",
          "subcategories": [],
          "ratings": [
           {
            "code": {
             "code": 7511,
-            "description": "&#;Ureter, stricture of:"
+            "description": "\n\n                  \u2003Ureter, stricture of:\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -146,62 +159,49 @@
            "header": [
             "Rating"
            ],
+           "see_other_notes": [
+            {
+             "see_other_note": "\n\n                  Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:\n\n                \n\n                "
+            }
+           ],
            "notes": []
           },
           {
            "code": {
             "code": 7512,
-            "description": "&#;Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious:"
+            "description": "\n\n                  \u2003Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious:\n\n                \n\n                "
            },
-           "ratings": [
-            {
-             "ratings": [
-              100
-             ],
-             "description": "Postoperative, suprapubic cystotomy"
-            }
-           ],
+           "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction"
+             "see_other_note": "\n\n                  Rate as voiding dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7515,
-            "description": "&#;Bladder, calculus in, with symptoms interfering with function:"
+            "description": "\n\n                  \u2003Bladder, calculus in, with symptoms interfering with function:\n\n                \n\n                "
            },
-           "ratings": [
-            {
-             "ratings": [
-              100
-             ],
-             "description": "Postoperative, suprapubic cystotomy"
-            }
-           ],
+           "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction"
+             "see_other_note": "\n\n                  Rate as voiding dysfunction\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7516,
-            "description": "&#;Bladder, fistula of:"
+            "description": "\n\n                  \u2003Bladder, fistula of:\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -214,75 +214,49 @@
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction"
+             "see_other_note": "\n\n                  Rate as voiding dysfunction or urinary tract infection, whichever is predominant.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7517,
-            "description": "&#;Bladder, injury of:"
+            "description": "\n\n                  \u2003Bladder, injury of:\n\n                \n\n                "
            },
-           "ratings": [
-            {
-             "ratings": [
-              100
-             ],
-             "description": "Multiple urethroperineal fistulae"
-            }
-           ],
+           "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as voiding dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7518,
-            "description": "&#;Urethra, stricture of:"
+            "description": "\n\n                  \u2003Urethra, stricture of:\n\n                \n\n                "
            },
-           "ratings": [
-            {
-             "ratings": [
-              100
-             ],
-             "description": "Multiple urethroperineal fistulae"
-            }
-           ],
+           "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as voiding dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7519,
-            "description": "&#;Urethra, fistual of:"
+            "description": "\n\n                  \u2003Urethra, fistual of:\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -295,22 +269,17 @@
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as voiding dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7520,
-            "description": "&#;Penis, removal of half or more\n\n                  30"
+            "description": "\n\n                  \u2003Penis, removal of half or more\n\n                  30\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -323,12 +292,17 @@
            "header": [
             "Rating"
            ],
+           "see_other_notes": [
+            {
+             "see_other_note": "\n\n                  Or rate as voiding dysfunction.\n\n                \n\n                "
+            }
+           ],
            "notes": []
           },
           {
            "code": {
             "code": 7521,
-            "description": "&#;Penis removal of glans\n\n                  20"
+            "description": "\n\n                  \u2003Penis removal of glans\n\n                  20\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -341,110 +315,124 @@
            "header": [
             "Rating"
            ],
+           "see_other_notes": [
+            {
+             "see_other_note": "\n\n                  Or rate as voiding dysfunction.\n\n                \n\n                "
+            }
+           ],
            "notes": []
           },
           {
            "code": {
             "code": 7522,
-            "description": "&#;Penis, deformity, with loss of erectile power&#;20&#;"
+            "description": "\n\n                  \u2003Penis, deformity, with loss of erectile power\u201420\u2009\n\n                  \n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
+           "see_other_notes": [],
            "notes": [
             {
-             "note": "Both&#8212;20&#8201;"
+             "note": "\n\n                  Both\u201420\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "One&#8212;0&#8201;"
+             "note": "\n\n                  One\u20140\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "Both&#8212;30&#8201;"
+             "note": "\n\n                  Both\u201430\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "One&#8212;0&#8201;"
+             "note": "\n\n                  One\u20140\u2009\n\n                    \n\n                  \n\n                \n\n                "
             }
            ]
           },
           {
            "code": {
             "code": 7523,
-            "description": "&#;Testis, atrophy complete:"
+            "description": "\n\n                  \u2003Testis, atrophy complete:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
+           "see_other_notes": [],
            "notes": [
             {
-             "note": "Both&#8212;20&#8201;"
+             "note": "\n\n                  Both\u201420\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "One&#8212;0&#8201;"
+             "note": "\n\n                  One\u20140\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "Both&#8212;30&#8201;"
+             "note": "\n\n                  Both\u201430\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "One&#8212;0&#8201;"
+             "note": "\n\n                  One\u20140\u2009\n\n                    \n\n                  \n\n                \n\n                "
             }
            ]
           },
           {
            "code": {
             "code": 7524,
-            "description": "&#;Testis, removal:"
+            "description": "\n\n                  \u2003Testis, removal:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
+           "see_other_notes": [],
            "notes": [
             {
-             "note": "Both&#8212;20&#8201;"
+             "note": "\n\n                  Both\u201420\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "One&#8212;0&#8201;"
+             "note": "\n\n                  One\u20140\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "Both&#8212;30&#8201;"
+             "note": "\n\n                  Both\u201430\u2009\n\n                  \n\n                \n\n                "
             },
             {
-             "note": "One&#8212;0&#8201;"
+             "note": "\n\n                  One\u20140\u2009\n\n                    \n\n                  \n\n                \n\n                "
             }
            ]
           },
           {
            "code": {
             "code": 7525,
-            "description": "&#;Epididymo-orchitis, chronic only:"
+            "description": "\n\n                  \u2003Epididymo-orchitis, chronic only:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as urinary tract infection."
+             "see_other_note": "\n\n                  Rate as urinary tract infection.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7527,
-            "description": "&#;Prostate gland injuries, infections, hypertrophy, postoperative residuals:"
+            "description": "\n\n                  \u2003Prostate gland injuries, infections, hypertrophy, postoperative residuals:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
+           ],
+           "see_other_notes": [
+            {
+             "see_other_note": "\n\n                  Rate as voiding dysfunction or urinary tract infection, whichever is predominant.\n\n                \n\n                "
+            }
            ],
            "notes": []
           },
           {
            "code": {
             "code": 7528,
-            "description": "&#;Malignant neoplasms of the genitourinary system\n\n                  100"
+            "description": "\n\n                  \u2003Malignant neoplasms of the genitourinary system\n\n                  100\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -457,51 +445,45 @@
            "header": [
             "Rating"
            ],
+           "see_other_notes": [],
            "notes": []
           },
           {
            "code": {
             "code": 7529,
-            "description": "&#;Benign neoplasms of the genitourinary system:"
+            "description": "\n\n                  \u2003Benign neoplasms of the genitourinary system:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
+           ],
+           "see_other_notes": [
+            {
+             "see_other_note": "\n\n                  Rate as voiding dysfunction or renal dysfunction, whichever is predominant.\n\n                \n\n                "
+            }
            ],
            "notes": []
           },
           {
            "code": {
             "code": 7530,
-            "description": "&#;Chronic renal disease requiring regular dialysis:"
+            "description": "\n\n                  \u2003Chronic renal disease requiring regular dialysis:\n\n                \n\n                "
            },
-           "ratings": [
-            {
-             "ratings": [
-              100
-             ],
-             "description": "Following transplant surgery"
-            },
-            {
-             "ratings": [
-              30
-             ],
-             "description": "Thereafter: Rate on residuals as renal dysfunction, minimum rating"
-            }
-           ],
+           "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7531,
-            "description": "&#;Kidney transplant:"
+            "description": "\n\n                  \u2003Kidney transplant:\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -520,16 +502,13 @@
            "header": [
             "Rating"
            ],
-           "notes": [
-            {
-             "note": "Rate as renal dysfunction."
-            }
-           ]
+           "see_other_notes": [],
+           "notes": []
           },
           {
            "code": {
             "code": 7532,
-            "description": "&#;Renal tubular disorders (such as renal glycosurias, aminoacidurias, renal tubular acidosis, Fanconi's syndrome, Bartter's syndrome, related disorders of Henle's loop and proximal or distal nephron function, etc.):"
+            "description": "\n\n                  \u2003Renal tubular disorders (such as renal glycosurias, aminoacidurias, renal tubular acidosis, Fanconi's syndrome, Bartter's syndrome, related disorders of Henle's loop and proximal or distal nephron function, etc.):\n\n                \n\n                "
            },
            "ratings": [
             {
@@ -542,463 +521,189 @@
            "header": [
             "Rating"
            ],
+           "see_other_notes": [
+            {
+             "see_other_note": "\n\n                  \n\n                  Or rate as renal dysfunction.\n\n                \n\n                "
+            }
+           ],
            "notes": []
           },
           {
            "code": {
             "code": 7533,
-            "description": "&#;Cystic diseases of the kidneys (polycystic disease, uremic medullary cystic disease, Medullary sponge kidney, and similar conditions):"
+            "description": "\n\n                  \u2003Cystic diseases of the kidneys (polycystic disease, uremic medullary cystic disease, Medullary sponge kidney, and similar conditions):\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7534,
-            "description": "&#;Atherosclerotic renal disease (renal artery stenosis or atheroembolic renal disease):"
+            "description": "\n\n                  \u2003Atherosclerotic renal disease (renal artery stenosis or atheroembolic renal disease):\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7535,
-            "description": "&#;Toxic nephropathy (antibotics, radiocontrast agents, nonsteroidal anti-inflammatory agents, heavy metals, and similar agents):"
+            "description": "\n\n                  \u2003Toxic nephropathy (antibotics, radiocontrast agents, nonsteroidal anti-inflammatory agents, heavy metals, and similar agents):\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7536,
-            "description": "&#;Glomerulonephritis:"
+            "description": "\n\n                  \u2003Glomerulonephritis:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7537,
-            "description": "&#;Interstitial nephritis:"
+            "description": "\n\n                  \u2003Interstitial nephritis:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7538,
-            "description": "&#;Papillary necrosis:"
+            "description": "\n\n                  \u2003Papillary necrosis:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7539,
-            "description": "&#;Renal amyloid disease:"
+            "description": "\n\n                  \u2003Renal amyloid disease:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7540,
-            "description": "&#;Disseminated intravascular coagulation with renal cortical necrosis:"
+            "description": "\n\n                  \u2003Disseminated intravascular coagulation with renal cortical necrosis:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7541,
-            "description": "&#;Renal involvement in diabetes mellitus, sickle cell anemia, systemic lupus erythematosus, vasculitis, or other systemic disease processes."
+            "description": "\n\n                  \u2003Renal involvement in diabetes mellitus, sickle cell anemia, systemic lupus erythematosus, vasculitis, or other systemic disease processes.\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           },
           {
            "code": {
             "code": 7542,
-            "description": "&#;Neurogenic bladder:"
+            "description": "\n\n                  \u2003Neurogenic bladder:\n\n                \n\n                "
            },
            "ratings": [],
            "header": [
             "Rating"
            ],
-           "notes": [
+           "see_other_notes": [
             {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as renal dysfunction."
-            },
-            {
-             "note": "Rate as voiding dysfunction."
+             "see_other_note": "\n\n                  Rate as voiding dysfunction.\n\n                \n\n                "
             }
-           ]
+           ],
+           "notes": []
           }
          ],
          "notes": [
           {
-           "note": "Rate as voiding dysfunction or urinary tract infection, whichever is predominant."
+           "note": "\n\n                  \n\n                    Note: In cases of the removal of one testis as the result of a service-incurred injury or disease, other than an undescended or congenitally undeveloped testis, with the absence or nonfunctioning of the other testis unrelated to service, an evaluation of 30 percent will be assigned for the service-connected testicular loss. Testis, underscended, or congenitally undeveloped is not a ratable disability.\n\n                  \n\n                \n\n                "
           },
           {
-           "note": "Note: In cases of the removal of one testis as the result of a service-incurred injury or disease, other than an undescended or congenitally undeveloped testis, with the absence or nonfunctioning of the other testis unrelated to service, an evaluation of 30 percent will be assigned for the service-connected testicular loss. Testis, underscended, or congenitally undeveloped is not a ratable disability."
+           "note": "\n\n                  For tubercular infections: Rate in accordance with \u00a7\u00a7\u20094.88b or 4.89, whichever is appropriate.\n\n                \n\n                "
           },
           {
-           "note": "For tubercular infections: Rate in accordance with &#167;&#167;&#8201;4.88b or 4.89, whichever is appropriate."
+           "note": "\n\n                  \n\n                    Note\u2014Following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure, the rating of 100 percent shall continue with a mandatory VA examination at the expiration of six months. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter. If there has been no local reoccurrence or metastasis, rate on residuals as voiding dysfunction or renal dysfunction, whichever is predominant.\n\n                \n\n                "
           },
           {
-           "note": "Rate as voiding dysfunction or urinary tract infection, whichever is predominant."
-          },
-          {
-           "note": "Note&#8212;Following the cessation of surgical, X-ray, antineoplastic chemotherapy or other therapeutic procedure, the rating of 100 percent shall continue with a mandatory VA examination at the expiration of six months. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter. If there has been no local reoccurrence or metastasis, rate on residuals as voiding dysfunction or renal dysfunction, whichever is predominant."
-          },
-          {
-           "note": "Rate as voiding dysfunction or renal dysfunction, whichever is predominant."
-          },
-          {
-           "note": "Note&#8212;The 100 percent evaluation shall be assigned as of the date of hospital admission for transplant surgery and shall continue with a mandatory VA examination one year following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of &#167;&#8201;3.105(e) of this chapter."
+           "note": "\n\n                  \n\n                    Note\u2014The 100 percent evaluation shall be assigned as of the date of hospital admission for transplant surgery and shall continue with a mandatory VA examination one year following hospital discharge. Any change in evaluation based upon that or any subsequent examination shall be subject to the provisions of \u00a7\u20093.105(e) of this chapter.\n\n                \n\n                "
           }
          ],
-         "see_other_notes": [
-          {
-           "see_other_note": "Or rate as voiding dysfunction."
-          },
-          {
-           "see_other_note": "Or rate as voiding dysfunction."
-          },
-          {
-           "see_other_note": "Or rate as renal dysfunction."
-          }
-         ]
+         "see_other_notes": []
         }
        ],
        "ratings": [],
@@ -1026,12 +731,13 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7500,
-    "description": "&#;Kidney, removal of one:"
+    "description": "\n\n                  \u2003Kidney, removal of one:\n\n                \n\n                "
    },
    "ratings": [
     {
@@ -1044,116 +750,112 @@
    "header": [
     "Rating"
    ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Or rate as renal dysfunction if there is nephritis, infection, or pathology of the other.\n\n                \n\n                "
+    }
+   ],
    "notes": []
   },
   {
    "code": {
     "code": 7501,
-    "description": "&#;Kidney, abscess of:"
+    "description": "\n\n                  \u2003Kidney, abscess of:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "Rate as urinary tract infection"
-    },
-    {
-     "note": "Rate as renal dysfunction."
+     "see_other_note": "\n\n                  Rate as urinary tract infection\n\n                  \n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
     "code": 7502,
-    "description": "&#;Nephritis, chronic:"
+    "description": "\n\n                  \u2003Nephritis, chronic:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "Rate as urinary tract infection"
-    },
-    {
-     "note": "Rate as renal dysfunction."
+     "see_other_note": "\n\n                  Rate as renal dysfunction.\n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
     "code": 7504,
-    "description": "&#;Pyelonephritis, chronic:"
+    "description": "\n\n                  \u2003Pyelonephritis, chronic:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
-   "notes": [
+   "see_other_notes": [
     {
-     "note": "Rate as urinary tract infection"
-    },
-    {
-     "note": "Rate as renal dysfunction."
+     "see_other_note": "\n\n                  Rate as renal dysfunction or urinary tract infection, whichever is predominant.\n\n                \n\n                "
     }
-   ]
+   ],
+   "notes": []
   },
   {
    "code": {
     "code": 7505,
-    "description": "&#;Kidney, tuberculosis of:"
+    "description": "\n\n                  \u2003Kidney, tuberculosis of:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7507,
-    "description": "&#;Nephrosclerosis, arteriolar:"
+    "description": "\n\n                  \u2003Nephrosclerosis, arteriolar:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
    ],
+   "see_other_notes": [],
    "notes": []
   },
   {
    "code": {
     "code": 7508,
-    "description": "&#;Nephrolithiasis:"
+    "description": "\n\n                  \u2003Nephrolithiasis:\n\n                \n\n                "
    },
    "ratings": [],
    "header": [
     "Rating"
+   ],
+   "see_other_notes": [
+    {
+     "see_other_note": "\n\n                  Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:\n\n                \n\n                "
+    }
    ],
    "notes": []
   }
  ],
  "notes": [
   {
-   "note": "Note: When evaluating any claim involving loss or loss of use of one or more creative organs, refer to &#167;&#8201;3.350 of this chapter to determine whether the veteran may be entitled to special monthly compensation. Footnotes in the schedule indicate conditions which potentially establish entitlement to special monthly compensation; however, there are other conditions in this section which under certain circumstances also establish entitlement to special monthly compensation."
+   "note": "\n\n                  \n\n                    Note: When evaluating any claim involving loss or loss of use of one or more creative organs, refer to \u00a7\u20093.350 of this chapter to determine whether the veteran may be entitled to special monthly compensation. Footnotes in the schedule indicate conditions which potentially establish entitlement to special monthly compensation; however, there are other conditions in this section which under certain circumstances also establish entitlement to special monthly compensation.\n\n                  \n\n                \n\n                "
   },
   {
-   "note": "Rate as renal dysfunction or urinary tract infection, whichever is predominant."
+   "note": "\n\n                  Rate in accordance with \u00a7\u00a7\u20094.88b or 4.89, whichever is appropriate.\n\n                \n\n                "
   },
   {
-   "note": "Rate in accordance with &#167;&#167;&#8201;4.88b or 4.89, whichever is appropriate."
-  },
-  {
-   "note": "Rate according to predominant symptoms as renal dysfunction, hypertension or heart disease. If rated under the cardiovascular schedule, however, the percentage rating which would otherwise be assigned will be elevated to the next higher evaluation."
-  },
-  {
-   "note": "Rate as hydronephrosis, except for recurrent stone formation requiring one or more of the following:"
+   "note": "\n\n                  Rate according to predominant symptoms as renal dysfunction, hypertension or heart disease. If rated under the cardiovascular schedule, however, the percentage rating which would otherwise be assigned will be elevated to the next higher evaluation.\n\n                \n\n                "
   }
  ],
- "see_other_notes": [
-  {
-   "see_other_note": "Or rate as renal dysfunction if there is nephritis, infection, or pathology of the other."
-  }
- ]
+ "see_other_notes": []
 }

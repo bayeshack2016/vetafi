@@ -1,2 +1,30 @@
 div#vfi-ratings
+  rating-category-breadcrumbs(breadcrumbs="breadcrumbs")
+
+  table
+    thead
+      tr
+        th Description
+        th(ng-repeat="item in header") {{item}}
+    tbody
+      tr(ng-repeat="rating in ratings")
+        td {{rating.description}}
+        td(ng-repeat="item in rating.ratings track by $index") {{item}}
+
+  table(ng-show="{{notes.length > 0}}")
+    thead
+      tr
+        th Notes
+    tbody
+      tr(ng-repeat="note in notes")
+        td {{note.note}}
+
+  table(ng-show="{{see_other_notes.length > 0}}")
+    thead
+      tr
+        th See Other Notes
+    tbody
+      tr(ng-repeat="note in see_other_notes")
+        td {{note.see_other_note}}
+
 
