@@ -59,3 +59,21 @@ case class Condition(diagnosticCode: DiagnosticCode, rating: Int) {}
 object Condition {
   implicit val jsonFormat: OFormat[Condition] = Json.format[Condition]
 }
+
+
+case class RatingSelection(rating: Int,
+                           diagnosis: DiagnosticCode) {
+
+}
+
+object RatingSelection {
+  implicit val jsonFormat: OFormat[RatingSelection] = Json.format[RatingSelection]
+}
+
+case class UserRating(ratings: Seq[RatingSelection], total_score: Int) {
+
+}
+
+object UserRating {
+  implicit val jsonFormat: OFormat[UserRating] = Json.format[UserRating]
+}
