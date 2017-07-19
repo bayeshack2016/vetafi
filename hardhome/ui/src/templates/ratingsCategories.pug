@@ -1,18 +1,11 @@
 div#vfi-ratings-categories
   rating-category-breadcrumbs(breadcrumbs="breadcrumbs")
 
-  h4 {{category}}
-
   div.rating-category-select-button(ng-repeat="subcategory in subcategories" ng-click="gotoSubcategory($index)")
     | {{subcategory}}
 
-  table.diagnostic-code-sets
-    tbody
-      tr(ng-repeat="rating in ratings")
-        td {{rating.code.code}}
-        td {{rating.code.description}}
-        td
-          button(ng-click="gotoRating($index)") Goto
+  div.condition-select-button(ng-repeat="rating in ratings" ng-click="gotoRating($index)")
+    | {{rating.code.description}} ({{rating.code.code}})
 
   table(ng-show="{{notes.length > 0}}")
     thead

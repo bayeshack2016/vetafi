@@ -6,15 +6,38 @@
     border-collapse: collapse;
 
   & table, th, td
-    border: 1px solid black;
+    border-top: 1px solid black;
 
   & div.rating-category-select-button
     padding-left: 1em
     background-color: colorPrimaryBlue
     color: colorWhite
-    border-bottom: 1px colorBlack solid
     border-top: 1px colorBlack solid
 
   & div.rating-category-select-button:before
-    background: url("/icons/next-black.svg")
-    height: 
+    background-image: url("/icons/next-black.svg")
+    position: relative
+    height: 20px
+    width: 20px
+    background-size: 20px 20px
+    display: inline-block
+    content: ""
+    top: 4px
+    right: 5px
+
+  & div.condition-select-button
+    padding-left: 1em
+    background-color: colorPrimaryBlue
+    color: colorWhite
+    border-top: 1px colorBlack solid
+
+  & div.condition-select-button:before
+    background-image: url("/icons/add-black.svg")
+    position: relative
+    height: 20px
+    width: 20px
+    background-size: 20px 20px
+    display: inline-block
+    content: ""
+    top: 4px
+    right: 5px
