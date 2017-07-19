@@ -3,9 +3,8 @@ div#vfi-ratings-categories
 
   h4 {{category}}
 
-  ul
-    li(ng-repeat="subcategory in subcategories")
-      button(ng-click="gotoSubcategory($index)") {{subcategory}}
+  div.rating-category-select-button(ng-repeat="subcategory in subcategories" ng-click="gotoSubcategory($index)")
+    | {{subcategory}}
 
   table.diagnostic-code-sets
     tbody

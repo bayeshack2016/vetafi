@@ -1,7 +1,11 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('ratingsSelectCtrl', ['$scope', 'ratingsConfigsService', '$stateParams', '$state',
-    function($scope, ratingsConfigs, $stateParams, $state) {
+app.controller('ratingsSelectCtrl', ['$scope',
+    'ratingsConfigsService',
+    '$stateParams',
+    '$state',
+    'ratingService',
+    function($scope, ratingsConfigs, $stateParams, $state, ratingService) {
         function getPath(parameter) {
             return _.map(_.split(parameter, ","), function (index) { return parseInt(index) });
         }
@@ -35,7 +39,13 @@ app.controller('ratingsSelectCtrl', ['$scope', 'ratingsConfigsService', '$stateP
 
 
         $scope.addRating = function(ratingRow, index) {
-            console.log(index, ratingRow, rating);
+            var ratingsScore = ratingRow.ratings[index];
+            var diagnosis = rating.code;
+
+            ratingService.addSelection({rating: ratingsScore, diagnosis: diagnosis});
+            console.log(ratingService.getUserRating);
+            $state.go('root.ratingsHome');
+
         }
     }]
 );

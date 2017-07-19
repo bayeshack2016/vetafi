@@ -1,25 +1,40 @@
-div.container
-  div.row
-    div.col-sm-8
-      h4 ProRate - Disability Rating and Pension Calculator
-      h5
-        | To begin click “Add Condition”.
-        | You may add multiple conditions and we will calculate
-        | your combined rating using the VA formula.
-    div.col-sm-4
-      div
+div#vfi-ratings-home
+  div.container
+    div.row
+      div.col-sm-9
+        h3 ProRate - Disability Rating and Pension Calculator
         p
-          | Rating info last updated:
-          | May 2017
+          | To begin click “Add Condition”.
         p
-          | All information on this page comes directly from CFR 38.
+          | You may add multiple conditions and we will calculate
+          | your combined rating using the VA formula.
+      div.col-sm-3
+        div
+          span
+            b.last-updated-statement Rating info last updated:
+            | May 2017
+          p.rating-info-disclaimer
+            | All information on this page comes directly from CFR 38.
+  div.container
+    div.row.rating-selection-header(ng-show="userRating.ratingSelections.length > 0")
+      div.col-sm-4 Condition
+      div.col-sm-4 Rating
+    div.row.rating-selection-row(ng-repeat="item in userRating.ratingSelections")
+      div.col-sm-4
+        p
+        | {{item.diagnosis.code}}: {{item.diagnosis.description}}
+      div.col-sm-4
+        p
+        | {{item.rating}}
+      div.col-sm-1
+        div.remove-rating-selection(ng-click="removeSelection(item)")
 
-  div.row
-    div.col-sm-12
-      button(ng-click="addCondition()")
-        | Add Condition
+    div.row
+      div.col-sm-12
+        button(ng-click="addCondition()")
+          | Add Condition
 
-  div.row(ng-repeat="condition in conditions")
-    div.col-sm-12
-      p
-      | {{condition}}
+    div.row
+      div.col-sm-12
+        p
+        | Total Rating: {{userRating.totalScore}}
