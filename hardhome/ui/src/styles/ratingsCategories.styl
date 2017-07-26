@@ -2,6 +2,10 @@
 
 #vfi-ratings-categories
 
+  width: maxWindowWidthPx
+  min-width: minWindowWidthPx
+  margin: 0 auto
+
   & table
     border-collapse: collapse;
 
@@ -13,6 +17,10 @@
     background-color: colorPrimaryBlue
     color: colorWhite
     border-top: 1px colorBlack solid
+    line-height: 40px
+
+  & div.rating-category-select-button:last-child
+    border-bottom: 1px colorBlack solid
 
   & div.rating-category-select-button:before
     background-image: url("/icons/next-black.svg")
@@ -30,6 +38,10 @@
     background-color: colorPrimaryBlue
     color: colorWhite
     border-top: 1px colorBlack solid
+    line-height: 40px
+
+  & div.condition-select-button:last-child
+    border-bottom: 1px colorBlack solid
 
   & div.condition-select-button:before
     background-image: url("/icons/add-black.svg")
