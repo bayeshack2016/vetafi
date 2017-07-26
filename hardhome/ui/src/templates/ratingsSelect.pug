@@ -7,7 +7,7 @@ div#vfi-ratings
         b Description
       div.col-sm-2
         b Rating
-    div.row(ng-repeat="rating in ratings")
+    div.row.rating-selection-row(ng-repeat="rating in ratings")
       div.col-sm-6 {{rating.description}}
       div.col-sm-1 {{rating.rating}}
       div.col-sm-1
