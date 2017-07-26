@@ -5,37 +5,27 @@
   {
    "code": {
     "code": 7700,
-    "description": "\n\n                  \u2003Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:\n\n                \n\n                "
+    "description": "Anemia, hypochromic-microcytic and megaloblastic, such as iron-deficiency and pernicious anemia:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Hemoglobin 5gm/100ml or less, with findings such as high output congestive heart failure or dyspnea at rest"
     },
     {
-     "ratings": [
-      70
-     ],
+     "rating": 70,
      "description": "Hemoglobin 7gm/100ml or less, with findings such as dyspnea on mild exertion, cardiomegaly, tachycardia (100 to 120 beats per minute) or syncope (three episodes in the last six months)"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Hemoglobin 8gm/100ml or less, with findings such as weakness, easy fatigability, headaches, lightheadedness, or shortness of breath"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Hemoglobin 10gm/100ml or less with findings such as weakness, easy fatigability or headaches"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Hemoglobin 10gm/100ml or less, asymptomatic"
     }
    ],
@@ -52,31 +42,23 @@
   {
    "code": {
     "code": 7702,
-    "description": "\n\n                  \u2003Agranulocytosis, acute:\n\n                \n\n                "
+    "description": "Agranulocytosis, acute:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Requiring bone marrow transplant, or; requiring transfusion of platelets or red cells at least once every six weeks, or; infections recurring at least once every six weeks"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Requiring transfusion of platelets or red cells at least once every three months, or; infections recurring at least once every three months"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Requiring transfusion of platelets or red cells at least once per year but less than once every three months, or; infections recurring at least once per year but less than once every three months"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Requiring continuous medication for control"
     }
    ],
@@ -93,13 +75,11 @@
   {
    "code": {
     "code": 7703,
-    "description": "\n\n                  \u2003Leukemia:\n\n                \n\n                "
+    "description": "Leukemia:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "With active disease or during a treatment phase"
     }
    ],
@@ -120,25 +100,19 @@
   {
    "code": {
     "code": 7704,
-    "description": "\n\n                  \u2003Polycythemia vera:\n\n                \n\n                "
+    "description": "Polycythemia vera:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "During periods of treatment with myelosuppressants and for three months following cessation of myelosuppressant therapy"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Requiring phlebotomy"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Stable, with or without continuous medication"
     }
    ],
@@ -155,31 +129,23 @@
   {
    "code": {
     "code": 7705,
-    "description": "\n\n                  \u2003Thrombocytopenia, primary, idiopathic or immune:\n\n                \n\n                "
+    "description": "Thrombocytopenia, primary, idiopathic or immune:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Platelet count of less than 20,000, with active bleeding, requiring treatment with medication and transfusions"
     },
     {
-     "ratings": [
-      70
-     ],
+     "rating": 70,
      "description": "Platelet count between 20,000 and 70,000, not requiring treatment, without bleeding"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Stable platelet count between 70,000 and 100,000, without bleeding"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Stable platelet count of 100,000 or more, without bleeding"
     }
    ],
@@ -192,13 +158,11 @@
   {
    "code": {
     "code": 7706,
-    "description": "\n\n                  \u2003Splenectomy\n\n                  20\n\n                  \n\n                \n\n                "
+    "description": "Splenectomy\n\n                  20"
    },
    "ratings": [
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "7706\u2003Splenectomy"
     }
    ],
@@ -215,7 +179,7 @@
   {
    "code": {
     "code": 7707,
-    "description": "\n\n                  \u2003Spleen, injury of, healed.\n\n                \n\n                "
+    "description": "Spleen, injury of, healed."
    },
    "ratings": [],
    "header": [
@@ -231,13 +195,11 @@
   {
    "code": {
     "code": 7709,
-    "description": "\n\n                  \u2003Hodgkin's disease:\n\n                \n\n                "
+    "description": "Hodgkin's disease:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "With active disease or during a treatment phase"
     }
    ],
@@ -254,7 +216,7 @@
   {
    "code": {
     "code": 7710,
-    "description": "\n\n                  \u2003Adenitis, tuberculous, active or inactive.\n\n                \n\n                "
+    "description": "Adenitis, tuberculous, active or inactive."
    },
    "ratings": [],
    "header": [
@@ -270,31 +232,23 @@
   {
    "code": {
     "code": 7714,
-    "description": "\n\n                  \u2003Sickle cell anemia:\n\n                \n\n                "
+    "description": "Sickle cell anemia:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "With repeated painful crises, occurring in skin, joints, bones or any major organs caused by hemolysis and sickling of red blood cells, with anemia, thrombosis and infarction, with symptoms precluding even light manual labor"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "With painful crises several times a year or with symptoms precluding other than light manual labor"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Following repeated hemolytic sickling crises with continuing impairment of health"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Asymptomatic, established case in remission, but with identifiable organ impairment"
     }
    ],
@@ -311,13 +265,11 @@
   {
    "code": {
     "code": 7715,
-    "description": "\n\n                  \u2003Non-Hodgkin's lymphoma:\n\n                \n\n                "
+    "description": "Non-Hodgkin's lymphoma:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "With active disease or during a treatment phase"
     }
    ],
@@ -334,31 +286,23 @@
   {
    "code": {
     "code": 7716,
-    "description": "\n\n                  \u2003Aplastic anemia:\n\n                \n\n                "
+    "description": "Aplastic anemia:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Requiring bone marrow transplant, or; requiring transfusion of platelets or red cells at least once every six weeks, or; infections recurring at least once every six weeks"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Requiring transfusion of platelets or red cells at least once every three months, or; infections recurring at least once every three months"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Requiring transfusion of platelets or red cells at least once per year but less than once every three months, or; infections recurring at least once per year but less than once every three months"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Requiring continuous medication for control"
     }
    ],
@@ -375,13 +319,11 @@
   {
    "code": {
     "code": 7717,
-    "description": "\n\n                  \u2003AL amyloidosis (primary amyloidosis)\n\n                  100\n\n                \n\n              "
+    "description": "AL amyloidosis (primary amyloidosis)\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "7717\u2003AL amyloidosis (primary amyloidosis)"
     }
    ],

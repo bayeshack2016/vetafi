@@ -2,6 +2,7 @@ import json
 import re
 
 import util
+import munging
 
 from json import JSONEncoder
 
@@ -32,7 +33,20 @@ class Rating(RatingTableObject):
 
     def as_dict(self):
         return {'ratings': self.ratings,
-                'description': self.description}
+                'description': munging.strip_whitespace(self.description)}
+
+    def __str__(self) -> str:
+        return json.dumps(self.as_dict())
+
+
+class SingleRating(RatingTableObject):
+    def __init__(self, description: str, rating: int):
+        self.rating = rating
+        self.description = description
+
+    def as_dict(self):
+        return {'rating': self.rating,
+                'description': munging.strip_whitespace(self.description)}
 
     def __str__(self) -> str:
         return json.dumps(self.as_dict())
@@ -71,7 +85,7 @@ class DiagnosticCode(RatingTableObject):
 
     def as_dict(self):
         return {'code': self.code,
-                'description': self.description}
+                'description': munging.strip_whitespace(self.description)}
 
 
 class DiagnosticCodeSet(RatingTableObject):
@@ -89,7 +103,12 @@ class DiagnosticCodeSet(RatingTableObject):
         self.see_other_notes.append(see_other_note)
 
     def add_rating(self, rating: Rating):
-        self.ratings.append(rating)
+        if len(rating.ratings) == 1:
+            self.ratings.append(SingleRating(rating.description, rating.ratings[0]))
+        else:
+            for idx, header_name in enumerate(self.header[1:]):
+                self.ratings.append(SingleRating(rating.description + ' ({})'.format(header_name),
+                                                 rating.ratings[idx]))
 
     def add_note(self, note: RatingNote):
         self.notes.append(note)
@@ -167,7 +186,7 @@ class RatingCategory(RatingTableObject):
                 yield rating
 
     def as_dict(self):
-        return {'description': self.description,
+        return {'description': munging.strip_whitespace(self.description),
                 'subcategories': [x.as_dict() for x in self.subcategories],
                 'ratings': list(self.get_all_ratings()),
                 'notes': [x.as_dict() for x in self.notes],

@@ -35,15 +35,13 @@ app.controller('ratingsSelectCtrl', ['$scope',
         $scope.notes = ratingCategory.ratings[parseInt($stateParams.ratingPath)].notes;
         $scope.see_other_notes = ratingCategory.ratings[parseInt($stateParams.ratingPath)].see_other_notes;
 
-        $scope.header = ratingCategory.ratings[parseInt($stateParams.ratingPath)].header;
 
-
-        $scope.addRating = function(ratingRow, index) {
-            var ratingsScore = ratingRow.ratings[index];
+        $scope.addRating = function(ratingRow) {
+            var ratingsScore = ratingRow.rating;
             var diagnosis = rating.code;
 
             ratingService.addSelection({rating: ratingsScore, diagnosis: diagnosis});
-            console.log(ratingService.getUserRating);
+            console.log(ratingService.getUserRating());
             $state.go('root.ratingsHome');
 
         }

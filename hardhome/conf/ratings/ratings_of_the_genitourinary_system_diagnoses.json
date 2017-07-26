@@ -17,13 +17,11 @@
   {
    "code": {
     "code": 7500,
-    "description": "\n\n                  \u2003Kidney, removal of one:\n\n                \n\n                "
+    "description": "Kidney, removal of one:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum evaluation"
     }
    ],
@@ -40,7 +38,7 @@
   {
    "code": {
     "code": 7501,
-    "description": "\n\n                  \u2003Kidney, abscess of:\n\n                \n\n                "
+    "description": "Kidney, abscess of:"
    },
    "ratings": [],
    "header": [
@@ -56,7 +54,7 @@
   {
    "code": {
     "code": 7502,
-    "description": "\n\n                  \u2003Nephritis, chronic:\n\n                \n\n                "
+    "description": "Nephritis, chronic:"
    },
    "ratings": [],
    "header": [
@@ -72,7 +70,7 @@
   {
    "code": {
     "code": 7504,
-    "description": "\n\n                  \u2003Pyelonephritis, chronic:\n\n                \n\n                "
+    "description": "Pyelonephritis, chronic:"
    },
    "ratings": [],
    "header": [
@@ -88,7 +86,7 @@
   {
    "code": {
     "code": 7505,
-    "description": "\n\n                  \u2003Kidney, tuberculosis of:\n\n                \n\n                "
+    "description": "Kidney, tuberculosis of:"
    },
    "ratings": [],
    "header": [
@@ -104,7 +102,7 @@
   {
    "code": {
     "code": 7507,
-    "description": "\n\n                  \u2003Nephrosclerosis, arteriolar:\n\n                \n\n                "
+    "description": "Nephrosclerosis, arteriolar:"
    },
    "ratings": [],
    "header": [
@@ -120,13 +118,11 @@
   {
    "code": {
     "code": 7508,
-    "description": "\n\n                  \u2003Nephrolithiasis:\n\n                \n\n                "
+    "description": "Nephrolithiasis:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "3. invasive or non-invasive procedures more than two times/year"
     }
    ],
@@ -149,25 +145,19 @@
   {
    "code": {
     "code": 7509,
-    "description": "\n\n                  \u2003Hydronephrosis:\n\n                \n\n                "
+    "description": "Hydronephrosis:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Frequent attacks of colic with infection (pyonephrosis), kidney function impaired"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Frequent attacks of colic, requiring catheter drainage"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Only an occasional attack of colic, not infected and not requiring catheter drainage"
     }
    ],
@@ -184,13 +174,11 @@
   {
    "code": {
     "code": 7510,
-    "description": "\n\n                  \n\n                  \u2003Ureterolithiasis:\n\n                \n\n                "
+    "description": "Ureterolithiasis:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "3. invasive or non-invasive procedures more than two times/year"
     }
    ],
@@ -213,13 +201,11 @@
   {
    "code": {
     "code": 7511,
-    "description": "\n\n                  \u2003Ureter, stricture of:\n\n                \n\n                "
+    "description": "Ureter, stricture of:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "3. invasive or non-invasive procedures more than two times/year"
     }
    ],
@@ -242,7 +228,7 @@
   {
    "code": {
     "code": 7512,
-    "description": "\n\n                  \u2003Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious:\n\n                \n\n                "
+    "description": "Cystitis, chronic, includes interstitial and all etiologies, infectious and non-infectious:"
    },
    "ratings": [],
    "header": [
@@ -258,7 +244,7 @@
   {
    "code": {
     "code": 7515,
-    "description": "\n\n                  \u2003Bladder, calculus in, with symptoms interfering with function:\n\n                \n\n                "
+    "description": "Bladder, calculus in, with symptoms interfering with function:"
    },
    "ratings": [],
    "header": [
@@ -274,13 +260,11 @@
   {
    "code": {
     "code": 7516,
-    "description": "\n\n                  \u2003Bladder, fistula of:\n\n                \n\n                "
+    "description": "Bladder, fistula of:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Postoperative, suprapubic cystotomy"
     }
    ],
@@ -297,7 +281,7 @@
   {
    "code": {
     "code": 7517,
-    "description": "\n\n                  \u2003Bladder, injury of:\n\n                \n\n                "
+    "description": "Bladder, injury of:"
    },
    "ratings": [],
    "header": [
@@ -313,7 +297,7 @@
   {
    "code": {
     "code": 7518,
-    "description": "\n\n                  \u2003Urethra, stricture of:\n\n                \n\n                "
+    "description": "Urethra, stricture of:"
    },
    "ratings": [],
    "header": [
@@ -329,13 +313,11 @@
   {
    "code": {
     "code": 7519,
-    "description": "\n\n                  \u2003Urethra, fistual of:\n\n                \n\n                "
+    "description": "Urethra, fistual of:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Multiple urethroperineal fistulae"
     }
    ],
@@ -352,13 +334,11 @@
   {
    "code": {
     "code": 7520,
-    "description": "\n\n                  \u2003Penis, removal of half or more\n\n                  30\n\n                \n\n                "
+    "description": "Penis, removal of half or more\n\n                  30"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "7520\u2003Penis, removal of half or more"
     }
    ],
@@ -375,13 +355,11 @@
   {
    "code": {
     "code": 7521,
-    "description": "\n\n                  \u2003Penis removal of glans\n\n                  20\n\n                \n\n                "
+    "description": "Penis removal of glans\n\n                  20"
    },
    "ratings": [
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "7521\u2003Penis removal of glans"
     }
    ],
@@ -398,7 +376,7 @@
   {
    "code": {
     "code": 7522,
-    "description": "\n\n                  \u2003Penis, deformity, with loss of erectile power\u201420\u2009\n\n                  \n\n                \n\n                "
+    "description": "Penis, deformity, with loss of erectile power\u201420"
    },
    "ratings": [],
    "header": [
@@ -426,7 +404,7 @@
   {
    "code": {
     "code": 7523,
-    "description": "\n\n                  \u2003Testis, atrophy complete:\n\n                \n\n                "
+    "description": "Testis, atrophy complete:"
    },
    "ratings": [],
    "header": [
@@ -454,7 +432,7 @@
   {
    "code": {
     "code": 7524,
-    "description": "\n\n                  \u2003Testis, removal:\n\n                \n\n                "
+    "description": "Testis, removal:"
    },
    "ratings": [],
    "header": [
@@ -482,7 +460,7 @@
   {
    "code": {
     "code": 7525,
-    "description": "\n\n                  \u2003Epididymo-orchitis, chronic only:\n\n                \n\n                "
+    "description": "Epididymo-orchitis, chronic only:"
    },
    "ratings": [],
    "header": [
@@ -502,7 +480,7 @@
   {
    "code": {
     "code": 7527,
-    "description": "\n\n                  \u2003Prostate gland injuries, infections, hypertrophy, postoperative residuals:\n\n                \n\n                "
+    "description": "Prostate gland injuries, infections, hypertrophy, postoperative residuals:"
    },
    "ratings": [],
    "header": [
@@ -518,13 +496,11 @@
   {
    "code": {
     "code": 7528,
-    "description": "\n\n                  \u2003Malignant neoplasms of the genitourinary system\n\n                  100\n\n                \n\n                "
+    "description": "Malignant neoplasms of the genitourinary system\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "7528\u2003Malignant neoplasms of the genitourinary system"
     }
    ],
@@ -541,7 +517,7 @@
   {
    "code": {
     "code": 7529,
-    "description": "\n\n                  \u2003Benign neoplasms of the genitourinary system:\n\n                \n\n                "
+    "description": "Benign neoplasms of the genitourinary system:"
    },
    "ratings": [],
    "header": [
@@ -557,7 +533,7 @@
   {
    "code": {
     "code": 7530,
-    "description": "\n\n                  \u2003Chronic renal disease requiring regular dialysis:\n\n                \n\n                "
+    "description": "Chronic renal disease requiring regular dialysis:"
    },
    "ratings": [],
    "header": [
@@ -573,19 +549,15 @@
   {
    "code": {
     "code": 7531,
-    "description": "\n\n                  \u2003Kidney transplant:\n\n                \n\n                "
+    "description": "Kidney transplant:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Following transplant surgery"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Thereafter: Rate on residuals as renal dysfunction, minimum rating"
     }
    ],
@@ -602,13 +574,11 @@
   {
    "code": {
     "code": 7532,
-    "description": "\n\n                  \u2003Renal tubular disorders (such as renal glycosurias, aminoacidurias, renal tubular acidosis, Fanconi's syndrome, Bartter's syndrome, related disorders of Henle's loop and proximal or distal nephron function, etc.):\n\n                \n\n                "
+    "description": "Renal tubular disorders (such as renal glycosurias, aminoacidurias, renal tubular acidosis, Fanconi's syndrome, Bartter's syndrome, related disorders of Henle's loop and proximal or distal nephron function, etc.):"
    },
    "ratings": [
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Minimum rating for symptomatic condition"
     }
    ],
@@ -625,7 +595,7 @@
   {
    "code": {
     "code": 7533,
-    "description": "\n\n                  \u2003Cystic diseases of the kidneys (polycystic disease, uremic medullary cystic disease, Medullary sponge kidney, and similar conditions):\n\n                \n\n                "
+    "description": "Cystic diseases of the kidneys (polycystic disease, uremic medullary cystic disease, Medullary sponge kidney, and similar conditions):"
    },
    "ratings": [],
    "header": [
@@ -641,7 +611,7 @@
   {
    "code": {
     "code": 7534,
-    "description": "\n\n                  \u2003Atherosclerotic renal disease (renal artery stenosis or atheroembolic renal disease):\n\n                \n\n                "
+    "description": "Atherosclerotic renal disease (renal artery stenosis or atheroembolic renal disease):"
    },
    "ratings": [],
    "header": [
@@ -657,7 +627,7 @@
   {
    "code": {
     "code": 7535,
-    "description": "\n\n                  \u2003Toxic nephropathy (antibotics, radiocontrast agents, nonsteroidal anti-inflammatory agents, heavy metals, and similar agents):\n\n                \n\n                "
+    "description": "Toxic nephropathy (antibotics, radiocontrast agents, nonsteroidal anti-inflammatory agents, heavy metals, and similar agents):"
    },
    "ratings": [],
    "header": [
@@ -673,7 +643,7 @@
   {
    "code": {
     "code": 7536,
-    "description": "\n\n                  \u2003Glomerulonephritis:\n\n                \n\n                "
+    "description": "Glomerulonephritis:"
    },
    "ratings": [],
    "header": [
@@ -689,7 +659,7 @@
   {
    "code": {
     "code": 7537,
-    "description": "\n\n                  \u2003Interstitial nephritis:\n\n                \n\n                "
+    "description": "Interstitial nephritis:"
    },
    "ratings": [],
    "header": [
@@ -705,7 +675,7 @@
   {
    "code": {
     "code": 7538,
-    "description": "\n\n                  \u2003Papillary necrosis:\n\n                \n\n                "
+    "description": "Papillary necrosis:"
    },
    "ratings": [],
    "header": [
@@ -721,7 +691,7 @@
   {
    "code": {
     "code": 7539,
-    "description": "\n\n                  \u2003Renal amyloid disease:\n\n                \n\n                "
+    "description": "Renal amyloid disease:"
    },
    "ratings": [],
    "header": [
@@ -737,7 +707,7 @@
   {
    "code": {
     "code": 7540,
-    "description": "\n\n                  \u2003Disseminated intravascular coagulation with renal cortical necrosis:\n\n                \n\n                "
+    "description": "Disseminated intravascular coagulation with renal cortical necrosis:"
    },
    "ratings": [],
    "header": [
@@ -753,7 +723,7 @@
   {
    "code": {
     "code": 7541,
-    "description": "\n\n                  \u2003Renal involvement in diabetes mellitus, sickle cell anemia, systemic lupus erythematosus, vasculitis, or other systemic disease processes.\n\n                \n\n                "
+    "description": "Renal involvement in diabetes mellitus, sickle cell anemia, systemic lupus erythematosus, vasculitis, or other systemic disease processes."
    },
    "ratings": [],
    "header": [
@@ -769,7 +739,7 @@
   {
    "code": {
     "code": 7542,
-    "description": "\n\n                  \u2003Neurogenic bladder:\n\n                \n\n                "
+    "description": "Neurogenic bladder:"
    },
    "ratings": [],
    "header": [

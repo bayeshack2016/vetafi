@@ -1,8 +1,17 @@
 div#vfi-ratings-categories
   rating-category-breadcrumbs(breadcrumbs="breadcrumbs")
 
+  h4
+    | Select Condition
+
+  h5(ng-show="subcategories.length > 0")
+    | Subcategories
+
   div.rating-category-select-button(ng-repeat="subcategory in subcategories" ng-click="gotoSubcategory($index)")
     | {{subcategory}}
+
+  h5(ng-show="ratings.length > 0")
+    | Conditions
 
   div.condition-select-button(ng-repeat="rating in ratings" ng-click="gotoRating($index)")
     | {{rating.code.description}} ({{rating.code.code}})

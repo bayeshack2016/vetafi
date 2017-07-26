@@ -5,25 +5,19 @@
   {
    "code": {
     "code": 7610,
-    "description": "\n\n                  \u2003Vulva, disease or injury of (including vulvovaginitis).\n\n                \n\n                "
+    "description": "Vulva, disease or injury of (including vulvovaginitis)."
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Symptoms not controlled by continuous treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Symptoms that require continuous treatment"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Symptoms that do not require continuous treatment"
     }
    ],
@@ -40,25 +34,19 @@
   {
    "code": {
     "code": 7611,
-    "description": "\n\n                  \u2003Vagina, disease or injury of.\n\n                \n\n                "
+    "description": "Vagina, disease or injury of."
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Symptoms not controlled by continuous treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Symptoms that require continuous treatment"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Symptoms that do not require continuous treatment"
     }
    ],
@@ -75,25 +63,19 @@
   {
    "code": {
     "code": 7612,
-    "description": "\n\n                  \u2003Cervix, disease or injury of.\n\n                \n\n                "
+    "description": "Cervix, disease or injury of."
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Symptoms not controlled by continuous treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Symptoms that require continuous treatment"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Symptoms that do not require continuous treatment"
     }
    ],
@@ -110,25 +92,19 @@
   {
    "code": {
     "code": 7613,
-    "description": "\n\n                  \u2003Uterus, disease, injury, or adhesions of.\n\n                \n\n                "
+    "description": "Uterus, disease, injury, or adhesions of."
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Symptoms not controlled by continuous treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Symptoms that require continuous treatment"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Symptoms that do not require continuous treatment"
     }
    ],
@@ -145,25 +121,19 @@
   {
    "code": {
     "code": 7614,
-    "description": "\n\n                  \u2003Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID)).\n\n                \n\n                "
+    "description": "Fallopian tube, disease, injury, or adhesions of (including pelvic inflammatory disease (PID))."
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Symptoms not controlled by continuous treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Symptoms that require continuous treatment"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Symptoms that do not require continuous treatment"
     }
    ],
@@ -180,25 +150,19 @@
   {
    "code": {
     "code": 7615,
-    "description": "\n\n                  \u2003Ovary, disease, injury, or adhesions of.\n\n                \n\n                "
+    "description": "Ovary, disease, injury, or adhesions of."
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Symptoms not controlled by continuous treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Symptoms that require continuous treatment"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Symptoms that do not require continuous treatment"
     }
    ],
@@ -215,19 +179,15 @@
   {
    "code": {
     "code": 7617,
-    "description": "\n\n                  \u2003Uterus and both ovaries, removal of, complete:\n\n                \n\n                "
+    "description": "Uterus and both ovaries, removal of, complete:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "For three months after removal"
     },
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Thereafter"
     }
    ],
@@ -240,19 +200,15 @@
   {
    "code": {
     "code": 7618,
-    "description": "\n\n                  \u2003Uterus, removal of, including corpus:\n\n                \n\n                "
+    "description": "Uterus, removal of, including corpus:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "For three months after removal"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Thereafter"
     }
    ],
@@ -265,25 +221,19 @@
   {
    "code": {
     "code": 7619,
-    "description": "\n\n                  \u2003Ovary, removal of:\n\n                \n\n                "
+    "description": "Ovary, removal of:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "For three months after removal"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Complete removal of both ovaries"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Removal of one with or without partial removal of the other"
     }
    ],
@@ -300,13 +250,11 @@
   {
    "code": {
     "code": 7620,
-    "description": "\n\n                  \u2003Ovaries, atrophy of both, complete\n\n                  \n\n                    \u200920\n\n                \n\n                "
+    "description": "Ovaries, atrophy of both, complete\n\n                  \n\n                    \u200920"
    },
    "ratings": [
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "7620\u2003Ovaries, atrophy of both, complete"
     }
    ],
@@ -319,19 +267,15 @@
   {
    "code": {
     "code": 7621,
-    "description": "\n\n                  \u2003Uterus, prolapse:\n\n                \n\n                "
+    "description": "Uterus, prolapse:"
    },
    "ratings": [
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Complete, through vagina and introitus"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Incomplete"
     }
    ],
@@ -344,19 +288,15 @@
   {
    "code": {
     "code": 7622,
-    "description": "\n\n                  \u2003Uterus, displacement of:\n\n                \n\n                "
+    "description": "Uterus, displacement of:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "With marked displacement and frequent or continuous menstrual disturbances"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "With adhesions and irregular menstruation"
     }
    ],
@@ -369,19 +309,15 @@
   {
    "code": {
     "code": 7623,
-    "description": "\n\n                  \u2003Pregnancy, surgical complications of:\n\n                \n\n                "
+    "description": "Pregnancy, surgical complications of:"
    },
    "ratings": [
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "With rectocele or cystocele"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "With relaxation of perineum"
     }
    ],
@@ -394,37 +330,27 @@
   {
    "code": {
     "code": 7624,
-    "description": "\n\n                  \u2003Fistula, rectovaginal:\n\n                \n\n                "
+    "description": "Fistula, rectovaginal:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Vaginal fecal leakage at least once a day requiring wearing of pad"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Vaginal fecal leakage four or more times per week, but less than daily, requiring wearing of pad"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Vaginal fecal leakage one to three times per week requiring wearing of pad"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Vaginal fecal leakage less than once a week"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Without leakage"
     }
    ],
@@ -437,31 +363,23 @@
   {
    "code": {
     "code": 7625,
-    "description": "\n\n                  \u2003Fistula, urethrovaginal:\n\n                \n\n                "
+    "description": "Fistula, urethrovaginal:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Multiple urethrovaginal fistulae"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Requiring the use of an appliance or the wearing of absorbent materials which must be changed more than four times per day"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Requiring the wearing of absorbent materials which must be changed two to four times per day"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Requiring the wearing of absorbent materials which must be changed less than two times per day"
     }
    ],
@@ -474,49 +392,35 @@
   {
    "code": {
     "code": 7626,
-    "description": "\n\n                  \u2003Breast, surgery of:\n\n                \n\n                "
+    "description": "Breast, surgery of:"
    },
    "ratings": [
     {
-     "ratings": [
-      80
-     ],
+     "rating": 80,
      "description": "Both"
     },
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "One"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Both"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "One"
     },
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Both"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "One"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Both or one"
     }
    ],
@@ -557,13 +461,11 @@
   {
    "code": {
     "code": 7627,
-    "description": "\n\n                  \u2003Malignant neoplasms of gynecological system or breast\n\n                  100\n\n                \n\n                "
+    "description": "Malignant neoplasms of gynecological system or breast\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "7627\u2003Malignant neoplasms of gynecological system or breast"
     }
    ],
@@ -580,25 +482,19 @@
   {
    "code": {
     "code": 7628,
-    "description": "\n\n                  \u2003Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin.\n\n                \n\n                "
+    "description": "Benign neoplasms of the gynecological system or breast. Rate according to impairment in function of the urinary or gynecological systems, or skin."
    },
    "ratings": [
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Lesions involving bowel or bladder confirmed by laparoscopy, pelvic pain or heavy or irregular bleeding not controlled by treatment, and bowel or bladder symptoms"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Pelvic pain or heavy or irregular bleeding not controlled by treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Pelvic pain or heavy or irregular bleeding requiring continuous treatment for control"
     }
    ],
@@ -615,25 +511,19 @@
   {
    "code": {
     "code": 7629,
-    "description": "\n\n                  \u2003Endometriosis:\n\n                \n\n                "
+    "description": "Endometriosis:"
    },
    "ratings": [
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Lesions involving bowel or bladder confirmed by laparoscopy, pelvic pain or heavy or irregular bleeding not controlled by treatment, and bowel or bladder symptoms"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Pelvic pain or heavy or irregular bleeding not controlled by treatment"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Pelvic pain or heavy or irregular bleeding requiring continuous treatment for control"
     }
    ],

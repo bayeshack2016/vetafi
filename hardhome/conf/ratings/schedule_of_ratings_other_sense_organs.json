@@ -5,13 +5,11 @@
   {
    "code": {
     "code": 6275,
-    "description": "\n\n                  \u2003Sense of smell, complete loss\n\n                  10\n\n                \n\n                "
+    "description": "Sense of smell, complete loss\n\n                  10"
    },
    "ratings": [
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "6275\u2003Sense of smell, complete loss"
     }
    ],
@@ -24,13 +22,11 @@
   {
    "code": {
     "code": 6276,
-    "description": "\n\n                  \u2003Sense of taste, complete loss\n\n                  10\n\n                \n\n                "
+    "description": "Sense of taste, complete loss\n\n                  10"
    },
    "ratings": [
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "6276\u2003Sense of taste, complete loss"
     }
    ],

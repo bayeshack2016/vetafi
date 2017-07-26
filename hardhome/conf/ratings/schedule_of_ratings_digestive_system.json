@@ -2,34 +2,28 @@
  "description": "Schedule of ratings\u2014digestive system.",
  "subcategories": [
   {
-   "description": "Spleen, disease or injury of.\n\n                ",
+   "description": "Spleen, disease or injury of.",
    "subcategories": [
     {
-     "description": "\u2003See Hemic and Lymphatic Systems.\n\n                ",
+     "description": "See Hemic and Lymphatic Systems.",
      "subcategories": [],
      "ratings": [
       {
        "code": {
         "code": 7319,
-        "description": "\n\n                  \u2003Irritable colon syndrome (spastic colitis, mucous colitis, etc.):\n\n                \n\n                "
+        "description": "Irritable colon syndrome (spastic colitis, mucous colitis, etc.):"
        },
        "ratings": [
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Severe; diarrhea, or alternating diarrhea and constipation, with more or less constant abdominal distress"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Moderate; frequent episodes of bowel disturbance with abdominal distress"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Mild; disturbances of bowel function with occasional episodes of abdominal distress"
         }
        ],
@@ -42,19 +36,15 @@
       {
        "code": {
         "code": 7321,
-        "description": "\n\n                  \u2003Amebiasis:\n\n                \n\n                "
+        "description": "Amebiasis:"
        },
        "ratings": [
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Mild gastrointestinal disturbances, lower abdominal cramps, nausea, gaseous distention, chronic constipation interrupted by diarrhea"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Asymptomatic"
         }
        ],
@@ -71,7 +61,7 @@
       {
        "code": {
         "code": 7322,
-        "description": "\n\n                  \u2003Dysentery, bacillary.\n\n                \n\n                "
+        "description": "Dysentery, bacillary."
        },
        "ratings": [],
        "header": [
@@ -87,31 +77,23 @@
       {
        "code": {
         "code": 7323,
-        "description": "\n\n                  \u2003Colitis, ulcerative:\n\n                \n\n                "
+        "description": "Colitis, ulcerative:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "Pronounced; resulting in marked malnutrition, anemia, and general debility, or with serious complication as liver abscess"
         },
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "Severe; with numerous attacks a year and malnutrition, the health only fair during remissions"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Moderately severe; with frequent exacerbations"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Moderate; with infrequent exacerbations"
         }
        ],
@@ -124,25 +106,19 @@
       {
        "code": {
         "code": 7324,
-        "description": "\n\n                  \u2003Distomiasis, intestinal or hepatic:\n\n                \n\n                "
+        "description": "Distomiasis, intestinal or hepatic:"
        },
        "ratings": [
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Severe symptoms"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Moderate symptoms"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Mild or no symptoms"
         }
        ],
@@ -155,7 +131,7 @@
       {
        "code": {
         "code": 7325,
-        "description": "\n\n                  \u2003Enteritis, chronic.\n\n                \n\n                "
+        "description": "Enteritis, chronic."
        },
        "ratings": [],
        "header": [
@@ -171,7 +147,7 @@
       {
        "code": {
         "code": 7326,
-        "description": "\n\n                  \u2003Enterocolitis, chronic.\n\n                \n\n                "
+        "description": "Enterocolitis, chronic."
        },
        "ratings": [],
        "header": [
@@ -187,7 +163,7 @@
       {
        "code": {
         "code": 7327,
-        "description": "\n\n                  \u2003Diverticulitis.\n\n                \n\n                "
+        "description": "Diverticulitis."
        },
        "ratings": [],
        "header": [
@@ -203,25 +179,19 @@
       {
        "code": {
         "code": 7328,
-        "description": "\n\n                  \u2003Intestine, small, resection of:\n\n                \n\n                "
+        "description": "Intestine, small, resection of:"
        },
        "ratings": [
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "With marked interference with absorption and nutrition, manifested by severe impairment of health objectively supported by examination findings including material weight loss"
         },
         {
-         "ratings": [
-          40
-         ],
+         "rating": 40,
          "description": "With definite interference with absorption and nutrition, manifested by impairment of health objectively supported by examination findings including definite weight loss"
         },
         {
-         "ratings": [
-          20
-         ],
+         "rating": 20,
          "description": "Symptomatic with diarrhea, anemia and inability to gain weight"
         }
        ],
@@ -238,25 +208,19 @@
       {
        "code": {
         "code": 7329,
-        "description": "\n\n                  \u2003Intestine, large, resection of:\n\n                \n\n                "
+        "description": "Intestine, large, resection of:"
        },
        "ratings": [
         {
-         "ratings": [
-          40
-         ],
+         "rating": 40,
          "description": "With severe symptoms, objectively supported by examination findings"
         },
         {
-         "ratings": [
-          20
-         ],
+         "rating": 20,
          "description": "With moderate symptoms"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "With slight symptoms"
         }
        ],
@@ -273,25 +237,19 @@
       {
        "code": {
         "code": 7330,
-        "description": "\n\n                  \u2003Intestine, fistula of, persistent, or after attempt at operative closure:\n\n                \n\n                "
+        "description": "Intestine, fistula of, persistent, or after attempt at operative closure:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "Copious and frequent, fecal discharge"
         },
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "Constant or frequent, fecal discharge"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Slight infrequent, fecal discharge"
         }
        ],
@@ -308,13 +266,11 @@
       {
        "code": {
         "code": 7331,
-        "description": "\n\n                  \u2003Peritonitis, tuberculous, active or inactive:\n\n                \n\n                "
+        "description": "Peritonitis, tuberculous, active or inactive:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "Active"
         }
        ],
@@ -331,37 +287,27 @@
       {
        "code": {
         "code": 7332,
-        "description": "\n\n                  \u2003Rectum and anus, impairment of sphincter control:\n\n                \n\n                "
+        "description": "Rectum and anus, impairment of sphincter control:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "Complete loss of sphincter control"
         },
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "Extensive leakage and fairly frequent involuntary bowel movements"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Occasional involuntary bowel movements, necessitating wearing of pad"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Constant slight, or occasional moderate leakage"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Healed or slight, without leakage"
         }
        ],
@@ -374,25 +320,19 @@
       {
        "code": {
         "code": 7333,
-        "description": "\n\n                  \u2003Rectum and anus, stricture of:\n\n                \n\n                "
+        "description": "Rectum and anus, stricture of:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "Requiring colostomy"
         },
         {
-         "ratings": [
-          50
-         ],
+         "rating": 50,
          "description": "Great reduction of lumen, or extensive leakage"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Moderate reduction of lumen, or moderate constant leakage"
         }
        ],
@@ -405,25 +345,19 @@
       {
        "code": {
         "code": 7334,
-        "description": "\n\n                  \u2003Rectum, prolapse of:\n\n                \n\n                "
+        "description": "Rectum, prolapse of:"
        },
        "ratings": [
         {
-         "ratings": [
-          50
-         ],
+         "rating": 50,
          "description": "Severe (or complete), persistent"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Moderate, persistent or frequently recurring"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Mild with constant slight or occasional moderate leakage"
         }
        ],
@@ -436,7 +370,7 @@
       {
        "code": {
         "code": 7335,
-        "description": "\n\n                  \u2003Ano, fistula in.\n\n                \n\n                "
+        "description": "Ano, fistula in."
        },
        "ratings": [],
        "header": [
@@ -452,25 +386,19 @@
       {
        "code": {
         "code": 7336,
-        "description": "\n\n                  \u2003Hemorrhoids, external or internal:\n\n                \n\n                "
+        "description": "Hemorrhoids, external or internal:"
        },
        "ratings": [
         {
-         "ratings": [
-          20
-         ],
+         "rating": 20,
          "description": "With persistent bleeding and with secondary anemia, or with fissures"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Large or thrombotic, irreducible, with excessive redundant tissue, evidencing frequent recurrences"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Mild or moderate"
         }
        ],
@@ -483,7 +411,7 @@
       {
        "code": {
         "code": 7337,
-        "description": "\n\n                  \u2003Pruritus ani.\n\n                \n\n                "
+        "description": "Pruritus ani."
        },
        "ratings": [],
        "header": [
@@ -499,37 +427,27 @@
       {
        "code": {
         "code": 7338,
-        "description": "\n\n                  \u2003Hernia, inguinal:\n\n                \n\n                "
+        "description": "Hernia, inguinal:"
        },
        "ratings": [
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "Large, postoperative, recurrent, not well supported under ordinary conditions and not readily reducible, when considered inoperable"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Small, postoperative recurrent, or unoperated irremediable, not well supported by truss, or not readily reducible"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Postoperative recurrent, readily reducible and well supported by truss or belt"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Not operated, but remediable"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Small, reducible, or without true hernia protrusion"
         }
        ],
@@ -546,31 +464,23 @@
       {
        "code": {
         "code": 7339,
-        "description": "\n\n                  \u2003Hernia, ventral, postoperative:\n\n                \n\n                "
+        "description": "Hernia, ventral, postoperative:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "Massive, persistent, severe diastasis of recti muscles or extensive diffuse destruction or weakening of muscular and fascial support of abdominal wall so as to be inoperable"
         },
         {
-         "ratings": [
-          40
-         ],
+         "rating": 40,
          "description": "Large, not well supported by belt under ordinary conditions"
         },
         {
-         "ratings": [
-          20
-         ],
+         "rating": 20,
          "description": "Small, not well supported by belt under ordinary conditions, or healed ventral hernia or post-operative wounds with weakening of abdominal wall and indication for a supporting belt"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Wounds, postoperative, healed, no disability, belt not indicated"
         }
        ],
@@ -583,7 +493,7 @@
       {
        "code": {
         "code": 7340,
-        "description": "\n\n                  \u2003Hernia, femoral.\n\n                \n\n                "
+        "description": "Hernia, femoral."
        },
        "ratings": [],
        "header": [
@@ -599,13 +509,11 @@
       {
        "code": {
         "code": 7342,
-        "description": "\n\n                  \u2003Visceroptosis, symptomatic, marked\n\n                  10\n\n                \n\n                "
+        "description": "Visceroptosis, symptomatic, marked\n\n                  10"
        },
        "ratings": [
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "7342\u2003Visceroptosis, symptomatic, marked"
         }
        ],
@@ -618,13 +526,11 @@
       {
        "code": {
         "code": 7343,
-        "description": "\n\n                  \u2003Malignant neoplasms of the digestive system, exclusive of skin growths\n\n                  100\n\n                \n\n                "
+        "description": "Malignant neoplasms of the digestive system, exclusive of skin growths\n\n                  100"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "7343\u2003Malignant neoplasms of the digestive system, exclusive of skin growths"
         }
        ],
@@ -641,7 +547,7 @@
       {
        "code": {
         "code": 7344,
-        "description": "\n\n                  \u2003Benign neoplasms, exclusive of skin growths:\n\n                \n\n                "
+        "description": "Benign neoplasms, exclusive of skin growths:"
        },
        "ratings": [],
        "header": [
@@ -657,43 +563,31 @@
       {
        "code": {
         "code": 7345,
-        "description": "\n\n                  \u2003Chronic liver disease without cirrhosis (including hepatitis B, chronic active hepatitis, autoimmune hepatitis, hemochromatosis, drug-induced hepatitis, etc., but excluding bile duct disorders and hepatitis C):\n\n                \n\n                "
+        "description": "Chronic liver disease without cirrhosis (including hepatitis B, chronic active hepatitis, autoimmune hepatitis, hemochromatosis, drug-induced hepatitis, etc., but excluding bile duct disorders and hepatitis C):"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "Near-constant debilitating symptoms (such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain)"
         },
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "Daily fatigue, malaise, and anorexia, with substantial weight loss (or other indication of malnutrition), and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least six weeks during the past 12-month period, but not occurring constantly"
         },
         {
-         "ratings": [
-          40
-         ],
+         "rating": 40,
          "description": "Daily fatigue, malaise, and anorexia, with minor weight loss and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least four weeks, but less than six weeks, during the past 12-month period"
         },
         {
-         "ratings": [
-          20
-         ],
+         "rating": 20,
          "description": "Daily fatigue, malaise, and anorexia (without weight loss or hepatomegaly), requiring dietary restriction or continuous medication, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least two weeks, but less than four weeks, during the past 12-month period"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Intermittent fatigue, malaise, and anorexia, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least one week, but less than two weeks, during the past 12-month period"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Nonsymptomatic"
         }
        ],
@@ -716,25 +610,19 @@
       {
        "code": {
         "code": 7346,
-        "description": "\n\n                  \u2003Hernia hiatal:\n\n                \n\n                "
+        "description": "Hernia hiatal:"
        },
        "ratings": [
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "Symptoms of pain, vomiting, material weight loss and hematemesis or melena with moderate anemia; or other symptom combinations productive of severe impairment of health"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Persistently recurrent epigastric distress with dysphagia, pyrosis, and regurgitation, accompanied by substernal or arm or shoulder pain, productive of considerable impairment of health"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "With two or more of the symptoms for the 30 percent evaluation of less severity"
         }
        ],
@@ -747,31 +635,23 @@
       {
        "code": {
         "code": 7347,
-        "description": "\n\n                  \u2003Pancreatitis:\n\n                \n\n                "
+        "description": "Pancreatitis:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "With frequently recurrent disabling attacks of abdominal pain with few pain free intermissions and with steatorrhea, malabsorption, diarrhea and severe malnutrition"
         },
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "With frequent attacks of abdominal pain, loss of normal body weight and other findings showing continuing pancreatic insufficiency between acute attacks"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Moderately severe; with at least 4-7 typical attacks of abdominal pain per year with good remission between attacks"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "With at least one recurring attack of typical severe abdominal pain in the past year"
         }
        ],
@@ -791,25 +671,19 @@
       {
        "code": {
         "code": 7348,
-        "description": "\n\n                  \u2003Vagotomy with pyloroplasty or gastroenterostomy:\n\n                \n\n                "
+        "description": "Vagotomy with pyloroplasty or gastroenterostomy:"
        },
        "ratings": [
         {
-         "ratings": [
-          40
-         ],
+         "rating": 40,
          "description": "Followed by demonstrably confirmative postoperative complications of stricture or continuing gastric retention"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "With symptoms and confirmed diagnosis of alkaline gastritis, or of confirmed persisting diarrhea"
         },
         {
-         "ratings": [
-          20
-         ],
+         "rating": 20,
          "description": "Recurrent ulcer with incomplete vagotomy"
         }
        ],
@@ -826,19 +700,15 @@
       {
        "code": {
         "code": 7351,
-        "description": "\n\n                  \u2003Liver transplant:\n\n                \n\n                "
+        "description": "Liver transplant:"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
+         "rating": 100,
          "description": "For an indefinite period from the date of hospital admission for transplant surgery"
         },
         {
-         "ratings": [
-          30
-         ],
+         "rating": 30,
          "description": "Minimum"
         }
        ],
@@ -855,43 +725,31 @@
       {
        "code": {
         "code": 7354,
-        "description": "\n\n                  \u2003Hepatitis C (or non-A, non-B hepatitis):\n\n                \n\n                "
+        "description": "Hepatitis C (or non-A, non-B hepatitis):"
        },
        "ratings": [
         {
-         "ratings": [
-          100
-         ],
-         "description": "\u2003Near-constant debilitating symptoms (such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain)"
+         "rating": 100,
+         "description": "Near-constant debilitating symptoms (such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain)"
         },
         {
-         "ratings": [
-          60
-         ],
+         "rating": 60,
          "description": "Daily fatigue, malaise, and anorexia, with substantial weight loss (or other indication of malnutrition), and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least six weeks during the past 12-month period, but not occurring constantly"
         },
         {
-         "ratings": [
-          40
-         ],
+         "rating": 40,
          "description": "Daily fatigue, malaise, and anorexia, with minor weight loss and hepatomegaly, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least four weeks, but less than six weeks, during the past 12-month period"
         },
         {
-         "ratings": [
-          20
-         ],
+         "rating": 20,
          "description": "Daily fatigue, malaise, and anorexia (without weight loss or hepatomegaly), requiring dietary restriction or continuous medication, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least two weeks, but less than four weeks, during the past 12-month period"
         },
         {
-         "ratings": [
-          10
-         ],
+         "rating": 10,
          "description": "Intermittent fatigue, malaise, and anorexia, or; incapacitating episodes (with symptoms such as fatigue, malaise, nausea, vomiting, anorexia, arthralgia, and right upper quadrant pain) having a total duration of at least one week, but less than two weeks, during the past 12-month period"
         },
         {
-         "ratings": [
-          0
-         ],
+         "rating": 0,
          "description": "Nonsymptomatic"
         }
        ],
@@ -925,7 +783,7 @@
   {
    "code": {
     "code": 7200,
-    "description": "\n\n                  \u2003Mouth, injuries of.\n\n                \n\n                "
+    "description": "Mouth, injuries of."
    },
    "ratings": [],
    "header": [
@@ -941,7 +799,7 @@
   {
    "code": {
     "code": 7201,
-    "description": "\n\n                  \u2003Lips, injuries of.\n\n                \n\n                "
+    "description": "Lips, injuries of."
    },
    "ratings": [],
    "header": [
@@ -957,25 +815,19 @@
   {
    "code": {
     "code": 7202,
-    "description": "\n\n                  \u2003Tongue, loss of whole or part:\n\n                \n\n                "
+    "description": "Tongue, loss of whole or part:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "With inability to communicate by speech"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "One-half or more"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "With marked speech impairment"
     }
    ],
@@ -988,25 +840,19 @@
   {
    "code": {
     "code": 7203,
-    "description": "\n\n                  \u2003Esophagus, stricture of:\n\n                \n\n                "
+    "description": "Esophagus, stricture of:"
    },
    "ratings": [
     {
-     "ratings": [
-      80
-     ],
+     "rating": 80,
      "description": "Permitting passage of liquids only, with marked impairment of general health"
     },
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Severe, permitting liquids only"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Moderate"
     }
    ],
@@ -1019,7 +865,7 @@
   {
    "code": {
     "code": 7204,
-    "description": "\n\n                  \u2003Esophagus, spasm of (cardiospasm).\n\n                \n\n                "
+    "description": "Esophagus, spasm of (cardiospasm)."
    },
    "ratings": [],
    "header": [
@@ -1035,7 +881,7 @@
   {
    "code": {
     "code": 7205,
-    "description": "\n\n                  \u2003Esophagus, diverticulum of, acquired.\n\n                \n\n                "
+    "description": "Esophagus, diverticulum of, acquired."
    },
    "ratings": [],
    "header": [
@@ -1051,31 +897,23 @@
   {
    "code": {
     "code": 7301,
-    "description": "\n\n                  \u2003Peritoneum, adhesions of:\n\n                \n\n                "
+    "description": "Peritoneum, adhesions of:"
    },
    "ratings": [
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Severe; definite partial obstruction shown by X-ray, with frequent and prolonged episodes of severe colic distension, nausea or vomiting, following severe peritonitis, ruptured appendix, perforated ulcer, or operation with drainage"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Moderately severe; partial obstruction manifested by delayed motility of barium meal and less frequent and less prolonged episodes of pain"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Moderate; pulling pain on attempting work or aggravated by movements of the body, or occasional episodes of colic pain, nausea, constipation (perhaps alternating with diarrhea) or abdominal distension"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Mild"
     }
    ],
@@ -1092,31 +930,23 @@
   {
    "code": {
     "code": 7304,
-    "description": "\n\n                  \u2003Ulcer, gastric.\n\n                \n\n                "
+    "description": "Ulcer, gastric."
    },
    "ratings": [
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Severe; pain only partially relieved by standard ulcer therapy, periodic vomiting, recurrent hematemesis or melena, with manifestations of anemia and weight loss productive of definite impairment of health"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Moderately severe; less than severe but with impairment of health manifested by anemia and weight loss; or recurrent incapacitating episodes averaging 10 days or more in duration at least four or more times a year"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Moderate; recurring episodes of severe symptoms two or three times a year averaging 10 days in duration; or with continuous moderate manifestations"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Mild; with recurring symptoms once or twice yearly"
     }
    ],
@@ -1129,31 +959,23 @@
   {
    "code": {
     "code": 7305,
-    "description": "\n\n                  \u2003Ulcer, duodenal:\n\n                \n\n                "
+    "description": "Ulcer, duodenal:"
    },
    "ratings": [
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Severe; pain only partially relieved by standard ulcer therapy, periodic vomiting, recurrent hematemesis or melena, with manifestations of anemia and weight loss productive of definite impairment of health"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Moderately severe; less than severe but with impairment of health manifested by anemia and weight loss; or recurrent incapacitating episodes averaging 10 days or more in duration at least four or more times a year"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Moderate; recurring episodes of severe symptoms two or three times a year averaging 10 days in duration; or with continuous moderate manifestations"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Mild; with recurring symptoms once or twice yearly"
     }
    ],
@@ -1166,37 +988,27 @@
   {
    "code": {
     "code": 7306,
-    "description": "\n\n                  \u2003Ulcer, marginal (gastrojejunal):\n\n                \n\n                "
+    "description": "Ulcer, marginal (gastrojejunal):"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Pronounced; periodic or continuous pain unrelieved by standard ulcer therapy with periodic vomiting, recurring melena or hematemesis, and weight loss. Totally incapacitating"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Severe; same as pronounced with less pronounced and less continuous symptoms with definite impairment of health"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Moderately severe; intercurrent episodes of abdominal pain at least once a month partially or completely relieved by ulcer therapy, mild and transient episodes of vomiting or melena"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Moderate; with episodes of recurring symptoms several times a year"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Mild; with brief episodes of recurring symptoms once or twice yearly"
     }
    ],
@@ -1209,25 +1021,19 @@
   {
    "code": {
     "code": 7307,
-    "description": "\n\n                  \u2003Gastritis, hypertrophic (identified by gastroscope):\n\n                \n\n                "
+    "description": "Gastritis, hypertrophic (identified by gastroscope):"
    },
    "ratings": [
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Chronic; with severe hemorrhages, or large ulcerated or eroded areas"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Chronic; with multiple small eroded or ulcerated areas, and symptoms"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Chronic; with small nodular lesions, and symptoms"
     }
    ],
@@ -1240,7 +1046,7 @@
   {
    "code": {
     "code": 9999,
-    "description": "\n\n                  Gastritis, atrophic.\n\n                \n\n                "
+    "description": "Gastritis, atrophic."
    },
    "ratings": [],
    "header": [
@@ -1260,25 +1066,19 @@
   {
    "code": {
     "code": 7308,
-    "description": "\n\n                  \u2003Postgastrectomy syndromes:\n\n                \n\n                "
+    "description": "Postgastrectomy syndromes:"
    },
    "ratings": [
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Severe; associated with nausea, sweating, circulatory disturbance after meals, diarrhea, hypoglycemic symptoms, and weight loss with malnutrition and anemia"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Moderate; less frequent episodes of epigastric disorders with characteristic mild circulatory symptoms after meals but with diarrhea and weight loss"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Mild; infrequent episodes of epigastric distress with characteristic mild circulatory symptoms or continuous mild manifestations"
     }
    ],
@@ -1291,7 +1091,7 @@
   {
    "code": {
     "code": 7309,
-    "description": "\n\n                  \u2003Stomach, stenosis of.\n\n                \n\n                "
+    "description": "Stomach, stenosis of."
    },
    "ratings": [],
    "header": [
@@ -1307,7 +1107,7 @@
   {
    "code": {
     "code": 7310,
-    "description": "\n\n                  \u2003Stomach, injury of, residuals.\n\n                \n\n                "
+    "description": "Stomach, injury of, residuals."
    },
    "ratings": [],
    "header": [
@@ -1323,7 +1123,7 @@
   {
    "code": {
     "code": 7311,
-    "description": "\n\n                  \u2003Residuals of injury of the liver:\n\n                \n\n                "
+    "description": "Residuals of injury of the liver:"
    },
    "ratings": [],
    "header": [
@@ -1339,37 +1139,27 @@
   {
    "code": {
     "code": 7312,
-    "description": "\n\n                  \u2003Cirrhosis of the liver, primary biliary cirrhosis, or cirrhotic phase of sclerosing cholangitis:\n\n                \n\n                "
+    "description": "Cirrhosis of the liver, primary biliary cirrhosis, or cirrhotic phase of sclerosing cholangitis:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Generalized weakness, substantial weight loss, and persistent jaundice, or; with one of the following refractory to treatment: ascites, hepatic encephalopathy, hemorrhage from varices or portal gastropathy (erosive gastritis)"
     },
     {
-     "ratings": [
-      70
-     ],
+     "rating": 70,
      "description": "History of two or more episodes of ascites, hepatic encephalopathy, or hemorrhage from varices or portal gastropathy (erosive gastritis), but with periods of remission between attacks"
     },
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "History of one episode of ascites, hepatic encephalopathy, or hemorrhage from varices or portal gastropathy (erosive gastritis)"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Portal hypertension and splenomegaly, with weakness, anorexia, abdominal pain, malaise, and at least minor weight loss"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Symptoms such as weakness, anorexia, abdominal pain, and malaise"
     }
    ],
@@ -1386,25 +1176,19 @@
   {
    "code": {
     "code": 7314,
-    "description": "\n\n                  \u2003Cholecystitis, chronic:\n\n                \n\n                "
+    "description": "Cholecystitis, chronic:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Severe; frequent attacks of gall bladder colic"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Moderate; gall bladder dyspepsia, confirmed by X-ray technique, and with infrequent attacks (not over two or three a year) of gall bladder colic, with or without jaundice"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Mild"
     }
    ],
@@ -1417,7 +1201,7 @@
   {
    "code": {
     "code": 7315,
-    "description": "\n\n                  \u2003Cholelithiasis, chronic.\n\n                \n\n                "
+    "description": "Cholelithiasis, chronic."
    },
    "ratings": [],
    "header": [
@@ -1433,7 +1217,7 @@
   {
    "code": {
     "code": 7316,
-    "description": "\n\n                  \u2003Cholangitis, chronic.\n\n                \n\n                "
+    "description": "Cholangitis, chronic."
    },
    "ratings": [],
    "header": [
@@ -1449,7 +1233,7 @@
   {
    "code": {
     "code": 7317,
-    "description": "\n\n                  \u2003Gall bladder, injury of.\n\n                \n\n                "
+    "description": "Gall bladder, injury of."
    },
    "ratings": [],
    "header": [
@@ -1465,25 +1249,19 @@
   {
    "code": {
     "code": 7318,
-    "description": "\n\n                  \u2003Gall bladder, removal of:\n\n                \n\n                "
+    "description": "Gall bladder, removal of:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "With severe symptoms"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "With mild symptoms"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Nonsymptomatic"
     }
    ],

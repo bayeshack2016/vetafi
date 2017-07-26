@@ -2,13 +2,13 @@
  "description": "Schedule of ratings\u2014neurological conditions and convulsive disorders.",
  "subcategories": [
   {
-   "description": "\n\n                    Evaluation of Cognitive Impairment and Subjective Symptoms\n\n                  \n\n                ",
+   "description": "Evaluation of Cognitive Impairment and Subjective Symptoms",
    "subcategories": [],
    "ratings": [
     {
      "code": {
       "code": 8046,
-      "description": "\n\n                  \u2003Cerebral arteriosclerosis:\n\n                \n\n                "
+      "description": "Cerebral arteriosclerosis:"
      },
      "ratings": [],
      "header": [
@@ -56,19 +56,15 @@
   {
    "code": {
     "code": 8000,
-    "description": "\n\n                  \u2003Encephalitis, epidemic, chronic:\n\n                \n\n                "
+    "description": "Encephalitis, epidemic, chronic:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active febrile disease"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, minimum"
     }
    ],
@@ -85,19 +81,15 @@
   {
    "code": {
     "code": 8002,
-    "description": "\n\n                  \u2003Malignant\n\n                  100\n\n                \n\n                "
+    "description": "Malignant\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "8002\u2003Malignant"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum rating"
     }
    ],
@@ -114,19 +106,15 @@
   {
    "code": {
     "code": 8003,
-    "description": "\n\n                  \u2003Benign, minimum\n\n                  60\n\n                \n\n                "
+    "description": "Benign, minimum\n\n                  60"
    },
    "ratings": [
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "8003\u2003Benign, minimum"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, minimum"
     }
    ],
@@ -139,13 +127,11 @@
   {
    "code": {
     "code": 8004,
-    "description": "\n\n                  \u2003Paralysis agitans:\n\n                \n\n                "
+    "description": "Paralysis agitans:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum rating"
     }
    ],
@@ -158,13 +144,11 @@
   {
    "code": {
     "code": 8005,
-    "description": "\n\n                  \u2003Bulbar palsy\n\n                  100\n\n                \n\n                "
+    "description": "Bulbar palsy\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "8005\u2003Bulbar palsy"
     }
    ],
@@ -177,19 +161,15 @@
   {
    "code": {
     "code": 8007,
-    "description": "\n\n                  \u2003Brain, vessels, embolism of.\n\n                \n\n                "
+    "description": "Brain, vessels, embolism of."
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Rate the vascular conditions under Codes 8007 through 8009, for 6 months"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, thereafter, minimum"
     }
    ],
@@ -202,19 +182,15 @@
   {
    "code": {
     "code": 8008,
-    "description": "\n\n                  \u2003Brain, vessels, thrombosis of.\n\n                \n\n                "
+    "description": "Brain, vessels, thrombosis of."
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Rate the vascular conditions under Codes 8007 through 8009, for 6 months"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, thereafter, minimum"
     }
    ],
@@ -227,19 +203,15 @@
   {
    "code": {
     "code": 8009,
-    "description": "\n\n                  \u2003Brain, vessels, hemorrhage from:\n\n                \n\n                "
+    "description": "Brain, vessels, hemorrhage from:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Rate the vascular conditions under Codes 8007 through 8009, for 6 months"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, thereafter, minimum"
     }
    ],
@@ -252,13 +224,11 @@
   {
    "code": {
     "code": 8010,
-    "description": "\n\n                  \u2003Myelitis:\n\n                \n\n                "
+    "description": "Myelitis:"
    },
    "ratings": [
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Minimum rating"
     }
    ],
@@ -271,19 +241,15 @@
   {
    "code": {
     "code": 8011,
-    "description": "\n\n                  \u2003Poliomyelitis, anterior:\n\n                \n\n                "
+    "description": "Poliomyelitis, anterior:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active febrile disease"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, minimum"
     }
    ],
@@ -296,19 +262,15 @@
   {
    "code": {
     "code": 8012,
-    "description": "\n\n                  \u2003Hematomyelia:\n\n                \n\n                "
+    "description": "Hematomyelia:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "For 6 months"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, minimum"
     }
    ],
@@ -321,7 +283,7 @@
   {
    "code": {
     "code": 8013,
-    "description": "\n\n                  \u2003Syphilis, cerebrospinal.\n\n                \n\n                "
+    "description": "Syphilis, cerebrospinal."
    },
    "ratings": [],
    "header": [
@@ -337,7 +299,7 @@
   {
    "code": {
     "code": 8014,
-    "description": "\n\n                  \u2003Syphilis, meningovascular.\n\n                \n\n                "
+    "description": "Syphilis, meningovascular."
    },
    "ratings": [],
    "header": [
@@ -353,7 +315,7 @@
   {
    "code": {
     "code": 8015,
-    "description": "\n\n                  \u2003Tabes dorsalis.\n\n                \n\n                "
+    "description": "Tabes dorsalis."
    },
    "ratings": [],
    "header": [
@@ -369,13 +331,11 @@
   {
    "code": {
     "code": 8017,
-    "description": "\n\n                  \u2003Amyotrophic lateral sclerosis\n\n                  100\n\n                \n\n                "
+    "description": "Amyotrophic lateral sclerosis\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "8017\u2003Amyotrophic lateral sclerosis"
     }
    ],
@@ -392,13 +352,11 @@
   {
    "code": {
     "code": 8018,
-    "description": "\n\n                  \u2003Multiple sclerosis:\n\n                \n\n                "
+    "description": "Multiple sclerosis:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum rating"
     }
    ],
@@ -411,19 +369,15 @@
   {
    "code": {
     "code": 8019,
-    "description": "\n\n                  \u2003Meningitis, cerebrospinal, epidemic:\n\n                \n\n                "
+    "description": "Meningitis, cerebrospinal, epidemic:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active febrile disease"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, minimum"
     }
    ],
@@ -436,19 +390,15 @@
   {
    "code": {
     "code": 8020,
-    "description": "\n\n                  \u2003Brain, abscess of:\n\n                \n\n                "
+    "description": "Brain, abscess of:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, minimum"
     }
    ],
@@ -465,19 +415,15 @@
   {
    "code": {
     "code": 8021,
-    "description": "\n\n                  \u2003Malignant\n\n                  100\n\n                \n\n                "
+    "description": "Malignant\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "8021\u2003Malignant"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum rating"
     }
    ],
@@ -494,19 +440,15 @@
   {
    "code": {
     "code": 8022,
-    "description": "\n\n                  \u2003Benign, minimum rating\n\n                  60\n\n                \n\n                "
+    "description": "Benign, minimum rating\n\n                  60"
    },
    "ratings": [
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "8022\u2003Benign, minimum rating"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Rate residuals, minimum"
     }
    ],
@@ -519,13 +461,11 @@
   {
    "code": {
     "code": 8023,
-    "description": "\n\n                  \u2003Progressive muscular atrophy:\n\n                \n\n                "
+    "description": "Progressive muscular atrophy:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum rating"
     }
    ],
@@ -538,13 +478,11 @@
   {
    "code": {
     "code": 8024,
-    "description": "\n\n                  \u2003Syringomyelia:\n\n                \n\n                "
+    "description": "Syringomyelia:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum rating"
     }
    ],
@@ -557,13 +495,11 @@
   {
    "code": {
     "code": 8025,
-    "description": "\n\n                  \u2003Myasthenia gravis:\n\n                \n\n                "
+    "description": "Myasthenia gravis:"
    },
    "ratings": [
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Minimum rating"
     }
    ],
@@ -580,7 +516,7 @@
   {
    "code": {
     "code": 8045,
-    "description": "\n\n                  \u2003Residuals of traumatic brain injury (TBI):\n\n                \n\n                "
+    "description": "Residuals of traumatic brain injury (TBI):"
    },
    "ratings": [],
    "header": [

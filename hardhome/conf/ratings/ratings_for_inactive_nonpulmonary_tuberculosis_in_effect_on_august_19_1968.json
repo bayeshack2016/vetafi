@@ -21,27 +21,19 @@
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "For 2 years after date of inactivity, following active tuberculosis, which was clinically identified during service or subsequently"
     },
     {
-     "ratings": [
-      50
-     ],
+     "rating": 50,
      "description": "Thereafter, for 4 years, or in any event, to 6 years after date of inactivity"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Thereafter, for 5 years, or to 11 years after date of inactivity"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Thereafter, in the absence of a schedular compensable permanent residual"
     }
    ],

@@ -5,13 +5,11 @@
   {
    "code": {
     "code": 6300,
-    "description": "\n\n                  \u2003Cholera, Asiatic:\n\n                \n\n                "
+    "description": "Cholera, Asiatic:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease, and for 3 months convalescence"
     }
    ],
@@ -28,13 +26,11 @@
   {
    "code": {
     "code": 6301,
-    "description": "\n\n                  \u2003Visceral Leishmaniasis:\n\n                \n\n                "
+    "description": "Visceral Leishmaniasis:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "During treatment for active disease"
     }
    ],
@@ -51,13 +47,11 @@
   {
    "code": {
     "code": 6302,
-    "description": "\n\n                  \u2003Leprosy (Hansen's Disease):\n\n                \n\n                "
+    "description": "Leprosy (Hansen's Disease):"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -74,13 +68,11 @@
   {
    "code": {
     "code": 6304,
-    "description": "\n\n                  \u2003Malaria:\n\n                \n\n                "
+    "description": "Malaria:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -100,13 +92,11 @@
   {
    "code": {
     "code": 6305,
-    "description": "\n\n                  \u2003Lymphatic Filariasis:\n\n                \n\n                "
+    "description": "Lymphatic Filariasis:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -123,13 +113,11 @@
   {
    "code": {
     "code": 6306,
-    "description": "\n\n                  \u2003Bartonellosis:\n\n                \n\n                "
+    "description": "Bartonellosis:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease, and for 3 months convalescence"
     }
    ],
@@ -146,13 +134,11 @@
   {
    "code": {
     "code": 6307,
-    "description": "\n\n                  \u2003Plague:\n\n                \n\n                "
+    "description": "Plague:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -169,13 +155,11 @@
   {
    "code": {
     "code": 6308,
-    "description": "\n\n                  \u2003Relapsing Fever:\n\n                \n\n                "
+    "description": "Relapsing Fever:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -192,13 +176,11 @@
   {
    "code": {
     "code": 6309,
-    "description": "\n\n                  \u2003Rheumatic fever:\n\n                \n\n                "
+    "description": "Rheumatic fever:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -215,7 +197,7 @@
   {
    "code": {
     "code": 6310,
-    "description": "\n\n                  \u2003Syphilis, and other treponemal infections:\n\n                \n\n                "
+    "description": "Syphilis, and other treponemal infections:"
    },
    "ratings": [],
    "header": [
@@ -231,13 +213,11 @@
   {
    "code": {
     "code": 6311,
-    "description": "\n\n                  \u2003Tuberculosis, miliary:\n\n                \n\n                "
+    "description": "Tuberculosis, miliary:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -254,37 +234,27 @@
   {
    "code": {
     "code": 6313,
-    "description": "\n\n                  \u2003Avitaminosis:\n\n                \n\n                "
+    "description": "Avitaminosis:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Marked mental changes, moist dermatitis, inability to retain adequate nourishment, exhaustion, and cachexia"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "With all of the symptoms listed below, plus mental symptoms and impaired bodily vigor"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "With stomatitis, diarrhea, and symmetrical dermatitis"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "With stomatitis, or achlorhydria, or diarrhea"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Confirmed diagnosis with nonspecific symptoms such as: decreased appetite, weight loss, abdominal discomfort, weakness, inability to concentrate and irritability"
     }
    ],
@@ -297,25 +267,19 @@
   {
    "code": {
     "code": 6314,
-    "description": "\n\n                  \u2003Beriberi:\n\n                \n\n                "
+    "description": "Beriberi:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "With congestive heart failure, anasarca, or Wernicke-Korsakoff syndrome"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "With cardiomegaly, or; with peripheral neuropathy with footdrop or atrophy of thigh or calf muscles"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "With peripheral neuropathy with absent knee or ankle jerks and loss of sensation, or; with symptoms such as weakness, fatigue, anorexia, dizziness, heaviness and stiffness of legs, headache or sleep disturbance"
     }
    ],
@@ -335,37 +299,27 @@
   {
    "code": {
     "code": 6315,
-    "description": "\n\n                  \u2003Pellagra:\n\n                \n\n                "
+    "description": "Pellagra:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Marked mental changes, moist dermatitis, inability to retain adequate nourishment, exhaustion, and cachexia"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "With all of the symptoms listed below, plus mental symptoms and impaired bodily vigor"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "With stomatitis, diarrhea, and symmetrical dermatitis"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "With stomatitis, or achlorhydria, or diarrhea"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Confirmed diagnosis with nonspecific symptoms such as: decreased appetite, weight loss, abdominal discomfort, weakness, inability to concentrate and irritability"
     }
    ],
@@ -378,13 +332,11 @@
   {
    "code": {
     "code": 6316,
-    "description": "\n\n                  \u2003Brucellosis:\n\n                \n\n                "
+    "description": "Brucellosis:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -401,13 +353,11 @@
   {
    "code": {
     "code": 6317,
-    "description": "\n\n                  \u2003Typhus, scrub:\n\n                \n\n                "
+    "description": "Typhus, scrub:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease, and for 3 months convalescence"
     }
    ],
@@ -424,13 +374,11 @@
   {
    "code": {
     "code": 6318,
-    "description": "\n\n                  \u2003Melioidosis:\n\n                \n\n                "
+    "description": "Melioidosis:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -447,13 +395,11 @@
   {
    "code": {
     "code": 6319,
-    "description": "\n\n                  \u2003Lyme Disease:\n\n                \n\n                "
+    "description": "Lyme Disease:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -470,13 +416,11 @@
   {
    "code": {
     "code": 6320,
-    "description": "\n\n                  \u2003Parasitic diseases otherwise not specified:\n\n                \n\n                "
+    "description": "Parasitic diseases otherwise not specified:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "As active disease"
     }
    ],
@@ -493,25 +437,19 @@
   {
    "code": {
     "code": 6350,
-    "description": "\n\n                  \u2003Lupus erythematosus, systemic (disseminated):\n\n                \n\n                "
+    "description": "Lupus erythematosus, systemic (disseminated):"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Not to be combined with ratings under DC 7809 Acute, with frequent exacerbations, producing severe impairment of health"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Exacerbations lasting a week or more, 2 or 3 times per year"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Exacerbations once or twice a year or symptomatic during the past 2 years"
     }
    ],
@@ -528,37 +466,27 @@
   {
    "code": {
     "code": 6351,
-    "description": "\n\n                  \u2003HIV-Related Illness:\n\n                \n\n                "
+    "description": "HIV-Related Illness:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "AIDS with recurrent opportunistic infections or with secondary diseases afflicting multiple body systems; HIV-related illness with debility and progressive weight loss, without remission, or few or brief remissions"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Refractory constitutional symptoms, diarrhea, and pathological weight loss, or; minimum rating following development of AIDS-related opportunistic infection or neoplasm"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "Recurrent constitutional symptoms, intermittent diarrhea, and on approved medication(s), or; minimum rating with T4 cell count less than 200, or Hairy Cell Leukoplakia, or Oral Candidiasis"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Following development of definite medical symptoms, T4 cell of 200 or more and less than 500, and on approved medication(s), or; with evidence of depression or memory loss with employment limitations"
     },
     {
-     "ratings": [
-      0
-     ],
+     "rating": 0,
      "description": "Asymptomatic, following initial diagnosis of HIV infection, with or without lymphadenopathy or decreased T4 cell count"
     }
    ],
@@ -578,37 +506,27 @@
   {
    "code": {
     "code": 6354,
-    "description": "\n\n                   Chronic Fatigue Syndrome (CFS):\n\n                \n\n                "
+    "description": "Chronic Fatigue Syndrome (CFS):"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Which are nearly constant and so severe as to restrict routine daily activities almost completely and which may occasionally preclude self-care"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Which are nearly constant and restrict routine daily activities to less than 50 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least six weeks total duration per year"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Which are nearly constant and restrict routine daily activities to 50 to 75 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least four but less than six weeks total duration per year"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "Which are nearly constant and restrict routine daily activities by less than 25 percent of the pre-illness level, or; which wax and wane, resulting in periods of incapacitation of at least two but less than four weeks total duration per year"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Which wax and wane but result in periods of incapacitation of at least one but less than two weeks total duration per year, or; symptoms controlled by continuous medication"
     }
    ],

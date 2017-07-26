@@ -5,37 +5,27 @@
   {
    "code": {
     "code": 5000,
-    "description": "\n\n                  \u2003Osteomyelitis, acute, subacute, or chronic:\n\n                \n\n                "
+    "description": "Osteomyelitis, acute, subacute, or chronic:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Of the pelvis, vertebrae, or extending into major joints, or with multiple localization or with long history of intractability and debility, anemia, amyloid liver changes, or other continuous constitutional symptoms"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Frequent episodes, with constitutional symptoms"
     },
     {
-     "ratings": [
-      30
-     ],
+     "rating": 30,
      "description": "With definite involucrum or sequestrum, with or without discharging sinus"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "With discharging sinus or other evidence of active infection within the past 5 years"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "Inactive, following repeated episodes, without evidence of active infection in past 5 years"
     }
    ],
@@ -55,13 +45,11 @@
   {
    "code": {
     "code": 5001,
-    "description": "\n\n                  \u2003Bones and joints, tuberculosis of, active or inactive:\n\n                \n\n                "
+    "description": "Bones and joints, tuberculosis of, active or inactive:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "Active"
     }
    ],
@@ -78,31 +66,23 @@
   {
    "code": {
     "code": 5002,
-    "description": "\n\n                  \u2003Arthritis rheumatoid (atrophic) As an active process:\n\n                  \n\n                \n\n                "
+    "description": "Arthritis rheumatoid (atrophic) As an active process:"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "With constitutional manifestations associated with active joint involvement, totally incapacitating"
     },
     {
-     "ratings": [
-      60
-     ],
+     "rating": 60,
      "description": "Less than criteria for 100% but with weight loss and anemia productive of severe impairment of health or severely incapacitating exacerbations occurring 4 or more times a year or a lesser number over prolonged periods"
     },
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "Symptom combinations productive of definite impairment of health objectively supported by examination findings or incapacitating exacerbations occurring 3 or more times a year"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "One or two exacerbations a year in a well-established diagnosis"
     }
    ],
@@ -125,19 +105,15 @@
   {
    "code": {
     "code": 5003,
-    "description": "\n\n                  \u2003Arthritis, degenerative (hypertrophic or osteoarthritis):\n\n                \n\n                "
+    "description": "Arthritis, degenerative (hypertrophic or osteoarthritis):"
    },
    "ratings": [
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups, with occasional incapacitating exacerbations"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "With X-ray evidence of involvement of 2 or more major joints or 2 or more minor joint groups"
     }
    ],
@@ -160,7 +136,7 @@
   {
    "code": {
     "code": 5004,
-    "description": "\n\n                  \u2003Arthritis, gonorrheal.\n\n                \n\n                "
+    "description": "Arthritis, gonorrheal."
    },
    "ratings": [],
    "header": [
@@ -176,7 +152,7 @@
   {
    "code": {
     "code": 5005,
-    "description": "\n\n                  \u2003Arthritis, pneumococcic.\n\n                \n\n                "
+    "description": "Arthritis, pneumococcic."
    },
    "ratings": [],
    "header": [
@@ -192,7 +168,7 @@
   {
    "code": {
     "code": 5006,
-    "description": "\n\n                  \u2003Arthritis, typhoid.\n\n                \n\n                "
+    "description": "Arthritis, typhoid."
    },
    "ratings": [],
    "header": [
@@ -208,7 +184,7 @@
   {
    "code": {
     "code": 5007,
-    "description": "\n\n                  \u2003Arthritis, syphilitic.\n\n                \n\n                "
+    "description": "Arthritis, syphilitic."
    },
    "ratings": [],
    "header": [
@@ -224,7 +200,7 @@
   {
    "code": {
     "code": 5008,
-    "description": "\n\n                  \u2003Arthritis, streptococcic.\n\n                \n\n                "
+    "description": "Arthritis, streptococcic."
    },
    "ratings": [],
    "header": [
@@ -240,7 +216,7 @@
   {
    "code": {
     "code": 5009,
-    "description": "\n\n                  \u2003Arthritis, other types (specify).\n\n                \n\n                "
+    "description": "Arthritis, other types (specify)."
    },
    "ratings": [],
    "header": [
@@ -256,7 +232,7 @@
   {
    "code": {
     "code": 5010,
-    "description": "\n\n                  \u2003Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative.\n\n                \n\n                "
+    "description": "Arthritis, due to trauma, substantiated by X-ray findings: Rate as arthritis, degenerative."
    },
    "ratings": [],
    "header": [
@@ -268,7 +244,7 @@
   {
    "code": {
     "code": 5011,
-    "description": "\n\n                  \u2003Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations.\n\n                \n\n                "
+    "description": "Bones, caisson disease of: Rate as arthritis, cord involvement, or deafness, depending on the severity of disabling manifestations."
    },
    "ratings": [],
    "header": [
@@ -280,13 +256,11 @@
   {
    "code": {
     "code": 5012,
-    "description": "\n\n                  \u2003Bones, new growths of, malignant\n\n                  100\n\n                \n\n                "
+    "description": "Bones, new growths of, malignant\n\n                  100"
    },
    "ratings": [
     {
-     "ratings": [
-      100
-     ],
+     "rating": 100,
      "description": "5012\u2003Bones, new growths of, malignant"
     }
    ],
@@ -303,7 +277,7 @@
   {
    "code": {
     "code": 5013,
-    "description": "\n\n                  \u2003Osteoporosis, with joint manifestations.\n\n                \n\n                "
+    "description": "Osteoporosis, with joint manifestations."
    },
    "ratings": [],
    "header": [
@@ -319,7 +293,7 @@
   {
    "code": {
     "code": 5014,
-    "description": "\n\n                  \u2003Osteomalacia.\n\n                \n\n                "
+    "description": "Osteomalacia."
    },
    "ratings": [],
    "header": [
@@ -335,7 +309,7 @@
   {
    "code": {
     "code": 5015,
-    "description": "\n\n                  \u2003Bones, new growths of, benign.\n\n                \n\n                "
+    "description": "Bones, new growths of, benign."
    },
    "ratings": [],
    "header": [
@@ -351,7 +325,7 @@
   {
    "code": {
     "code": 5016,
-    "description": "\n\n                  \u2003Osteitis deformans.\n\n                \n\n                "
+    "description": "Osteitis deformans."
    },
    "ratings": [],
    "header": [
@@ -367,7 +341,7 @@
   {
    "code": {
     "code": 5017,
-    "description": "\n\n                  \u2003Gout.\n\n                \n\n                "
+    "description": "Gout."
    },
    "ratings": [],
    "header": [
@@ -383,7 +357,7 @@
   {
    "code": {
     "code": 5018,
-    "description": "\n\n                  \u2003Hydrarthrosis, intermittent.\n\n                \n\n                "
+    "description": "Hydrarthrosis, intermittent."
    },
    "ratings": [],
    "header": [
@@ -399,7 +373,7 @@
   {
    "code": {
     "code": 5019,
-    "description": "\n\n                  \u2003Bursitis.\n\n                \n\n                "
+    "description": "Bursitis."
    },
    "ratings": [],
    "header": [
@@ -415,7 +389,7 @@
   {
    "code": {
     "code": 5020,
-    "description": "\n\n                  \u2003Synovitis.\n\n                \n\n                "
+    "description": "Synovitis."
    },
    "ratings": [],
    "header": [
@@ -431,7 +405,7 @@
   {
    "code": {
     "code": 5021,
-    "description": "\n\n                  \u2003Myositis.\n\n                \n\n                "
+    "description": "Myositis."
    },
    "ratings": [],
    "header": [
@@ -447,7 +421,7 @@
   {
    "code": {
     "code": 5022,
-    "description": "\n\n                  \u2003Periostitis.\n\n                \n\n                "
+    "description": "Periostitis."
    },
    "ratings": [],
    "header": [
@@ -463,7 +437,7 @@
   {
    "code": {
     "code": 5023,
-    "description": "\n\n                  \u2003Myositis ossificans.\n\n                \n\n                "
+    "description": "Myositis ossificans."
    },
    "ratings": [],
    "header": [
@@ -479,7 +453,7 @@
   {
    "code": {
     "code": 5024,
-    "description": "\n\n                  \u2003Tenosynovitis.\n\n                \n\n                "
+    "description": "Tenosynovitis."
    },
    "ratings": [],
    "header": [
@@ -495,25 +469,19 @@
   {
    "code": {
     "code": 5025,
-    "description": "\n\n                  \u2003Fibromyalgia (fibrositis, primary fibromyalgia syndrome)\n\n                \n\n                "
+    "description": "Fibromyalgia (fibrositis, primary fibromyalgia syndrome)"
    },
    "ratings": [
     {
-     "ratings": [
-      40
-     ],
+     "rating": 40,
      "description": "That are constant, or nearly so, and refractory to therapy"
     },
     {
-     "ratings": [
-      20
-     ],
+     "rating": 20,
      "description": "That are episodic, with exacerbations often precipitated by environmental or emotional stress or by overexertion, but that are present more than one-third of the time"
     },
     {
-     "ratings": [
-      10
-     ],
+     "rating": 10,
      "description": "That require continuous medication for control"
     }
    ],

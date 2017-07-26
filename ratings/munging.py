@@ -67,3 +67,7 @@ def describes_diagnosis(text: str) -> bool:
         return True
     else:
         return False
+
+
+def strip_whitespace(text: str) -> str:
+    return text.strip()

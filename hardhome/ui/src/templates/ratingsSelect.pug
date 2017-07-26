@@ -1,31 +1,30 @@
+rating-category-breadcrumbs(breadcrumbs="breadcrumbs")
+
 div#vfi-ratings
-  rating-category-breadcrumbs(breadcrumbs="breadcrumbs")
+  div.container.nopadding(ng-show="{{ratings.length > 0}}")
+    div.row
+      div.col-sm-6
+        b Description
+      div.col-sm-2
+        b Rating
+    div.row(ng-repeat="rating in ratings")
+      div.col-sm-6 {{rating.description}}
+      div.col-sm-1 {{rating.rating}}
+      div.col-sm-1
+        button(ng-click="addRating(rating)") Add
 
-  table
-    thead
-      tr
-        th Description
-        th(ng-repeat="item in header") {{item}}
-    tbody
-      tr(ng-repeat="rating in ratings")
-        td {{rating.description}}
-        td(ng-repeat="item in rating.ratings track by $index") {{item}}
-          button(ng-click="addRating(rating, $index)") Add
+  div.container.nopadding(ng-show="{{notes.length > 0}}")
+    div.row
+      div.col-sm-6
+        b Notes
+    div.row(ng-repeat="note in notes")
+      div.col-sm-6
+        p {{note.note}}
 
-  table(ng-show="{{notes.length > 0}}")
-    thead
-      tr
-        th Notes
-    tbody
-      tr(ng-repeat="note in notes")
-        td {{note.note}}
-
-  table(ng-show="{{see_other_notes.length > 0}}")
-    thead
-      tr
-        th See Other Notes
-    tbody
-      tr(ng-repeat="note in see_other_notes")
-        td {{note.see_other_note}}
+  div.container.nopadding(ng-show="{{see_other_notes.length > 0}}")
+    div.row
+      div.col-sm-6 See Other Notes
+    div.row(ng-repeat="note in see_other_notes")
+      div.col-sm-6 {{note.see_other_note}}
 
 
