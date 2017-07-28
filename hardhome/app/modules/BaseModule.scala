@@ -37,5 +37,6 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[DocumentService].to[SeamlessDocsDocumentService]
     bind[SeamlessDocsService].to[SeamlessDocsServiceImpl]
     bind[ReactiveMongoApi].to[BiscuitPasswordMongoApi]
+    bind[UserValuesService].to[UserValuesServiceImpl]
   }
 }

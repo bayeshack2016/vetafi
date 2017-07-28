@@ -5,9 +5,10 @@ import com.typesafe.sbt.packager.archetypes.ServerLoader
 
 name := "vetafi-web"
 
-version := "0.0.3"
+version := "0.0.4"
 
 scalaVersion := "2.11.8"
+autoScalaLibrary := false
 
 maintainer in Linux := "Jeff Quinn jeff@vetafi.org"
 

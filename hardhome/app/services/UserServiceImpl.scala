@@ -5,9 +5,11 @@ import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.LoginInfo
 import com.mohiva.play.silhouette.impl.providers.CommonSocialProfile
-import models.User
-import models.daos.UserDAO
+import models.{ User, UserValues }
+import models.daos.{ UserDAO, UserValuesDAO }
 import play.api.libs.concurrent.Execution.Implicits._
+import reactivemongo.api.commands.WriteResult
+import services.forms.UserValuesService
 
 import scala.concurrent.Future
 
@@ -16,7 +18,11 @@ import scala.concurrent.Future
  *
  * @param userDAO The user DAO implementation.
  */
-class UserServiceImpl @Inject() (userDAO: UserDAO) extends UserService {
+class UserServiceImpl @Inject() (
+  userDAO: UserDAO,
+  userValuesDAO: UserValuesDAO,
+  userValuesService: UserValuesService
+) extends UserService {
 
   /**
    * Retrieves a user that matches the specified ID.
@@ -35,14 +41,27 @@ class UserServiceImpl @Inject() (userDAO: UserDAO) extends UserService {
   def retrieve(loginInfo: LoginInfo): Future[Option[User]] = userDAO.find(loginInfo)
 
   /**
-   * Saves a user.
+   * Saves a user, also updates their user values based on their user information.
    *
    * @param user The user to save.
    * @return The saved user.
    */
   def save(user: User): Future[User] = {
     userDAO.save(user).flatMap {
-      case ok if ok.ok => Future.successful(user)
+      case ok if ok.ok =>
+        userValuesDAO.find(user.userID).map {
+          case Some(values) =>
+            userValuesService.updateUserValues(user, values)
+          case None =>
+            userValuesService.updateUserValues(user, UserValues(user.userID, Map()))
+        }.flatMap(
+          updatedValues =>
+            userValuesDAO.update(user.userID, updatedValues.values).flatMap {
+              case userValuesUpdate if userValuesUpdate.ok =>
+                Future.successful(user)
+              case _ => throw new RuntimeException
+            }
+        )
       case _ => throw new RuntimeException
     }
   }
