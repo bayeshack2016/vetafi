@@ -6,6 +6,7 @@ import javax.inject.Inject
 import com.mohiva.play.silhouette.api.Silhouette
 import models.daos.{ FormDAO, UserValuesDAO }
 import models.{ ClaimForm, User }
+import play.api.Logger
 import play.api.libs.json.{ JsBoolean, JsError, JsValue, Json }
 import play.api.mvc._
 import services.documents.DocumentService
@@ -118,6 +119,7 @@ class FormController @Inject() (
   }
 
   def updateUserValues(identity: User, values: Map[String, JsValue]): Future[Unit] = {
+    Logger.logger.info(s"updateUserValues called with $values")
     userValuesDAO.update(identity.userID, values).flatMap {
       case ok if ok.ok =>
         contactInfoService.updateContactInfo(identity.userID).map {

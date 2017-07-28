@@ -7,9 +7,9 @@ import com.mohiva.play.silhouette.api.LoginInfo
 import com.mohiva.play.silhouette.impl.providers.CommonSocialProfile
 import models.{ User, UserValues }
 import models.daos.{ UserDAO, UserValuesDAO }
+import play.api.Logger
 import play.api.libs.concurrent.Execution.Implicits._
 import reactivemongo.api.commands.WriteResult
-import services.forms.UserValuesService
 
 import scala.concurrent.Future
 
@@ -51,16 +51,23 @@ class UserServiceImpl @Inject() (
       case ok if ok.ok =>
         userValuesDAO.find(user.userID).map {
           case Some(values) =>
+            Logger.logger.info(s"Found existing user values: $values")
             userValuesService.updateUserValues(user, values)
           case None =>
-            userValuesService.updateUserValues(user, UserValues(user.userID, Map()))
+            Logger.logger.info(s"No existing user values.")
+            userValuesDAO.initialize(user.userID).map {
+              userValuesService.updateUserValues(user, UserValues(user.userID, Map()))
+            }
         }.flatMap(
-          updatedValues =>
+          updatedValues => {
+            Logger.logger.info(s"Got updated user values $updatedValues")
             userValuesDAO.update(user.userID, updatedValues.values).flatMap {
               case userValuesUpdate if userValuesUpdate.ok =>
+                Logger.logger.info(s"Saved updated values $updatedValues for ${user.userID}")
                 Future.successful(user)
               case _ => throw new RuntimeException
             }
+          }
         )
       case _ => throw new RuntimeException
     }

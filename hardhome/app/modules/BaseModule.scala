@@ -5,7 +5,7 @@ import models.daos._
 import net.codingwell.scalaguice.ScalaModule
 import play.modules.reactivemongo.ReactiveMongoApi
 import services.documents.{ DocumentService, SeamlessDocsDocumentService }
-import services.{ AuthTokenService, AuthTokenServiceImpl, BiscuitPasswordMongoApi }
+import services._
 import services.forms._
 import services.submission.{ FaxSubmissionService, SubmissionService }
 import utils.seamlessdocs.{ SeamlessDocsService, SeamlessDocsServiceImpl }

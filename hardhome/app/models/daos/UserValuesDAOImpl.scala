@@ -4,6 +4,7 @@ import java.util.UUID
 import javax.inject.Inject
 
 import models._
+import play.api.Logger
 import play.api.libs.json.Json
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.modules.reactivemongo.json._
@@ -50,6 +51,7 @@ class UserValuesDAOImpl @Inject() (
       }
 
       existingValuesFuture.flatMap((existingValues: Map[String, JsValue]) => {
+        Logger.logger.info(s"Existing values: $existingValues")
         userValuesCollection.update(
           Json.obj("userID" -> userID),
           // The values on the RHS of `++` will overwrite the values of the LHS
