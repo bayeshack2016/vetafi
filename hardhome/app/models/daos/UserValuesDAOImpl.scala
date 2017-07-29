@@ -5,12 +5,11 @@ import javax.inject.Inject
 
 import models._
 import play.api.Logger
-import play.api.libs.json.Json
+import play.api.libs.json.{ Json, _ }
 import play.modules.reactivemongo.ReactiveMongoApi
 import play.modules.reactivemongo.json._
-import reactivemongo.api.commands.WriteResult
+import reactivemongo.api.commands.{ UpdateWriteResult, WriteResult }
 import reactivemongo.play.json.collection.JSONCollection
-import play.api.libs.json._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -61,5 +60,16 @@ class UserValuesDAOImpl @Inject() (
     })
   }
 
-  override def initialize(userID: UUID): Future[WriteResult] = collection.flatMap { _.insert(UserValues(userID, Map())) }
+  override def initialize(userID: UUID): Future[WriteResult] = collection.flatMap {
+    (userValuesCollection: JSONCollection) =>
+      userValuesCollection.find(Json.obj("userID" -> userID)).one[User].flatMap {
+        case Some(_) =>
+          Future.successful(UpdateWriteResult(
+            ok = true,
+            1, 1, Seq(), Seq(), None, None, None
+          ))
+        case None =>
+          userValuesCollection.insert(UserValues(userID, Map()))
+      }
+  }
 }

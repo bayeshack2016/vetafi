@@ -5,11 +5,11 @@ import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.LoginInfo
 import com.mohiva.play.silhouette.impl.providers.CommonSocialProfile
-import models.{ User, UserValues }
 import models.daos.{ UserDAO, UserValuesDAO }
+import models.{ User, UserValues }
 import play.api.Logger
 import play.api.libs.concurrent.Execution.Implicits._
-import reactivemongo.api.commands.WriteResult
+import org.log4s._
 
 import scala.concurrent.Future
 
@@ -23,6 +23,8 @@ class UserServiceImpl @Inject() (
   userValuesDAO: UserValuesDAO,
   userValuesService: UserValuesService
 ) extends UserService {
+
+  private[this] val logger = getLogger
 
   /**
    * Retrieves a user that matches the specified ID.
@@ -47,28 +49,28 @@ class UserServiceImpl @Inject() (
    * @return The saved user.
    */
   def save(user: User): Future[User] = {
-    userDAO.save(user).flatMap {
-      case ok if ok.ok =>
-        userValuesDAO.find(user.userID).map {
-          case Some(values) =>
-            Logger.logger.info(s"Found existing user values: $values")
-            userValuesService.updateUserValues(user, values)
-          case None =>
-            Logger.logger.info(s"No existing user values.")
-            userValuesDAO.initialize(user.userID).map {
-              userValuesService.updateUserValues(user, UserValues(user.userID, Map()))
-            }
-        }.flatMap(
-          updatedValues => {
-            Logger.logger.info(s"Got updated user values $updatedValues")
-            userValuesDAO.update(user.userID, updatedValues.values).flatMap {
-              case userValuesUpdate if userValuesUpdate.ok =>
-                Logger.logger.info(s"Saved updated values $updatedValues for ${user.userID}")
-                Future.successful(user)
-              case _ => throw new RuntimeException
-            }
-          }
-        )
+    userValuesDAO.initialize(user.userID).flatMap {
+      case initializeOk if initializeOk.ok =>
+        userDAO.save(user).flatMap {
+          case saveOk if saveOk.ok =>
+            userValuesDAO.find(user.userID).map {
+              case Some(values) =>
+                userValuesService.updateUserValues(user, values)
+              case None =>
+                throw new RuntimeException("Expected user values to exist in database.")
+            }.flatMap(
+              updatedValues => {
+                logger.info(s"Got updated user values $updatedValues")
+                userValuesDAO.update(user.userID, updatedValues.values).flatMap {
+                  case userValuesUpdate if userValuesUpdate.ok =>
+                    logger.info(s"Saved updated values $updatedValues for ${user.userID}")
+                    Future.successful(user)
+                  case _ => throw new RuntimeException
+                }
+              }
+            )
+          case _ => throw new RuntimeException
+        }
       case _ => throw new RuntimeException
     }
   }
