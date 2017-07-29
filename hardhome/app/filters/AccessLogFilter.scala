@@ -12,7 +12,7 @@ class AccessLogFilter @Inject() (implicit val mat: Materializer) extends Filter 
   private[this] val logger = getLogger
 
   def apply(nextFilter: RequestHeader => Future[Result])(requestHeader: RequestHeader): Future[Result] = {
-    logger.info(requestHeader.toString())
+    logger.debug(requestHeader.toString())
     nextFilter(requestHeader)
   }
 }
