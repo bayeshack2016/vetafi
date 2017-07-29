@@ -74,12 +74,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def render(form: ClaimForm): Future[Array[Byte]] = {
-    MDC.withCtx (
+    MDC.withCtx(
       "userID" -> form.userID.toString,
       "claimID" -> form.claimID.toString,
-      "form" -> form.key) {
-      logger.info("render called")
-    }
+      "form" -> form.key
+    ) {
+        logger.info("render called")
+      }
     val formSubmissionFuture: Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] =
       seamlessDocs.formSubmit(form.externalFormId.get, form.responses)
 
@@ -125,12 +126,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def submitForSignature(form: ClaimForm): Future[ClaimForm] = {
-    MDC.withCtx (
+    MDC.withCtx(
       "userID" -> form.userID.toString,
       "claimID" -> form.claimID.toString,
-      "form" -> form.key) {
-      logger.info("submitForSignature called")
-    }
+      "form" -> form.key
+    ) {
+        logger.info("submitForSignature called")
+      }
     maybeCreateApplication(form).flatMap(updatedForm => {
       seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get).flatMap {
         url =>
@@ -150,12 +152,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def signatureLink(form: ClaimForm): Future[URL] = {
-    MDC.withCtx (
+    MDC.withCtx(
       "userID" -> form.userID.toString,
       "claimID" -> form.claimID.toString,
-      "form" -> form.key) {
-      logger.info("signatureLink called")
-    }
+      "form" -> form.key
+    ) {
+        logger.info("signatureLink called")
+      }
     maybeCreateApplication(form).flatMap(updatedForm => {
       formDAO.save(updatedForm.userID, updatedForm.claimID, updatedForm.key, updatedForm).flatMap {
         case ok if ok.ok => seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get)
@@ -171,12 +174,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def isSigned(form: ClaimForm): Future[Boolean] = {
-    MDC.withCtx (
+    MDC.withCtx(
       "userID" -> form.userID.toString,
       "claimID" -> form.claimID.toString,
-      "form" -> form.key) {
-      logger.info("isSigned called")
-    }
+      "form" -> form.key
+    ) {
+        logger.info("isSigned called")
+      }
     seamlessDocs.getApplicationStatus(form.externalApplicationId.get).map {
       status =>
         status.total_signers == status.signatures && status.status == "Complete"

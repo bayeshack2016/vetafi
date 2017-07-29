@@ -6,24 +6,24 @@ import java.util.UUID
 import com.google.inject.AbstractModule
 import com.mohiva.play.silhouette.api.LoginInfo
 import com.typesafe.config.ConfigFactory
-import models.{FormConfig, User, UserValues}
-import models.daos.{UserDAO, UserValuesDAO}
+import models.{ FormConfig, User, UserValues }
+import models.daos.{ UserDAO, UserValuesDAO }
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
-import org.mockito.{ArgumentCaptor, Matchers, Mockito}
+import org.mockito.{ ArgumentCaptor, Matchers, Mockito }
 import org.specs2.specification.Scope
-import play.api.{Application, Configuration}
+import play.api.{ Application, Configuration }
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.{JsString, JsValue}
+import play.api.libs.json.{ JsString, JsValue }
 import play.api.libs.ws.WSClient
-import play.api.test.{PlaySpecification, WithApplication}
+import play.api.test.{ PlaySpecification, WithApplication }
 import reactivemongo.api.commands.UpdateWriteResult
 import services.documents.SeamlessDocsDocumentService
 import utils.seamlessdocs.SeamlessApplicationCreateResponse
 
 import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, Future}
-import scala.util.{Failure, Success}
+import scala.concurrent.{ Await, Future }
+import scala.util.{ Failure, Success }
 
 trait UserServiceTestContext extends Scope {
 
@@ -78,6 +78,12 @@ class UserServiceImplSpec extends PlaySpecification {
         )))
 
       Mockito.when(mockUserValuesDAO.update(Matchers.eq(userID), Matchers.any()))
+        .thenReturn(Future.successful(UpdateWriteResult(
+          ok = true,
+          1, 1, Seq(), Seq(), None, None, None
+        )))
+
+      Mockito.when(mockUserValuesDAO.initialize(Matchers.eq(userID)))
         .thenReturn(Future.successful(UpdateWriteResult(
           ok = true,
           1, 1, Seq(), Seq(), None, None, None

@@ -3,7 +3,7 @@ package services
 import java.util.UUID
 
 import com.mohiva.play.silhouette.api.LoginInfo
-import models.{User, UserValues}
+import models.{ User, UserValues }
 import play.api.libs.json.JsString
 import play.api.test.PlaySpecification
 
