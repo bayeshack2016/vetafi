@@ -5,9 +5,10 @@ import com.typesafe.sbt.packager.archetypes.ServerLoader
 
 name := "vetafi-web"
 
-version := "0.0.3"
+version := "0.0.4"
 
 scalaVersion := "2.11.8"
+autoScalaLibrary := false
 
 maintainer in Linux := "Jeff Quinn jeff@vetafi.org"
 
@@ -38,6 +39,7 @@ libraryDependencies ++= Seq(
   "net.logstash.logback" % "logstash-logback-encoder" % "4.9",
   "ch.qos.logback" % "logback-core" % "1.2.3",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
+  "org.log4s" %% "log4s" % "1.3.6",
   specs2 % Test,
   cache,
   filters

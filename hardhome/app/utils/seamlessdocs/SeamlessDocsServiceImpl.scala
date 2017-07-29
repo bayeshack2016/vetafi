@@ -4,12 +4,12 @@ import java.net.URL
 import java.time.Clock
 import javax.inject.Inject
 
-import play.Logger
 import play.api.{ Configuration, Environment }
 import play.api.http.Status
 import play.api.libs.json.{ JsObject, JsValue, Json }
 import play.api.libs.ws.{ WSClient, WSRequest, WSResponse }
 import utils.secrets.SecretsManager
+import org.log4s._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -19,6 +19,7 @@ class SeamlessDocsServiceImpl @Inject() (
   configuration: Configuration,
   secretsManager: SecretsManager
 ) extends SeamlessDocsService {
+  private[this] val logger = getLogger
 
   val url: String = configuration.getString("seamlessdocs.url").get
   lazy val apiSecret: Array[Byte] = secretsManager.getSecret(
@@ -37,7 +38,7 @@ class SeamlessDocsServiceImpl @Inject() (
   }
 
   private def getJsonResponse[T](wsResponse: WSResponse)(implicit rds: play.api.libs.json.Reads[T]): Either[T, SeamlessErrorResponse] = {
-    Logger.info(s"Seamless Docs Response [${wsResponse.status}]: " + wsResponse.body)
+    logger.info(s"Seamless Docs Response [${wsResponse.status}]: " + wsResponse.body)
     wsResponse.status match {
       case Status.OK =>
         val validateApiError = wsResponse.json.validate[SeamlessErrorResponse]

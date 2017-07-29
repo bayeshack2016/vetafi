@@ -11,6 +11,7 @@ import reactivemongo.api.{ DefaultDB, MongoConnection, MongoConnectionOptions, M
 import reactivemongo.core.nodeset.{ Authenticate, Authentication }
 import reactivemongo.play.json.JSONSerializationPack
 import utils.secrets.{ SecretsManager, StaticSecrets }
+import org.log4s._
 
 import scala.concurrent.{ Await, Future }
 import scala.util.Failure
@@ -28,6 +29,8 @@ class BiscuitPasswordMongoApi @Inject() (
   staticSecrets: StaticSecrets
 ) extends ReactiveMongoApi {
 
+  private[this] val logger = getLogger
+
   lazy val driver: MongoDriver = new MongoDriver(
     Some(configuration.underlying),
     Some(this.getClass.getClassLoader)
@@ -43,7 +46,7 @@ class BiscuitPasswordMongoApi @Inject() (
       sslAllowsInvalidCert = true
     )
 
-    Logger.info(s"Authenticating with ${staticSecrets.mongoUsername} to ${staticSecrets.mongoHosts}")
+    logger.info(s"Authenticating with ${staticSecrets.mongoUsername} to ${staticSecrets.mongoHosts}")
 
     val con = driver.connection(
       staticSecrets.mongoHosts.split(","),
@@ -89,10 +92,10 @@ class BiscuitPasswordMongoApi @Inject() (
     import scala.concurrent.duration._
 
     applicationLifecycle.addStopHook { () =>
-      Logger.info("ReactiveMongoApi stopping...")
+      logger.info("ReactiveMongoApi stopping...")
 
       Await.ready(connection.askClose()(10.seconds).map { _ =>
-        Logger.info("ReactiveMongoApi connections are stopped")
+        logger.info("ReactiveMongoApi connections are stopped")
       }.andThen {
         case Failure(reason) =>
           reason.printStackTrace()

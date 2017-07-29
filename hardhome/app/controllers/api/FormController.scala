@@ -6,11 +6,13 @@ import javax.inject.Inject
 import com.mohiva.play.silhouette.api.Silhouette
 import models.daos.{ FormDAO, UserValuesDAO }
 import models.{ ClaimForm, User }
+import play.api.Logger
 import play.api.libs.json.{ JsBoolean, JsError, JsValue, Json }
 import play.api.mvc._
 import services.documents.DocumentService
 import services.forms.{ ClaimService, ContactInfoService }
 import utils.auth.DefaultEnv
+import org.log4s._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -26,6 +28,8 @@ class FormController @Inject() (
   val documentService: DocumentService,
   silhouette: Silhouette[DefaultEnv]
 ) extends Controller {
+
+  private[this] val logger = getLogger
 
   def getFormsForClaim(claimID: UUID): Action[AnyContent] = silhouette.SecuredAction.async {
     request =>
@@ -55,6 +59,7 @@ class FormController @Inject() (
 
           dataResult.fold(
             errors => {
+              logger.warn(s"saveForm validation errors: $errors")
               Future.successful(
                 BadRequest(Json.obj("status" -> "error", "message" -> JsError.toJson(errors)))
               )
@@ -69,6 +74,7 @@ class FormController @Inject() (
                     formSaveFuture <- formDAO.save(request.identity.userID, claimID, formKey, formWithProgress)
                     updateUserValuesFuture <- updateUserValues(request.identity, data)
                   } yield {
+                    logger.info(s"Form saved and user values updated for ${request.identity.userID}")
                     Created(Json.obj("status" -> "ok"))
                   }).recover {
                     case _: RuntimeException => InternalServerError
@@ -103,6 +109,7 @@ class FormController @Inject() (
         case Some(claimForm) =>
           documentService.render(claimForm).map {
             content =>
+              logger.info(s"PDF rendered for user ${request.identity.userID}")
               Ok(content).as("application/pdf").withCookies(
                 Cookie("fileDownloadToken", "1", secure = false, httpOnly = false)
               )
@@ -118,6 +125,7 @@ class FormController @Inject() (
   }
 
   def updateUserValues(identity: User, values: Map[String, JsValue]): Future[Unit] = {
+    Logger.logger.info(s"updateUserValues called with $values")
     userValuesDAO.update(identity.userID, values).flatMap {
       case ok if ok.ok =>
         contactInfoService.updateContactInfo(identity.userID).map {

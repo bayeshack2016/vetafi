@@ -9,6 +9,7 @@ import play.api.http.Status
 import play.api.libs.ws.WSClient
 import services.forms.FormConfigManager
 import utils.seamlessdocs.{ SeamlessAPIError, SeamlessApplicationCreateResponse, SeamlessDocsService, SeamlessErrorResponse }
+import org.log4s._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -23,6 +24,8 @@ class SeamlessDocsDocumentService @Inject() (
   seamlessDocs: SeamlessDocsService,
   formConfigManager: FormConfigManager
 ) extends DocumentService {
+
+  private[this] val logger = getLogger
 
   private def updateFormWithApplication(form: ClaimForm, res: SeamlessApplicationCreateResponse): ClaimForm = {
     form.copy(externalApplicationId = Some(res.application_id))
@@ -41,7 +44,8 @@ class SeamlessDocsDocumentService @Inject() (
       formConfigManager.getFormConfigs(form.key).vfi.externalSignerId,
       formWithId.responses
     ).map {
-        case Left(application) => updateFormWithApplication(formWithId, application)
+        case Left(application) =>
+          updateFormWithApplication(formWithId, application)
         case Right(error) =>
           throw new RuntimeException("Seamless doc form prepare returned error: " + error.toString)
       }
@@ -70,6 +74,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def render(form: ClaimForm): Future[Array[Byte]] = {
+    MDC.withCtx(
+      "userID" -> form.userID.toString,
+      "claimID" -> form.claimID.toString,
+      "form" -> form.key
+    ) {
+        logger.info("render called")
+      }
     val formSubmissionFuture: Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] =
       seamlessDocs.formSubmit(form.externalFormId.get, form.responses)
 
@@ -115,6 +126,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def submitForSignature(form: ClaimForm): Future[ClaimForm] = {
+    MDC.withCtx(
+      "userID" -> form.userID.toString,
+      "claimID" -> form.claimID.toString,
+      "form" -> form.key
+    ) {
+        logger.info("submitForSignature called")
+      }
     maybeCreateApplication(form).flatMap(updatedForm => {
       seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get).flatMap {
         url =>
@@ -134,6 +152,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def signatureLink(form: ClaimForm): Future[URL] = {
+    MDC.withCtx(
+      "userID" -> form.userID.toString,
+      "claimID" -> form.claimID.toString,
+      "form" -> form.key
+    ) {
+        logger.info("signatureLink called")
+      }
     maybeCreateApplication(form).flatMap(updatedForm => {
       formDAO.save(updatedForm.userID, updatedForm.claimID, updatedForm.key, updatedForm).flatMap {
         case ok if ok.ok => seamlessDocs.getInviteUrl(updatedForm.externalApplicationId.get)
@@ -149,6 +174,13 @@ class SeamlessDocsDocumentService @Inject() (
    * @return
    */
   override def isSigned(form: ClaimForm): Future[Boolean] = {
+    MDC.withCtx(
+      "userID" -> form.userID.toString,
+      "claimID" -> form.claimID.toString,
+      "form" -> form.key
+    ) {
+        logger.info("isSigned called")
+      }
     seamlessDocs.getApplicationStatus(form.externalApplicationId.get).map {
       status =>
         status.total_signers == status.signatures && status.status == "Complete"
