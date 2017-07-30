@@ -9,15 +9,15 @@
         uib-progressbar.progressbar(value="numRequiredCompleted", max="numRequiredForms", type="{{numRequiredCompleted == numRequiredForms ? 'success' : 'info'}}")
           span.progress-bar-text {{numRequiredCompleted}}/{{numRequiredForms}}
 
-      div.form-wrapper(ng-repeat="(formId, form) in allForms", ng-init="myForm = myForms[formId]")
+      div.form-wrapper(ng-repeat="(formId, form) in myForms", ng-init="formConfig = formConfigs[formId]")
         div.form-content
-          div.state-wrapper(ng-class="{'required': form.vfi.required, 'complete': isCompletedForm(myForm)}")
+          div.state-wrapper(ng-class="{'required': formConfig.vfi.required, 'complete': isCompletedForm(form)}")
             div.state-icon
           div.form-title-wrapper
-            h5.title(ng-class="{'required': form.vfi.required && !isCompletedForm(myForm)}") {{formId}}
-            h5.warning.required(ng-if="form.vfi.required && !isCompletedForm(myForm)") &nbsp;(required)
-            h5.subtitle {{form.vfi.title}}
-          div.form-summary {{form.vfi.summary}}
+            h5.title(ng-class="{'required': formConfig.vfi.required && !isCompletedForm(form)}") {{formId}}
+            h5.warning.required(ng-if="formConfig.vfi.required && !isCompletedForm(form)") &nbsp;(required)
+            h5.subtitle {{formConfig.vfi.title}}
+          div.form-summary {{formConfig.vfi.summary}}
         div.form-buttons
           button.edit-btn(ui-sref="root.form({claimId: claimId, formId: formId})")
             div.edit-icon

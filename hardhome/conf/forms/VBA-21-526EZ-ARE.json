@@ -4,10 +4,11 @@
     "summary": "This form is the central piece of your application for disability compensation from the VA. You may need to include additional forms depending on what your disability is and what benefits you are requesting.",
     "required": true,
     "externalId": "CO17071000032363616",
-    "externalSignerId": "2748132ac631d103455f407e6250ad9f"
+    "externalSignerId": "TODO"
   },
   "name": "APPLICATION FOR DISABILITY COMPENSATION AND RELATED COMPENSATION BENEFITS",
   "description": "This form lists the disabilities you are claiming compensation for.",
+  "key": "VBA-21-526EZ-ARE",
   "fields": [
 
     {
@@ -984,7 +985,6 @@
       },
       "hideExpression": "model.direct_deposit_account_type == 'none'"
     },
-
     {
       "key": "elect_fully_developed_claim_y_n",
       "type": "checkbox",
@@ -993,6 +993,5 @@
         "optional": true
       }
     }
-
   ]
 }

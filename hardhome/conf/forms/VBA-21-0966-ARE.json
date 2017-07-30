@@ -8,6 +8,7 @@
   },
   "name": "INTENT TO FILE A CLAIM FOR COMPENSATION AND/OR PENSION, OR SURVIVORS PENSION AND/OR DIC",
   "description": "This Form Is Used to Notify VA of Your Intent to File for General Benefits",
+  "key": "VBA-21-0966-ARE",
   "fields": [
     {
       "key": "filing_for_self",

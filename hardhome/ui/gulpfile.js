@@ -113,12 +113,12 @@ gulp.task('lint', ['xhrEnv'], function () {
 });
 
 gulp.task('browserify', ['js'], function () {
-  return browserify(['src/formly-fields.js'], {
+  return browserify(['src/config.js'], {
       transform: [bulkify],
       debug: true
     })
     .bundle()
-    .pipe(source('js/formly-fields.js'))
+    .pipe(source('js/config.js'))
     .pipe(gulp.dest('build'));
 });
 

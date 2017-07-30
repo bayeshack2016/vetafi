@@ -1,42 +1,34 @@
 #claim-start-view
   vfi-breadcrumbs(page="0")
   #claim-start-wrapper
-    h3 Ready to Start?
+    h3 Select Claim
 
-    div.content.container
-      div.content-row.row
-        div.icon-wrapper.col-sm-2.docs
-          div.icon
-        div.content-wrapper.col-sm-10
-          p
-            | Greetings! Today, Vetafi will help you fill out a VA 21-0966 "Intent to File" form.
-            | This form is used to notify the VA that you intend to file a claim for benefits
-            | and secure the start date of your benefit package.
+    div.content.container(ng-show="isSignedIn")
+      div.row
+        div.col-sm-2
+          | Claim
+          hr
+        div.col-sm-4
+          | Description
+          hr
+        div.col-sm-2
+          | Number of Forms
+          hr
 
-      div.content-row.row
-        div.icon-wrapper.col-sm-2.send
-          div.icon
-        div.content-wrapper.col-sm-10
-          p
-            | After you are finished filling out the form, you will be able to send yourself, or any family members, copies of your claim.
-            | You can choose to mail physical copies or email electronic copies. Up to you!
 
-      div.content-row.row
-        div.icon-wrapper.col-sm-2.download
-          div.icon
-        div.content-wrapper.col-sm-10
-          p
-            | In the case that you would rather fill out a form by hand,
-            | at any time, you may download a copy of the form with all your answers already filled out.
-            | No need to start over!
+      div.row(ng-repeat="claim in claimConfig.claims")
+        div.col-sm-2
+          | {{claim.name}}
+        div.col-sm-4
+          | {{claim.description}}
+        div.col-sm-2
+          | {{claim.forms.length}}
+        div.col-sm-2
+          button(ng-click="startClaim(claim)")
+            | Select
 
-    div.proceed-wrapper
-      div(ng-show="isSignedIn")
-        h4.proceed Are you ready to proceed?
-        button.proceed-btn(ng-click="onClickNext()")
-          | Proceed
-          div.next-icon
-      div(ng-show="!isSignedIn")
+    div.proceed-wrapper(ng-show="!isSignedIn")
+      div
         h4.signup You must sign into an account to continue
         a(href='/signup')
           button.signup-btn
