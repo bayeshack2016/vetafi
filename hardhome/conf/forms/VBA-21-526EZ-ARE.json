@@ -919,6 +919,79 @@
         "label": "Check if you elect to waive VA benefits for the days you accrued inactive duty training pay in order to retain my inactive duty training pay.",
         "optional": true
       }
+    },
+    {
+      "key": "direct_deposit_account_type",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Bank account type for direct deposit.",
+        "options": [
+          {
+            "name": "Checking",
+            "value": "checking"
+          },
+          {
+            "name": "Savings",
+            "value": "savings"
+          },
+          {
+            "name": "I certify that I do not have an account with a financial institution or certified payment agent.",
+            "value": "none"
+          }
+
+        ],
+        "optional": false
+      }
+    },
+    {
+      "key": "direct_deposit_checking_account_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Account Number:",
+        "placeholder": "00000000000000",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'savings' || model.direct_deposit_account_type == 'none'"
+    },
+    {
+      "key": "direct_deposit_savings_account_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Account Number:",
+        "placeholder": "00000000000000",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'checking' || model.direct_deposit_account_type == 'none'"
+    },
+
+    {
+      "key": "direct_deposit_financial_institution_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Name of financial institution (Please provide the name of the bank where you want you direct deposit).",
+        "placeholder": "Bank of America",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'none'"
+    },
+    {
+      "key": "direct_deposit_routing_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Routing or transit number (The first nine numbers located at the bottom left of your check).",
+        "placeholder": "0000000000000",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'none'"
+    },
+
+    {
+      "key": "elect_fully_developed_claim_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "I DO NOT want my claim considered for rapid processing under the Fully-Developed Claim program because I plan to submit further evidence in support of my claim.",
+        "optional": true
+      }
     }
 
   ]
