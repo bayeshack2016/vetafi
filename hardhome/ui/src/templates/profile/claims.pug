@@ -22,7 +22,8 @@ div.profile-section#claims
           div.icon-wrapper
             div.icon
           div.text-wrapper
-            h4.status {{claim.header}}
+            h4.status {{claim.key}}
+            p {{claim.header}}
             div.date {{claim.date}}
 
         div.form-content(ng-if="claim.formIds.length > 0")

@@ -4,6 +4,7 @@ app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'cla
   function($scope, $location, $window, Profile, claimService, net, $uibModal, $state, userClaims, $filter) {
     $scope.user = Profile.user;
     $scope.claims = userClaims;
+    console.log(userClaims);
 
     function createHeaderString(claim) {
       if (claim.state == 'INCOMPLETE') {
