@@ -4,7 +4,7 @@
     "summary": "This form is the central piece of your application for disability compensation from the VA. You may need to include additional forms depending on what your disability is and what benefits you are requesting.",
     "required": true,
     "externalId": "CO17071000032363616",
-    "externalSignerId": "TODO"
+    "externalSignerId": "3f226db8cf39d5d3434536afdf16446d"
   },
   "name": "APPLICATION FOR DISABILITY COMPENSATION AND RELATED COMPENSATION BENEFITS",
   "description": "This form lists the disabilities you are claiming compensation for.",

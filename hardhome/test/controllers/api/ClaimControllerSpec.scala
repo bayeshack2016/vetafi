@@ -143,7 +143,11 @@ class ClaimControllerSpec extends PlaySpecification with CSRFTest {
 
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
-          .withJsonBody(Json.toJson(Seq("form1", "form2")))
+          .withJsonBody(Json.toJson(StartClaimRequest(
+            key = "claimKey",
+            description = "description",
+            forms = Seq("form1", "form2")
+          )))
           .withAuthenticator[DefaultEnv](identity.loginInfo)
 
         val csrfReq = addToken(req)

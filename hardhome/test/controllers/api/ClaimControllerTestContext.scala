@@ -27,11 +27,12 @@ import scala.concurrent.Future
 trait ClaimControllerTestContext extends SilhouetteTestContext {
 
   val testIncompleteClaim = Claim(
-    identity.userID,
-    UUID.randomUUID(),
-    Claim.State.INCOMPLETE,
-    java.util.Date.from(Instant.now()),
-    Recipients(
+    userID = identity.userID,
+    claimID = UUID.randomUUID(),
+    key = "fakeKey",
+    state = Claim.State.INCOMPLETE,
+    stateUpdatedAt = java.util.Date.from(Instant.now()),
+    sentTo = Recipients(
       None, None,
       Seq("test@website.com"),
       Seq(Address(name = Some("name")))

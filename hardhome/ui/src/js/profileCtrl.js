@@ -1,9 +1,12 @@
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net', '$uibModal', '$state', 'userClaims', '$filter',
-  function($scope, $location, $window, Profile, claimService, net, $uibModal, $state, userClaims, $filter) {
+app.controller('profileCtrl', ['$scope', '$location', '$window', 'Profile', 'claimService', 'net',
+    '$uibModal', '$state', 'userClaims', '$filter', 'claimConfig',
+  function($scope, $location, $window, Profile, claimService, net,
+           $uibModal, $state, userClaims, $filter, claimConfig) {
     $scope.user = Profile.user;
     $scope.claims = userClaims;
+    $scope.claimConfig = _.keyBy(claimConfig.claims, 'key');
     console.log(userClaims);
 
     function createHeaderString(claim) {
