@@ -64,8 +64,7 @@ trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
     Map[String, JsValue]("key" -> JsString("value")),
     identity.userID,
     testClaim.claimID,
-    0, 0, 0, 0,
-    Array.emptyByteArray
+    0, 0, 0, 0
   )
 
   var testFormWithExternal = ClaimForm(
@@ -74,7 +73,6 @@ trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
     identity.userID,
     testClaim.claimID,
     0, 0, 0, 0,
-    Array.emptyByteArray,
     Some("id"),
     Some("id")
   )

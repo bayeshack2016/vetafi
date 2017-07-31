@@ -99,24 +99,23 @@ class SeamlessDocsDocumentService @Inject() (
       case Left(pdfUrl) => Future.successful(pdfUrl)
     }
 
-    val pdfFuture: Future[Array[Byte]] = pdfUrlFuture.flatMap(
-      pdfUrl =>
-        wSClient.url(pdfUrl.toString).get().map(res => {
-          res.status match {
-            case Status.OK => res.bodyAsBytes.toArray
-            case _ => throw new RuntimeException
-          }
-        })
-    )
-
-    pdfFuture.flatMap(
-      pdf => {
-        formDAO.save(form.userID, form.claimID, form.key, form.copy(pdf = pdf)).map {
-          case ok if ok.ok => pdf
+    pdfUrlFuture.flatMap(
+      pdfUrl => {
+        formDAO.save(form.userID, form.claimID, form.key, form.copy(pdf = Some(pdfUrl.toString))).flatMap {
+          case ok if ok.ok => getPdf(pdfUrl)
           case _ => throw new RuntimeException
         }
       }
     )
+  }
+
+  private[this] def getPdf(pdfUrl: URL): Future[Array[Byte]] = {
+    wSClient.url(pdfUrl.toString).get().map(res => {
+      res.status match {
+        case Status.OK => res.bodyAsBytes.toArray
+        case _ => throw new RuntimeException
+      }
+    })
   }
 
   /**

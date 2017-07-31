@@ -62,7 +62,6 @@ class ClaimController @Inject() (
         0,
         0,
         0,
-        Array.empty[Byte],
         externalFormId = Some(formConfigManager.getFormConfigs(key).vfi.externalId)
       ))
 

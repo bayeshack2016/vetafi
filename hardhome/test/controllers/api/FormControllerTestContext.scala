@@ -44,8 +44,7 @@ trait FormControllerTestContext extends SilhouetteTestContext {
     Map.empty[String, JsValue],
     identity.userID,
     testClaim.claimID,
-    0, 0, 0, 0,
-    Array.emptyByteArray
+    0, 0, 0, 0
   )
 
   var testUserValues = UserValues(

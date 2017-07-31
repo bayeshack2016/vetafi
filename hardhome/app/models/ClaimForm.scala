@@ -20,7 +20,7 @@ case class ClaimForm(
   requiredQuestions: Int,
   answeredRequired: Int,
   answeredOptional: Int,
-  pdf: Array[Byte],
+  pdf: Option[String] = None,
   // for seamlessdocs
   externalFormId: Option[String] = None,
   externalApplicationId: Option[String] = None,

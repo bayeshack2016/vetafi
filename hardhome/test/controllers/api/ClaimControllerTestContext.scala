@@ -44,8 +44,7 @@ trait ClaimControllerTestContext extends SilhouetteTestContext {
     Map.empty[String, JsValue],
     identity.userID,
     testIncompleteClaim.claimID,
-    0, 0, 0, 0,
-    Array.emptyByteArray
+    0, 0, 0, 0
   )
 
   val mockClaimDao: ClaimDAO = Mockito.mock(classOf[ClaimDAO])

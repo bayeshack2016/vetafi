@@ -60,8 +60,7 @@ class ClaimServiceSpec extends PlaySpecification with Mockito {
           ),
           UUID.randomUUID(),
           UUID.randomUUID(),
-          0, 0, 0, 0,
-          Array.emptyByteArray
+          0, 0, 0, 0
         )
       )
 
