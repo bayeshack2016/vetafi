@@ -50,18 +50,12 @@ class ClaimServiceSpec extends PlaySpecification with Mockito {
       val claimService: ClaimServiceImpl = app.injector.instanceOf[ClaimServiceImpl]
 
       val result: ClaimForm = claimService.calculateProgress(
-        ClaimForm(
-          "test",
-          Map(
-            "condition1" -> JsString("x"),
-            "condition2" -> JsString("y"),
-            "optionalField1" -> JsString("answer"),
-            "requiredField1" -> JsString("answer")
-          ),
-          UUID.randomUUID(),
-          UUID.randomUUID(),
-          0, 0, 0, 0
-        )
+        ClaimForm("test", Map(
+          "condition1" -> JsString("x"),
+          "condition2" -> JsString("y"),
+          "optionalField1" -> JsString("answer"),
+          "requiredField1" -> JsString("answer")
+        ), UUID.randomUUID(), UUID.randomUUID(), 0, 0, 0, 0)
       )
 
       result.answeredOptional must be equalTo 1

@@ -53,17 +53,7 @@ class ClaimController @Inject() (
 
   private def createForms(userID: UUID, claimID: UUID, forms: Seq[String]): Future[Seq[Boolean]] = {
     val futures = forms.map((key: String) => {
-      val newForm = claimService.calculateProgress(ClaimForm(
-        key,
-        Map.empty[String, JsValue],
-        userID,
-        claimID,
-        0,
-        0,
-        0,
-        0,
-        externalFormId = Some(formConfigManager.getFormConfigs(key).vfi.externalId)
-      ))
+      val newForm = claimService.calculateProgress(ClaimForm(key, Map.empty[String, JsValue], userID, claimID, 0, 0, 0, 0, externalFormId = Some(formConfigManager.getFormConfigs(key).vfi.externalId)))
 
       for {
         formSaveFuture <- formDAO.save(userID, claimID, key, newForm)

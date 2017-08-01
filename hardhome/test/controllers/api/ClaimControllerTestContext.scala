@@ -39,13 +39,7 @@ trait ClaimControllerTestContext extends SilhouetteTestContext {
     )
   )
 
-  var testForm = ClaimForm(
-    "VBA-21-0966-ARE",
-    Map.empty[String, JsValue],
-    identity.userID,
-    testIncompleteClaim.claimID,
-    0, 0, 0, 0
-  )
+  var testForm = ClaimForm("VBA-21-0966-ARE", Map.empty[String, JsValue], identity.userID, testIncompleteClaim.claimID, 0, 0, 0, 0)
 
   val mockClaimDao: ClaimDAO = Mockito.mock(classOf[ClaimDAO])
   val mockFormDao: FormDAO = Mockito.mock(classOf[FormDAO])

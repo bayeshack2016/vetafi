@@ -101,7 +101,7 @@ class SeamlessDocsDocumentService @Inject() (
 
     pdfUrlFuture.flatMap(
       pdfUrl => {
-        formDAO.save(form.userID, form.claimID, form.key, form.copy(pdf = Some(pdfUrl.toString))).flatMap {
+        formDAO.save(form.userID, form.claimID, form.key, form.copy()).flatMap {
           case ok if ok.ok => getPdf(pdfUrl)
           case _ => throw new RuntimeException
         }

@@ -39,13 +39,7 @@ trait FormControllerTestContext extends SilhouetteTestContext {
     )
   )
 
-  var testForm = ClaimForm(
-    "VBA-21-0966-ARE",
-    Map.empty[String, JsValue],
-    identity.userID,
-    testClaim.claimID,
-    0, 0, 0, 0
-  )
+  var testForm = ClaimForm("VBA-21-0966-ARE", Map.empty[String, JsValue], identity.userID, testClaim.claimID, 0, 0, 0, 0)
 
   var testUserValues = UserValues(
     identity.userID,

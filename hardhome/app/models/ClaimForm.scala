@@ -7,9 +7,6 @@ import play.api.libs.json._
 
 /**
  * Represents a single completed piece of paperwork.
- *
- * TODO: MongoDB document size limit is 16MB,
- * we might need another way to store the pdf.
  */
 case class ClaimForm(
   key: String,
@@ -20,8 +17,6 @@ case class ClaimForm(
   requiredQuestions: Int,
   answeredRequired: Int,
   answeredOptional: Int,
-  pdf: Option[String] = None,
-  // for seamlessdocs
   externalFormId: Option[String] = None,
   externalApplicationId: Option[String] = None,
   externalSignatureLink: Option[String] = None,
