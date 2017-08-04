@@ -147,7 +147,7 @@
         "label": "Point of Contact (Name of person that VA can contact in order to get in touch with you)",
         "rows": 2,
         "columns": 100,
-        "optional": true
+        "optional": false
       },
       "hideExpression": "model.veteran_homeless_y_n != 'Yes'"
     },
@@ -159,7 +159,7 @@
       ],
       "templateOptions": {
         "label": "Contact Phone Number",
-        "optional": true
+        "optional": false
       },
       "hideExpression": "model.veteran_homeless_y_n != 'Yes'"
     },
