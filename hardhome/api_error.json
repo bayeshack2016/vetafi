@@ -1,0 +1,10 @@
+[info] u.s.SeamlessDocsServiceImpl - Seamless Docs Response [200]:   {
+    "error": true,
+    "error_log": [
+        {
+            "error_code": "rate_limit",
+            "error_message": "Usage rate exceeded limits"
+        }
+    ]
+}
+
