@@ -5,33 +5,34 @@ import java.time.Instant
 import java.util.UUID
 
 import com.google.inject.AbstractModule
-import com.mohiva.play.silhouette.api.{ Environment, LoginInfo }
+import com.mohiva.play.silhouette.api.{Environment, LoginInfo}
 import com.typesafe.config.ConfigFactory
 import controllers.SilhouetteTestContext
 import models._
-import models.daos.{ ClaimDAO, FormDAO, UserDAO, UserValuesDAO }
+import models.daos.{ClaimDAO, FormDAO, UserDAO, UserValuesDAO}
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
-import org.hamcrest.{ BaseMatcher, Description }
-import org.mockito.{ Matchers, Mockito }
+import org.hamcrest.{BaseMatcher, Description}
+import org.mockito.{Matchers, Mockito}
 import org.specs2.specification.Scope
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.{ JsString, JsValue }
+import play.api.libs.json.{JsString, JsValue}
 import play.api.libs.ws.WSClient
-import play.api.mvc.{ Action, Results }
-import play.api.test.{ PlaySpecification, WithApplication, WsTestClient }
-import play.api.{ Application, Configuration }
+import play.api.mvc.{Action, Results}
+import play.api.test.{PlaySpecification, WithApplication, WsTestClient}
+import play.api.{Application, Configuration}
 import play.core.server.Server
 import play.modules.reactivemongo.ReactiveMongoApi
 import reactivemongo.api.commands.UpdateWriteResult
 import services.FakeReactiveMongoApi
-import services.forms.{ ClaimService, ContactInfoService, FormConfigManager }
+import services.forms.{ClaimService, ContactInfoService, FormConfigManager}
 import utils.auth.DefaultEnv
 import utils.seamlessdocs._
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.Future
-import scala.util.{ Failure, Success }
+import scala.concurrent.duration.Duration
+import scala.concurrent.{Await, Future}
+import scala.util.{Failure, Success}
 
 trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
   identity = User(
@@ -227,6 +228,42 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             case Success(_) => ko
             case Failure(_) => ok
           }
+        })
+      }
+    }
+  }
+
+
+  "The SeamlessDocsDocumentService.renderSigned method" should {
+    "work if the form already has an application id" in new SeamplessDocsServiceTestContext {
+      Mockito.when(mockSeamlessDocsService.updatePdf(
+        Matchers.eq("id")
+      ))
+        .thenReturn(Future.successful(Left(new URL(pdfUrl))))
+
+      new WithApplication(application) {
+        withTestClient(app)(fakeController)({ client: WSClient =>
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
+
+          Await.result(service.renderSigned(testFormWithExternal), Duration.Inf) match {
+            case url: URL => url must be equalTo new URL(pdfUrl)
+            case _ => failure
+          }
+        })
+      }
+    }
+
+    "fail if the form does not have an application id" in new SeamplessDocsServiceTestContext {
+      Mockito.when(mockSeamlessDocsService.updatePdf(
+        Matchers.eq("app_id")
+      ))
+        .thenReturn(Future.successful(Left(new URL(pdfUrl))))
+
+      new WithApplication(application) {
+        withTestClient(app)(fakeController)({ client: WSClient =>
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
+
+          service.renderSigned(testForm) must throwA[RuntimeException]
         })
       }
     }

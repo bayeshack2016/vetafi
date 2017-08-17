@@ -109,6 +109,36 @@ class SeamlessDocsDocumentService @Inject() (
     )
   }
 
+  /**
+   * Assuming the form already has an application ID,
+   * get the url of the signed pdf.
+   *
+   * @param form
+   * @return
+   */
+  override def renderSigned(form: ClaimForm): Future[URL] = {
+    MDC.withCtx(
+      "userID" -> form.userID.toString,
+      "claimID" -> form.claimID.toString,
+      "form" -> form.key
+    ) {
+      logger.info("renderSigned called")
+
+
+      (form.externalApplicationId match {
+        case Some(applicationId) => seamlessDocs.updatePdf(applicationId)
+        case None =>
+          logger.error("no externalApplicationId present for form provided to renderSigned")
+          throw new RuntimeException
+      }).map {
+        case Left(url) => url
+        case Right(_) =>
+          logger.warn("update PDF failed in renderSigned")
+          throw new RuntimeException
+      }
+    }
+  }
+
   private[this] def getPdf(pdfUrl: URL): Future[Array[Byte]] = {
     wSClient.url(pdfUrl.toString).get().map(res => {
       res.status match {
