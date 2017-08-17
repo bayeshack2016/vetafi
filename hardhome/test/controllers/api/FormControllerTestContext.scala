@@ -27,25 +27,19 @@ import scala.concurrent.Future
 trait FormControllerTestContext extends SilhouetteTestContext {
 
   var testClaim = Claim(
-    identity.userID,
-    UUID.randomUUID(),
-    Claim.State.INCOMPLETE,
-    java.util.Date.from(Instant.now()),
-    Recipients(
+    userID = identity.userID,
+    claimID = UUID.randomUUID(),
+    key = "fakeKey",
+    state = Claim.State.INCOMPLETE,
+    stateUpdatedAt = java.util.Date.from(Instant.now()),
+    sentTo = Recipients(
       None, None,
       Seq("test@website.com"),
       Seq(Address(name = Some("name")))
     )
   )
 
-  var testForm = ClaimForm(
-    "VBA-21-0966-ARE",
-    Map.empty[String, JsValue],
-    identity.userID,
-    testClaim.claimID,
-    0, 0, 0, 0,
-    Array.emptyByteArray
-  )
+  var testForm = ClaimForm("VBA-21-0966-ARE", Map.empty[String, JsValue], identity.userID, testClaim.claimID, 0, 0, 0, 0)
 
   var testUserValues = UserValues(
     identity.userID,

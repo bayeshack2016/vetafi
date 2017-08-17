@@ -1,5 +1,7 @@
 package modules
 
+import java.time.Clock
+
 import com.google.inject.AbstractModule
 import models.daos._
 import net.codingwell.scalaguice.ScalaModule
@@ -8,7 +10,7 @@ import services.documents.{ DocumentService, SeamlessDocsDocumentService }
 import services._
 import services.forms._
 import services.submission.{ FaxSubmissionService, SubmissionService }
-import utils.seamlessdocs.{ SeamlessDocsService, SeamlessDocsServiceImpl }
+import utils.seamlessdocs.{ RequestUtils, SeamlessDocsService, SeamlessDocsServiceImpl }
 import utils.secrets.{ BiscuitSecretsManager, SecretsManager, StaticSecrets }
 
 /**
@@ -38,5 +40,6 @@ class BaseModule extends AbstractModule with ScalaModule {
     bind[SeamlessDocsService].to[SeamlessDocsServiceImpl]
     bind[ReactiveMongoApi].to[BiscuitPasswordMongoApi]
     bind[UserValuesService].to[UserValuesServiceImpl]
+    bind[RequestUtils].toInstance(new RequestUtils(Clock.systemUTC()))
   }
 }

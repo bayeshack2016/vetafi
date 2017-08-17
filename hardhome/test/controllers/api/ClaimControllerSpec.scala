@@ -95,7 +95,7 @@ class ClaimControllerSpec extends PlaySpecification with CSRFTest {
         .thenReturn(Future.successful(None))
         .thenReturn(Future.successful(Some(testIncompleteClaim)))
 
-      Mockito.when(mockClaimDao.create(identity.userID))
+      Mockito.when(mockClaimDao.create(identity.userID, "claimKey"))
         .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
       Mockito.when(mockFormDao.save(Matchers.any(), Matchers.any(), Matchers.any(), Matchers.any()))
@@ -121,7 +121,11 @@ class ClaimControllerSpec extends PlaySpecification with CSRFTest {
 
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
-          .withJsonBody(Json.toJson(Seq("form1", "form2")))
+          .withJsonBody(Json.toJson(StartClaimRequest(
+            key = "claimKey",
+            description = "description",
+            forms = Seq("form1", "form2")
+          )))
           .withAuthenticator[DefaultEnv](identity.loginInfo)
 
         val csrfReq = addToken(req)
@@ -139,7 +143,11 @@ class ClaimControllerSpec extends PlaySpecification with CSRFTest {
 
       new WithApplication(application) {
         val req = FakeRequest(POST, controllers.api.routes.ClaimController.create().url)
-          .withJsonBody(Json.toJson(Seq("form1", "form2")))
+          .withJsonBody(Json.toJson(StartClaimRequest(
+            key = "claimKey",
+            description = "description",
+            forms = Seq("form1", "form2")
+          )))
           .withAuthenticator[DefaultEnv](identity.loginInfo)
 
         val csrfReq = addToken(req)

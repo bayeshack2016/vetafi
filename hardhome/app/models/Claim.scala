@@ -51,12 +51,25 @@ object Recipients {
   implicit val jsonFormat: OFormat[Recipients] = Json.format[Recipients]
 }
 
+case class StartClaimRequest(
+  key: String,
+  description: String,
+  forms: Seq[String]
+) {
+
+}
+
+object StartClaimRequest {
+  implicit val jsonFormat: OFormat[StartClaimRequest] = Json.format[StartClaimRequest]
+}
+
 /**
  * A claim represents 1 or more Forms grouped together for submission.
  */
 case class Claim(
   userID: UUID,
   claimID: UUID,
+  key: String,
   state: Claim.State.Value,
   stateUpdatedAt: java.util.Date,
   sentTo: Recipients

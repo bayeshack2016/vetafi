@@ -21,6 +21,7 @@ unmanagedClasspath in Runtime += baseDirectory.value / "conf"
 resolvers += Resolver.jcenterRepo
 resolvers += Resolver.url("Typesafe Ivy releases", url("https://repo.typesafe.com/typesafe/ivy-releases"))(Resolver.ivyStylePatterns)
 resolvers += "jitpack" at "https://jitpack.io" // Used to resolve com.github.* projects
+resolvers += "softprops-maven" at "http://dl.bintray.com/content/softprops/maven"
 
 libraryDependencies ++= Seq(
   "org.reactivemongo" %% "play2-reactivemongo" % "0.12.1",
@@ -35,6 +36,7 @@ libraryDependencies ++= Seq(
   "com.enragedginger" %% "akka-quartz-scheduler" % "1.5.0-akka-2.4.x",
   "com.mohiva" %% "play-silhouette-testkit" % "4.0.0" % "test",
   "com.digitaltangible" %% "play-guard" % "2.0.0",
+  "me.lessis" %% "retry" % "0.2.0",
   "com.github.dcoker" % "biscuit-java" % "ebed4b3a238a45c007da138175f1132a6bf26b71",
   "net.logstash.logback" % "logstash-logback-encoder" % "4.9",
   "ch.qos.logback" % "logback-core" % "1.2.3",

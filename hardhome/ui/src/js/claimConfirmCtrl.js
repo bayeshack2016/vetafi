@@ -1,7 +1,7 @@
 var app = angular.module('vetafiApp');
-app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '$uibModal', 'userValues', 'forms', 'formTemplateService',
+app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '$uibModal', 'userValues', 'forms', 'formConfig',
   'user', 'vaService', 'claimService', '$filter',
-  function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formTemplateService, user, vaService, claimService, $filter) {
+  function($scope, $state, $stateParams, net, $uibModal, userValues, forms, formConfig, user, vaService, claimService, $filter) {
     $scope.claimId = $stateParams.claimId;
     $scope.vaAddress = vaService.getAddress();
     $scope.user = user || {};
@@ -16,7 +16,7 @@ app.controller('claimConfirmCtrl', ['$scope', '$state', '$stateParams', 'net', '
     $scope.dateToday = $filter('date')(new Date(), 'MM/dd/yyyy');
 
     $scope.formsList = forms;
-    $scope.formsInfo = formTemplateService;
+    $scope.formsInfo = formConfig;
 
     $scope.onClickEditAddress = function () {
       openModifyContactModal();

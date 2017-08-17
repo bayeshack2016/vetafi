@@ -57,10 +57,11 @@ class ClaimDAOImpl @Inject() (val reactiveMongoApi: ReactiveMongoApi) extends Cl
     })
   }
 
-  override def create(userID: UUID): Future[WriteResult] = {
+  override def create(userID: UUID, key: String): Future[WriteResult] = {
     val claim = Claim(
       userID = userID,
       claimID = UUID.randomUUID(),
+      key = key,
       Claim.State.INCOMPLETE,
       java.util.Date.from(Instant.now()),
       Recipients(None, None, Seq.empty[String], Seq.empty[Address])

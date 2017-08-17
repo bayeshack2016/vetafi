@@ -34,12 +34,7 @@ class ClaimServiceImpl @Inject() (formConfigManager: FormConfigManager) extends 
       (field: Field) => !field.templateOptions.optional && claimForm.responses.contains(field.key)
     )
 
-    claimForm.copy(
-      optionalQuestions = optionalQuestions,
-      requiredQuestions = requiredQuestions,
-      answeredRequired = answeredRequired,
-      answeredOptional = answeredOptional
-    )
+    claimForm.copy(optionalQuestions = optionalQuestions, requiredQuestions = requiredQuestions, answeredRequired = answeredRequired, answeredOptional = answeredOptional)
   }
 
   def shouldBeAnswered(data: Map[String, JsValue])(field: Field): Boolean = {

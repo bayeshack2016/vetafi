@@ -5,13 +5,14 @@ import javax.inject.Inject
 
 import com.mohiva.play.silhouette.api.Silhouette
 import models.daos.{ ClaimDAO, FormDAO }
-import models.{ Claim, ClaimForm, Recipients }
+import models.{ Claim, ClaimForm, Recipients, StartClaimRequest }
 import play.api.libs.json.{ JsError, JsValue, Json }
 import play.api.mvc.{ Action, _ }
 import services.documents.DocumentService
 import services.forms.{ ClaimService, FormConfigManager }
 import services.submission.SubmissionService
 import utils.auth.DefaultEnv
+import org.log4s._
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
@@ -28,6 +29,8 @@ class ClaimController @Inject() (
   silhouette: Silhouette[DefaultEnv],
   submissionService: SubmissionService
 ) extends Controller {
+
+  private[this] val logger = getLogger
 
   def getClaims: Action[AnyContent] = silhouette.SecuredAction.async {
     request =>
@@ -50,18 +53,7 @@ class ClaimController @Inject() (
 
   private def createForms(userID: UUID, claimID: UUID, forms: Seq[String]): Future[Seq[Boolean]] = {
     val futures = forms.map((key: String) => {
-      val newForm = claimService.calculateProgress(ClaimForm(
-        key,
-        Map.empty[String, JsValue],
-        userID,
-        claimID,
-        0,
-        0,
-        0,
-        0,
-        Array.empty[Byte],
-        externalFormId = Some(formConfigManager.getFormConfigs(key).vfi.externalId)
-      ))
+      val newForm = claimService.calculateProgress(ClaimForm(key, Map.empty[String, JsValue], userID, claimID, 0, 0, 0, 0, externalFormId = Some(formConfigManager.getFormConfigs(key).vfi.externalId)))
 
       for {
         formSaveFuture <- formDAO.save(userID, claimID, key, newForm)
@@ -77,18 +69,26 @@ class ClaimController @Inject() (
   def create: Action[JsValue] = silhouette.SecuredAction.async(BodyParsers.parse.json) {
     request =>
       {
-        val formKeySeqResult = request.body.validate[Seq[String]]
+        val formKeySeqResult = request.body.validate[StartClaimRequest]
         formKeySeqResult.fold(
           errors => {
             Future.successful(BadRequest(Json.obj("status" -> "error", "message" -> JsError.toJson(errors))))
           },
-          formKeys => {
+          startClaimRequest => {
             claimDAO.findIncompleteClaim(request.identity.userID).flatMap {
               case Some(claim) => Future.successful(Ok(Json.toJson(claim)))
-              case None => claimDAO.create(request.identity.userID).flatMap {
+              case None => claimDAO.create(request.identity.userID, startClaimRequest.key).flatMap {
                 case ok if ok.ok => claimDAO.findIncompleteClaim(request.identity.userID).flatMap {
-                  case Some(claim) => createForms(claim.userID, claim.claimID, formKeys).map {
-                    _ => Created(Json.toJson(claim))
+                  case Some(claim) => createForms(claim.userID, claim.claimID, startClaimRequest.forms).map {
+                    _ =>
+                      MDC.withCtx(
+                        "userID" -> claim.userID.toString,
+                        "claimID" -> claim.claimID.toString,
+                        "claimKey" -> claim.key
+                      ) {
+                          logger.info(s"Created new claim: $claim")
+                        }
+                      Created(Json.toJson(claim))
                   }
                   case None => Future.successful(InternalServerError(Json.obj(
                     "status" -> "error"

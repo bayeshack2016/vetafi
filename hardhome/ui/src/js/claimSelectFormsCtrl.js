@@ -1,6 +1,6 @@
 var app = angular.module('vetafiApp');
-app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateService', '$stateParams', '$state', 'claimForms', 'net', 'busySpinner',
-  function($scope, claimService, formTemplateService, $stateParams, $state, claimForms, net, busySpinner) {
+app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formConfig', '$stateParams', '$state', 'claimForms', 'net', 'busySpinner',
+  function($scope, claimService, formConfig, $stateParams, $state, claimForms, net, busySpinner) {
     $scope.claimId = $stateParams.claimId;
 
     $scope.onDownload = function(formId) {
@@ -14,13 +14,13 @@ app.controller('claimSelectFormsCtrl', ['$scope', 'claimService', 'formTemplateS
       return form.key;
     });
     // All available forms
-    $scope.allForms = formTemplateService;
+    $scope.formConfigs = formConfig;
 
     $scope.numRequiredCompleted = _.sum(_.map(claimForms, function (form) {
       return form && form.answeredRequired == form.requiredQuestions ? 1 : 0;
     }));
-    $scope.numRequiredForms = _.sum(_.map($scope.allForms, function (form) {
-      return form.vfi && form.vfi.required ? 1 : 0;
+    $scope.numRequiredForms = _.sum(_.map(claimForms, function (form) {
+      return formConfig[form.key].vfi.required ? 1 : 0;
     }));
 
     $scope.isCompletedForm = function(myForm) {

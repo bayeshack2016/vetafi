@@ -30,7 +30,8 @@ import utils.auth.DefaultEnv
 import utils.seamlessdocs._
 
 import scala.concurrent.ExecutionContext.Implicits.global
-import scala.concurrent.Future
+import scala.concurrent.duration.Duration
+import scala.concurrent.{ Await, Future }
 import scala.util.{ Failure, Success }
 
 trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
@@ -47,35 +48,31 @@ trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
   )
 
   var testClaim = Claim(
-    identity.userID,
-    UUID.randomUUID(),
-    Claim.State.INCOMPLETE,
-    java.util.Date.from(Instant.now()),
-    Recipients(
+    userID = identity.userID,
+    claimID = UUID.randomUUID(),
+    key = "fakeKey",
+    state = Claim.State.INCOMPLETE,
+    stateUpdatedAt = java.util.Date.from(Instant.now()),
+    sentTo = Recipients(
       None, None,
       Seq("test@website.com"),
       Seq(Address(name = Some("name")))
     )
   )
 
-  var testForm = ClaimForm(
-    "VBA-21-0966-ARE",
-    Map[String, JsValue]("key" -> JsString("value")),
-    identity.userID,
-    testClaim.claimID,
-    0, 0, 0, 0,
-    Array.emptyByteArray
-  )
+  var testForm = ClaimForm("VBA-21-0966-ARE", Map[String, JsValue]("key" -> JsString("value")), identity.userID, testClaim.claimID, 0, 0, 0, 0)
 
   var testFormWithExternal = ClaimForm(
     "withExternal",
     Map[String, JsValue]("key" -> JsString("value")),
     identity.userID,
     testClaim.claimID,
-    0, 0, 0, 0,
-    Array.emptyByteArray,
-    Some("id"),
-    Some("id")
+    0,
+    0,
+    0,
+    0,
+    externalFormId = Some("formId"),
+    externalApplicationId = Some("id")
   )
 
   var fakePdf: Array[Byte] = Array[Byte](0x01, 0x02, 0x03)
@@ -114,21 +111,6 @@ trait SeamplessDocsServiceTestContext extends SilhouetteTestContext {
   def withTestClient[T](app: Application)(routes: scala.PartialFunction[play.api.mvc.RequestHeader, play.api.mvc.Handler])(block: WSClient => T): T = {
     Server.withRouter()(routes) { implicit port =>
       WsTestClient.withClient { client => block(client) }
-    }
-  }
-
-  class HasCorrectUpdates(applicationId: String, fakePdf: Array[Byte]) extends BaseMatcher[ClaimForm] {
-    override def matches(o: scala.Any): Boolean = {
-      o.asInstanceOf[ClaimForm].externalApplicationId.get == applicationId &&
-        (o.asInstanceOf[ClaimForm].pdf sameElements fakePdf)
-    }
-
-    override def describeMismatch(o: scala.Any, description: Description): Unit = {
-
-    }
-
-    override def describeTo(description: Description): Unit = {
-
     }
   }
 
@@ -181,7 +163,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
         Matchers.eq(testFormWithExternal.userID),
         Matchers.eq(testFormWithExternal.claimID),
         Matchers.eq(testFormWithExternal.key),
-        Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
+        Matchers.argThat(new HasCorrectApplicationId(fakeApplicationCreateResponse.application_id))
       ))
         .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
@@ -220,7 +202,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
         Matchers.eq(testFormWithExternal.userID),
         Matchers.eq(testFormWithExternal.claimID),
         Matchers.eq(testFormWithExternal.key),
-        Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
+        Matchers.argThat(new HasCorrectApplicationId(fakeApplicationCreateResponse.application_id))
       ))
         .thenReturn(Future.successful(UpdateWriteResult(ok = false, 1, 1, Seq(), Seq(), None, None, None)))
 
@@ -246,6 +228,41 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
             case Success(_) => ko
             case Failure(_) => ok
           }
+        })
+      }
+    }
+  }
+
+  "The SeamlessDocsDocumentService.renderSigned method" should {
+    "work if the form already has an application id" in new SeamplessDocsServiceTestContext {
+      Mockito.when(mockSeamlessDocsService.updatePdf(
+        Matchers.eq("id")
+      ))
+        .thenReturn(Future.successful(Left(new URL(pdfUrl))))
+
+      new WithApplication(application) {
+        withTestClient(app)(fakeController)({ client: WSClient =>
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
+
+          Await.result(service.renderSigned(testFormWithExternal), Duration.Inf) match {
+            case url: URL => url must be equalTo new URL(pdfUrl)
+            case _ => failure
+          }
+        })
+      }
+    }
+
+    "fail if the form does not have an application id" in new SeamplessDocsServiceTestContext {
+      Mockito.when(mockSeamlessDocsService.updatePdf(
+        Matchers.eq("app_id")
+      ))
+        .thenReturn(Future.successful(Left(new URL(pdfUrl))))
+
+      new WithApplication(application) {
+        withTestClient(app)(fakeController)({ client: WSClient =>
+          val service = app.injector.instanceOf[SeamlessDocsDocumentService]
+
+          service.renderSigned(testForm) must throwA[RuntimeException]
         })
       }
     }
@@ -300,7 +317,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
         Matchers.eq(testFormWithExternal.userID),
         Matchers.eq(testFormWithExternal.claimID),
         Matchers.eq(testFormWithExternal.key),
-        Matchers.argThat(new HasCorrectUpdates(fakeApplicationCreateResponse.application_id, fakePdf))
+        Matchers.argThat(new HasCorrectApplicationId(fakeApplicationCreateResponse.application_id))
       ))
         .thenReturn(Future.successful(UpdateWriteResult(ok = true, 1, 1, Seq(), Seq(), None, None, None)))
 
@@ -312,6 +329,7 @@ class SeamlessDocsDocumentServiceSpec extends PlaySpecification {
         Matchers.eq(testFormWithExternal.responses)
       ))
         .thenReturn(Future.successful(Left(SeamlessApplicationCreateResponse(result = true, "appId", "Mock app."))))
+
       Mockito.when(mockSeamlessDocsService.getInviteUrl(
         Matchers.eq(fakeApplicationCreateResponse.application_id)
       ))

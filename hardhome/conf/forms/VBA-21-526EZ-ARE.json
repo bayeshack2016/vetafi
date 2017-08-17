@@ -1,0 +1,997 @@
+{
+  "vfi": {
+    "title": "Application for Disability Compensation and Related Compensation Benefits",
+    "summary": "This form is the central piece of your application for disability compensation from the VA. You may need to include additional forms depending on what your disability is and what benefits you are requesting.",
+    "required": true,
+    "externalId": "CO17071000032363616",
+    "externalSignerId": "3f226db8cf39d5d3434536afdf16446d"
+  },
+  "name": "APPLICATION FOR DISABILITY COMPENSATION AND RELATED COMPENSATION BENEFITS",
+  "description": "This form lists the disabilities you are claiming compensation for.",
+  "key": "VBA-21-526EZ-ARE",
+  "fields": [
+
+    {
+      "key": "veteran_first_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's First Name",
+        "placeholder": "John",
+        "autocomplete": "given-name",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_middle_initial",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Middle Initial",
+        "placeholder": "C",
+        "autocomplete": "additional-name",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_last_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Last Name",
+        "placeholder": "Doe",
+        "autocomplete": "family-name",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_ssn",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Social Security Number",
+        "placeholder": "000-00-0000",
+        "optional": false
+      },
+      "optionsTypes": [
+        "ssn"
+      ],
+      "hideExpression": "model.filing_for_self"
+    },
+    {
+      "key": "veteran_previous_claim_with_va_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Have you, or the veteran you represent, ever previously filed a claim with the VA?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+    {
+      "key": "va_file_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "VA File Number",
+        "placeholder": "000000000",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_previous_claim_with_va_y_n != 'Yes'"
+    },
+    {
+      "key": "veteran_dob",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Veteran's Date of Birth",
+        "placeholder": "MM/DD/YYYY",
+        "autocomplete": "bday",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_sex",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Veteran's Gender",
+        "options": [
+          {
+            "name": "Male",
+            "value": "Male"
+          },
+          {
+            "name": "Female",
+            "value": "Female"
+          }
+        ],
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_service_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Veteran's Service Number",
+        "placeholder": "000000000",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_homeless_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Are you currently homeless or at risk of becoming homeless?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+    {
+      "key": "point_of_contact_name",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Point of Contact (Name of person that VA can contact in order to get in touch with you)",
+        "rows": 2,
+        "columns": 100,
+        "optional": false
+      },
+      "hideExpression": "model.veteran_homeless_y_n != 'Yes'"
+    },
+    {
+      "key": "point_of_contact_phone_number",
+      "type": "input",
+      "optionsTypes": [
+        "phoneNumber"
+      ],
+      "templateOptions": {
+        "label": "Contact Phone Number",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_homeless_y_n != 'Yes'"
+    },
+    {
+      "key": "army_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you served in the Army.",
+        "optional": true
+      }
+    },
+    {
+      "key": "navy_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you served in the Navy.",
+        "optional": true
+      }
+    },
+    {
+      "key": "marines_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you served in the Marines Corps.",
+        "optional": true
+      }
+    },
+    {
+      "key": "air_force_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you served in the Air Force.",
+        "optional": true
+      }
+    },
+    {
+      "key": "coast_guard_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you served in the Coast Guard.",
+        "optional": true
+      }
+    },
+
+    {
+      "key": "active_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you had active service.",
+        "optional": true
+      }
+    },
+    {
+      "key": "reserve_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you served in the reserves.",
+        "optional": true
+      }
+    },
+    {
+      "key": "national_guard_service_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you served in the national guard.",
+        "optional": true
+      }
+    },
+
+    {
+      "key": "veteran_home_address_line1",
+      "type": "input",
+      "templateOptions": {
+        "label": "Address Line 1",
+        "placeholder": "55 Magnolia St.",
+        "autocomplete": "address-line1",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_home_apartment_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Apartment Number",
+        "placeholder": "Apt. 3",
+        "autocomplete": "address-line3",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_home_city",
+      "type": "input",
+      "templateOptions": {
+        "label": "City",
+        "placeholder": "Kansas City",
+        "autocomplete": "address-level2",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_home_state",
+      "type": "input",
+      "optionsTypes": [
+        "state"
+      ],
+      "templateOptions": {
+        "label": "State",
+        "autocomplete": "address-level1",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_home_zip_code",
+      "type": "input",
+      "optionsTypes": [
+        "zipCode"
+      ],
+      "templateOptions": {
+        "label": "Postal Code",
+        "autocomplete": "postal-code",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_home_country",
+      "type": "input",
+      "optionsTypes": [
+        "country"
+      ],
+      "templateOptions": {
+        "label": "Country",
+        "autocomplete": "country",
+        "optional": false
+      }
+    },
+
+
+    {
+      "key": "changing_home_address_soon",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if your home address will be changing soon.",
+        "optional": true
+      }
+    },
+
+    {
+      "key": "veteran_forwarding_address_line1",
+      "type": "input",
+      "templateOptions": {
+        "label": "Forwarding Address Line 1",
+        "placeholder": "55 Magnolia St.",
+        "autocomplete": "address-line1",
+        "optional": false
+      },
+      "hideExpression": "!model.changing_home_address_soon"
+    },
+    {
+      "key": "veteran_forwarding_apartment_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Forwarding Address Apartment Number",
+        "placeholder": "Apt. 3",
+        "autocomplete": "address-line3",
+        "optional": false
+      },
+      "hideExpression": "!model.changing_home_address_soon"
+    },
+    {
+      "key": "veteran_forwarding_city",
+      "type": "input",
+      "templateOptions": {
+        "label": "Forwarding Address City",
+        "placeholder": "Kansas City",
+        "autocomplete": "address-level2",
+        "optional": false
+      },
+      "hideExpression": "!model.changing_home_address_soon"
+    },
+    {
+      "key": "veteran_forwarding_state",
+      "type": "input",
+      "optionsTypes": [
+        "state"
+      ],
+      "templateOptions": {
+        "label": "Forwarding Address State",
+        "autocomplete": "address-level1",
+        "optional": false
+      },
+      "hideExpression": "!model.changing_home_address_soon"
+    },
+    {
+      "key": "veteran_forwarding_zip_code",
+      "type": "input",
+      "optionsTypes": [
+        "zipCode"
+      ],
+      "templateOptions": {
+        "label": "Forwarding Address Postal Code",
+        "autocomplete": "postal-code",
+        "optional": false
+      },
+      "hideExpression": "!model.changing_home_address_soon"
+    },
+    {
+      "key": "veteran_forwarding_country",
+      "type": "input",
+      "optionsTypes": [
+        "country"
+      ],
+      "templateOptions": {
+        "label": "Forwarding Address Country",
+        "autocomplete": "country",
+        "optional": false
+      },
+      "hideExpression": "!model.changing_home_address_soon"
+    },
+    {
+      "key": "veteran_forwarding_address_effective_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Forwarding Address Effective Date",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      }
+    },
+    {
+      "key": "contact_phone_number",
+      "type": "input",
+      "optionsTypes": [
+        "phoneNumber"
+      ],
+      "templateOptions": {
+        "label": "Contact Phone Number",
+        "autocomplete": "tel",
+        "optional": false
+      }
+    },
+    {
+      "key": "contact_email",
+      "type": "input",
+      "optionsTypes": [
+        "email"
+      ],
+      "templateOptions": {
+        "label": "Contact Email",
+        "autocomplete": "email",
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_1",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 1",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_2",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 2",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_3",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 3",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_4",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 4",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_5",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 5",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_6",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 6",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_7",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 7",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_8",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 8",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_9",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 9",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_10",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 10",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_11",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 11",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_12",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 12",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_13",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 13",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_14",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 14",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_15",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 15",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_16",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 16",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_17",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 17",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_18",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 18",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_19",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 19",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_claimed_disability_20",
+      "type": "input",
+      "templateOptions": {
+        "label": "Disability 20",
+        "placeholder": "Disability Name",
+        "optional": true
+      }
+    },
+    {
+      "key": "veteran_serve_under_different_name_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Did you serve under another name?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+    {
+      "key": "veteran_other_names_served_under",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Please list the other name(s) you served under",
+        "rows": 2,
+        "columns": 100,
+        "optional": true
+      },
+      "hideExpression": "model.veteran_serve_under_different_name_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_most_recent_active_service_start_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Most recent active service entry date.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      }
+    },
+
+    {
+      "key": "veteran_most_recent_active_service_end_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Release date or anticipated date of release from active service.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      }
+    },
+
+    {
+      "key": "veteran_serve_in_combat_zone_since_9_11",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Did you serve in a combat zone since 9-11-2001?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+
+    {
+      "key": "veteran_place_of_last_separation",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Place of last or anticipated separation.",
+        "rows": 2,
+        "columns": 100,
+        "optional": true
+      }
+    },
+
+    {
+      "key": "veteran_served_reserves_or_national_guard_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Are you currently serving or have you ever served in the reserves or national guard?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+
+    {
+      "key": "veteran_national_guard_reserves_obligation_term_of_service_start_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Obligation term of service start date.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_served_reserves_or_national_guard_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_national_guard_reserves_obligation_term_of_service_end_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Obligation term of service end date.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_served_reserves_or_national_guard_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_most_current_unit_address",
+      "type": "textarea",
+      "templateOptions": {
+        "label": "Current or last assigned name and address of unit.",
+        "rows": 2,
+        "columns": 100,
+        "optional": true
+      },
+      "hideExpression": "model.veteran_served_reserves_or_national_guard_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_most_current_unit_contact_phone_number",
+      "type": "input",
+      "optionsTypes": [
+        "phoneNumber"
+      ],
+      "templateOptions": {
+        "label": "Current or assigned phone number of unit",
+        "optional": true
+      },
+      "hideExpression": "model.veteran_served_reserves_or_national_guard_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_currently_receiving_inactive_duty_training_pay_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Are you currently receiving inactive duty training pay?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      },
+      "hideExpression": "model.veteran_served_reserves_or_national_guard_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_national_guard_or_reserves_currently_activated_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Are you currently activated on federal orders within the national guard or reserves?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+
+    {
+      "key": "veteran_national_guard_or_reserves_activation_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Date of activation.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_national_guard_or_reserves_currently_activated_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_national_guard_or_reserves_separation_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Anticipated separation date.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_national_guard_or_reserves_currently_activated_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_been_pow_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Have you ever been a prisoner of war?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+
+    {
+      "key": "veteran_pow_confinement_start_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Date of confinement start date.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_national_guard_or_reserves_currently_activated_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_pow_confinement_end_date",
+      "type": "input",
+      "optionsTypes": [
+        "date"
+      ],
+      "templateOptions": {
+        "label": "Date of confinement end date.",
+        "placeholder": "MM/DD/YYYY",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_national_guard_or_reserves_currently_activated_y_n != 'Yes'"
+    },
+
+    {
+      "key": "veteran_received_separation_severance_retired_pay_y_n",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Did/do you receive any type of separation/severance/retired pay?",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "Yes"
+          },
+          {
+            "name": "No",
+            "value": "No"
+          }
+        ],
+        "optional": false
+      }
+    },
+
+    {
+      "key": "veteran_separation_severance_retired_pay_amount",
+      "type": "input",
+      "templateOptions": {
+        "label": "List amount:",
+        "placeholder": "$10000",
+        "optional": false
+      },
+      "hideExpression": "model.veteran_received_separation_severance_retired_pay_y_n != 'Yes'"
+    },
+    {
+      "key": "veteran_separation_severance_retired_pay_type",
+      "type": "input",
+      "templateOptions": {
+        "label": "List type (if known):",
+        "placeholder": "",
+        "optional": true
+      },
+      "hideExpression": "model.veteran_received_separation_severance_retired_pay_y_n != 'Yes'"
+    },
+    {
+      "key": "elect_military_retired_pay_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you want military retired pay instead of VA compensation.",
+        "optional": true
+      }
+    },
+    {
+      "key": "elect_waive_va_benefits_inactive_duty_training_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "Check if you elect to waive VA benefits for the days you accrued inactive duty training pay in order to retain my inactive duty training pay.",
+        "optional": true
+      }
+    },
+    {
+      "key": "direct_deposit_account_type",
+      "type": "radio",
+      "templateOptions": {
+        "label": "Bank account type for direct deposit.",
+        "options": [
+          {
+            "name": "Checking",
+            "value": "checking"
+          },
+          {
+            "name": "Savings",
+            "value": "savings"
+          },
+          {
+            "name": "I certify that I do not have an account with a financial institution or certified payment agent.",
+            "value": "none"
+          }
+
+        ],
+        "optional": false
+      }
+    },
+    {
+      "key": "direct_deposit_checking_account_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Account Number:",
+        "placeholder": "00000000000000",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'savings' || model.direct_deposit_account_type == 'none'"
+    },
+    {
+      "key": "direct_deposit_savings_account_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Account Number:",
+        "placeholder": "00000000000000",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'checking' || model.direct_deposit_account_type == 'none'"
+    },
+
+    {
+      "key": "direct_deposit_financial_institution_name",
+      "type": "input",
+      "templateOptions": {
+        "label": "Name of financial institution (Please provide the name of the bank where you want you direct deposit).",
+        "placeholder": "Bank of America",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'none'"
+    },
+    {
+      "key": "direct_deposit_routing_number",
+      "type": "input",
+      "templateOptions": {
+        "label": "Routing or transit number (The first nine numbers located at the bottom left of your check).",
+        "placeholder": "0000000000000",
+        "optional": false
+      },
+      "hideExpression": "model.direct_deposit_account_type == 'none'"
+    },
+    {
+      "key": "elect_fully_developed_claim_y_n",
+      "type": "checkbox",
+      "templateOptions": {
+        "label": "I DO NOT want my claim considered for rapid processing under the Fully-Developed Claim program because I plan to submit further evidence in support of my claim.",
+        "optional": true
+      }
+    }
+  ]
+}

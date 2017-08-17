@@ -3,12 +3,12 @@
  */
 'use strict';
 var app = angular.module('vetafiApp');
-app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateService',
+app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formConfig',
   '$stateParams', '$state', 'userValues', '$window', 'net', '$interval', 'busySpinner', '$q',
-    function ($scope, $filter, $rootScope, formTemplateService,
+    function ($scope, $filter, $rootScope, formConfig,
               $stateParams, $state, userValues, $window, net, $interval, busySpinner, $q) {
-      $scope.title = formTemplateService[$stateParams.formId].vfi.title;
-      $scope.description = formTemplateService[$stateParams.formId].vfi.description;
+      $scope.title = formConfig[$stateParams.formId].vfi.title;
+      $scope.description = formConfig[$stateParams.formId].vfi.description;
       $scope.claimId = $stateParams.claimId;
       $scope.formId = $stateParams.formId;
 
@@ -71,8 +71,8 @@ app.controller('formCtrl', ['$scope', '$filter', '$rootScope', 'formTemplateServ
       });*/
 
       $scope.model = userValues.values; // TODO(jeff) fix extra attributes messing up completion percentage
-      $scope.fields = formTemplateService[$stateParams.formId].fields;
-      $scope.fieldsByKey = _.keyBy(formTemplateService[$stateParams.formId].fields, 'key');
+      $scope.fields = formConfig[$stateParams.formId].fields;
+      $scope.fieldsByKey = _.keyBy(formConfig[$stateParams.formId].fields, 'key');
 
       function countAnswerable() {
         var total = 0;

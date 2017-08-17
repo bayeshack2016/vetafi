@@ -1,18 +1,21 @@
 var app = angular.module('vetafiApp');
 app.controller('claimStartCtrl', ['$scope', '$state', 'net', 'claimService', '$uibModal', 'Profile',
-  function ($scope, $state, net, claimService, $uibModal, Profile) {
+  'claimConfig',
+  function ($scope, $state, net, claimService, $uibModal, Profile, claimConfig) {
     $scope.isSignedIn = Profile.isSetUser();
 
-    function callStartClaim() {
+    $scope.claimConfig = claimConfig;
+
+    function callStartClaim(claim) {
       net.startClaim(
-        ["VBA-21-0966-ARE"] // hardcoded to create claim with only this form for now
+        claim
       ).then(function (res) {
         claimService.createNewClaim();
         $state.transitionTo('root.claimselect', {claimId: res.data.claimID});
       });
     }
 
-    $scope.onClickNext = function () {
+    $scope.startClaim = function (claim) {
       if (!claimService.acceptedTos()) {
         var tosModal = $uibModal.open({
           controller: 'tosCtrl',
@@ -21,11 +24,13 @@ app.controller('claimStartCtrl', ['$scope', '$state', 'net', 'claimService', '$u
         });
         tosModal.result.then(function(res) {
           if (res) {
-            callStartClaim();
+            callStartClaim(claim);
           }
         }, function () {
           console.log('tos modal dismissed');
         });
+      } else {
+        callStartClaim(claim);
       }
     };
   }

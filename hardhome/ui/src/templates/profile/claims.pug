@@ -6,7 +6,7 @@ div.profile-section#claims
     p Click #[a(ui-sref="root.claimstart") here] to start a file claim.
 
   div.claims-wrapper(ng-show="claims.length > 0")
-    h3 Your claims history
+    h3 Your Claims
 
     div.claim-card(ng-repeat="claim in claims", ng-class="{'edit': claim.state=='incomplete', 'submitted': claim.state=='submitted'}")
       div.button-wrapper
@@ -22,7 +22,9 @@ div.profile-section#claims
           div.icon-wrapper
             div.icon
           div.text-wrapper
-            h4.status {{claim.header}}
+            h4.status
+              a.claim-link(ui-sref="root.claimselect({claimId: claim.claimID})") {{claimConfig[claim.key].name}}
+            div {{claim.header}}
             div.date {{claim.date}}
 
         div.form-content(ng-if="claim.formIds.length > 0")
