@@ -1,21 +1,16 @@
 package utils.seamlessdocs
 
-import java.net.{URI, URL}
+import java.net.URL
 
 import com.google.inject.AbstractModule
 import com.typesafe.config.ConfigFactory
 import modules.JobModule
 import net.codingwell.scalaguice.ScalaModule
-import org.mockito.{Matchers, Mockito}
 import org.specs2.specification.Scope
-import play.api.http.Writeable
 import play.api.inject.guice.GuiceApplicationBuilder
-import play.api.libs.json.JsValue
-import play.api.libs.ws.ahc.AhcWSRequest
-import play.api.libs.ws.{WSClient, WSRequest}
-import play.api.mvc.{Action, _}
-import play.api.test.{PlaySpecification, WithApplication, WsTestClient}
-import play.api.{Application, Configuration}
+import play.api.mvc.{ Action, _ }
+import play.api.test.{ PlaySpecification, WithApplication, WsTestClient }
+import play.api.{ Application, Configuration }
 import play.core.server.Server
 import play.modules.reactivemongo.ReactiveMongoApi
 import services.FakeReactiveMongoApi
@@ -23,8 +18,8 @@ import utils.secrets.SecretsManager
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.duration.Duration
-import scala.concurrent.{Await, Future}
-import scala.util.{Failure, Success}
+import scala.concurrent.{ Await, Future }
+import scala.util.{ Failure, Success }
 
 case class TestException() extends Exception {
 
@@ -212,7 +207,7 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
     "succeed when endpoint returns expected json" in new SeamplessDocsServiceTestContext {
       new WithApplication(application) {
         withTestClient(app)({
-          case post if post.method == "POST" && post.uri == "/api/application/test/get_invite_url" => Action {
+          case post if post.method == "GET" && post.uri == "/api/application/test/get_invite_url" => Action {
             Results.Ok("""["https://www.website.com"]""")
           }
         })({ client: SeamlessDocsServiceImpl =>
@@ -256,9 +251,13 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
         })({ client: SeamlessDocsServiceImpl =>
 
           val future: Future[URL] = client.getInviteUrl("test")
-          future.onComplete {
-            case Failure(e) => e must beAnInstanceOf[RuntimeException]
-            case Success(_) => failure
+          try {
+            Await.result(future, Duration.Inf) match {
+              case _ => failure
+            }
+          } catch {
+            case e: RuntimeException =>
+            case _ => failure
           }
         })
       }
@@ -303,14 +302,15 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
                 |        "https://cdn.seamlessdocs.com/sig_files/xxx.pdf"
                 |    ],
                 |    "is_incomplete": "f"
-                |}""".stripMargin)
+                |}""".stripMargin
+            )
           }
         })({ client: SeamlessDocsServiceImpl =>
           val future: Future[SeamlessApplication] = client.getApplication("test")
-          future.onComplete {
-            case Failure(_) => failure
-            case Success(res: SeamlessApplication) =>
+          Await.result(future, Duration.Inf) match {
+            case res: SeamlessApplication =>
               res.submission_pdf_url must be equalTo "https://cdn.seamlessdocs.com/sig_files/xxx.pdf"
+            case _ => failure
           }
         })
       }
@@ -326,10 +326,10 @@ class SeamplessDocsServiceImplSpec extends PlaySpecification {
           }
         })({ client: SeamlessDocsServiceImpl =>
           val future: Future[Either[URL, SeamlessErrorResponse]] = client.updatePdf("test")
-          future.onComplete {
-            case Failure(_) => failure
-            case Success(Left(res: URL)) =>
+          Await.result(future, Duration.Inf) match {
+            case Left(res: URL) =>
               res.toString must be equalTo "https://www.website.com"
+            case _ => failure
           }
         })
       }

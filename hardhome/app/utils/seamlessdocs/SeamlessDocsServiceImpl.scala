@@ -1,28 +1,27 @@
 package utils.seamlessdocs
 
 import java.net.URL
-import java.time.Clock
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 import org.log4s._
 import play.api.Configuration
 import play.api.http.Status
-import play.api.libs.json.{JsObject, JsValue, Json}
-import play.api.libs.ws.{WSClient, WSRequest, WSResponse}
+import play.api.libs.json.{ JsObject, JsValue, Json }
+import play.api.libs.ws.{ WSClient, WSRequest, WSResponse }
 import retry.Success
 import utils.secrets.SecretsManager
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
-import scala.concurrent.duration.Duration
+import scala.concurrent.duration.{ Duration, FiniteDuration }
 
-class SeamlessDocsServiceImpl @Inject()(
-                                         wsClient: WSClient,
-                                         configuration: Configuration,
-                                         secretsManager: SecretsManager,
-                                         requestUtils: RequestUtils
-                                       ) extends SeamlessDocsService {
+class SeamlessDocsServiceImpl @Inject() (
+  wsClient: WSClient,
+  configuration: Configuration,
+  secretsManager: SecretsManager,
+  requestUtils: RequestUtils
+) extends SeamlessDocsService {
   private[this] val logger = getLogger
 
   val url: String = configuration.getString("seamlessdocs.url").get
@@ -32,6 +31,13 @@ class SeamlessDocsServiceImpl @Inject()(
   lazy val apiKey: String = secretsManager.getSecretUtf8(
     configuration.getString("seamlessdocs.apiKeySecretName").get
   )
+
+  lazy val delay: FiniteDuration = {
+    val delay: Long = configuration.getMilliseconds("seamlessdocs.api.delay").getOrElse(15000)
+    FiniteDuration(delay, TimeUnit.MILLISECONDS)
+  }
+
+  lazy val retries: Int = configuration.getInt("seamlessdocs.api.retries").getOrElse(3)
 
   //lazy val apiSecret: Array[Byte] = configuration.getString("seamlessdocs.secret_key").get.getBytes
   //lazy val apiKey: String = configuration.getString("seamlessdocs.api_key").get
@@ -70,7 +76,6 @@ class SeamlessDocsServiceImpl @Inject()(
     }
   }
 
-
   private def executeWithExponentialRetry[T](request: WSRequest)(implicit rds: play.api.libs.json.Reads[T]): Future[Either[T, SeamlessErrorResponse]] = {
     implicit val retryCriteria: Success[Either[T, SeamlessErrorResponse]] =
       Success[Either[T, SeamlessErrorResponse]] {
@@ -79,18 +84,18 @@ class SeamlessDocsServiceImpl @Inject()(
         case _ => true
       }
 
-    retry.Backoff(max = 3, delay = Duration(15, TimeUnit.SECONDS))(odelay.Timer.default)(() => {
+    retry.Backoff(max = retries, delay = delay)(odelay.Timer.default)(() => {
       request.execute().map(getJsonResponse[T])
     })
   }
 
   override def formPrepare(
-                            formId: String,
-                            name: String,
-                            email: String,
-                            signerId: String,
-                            data: Map[String, JsValue]
-                          ): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] = {
+    formId: String,
+    name: String,
+    email: String,
+    signerId: String,
+    data: Map[String, JsValue]
+  ): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] = {
     val jsonPost = Json.obj(
       "signer_data" -> Json.obj(
         "fullname" -> "Vetafi",
@@ -105,7 +110,6 @@ class SeamlessDocsServiceImpl @Inject()(
     )
     val jsonPostWithAnswers: JsValue = jsonPost.deepMerge(JsObject(data))
 
-
     executeWithExponentialRetry[SeamlessApplicationCreateResponse](signRequest(
       wsClient
         .url(s"$url/api/form/$formId/prepare")
@@ -115,9 +119,9 @@ class SeamlessDocsServiceImpl @Inject()(
   }
 
   override def formSubmit(
-                           formId: String,
-                           data: Map[String, JsValue]
-                         ): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] = {
+    formId: String,
+    data: Map[String, JsValue]
+  ): Future[Either[SeamlessApplicationCreateResponse, SeamlessErrorResponse]] = {
     val jsonPost = Json.obj()
     val jsonPostWithAnswers = jsonPost.deepMerge(JsObject(data))
 
