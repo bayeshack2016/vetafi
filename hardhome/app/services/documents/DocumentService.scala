@@ -20,7 +20,6 @@ trait DocumentService {
    */
   def render(form: ClaimForm): Future[Array[Byte]]
 
-
   /**
    * Get final signed PDF url for document from document service.
    *

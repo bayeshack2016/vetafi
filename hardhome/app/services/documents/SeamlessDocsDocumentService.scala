@@ -122,21 +122,20 @@ class SeamlessDocsDocumentService @Inject() (
       "claimID" -> form.claimID.toString,
       "form" -> form.key
     ) {
-      logger.info("renderSigned called")
+        logger.info("renderSigned called")
 
-
-      (form.externalApplicationId match {
-        case Some(applicationId) => seamlessDocs.updatePdf(applicationId)
-        case None =>
-          logger.error("no externalApplicationId present for form provided to renderSigned")
-          throw new RuntimeException
-      }).map {
-        case Left(url) => url
-        case Right(_) =>
-          logger.warn("update PDF failed in renderSigned")
-          throw new RuntimeException
+        (form.externalApplicationId match {
+          case Some(applicationId) => seamlessDocs.updatePdf(applicationId)
+          case None =>
+            logger.error("no externalApplicationId present for form provided to renderSigned")
+            throw new RuntimeException
+        }).map {
+          case Left(url) => url
+          case Right(_) =>
+            logger.warn("update PDF failed in renderSigned")
+            throw new RuntimeException
+        }
       }
-    }
   }
 
   private[this] def getPdf(pdfUrl: URL): Future[Array[Byte]] = {
